@@ -1,0 +1,32 @@
+{
+  "name": "企业文档",
+  "logo": "logo-light.svg",
+
+  "theme": "mint",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373"
+  },
+  "topbarLinks": [
+    {
+      "name": "官网",
+      "url": "https://yourcompany.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "联系我们",
+    "url": "https://yourcompany.com/contact"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "开始",
+        "pages": ["introduction", "quickstart", "features", "pricing"]
+      }
+    ]
+  },
+  "footerSocials": {
+    "website": "https://yourcompany.com"
+  }
+} 

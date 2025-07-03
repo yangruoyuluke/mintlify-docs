@@ -1,8 +1,14 @@
 {
-  "name": "企业文档",
-  "logo": "logo-light.svg",
-
-  "theme": "mint",
+  "name": "MarsMindDocuments",
+  "logo":  {
+    "light": "logo-light.svg",
+    "dark": "logo-dark.svg"
+  },
+  "favicon": {
+    "light":"/publich/favicon.svg",
+    "dark":"/publich/favicon-dark.svg"
+  },
+  "theme": "almond",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",

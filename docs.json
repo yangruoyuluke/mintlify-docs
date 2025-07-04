@@ -9,10 +9,6 @@
   },
 
   "navbar": {
-    "links": [
-      { "label": "Docs",       "href": "/introduction" },
-      { "label": "Quickstart", "href": "/quickstart"  }
-    ],
     "primary": {
       "type":  "button",
       "label": "Dashboard",
@@ -43,16 +39,7 @@
 
   "footer": {
     "socials": {
-      "website": "https://marsmind.co"
-    },
-    "links": [
-      {
-        "header": "MarsMind",
-        "items": [
-          { "label": "Contact", "href": "/contact" },
-          { "label": "Privacy", "href": "/privacy" }
-        ]
-      }
-    ]
+      "website": "https://www.marsmind.co"
+    }
   }
 }

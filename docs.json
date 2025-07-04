@@ -37,22 +37,24 @@
     }
   ],
 
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "quickstart"
-      ]
-    },
-    {
-      "group": "Product",
-      "pages": [
-        "features",
-        "pricing"
-      ]
-    }
-  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "introduction",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Product",
+        "pages": [
+          "features",
+          "pricing"
+        ]
+      }
+    ]
+  },
 
   "footerSocials": {
     "website": "https://www.marsmind.co"

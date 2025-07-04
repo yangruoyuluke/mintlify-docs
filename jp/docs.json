@@ -37,22 +37,24 @@
     }
   ],
 
-  "navigation": [
-    {
-      "group": "はじめに",
-      "pages": [
-        "introduction",
-        "quickstart"
-      ]
-    },
-    {
-      "group": "プロダクト",
-      "pages": [
-        "features",
-        "pricing"
-      ]
-    }
-  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "はじめに",
+        "pages": [
+          "introduction",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "プロダクト",
+        "pages": [
+          "features",
+          "pricing"
+        ]
+      }
+    ]
+  },
 
   "footerSocials": {
     "website": "https://www.marsmind.co"

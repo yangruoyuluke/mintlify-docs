@@ -1,38 +1,58 @@
 {
+  "$schema": "https://mintlify.com/docs.json",
   "name": "MarsMindDocuments",
-  "logo":  {
-    "light": "logo-light.png",
-    "dark": "logo-dark.png"
-  },
-  "favicon": {
-    "light":"/public/favicon.svg",
-    "dark":"/public/favicon-dark.svg"
-  },
   "theme": "mint",
   "colors": {
     "primary": "#0D47A1",
     "light": "#ECEFF1",
     "dark": "#212121"
   },
-  "topbarLinks": [
-    {
-      "name": "官网",
-      "url": "https://yourcompany.com"
+
+  "navbar": {
+    "links": [
+      { "label": "Docs",       "href": "/introduction" },
+      { "label": "Quickstart", "href": "/quickstart"  }
+    ],
+    "primary": {
+      "type":  "button",
+      "label": "Dashboard",
+      "href":  "https://app.marsmind.co",
+      "target":"_blank"
     }
-  ],
-  "topbarCtaButton": {
-    "name": "联系我们",
-    "url": "https://yourcompany.com/contact"
   },
+
   "navigation": {
+    "languages": [
+      {
+        "language": "en",
+        "default":  true,
+        "href":     "/en/introduction"
+      },
+      {
+        "language": "jp",
+        "href":     "/jp/introduction"
+      }
+    ],
     "groups": [
       {
-        "group": "Docs",
-        "pages": ["introduction", "quickstart", "features", "pricing"]
+        "group": "Getting Started",
+        "pages": ["en/overview", "en/quickstart"]
       }
     ]
   },
-  "footerSocials": {
-    "website": "https://yourcompany.com"
+
+  "footer": {
+    "socials": {
+      "website": "https://marsmind.co"
+    },
+    "links": [
+      {
+        "header": "MarsMind",
+        "items": [
+          { "label": "Contact", "href": "/contact" },
+          { "label": "Privacy", "href": "/privacy" }
+        ]
+      }
+    ]
   }
-} 
+}

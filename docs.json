@@ -32,31 +32,58 @@
 
   "topbarLinks": [],
 
-  "tabs": [
-    {
-      "name": "English",
-      "url": "introduction"
-    },
-    {
-      "name": "日本語", 
-      "url": "jp/introduction"
-    }
-  ],
-
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "introduction",
-          "quickstart"
+        "language": "en",
+        "dropdowns": [
+          {
+            "dropdown": "Documentation",
+            "icon": "book",
+            "description": "MarsMind AI documentation",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "introduction",
+                  "quickstart"
+                ]
+              },
+              {
+                "group": "Product",
+                "pages": [
+                  "features",
+                  "pricing"
+                ]
+              }
+            ]
+          }
         ]
       },
       {
-        "group": "Product",
-        "pages": [
-          "features",
-          "pricing"
+        "language": "jp",
+        "dropdowns": [
+          {
+            "dropdown": "ドキュメント",
+            "icon": "book", 
+            "description": "MarsMind AIドキュメント",
+            "pages": [
+              {
+                "group": "はじめに",
+                "pages": [
+                  "jp/introduction",
+                  "jp/quickstart"
+                ]
+              },
+              {
+                "group": "製品",
+                "pages": [
+                  "jp/features",
+                  "jp/pricing"
+                ]
+              }
+            ]
+          }
         ]
       }
     ]

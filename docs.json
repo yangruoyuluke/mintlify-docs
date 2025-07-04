@@ -1,18 +1,18 @@
 {
   "name": "MarsMindDocuments",
   "logo":  {
-    "light": "/public/favicon.svg",
-    "dark": "/public/favicon-dark.svg"
+    "light": "logo-light.png",
+    "dark": "logo-dark.png"
   },
   "favicon": {
     "light":"/public/favicon.svg",
     "dark":"/public/favicon-dark.svg"
   },
-  "theme": "almond",
+  "theme": "mint",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373"
+    "primary": "#0D47A1",
+    "light": "#ECEFF1",
+    "dark": "#212121"
   },
   "topbarLinks": [
     {

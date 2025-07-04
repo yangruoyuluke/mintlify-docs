@@ -30,10 +30,16 @@
     }
   },
 
-  "topbarLinks": [
+  "topbarLinks": [],
+
+  "tabs": [
     {
-      "name": "日本語",
-      "url": "/jp/introduction"
+      "name": "English",
+      "url": "introduction"
+    },
+    {
+      "name": "日本語", 
+      "url": "jp/introduction"
     }
   ],
 

@@ -1,18 +1,30 @@
 {
   "$schema": "https://mintlify.com/docs.json",
+  
   "name": "MarsMindDocuments",
+  
   "theme": "mint",
+  
   "colors": {
     "primary": "#0D47A1",
     "light": "#ECEFF1",
     "dark": "#212121"
   },
 
+  "logo":  {
+    "light": "logo-light.png",
+    "dark": "logo-dark.png"
+  },
+  "favicon": {
+    "light":"/public/favicon.svg",
+    "dark":"/public/favicon-dark.svg"
+  },
+    
   "navbar": {
     "primary": {
       "type":  "button",
       "label": "Dashboard",
-      "href":  "https://app.marsmind.co",
+      "href":  "https://lufitglobalselling.com:8888/#/index",
       "target":"_blank"
     }
   },
@@ -42,4 +54,5 @@
       "website": "https://www.marsmind.co"
     }
   }
+  
 }

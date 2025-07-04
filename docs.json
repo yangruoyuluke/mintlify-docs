@@ -1,8 +1,8 @@
 {
   "name": "MarsMindDocuments",
   "logo":  {
-    "light": "logo-light.svg",
-    "dark": "logo-dark.svg"
+    "light": "/publich/favicon.svg",
+    "dark": "/publich/favicon-dark.svg"
   },
   "favicon": {
     "light":"/publich/favicon.svg",
@@ -27,7 +27,7 @@
   "navigation": {
     "groups": [
       {
-        "group": "开始",
+        "group": "Docs",
         "pages": ["introduction", "quickstart", "features", "pricing"]
       }
     ]

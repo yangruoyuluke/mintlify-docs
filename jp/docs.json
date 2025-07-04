@@ -76,16 +76,6 @@
     }
   },
 
-  "analytics": {
-    "ga4": {
-      "measurementId": "G-XXXXXXXXXX"
-    }
-  },
-
-  "integrations": {
-    "intercom": "placeholder_app_id"
-  },
-
   "modeToggle": {
     "default": "light",
     "isHidden": false

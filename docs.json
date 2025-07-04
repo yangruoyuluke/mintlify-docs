@@ -1,12 +1,12 @@
 {
   "name": "MarsMindDocuments",
   "logo":  {
-    "light": "/publich/favicon.svg",
-    "dark": "/publich/favicon-dark.svg"
+    "light": "/public/favicon.svg",
+    "dark": "/public/favicon-dark.svg"
   },
   "favicon": {
-    "light":"/publich/favicon.svg",
-    "dark":"/publich/favicon-dark.svg"
+    "light":"/public/favicon.svg",
+    "dark":"/public/favicon-dark.svg"
   },
   "theme": "almond",
   "colors": {

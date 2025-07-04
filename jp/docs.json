@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   
-  "name": "MarsMindDocuments",
+  "name": "MarsMindDocuments - 日本語",
   
   "theme": "mint",
   
@@ -12,19 +12,19 @@
   },
 
   "logo": {
-    "light": "logo-light.png",
-    "dark": "logo-dark.png"
+    "light": "../logo-light.png",
+    "dark": "../logo-dark.png"
   },
   
   "favicon": {
-    "light": "public/favicon.svg",
-    "dark": "public/favicon-dark.svg"
+    "light": "../public/favicon.svg",
+    "dark": "../public/favicon-dark.svg"
   },
     
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "ダッシュボード",
       "href": "https://lufitglobalselling.com:8888/#/index",
       "target": "_blank"
     }
@@ -32,21 +32,21 @@
 
   "topbarLinks": [
     {
-      "name": "日本語",
-      "url": "/jp/introduction"
+      "name": "English",
+      "url": "/"
     }
   ],
 
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "はじめに",
       "pages": [
         "introduction",
         "quickstart"
       ]
     },
     {
-      "group": "Product",
+      "group": "プロダクト",
       "pages": [
         "features",
         "pricing"
@@ -65,7 +65,7 @@
   },
 
   "search": {
-    "prompt": "Search MarsMind documentation..."
+    "prompt": "MarsMindドキュメントを検索..."
   },
 
   "breadcrumbs": true,
@@ -90,4 +90,4 @@
     "default": "light",
     "isHidden": false
   }
-}
+} 

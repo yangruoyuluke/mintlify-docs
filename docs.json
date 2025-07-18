@@ -24,7 +24,7 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "Log in",
       "href": "https://lufitglobalselling.com:8888/#/index",
       "target": "_blank"
     }

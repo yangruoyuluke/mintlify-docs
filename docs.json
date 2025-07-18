@@ -78,7 +78,9 @@
               {
                 "group": "产品",
                 "pages": [
-                  "cn/loginandreg"
+                  "cn/login_and_reg",
+                  "cn/run_avatar",
+                  "cn/qa_management"
                 ]
               }
             ]

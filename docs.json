@@ -60,7 +60,7 @@
           }
         ]
       },
-       {
+      {
         "language": "cn",
         "dropdowns": [
           {
@@ -80,7 +80,8 @@
                 "pages": [
                   "cn/login_and_reg",
                   "cn/run_avatar",
-                  "cn/qa_management"
+                  "cn/qa_management",
+                  "cn/doc_management"
                 ]
               }
             ]

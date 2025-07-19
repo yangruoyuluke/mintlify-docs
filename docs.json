@@ -1,161 +1,144 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  
-  "name": "MarsMindDocuments",
-  
-  "theme": "mint",
-  
-  "colors": {
-    "primary": "#0D47A1",
-    "light": "#ECEFF1",
-    "dark": "#212121"
-  },
-
-  "logo": {
-    "light": "logo-light.png",
-    "dark": "logo-dark.png"
-  },
-  
-  "favicon": {
-    "light": "public/favicon.svg",
-    "dark": "public/favicon-dark.svg"
-  },
-    
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Log in",
-      "href": "https://lufitglobalselling.com:8888/#/index",
-      "target": "_blank"
+    "$schema": "https://mintlify.com/docs.json",
+    "name": "MarsMindDocuments",
+    "theme": "mint",
+    "colors": {
+        "primary": "#0D47A1",
+        "light": "#ECEFF1",
+        "dark": "#212121"
+    },
+    "logo": {
+        "light": "logo-light.png",
+        "dark": "logo-dark.png"
+    },
+    "favicon": {
+        "light": "public/favicon.svg",
+        "dark": "public/favicon-dark.svg"
+    },
+    "navbar": {
+        "primary": {
+            "type": "button",
+            "label": "Log in",
+            "href": "https://lufitglobalselling.com:8888/#/index",
+            "target": "_blank"
+        }
+    },
+    "topbarLinks": [],
+    "navigation": {
+        "languages": [
+            {
+                "language": "en",
+                "dropdowns": [
+                    {
+                        "dropdown": "Documentation",
+                        "icon": "book",
+                        "description": "MarsMind AI documentation",
+                        "pages": [
+                            {
+                                "group": "Getting Started",
+                                "pages": [
+                                    "introduction",
+                                    "quickstart"
+                                ]
+                            },
+                            {
+                                "group": "Product",
+                                "pages": [
+                                    "features",
+                                    "usermanual"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "language": "cn",
+                "dropdowns": [
+                    {
+                        "dropdown": "用户手册",
+                        "icon": "book",
+                        "description": "如何和AI协作操作指南",
+                        "pages": [
+                            {
+                                "group": "快速开始",
+                                "pages": [
+                                    "introduction",
+                                    "quickstart"
+                                ]
+                            },
+                            {
+                                "group": "产品",
+                                "pages": [
+                                    "cn/login_and_reg",
+                                    "cn/run_avatar",
+                                    "cn/qa_management",
+                                    "cn/doc_management"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "dropdown": "API文档",
+                        "icon": "book",
+                        "description": "技术团队可以参考开发",
+                        "pages": [
+                            {
+                                "pages": [
+                                    "api_reference"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "language": "jp",
+                "dropdowns": [
+                    {
+                        "dropdown": "ドキュメント",
+                        "icon": "book",
+                        "description": "MarsMind AIドキュメント",
+                        "pages": [
+                            {
+                                "group": "はじめに",
+                                "pages": [
+                                    "jp/introduction",
+                                    "jp/quickstart"
+                                ]
+                            },
+                            {
+                                "group": "製品",
+                                "pages": [
+                                    "jp/features",
+                                    "jp/pricing"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "footerSocials": {
+        "website": "https://www.marsmind.co"
+    },
+    "feedback": {
+        "thumbsRating": true,
+        "suggestEdit": true,
+        "raiseIssue": true
+    },
+    "search": {
+        "prompt": "Search MarsMind documentation..."
+    },
+    "breadcrumbs": true,
+    "api": {
+        "playground": {
+            "mode": "show"
+        }
+    },
+    "modeToggle": {
+        "default": "light",
+        "isHidden": false
     }
-  },
-
-  "topbarLinks": [],
-
-  "navigation": {
-    "languages": [
-      {
-        "language": "en",
-        "dropdowns": [
-          {
-            "dropdown": "Documentation",
-            "icon": "book",
-            "description": "MarsMind AI documentation",
-            "pages": [
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "introduction",
-                  "quickstart"
-                ]
-              },
-              {
-                "group": "Product",
-                "pages": [
-                  "features",
-                  "usermanual"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "language": "cn",
-        "dropdowns": [
-          {
-            "dropdown": "用户手册",
-            "icon": "book",
-            "description": "如何和AI协作操作指南",
-            "pages": [
-              {
-                "group": "快速开始",
-                "pages": [
-                  "introduction",
-                  "quickstart"
-                ]
-              },
-              {
-                "group": "产品",
-                "pages": [
-                  "cn/login_and_reg",
-                  "cn/run_avatar",
-                  "cn/qa_management",
-                  "cn/doc_management"
-                ]
-              }
-            ]
-          }
-        ]
-        "dropdowns": [
-          {
-            "dropdown": "API文档",
-            "icon": "book",
-            "description": "技术团队可以参考开发",
-            "pages": [
-              {
-                "pages": [
-                  "api"
-                ]
-              }
-            ]
-          }
-        ]
-
-      },
-      {
-        "language": "jp",
-        "dropdowns": [
-          {
-            "dropdown": "ドキュメント",
-            "icon": "book", 
-            "description": "MarsMind AIドキュメント",
-            "pages": [
-              {
-                "group": "はじめに",
-                "pages": [
-                  "jp/introduction",
-                  "jp/quickstart"
-                ]
-              },
-              {
-                "group": "製品",
-                "pages": [
-                  "jp/features",
-                  "jp/pricing"
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-
-  "footerSocials": {
-    "website": "https://www.marsmind.co"
-  },
-
-  "feedback": {
-    "thumbsRating": true,
-    "suggestEdit": true,
-    "raiseIssue": true
-  },
-
-  "search": {
-    "prompt": "Search MarsMind documentation..."
-  },
-
-  "breadcrumbs": true,
-
-  "api": {
-    "playground": {
-      "mode": "show"
-    }
-  },
-
-  "modeToggle": {
-    "default": "light",
-    "isHidden": false
-  }
 }

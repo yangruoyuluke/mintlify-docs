@@ -83,12 +83,8 @@
                         "icon": "book",
                         "description": "技术团队可以参考开发",
                         "pages": [
-                            {
-                                "pages": [
-                                    "cn/api_reference"
+                                 "cn/api_reference"
                                 ]
-                            }
-                        ]
                     }
                 ]
             },

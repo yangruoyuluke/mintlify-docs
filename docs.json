@@ -15,12 +15,18 @@
         "light": "public/favicon.svg",
         "dark": "public/favicon-dark.svg"
     },
+    "banner": {
+        "content": "🚀 MarsMind is now Invitaiton Only."
+    }
     "navbar": {
+        "links": {
+            "label": "Website"
+            "href": "https://marsmind.co"
+        },
         "primary": {
             "type": "button",
             "label": "Log in",
-            "href": "https://lufitglobalselling.com:8888/#/index",
-            "target": "_blank"
+            "href": "https://admin.marsmind.co/#/index"
         }
     },
     "topbarLinks": [],
@@ -59,7 +65,7 @@
                         "dropdown": "用户手册",
                         "icon": "book",
                         "description": "如何和AI协作操作指南",
-                        "pages": [
+                      "pages": [
                             {
                                 "group": "快速开始",
                                 "pages": [
@@ -73,14 +79,15 @@
                                     "cn/login_and_reg",
                                     "cn/run_avatar",
                                     "cn/qa_management",
-                                    "cn/doc_management"
+                                    "cn/doc_management",
+                                    "cn/command_note"
                                 ]
                             }
                         ]
                     },
                     {
                         "dropdown": "API文档",
-                        "icon": "book",
+                        "icon": "file-code",
                         "description": "技术团队可以参考开发",
                         "pages": [
                                  "cn/api_reference"
@@ -116,25 +123,9 @@
             }
         ]
     },
-    "footerSocials": {
-        "website": "https://www.marsmind.co"
-    },
-    "feedback": {
-        "thumbsRating": true,
-        "suggestEdit": true,
-        "raiseIssue": true
-    },
-    "search": {
-        "prompt": "Search MarsMind documentation..."
-    },
-    "breadcrumbs": true,
-    "api": {
-        "playground": {
-            "mode": "show"
+    "footer": {
+        "socials": {
+               "website": "https://www.marsmind.co"
         }
-    },
-    "modeToggle": {
-        "default": "light",
-        "isHidden": false
     }
 }

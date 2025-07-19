@@ -1,0 +1,109 @@
+---
+title: "API 文档"
+description: "您可以通过以下文档自主调用API实现对话能力，嵌入自己的对话窗口。适合需要自主适配的用户使用，其中，secret 与 client 均需向 MarsMind 智能申请获取。"
+---
+
+## 请求参数
+
+### 主体结构
+
+| 参数           | 类型     | 必填 | 说明                    |
+| ------------ | ------ | --- | --------------------- |
+| client       | string | 是  | 业务标识，请与 MarsMind 智能确定 |
+| signature    | string | 是  | 签名，见上方算法              |
+| timestamp    | int    | 是  | 时间戳（Unix 秒级）          |
+| message_info | object | 是  | 消息详情，见下方字段定义          |
+
+### `message_info` 字段
+
+| 字段                 | 类型       | 必填                           | 说明                                             |
+| ------------------ | -------- | ---------------------------- | ---------------------------------------------- |
+| msg_id             | string   | 否（assist_dialog 必填）          | 唯一消息 ID，assist_dialog 场景下必填                    |
+| group_id           | string   | 视场景而定                        | 群聊 ID，from_user_id 与 group_id 同为空报错 400        |
+| group_name         | string   | 否                            | 群聊名称                                           |
+| from_user_id       | string   | 是                            | 发送者 ID                                         |
+| from_user_nickname | string   | 否                            | 发送者昵称                                          |
+| to_user_id         | string   | 否                            | 接收者 ID                                         |
+| to_user_nickname   | string   | 否                            | 接收者昵称                                          |
+| at_list            | string[] | 否                            | @ 的用户 ID 列表（仅 auto_dialog 支持）                  |
+| content            | string   | content 与 files_info 至少有一个必填 | 消息文本内容                                         |
+| message_type       | int      | 是                            | 1 = 普通消息，2 = 引用消息                              |
+| event_type         | string   | 是                            | auto_dialog \| assist_dialog \| website_dialog |
+| from_user_type     | int      | auto_dialog 必填               | 1=机器人绑定账号 2=客户 3=客服 4=机器人消息                    |
+| create_timestamp   | int      | 是                            | 消息创建时间（Unix 时间戳）                               |
+| files_info         | File[]   | content 与 files_info 至少有一个必填 | 附件列表，见下表                                       |
+| quote              | object   | message_type=2 必填            | 引用消息对象，需含 msg_id、message_type                  |
+
+#### `files_info` 结构
+
+| 字段        | 类型                 | 必填 | 说明           |
+| --------- | ------------------ | --- | ------------ |
+| content   | string (URL)       | 是  | 文件地址或 base64 |
+| file_type | "image"/"document" | 是  | 文件类型         |
+
+---
+
+## 对话场景说明
+
+### auto_dialog（自动对话）
+
+- `event_type = auto_dialog`
+- 提供 `send_url`，由 MarsMind 智能自动控制消息逻辑
+- 支持文本、图片、文件（每次请求类型唯一）
+
+**from_user_type 填写建议：**
+
+- 绑定对象：除智能助手本身消息外，均填 1
+- 未绑定对象：外部客户填 2，同公司人员填 3
+
+---
+
+### assist_dialog（辅助对话）
+
+- `event_type = assist_dialog`
+- 实时返回消息处理结果
+- 参数若与 auto_dialog 消息一致，将复用上下文
+
+---
+
+### website_dialog（网页对话）
+
+- `event_type = website_dialog`
+- 消息立即返回结果并入上下文，不支持 send_url
+
+---
+
+### cmd_dialog（命令控制）
+
+- `event_type = cmd_dialog`
+- content 为具体命令，当前支持：
+- `stop_auto_reply`：停止自动回复（仅 auto_dialog 场景下有效）
+
+---
+
+## 调用示例
+
+### auto_dialog
+
+```bash
+curl -X POST http://127.0.0.1:7002/custom-im/chat-messages \
+-H "Content-Type: application/json" \
+-d '{
+  "client": "test",
+  "signature": "d97b383a532466b6c6c451e76a2ab57b",
+  "timestamp": 1748584621,
+  "message_info": {
+    "content": "",
+    "message_type": 1,
+    "group_id": "98765@chatroom",
+    "event_type": "auto_dialog",
+    "from_user_id": "aa123",
+    "from_user_type": 2,
+    "msg_id": "9005",
+    "create_timestamp": 1748584621,
+    "files_info": [
+      { "content": "https://example.com/img.png", "file_type": "image" }
+    ]
+  }
+}'
+```

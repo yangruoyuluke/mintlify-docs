@@ -87,6 +87,21 @@
             ]
           }
         ]
+        "dropdowns": [
+          {
+            "dropdown": "API文档",
+            "icon": "book",
+            "description": "技术团队可以参考开发",
+            "pages": [
+              {
+                "pages": [
+                  "api"
+                ]
+              }
+            ]
+          }
+        ]
+
       },
       {
         "language": "jp",

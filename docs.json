@@ -63,7 +63,7 @@
                             {
                                 "group": "快速开始",
                                 "pages": [
-                                    "introduction",
+                                    "cn/introduction",
                                     "quickstart"
                                 ]
                             },

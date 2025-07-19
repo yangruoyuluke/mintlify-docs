@@ -69,7 +69,7 @@
                         "description": "如何和AI协作操作指南",
                         "pages": [
                             {
-                                "group": "快速开始",
+                                "group":"快速入门",
                                 "pages": [
                                     "cn/introduction",
                                     "quickstart"

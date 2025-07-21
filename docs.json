@@ -84,6 +84,12 @@
                                     "cn/doc_management",
                                     "cn/command_note"
                                 ]
+                            },
+                            {
+                                "group": "API文档",
+                                "pages": [
+                                    "cn/api_reference"
+                                ]
                             }
                         ]
                     },

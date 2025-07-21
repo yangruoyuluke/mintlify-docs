@@ -91,30 +91,34 @@
             },
             {
                 "language": "jp",
-                "dropdowns": [
-                    {
-                        "dropdown": "ドキュメント",
-                        "icon": "book",
-                        "description": "MarsMind AIドキュメント",
-                        "pages": [
+                "pages": [
                             {
-                                "group": "はじめに",
+                                "group":"快速入门",
                                 "pages": [
                                     "jp/introduction",
-                                    "jp/quickstart"
+                                    "jp/quickstart",
+                                    "jp/4preparation"
                                 ]
                             },
                             {
-                                "group": "製品",
+                                "group": "产品",
                                 "pages": [
-                                    "jp/features",
-                                    "jp/pricing"
+                                    "jp/login_and_reg",
+                                    "jp/run_avatar",
+                                    "jp/qa_management",
+                                    "jp/doc_management",
+                                    "jp/command_note"
+                                ]
+                            },
+                            {
+                                "group": "API文档",
+                                "pages": [
+                                    "jp/api_reference"
                                 ]
                             }
                         ]
-                    }
-                ]
             }
+
         ]
     },
     "footer": {

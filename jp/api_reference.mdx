@@ -1,0 +1,108 @@
+---
+title: "API ドキュメント"
+description: "以下のドキュメントを参考に、APIを自主的に呼び出して対話機能を組み込むことができます。独自に適合させたいユーザー向けの内容です。secret および client は MarsMind より申請・取得が必要です。"
+---
+
+## リクエストパラメータ
+
+### 本体構造
+
+| パラメータ     | 型      | 必須 | 説明                         |
+| ------------ | ------ | --- | --------------------------- |
+| client       | string | はい | ビジネス識別子。MarsMind との調整が必要     |
+| signature    | string | はい | 署名。上記アルゴリズムを参照             |
+| timestamp    | int    | はい | タイムスタンプ（Unix秒）              |
+| message_info | object | はい | メッセージ詳細。下記フィールド定義を参照      |
+
+### `message_info` フィールド
+
+| フィールド             | 型         | 必須                      | 説明                                                           |
+| ------------------ | -------- | ----------------------- | ------------------------------------------------------------ |
+| msg_id             | string   | assist_dialog時必須         | ユニークメッセージID。assist_dialog シーン時に必須               |
+| group_id           | string   | シーンによる                 | グループID。from_user_id および group_id が両方空の場合は400エラー    |
+| group_name         | string   | いいえ                     | グループ名                                                      |
+| from_user_id       | string   | はい                       | 送信者ID                                                        |
+| from_user_nickname | string   | いいえ                     | 送信者ニックネーム                                               |
+| to_user_id         | string   | いいえ                     | 受信者ID                                                        |
+| to_user_nickname   | string   | いいえ                     | 受信者ニックネーム                                               |
+| at_list            | string[] | いいえ                     | @ユーザーIDリスト（auto_dialogのみ対応）                           |
+| content            | string   | contentまたはfiles_info必須 | メッセージテキスト内容                                            |
+| message_type       | int      | はい                       | 1 = 通常メッセージ, 2 = 引用メッセージ                              |
+| event_type         | string   | はい                       | auto_dialog / assist_dialog / website_dialog                   |
+| from_user_type     | int      | auto_dialog時必須           | 1=Bot連携アカウント 2=顧客 3=スタッフ 4=Botメッセージ                  |
+| create_timestamp   | int      | はい                       | メッセージ作成時間（Unixタイムスタンプ）                             |
+| files_info         | File[]   | contentまたはfiles_info必須 | 添付ファイルリスト。下記参照                                        |
+| quote              | object   | message_type=2時必須        | 引用メッセージオブジェクト。msg_id, message_typeを含む必要あり         |
+
+#### `files_info` 構造
+
+| フィールド   | 型                   | 必須 | 説明                  |
+| ---------- | ------------------ | --- | ------------------- |
+| content    | string (URL)       | はい | ファイルURLまたはbase64     |
+| file_type  | "image"/"document" | はい | ファイルタイプ             |
+
+---
+
+## 対話シーンの説明
+
+### auto_dialog（自動対話）
+
+- `event_type = auto_dialog`
+- `send_url`を提供し、MarsMindが自動的にメッセージロジックを制御
+- テキスト・画像・ファイルをサポート（1回のリクエストは1種のみ）
+
+**from_user_type の入力例:**
+
+- 連携済み: Bot自身以外は全て 1
+- 連携なし: 外部顧客は 2、自社スタッフは 3
+
+---
+
+### assist_dialog（アシスト対話）
+
+- `event_type = assist_dialog`
+- メッセージ処理結果をリアルタイムで返却
+- auto_dialog と同じパラメータの場合、文脈を引き継ぐ
+
+---
+
+### website_dialog（ウェブ対話）
+
+- `event_type = website_dialog`
+- メッセージは即時に結果が返却され、文脈に組み込まれる。send_urlは非対応
+
+---
+
+### cmd_dialog（コマンド制御）
+
+- `event_type = cmd_dialog`
+- contentには実行コマンドを指定。現在サポート中:
+- `stop_auto_reply`：自動返信停止（auto_dialogシーンのみ有効）
+
+---
+
+## 利用例
+
+### auto_dialog
+
+```bash
+curl -X POST http://127.0.0.1:7002/custom-im/chat-messages \
+-H "Content-Type: application/json" \
+-d '{
+  "client": "test",
+  "signature": "d97b383a532466b6c6c451e76a2ab57b",
+  "timestamp": 1748584621,
+  "message_info": {
+    "content": "",
+    "message_type": 1,
+    "group_id": "98765@chatroom",
+    "event_type": "auto_dialog",
+    "from_user_id": "aa123",
+    "from_user_type": 2,
+    "msg_id": "9005",
+    "create_timestamp": 1748584621,
+    "files_info": [
+      { "content": "https://example.com/img.png", "file_type": "image" }
+    ]
+  }
+}'

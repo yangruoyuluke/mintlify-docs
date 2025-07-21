@@ -62,12 +62,7 @@
             },
             {
                 "language": "cn",
-                "dropdowns": [
-                    {
-                        "dropdown": "用户手册",
-                        "icon": "book",
-                        "description": "如何和AI协作操作指南",
-                        "pages": [
+                "pages": [
                             {
                                 "group":"快速入门",
                                 "pages": [
@@ -92,16 +87,6 @@
                                 ]
                             }
                         ]
-                    },
-                    {
-                        "dropdown": "API文档",
-                        "icon": "file-code",
-                        "description": "技术团队可以参考开发",
-                        "pages": [
-                            "cn/api_reference"
-                        ]
-                    }
-                ]
             },
             {
                 "language": "jp",

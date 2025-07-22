@@ -15,6 +15,9 @@
         "light": "public/favicon.svg",
         "dark": "public/favicon-dark.svg"
     },
+    "fonts": {
+    "family": "Open Sans"
+    },
     "banner": {
         "content": "🚀 MarsMind is now Invitaiton Only."
     },

@@ -30,7 +30,7 @@
                  ],
         "primary": {
             "type": "button",
-            "label": "Sign in",
+            "label": "Log in",
             "href": "https://admin.marsmind.co/#/index"
         }
     },

@@ -93,7 +93,7 @@
                 "language": "jp",
                 "pages": [
                             {
-                                "group":"快速入门",
+                                "group":"クイックスタート",
                                 "pages": [
                                     "jp/introduction",
                                     "jp/quickstart",
@@ -101,7 +101,7 @@
                                 ]
                             },
                             {
-                                "group": "产品",
+                                "group": "製品",
                                 "pages": [
                                     "jp/login_and_reg",
                                     "jp/run_avatar",
@@ -111,7 +111,7 @@
                                 ]
                             },
                             {
-                                "group": "API文档",
+                                "group": "APIドキュメント",
                                 "pages": [
                                     "jp/api_reference"
                                 ]

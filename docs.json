@@ -8,61 +8,35 @@
         "dark": "#212121"
     },
     "logo": {
-        "light": "logo-light.png",
-        "dark": "logo-dark.png"
+        "light": "logo/logo-light.svg",
+        "dark": "logo/logo-dark.svg"
     },
     "favicon": {
-        "light": "public/favicon.svg",
-        "dark": "public/favicon-dark.svg"
+        "light": "logo/favicon.svg",
+        "dark": "logo/favicon-dark.svg"
     },
     "fonts": {
     "family": "Open Sans"
     },
     "banner": {
-        "content": "🚀 MarsMind is now Invitaiton Only."
+        "content": "🚀 MarsMind individual is opening by invitaiton. Please contact sales@marsmind.co for more info"
     },
     "navbar": {
         "links": [
                     {
-                      "label": "Website",
+                      "label": "Business",
                       "href": "https://marsmind.co"
                     }
                  ],
         "primary": {
             "type": "button",
-            "label": "Log in",
+            "label": "Sign in",
             "href": "https://admin.marsmind.co/#/index"
         }
     },
     "topbarLinks": [],
     "navigation": {
         "languages": [
-            {
-                "language": "en",
-                "dropdowns": [
-                    {
-                        "dropdown": "Documentation",
-                        "icon": "book",
-                        "description": "MarsMind AI documentation",
-                        "pages": [
-                            {
-                                "group": "Getting Started",
-                                "pages": [
-                                    "introduction",
-                                    "quickstart"
-                                ]
-                            },
-                            {
-                                "group": "Product",
-                                "pages": [
-                                    "features",
-                                    "usermanual"
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
             {
                 "language": "cn",
                 "pages": [
@@ -120,8 +94,36 @@
                                 ]
                             }
                         ]
+            },
+            {
+                "language": "en",
+                "pages": [
+                            {
+                                "group":"quick start",
+                                "pages": [
+                                    "en/introduction",
+                                    "en/quickstart",
+                                    "en/4preparation"
+                                ]
+                            },
+                            {
+                                "group": "product",
+                                "pages": [
+                                    "en/login_and_reg",
+                                    "en/run_avatar",
+                                    "en/qa_management",
+                                    "en/doc_management",
+                                    "en/command_note"
+                                ]
+                            },
+                            {
+                                "group": "API document",
+                                "pages": [
+                                    "en/api_reference"
+                                ]
+                            }
+                        ]
             }
-
         ]
     },
     "footer": {

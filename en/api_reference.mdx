@@ -1,0 +1,108 @@
+---
+title: "API Documentation"
+description: "You can use the following documentation to call the API yourself and enable conversational capabilities in your own chat window. This is suitable for users who require custom integration. Both secret and client must be requested and obtained from MarsMind AI."
+---
+
+## Request Parameters
+
+### Main Structure
+
+| Parameter     | Type   | Required | Description                                      |
+| ------------- | ------ | -------- | ------------------------------------------------ |
+| client        | string | Yes      | Business identifier, confirm with MarsMind AI    |
+| signature     | string | Yes      | Signature, see algorithm above                   |
+| timestamp     | int    | Yes      | Timestamp (Unix, in seconds)                     |
+| message_info  | object | Yes      | Message details, see field definitions below     |
+
+### `message_info` Fields
+
+| Field                | Type       | Required                               | Description                                                   |
+| -------------------- | ---------- | -------------------------------------- | ------------------------------------------------------------- |
+| msg_id               | string     | No (required for assist_dialog)        | Unique message ID, required in assist_dialog scenario         |
+| group_id             | string     | Depends on scenario                    | Group chat ID; if both from_user_id and group_id are empty, error 400 |
+| group_name           | string     | No                                     | Group chat name                                               |
+| from_user_id         | string     | Yes                                    | Sender ID                                                     |
+| from_user_nickname   | string     | No                                     | Sender nickname                                               |
+| to_user_id           | string     | No                                     | Receiver ID                                                   |
+| to_user_nickname     | string     | No                                     | Receiver nickname                                             |
+| at_list              | string[]   | No                                     | List of user IDs to @ (supported only in auto_dialog)         |
+| content              | string     | At least one of content or files_info is required | Message text content                                          |
+| message_type         | int        | Yes                                    | 1 = Normal message, 2 = Quoted message                        |
+| event_type           | string     | Yes                                    | auto_dialog \| assist_dialog \| website_dialog                |
+| from_user_type       | int        | Required for auto_dialog               | 1 = Bot-bound account, 2 = Customer, 3 = Agent, 4 = Bot message|
+| create_timestamp     | int        | Yes                                    | Message creation time (Unix timestamp)                        |
+| files_info           | File[]     | At least one of content or files_info is required | List of attachments, see table below                          |
+| quote                | object     | Required if message_type=2             | Quoted message object; must include msg_id, message_type      |
+
+#### `files_info` Structure
+
+| Field     | Type                   | Required | Description                  |
+| --------- | ----------------------| -------- | ----------------------------|
+| content   | string (URL)          | Yes      | File URL or base64 content  |
+| file_type | "image"/"document"    | Yes      | Type of file                |
+
+---
+
+## Conversation Scenario Descriptions
+
+### auto_dialog (Automatic Conversation)
+
+- `event_type = auto_dialog`
+- Provide `send_url`; MarsMind AI will automatically handle message logic
+- Supports text, image, or file (only one type per request)
+
+**Recommended values for from_user_type:**
+
+- For bound accounts: fill in 1 for all except the AI assistant's own messages
+- For unbound accounts: external customers fill 2, internal staff fill 3
+
+---
+
+### assist_dialog (Assisted Conversation)
+
+- `event_type = assist_dialog`
+- Returns message processing results in real time
+- If parameters are the same as auto_dialog, the context will be reused
+
+---
+
+### website_dialog (Web Chat)
+
+- `event_type = website_dialog`
+- Messages return results immediately and are added to the context; send_url is not supported
+
+---
+
+### cmd_dialog (Command Control)
+
+- `event_type = cmd_dialog`
+- content specifies the command; currently supported:
+- `stop_auto_reply`: Stop automatic reply (only effective in auto_dialog scenario)
+
+---
+
+## Example Call
+
+### auto_dialog
+
+```bash
+curl -X POST http://127.0.0.1:7002/custom-im/chat-messages \
+-H "Content-Type: application/json" \
+-d '{
+  "client": "test",
+  "signature": "d97b383a532466b6c6c451e76a2ab57b",
+  "timestamp": 1748584621,
+  "message_info": {
+    "content": "",
+    "message_type": 1,
+    "group_id": "98765@chatroom",
+    "event_type": "auto_dialog",
+    "from_user_id": "aa123",
+    "from_user_type": 2,
+    "msg_id": "9005",
+    "create_timestamp": 1748584621,
+    "files_info": [
+      { "content": "https://example.com/img.png", "file_type": "image" }
+    ]
+  }
+}'

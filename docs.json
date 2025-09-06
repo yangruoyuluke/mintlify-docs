@@ -46,13 +46,19 @@
                                 ]
                             },
                             {
-                                "group": "产品",
+                                "group": "协作方式",
+                                "pages": [
+                                    "cn/collaboration_basics",
+                                    "cn/collaboration_advanced",
+                                    "cn/command_note"
+                                ]
+                            },
+                            {
+                                "group": "Admin管理后台",
                                 "pages": [
                                     "cn/login_and_reg",
                                     "cn/run_avatar",
-                                    "cn/qa_management",
-                                    "cn/doc_management",
-                                    "cn/command_note"
+                                    "cn/qa_management"
                                 ]
                             },
                             {

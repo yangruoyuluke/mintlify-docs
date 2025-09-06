@@ -36,49 +36,40 @@
         "languages": [
             {
                 "language": "cn",
-                "dropdowns": [
+                "pages": [
                     {
-                        "dropdown": "产品指南",
-                        "icon": "book",
-                        "description": "AI Agent产品的协作方式",
+                        "group": "开始",
                         "pages": [
-                            {
-                                "group": "开始",
-                                "pages": [
-                                    "cn/introduction",
-                                    "cn/4preparation",
-                                    "cn/quickstart"
-                                ]
-                            },
-                            {
-                                "group": "AI助手协作指南",
-                                "pages": [
-                                    "cn/collaboration_basics",
-                                    "cn/collaboration_advanced"
-                                ]
-                            },
-                            {
-                                "group": "管理后台",
-                                "pages": [
-                                    "cn/login_and_reg",
-                                    "cn/run_avatar",
-                                    "cn/qa_management"
-                                ]
-                            },
-                            {
-                                "group": "API文档",
-                                "pages": [
-                                    "cn/api_reference"
-                                ]
-                            }
+                            "cn/introduction",
+                            "cn/4preparation",
+                            "cn/quickstart"
                         ]
                     },
                     {
-                        "dropdown": "产品更新",
-                        "icon": "book",
-                        "description": "随时了解学习我们的更新",
+                        "group": "AI助手协作指南",
                         "pages": [
-                            "updates"
+                            "cn/collaboration_basics",
+                            "cn/collaboration_advanced"
+                        ]
+                    },
+                    {
+                        "group": "管理后台",
+                        "pages": [
+                            "cn/login_and_reg",
+                            "cn/run_avatar",
+                            "cn/qa_management"
+                        ]
+                    },
+                    {
+                        "group": "API文档",
+                        "pages": [
+                            "cn/api_reference"
+                        ]
+                    },
+                    {
+                        "group": "产品更新",
+                        "pages": [
+                            "cn/updates"
                         ]
                     }
                 ]
@@ -142,10 +133,5 @@
                 ]
             }
         ]
-    },
-    "footer": {
-        "socials": {
-            "website": "https://www.marsmind.co"
-        }
     }
 }

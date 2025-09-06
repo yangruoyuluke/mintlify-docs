@@ -20,11 +20,11 @@
     },
     "navbar": {
         "links": [
-                    {
-                      "label": "Business",
-                      "href": "https://marsmind.co"
-                    }
-                 ],
+            {
+                "label": "Business",
+                "href": "https://marsmind.co"
+            }
+        ],
         "primary": {
             "type": "button",
             "label": "Log in",
@@ -36,13 +36,18 @@
         "languages": [
             {
                 "language": "cn",
-                "pages": [
+                "dropdowns": [
+                    {
+                        "dropdown": "产品指南",
+                        "icon": "book",
+                        "description": "AI Agent产品的协作方式",
+                        "pages": [
                             {
-                                "group":"开始",
+                                "group": "开始",
                                 "pages": [
                                     "cn/introduction",
                                     "cn/4preparation",
-                                  "cn/quickstart"
+                                    "cn/quickstart"
                                 ]
                             },
                             {
@@ -67,64 +72,74 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "dropdown": "产品更新",
+                        "icon": "book",
+                        "description": "随时了解学习我们的更新",
+                        "pages": [
+                            "updates"
+                        ]
+                    }
+                ]
             },
             {
                 "language": "jp",
                 "pages": [
-                            {
-                                "group":"クイックスタート",
-                                "pages": [
-                                    "jp/introduction",
-                                    "jp/quickstart",
-                                    "jp/4preparation"
-                                ]
-                            },
-                            {
-                                "group": "製品",
-                                "pages": [
-                                    "jp/login_and_reg",
-                                    "jp/run_avatar",
-                                    "jp/qa_management",
-                                    "jp/doc_management",
-                                    "jp/command_note"
-                                ]
-                            },
-                            {
-                                "group": "APIドキュメント",
-                                "pages": [
-                                    "jp/api_reference"
-                                ]
-                            }
+                    {
+                        "group": "クイックスタート",
+                        "pages": [
+                            "jp/introduction",
+                            "jp/quickstart",
+                            "jp/4preparation"
                         ]
+                    },
+                    {
+                        "group": "製品",
+                        "pages": [
+                            "jp/login_and_reg",
+                            "jp/run_avatar",
+                            "jp/qa_management",
+                            "jp/doc_management",
+                            "jp/command_note"
+                        ]
+                    },
+                    {
+                        "group": "APIドキュメント",
+                        "pages": [
+                            "jp/api_reference"
+                        ]
+                    }
+                ]
             },
             {
                 "language": "en",
                 "pages": [
-                            {
-                                "group":"quick start",
-                                "pages": [
-                                    "en/introduction",
-                                    "en/quickstart",
-                                    "en/4preparation"
-                                ]
-                            },
-                            {
-                                "group": "product",
-                                "pages": [
-                                    "en/login_and_reg",
-                                    "en/run_avatar",
-                                    "en/qa_management",
-                                    "en/doc_management",
-                                    "en/command_note"
-                                ]
-                            },
-                            {
-                                "group": "API document",
-                                "pages": [
-                                    "en/api_reference"
-                                ]
-                            }
+                    {
+                        "group": "quick start",
+                        "pages": [
+                            "en/introduction",
+                            "en/quickstart",
+                            "en/4preparation"
                         ]
+                    },
+                    {
+                        "group": "product",
+                        "pages": [
+                            "en/login_and_reg",
+                            "en/run_avatar",
+                            "en/qa_management",
+                            "en/doc_management",
+                            "en/command_note"
+                        ]
+                    },
+                    {
+                        "group": "API document",
+                        "pages": [
+                            "en/api_reference"
+                        ]
+                    }
+                ]
             }
         ]
     },

@@ -16,7 +16,7 @@
         "dark": "logo/favicon-dark.svg"
     },
     "banner": {
-        "content": "🚀 MarsMind is now by invitaiton only. Please contact sales@marsmind.co for more info"
+        "content": "🚀 MarsMind Admin is now opened! Please contact sales@marsmind.co to check out more"
     },
     "navbar": {
         "links": [
@@ -38,7 +38,7 @@
                 "language": "cn",
                 "pages": [
                     {
-                        "group": "开始",
+                        "group": "快速开始",
                         "pages": [
                             "cn/introduction",
                             "cn/4preparation",
@@ -59,20 +59,16 @@
                             "cn/run_avatar",
                             "cn/qa_management",
                             "cn/indentity_setup",
-                            "cn/inbound_setup"
+                            "cn/inbound_setup",
+                            "cn/data_module"
 
                         ]
                     },
                     {
-                        "group": "API文档",
+                        "group": "API文档及产品日志",
                         "pages": [
-                            "cn/api_reference"
-                        ]
-                    },
-                    {
-                        "group": "产品更新",
-                        "pages": [
-                            "cn/updates"
+                            "cn/api_reference",
+                            "cn/updates"                        
                         ]
                     }
                 ]

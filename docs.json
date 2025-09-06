@@ -16,7 +16,7 @@
         "dark": "logo/favicon-dark.svg"
     },
     "banner": {
-        "content": "🚀 MarsMind is now open by invitaiton only. Please contact sales@marsmind.co for more info"
+        "content": "🚀 MarsMind is now by invitaiton only. Please contact sales@marsmind.co for more info"
     },
     "navbar": {
         "links": [
@@ -38,15 +38,15 @@
                 "language": "cn",
                 "pages": [
                             {
-                                "group":"快速入门",
+                                "group":"开始",
                                 "pages": [
                                     "cn/introduction",
-                                    "cn/quickstart",
-                                    "cn/4preparation"
+                                    "cn/4preparation",
+                                  "cn/quickstart"
                                 ]
                             },
                             {
-                                "group": "协作方式",
+                                "group": "AI助手协作指南",
                                 "pages": [
                                     "cn/collaboration_basics",
                                     "cn/collaboration_advanced"

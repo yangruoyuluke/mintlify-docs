@@ -49,12 +49,11 @@
                                 "group": "协作方式",
                                 "pages": [
                                     "cn/collaboration_basics",
-                                    "cn/collaboration_advanced",
-                                    "cn/command_note"
+                                    "cn/collaboration_advanced"
                                 ]
                             },
                             {
-                                "group": "Admin管理后台",
+                                "group": "管理后台",
                                 "pages": [
                                     "cn/login_and_reg",
                                     "cn/run_avatar",

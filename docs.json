@@ -57,7 +57,10 @@
                         "pages": [
                             "cn/login_and_reg",
                             "cn/run_avatar",
-                            "cn/qa_management"
+                            "cn/qa_management",
+                            "cn/indentity_setup",
+                            "cn/inbound_setup"
+
                         ]
                     },
                     {

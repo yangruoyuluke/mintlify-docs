@@ -75,30 +75,28 @@
             },
             {
                 "language": "jp",
-                "pages": [
-                    {
-                        "group": "クイックスタート",
-                        "pages": [
-                            "jp/introduction",
-                            "jp/quickstart",
-                            "jp/4preparation"
-                        ]
-                    },
-                    {
-                        "group": "製品",
-                        "pages": [
-                            "jp/login_and_reg",
-                            "jp/run_avatar",
-                            "jp/qa_management",
-                            "jp/doc_management",
-                            "jp/command_note"
-                        ]
-                    },
-                    {
-                        "group": "APIドキュメント",
-                        "pages": [
-                            "jp/api_reference"
-                        ]
+      "pages": [
+        {
+          "group": "クイックスタート",
+          "pages": [
+            "jp/introduction",
+            "jp/4preparation",
+            "jp/quickstart"
+          ]
+        },
+        {
+          "group": "管理コンソール",
+          "pages": [
+            "jp/qa_management",
+            "jp/data_module"
+          ]
+        },
+        {
+          "group": "APIドキュメント・製品ログ",
+          "pages": [
+            "jp/api_reference",
+            "jp/updates"
+          ]
                     }
                 ]
             },

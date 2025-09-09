@@ -1,83 +1,84 @@
 ---
 title: "API ドキュメント"
-description: "以下のドキュメントを参考に、APIを自主的に呼び出して対話機能を組み込むことができます。独自に適合させたいユーザー向けの内容です。secret および client は MarsMind より申請・取得が必要です。"
+description: "以下のドキュメントを利用して API を呼び出し、会話機能を独自のウィンドウに組み込むことができます。主に自主的に適応したいユーザー向けです。secret と client は MarsMind から取得してください。"
 ---
 
 ## リクエストパラメータ
 
-### 本体構造
+### メイン構造
 
-| パラメータ     | 型      | 必須 | 説明                         |
-| ------------ | ------ | --- | --------------------------- |
-| client       | string | はい | ビジネス識別子。MarsMind との調整が必要     |
-| signature    | string | はい | 署名。上記アルゴリズムを参照             |
-| timestamp    | int    | はい | タイムスタンプ（Unix秒）              |
-| message_info | object | はい | メッセージ詳細。下記フィールド定義を参照      |
+| パラメータ     | 型       | 必須 | 説明                         |
+| ------------- | -------- | ---- | ---------------------------- |
+| client        | string   | はい | ビジネス識別子。MarsMind と確認してください |
+| signature     | string   | はい | 署名。下記アルゴリズム参照            |
+| timestamp     | int      | はい | タイムスタンプ（Unix 秒）            |
+| message_info  | object   | はい | メッセージ詳細。以下フィールドを参照     |
 
 ### `message_info` フィールド
 
-| フィールド             | 型         | 必須                      | 説明                                                           |
-| ------------------ | -------- | ----------------------- | ------------------------------------------------------------ |
-| msg_id             | string   | assist_dialog時必須         | ユニークメッセージID。assist_dialog シーン時に必須               |
-| group_id           | string   | シーンによる                 | グループID。from_user_id および group_id が両方空の場合は400エラー    |
-| group_name         | string   | いいえ                     | グループ名                                                      |
-| from_user_id       | string   | はい                       | 送信者ID                                                        |
-| from_user_nickname | string   | いいえ                     | 送信者ニックネーム                                               |
-| to_user_id         | string   | いいえ                     | 受信者ID                                                        |
-| to_user_nickname   | string   | いいえ                     | 受信者ニックネーム                                               |
-| at_list            | string[] | いいえ                     | @ユーザーIDリスト（auto_dialogのみ対応）                           |
-| content            | string   | contentまたはfiles_info必須 | メッセージテキスト内容                                            |
-| message_type       | int      | はい                       | 1 = 通常メッセージ, 2 = 引用メッセージ                              |
-| event_type         | string   | はい                       | auto_dialog / assist_dialog / website_dialog                   |
-| from_user_type     | int      | auto_dialog時必須           | 1=Bot連携アカウント 2=顧客 3=スタッフ 4=Botメッセージ                  |
-| create_timestamp   | int      | はい                       | メッセージ作成時間（Unixタイムスタンプ）                             |
-| files_info         | File[]   | contentまたはfiles_info必須 | 添付ファイルリスト。下記参照                                        |
-| quote              | object   | message_type=2時必須        | 引用メッセージオブジェクト。msg_id, message_typeを含む必要あり         |
+| フィールド              | 型       | 必須                        | 説明                                                   |
+| ---------------------- | -------- | --------------------------- | ------------------------------------------------------ |
+| msg_id                 | string   | assist_dialog では必須        | メッセージ ID。assist_dialog の場合必須                       |
+| group_id               | string   | シナリオによる                  | グループチャット ID。from_user_id と group_id が両方空の場合は 400 エラー |
+| group_name             | string   | いいえ                       | グループ名                                               |
+| from_user_id           | string   | はい                         | 送信者 ID                                               |
+| from_user_nickname     | string   | いいえ                       | 送信者のニックネーム                                       |
+| to_user_id             | string   | いいえ                       | 受信者 ID                                               |
+| to_user_nickname       | string   | いいえ                       | 受信者のニックネーム                                       |
+| at_list                | string[] | いいえ                       | @ 対象ユーザー ID リスト（auto_dialog のみ対応）                   |
+| content                | string   | content または files_info 必須 | メッセージ本文                                            |
+| message_type           | int      | はい                         | 1 = 通常メッセージ、2 = 引用メッセージ                             |
+| event_type             | string   | はい                         | auto_dialog \| assist_dialog \| website_dialog \| cmd_dialog |
+| from_user_type         | int      | auto_dialog では必須           | 1=特定アカウントに紐付く 2=顧客 3=カスタマーサポート 4=AI メッセージ   |
+| create_timestamp       | int      | はい                         | メッセージ作成時間（Unix タイムスタンプ）                           |
+| files_info             | File[]   | content または files_info 必須 | 添付ファイル一覧。下表参照                                        |
+| quote                  | object   | message_type=2 の場合必須       | 引用メッセージオブジェクト。msg_id、message_type を含む必要あり            |
 
 #### `files_info` 構造
 
-| フィールド   | 型                   | 必須 | 説明                  |
-| ---------- | ------------------ | --- | ------------------- |
-| content    | string (URL)       | はい | ファイルURLまたはbase64     |
-| file_type  | "image"/"document" | はい | ファイルタイプ             |
+| フィールド   | 型                     | 必須 | 説明                 |
+| ---------- | ---------------------- | ---- | -------------------- |
+| content    | string (URL/base64)    | はい | ファイル URL または base64 データ |
+| file_type  | "image"/"document"/"voice" | はい | ファイルタイプ           |
 
 ---
 
-## 対話シーンの説明
+## 会話シナリオの種類
 
 ### auto_dialog（自動対話）
 
-- `event_type = auto_dialog`
-- `send_url`を提供し、MarsMindが自動的にメッセージロジックを制御
-- テキスト・画像・ファイルをサポート（1回のリクエストは1種のみ）
+- `event_type = auto_dialog`  
+- `send_url` を提供し、MarsMind が自動で送信ロジックを制御  
+- テキスト・画像・ファイルをサポート（リクエストごとに 1 種類のみ）
 
-**from_user_type の入力例:**
+**from_user_type 設定ガイドライン：**
 
-- 連携済み: Bot自身以外は全て 1
-- 連携なし: 外部顧客は 2、自社スタッフは 3
-
----
-
-### assist_dialog（アシスト対話）
-
-- `event_type = assist_dialog`
-- メッセージ処理結果をリアルタイムで返却
-- auto_dialog と同じパラメータの場合、文脈を引き継ぐ
+- 特定ユーザーに紐付く場合：AI 以外のメッセージはすべて 1  
+- 特定ユーザーに紐付かない場合：外部顧客は 2、自社スタッフは 3  
 
 ---
 
-### website_dialog（ウェブ対話）
+### assist_dialog（補助対話）
 
-- `event_type = website_dialog`
-- メッセージは即時に結果が返却され、文脈に組み込まれます。send_urlは非対応
+- `event_type = assist_dialog`  
+- リアルタイムで結果を返却  
+- auto_dialog と同一のパラメータであれば、既存のコンテキストを利用  
+
+---
+
+### website_dialog（Web 対話）
+
+- `event_type = website_dialog`  
+- 即時に結果を返却し、会話履歴に追加  
+- `send_url` は利用不可  
 
 ---
 
 ### cmd_dialog（コマンド制御）
 
-- `event_type = cmd_dialog`
-- contentには実行コマンドを指定。現在サポート中:
-- `stop_auto_reply`：自動返信停止（auto_dialogシーンのみ有効）
+- `event_type = cmd_dialog`  
+- content にコマンドを指定。現在サポートしているのは：  
+  - `stop_auto_reply`：自動返信を停止（auto_dialog シナリオのみ有効）  
 
 ---
 

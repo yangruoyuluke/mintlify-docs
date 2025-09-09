@@ -1,87 +1,88 @@
 ---
 title: "API Documentation"
-description: "You can use the following documentation to call the API yourself and enable conversational capabilities in your own chat window. This is suitable for users who require custom integration. Both secret and client must be requested and obtained from MarsMind AI."
+description: "Use this documentation to call the API and embed MarsMind’s conversational capabilities into your own chat window. This is intended for users who want to self-integrate. Both secret and client must be obtained from MarsMind."
 ---
 
 ## Request Parameters
 
 ### Main Structure
 
-| Parameter     | Type   | Required | Description                                      |
-| ------------- | ------ | -------- | ------------------------------------------------ |
-| client        | string | Yes      | Business identifier, confirm with MarsMind AI    |
-| signature     | string | Yes      | Signature, see algorithm above                   |
-| timestamp     | int    | Yes      | Timestamp (Unix, in seconds)                     |
-| message_info  | object | Yes      | Message details, see field definitions below     |
+| Parameter     | Type   | Required | Description                               |
+| ------------- | ------ | -------- | ----------------------------------------- |
+| client        | string | Yes      | Business identifier, must be confirmed with MarsMind |
+| signature     | string | Yes      | Signature, see algorithm below             |
+| timestamp     | int    | Yes      | Timestamp (Unix, seconds)                  |
+| message_info  | object | Yes      | Message details, see fields below          |
 
 ### `message_info` Fields
 
-| Field                | Type       | Required                               | Description                                                   |
-| -------------------- | ---------- | -------------------------------------- | ------------------------------------------------------------- |
-| msg_id               | string     | No (required for assist_dialog)        | Unique message ID, required in assist_dialog scenario         |
-| group_id             | string     | Depends on scenario                    | Group chat ID; if both from_user_id and group_id are empty, error 400 |
-| group_name           | string     | No                                     | Group chat name                                               |
-| from_user_id         | string     | Yes                                    | Sender ID                                                     |
-| from_user_nickname   | string     | No                                     | Sender nickname                                               |
-| to_user_id           | string     | No                                     | Receiver ID                                                   |
-| to_user_nickname     | string     | No                                     | Receiver nickname                                             |
-| at_list              | string[]   | No                                     | List of user IDs to @ (supported only in auto_dialog)         |
-| content              | string     | At least one of content or files_info is required | Message text content                                          |
-| message_type         | int        | Yes                                    | 1 = Normal message, 2 = Quoted message                        |
-| event_type           | string     | Yes                                    | auto_dialog \| assist_dialog \| website_dialog                |
-| from_user_type       | int        | Required for auto_dialog               | 1 = Bot-bound account, 2 = Customer, 3 = Agent, 4 = Bot message|
-| create_timestamp     | int        | Yes                                    | Message creation time (Unix timestamp)                        |
-| files_info           | File[]     | At least one of content or files_info is required | List of attachments, see table below                          |
-| quote                | object     | Required if message_type=2             | Quoted message object; must include msg_id, message_type      |
+| Field               | Type     | Required                   | Description                                               |
+| ------------------- | -------- | -------------------------- | --------------------------------------------------------- |
+| msg_id              | string   | Required for assist_dialog | Unique message ID; mandatory in assist_dialog scenario    |
+| group_id            | string   | Depends on scenario        | Group chat ID. If both `from_user_id` and `group_id` are empty → error 400 |
+| group_name          | string   | No                         | Group name                                                |
+| from_user_id        | string   | Yes                        | Sender ID                                                 |
+| from_user_nickname  | string   | No                         | Sender nickname                                           |
+| to_user_id          | string   | No                         | Receiver ID                                               |
+| to_user_nickname    | string   | No                         | Receiver nickname                                         |
+| at_list             | string[] | No                         | List of mentioned users (@). Only supported in auto_dialog |
+| content             | string   | Required if no files_info  | Message text content                                      |
+| message_type        | int      | Yes                        | 1 = normal message, 2 = quoted message                    |
+| event_type          | string   | Yes                        | auto_dialog \| assist_dialog \| website_dialog \| cmd_dialog |
+| from_user_type      | int      | Required for auto_dialog   | 1=bound account, 2=customer, 3=support agent, 4=AI message |
+| create_timestamp    | int      | Yes                        | Message creation time (Unix timestamp)                    |
+| files_info          | File[]   | Required if no content     | File attachments, see below                               |
+| quote               | object   | Required if message_type=2 | Quoted message object, must include msg_id and message_type |
 
 #### `files_info` Structure
 
-| Field     | Type                   | Required | Description                  |
-| --------- | ----------------------| -------- | ----------------------------|
-| content   | string (URL)          | Yes      | File URL or base64 content  |
-| file_type | "image"/"document"    | Yes      | Type of file                |
+| Field     | Type                   | Required | Description                      |
+| --------- | ---------------------- | -------- | -------------------------------- |
+| content   | string (URL/base64)    | Yes      | File URL or base64 data          |
+| file_type | "image"/"document"/"voice" | Yes   | File type                        |
 
 ---
 
-## Conversation Scenario Descriptions
+## Conversation Scenarios
 
-### auto_dialog (Automatic Conversation)
+### auto_dialog (Automatic Dialog)
 
-- `event_type = auto_dialog`
-- Provide `send_url`; MarsMind AI will automatically handle message logic
-- Supports text, image, or file (only one type per request)
+- `event_type = auto_dialog`  
+- Provide `send_url`. MarsMind will control sending logic automatically.  
+- Supports text, image, or file (only one type per request).  
 
-**Recommended values for from_user_type:**
+**from_user_type Guidelines:**
 
-- For bound accounts: fill in 1 for all except the AI assistant's own messages
-- For unbound accounts: external customers fill 2, internal staff fill 3
-
----
-
-### assist_dialog (Assisted Conversation)
-
-- `event_type = assist_dialog`
-- Returns message processing results in real time
-- If parameters are the same as auto_dialog, the context will be reused
+- If bound to a specific account: all non-AI messages should use `1`.  
+- If not bound: external customer = `2`, internal staff = `3`.  
 
 ---
 
-### website_dialog (Web Chat)
+### assist_dialog (Assisted Dialog)
 
-- `event_type = website_dialog`
-- Messages return results immediately and are added to the context; send_url is not supported
+- `event_type = assist_dialog`  
+- Immediately returns the processed result.  
+- If parameters match a previous auto_dialog message, the same context will be reused.  
+
+---
+
+### website_dialog (Web Dialog)
+
+- `event_type = website_dialog`  
+- Message is processed immediately and appended to context.  
+- `send_url` is not supported.  
 
 ---
 
 ### cmd_dialog (Command Control)
 
-- `event_type = cmd_dialog`
-- content specifies the command; currently supported:
-- `stop_auto_reply`: Stop automatic reply (only effective in auto_dialog scenario)
+- `event_type = cmd_dialog`  
+- `content` should contain the command. Currently supported:  
+  - `stop_auto_reply`: stop auto-reply (only valid in auto_dialog).  
 
 ---
 
-## Example Call
+## Example Usage
 
 ### auto_dialog
 

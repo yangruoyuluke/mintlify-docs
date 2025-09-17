@@ -75,28 +75,39 @@
             },
             {
                 "language": "jp",
-      "pages": [
-        {
-          "group": "クイックスタート",
-          "pages": [
-            "jp/introduction",
-            "jp/4preparation",
-            "jp/quickstart"
-          ]
-        },
-        {
-          "group": "管理コンソール",
-          "pages": [
-            "jp/qa_management",
-            "jp/data_module"
-          ]
-        },
-        {
-          "group": "APIドキュメント・製品ログ",
-          "pages": [
-            "jp/api_reference",
-            "jp/updates"
-          ]
+                "pages": [
+                    {
+                        "group": "クイックスタート",
+                        "pages": [
+                            "jp/introduction",
+                            "jp/4preparation",
+                            "jp/quickstart"
+                        ]
+                    },
+                    {
+                        "group": "AI助手協作指南",
+                        "pages": [
+                            "jp/collaboration_basics",
+                            "jp/collaboration_advanced"
+                        ]
+                    },
+                    {
+                        "group": "管理コンソール",
+                        "pages": [
+                            "jp/login_and_reg",
+                            "jp/run_avatar",
+                            "jp/qa_management",
+                            "jp/indentity_setup",
+                            "jp/inbound_setup",
+                            "jp/data_module"
+                        ]
+                    },
+                    {
+                        "group": "APIドキュメント・製品ログ",
+                        "pages": [
+                            "jp/api_reference",
+                            "jp/updates"
+                        ]
                     }
                 ]
             },
@@ -104,27 +115,36 @@
                 "language": "en",
                 "pages": [
                     {
-                        "group": "quick start",
+                        "group": "Quick Start",
                         "pages": [
                             "en/introduction",
-                            "en/quickstart",
-                            "en/4preparation"
+                            "en/4preparation",
+                            "en/quickstart"
                         ]
                     },
                     {
-                        "group": "product",
+                        "group": "AI Assistant Collaboration Guide",
+                        "pages": [
+                            "en/collaboration_basics",
+                            "en/collaboration_advanced"
+                        ]
+                    },
+                    {
+                        "group": "Admin Backend",
                         "pages": [
                             "en/login_and_reg",
                             "en/run_avatar",
                             "en/qa_management",
-                            "en/doc_management",
-                            "en/command_note"
+                            "en/indentity_setup",
+                            "en/inbound_setup",
+                            "en/data_module"
                         ]
                     },
                     {
-                        "group": "API document",
+                        "group": "API Documentation & Product Logs",
                         "pages": [
-                            "en/api_reference"
+                            "en/api_reference",
+                            "en/updates"
                         ]
                     }
                 ]

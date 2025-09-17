@@ -94,11 +94,8 @@
                     {
                         "group": "管理コンソール",
                         "pages": [
-                            "jp/login_and_reg",
-                            "jp/run_avatar",
                             "jp/qa_management",
                             "jp/indentity_setup",
-                            "jp/inbound_setup",
                             "jp/data_module"
                         ]
                     },

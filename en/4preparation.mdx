@@ -1,34 +1,127 @@
 ---
-title: "Four Elements AI Training Guide"
-description: "Best practices for preparing the four essential elements to generate your own dedicated AI."
+title: "Preparation Work"
+description: "We recommend preparing these four best practice elements before going live to generate your dedicated AI. This will help us design a more effective AI assistant for you during the initial design phase."
 ---
 
-### 10\+ Sets of Real Conversations
+<Note>
+  When preparing materials, please don't consider whether AI is involved. Simply organize and describe according to your current business situation.
+</Note>
 
-<Frame>
-  Please provide typical conversation records from your actual business scenarios. These should be representative dialogues your salespeople have had in these scenarios. They must be complete and unedited, with at least 10 sets (the more, the better). The outcome can be a successful deal or not—the key is that these examples help your AI learn typical customer questions and corresponding responses.
-</Frame>
+### 1. 10+ Sets of Real Conversations
 
-### Company Documentation/Website
+Typical conversation records from your business scenarios. These can be representative dialogue records from your current sales staff in these business scenarios. They must be complete and unedited, with at least 10 sets (the more, the better). The communication outcome can be successful or unsuccessful deals—the most important thing is that they are sufficiently typical, allowing your AI to learn typical customer questions and corresponding responses. We recommend including the sales operational process as well.
 
-<Frame>
-  This can be any company knowledge document that the AI needs to reference when responding. Supported formats include PDF, Excel, Word, and TXT files. Documents can be uploaded and managed in the backend.
-</Frame>
+<Tabs>
+  <Tab title="Sample Reference 1">
+    **Customer**: Hello, I want to open a store on your platform. What do I need to prepare?\
+    **Sales**: Hello, you need three documents: business license, legal representative ID, and payment account information. (Sends standard guidance poster)\
+    **Customer**: I just uploaded them. Can you help me check?\
+    **Sales**: Sure, let me confirm for you. (Logs into backend to check upload records)\
+    **Sales**: I see all three documents have been submitted completely, status is "pending review".\
+    **Customer**: How long does the review usually take?\
+    **Sales**: Usually 3-5 business days. If anything is missing, the system will prompt you to resubmit.\
+    **Customer**: Okay, what do I do after it's approved?\
+    **Sales**: After approval, we'll create a seller account for you. (Backend generates account → sends account info to customer email)\
+    **Customer**: I received the account email and can log into the backend now.\
+    **Sales**: Great, you just need to fill in store information and upload products, then you can officially go live.\
+    **Customer**: I've submitted it, showing "pending review".\
+    **Sales**: Yes, product content review usually takes 2-3 hours to approve, your store will be online soon.\
+    **Customer**: Okay, thank you.
+  </Tab>
+  <Tab title="Sample Reference 2">
+    **Customer**: Hello, I'm an overseas user wanting to register a virtual credit card with you. What documents do I need?\
+    **Sales**: Hello, registration requires your passport information, email address, and a bank card that can be linked. (Sends registration guide page link)\
+    **Customer**: Okay, I just submitted my passport and bank card. Can you help me confirm?\
+    **Sales**: No problem, let me check for you. (Logs into backend → enters customer email → checks submitted registration materials)\
+    **Sales**: I see your passport and bank card information have been uploaded successfully, status shows "pending review".\
+    **Customer**: How long does the review usually take?\
+    **Sales**: Usually 1-2 business days. If the materials don't meet requirements, the system will send an email reminder to resubmit.\
+    **Customer**: After passing review, how do I get the card?\
+    **Sales**: After approval, we'll generate a virtual credit card number and send it to your email. (Backend generates card number → system automatically sends email)\
+    **Customer**: Can the card be used immediately?\
+    **Sales**: Yes, you just need to complete activation in the backend, then you can make online payments or link to e-commerce platforms.\
+    **Customer**: How is billing handled?\
+    **Sales**: Consumption billing will automatically deduct from your linked bank card, with monthly billing cycles.\
+    **Customer**: I understand, thank you.\
+    **Sales**: You're welcome. I'll continue monitoring your review progress and notify you immediately.
+  </Tab>
+  <Tab title="Sample Reference 3">
+    **Customer**: Hello, I applied for tax refund while shopping in Tokyo last week. When will it arrive?\
+    **Sales**: Hello, let me check your tax refund progress. (Logs into tax refund system → enters customer passport number → checks tax refund application records)\
+    **Sales**: The system shows your tax refund application has been submitted, current status is "under tax authority review".\
+    **Customer**: How long does this stage usually take?\
+    **Sales**: Usually takes 5-10 business days to complete review. After approval, the amount will be refunded to the bank card account you provided.\
+    **Customer**: Will the full tax refund amount arrive?\
+    **Sales**: Tax refund service fees will be deducted, about 2%-3% of the amount, the rest will be fully refunded.\
+    **Customer**: Can I check the status myself?\
+    **Sales**: Yes, you have a query website and number on your tax refund receipt. Enter them to see the progress. (Sales screenshots system query page → sends to customer)\
+    **Customer**: What if it doesn't arrive after ten days?\
+    **Sales**: You can contact our customer service, we'll help you submit a "tax refund delay" application for the Japanese tax authority to verify and process.\
+    **Customer**: Will there be a notification when it arrives?\
+    **Sales**: Yes, the bank will send an account credit SMS notification, and you'll also receive an email reminder from the tax authority.\
+    **Customer**: Okay, I'll wait for news.\
+    **Sales**: No problem, I'll continue monitoring your tax refund progress and notify you immediately when there's a result.
+  </Tab>
+</Tabs>
 
-<Tip>
-  It is highly recommended to provide content in a Q&A format, such as an FAQ table, with each question paired with its answer.
+### 2. Enterprise Documentation Knowledge/Official Website
 
-  Ideally, use natural everyday language rather than official or overly formal language. For example:
-</Tip>
+This can be your enterprise's knowledge files that the AI needs to reference for responses. It's best presented in Q&A format, such as providing a "Common Q&A Table/FAQ Table" with questions and answers. One question corresponds to one answer. Ideally, provide content that matches everyday language expression rather than official written expression.
 
-### Dedicated AI Trainer/Contact Person
+<Tabs>
+  <Tab title="Reference Sample">
+    | Question | Answer |
+    | :-------------- | :------------------------------------------------- |
+    | What documents are needed for registration? | Need to provide valid ID (passport/ID card), contact information, payment account; for enterprise sellers, also need business license and legal representative information. |
+    | How many currencies do you currently support? | Currently support 10 major currencies like USD, JPY, EUR, RMB. We can also help you check other currencies. |
+    | Is qualification review strict? | Seller review takes 3-5 business days, no problem as long as materials are compliant. |
+    | How to check processing progress? | Users can check status in real-time through backend "My Account - Progress Query" button. |
+    | What's the tax refund process? | Need to submit invoice, customs declaration and application form, after review the amount will be refunded to your original payment account. |
+    | How to make medical appointments? | Users need to first select hospital department and time on the platform, submit ID and medical records, after confirmation an appointment number will be generated, some services require prepayment. |
+    | What are platform/service commissions or fees? | Varies by business: generally 5%-15%. Beauty products have an additional 5%. |
+    | How long are payment or refund cycles? | Payment cycle is 7-14 days; funds generally arrive in 5-20 business days; cancelled appointment refunds take 3-7 business days to process. |
+    | What if there are delays or problems? | Can check through backend "Progress Query" or submit ticket to contact customer service; can bring invoice and receipt to service point or appeal online. |
+    | What language services are supported? | System supports Chinese, English, some scenarios support Japanese, Korean and other languages for cross-border user convenience. |
+    | ... | ... |
+  </Tab>
+</Tabs>
 
-<Frame>
-  Please designate a dedicated contact person who will oversee the onboarding process and AI training. This person will act as the AI’s “mentor” and have trainer permissions. They will provide ongoing guidance, answering questions or handling issues the AI encounters. Daily and weekly AI reports will also be sent to this contact by default. You may change the mentor at any time to ensure optimal AI training results.
-</Frame>
+### 3. Dedicated AI Mentor Contact Person
 
-### Sales Workflow Diagram
+Please designate a dedicated contact person for the enterprise to handle onboarding progress and AI training. They will be defined as the AI's mentor (Leader) and receive mentor permissions. They will be responsible for subsequent AI guidance—when the AI encounters daily problems, it will come to them for reporting and consultation. Daily and weekly reports from the AI will also be sent to this Leader colleague by default. Of course, you can always choose to change to a more suitable mentor to achieve better AI training results.
 
-<Frame>
-  Provide a workflow diagram illustrating your current sales process. This will help the AI understand the step-by-step operational flow, including key milestones and responsible departments or team members. For example, after Department A handles a process, the workflow moves to Department B at a certain point. Please supplement according to your actual situation. A swimlane diagram is recommended.
-</Frame>
+### 4. Existing Business Process Flow Chart
+
+Help the AI understand your current business workflow with a process flow chart that the AI role can understand. Requires sequential business operation flow with key nodes and corresponding department (or member) divisions. For example, after Department A processes, it transfers to Department B at node X. Please supplement according to your specific situation. You can use simple natural language, but we recommend presenting it as a flow chart.
+
+<Tabs>
+  <Tab title="Natural Language Expression Reference Sample">
+    **Sales Department**
+
+    1. Sales staff receive seller inquiries.
+    2. Explain platform entry policies and required materials to sellers.
+    3. Assist sellers in collecting and submitting materials.\
+       → After materials are submitted, process transfers to **Review Department**.
+
+    **Review Department**\
+    4. Review staff check material completeness.\
+    　- If incomplete → return to Sales Department, ask seller to supplement.\
+    　- If complete → proceed to next step.\
+    5. Review staff verify compliance and qualifications.\
+    　- If failed → notify Customer Service Department to feedback to seller.\
+    　- If passed → transfer to Operations Department.
+
+    **Operations Department**\
+    6. Create seller account.\
+    7. Open store and complete launch.\
+    → After launch, process transfers to **Customer Service Department**.
+
+    **Customer Service Department**\
+    8. Customer service staff notify seller of review results.\
+    9. Provide subsequent operational support and training.\
+    → Complete closed loop.
+  </Tab>
+  <Tab title="Flow Chart Reference Sample">
+    ![Untitled diagram | Mermaid Chart-2025-09-06-050358.png](/images/UntitleddiagramMermaidChart-2025-09-06-050358.png)
+  </Tab>
+</Tabs>

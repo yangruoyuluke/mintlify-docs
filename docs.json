@@ -68,7 +68,8 @@
                         "group": "API文档及产品日志",
                         "pages": [
                             "cn/api_reference",
-                            "cn/updates"                        
+                            "cn/updates",
+                            "cn/skill_modules_detail"
                         ]
                     }
                 ]

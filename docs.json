@@ -46,11 +46,19 @@
                         ]
                     },
                     {
-                        "group": "AI助手协作指南",
+                        "group": "AI协作指南",
                         "pages": [
                             "cn/collaboration_basics",
-                            "cn/marsmind_ai_method",
-                            "cn/collaboration_advanced"
+                            "cn/collaboration_advanced",
+                            "cn/marsmind_ai_method"
+                        ]
+                    },
+                    {
+                        "group": "开发文档",
+                        "pages": [
+                            "cn/api_reference",
+                            "cn/updates",
+                            "cn/skill_modules_detail"
                         ]
                     },
                     {
@@ -63,14 +71,6 @@
                             "cn/inbound_setup",
                             "cn/data_module"
 
-                        ]
-                    },
-                    {
-                        "group": "API文档及产品日志",
-                        "pages": [
-                            "cn/api_reference",
-                            "cn/updates",
-                            "cn/skill_modules_detail"
                         ]
                     }
                 ]
@@ -87,11 +87,19 @@
                         ]
                     },
                     {
-                        "group": "AI助手協作指南",
+                        "group": "AIアシスタントガイド",
                         "pages": [
                             "jp/collaboration_basics",
-                            "jp/marsmind_ai_method",
-                            "jp/collaboration_advanced"
+                            "jp/collaboration_advanced",
+                            "jp/marsmind_ai_method"
+                        ]
+                    },
+                    {
+                        "group": "開発者向けドキュメント",
+                        "pages": [
+                            "jp/api_reference",
+                            "jp/updates",
+                            "jp/skill_modules_detail"
                         ]
                     },
                     {
@@ -100,14 +108,6 @@
                             "jp/qa_management",
                             "jp/indentity_setup",
                             "jp/data_module"
-                        ]
-                    },
-                    {
-                        "group": "APIドキュメント・製品ログ",
-                        "pages": [
-                            "jp/api_reference",
-                            "jp/updates",
-                            "jp/skill_modules_detail"
                         ]
                     }
                 ]
@@ -124,11 +124,19 @@
                         ]
                     },
                     {
-                        "group": "AI Assistant Collaboration Guide",
+                        "group": "AI Assistant Guide",
                         "pages": [
                             "en/collaboration_basics",
-                            "en/marsmind_ai_method",
-                            "en/collaboration_advanced"
+                            "en/collaboration_advanced",
+                            "en/marsmind_ai_method"
+                        ]
+                    },
+                    {
+                        "group": "Developer Documentation",
+                        "pages": [
+                            "en/api_reference",
+                            "en/updates",
+                            "en/skill_modules_detail"
                         ]
                     },
                     {
@@ -140,14 +148,6 @@
                             "en/indentity_setup",
                             "en/inbound_setup",
                             "en/data_module"
-                        ]
-                    },
-                    {
-                        "group": "API Documentation & Product Logs",
-                        "pages": [
-                            "en/api_reference",
-                            "en/updates",
-                            "en/skill_modules_detail"
                         ]
                     }
                 ]

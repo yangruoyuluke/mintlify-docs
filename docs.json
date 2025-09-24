@@ -90,6 +90,7 @@
                         "group": "AI助手協作指南",
                         "pages": [
                             "jp/collaboration_basics",
+                            "jp/marsmind_ai_method",
                             "jp/collaboration_advanced"
                         ]
                     },
@@ -126,6 +127,7 @@
                         "group": "AI Assistant Collaboration Guide",
                         "pages": [
                             "en/collaboration_basics",
+                            "en/marsmind_ai_method",
                             "en/collaboration_advanced"
                         ]
                     },

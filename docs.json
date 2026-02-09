@@ -40,37 +40,36 @@
                     {
                         "group": "快速开始",
                         "pages": [
-                            "cn/introduction",
-                            "cn/4preparation",
-                            "cn/quickstart"
+                            "cn/quick-start/introduction",
+                            "cn/quick-start/preparation",
+                            "cn/quick-start/quick-start"
                         ]
                     },
                     {
                         "group": "AI协作指南",
                         "pages": [
-                            "cn/collaboration_basics",
-                            "cn/collaboration_advanced",
-                            "cn/marsmind_ai_method"
+                            "cn/ai-assistant-guide/collaboration-basics",
+                            "cn/ai-assistant-guide/collaboration-advanced",
+                            "cn/ai-assistant-guide/marsmind-ai-method"
                         ]
                     },
                     {
                         "group": "开发文档",
                         "pages": [
-                            "cn/api_reference",
-                            "cn/updates",
-                            "cn/skill_modules_detail"
+                            "cn/developer-docs/api-reference",
+                            "cn/developer-docs/updates",
+                            "cn/developer-docs/skill-modules-detail"
                         ]
                     },
                     {
                         "group": "管理后台",
                         "pages": [
-                            "cn/login_and_reg",
-                            "cn/run_avatar",
-                            "cn/qa_management",
-                            "cn/indentity_setup",
-                            "cn/inbound_setup",
-                            "cn/data_module"
-
+                            "cn/admin-backend/login-and-registration",
+                            "cn/admin-backend/run-avatar",
+                            "cn/admin-backend/qa-management",
+                            "cn/admin-backend/identity-setup",
+                            "cn/admin-backend/inbound-setup",
+                            "cn/admin-backend/data-module"
                         ]
                     }
                 ]
@@ -81,36 +80,36 @@
                     {
                         "group": "クイックスタート",
                         "pages": [
-                            "jp/introduction",
-                            "jp/4preparation",
-                            "jp/quickstart"
+                            "jp/quick-start/introduction",
+                            "jp/quick-start/preparation",
+                            "jp/quick-start/quick-start"
                         ]
                     },
                     {
                         "group": "AIアシスタントガイド",
                         "pages": [
-                            "jp/collaboration_basics",
-                            "jp/collaboration_advanced",
-                            "jp/marsmind_ai_method"
+                            "jp/ai-assistant-guide/collaboration-basics",
+                            "jp/ai-assistant-guide/collaboration-advanced",
+                            "jp/ai-assistant-guide/marsmind-ai-method"
                         ]
                     },
                     {
                         "group": "開発者向けドキュメント",
                         "pages": [
-                            "jp/api_reference",
-                            "jp/updates",
-                            "jp/skill_modules_detail"
+                            "jp/developer-docs/api-reference",
+                            "jp/developer-docs/updates",
+                            "jp/developer-docs/skill-modules-detail"
                         ]
                     },
                     {
                         "group": "管理コンソール",
                         "pages": [
-                            "jp/login_and_reg",
-                            "jp/run_avatar",
-                            "jp/qa_management",
-                            "jp/indentity_setup",
-                            "jp/inbound_setup",
-                            "jp/data_module"
+                            "jp/admin-backend/login-and-registration",
+                            "jp/admin-backend/run-avatar",
+                            "jp/admin-backend/qa-management",
+                            "jp/admin-backend/identity-setup",
+                            "jp/admin-backend/inbound-setup",
+                            "jp/admin-backend/data-module"
                         ]
                     }
                 ]
@@ -121,36 +120,36 @@
                     {
                         "group": "Quick Start",
                         "pages": [
-                            "en/introduction",
-                            "en/4preparation",
-                            "en/quickstart"
+                            "en/quick-start/introduction",
+                            "en/quick-start/preparation",
+                            "en/quick-start/quick-start"
                         ]
                     },
                     {
                         "group": "AI Assistant Guide",
                         "pages": [
-                            "en/collaboration_basics",
-                            "en/collaboration_advanced",
-                            "en/marsmind_ai_method"
+                            "en/ai-assistant-guide/collaboration-basics",
+                            "en/ai-assistant-guide/collaboration-advanced",
+                            "en/ai-assistant-guide/marsmind-ai-method"
                         ]
                     },
                     {
                         "group": "Developer Documentation",
                         "pages": [
-                            "en/api_reference",
-                            "en/updates",
-                            "en/skill_modules_detail"
+                            "en/developer-docs/api-reference",
+                            "en/developer-docs/updates",
+                            "en/developer-docs/skill-modules-detail"
                         ]
                     },
                     {
                         "group": "Admin Backend",
                         "pages": [
-                            "en/login_and_reg",
-                            "en/run_avatar",
-                            "en/qa_management",
-                            "en/indentity_setup",
-                            "en/inbound_setup",
-                            "en/data_module"
+                            "en/admin-backend/login-and-registration",
+                            "en/admin-backend/run-avatar",
+                            "en/admin-backend/qa-management",
+                            "en/admin-backend/identity-setup",
+                            "en/admin-backend/inbound-setup",
+                            "en/admin-backend/data-module"
                         ]
                     }
                 ]

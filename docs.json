@@ -64,25 +64,25 @@
                     {
                         "group": "管理后台",
                         "pages": [
-                            "cn/admin-backend/overview",
-                            "cn/admin-backend/login-and-registration",
+                            "cn/admin-backend/platform-login",
                             {
                                 "group": "数据看板",
                                 "expanded": true,
                                 "pages": [
-                                    "cn/admin-backend/data-module",
-                                    "cn/admin-backend/data-export"
+                                    "cn/admin-backend/data-dashboard/business-performance",
+                                    "cn/admin-backend/data-dashboard/data-export",
+                                    "cn/admin-backend/data-dashboard/order-usage"
                                 ]
                             },
                             {
                                 "group": "助手设置",
                                 "expanded": true,
                                 "pages": [
-                                    "cn/admin-backend/run-avatar",
-                                    "cn/admin-backend/response-settings",
-                                    "cn/admin-backend/identity-setup",
-                                    "cn/admin-backend/inbound-setup",
-                                    "cn/admin-backend/working-hours"
+                                    "cn/admin-backend/assistant-settings/login-online",
+                                    "cn/admin-backend/assistant-settings/response-settings",
+                                    "cn/admin-backend/assistant-settings/relation-config",
+                                    "cn/admin-backend/assistant-settings/lead-cleaning",
+                                    "cn/admin-backend/assistant-settings/working-hours"
                                 ]
                             },
                             "cn/admin-backend/skills-library",
@@ -90,12 +90,9 @@
                                 "group": "知识库",
                                 "expanded": true,
                                 "pages": [
-                                    "cn/admin-backend/qa-management",
-                                    "cn/admin-backend/knowledge-generation",
-                                    "cn/admin-backend/knowledge-entry",
-                                    "cn/admin-backend/knowledge-review",
-                                    "cn/admin-backend/knowledge-maintenance",
-                                    "cn/admin-backend/knowledge-group-settings"
+                                    "cn/admin-backend/knowledge-base/construction",
+                                    "cn/admin-backend/knowledge-base/audit",
+                                    "cn/admin-backend/knowledge-base/management"
                                 ]
                             },
                             "cn/admin-backend/web-chat",

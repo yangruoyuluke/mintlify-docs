@@ -8,12 +8,12 @@
         "dark": "#212121"
     },
     "logo": {
-        "light": "logo/logo-light.png",
-        "dark": "logo/logo-dark.png"
+        "light": "/logo/logo-light.png",
+        "dark": "/logo/logo-dark.png"
     },
     "favicon": {
-        "light": "logo/favicon.svg",
-        "dark": "logo/favicon-dark.svg"
+        "light": "/logo/favicon.svg",
+        "dark": "/logo/favicon-dark.svg"
     },
     "banner": {
         "content": "🚀 MarsMind Admin is now opened! Please contact sales@marsmind.co to check out more"

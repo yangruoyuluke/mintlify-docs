@@ -30,3 +30,11 @@
 ## 4. 后续建议
 
 后续新增页面时，不要先写“功能概览 + 操作路径 + 字段表”。应该先回答用户真实会关心的三个问题：我什么时候需要来这里、我应该如何判断、做完以后怎么确认效果。
+
+## 5. 部署验证
+
+本次已将改动推送到 `yangruoyuluke/mintlify-docs` 的 `main` 分支，提交为 `e692743`。本地 `mint validate` 通过，本地预览也能看到新文案。
+
+生产域名 `https://docs.marsmind.co` 仍返回旧版内容，例如 `/cn/admin-backend/knowledge-base/management` 仍显示“知识维护与分组”和旧的“常见维护动作”结构。Vercel 响应头显示该生产项目为 Mintlify 托管项目 `prj_NdMUpHpUIb41Po1H8c6hrChv2bgr`，该项目不在当前 MarsMind Vercel 团队项目列表中，因此无法从当前仓库或 MarsMind Vercel 项目直接触发生产更新。
+
+下一步需要进入 Mintlify Dashboard，检查 `docs.marsmind.co` 绑定的 GitHub repo、branch 和内容源，确保它使用当前 `yangruoyuluke/mintlify-docs` 仓库的 `main` 分支。

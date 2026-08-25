@@ -80,6 +80,7 @@
                                 "pages": [
                                     "cn/admin-backend/assistant-settings/login-online",
                                     "cn/admin-backend/assistant-settings/response-settings",
+                                    "cn/admin-backend/assistant-settings/safety-guardrails",
                                     "cn/admin-backend/assistant-settings/relation-config",
                                     "cn/admin-backend/assistant-settings/lead-cleaning",
                                     "cn/admin-backend/assistant-settings/working-hours"

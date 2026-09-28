@@ -39,8 +39,3 @@ out/
 # 临时文件
 *.tmp
 *.temp 
-# Local agent identity and separate product checkout.
-.lark-cli/
-CLAUDE.md
-resources.local.md
-marsmind-doc/

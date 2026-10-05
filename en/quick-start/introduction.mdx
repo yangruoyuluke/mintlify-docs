@@ -1,98 +1,113 @@
 ---
-title: "About MarsMind"
-description: "MarsMind Introduction and FAQ"
+title: Meet MarsMind
+description: Learn what MarsMind is, what it can do for you, and where to start after your first login to the admin console.
+keywords:
+  - MarsMind
+  - AI teammate
+  - quick start
+  - communication window
+  - initial setup
 ---
 
-# **About MarsMind**
+MarsMind is an AI teammate that watches your customer communication channels for you. Once you connect a channel account to the admin console, incoming customer messages are handled by MarsMind first, following the persona, rules, and knowledge you configure. When it cannot answer, or when a message hits a boundary you set, it follows the matching rule — hand off to a human, notify a supervisor, or block the reply. This admin console is where you complete that setup and review how your AI performs.
 
-## At MarsMind, we believe every customer interaction can be intelligent, seamless, and elegant.
-Our mission is to partner with enterprises to transform customer engagement through purpose-built AI Agents.
-Whether it’s customer care, sales enablement, or marketing efforts, we help businesses gain deeper customer insights, save costs, and drive scalable, impactful growth.
+## What it can do for you
 
-MarsMind specializes in developing AI Agent products for serious commercial scenarios, helping enterprises achieve comprehensive efficiency improvements in customer service, sales enablement, and marketing operations to realize strong and healthy business growth.
+The admin console is organized by module and page, and each module covers one job:
 
-Based on our proprietary MarsMind GenAI technology framework, our Agents can integrate into your daily business operations like a new employee, providing continuous service. With intelligent dialogue, data insights, and continuous learning capabilities, MarsMind enables your company to understand customer needs faster and more accurately, optimize operations, reduce costs, and transform customer communication experiences into long-term competitive advantages.
+| Module | What you can do here |
+| --- | --- |
+| Data Dashboard | Review your AI's performance and usage: [Business Performance](/en/guide/dashboard/business-performance) for core metrics and trends, [Detail Review](/en/guide/dashboard/data-export) to go through communication records one by one, [AI Usage](/en/guide/dashboard/ai-usage) for credit usage. |
+| My Assistant | Put the AI to work: [Channel Login](/en/guide/assistant/login-online) connects channel accounts and manages online status, [Base Persona](/en/guide/assistant/persona) sets the communication style and main prompt, [Relationships](/en/guide/assistant/relationship-config) labels how contacts and groups relate to you. |
+| Response Settings | Control what it says and when it stays quiet: [Reply Rules](/en/guide/response/reply-rules) (fallback replies, group chat responses, proactive reports, keyword direct replies), [Safety Guardrails](/en/guide/response/safety-guardrails) (block, allow, or report replies to a supervisor), [New Contact Setup](/en/guide/response/new-customer-reception), [Service Time](/en/guide/response/working-hours). |
+| Knowledge Base | Prepare the material it can cite: [Knowledge Generation](/en/guide/knowledge/generation) builds knowledge from documents or webpages, or adds ready-to-use entries, [Knowledge Optimization](/en/guide/knowledge/optimization) reviews content waiting to be approved, [Knowledge Management](/en/guide/knowledge/management) maintains knowledge categories. |
+| Skills Library | Define how the AI should handle a type of task, and link the tools it needs ([Skills Library](/en/guide/skills/library)). |
 
-Choose MarsMind for the following Agent products:
+At the bottom left, "Account settings" holds account-related actions: Profile, Login security, and AI identity access, plus switching the interface language and logging out.
 
-<CardGroup cols={2}>
-  <Card title="Operations Assistant Alice" icon="sparkles">
-    - **Community Market Analysis & Insights**
-    - Community information collection and analysis
-    - Contextual dialogue capabilities
-    - Retrieval accuracy over 95%
-    - Scheduled intelligent reporting
-    - Data dashboards
-    - Smart group invitation
-  </Card>
-  <Card title="Sales Assistant Monica" icon="sparkles">
-    - **Professional External Consultation Handling**
-      - Includes all operational capabilities, plus:
-      - 8,000 conversation rounds
-      - Smart group chat
-      - Enhanced natural human tone
-      - Knowledge base management
-      - Auto-learning engine
-  </Card>
-</CardGroup>
+## When you'll use it
 
-<Card title="Enterprise Custom Solutions" icon="sparkles" iconType="regular">
-  **Deep thinking, scenario-task driven.**
+- You get a lot of new friend requests, group chat inquiries, and repeated questions. You want the AI to handle them first, so your team only deals with what it cannot answer.
+- Customer inquiries, campaigns, quotes, and after-sales questions are spread across several channel accounts. You want consistent answers everywhere, with records you can review.
+- You want AI answers to be sourced — from your company materials and knowledge distilled from real conversations — not improvised. Sensitive content should be blocked up front, or reported to a supervisor.
+- Your team has accumulated documents, FAQs, or real chat logs. You want to turn them into knowledge the AI can cite directly, cutting down on repeated answers.
 
-  **Can serve as your new employee training assistant, sales assistant, copywriter, data organizer, and many other roles.**
-  Includes all customer service capabilities + more hidden features
-  Customer mining and cleansing
-  Strategic dynamic responses
-  Product pricing assistance
-  Intelligent scheduled proactive customer follow-up
-  MarsMind team support
-  ......
-</Card>
+## Access the admin console
 
----
+Open [admin.marsmind.cc](https://admin.marsmind.cc) in your browser. If you already have an account, enter your "Username" and "Password" and click "Login". If you don't, click "Register" — registration requires an "Invitation Code". After you log in, you land on the "Business Performance" page (left menu → Data Dashboard → Performance), the overview of how your AI handles customer conversations:
 
-# **FAQ**
+<Frame>
+  ![After login, the admin console opens on Business Performance: the module menu and window switcher sit on the left, and the page shows core metrics with a messages-and-replies trend chart](/images/en/quick-start/introduction/01-dashboard.jpg)
+</Frame>
 
-<AccordionGroup>
-  <Accordion title="Who is MarsMind suitable for?">
-    MarsMind is designed for those seeking to improve customer service efficiency and quality while achieving real business results. It is mainly used by enterprise clients, helping reduce costs and boost efficiency, providing real-time native customer data for business optimization and monitoring. We've also recently opened access to individual users, empowering professionals to efficiently manage everything from lead identification to service completion. Our solutions cover internal training, customer service, sales, and more—dramatically increasing ROI and continually supporting your business growth.
-  </Accordion>
+## First-time setup order
 
-  <Accordion title="How do I integrate with MarsMind agents?">
-    MarsMind supports multi-channel integration, including web widgets, enterprise apps, WeChat ecosystem, WhatsApp, Line, and other mainstream platforms. Users can flexibly choose based on their needs for seamless integration. Both individuals and enterprises can register at [www.MarsMind.com](http://www.MarsMind.com), or contact a business manager for more information.
-  </Accordion>
+<Steps>
+  <Step title="Log in to the admin console">
+    Open the admin console login page and log in with your "Username" and "Password". If you don't have an account, click "Register" first: fill in Username, Email, Password, Confirm Password, and "Invitation Code", then agree to the Terms of Service, Privacy Policy, and Data Usage Agreement.
 
-  <Accordion title="What languages are supported?">
-    MarsMind supports automatic recognition and switching for up to 100 languages, meeting enterprise multilingual service needs and supporting global expansion.
-  </Accordion>
+    How to verify: after a successful login, the page jumps to "Business Performance" automatically.
+  </Step>
+  <Step title='Set the "Selected window"'>
+    The window switcher is at the top of the sidebar, below the logo. On analytics pages such as "Business Performance" and "Detail Review", it shows as "Statistics window"; on other pages, it shows as "Selected window". Select the channel account you want to manage this time.
 
-  <Accordion title="How is data security ensured?">
-    We strictly follow industry data security standards and use end-to-end encryption to keep customer data secure during transmission and storage. MarsMind also complies with all relevant laws and regulations, with signed compliance agreements to fully protect client privacy and compliance.
-  </Accordion>
+    How to verify: after you switch windows, the data and settings on the page follow. If there are no windows yet, configuration pages that need one show "No communication window is available" with a "Go to channel login" action; the sidebar switcher turns into "Connect a window" — click it to connect an account.
 
-  <Accordion title="How is the knowledge base updated and maintained?">
-    Clients can continually update and optimize the knowledge base through manual training, auto-learning, or targeted training by the MarsMind professional team—ensuring AI responses are accurate and business-aligned. We provide an admin portal for quick uploads and edits. You can let the agent naturally learn conversational style, perform one-by-one training, or use templates in the backend for bulk download, upload, and management of the knowledge base.
-  </Accordion>
+    Note: Base Persona, Relationships, and Response Settings are saved per window. If you select the wrong window, your changes land on another account.
+  </Step>
+  <Step title='Walk through the interface with "Help and guides"'>
+    Click "Help and guides" on the right side of the top bar to open the Help Center. Pick any section — Dashboard, Assistant Settings, Knowledge Base, or Skills Library — and click "Start guide". The walkthrough then highlights the relevant entry points on the page, step by step.
 
-  <Accordion title="Is manual intervention supported?">
-    Yes. MarsMind allows controllable agent management. Companies can start or pause agents as needed, with humans taking over at critical points to ensure service quality and satisfaction. There's a built-in adaptive handover module: when a human responds, the AI automatically pauses and resumes after the human finishes, for a seamless experience.
-  </Accordion>
+    How to verify: after one walkthrough, you know roughly what each module holds, and you won't look in the wrong place when you configure the details.
+  </Step>
+  <Step title='Complete the basics with the "Initial Setup Wizard"'>
+    When your basic setup is still incomplete, the "Initial Setup Wizard" opens automatically after login and guides you through, in order: Complete assistant login → Configure usage rules → Set up knowledge base. Clicking the button for the current step jumps straight to that page; to look around first, click "Later".
 
-  <Accordion title="How long does it take to go live?">
-    Once basic configuration is complete after login, you can go live immediately. Core skills such as data analytics can be enabled the next day. With high-quality training, AI adaptation and optimization typically take effect within three weeks, achieving stable results depending on collaboration intensity. Basic features and standard operations can be mastered in about a week, and skill points take effect gradually. The AI will keep improving through self-learning even without human intervention. Custom development timelines depend on project scale and require individual assessment.
-  </Accordion>
+    How to verify: once all three items are complete, click "Do not show again" to finish the wizard; the panel shows "Initial setup completed". To view it again later, reopen it from "Setup Wizard" under Help and guides.
 
-  <Accordion title="Is technical support and training provided?">
-    MarsMind provides comprehensive technical support and training to help clients quickly master product use and ensure high agent efficiency and value. Refer to this document for operation guidance. For enterprise clients, we provide dedicated onboarding training and ongoing AI support.
-  </Accordion>
+    Note: "Later" only applies to the current session. After "Do not show again", the wizard stops opening automatically, but you can still reopen it from Help and guides.
 
-  <Accordion title="What is the pricing model? Is there a free trial?">
-    Our model includes a base subscription fee plus pay-as-you-go usage. Clients can flexibly choose modules and usage tiers as needed, and some features offer free trials.
+    Next: for the exact steps, see [30-minute quick start](/en/quick-start/quick-start); if your materials aren't ready yet, start with [Activation and preparation](/en/quick-start/preparation).
+  </Step>
+</Steps>
 
-    > In most cases, the included quotas are sufficient. If you need more, additional value conversation packs are available.
-  </Accordion>
-</AccordionGroup>
+## Checkpoints
 
----
+- After login, you land on "Business Performance", and the left menu shows all five modules.
+- The "Selected window" in the sidebar points to a real window, and pages no longer show "No communication window is available".
+- All three "Initial Setup Wizard" items are complete — or you know exactly which one is missing and where to finish it.
+- You can open the walkthroughs and the "User Manual" any time from "Help and guides".
 
-If you have other questions, feel free to contact the MarsMind support team ([service@MarsMind.com](mailto:service@MarsMind.com)). We're here to support you every step of the way.
+<Warning>
+The admin console is invitation-only: registration requires an "Invitation Code", and the login page has no self-service password reset. If you forget your password or need a new account, reach out to your point of contact or an admin.
+</Warning>
+
+<Info>
+Most settings in the admin console follow the "Selected window": after you switch windows, "Base Persona", "Relationships", and "Response Settings" show the settings of the other communication window. The Knowledge Base does not follow window switches — it is organized by "Knowledge Scope" (Personal or Enterprise) and "Knowledge Category".
+</Info>
+
+<Tip>
+The interface comes in five languages — 中文, English, 日本語, Français, and Español. You can switch languages at the bottom left under "Account settings" → "Language". The "User Manual" link at the bottom of the Help Center (under "Help and guides") opens this documentation.
+</Tip>
+
+## FAQ
+
+### How is MarsMind different from ordinary keyword auto-replies?
+
+"Keyword Direct Reply" is just one fixed reply method within [Reply Rules](/en/guide/response/reply-rules): matching messages skip AI generation entirely. Other messages are written by the AI based on the main prompt in "Base Persona", citing content from the Knowledge Base. Questions it cannot answer, group chat scenarios, and risky wording are governed by separate rules that decide what it says — and when it stays quiet.
+
+### What should I configure first so the AI can start handling customers?
+
+The shortest path is Complete assistant login → Configure usage rules → Set up knowledge base: connect one main channel account first, then spell out how it answers and when it should not, and finally add a set of FAQs or product materials. See [30-minute quick start](/en/quick-start/quick-start) for the full walkthrough.
+
+### Where do I fix it when the AI answers wrong or can't answer?
+
+Open a single message in [Detail Review](/en/guide/dashboard/data-export) and check its "Reference Knowledge" and "Execution Steps" to see whether knowledge is missing or a rule is unclear. Add missing knowledge in [Knowledge Optimization](/en/guide/knowledge/optimization) (questions the AI could not answer, or that no supervisor replied to, land in "Needs answer"). For wording and boundary issues, go back to [Reply Rules](/en/guide/response/reply-rules) or [Safety Guardrails](/en/guide/response/safety-guardrails) and adjust.
+
+### What if I don't want the AI to reply automatically?
+
+In [Channel Login](/en/guide/assistant/login-online), switch the window status to "Suspended", and the AI pauses automatic replies. Switch back to "Working" to resume. Status updates take effect after about 10 seconds.
+
+### Why can't I see some entries in my account?
+
+Some entries depend on permissions: [AI Usage](/en/guide/dashboard/ai-usage) is available only to department admins; [Conversation Review](/en/guide/dashboard/conversation-review) only to Mercado teams or platform admins. If a page shows "Access denied", your account does not have permission to view it — contact an admin.

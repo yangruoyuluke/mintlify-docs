@@ -1,0 +1,138 @@
+---
+title: Relations
+description: "Définissez les relations Client, Collègue, En sourdine ou Superviseur pour les contacts et les groupes de la fenêtre de conversation actuelle : l’IA adapte ensuite sa façon de traiter chaque conversation."
+keywords:
+  - relations
+  - relation de contact
+  - client
+  - collègue
+  - en sourdine
+  - superviseur
+  - synchroniser les contacts
+---
+
+La page « Relations » indique à l’IA qui est un client, qui est un collègue, avec qui elle doit rester en sourdine et qui reçoit les rapports. Elle s’applique à la « Fenêtre de conversation gérée actuellement » sélectionnée dans la barre latérale ; l’IA traite ensuite les échanges selon ces relations.
+
+## Quand en avez-vous besoin ?
+
+- Après avoir connecté une nouvelle fenêtre de conversation, passez d’abord en revue ses contacts et ses groupes, pour éviter que l’IA prenne les discussions internes pour des demandes clients.
+- Un groupe client ou un groupe interne ne doit pas recevoir de réponses de l’IA : mettez-le « En sourdine ».
+- Désignez les personnes qui doivent recevoir le signalement proactif des événements importants en les définissant comme « Superviseur ».
+- Un contact ou un groupe vient d’être ajouté au canal mais n’apparaît pas dans la liste : synchronisez les contacts.
+
+## Comment y accéder ?
+
+Menu de gauche → Mon assistant → Relations. Sélectionnez d’abord la fenêtre à configurer sous « Fenêtre de conversation gérée actuellement », dans la barre latérale ; la page présente, de haut en bas, la carte « Synchroniser lorsque vous avez de nouveaux contacts », la zone de recherche et de filtres, puis la liste des contacts et des groupes.
+
+<Frame>
+  ![Page « Relations » complète : en haut, la carte « Synchroniser lorsque vous avez de nouveaux contacts » et le bouton « Synchroniser les contacts » ; au milieu, la zone de recherche et de filtres ; en bas, un tableau listant Contact, Groupe / conversation individuelle et Relation, avec l’action « Modifier la relation »](/images/fr/guide/assistant/relationship-config/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+
+  <Step title="Vérifier que la fenêtre actuelle permet la configuration des relations">
+    La configuration des relations ne s’applique qu’à la « Fenêtre de conversation gérée actuellement » ; lorsque vous changez de fenêtre, la liste et les relations déjà définies basculent vers les données de cette fenêtre.
+
+    - Aucune fenêtre sélectionnée : la page affiche « Aucune fenêtre de conversation disponible ». Cliquez sur « Se connecter et mettre en ligne » pour connecter d’abord un canal.
+    - Fenêtre non prise en charge : seuls les comptes connectés à WeChat et à WeCom permettent la configuration des relations. Une fenêtre « Lien du site Web », « Mini-programme » ou « Compte officiel » affiche le message « Aucun compte WeChat ou WeCom n’est connecté à cette fenêtre de conversation pour configurer les relations. Connectez-en un dans « Connexion aux canaux ». » Cliquez sur « Connecter une fenêtre de conversation » pour résoudre le problème.
+
+    Critère : la carte « Synchroniser lorsque vous avez de nouveaux contacts » et la liste s’affichent : la fenêtre actuelle est donc compatible.
+  </Step>
+
+  <Step title="Filtrer les personnes ou les groupes à traiter">
+    La liste affiche par défaut tous les contacts et tous les groupes du compte associé à la fenêtre actuelle. Commencez par réduire le périmètre à l’aide des filtres :
+
+    - Compte WeChat : recherchez par « Nom du contact ou du groupe » dans le champ de recherche ; « Plus de filtres » contient « Étiquette », « Relation » et « Type » (Discussions individuelles et de groupe / Conversation individuelle / Discussion de groupe).
+    - Compte WeCom : recherchez par « Nom d’affichage du contact » ; « Plus de filtres » contient « Téléphone du contact », « Type de relation » (Interne / Externe), « Relation » et « Type de contact ».
+
+    Après avoir modifié les conditions, cliquez sur « Rechercher » pour actualiser la liste (appuyer sur Entrée dans le champ de recherche a le même effet). Les conditions appliquées s’affichent sous « Filtres appliqués » ; cliquez sur « Réinitialiser » pour revenir aux valeurs par défaut.
+
+    Critère : le tableau ne contient plus que les contacts ou les groupes à traiter, avec les colonnes « Contact », « Groupe / conversation individuelle » et « Relation », et l’action « Modifier la relation » en fin de ligne.
+  </Step>
+
+  <Step title="Modifier les relations une par une">
+    Cliquez sur « Modifier la relation » en fin de ligne pour ouvrir la fenêtre « Changer la relation de contact » : choisissez, pour le contact sélectionné, l’un des quatre rôles — « Client », « Collègue », « En sourdine » ou « Superviseur ». Chaque rôle est accompagné d’une description :
+
+    - Client : le contact est accueilli comme un client, avec les règles de réponse du service à la clientèle.
+    - Collègue : le contact est reconnu comme un collègue interne, avec les règles des collègues.
+    - En sourdine : le contact reste silencieux, sans réponse automatique.
+    - Superviseur : le contact est reconnu comme superviseur et peut recevoir les rapports de l’assistant.
+
+    Une fois le rôle sélectionné, cliquez sur « Enregistrer la relation » ; tant que la relation n’a pas changé, le bouton reste inactif.
+
+    Critère : un message « 1 contact défini comme… » apparaît et le badge de relation de cette ligne se met à jour dans la liste.
+
+    <Frame>
+      ![Fenêtre « Changer la relation de contact » : les quatre rôles Client, Collègue, En sourdine et Superviseur sont proposés pour le contact sélectionné, chacun avec sa description ; en bas, « Annuler » et « Enregistrer la relation »](/images/fr/guide/assistant/relationship-config/02-edit-relationship.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Définir plusieurs contacts en une seule fois">
+    Cochez les cases à gauche de plusieurs lignes. La case d’en-tête « Sélectionnez tous les contacts sur cette page » ne sélectionne que la page affichée ; dès qu’une sélection est active, une barre d’actions « N éléments sélectionnés » apparaît. Cliquez sur « Définir comme client », « Définir comme collègue », « Mettre en sourdine » ou « Définir comme superviseur » pour valider.
+
+    Critère : un message « N contacts définis comme… » apparaît, la liste s’actualise automatiquement et la sélection est effacée. Pour renoncer à la sélection, cliquez sur « Annuler la sélection » à droite de la barre d’actions.
+
+    Remarque : les actions par lot prennent effet immédiatement, sans seconde confirmation ; changer de page efface les contacts sélectionnés.
+  </Step>
+
+  <Step title="Synchroniser les contacts en cas de nouvel ajout">
+    La liste provient des contacts récupérés lors de la dernière synchronisation avec le canal. Si un contact ou un groupe récemment ajouté reste introuvable, cliquez sur « Synchroniser les contacts » dans la carte en haut de la page : le système récupère à nouveau les contacts du canal actuel. La carte précise « Jusqu'à une synchronisation par jour. » : une fois la synchronisation effectuée dans la journée, le bouton est grisé et redevient disponible après 00:00 le lendemain.
+
+    Critère : le message « Contacts synchronisés. » apparaît, la liste se recharge et le nouveau contact y figure.
+  </Step>
+
+</Steps>
+
+## Points de contrôle
+
+- Le contact ou le groupe cible affiche, dans la colonne « Relation » de la liste, la relation que vous avez définie.
+- Chaque modification affiche un message de confirmation (« N contacts définis comme… ») et actualise la liste automatiquement : aucun rafraîchissement manuel n’est nécessaire.
+- Une fois les relations définies, l’IA traite les clients, les collègues et les contacts en sourdine conformément aux quatre descriptions ci-dessus.
+
+<Warning>
+Les actions par lot n’ont pas de seconde confirmation : un clic sur « Définir comme… » prend effet immédiatement et actualise la liste ; en cas d’erreur, vous devez redéfinir la relation pour la corriger. Changer de page efface la sélection : les actions par lot ne s’appliquent qu’aux contacts cochés sur la page affichée.
+</Warning>
+
+<Warning>
+« Synchroniser les contacts » n’est possible qu’une fois par jour civil (00:00–24:00) ; une fois la synchronisation effectuée dans la journée, le bouton est grisé. Si vous devez définir des relations pour de nouveaux contacts sans attendre, pensez à effectuer la synchronisation avant l’opération.
+</Warning>
+
+<Info>
+Les quatre relations correspondent aux descriptions de la fenêtre de modification : « Client » — le contact est accueilli comme un client, avec les règles de réponse du service à la clientèle ; « Collègue » — il est reconnu comme collègue interne, avec les règles des collègues ; « En sourdine » — le contact reste silencieux, sans réponse automatique ; « Superviseur » — il est reconnu comme superviseur et peut recevoir les rapports de l’assistant.
+</Info>
+
+<Info>
+La relation « Superviseur » est la condition préalable pour recevoir le « Signalement proactif des événements importants » : seuls les contacts définis comme « Superviseur » reçoivent les contenus envoyés par le « Signalement proactif des événements importants » dans les [Règles de réponse](/fr/guide/response/reply-rules).
+</Info>
+
+<Tip>
+Les discussions de groupe figurent également dans cette liste. Filtrez sur « Discussion de groupe » via « Type » ou « Type de contact », puis mettez les groupes internes « En sourdine » pour éviter que l’IA ne prenne la parole dans des groupes où elle ne devrait pas intervenir.
+</Tip>
+
+<Tip>
+Deux situations fréquentes résultent d’une relation mal définie : une discussion interne traitée par l’IA comme une demande client, ou l’IA qui intervient dans un groupe où elle devrait rester muette. Parcourir régulièrement la colonne « Relation » de la liste permet de limiter ces cas.
+</Tip>
+
+## Questions fréquentes
+
+### La page affiche « Aucun compte WeChat ou WeCom n’est connecté à cette fenêtre de conversation pour configurer les relations » : que faire ?
+
+La configuration des relations ne prend en charge que les comptes connectés aux canaux WeChat et WeCom. Le message apparaît lorsque la fenêtre actuelle est un « Lien du site Web », un « Mini-programme » ou un « Compte officiel », ou lorsque le compte n’a pas pu être associé. Cliquez sur « Connecter une fenêtre de conversation », effectuez la connexion ou l’association de ce canal dans [Connexion aux canaux](/fr/guide/assistant/login-online), puis revenez configurer les relations.
+
+### Pourquoi le bouton « Synchroniser les contacts » est-il inactif ?
+
+La synchronisation n’est possible qu’une fois par jour civil (00:00–24:00) et la carte indique « Jusqu'à une synchronisation par jour. ». Si vous l’avez déjà utilisée aujourd’hui, le bouton est grisé et redevient disponible après 00:00 le lendemain.
+
+### Un contact ou un groupe récemment ajouté est introuvable dans la liste ?
+
+Les données de la liste proviennent de la dernière synchronisation des contacts. Cliquez d’abord sur « Synchroniser les contacts » en haut de la page, puis, une fois le message « Contacts synchronisés. » affiché, relancez la recherche ou appliquez des filtres.
+
+### J’ai modifié plusieurs relations par erreur : puis-je annuler ?
+
+Non : les boutons par lot prennent effet immédiatement, sans seconde confirmation. Sélectionnez à nouveau ces contacts et utilisez un autre bouton « Définir comme… » pour corriger la relation.
+
+### J’ai défini un contact comme « Superviseur », mais aucun rapport n’arrive : pourquoi ?
+
+La relation « Superviseur » n’est que la condition préalable pour recevoir les rapports ; le moment et le format d’envoi se configurent dans le « Signalement proactif des événements importants » des [Règles de réponse](/fr/guide/response/reply-rules). C’est seulement lorsque les deux configurations sont en place que les contacts définis comme « Superviseur » reçoivent les rapports.

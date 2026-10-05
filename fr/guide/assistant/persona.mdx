@@ -1,0 +1,142 @@
+---
+title: Personnalité de base
+description: "Configurez l’identité et la façon de parler de l’IA dans la fenêtre de conversation sélectionnée : choisissez le style de l’IA, rédigez les instructions principales et vérifiez les paramètres du contexte injectés dans les réponses."
+keywords:
+  - Personnalité de base
+  - Style IA
+  - instructions principales
+  - paramètres du contexte
+  - fenêtre de conversation
+---
+
+« Personnalité de base » détermine qui est l’IA dans la fenêtre de conversation sélectionnée et comment elle s’exprime : choisissez le ton dans « Style IA », rédigez les instructions principales dans « Instructions personnalisées », puis, dans les « Paramètres du contexte », définissez les informations à injecter dans ses réponses. Les réglages de cette page ne concernent que la « Fenêtre de conversation gérée actuellement », à gauche.
+
+## Quand en avez-vous besoin ?
+
+- Vous venez de connecter une nouvelle fenêtre via [Connexion aux canaux](/fr/guide/assistant/login-online) et souhaitez que l’IA accueille vos clients avec l’identité et le ton de votre activité.
+- L’appellation, le ton ou les principes de réponse de l’IA ne conviennent pas : il faut modifier les instructions principales.
+- Votre contexte métier a changé (par exemple, du conseil avant-vente au support après-vente) et vous voulez adopter un autre style d’expression.
+- Vous voulez vérifier quels scénarios de conversation, profils utilisateur et autres informations sont injectés dans les réponses de l’IA.
+
+## Comment y accéder ?
+
+Menu de gauche → Mon assistant → Personnalité de base. À l’ouverture, vérifiez d’abord la « Fenêtre de conversation gérée actuellement », au milieu de la barre latérale : tous les réglages de cette page sont enregistrés par fenêtre ; après un changement de fenêtre, vous voyez les réglages d’une autre fenêtre.
+
+<Frame>
+  ![Page « Personnalité de base » complète : en haut, les deux options « Détaillé et poli » et « Flexible et concis » du « Style IA » ; en dessous, la zone d’édition des instructions principales dans « Instructions personnalisées », les boutons « Historique » et « Générer avec l’IA », ainsi que le statut d’enregistrement ; la carte « Paramètres du contexte » est repliée par défaut](/images/fr/guide/assistant/persona/01-overview.jpg)
+</Frame>
+
+Lorsqu’aucune fenêtre n’est sélectionnée, la page affiche uniquement « Aucune fenêtre de conversation disponible », « Connectez-vous et mettez en ligne une fenêtre de conversation autre que celle de l’administration avant de poursuivre la configuration. » et le bouton « Se connecter et mettre en ligne » ; l’édition est alors impossible.
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Confirmer la « Fenêtre de conversation gérée actuellement »">
+    Les réglages de « Personnalité de base », « Relations » et « Paramètres de réponse » sont tous enregistrés par fenêtre. Avant de commencer, vérifiez que la « Fenêtre de conversation gérée actuellement », au milieu de la barre latérale, correspond bien à la fenêtre à configurer.
+
+    Critère : la liste déroulante affiche le nom de la fenêtre visée.
+
+    Remarque : si des modifications ne sont pas enregistrées, changer de fenêtre ou de menu déclenche d’abord l’interception « Ignorer les modifications non enregistrées ? » ; choisissez « Continuer à modifier » pour rester sur la page et poursuivre.
+  </Step>
+
+  <Step title="Choisir le « Style IA »">
+    Le « Style IA » propose deux options ; cliquer sur l’une d’elles l’enregistre immédiatement, sans bouton d’enregistrement séparé :
+
+    - Détaillé et poli : formulation plus complète et ton plus attentionné, adapté aux situations qui exigent des explications claires.
+    - Flexible et concis : réponses plus directes, dont les détails nécessaires sont conservés, adaptées aux échanges à mener rapidement.
+
+    Critère : l’option choisie est mise en surbrillance, puis le message « Le style IA est passé à … » s’affiche. Le rappel permanent en haut de la page, « Les interrupteurs sont enregistrés séparément ; les modifications du contenu doivent être enregistrées. », renvoie précisément à ce point.
+
+    Remarque : si la mise à jour échoue, l’option revient automatiquement à son état précédent et un message d’erreur s’affiche ; il suffit de la sélectionner de nouveau.
+  </Step>
+
+  <Step title="Rédiger et enregistrer les instructions principales">
+    Dans la carte « Instructions personnalisées », rédigez les instructions principales : identité de l’IA, périmètre de service et principes de réponse. Le texte indicatif de la zone d’édition est « Décrivez le rôle de l’assistant IA, son ton et ses principes de réponse. » ; si vous ne savez pas quoi écrire, cliquez sur « Voir l’exemple » pour déplier une série d’exemples.
+
+    Sous la zone d’édition se trouve la zone d’enregistrement de cette carte :
+
+    - « Enregistrer la configuration » : disponible uniquement lorsque le contenu a été modifié. Une fois l’enregistrement réussi, le statut passe de « Non enregistré » à « Enregistré » ou « Enregistré · Application non confirmée ».
+    - « Historique » : liste les versions passées, par exemple « Version du 4/10 à 14:30 ». La sélection d’une version ouvre une fenêtre de comparaison : « Brouillon actuel » à gauche, « Contenu proposé » à droite. « Appliquer le contenu proposé » ne fait que replacer le contenu dans la zone d’édition ; il faut ensuite cliquer sur « Enregistrer la configuration » pour l’enregistrer réellement ; « Conserver le brouillon actuel » ferme la fenêtre. Si le brouillon actuel comporte des modifications non enregistrées, la fenêtre vous avertit que l’application du contenu proposé les remplacera.
+    - « Générer avec l’IA » : génère une proposition à partir du contenu actuellement saisi ; là aussi, confirmez-la dans la fenêtre de comparaison avant d’enregistrer. Le bouton est inactif lorsque le contenu est vide.
+
+    Critère : le statut n’est plus « Non enregistré ». « Enregistré · Application non confirmée » signifie que la configuration est bien enregistrée côté serveur, mais que son application effective sur l’assistant en cours d’exécution n’a pas encore été confirmée.
+
+    Remarque : l’enregistrement des instructions principales met également à jour les « Paramètres du contexte » ci-dessous ; c’est un comportement attendu, voir l’étape suivante.
+  </Step>
+
+  <Step title="Vérifier les « Paramètres du contexte »">
+    Les « Paramètres du contexte » déterminent quels scénarios de conversation, profils utilisateur et autres informations sont automatiquement injectés lorsque l’IA répond. La carte est repliée par défaut ; cliquez sur son titre pour la déplier. À droite du titre s’affiche « x/y sélectionnés ».
+
+    - La carte liste les options à cocher par groupe ; dépliez les groupes un à un et cochez les éléments voulus. Les éléments marqués « Sensible » relèvent du contexte sensible : décidez de les injecter ou non selon vos besoins métier.
+    - « Recommandation de l’IA » coche automatiquement les éléments recommandés d’après les instructions principales actuelles et affiche « Raison : … » sous les éléments sélectionnés ; le bouton n’est disponible que si la zone d’édition contient des instructions principales.
+    - Une fois les ajustements terminés, cliquez sur « Enregistrer la configuration » : le message « Paramètres de contexte enregistrés » s’affiche. Ces cases sont enregistrées séparément des instructions principales.
+
+    L’enregistrement des instructions principales met aussi à jour cette section : le système réanalyse automatiquement et remplace les cases cochées à partir des nouvelles instructions. Pendant l’opération s’affiche « Mise à jour des paramètres de contexte depuis l'invite principale... » ; à la fin, « Paramètres contextuels mis à jour depuis l'invite principale » ; en cas d’échec, « La mise à jour automatique du contexte a échoué. Les paramètres précédents sont conservés; ajuster et enregistrer manuellement si nécessaire. ». Si le résultat automatique ne correspond pas à vos attentes, dépliez la carte, ajustez les cases puis enregistrez.
+
+    Si la liste affiche des « Éléments inconnus ou désactivés », c’est que ces éléments ne font plus partie des options disponibles : vous pouvez seulement les décocher.
+
+    Critère : le titre ne porte plus le badge « Non enregistré » et le compteur « x/y sélectionnés » correspond aux informations à injecter.
+
+    <Frame>
+      ![« Paramètres du contexte » dépliés : options listées par groupe, certaines avec le badge « Sensible » ; en bas, les boutons « Recommandation de l’IA » et « Enregistrer la configuration », et à droite du titre de la carte le nombre d’éléments sélectionnés](/images/fr/guide/assistant/persona/02-context-settings.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Gérer les « Instructions dérivées » (facultatif)">
+    Les « Instructions dérivées » sont repliées par défaut. Une fois les instructions principales rédigées, cliquez sur « Générer à nouveau » : le système génère des propositions d’instructions pour chaque usage, que vous pouvez « Adopter » ou « Ignorer » une par une. « Générer à nouveau » ne fait que générer des propositions, sans rien écrire ; tant qu’elles ne sont pas adoptées, l’assistant en ligne n’est pas affecté.
+
+    Critère : après traitement, l’élément ne porte plus le badge « Nouveau » et le décompte « N avec de nouveaux candidats » du titre de la carte diminue ou disparaît.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation gérée actuellement », à gauche, est bien la fenêtre à configurer.
+- L’option sélectionnée du « Style IA » correspond à vos attentes et le message de changement est apparu après la sélection.
+- Le statut des instructions principales est « Enregistré » ou « Enregistré · Application non confirmée », pas « Non enregistré ».
+- Le compteur « x/y sélectionnés » des « Paramètres du contexte » correspond aux informations à injecter, et les modifications sont enregistrées.
+- Envoyez un message via le canal concerné : l’appellation, le ton et les principes de réponse de l’IA sont conformes à vos attentes.
+
+## Points d’attention
+
+<Warning>
+Cette page enregistre ses réglages par « Fenêtre de conversation gérée actuellement ». Avant toute modification, vérifiez que la fenêtre sélectionnée est correcte, sinon le style et les instructions principales seront modifiés sur un autre compte.
+</Warning>
+
+<Warning>
+En présence de contenu non enregistré, quitter la page (changement de menu ou de fenêtre, actualisation, fermeture de l’onglet) est intercepté par la fenêtre « Ignorer les modifications non enregistrées ? » ; choisissez « Continuer à modifier » pour revenir corriger, ou « Ignorer les modifications » pour les abandonner. Pendant un enregistrement, le message « Attendez la fin de l’enregistrement ou de l’importation en cours avant de quitter la page. » s’affiche.
+</Warning>
+
+<Info>
+L’enregistrement des instructions principales met aussi à jour les « Paramètres du contexte » : le système les réanalyse à partir des nouvelles instructions et remplace les cases cochées. C’est un comportement attendu ; en cas d’échec de la mise à jour automatique, la configuration précédente est conservée et vous pouvez ajuster puis enregistrer manuellement.
+</Info>
+
+<Info>
+Le rappel en haut de la page, « Les interrupteurs sont enregistrés séparément ; les modifications du contenu doivent être enregistrées. », signifie que le « Style IA » prend effet dès la sélection, tandis que les instructions principales et les cases des paramètres du contexte nécessitent un clic sur « Enregistrer la configuration ».
+</Info>
+
+<Tip>
+« Enregistré · Application non confirmée » signifie uniquement que l’enregistrement a réussi, pas que l’assistant en cours d’exécution l’a appliqué. Après une modification de la personnalité, le plus direct est d’envoyer un message dans une vraie conversation de cette fenêtre. La personnalité ne détermine que le ton et les principes : pour la réponse en cas de question sans réponse et la prise de parole dans les groupes, configurez les [Règles de réponse](/fr/guide/response/reply-rules) ; pour définir qui s’adresse à l’IA et qui reste silencieux, passez par [Relations](/fr/guide/assistant/relationship-config).
+</Tip>
+
+## Questions fréquentes
+
+### J’ai modifié la personnalité, mais les réponses de l’IA n’ont pas changé : que vérifier en premier ?
+
+Vérifiez trois points dans l’ordre : la « Fenêtre de conversation gérée actuellement », à gauche, est-elle bien la fenêtre avec laquelle vous dialoguez ? — cette page enregistre par fenêtre, et il est facile de modifier une autre fenêtre ; le statut des instructions principales est-il « Enregistré · Application non confirmée » ? — la configuration est enregistrée côté serveur, mais son application effective sur l’assistant en cours d’exécution n’a pas encore été confirmée ; enfin, envoyez un message dans une vraie conversation de cette fenêtre pour vérifier.
+
+### Pourquoi les cases des « Paramètres du contexte » changent-elles après l’enregistrement des instructions principales ?
+
+Le système réanalyse automatiquement le contexte d’après les nouvelles instructions principales et remplace les cases cochées : c’est un comportement attendu. Si le résultat automatique ne correspond pas à vos attentes, dépliez « Paramètres du contexte », ajustez les cases puis cliquez sur « Enregistrer la configuration » ; si la mise à jour automatique échoue, la configuration précédente est conservée et un message le signale.
+
+### Pourquoi le bouton « Recommandation de l’IA » est-il inactif ?
+
+Il nécessite la présence des instructions principales dans la zone d’édition (il suffit de les avoir rédigées, sans devoir les enregistrer au préalable) ; lorsque le contenu est vide, le bouton est inactif. Il l’est également si le chargement des options du contexte échoue ou si le système effectue une mise à jour automatique ; réessayez plus tard.
+
+### J’ai appliqué une ancienne version depuis « Historique », pourquoi n’a-t-elle pas pris effet ?
+
+Sélectionner une version ne fait que placer son contenu dans la fenêtre de comparaison ; après « Appliquer le contenu proposé », le contenu revient dans la zone d’édition et il faut encore cliquer sur « Enregistrer la configuration » pour l’enregistrer réellement. Si la fenêtre signale que le brouillon actuel comporte des modifications non enregistrées, l’application du contenu proposé les remplacera : vérifiez avant d’appliquer.
+
+### Pourquoi la page n’est-elle pas modifiable ?
+
+Lorsqu’aucune fenêtre de conversation n’est sélectionnée, la page affiche seulement « Aucune fenêtre de conversation disponible ». Cliquez sur « Se connecter et mettre en ligne » pour connecter une fenêtre, puis revenez sur cette page.

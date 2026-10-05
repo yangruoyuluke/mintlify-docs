@@ -1,0 +1,101 @@
+---
+title: "Revisión de conversaciones"
+description: "Filtre y revise los registros de conversación en la aplicación integrada de revisión de conversaciones de Mercado Libre; además, se explican las condiciones de acceso, qué hacer si falla la carga y las limitaciones de idioma de la interfaz."
+keywords:
+  - "revisión de conversaciones"
+  - "Mercado Libre"
+  - "panel de datos"
+  - "registros de conversación"
+  - "acceso denegado"
+  - "aplicación integrada"
+---
+
+«Revisión de conversaciones» es el punto de entrada de revisión de conversaciones del negocio de Mercado Libre: toda la página integra la aplicación de revisión de conversaciones de Mercado Libre, de modo que puede filtrar y consultar los registros de conversación de ese negocio directamente en el panel de administración; la página en sí no tiene otras opciones de configuración.
+
+## Cuándo la necesitará
+
+- Revisiones periódicas: repase las conversaciones entre la IA y los clientes del negocio de Mercado Libre y revíselas una por una.
+- Para verificar una duda: cuando un cliente o un supervisor tenga dudas sobre una conversación, vuelva aquí para consultar el registro original.
+- Cuando necesite filtrar y localizar un conjunto de conversaciones con sus propios criterios dentro de la aplicación integrada.
+
+## Ruta de acceso
+
+Menú de la izquierda → Panel de datos → Revisión de conversaciones. Al entrar, la ruta de navegación de la barra superior muestra «Panel de datos → Revisión de conversaciones» y el área de contenido es la aplicación integrada que ocupa toda la página.
+
+<Frame>
+  ![Página completa de «Revisión de conversaciones»: la ruta de navegación de la barra superior es «Panel de datos → Revisión de conversaciones» y el área de contenido integra por completo la aplicación de revisión de conversaciones de Mercado Libre, con sus propios filtros y lista](/images/es/guide/dashboard/conversation-review/01-overview.jpg)
+</Frame>
+
+Si este acceso no aparece en el menú de la izquierda, su cuenta no está en el ámbito visible; consulte «Aspectos a tener en cuenta», más abajo.
+
+## Pasos
+
+<Steps>
+  <Step title="Abra la página y confirme que su cuenta puede verla">
+    En el menú de la izquierda, dentro de «Panel de datos», haga clic en «Revisión de conversaciones».
+
+    Cómo confirmarlo: la página se abre con normalidad, la ruta de navegación de la barra superior es «Panel de datos → Revisión de conversaciones» y el área de contenido empieza a cargar la aplicación de revisión.
+
+    Nota: si aparece «Acceso denegado», su cuenta no está en el ámbito habilitado y puede hacer clic en «Volver al panel» para salir; el ámbito se detalla en «Aspectos a tener en cuenta», más abajo.
+  </Step>
+
+  <Step title="Espere a que la aplicación integrada termine de cargar">
+    La página solo tiene una capa de carga propia: mientras carga muestra «Cargando revisión de la conversación...»; cuando la aplicación está lista, la capa desaparece y deja ver sus propios filtros y su lista.
+
+    Cómo confirmarlo: la capa ya no está y puede usar los filtros y la lista de la aplicación.
+
+    Nota: si tras unos 15 segundos la aplicación sigue sin estar lista, la página muestra «La página de revisión de la conversación no se puede cargar. Por favor, inténtalo de nuevo.» y el botón «Recargar». Al hacer clic en «Recargar» se recarga toda la aplicación; si después de varios intentos sigue fallando, vuelva al panel, inténtelo más tarde o póngase en contacto con un administrador.
+  </Step>
+
+  <Step title="Revise las conversaciones dentro de la aplicación integrada">
+    El filtrado, la lista y el contenido de las conversaciones se gestionan dentro de la aplicación integrada; el panel de administración no añade otra capa de controles. Qué filtros usar y cómo desplazarse dependen de la interfaz real de la aplicación. Filtre las conversaciones que necesita según su objetivo y revíselas una por una.
+
+    Cómo confirmarlo: la lista se actualiza al aplicar los filtros y puede abrir el registro de conversación que desea revisar.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La ruta de navegación de la barra superior muestra «Panel de datos → Revisión de conversaciones».
+- La capa de carga desapareció y se ven los filtros y la lista de la aplicación, en lugar de quedarse en «Cargando revisión de la conversación...» o «La página de revisión de la conversación no se puede cargar. Por favor, inténtalo de nuevo.».
+- Cambiar la «Ventana de conversación actual» de la izquierda no altera el contenido de esta página: esta página no usa esa selección.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+«Revisión de conversaciones» solo está disponible para el equipo de Mercado Libre (códigos de departamento: mercado y mercado_local) o para los administradores de la plataforma. Otras cuentas no ven este acceso en el menú de la izquierda y, si introducen la dirección de la página directamente, también se bloquea el acceso y se muestra «Acceso denegado»: «Esta página está disponible para el equipo de Mercado Libre y los administradores. Vuelva al panel o pida a un administrador que compruebe sus permisos.» Si necesita acceso, póngase en contacto con un administrador para confirmar a qué departamento pertenece su cuenta.
+</Warning>
+
+<Info>
+Esta página es una aplicación externa (la aplicación de revisión de conversaciones de Mercado Libre) integrada en toda la página. El panel de administración solo se encarga de transmitirle la identidad de la sesión actual y el idioma de la interfaz: no es necesario iniciar sesión de nuevo. Cuando la carga funciona con normalidad, la página no tiene otros controles; la única excepción es el botón «Recargar» cuando la carga falla, y todas las operaciones se realizan dentro de la aplicación.
+</Info>
+
+<Info>
+La aplicación integrada solo reconoce algunos idiomas de la interfaz: el chino, el inglés y el japonés se muestran con normalidad; si el idioma de la interfaz es el francés o el español, la aplicación se muestra en inglés. Si quiere revisar en chino, vaya a «Configuración de la cuenta» → «Idioma», en la esquina inferior izquierda, cambie el idioma de la interfaz al chino y vuelva a esta página.
+</Info>
+
+<Tip>
+Si antes de revisar conversaciones quiere ver los datos generales, vaya a [Rendimiento del negocio](/es/guide/dashboard/business-performance); si necesita consultar o exportar registros de comunicación por condiciones, vaya a [Revisión detallada](/es/guide/dashboard/data-export).
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué no aparece «Revisión de conversaciones» en el menú de la izquierda?
+
+Esta página solo está abierta a cuentas de un ámbito específico; si no ve la entrada en el menú, su cuenta no está incluida. El ámbito y cómo proceder se describen en «Aspectos a tener en cuenta», arriba.
+
+### ¿Qué hago si la página se queda en «Cargando revisión de la conversación...» o indica que la carga falló?
+
+Si falla, haga clic primero en «Recargar» para volver a intentarlo; si tras varios intentos sigue sin recuperarse, vuelva al panel y continúe con otras tareas, y regrese más tarde o póngase en contacto con un administrador para que lo revise.
+
+### Elegí el francés o el español como idioma de la interfaz: ¿por qué la aplicación de revisión se muestra en inglés?
+
+La aplicación integrada solo reconoce algunos idiomas de la interfaz: el chino, el inglés y el japonés funcionan con normalidad, mientras que el francés y el español recurren al inglés. Si quiere revisar en chino, vaya a «Configuración de la cuenta» → «Idioma», en la esquina inferior izquierda, cambie el idioma de la interfaz al chino y vuelva a esta página.
+
+### ¿Por qué esta página no cambia al cambiar la «Ventana de conversación actual» de la izquierda?
+
+«Revisión de conversaciones» no lee la «Ventana de conversación actual»: el ámbito de conversaciones que muestra la aplicación de revisión lo decide la propia aplicación, así que cambiar de ventana no altera el contenido de esta página. Para localizar una conversación concreta, use los filtros dentro de la aplicación.
+
+### ¿En qué se diferencia esta página de «Revisión detallada»?
+
+No son la misma vista de datos. «Revisión detallada» es la página de registros de comunicación del propio panel de administración, donde puede consultar y exportar por ventana, usuario/grupo y otras condiciones; «Revisión de conversaciones» es la aplicación de revisión integrada del negocio de Mercado Libre, sin controles de filtrado del panel en la página, y su uso depende de la propia aplicación. Si necesita exportar registros, use [Revisión detallada](/es/guide/dashboard/data-export).

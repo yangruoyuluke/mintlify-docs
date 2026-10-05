@@ -1,0 +1,108 @@
+---
+title: Uso de IA
+description: Consulte los créditos restantes y el consumo mensual de créditos, concilie el uso por mes y despliegue hasta el detalle por usuario.
+keywords:
+  - uso de IA
+  - créditos
+  - consumo de créditos
+  - uso mensual
+  - detalle por usuario
+  - panel de datos
+---
+
+«Uso de IA» es el registro de créditos del Panel de datos: ábralo para ver cuántos créditos quedan y cuántos se consumieron cada mes, y despliegue hasta cada usuario. Esta página no tiene nada que configurar; solo sirve para consultar y conciliar, y la entrada solo aparece para los administradores del departamento.
+
+## Cuándo la necesitará
+
+- Conciliación de fin o de inicio de mes: verificar el consumo de créditos de un mes natural.
+- Vigilar los créditos: ver cuántos quedan y si conviene gestionar con antelación un exceso.
+- Rastrear el consumo: cuando el uso de un mes es alto, desplegarlo para ver si se consumió más en generación de conocimientos, procesamiento de mensajes o generación de respuestas.
+- Ver la distribución entre los miembros: consultar el detalle de uso por usuario para saber quién consume y en qué.
+
+## Ruta de acceso
+
+Menú de la izquierda → Panel de datos → Uso de IA. Al entrar, la ruta de navegación de la barra superior muestra «Panel de datos → Uso de IA».
+
+La página se divide en dos bloques: «Resumen de créditos» y «Uso mensual».
+
+<Frame>
+  ![Página completa de «Uso de IA»: arriba, la tarjeta «Resumen de créditos» con la barra de progreso, los créditos utilizados y el total, los créditos restantes y el porcentaje; abajo, la tabla «Uso mensual» con las columnas Fecha, Consumo por generación de conocimientos, Consumo de procesamiento de mensajes, Consumo por generación de respuestas y Uso total](/images/es/guide/dashboard/ai-usage/01-overview.jpg)
+</Frame>
+
+Si no ve esta entrada, normalmente se debe a que la cuenta no es de administrador del departamento; consulte «Aspectos a tener en cuenta».
+
+## Pasos
+
+<Steps>
+  <Step title="Revise «Resumen de créditos» y confirme cuántos créditos quedan">
+    La tarjeta superior de la página es «Resumen de créditos»:
+
+    - La barra de progreso muestra la proporción ya utilizada.
+    - Debajo de la barra, en una misma fila, el extremo izquierdo y el derecho muestran «X de Y créditos utilizados» y «Z créditos restantes (P %)» (en pantallas estrechas, la fila se divide en dos líneas).
+
+    Cómo comprobarlo: puede leer todos estos datos y en la parte superior de la página no aparece el aviso «La carga falló».
+
+    Si lo utilizado supera el total, el título de la tarjeta cambia a «Uso (límite superado)» y aparece una fila adicional «Uso extra» con «N créditos», donde N es la parte excedida.
+  </Step>
+
+  <Step title="Busque en «Uso mensual» el mes que quiere conciliar">
+    En «Uso mensual» cada fila es un mes; las columnas son «Fecha», «Consumo por generación de conocimientos», «Consumo de procesamiento de mensajes», «Consumo por generación de respuestas» y «Uso total». El mes más reciente aparece primero.
+
+    Para pasar de página, use «Anterior» y «Siguiente» al pie de la tabla; ahí mismo se muestra «X registros · Página Y de Z». Si quiere ver más meses a la vez, cambie «Filas por página» a «20 por página» o «50 por página».
+
+    Cómo comprobarlo: puede encontrar la fila del mes objetivo y las cuatro columnas numéricas se muestran correctamente.
+
+    Nota: la tarjeta indica «Seleccione un mes para ver el detalle por usuario. La suma de las categorías no equivale necesariamente al consumo total.» Para conciliar, cite la columna «Uso total»; no sume las tres categorías.
+  </Step>
+
+  <Step title="Despliegue el mes para ver el detalle por usuario">
+    Haga clic en el mes de la columna «Fecha» (tiene una flecha delante) y, debajo de ese mes, se despliegan las filas de uso de cada usuario con las mismas columnas; haga clic otra vez para contraerlas.
+
+    Cómo comprobarlo: al desplegar aparecen el nombre del usuario y las cuatro cifras; durante la carga se muestra «Cargando…».
+
+    Nota: si el despliegue falla, se muestran «La carga falló» y «Reintentar»; si el mes no tiene detalle, se muestra «No hay detalles del usuario».
+
+    <Frame>
+      ![Un mes desplegado en «Uso mensual»: debajo del mes aparecen las filas de uso por usuario, con las mismas columnas que arriba](/images/es/guide/dashboard/ai-usage/02-month-details.jpg)
+    </Frame>
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- En «Resumen de créditos» puede leer las tres cifras (utilizado, total y restante); la barra de progreso coincide con la proporción utilizada (si se superó el límite, se muestra llena).
+- En «Uso mensual» encuentra el mes objetivo y lee las cuatro columnas «Consumo por generación de conocimientos», «Consumo de procesamiento de mensajes», «Consumo por generación de respuestas» y «Uso total».
+- Al hacer clic en un mes se despliega su detalle por usuario y, al hacer clic otra vez, se contrae.
+- Si se superó el límite, el título de la tarjeta es «Uso (límite superado)» y se ve el valor de «Uso extra».
+
+## Aspectos a tener en cuenta
+
+<Warning>
+«Uso de IA» solo lo ven los administradores del departamento: las cuentas que no tienen ese rol no ven esta entrada en el menú de la izquierda, y si abren la dirección de la página directamente, el acceso también se bloquea y se muestra «Acceso denegado» con el texto «Esta cuenta no tiene permisos de administración del departamento y no puede consultar el uso. Vuelva al panel o solicite acceso a un administrador.» Si necesita consultarlo, pida a un administrador que le habilite el acceso.
+</Warning>
+
+<Info>
+Si se superó el límite, la barra de progreso llega como máximo hasta el tope; la parte excedida se lee en el valor de «Uso extra» («N créditos»).
+</Info>
+
+<Tip>
+Cuando hay muchos meses, ajuste «Filas por página» a «50 por página»; los meses desplegados se mantienen durante esta sesión de navegación, así puede compararlos de un lado a otro sin volver a esperar (al cambiar «Filas por página» se contraen los meses desplegados, pero los datos quedan en caché y volver a desplegarlos es inmediato). Para ver cómo recibe la IA a los clientes, compare los volúmenes de mensajes y respuestas en [Rendimiento](/es/guide/dashboard/business-performance).
+</Tip>
+
+## Preguntas frecuentes
+
+### Las tres categorías no suman el «Uso total», ¿los datos están mal?
+
+No. En «Uso mensual» se indica «La suma de las categorías no equivale necesariamente al consumo total»; el uso total se calcula de forma independiente. Para conciliar y reportar, use siempre la columna «Uso total» y no sume las tres categorías.
+
+### ¿Qué muestra la página cuando lo utilizado supera el total?
+
+El título de la tarjeta pasa de «Resumen de créditos» a «Uso (límite superado)», la barra de progreso se queda llena y aparece una fila «Uso extra» con «N créditos», donde N es la parte que excede el total.
+
+### ¿Qué hago si la página muestra «La carga falló»?
+
+Cuando falla la carga, «Resumen de créditos» y «Uso mensual» muestran «La carga falló» y no dan cifras utilizables; pulse primero «Reintentar» en la barra de aviso y concilie cuando vuelvan los datos. Si el fallo ocurre dentro de un mes desplegado, esa área también tiene «Reintentar».
+
+### ¿Dónde están los meses anteriores?
+
+La tabla muestra 10 filas por página de forma predeterminada y el mes más reciente aparece primero; los meses anteriores están en las páginas siguientes.

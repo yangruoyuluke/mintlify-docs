@@ -1,0 +1,111 @@
+---
+title: Sécurité de la connexion
+description: "Modifiez le mot de passe de connexion à l’interface d’administration MarsMind : règles de validation de l’ancien mot de passe, du nouveau mot de passe et de sa confirmation, et pourquoi vous n’êtes pas déconnecté après un changement réussi."
+keywords:
+  - Sécurité de la connexion
+  - modifier le mot de passe
+  - ancien mot de passe
+  - nouveau mot de passe
+  - mettre à jour le mot de passe
+  - paramètres du compte
+---
+
+« Sécurité de la connexion » permet de modifier le mot de passe avec lequel vous vous connectez à l’interface d’administration MarsMind : saisissez l’ancien mot de passe, définissez un nouveau mot de passe et confirmez-le ; une fois l’envoi réussi, votre session en cours n’est pas interrompue et le nouveau mot de passe servira à la prochaine connexion. Cette page modifie le compte de connexion lui-même : elle ne suit pas la « Fenêtre de conversation gérée actuellement » sélectionnée à gauche.
+
+## Quand en avez-vous besoin ?
+
+- Vous devez changer le mot de passe de connexion à l’interface d’administration.
+- Vous craignez que votre mot de passe soit connu d’autres personnes (par exemple après une connexion sur un appareil partagé) et vous voulez le remplacer rapidement.
+- Votre équipe impose une mise à jour périodique du mot de passe pour des raisons de sécurité.
+
+## Comment y accéder ?
+
+« Paramètres du compte » en bas à gauche → « Sécurité de la connexion » (vous pouvez aussi ouvrir d’abord [Profil](/fr/guide/account/profile) ou [Autorisation des rôles auprès de l’IA](/fr/guide/account/ai-authorization), puis basculer avec les onglets en haut).
+
+Une fois la page ouverte, trois onglets s’affichent en haut — « Profil / Sécurité de la connexion / Autorisation des rôles auprès de l’IA » — et la page est sur « Sécurité de la connexion ». En dessous se trouve la carte « Mettre à jour le mot de passe » : les trois champs « Ancien mot de passe », « Nouveau mot de passe » et « Confirmer le mot de passe » (chacun avec une icône en forme d’œil à droite), et le bouton « Mettre à jour le mot de passe » en bas à droite.
+
+<Frame>
+  ![Page Sécurité de la connexion : en haut les trois onglets « Profil / Sécurité de la connexion / Autorisation des rôles auprès de l’IA » ; dans la carte « Mettre à jour le mot de passe », les trois champs « Ancien mot de passe », « Nouveau mot de passe » et « Confirmer le mot de passe », chacun avec une icône en forme d’œil à droite ; sous « Nouveau mot de passe », l’indication « Utilisez au moins 6 caractères et un mot de passe différent de votre mot de passe actuel. » ; en bas à droite, le bouton « Mettre à jour le mot de passe »](/images/fr/guide/account/security/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Saisir l’ancien mot de passe">
+    Dans le champ « Ancien mot de passe » de la carte « Mettre à jour le mot de passe » (texte indicatif « Veuillez saisir l'ancien mot de passe »), saisissez le mot de passe que vous utilisez actuellement.
+
+    Critère : après la saisie, le contenu s’affiche sous forme de points ; cliquez sur l’icône en forme d’œil à droite du champ pour basculer entre texte masqué et texte en clair, afin de vérifier votre saisie.
+
+    Remarque : impossible de savoir avant l’envoi si l’ancien mot de passe est correct. Si un message d’échec apparaît après l’envoi, vérifiez d’abord que l’ancien mot de passe n’a pas été mal saisi.
+  </Step>
+
+  <Step title="Définir le nouveau mot de passe">
+    Dans le champ « Nouveau mot de passe » (texte indicatif « Veuillez saisir un nouveau mot de passe »), saisissez le nouveau mot de passe. La règle affichée sous le champ est : « Utilisez au moins 6 caractères et un mot de passe différent de votre mot de passe actuel. »
+
+    Critère : dès que le nouveau mot de passe comporte au moins 6 caractères et diffère de l’ancien, cette étape ne bloque plus l’envoi ; sinon, le bouton « Mettre à jour le mot de passe » reste inactif.
+
+    Remarque : la validation du nouveau mot de passe se reflète dans l’état du bouton — s’il ne respecte pas la règle, le bouton reste inactif et aucun message d’erreur ne s’affiche sous le champ.
+  </Step>
+
+  <Step title="Saisir à nouveau le nouveau mot de passe">
+    Dans le champ « Confirmer le mot de passe » (texte indicatif « Saisissez à nouveau le nouveau mot de passe »), saisissez une seconde fois le nouveau mot de passe à l’identique.
+
+    Critère : si les deux saisies sont identiques, aucun message ne s’affiche en dessous ; si le champ de confirmation n’est pas vide et diffère du nouveau mot de passe, le texte rouge « Les deux nouveaux mots de passe ne correspondent pas ! » apparaît immédiatement sous le champ, et disparaît dès que les deux saisies concordent. Lorsque les deux concordent et que les autres conditions sont remplies, le bouton « Mettre à jour le mot de passe » devient actif.
+
+    Remarque : majuscules, minuscules et espaces comptent comme des différences. En cas de message d’incohérence, affichez d’abord le contenu des deux champs avec l’icône en forme d’œil et comparez caractère par caractère.
+  </Step>
+
+  <Step title="Cliquer sur « Mettre à jour le mot de passe » pour envoyer">
+    Après avoir vérifié les trois champs, cliquez sur « Mettre à jour le mot de passe » en bas à droite de la carte.
+
+    Critère : pendant l’envoi, le bouton devient « Envoi en cours… » et les trois champs ne sont plus modifiables ; en cas de succès, le message « Mot de passe actualisé avec succès ! » apparaît et les trois champs sont vidés (les textes indicatifs réapparaissent). Le mot de passe est alors modifié : inutile de vous reconnecter.
+
+    Remarque : l’envoi part dès le clic, sans confirmation préalable. Si le message « Échec de la modification du mot de passe. Réessayez. » s’affiche, la modification n’a pas abouti : vérifiez l’ancien mot de passe, puis réessayez. Si vous changez de menu ou d’onglet, ou cliquez sur Retour du navigateur en cours de saisie, la boîte « Ignorer les modifications non enregistrées ? » s’affiche d’abord (avec le texte « Cette page contient des modifications non enregistrées. Elles seront perdues si vous la quittez. ») : « Continuer à modifier » vous laisse sur la page en conservant la saisie, « Ignorer les modifications » l’abandonne ; pendant l’envoi, impossible de quitter la page — le message « Attendez la fin de l’enregistrement ou de l’importation en cours avant de quitter la page. » s’affiche ; lors d’un rafraîchissement ou d’une fermeture de page, c’est la confirmation native du navigateur qui apparaît (sans les boutons « Continuer à modifier » ni « Ignorer les modifications »), et quitter la page fait également perdre la saisie.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Le message « Mot de passe actualisé avec succès ! » est apparu et les trois champs ont été vidés.
+- Votre session en cours n’a pas été interrompue : la page ne vous demande pas de vous reconnecter et vous pouvez continuer à utiliser l’interface d’administration.
+- Lors de votre prochaine connexion, utilisez le nouveau mot de passe que vous venez de définir.
+
+## Points d’attention
+
+<Warning>
+La modification part dès le clic sur « Mettre à jour le mot de passe », sans confirmation préalable. Après un changement réussi, la session en cours n’est pas interrompue — ne concluez pas à un échec parce que vous n’avez pas été déconnecté : le repère, c’est l’apparition du message « Mot de passe actualisé avec succès ! ».
+</Warning>
+
+<Info>
+La règle du mot de passe est celle affichée sous le champ « Nouveau mot de passe » : « Utilisez au moins 6 caractères et un mot de passe différent de votre mot de passe actuel. » Si la longueur est insuffisante ou si le mot de passe est identique à l’ancien, le bouton « Mettre à jour le mot de passe » reste inactif et rien n’est envoyé.
+</Info>
+
+<Info>
+Cette page modifie le mot de passe de connexion à l’interface d’administration (la description affichée est « Modifiez le mot de passe de connexion à l’interface d’administration. »). Dès que l’un des trois champs contient quelque chose, un changement de menu ou d’onglet, ou un clic sur Retour du navigateur déclenche la confirmation « Ignorer les modifications non enregistrées ? » ; lors d’un rafraîchissement ou d’une fermeture de page, c’est la confirmation native du navigateur qui apparaît (sans les boutons « Continuer à modifier » ni « Ignorer les modifications »), et quitter la page fait également perdre la saisie.
+</Info>
+
+<Tip>
+Avant d’envoyer, cliquez sur l’icône en forme d’œil des trois champs pour afficher l’ancien et le nouveau mot de passe et les vérifier ; le message rouge du champ « Confirmer le mot de passe » apparaît immédiatement en cas d’incohérence — corrigez d’abord la saisie, puis envoyez : vous éviterez un nouvel essai après échec.
+</Tip>
+
+## Questions fréquentes
+
+### Faut-il se reconnecter après avoir changé le mot de passe ?
+
+Non. Après un changement réussi, la session en cours n’est pas interrompue et la page ne vous demande pas de vous reconnecter ; les trois champs sont vidés et le message « Mot de passe actualisé avec succès ! » s’affiche. Utilisez le nouveau mot de passe lors de votre prochaine connexion.
+
+### Pourquoi le bouton « Mettre à jour le mot de passe » est-il inactif ?
+
+Les trois conditions doivent être réunies : ① le champ « Ancien mot de passe » est rempli ; ② le « Nouveau mot de passe » comporte au moins 6 caractères et diffère de l’ancien ; ③ « Confirmer le mot de passe » correspond au nouveau mot de passe. Si vous venez de cliquer sur le bouton, il affiche « Envoi en cours… » et les champs ne sont plus modifiables : attendez la fin.
+
+### Quelles sont les exigences pour le nouveau mot de passe ?
+
+La règle est celle affichée sous le champ « Nouveau mot de passe » ; si elle n’est pas respectée, le bouton « Mettre à jour le mot de passe » reste inactif.
+
+### J’ai oublié mon ancien mot de passe : puis-je le modifier ici ?
+
+Non. La modification depuis cette page exige l’ancien mot de passe, et la page de connexion ne propose pas de récupération de mot de passe en libre-service. Si vous avez oublié votre ancien mot de passe, contactez un administrateur.
+
+### Que se passe-t-il si je change de page en cours de saisie ?
+
+Dès que les champs contiennent du texte, une confirmation s’affiche avant de quitter la page ; pendant l’envoi, impossible de quitter ; après un envoi réussi, les champs sont vidés et la confirmation ne se déclenche plus.

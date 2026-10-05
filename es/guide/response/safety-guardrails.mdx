@@ -1,0 +1,137 @@
+---
+title: Controles de seguridad
+description: Evalúe el riesgo con reglas antes de que la IA envíe una respuesta; bloquee las que coincidan, envíe en su lugar el contenido que usted redactó y notifique al líder cuando haga falta.
+keywords:
+  - controles de seguridad
+  - reglas de seguridad
+  - evaluación semántica mediante el modelo
+  - coincidencia exacta de palabras clave
+  - bloqueo de respuestas
+  - notificación al líder
+---
+
+«Controles de seguridad» hace la última comprobación antes de que se envíe una respuesta de la IA: la respuesta que coincide con una regla se bloquea o se sustituye por el contenido que usted redactó de antemano, y además se puede notificar al líder (su supervisor) al mismo tiempo. Las reglas se guardan por «Ventana de conversación actual» y solo se aplican a la ventana seleccionada.
+
+## Cuándo la necesitará
+
+- La IA promete de vez en cuando al cliente cosas que no son ciertas, como «ya le añadí al grupo» o «ya lo comprobé», y usted quiere frenar ese tipo de respuestas.
+- En temas sensibles como quejas, reembolsos o cuestiones legales prefiere que la IA diga menos o derive a una persona: la respuesta no se envía y se notifica al líder.
+- En algunos escenarios no quiere que la IA improvise: cuando la regla coincide, se envía directamente la frase fija que usted escribió.
+- Acaba de poner en marcha una ventana nueva y quiere añadir primero una línea de defensa para los escenarios de mayor riesgo.
+
+## Ruta de acceso
+
+Menú izquierdo → Configuración de respuestas → Controles de seguridad. Al entrar, mire primero la «Ventana de conversación actual», en la parte superior izquierda (debajo del logotipo): las reglas de seguridad se guardan por ventana, así que al cambiar de ventana verá otro conjunto de reglas. Si no hay ninguna ventana seleccionada, la página muestra «No hay ventanas de conversación disponibles», «Primero, conecte una ventana de conversación que no sea de administración y después continúe con la configuración.» y el botón «Conectar una ventana»; conecte primero una ventana desde [Inicio de sesión en canales](/es/guide/assistant/login-online).
+
+<Frame>
+  ![Página de «Controles de seguridad»: arriba, la tarjeta «Reglas de seguridad» con la insignia del número de reglas y el botón «Añadir regla»; debajo se listan por número las reglas, con su método de detección, su condición de activación, si bloquean la respuesta y la notificación al líder](/images/es/guide/response/safety-guardrails/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Confirme la «Ventana de conversación actual»">
+    Las reglas solo se aplican a la ventana a la que pertenecen. Confirme que la «Ventana de conversación actual», en la parte superior izquierda (debajo del logotipo), es la ventana que quiere configurar antes de añadir reglas.
+
+    Cómo comprobarlo: el nombre de la ventana coincide con el que desea configurar.
+  </Step>
+
+  <Step title="Pulse «Añadir regla» y elija el método de detección">
+    Pulse «Añadir regla» en la esquina superior derecha de la página (si la lista de reglas está vacía, el botón aparece en el estado vacío, en el centro) y elija uno de los dos métodos de detección:
+
+    - Evaluación semántica mediante el modelo: describa el caso en lenguaje natural para que el modelo determine si la respuesta generada por la IA cumple la condición.
+    - Coincidencia exacta de palabras clave: introduzca palabras o frases concretas; la regla se activa si alguna aparece en la respuesta generada por la IA.
+
+    Al elegirlo, en la lista aparece una tarjeta «Regla N»: a la derecha del título «Regla N» se muestra la etiqueta «Sin guardar» y la tarjeta entra en modo de edición.
+
+    <Frame>
+      ![Menú desplegable tras pulsar «Añadir regla»: muestra las dos opciones, «Evaluación semántica mediante el modelo» y «Coincidencia exacta de palabras clave», con la descripción de cada una](/images/es/guide/response/safety-guardrails/02-add-rule.jpg)
+    </Frame>
+
+    Nota: el método de detección no puede cambiarse después de crear la regla; en la página aparece el aviso «Este método no puede cambiarse después de crear la regla. Para modificarlo, elimine la regla y cree otra.». Cada ventana solo admite una regla de evaluación semántica: si ya existe una, esa opción queda deshabilitada y el menú desplegable muestra «Ya existe una regla evaluada por el modelo. Reúna en ella todos los casos que necesiten evaluación semántica.».
+  </Step>
+
+  <Step title="Rellene la condición de activación">
+    Coincidencia exacta de palabras clave: escriba palabras o frases en el campo «Palabras clave desencadenantes» y pulse Enter (o coma, o punto y coma) para crear una etiqueta; si pega varios elementos, se separan y se eliminan los duplicados automáticamente. Después elija el «Tipo de coincidencia» («Cualquier palabra clave» de forma predeterminada): «Cualquier palabra clave» activa la regla si aparece cualquiera de ellas; «Todas las palabras clave» exige que aparezcan todas a la vez.
+
+    Evaluación semántica mediante el modelo: en la «Condición semántica» describa con claridad la intención, la situación o el límite que debe detectarse; no se limite a acumular palabras clave. Por ejemplo: «la respuesta generada por la IA promete una compensación o hace un juicio legal».
+
+    Cómo comprobarlo: las palabras clave aparecen como etiquetas dentro del campo, o la condición semántica ya está redactada.
+  </Step>
+
+  <Step title="Elija «¿Bloquear la respuesta?»">
+    «¿Bloquear la respuesta?» decide qué se hace con esta respuesta cuando la regla coincide:
+
+    - Bloquear: esta respuesta de la IA no se envía.
+    - No bloquear: se envía en su lugar el «Contenido de la respuesta» que usted escriba. Puede introducir texto; con «Insertar archivo» también puede subir imágenes o archivos, que se insertan en el área de edición como bloques de adjunto con color.
+
+    Al elegir «No bloquear», aparece debajo el área de «Contenido de la respuesta»: debe haber al menos texto o un adjunto.
+
+    Cómo comprobarlo: «¿Bloquear la respuesta?» ya tiene una opción seleccionada; si eligió «No bloquear», el «Contenido de la respuesta» no está vacío.
+
+    Nota: si cambia «¿Bloquear la respuesta?» de «No bloquear» a «Bloquear», se borra el contenido de respuesta ya escrito; al volver a «No bloquear» tendrá que rellenarlo de nuevo.
+  </Step>
+
+  <Step title="Elija la «Notificación del líder» y guarde">
+    En «Notificación del líder» seleccione «Notificar líder» o «No notificar» y pulse «Guardar» en la esquina superior derecha de la tarjeta.
+
+    Cómo comprobarlo: aparece el aviso «Regla de seguridad guardada.» y la etiqueta cambia a «Guardado».
+
+    Nota: si faltan campos obligatorios, al pulsar «Guardar» se avisa «Complete los campos requeridos en esta regla»; con «Cancelar» se descarta esta edición: las reglas ya guardadas vuelven al contenido del último guardado y las reglas nuevas que aún no se han guardado se eliminan.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación actual» de la izquierda es la ventana que quiere configurar.
+- En la lista de reglas no quedan tarjetas «Sin guardar» ni «En edición»: todos los cambios están guardados.
+- En las reglas con «¿Bloquear la respuesta?» en «No bloquear», el «Contenido de la respuesta» incluye texto o un adjunto.
+- Envíe un mensaje que active la condición en una conversación real de esa ventana: con «Bloquear», la IA no envía esa respuesta; con «No bloquear», el cliente recibe el contenido que usted configuró; con «Notificar líder», confirme con el líder que la notificación llegó.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Eliminar una regla no se puede deshacer. Al eliminar una regla guardada, «Eliminar» abre el cuadro de confirmación «¿Eliminar esta regla de seguridad?»; al pulsar «Eliminar regla», la regla se borra de inmediato de la ventana actual y no se puede recuperar. En cambio, una regla nueva que aún no se ha guardado se quita directamente al pulsar «Eliminar», sin cuadro de confirmación.
+</Warning>
+
+<Warning>
+Con reglas sin guardar no se puede salir de la página directamente: al cambiar de menú, de ventana o al volver a la página anterior aparece el cuadro «¿Descartar los cambios sin guardar?»; elija «Seguir editando» para quedarse y terminarlas, o pulse «Guardar» o «Cancelar» en la tarjeta antes de salir. Al actualizar o cerrar la pestaña, el navegador muestra su propio aviso de salida y la acción también queda interceptada.
+</Warning>
+
+<Info>
+Cuando una regla coincide, ya no se comprueban las reglas que vienen después.
+</Info>
+
+<Info>
+Cada regla se envía con su propio botón «Guardar», pero el sistema escribe la lista completa de reglas como un todo. Por eso, cuando aparece «No se pudieron cargar las reglas de seguridad», la página no permite editar ni guardar: se evita sobrescribir la configuración existente. Si varias personas modifican a la vez las reglas de la misma ventana, quien guarde después sustituirá lo que se había guardado antes.
+</Info>
+
+<Tip>
+Dos combinaciones frecuentes: si quiere que la IA siga atendiendo al cliente con otras palabras, use «No bloquear» + «Contenido de la respuesta»; si prefiere que esa respuesta no salga, use «Bloquear». Si duda, empiece por «Bloquear» con «Notificar líder», observe cuándo coincide y después decida si la permite.
+</Tip>
+
+<Tip>
+Para comprobar por qué se bloqueó una respuesta, vaya a [Revisión detallada](/es/guide/dashboard/data-export), abra la «Cadena de procesamiento de mensajes» de la consulta correspondiente y en «Pasos de ejecución» verá el paso «Control de seguridad»; la respuesta de respaldo para cuando la IA no sabe contestar se configura en [Reglas de respuesta](/es/guide/response/reply-rules).
+</Tip>
+
+## Preguntas frecuentes
+
+### La regla ya está creada, pero la respuesta no se bloquea. ¿Qué reviso primero?
+
+Revise cuatro cosas en orden: si la «Ventana de conversación actual» de la izquierda es la ventana donde ocurre el problema (las reglas se guardan por ventana y es fácil configurarlas en otra); si la etiqueta de la regla muestra «Guardado» (los cambios «Sin guardar» o «En edición» no surten efecto); si las palabras clave ya se convirtieron en etiquetas (se crean al pulsar Enter, coma o punto y coma después de escribir, o al hacer clic fuera del campo) y si el «Tipo de coincidencia» está en «Todas las palabras clave», lo que endurece demasiado la condición; y, por último, tenga en cuenta que lo que se compara es la respuesta generada por la IA, no el mensaje que envía el cliente: para bloquear respuestas como «ya le añadí al grupo», las palabras clave deben ser las que diría la IA, no la pregunta del cliente.
+
+### ¿Por qué no se puede pulsar la opción «Evaluación semántica mediante el modelo»?
+
+Cada ventana solo admite una regla de evaluación semántica. Una vez creada una, esa opción del menú «Añadir regla» queda deshabilitada y muestra «Ya existe una regla evaluada por el modelo. Reúna en ella todos los casos que necesiten evaluación semántica.». Añada los nuevos casos a la «Condición semántica» de esa regla o utilice la coincidencia exacta de palabras clave.
+
+### Si me equivoqué de método de detección, ¿puedo cambiarlo directamente?
+
+No. El método de detección no puede cambiarse después de crear la regla: solo puede eliminar esa regla y crear otra con «Añadir regla». La eliminación no se puede deshacer, así que antes anote el contenido de la condición original.
+
+### Cambié «¿Bloquear la respuesta?» de «No bloquear» a «Bloquear» y el contenido de la respuesta desapareció. ¿Por qué?
+
+Al cambiar a «Bloquear» se borra el contenido de respuesta ya escrito; si vuelve a «No bloquear», tendrá que rellenarlo otra vez y pulsar «Guardar» para que se guarde.
+
+### La página muestra «No se pudieron cargar las reglas de seguridad». ¿Puedo seguir editando?
+
+No. Para evitar sobrescribir la configuración existente, la página no permite editar ni guardar hasta que la carga termine; pulse «Recargar» para reintentarlo y modifique las reglas cuando aparezca la lista.

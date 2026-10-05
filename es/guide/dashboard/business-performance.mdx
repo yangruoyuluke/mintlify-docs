@@ -1,0 +1,161 @@
+---
+title: "Rendimiento del negocio"
+description: "Revise el rendimiento de la atención de la IA por ventana de conversación de estadísticas y rango de fechas: entienda cómo se definen las métricas principales, localice el origen de los cambios y desglose por categoría de negocio hasta los registros de conversación."
+keywords:
+  - "rendimiento del negocio"
+  - "panel de datos"
+  - "métricas principales"
+  - "tasa de consultas"
+  - "actividad de mensajes por franja horaria"
+  - "guía métrica"
+---
+
+«Rendimiento del negocio» es la página de inicio predeterminada tras iniciar sesión. Sus gráficos responden a una sola pregunta: ¿cómo atendió la IA a los clientes durante este período? Solo muestra datos y no configura nada; todos los gráficos siguen a la «Ventana de conversación de estadísticas» de la izquierda y al rango de fechas de la parte superior.
+
+## Cuándo la necesitará
+
+- Revisión diaria o semanal: cuántos mensajes recibió la IA, cuántas consultas generó y cuántas respuestas envió.
+- Cuando cambia el volumen de mensajes o los comentarios de los clientes, para determinar si el cambio está en los mensajes recibidos, en las consultas o en las respuestas.
+- Cuando quiere saber qué preguntan más los clientes y qué categoría de necesidad está más concentrada.
+- Cuando quiere bajar de una categoría con gran proporción a los registros originales y revisar cómo la IA los trató.
+
+## Ruta de acceso
+
+Menú de la izquierda → Panel de datos → Rendimiento (es la página predeterminada tras iniciar sesión; la ruta de navegación de la barra superior muestra «Panel de datos → Rendimiento»). Al entrar, confirme primero dos cosas: la «Ventana de conversación de estadísticas», en el centro de la barra lateral izquierda, decide qué canal ve; la barra de filtros superior decide qué período ve.
+
+<Frame>
+  ![Página completa de «Rendimiento del negocio»: a la izquierda el selector de la ventana de estadísticas, arriba los filtros de intervalo de tiempo y fecha, y en el área de contenido, de arriba abajo, las tarjetas de métricas principales, la tendencia de mensajes y respuestas y la actividad de mensajes por franja horaria](/images/es/guide/dashboard/business-performance/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Defina el alcance del análisis (ventana, cuenta y fechas)">
+    El alcance lo determinan dos lugares y los cambios se aplican al instante; no hay un botón de confirmación adicional.
+
+    - «Ventana de conversación de estadísticas» (izquierda): elija la ventana que quiere revisar, o «Todas las ventanas de conversación» para ver el resumen. Los administradores del departamento también ven encima un menú desplegable «Cuenta» para cambiar a otro miembro; los demás solo ven las estadísticas de su propia cuenta y no tienen ese desplegable.
+    - Barra de filtros superior: elija primero el «Intervalo de tiempo» —Por día, Por semana, Por mes o Personalizado (Por mes de forma predeterminada)— y luego haga clic en el botón de fecha contiguo para elegir fechas concretas.
+
+    Dos casos especiales:
+
+    - Por semana: al hacer clic en cualquier día del calendario se selecciona la semana completa a la que pertenece (de lunes a domingo).
+    - Personalizado: elija la fecha de inicio y la de fin; el rango está limitado a 2–31 días. Si solo elige una de las dos, los datos no se actualizan.
+
+    Cómo verificarlo: al cambiar, las tarjetas y los gráficos se actualizan a la vez. A la derecha de la barra de filtros siempre aparece el aviso «Las fechas de comparación exactas no están disponibles. Los cambios de cantidad no indican calidad.»; téngalo presente antes de interpretar las flechas de subida o bajada.
+
+    Nota: si elige mal la ventana, toda la página mostrará los datos de otro canal.
+  </Step>
+
+  <Step title="Entienda las métricas principales (puede abrir la «Guía métrica» en cualquier momento)">
+    Las «Métricas principales» incluyen cuatro tarjetas: Mensajes recibidos, Consultas, Respuestas y Tasa de consultas. Sus definiciones:
+
+    - Mensajes recibidos: número total de mensajes que recibió el asistente de IA.
+    - Consultas: mensajes en los que el usuario pregunta activamente a la IA; los mensajes fusionados se cuentan por cada mensaje original del usuario. Incluye chats individuales y conversaciones con @IA en chats grupales; las respuestas proactivas del asistente grupal no se cuentan.
+    - Respuestas: respuestas que la IA envió realmente y con contenido no vacío, contando solo las generadas por una consulta del cliente; cada respuesta válida cuenta una vez. Las respuestas proactivas del asistente grupal no se cuentan.
+    - Tasa de consultas: Consultas ÷ Mensajes recibidos.
+
+    Las tres cantidades se solapan y se activan entre sí; no se pueden sumar. En la esquina inferior derecha de una tarjeta puede aparecer un porcentaje de comparación con ↑/↓ (Mensajes recibidos, Consultas, Respuestas y las Sugerencias que devuelve el servicio); «—» indica que el valor no se devolvió para el rango actual, y los Conocimientos aprendidos, la Tasa de consultas y otras métricas no tienen datos de comparación.
+
+    El botón «Guía métrica», a la derecha de las «Métricas principales», abre un panel lateral por la derecha con todas las métricas agrupadas en «Métricas de recuento» y «Métricas de tasas»: las 5 métricas de recuento (Mensajes recibidos, Consultas, Respuestas, Sugerencias y Conocimientos aprendidos) y las 3 métricas de tasas (Tasa de consultas, Respuestas / preguntas y Tasa de adopción), cada una con su definición.
+
+    <Frame>
+      ![Panel lateral «Guía métrica»: los campos agrupados en métricas de recuento y métricas de tasas, con la definición de cada uno](/images/es/guide/dashboard/business-performance/02-metric-glossary.jpg)
+    </Frame>
+
+    Cómo verificarlo: después de leer el panel, usted puede explicar cómo se calcula cada una de las cuatro tarjetas y sabe que la «Tasa de adopción» no sirve como tasa de conversión de ventas.
+  </Step>
+
+  <Step title="Consulte la tendencia de mensajes y respuestas">
+    «Mensajes y respuestas con el tiempo» dibuja tres líneas —mensajes recibidos, consultas y respuestas— para ver en qué punto empezó a cambiar el volumen; las tres líneas se superponen y no se pueden sumar. Cuando hay datos, encima del gráfico aparece «Franja con más consultas en esta tendencia: `{fecha}` · `{cantidad}`».
+  </Step>
+
+  <Step title="Consulte la actividad de mensajes por franja horaria">
+    «Actividad de mensajes por franja horaria» es un mapa de calor que responde a una pregunta: en qué momentos del día son más activos los clientes. Cada celda representa una franja de 3 horas de un día; cuanto más oscuro el color, más mensajes. Cada celda cuenta mensajes originales, un criterio distinto al de las Consultas.
+
+    - Los datos siguen a la cuenta, la «Ventana de conversación de estadísticas» y el rango de fechas actuales; si el período elegido supera los 31 días, solo se muestran los últimos 31 (la tarjeta indica «Mostrando sólo los últimos 31 días del período seleccionado») y las horas se muestran en horario de Pekín.
+    - De forma predeterminada se marca la franja de mayor actividad: «Franja de mayor actividad» con fecha, franja y cantidad; al hacer clic en cualquier celda, la marca cambia a «Período seleccionado».
+    - Si hay muchas fechas o franjas, desplace la vista horizontalmente para ver todo el contenido.
+
+    <Frame>
+      ![Mapa de calor de actividad de mensajes por franja horaria: cada celda es el número de mensajes de una franja de 3 horas de un día; cuanto más oscuro, más mensajes; abajo están la marca de la franja de mayor actividad y la leyenda de menos a más](/images/es/guide/dashboard/business-performance/03-message-heatmap.jpg)
+    </Frame>
+
+    Cómo verificarlo: puede ver la marca «Franja de mayor actividad» y la leyenda «Menos → Más»; si no hay mensajes en las fechas seleccionadas, aparece «No hay mensajes en este período».
+  </Step>
+
+  <Step title="Consulte la evolución de las tasas y las métricas complementarias">
+    Más abajo, «Evolución de las tasas» tiene tres tarjetas: Tasa de consultas a lo largo del tiempo, Respuestas por consulta a lo largo del tiempo y Tasa de adopción con el tiempo. Después vienen «Evolución de las sugerencias» y «Evolución de los conocimientos aprendidos», y las cuatro tarjetas de «Métricas complementarias»: Sugerencias, Conocimientos aprendidos, Respuestas / preguntas y Tasa de adopción.
+
+    - Respuestas / preguntas = Respuestas ÷ Consultas. Una consulta puede generar varias respuestas, así que el valor puede superar el 100 %; no es una tasa de éxito de respuesta.
+    - La Tasa de adopción usa el valor que devuelve el servicio; su fórmula aún está pendiente de confirmación, así que no la use para juzgar la calidad del servicio.
+    - Las Sugerencias son el número de resúmenes de preguntas que la IA envió a los supervisores; los Conocimientos aprendidos son los conocimientos que la IA aprendió automáticamente de las conversaciones.
+
+    Recordatorio de criterios: las tarjetas de «Métricas principales» de arriba muestran un solo período seleccionado (un día, una semana o un mes); las tendencias, la evolución de las tasas, las Sugerencias y los Conocimientos aprendidos usan un rango de muestreo: los últimos 30 días por día, las últimas 12 semanas por semana y los últimos 6 meses por mes. Cada gráfico de tendencia indica arriba su rango real de inicio y fin («Este rango difiere de las métricas de un solo período arriba»). Los dos criterios no se pueden comparar directamente.
+
+    Cómo verificarlo: al cambiar el intervalo de tiempo o las fechas, las curvas y las barras se actualizan a la vez. Si un gráfico no carga, haga clic en «Volver a cargar la tendencia» (en algunos gráficos, «Volver a cargar el gráfico») para reintentar. Si la ventana elegida no tiene datos en ese período, aparece «No hay datos de tendencia para esta ventana en este período»; cambie en la izquierda a «Todas las ventanas de conversación» para ver el panorama general.
+  </Step>
+
+  <Step title="Consulte las intenciones empresariales y los rankings de actividad">
+    La sección «Intenciones empresariales» contiene, de arriba abajo:
+
+    - Qué preguntan los clientes: un gráfico de anillo que cuenta los turnos de intención del usuario tras fusionar los mensajes; varios mensajes consecutivos con la misma intención cuentan una sola vez. Encima del gráfico se indica «`{N}` turnos de intención · `{N}` categorías» y el resumen inferior señala la necesidad más concentrada en ese momento.
+    - Alcance de visualización de la categoría: arriba a la derecha, por defecto «Ocultar otras categorías»; si el gráfico parece vacío, cambie a «Mostrar todas las categorías». Este control también se aplica a las intenciones principales, al cambio de proporciones y a las necesidades detalladas.
+    - Cambio en la proporción por categoría de negocio: compara dos períodos consecutivos, cada uno con un total del 100 %. Las bandas solo conectan categorías con el mismo nombre —no representan el movimiento de los clientes— y las flechas indican el cambio de participación en puntos porcentuales. No admite el intervalo «Personalizado»: al elegirlo, la página indica «Elija una comparación diaria, semanal o mensual» y puede hacer clic en «Por mes» para cambiar; si ve el día en curso, aparece «No hay fechas completas para comparar».
+    - Necesidades detalladas del cliente: despliega las intenciones de segundo nivel por categoría principal; una barra más larga significa más turnos.
+
+    Desglose: haga clic en la leyenda de categorías junto al anillo (en pantallas estrechas, debajo) o en cualquier elemento de «Necesidades detalladas del cliente» para ir a [Revisión detallada](/es/guide/dashboard/data-export); la ventana, el rango de fechas y la categoría se aplican automáticamente para revisar registro por registro.
+
+    Más abajo están «Top 5 grupos activos» y «Top 5 usuarios activos»: solo listan los cinco primeros resultados que devuelve el servicio de estadísticas y las cifras no representan clientes únicos.
+
+    Cómo verificarlo: al activar «Mostrar todas las categorías» aparecen las categorías que antes estaban ocultas; tras hacer clic en una categoría, los filtros de «Revisión detallada» coinciden con los de aquí.
+  </Step>
+
+  <Step title="Continúe a partir de los datos">
+    Al final de la página está «Continuar con los datos». Haga clic en «Ver registros de este período» para ir a «Revisión detallada» con la cuenta, la ventana y el rango de fechas actuales, y revisar consulta por consulta las respuestas de la IA y su proceso de tratamiento.
+
+    Cómo verificarlo: después de saltar, el rango de fechas de «Revisión detallada» coincide con el de aquí.
+
+    Nota: si el rango de fechas está incompleto (habitual cuando en «Personalizado» solo se eligió una fecha), el botón no se puede pulsar y la sección muestra «Seleccione un rango de fecha completo primero.».
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación de estadísticas» de la izquierda muestra el canal que quiere revisar (o «Todas las ventanas de conversación»); los administradores del departamento deben confirmar además la «Cuenta».
+- Al cambiar el intervalo de tiempo o las fechas, se actualizan juntos las métricas principales, las tendencias, la actividad de mensajes por franja horaria y las intenciones empresariales.
+- En «Guía métrica» puede consultar las 5 métricas de recuento y las 3 métricas de tasas.
+- Al hacer clic en cualquier categoría de negocio se abre «Revisión detallada» con los filtros de fecha y categoría correspondientes.
+
+<Warning>
+Si elige mal la «Ventana de conversación de estadísticas», toda la página mostrará los datos de otro canal; «Rendimiento del negocio» y «Revisión detallada» comparten esta selección, así que las dos páginas cambian a la vez. «Rendimiento del negocio» solo muestra resultados estadísticos; para cambiar el perfil, las reglas de respuesta o los conocimientos, vaya a la página de configuración correspondiente.
+</Warning>
+
+<Info>
+Las estadísticas solo cubren las conversaciones de la IA con los clientes; no incluyen la parte en la que responde un agente humano.
+</Info>
+
+<Tip>
+Pase el cursor por la tarjeta «Tasa de consultas» o «Respuestas / preguntas» y la página resaltará las tarjetas de recuento que participan en el cálculo (la Tasa de consultas viene de Mensajes recibidos y Consultas; Respuestas / preguntas, de Consultas y Respuestas), para comprobar rápidamente la relación entre definiciones.
+</Tip>
+
+## Preguntas frecuentes
+
+### Los gráficos se ven más vacíos de lo esperado: ¿qué reviso primero?
+
+Compruebe tres cosas en orden: si la «Ventana de conversación de estadísticas» está en una sola ventana (puede cambiar a «Todas las ventanas de conversación»); si «Intenciones empresariales» sigue en el valor predeterminado «Ocultar otras categorías» (cambie a «Mostrar todas las categorías»); y si el rango de fechas y el intervalo cubren el período que quiere ver. Algunos estados vacíos ofrecen «Reiniciar filtros» para volver al rango predeterminado con un clic.
+
+### ¿Por qué no coinciden las cifras de las tarjetas y las de los gráficos de tendencia?
+
+Usan criterios distintos: las tarjetas muestran un solo período seleccionado (un día, una semana o un mes); las tendencias, la evolución de las tasas, las Sugerencias y los Conocimientos aprendidos usan un rango de muestreo. Los dos valores no se pueden comparar directamente.
+
+### ¿Por qué no se puede pulsar «Ver registros de este período»?
+
+Necesita un rango de fechas completo. Con el intervalo «Personalizado», hay que elegir las dos fechas, inicio y fin; mientras falte una, el botón está deshabilitado y la sección muestra «Seleccione un rango de fecha completo primero.».
+
+### ¿Por qué no se muestra «Cambio en la proporción por categoría de negocio»?
+
+Dos casos habituales: el intervalo actual es «Personalizado» y este bloque solo admite por día, por semana o por mes, así que la página indica «Elija una comparación diaria, semanal o mensual»; o está viendo el día en curso, que aún no ha terminado y no se puede comparar al mismo momento del día, con el aviso «No hay fechas completas para comparar». Elija una fecha ya terminada.
+
+### ¿Cómo se calcula la «Tasa de adopción»?
+
+La Tasa de adopción usa directamente el valor que devuelve el servicio y los datos actuales no bastan para confirmar la fórmula: no la interprete como una tasa de conversión de clientes ni la deduzca de las Sugerencias. No tiene datos de comparación; si no se devuelve un valor, muestra «—».

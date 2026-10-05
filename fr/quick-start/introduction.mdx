@@ -1,0 +1,113 @@
+---
+title: "Découvrir MarsMind"
+description: "Comprendre ce qu’est MarsMind, ce qu’il peut faire pour vous et par où commencer après votre première connexion à l’interface d’administration."
+keywords:
+  - "MarsMind"
+  - "collègue numérique IA"
+  - "prise en main"
+  - "fenêtre de conversation"
+  - "configuration initiale"
+---
+
+MarsMind est un collègue numérique IA qui assure la permanence sur vos canaux de communication client : une fois vos comptes de canaux connectés à l’interface d’administration, les messages clients sont d’abord pris en charge par l’IA, selon la personnalité, les règles et les connaissances que vous avez configurées ; lorsqu’elle ne sait pas répondre ou qu’un message déclenche une limite que vous avez définie, la règle correspondante s’applique (transfert à un humain, notification du superviseur ou blocage). Cette interface d’administration vous permet de réaliser ces configurations et à suivre les performances de la prise en charge.
+
+## Ce qu’il peut faire pour vous
+
+L’interface d’administration est organisée par « module → page », chaque module correspondant à un besoin :
+
+| Module | Ce que vous pouvez y faire |
+| --- | --- |
+| Tableau de bord des données | Analysez les performances et la consommation de l’IA : [Performances](/fr/guide/dashboard/business-performance) regroupe les indicateurs clés et les tendances, [Données détaillées](/fr/guide/dashboard/data-export) permet de revoir chaque échange, [Utilisation de l’IA](/fr/guide/dashboard/ai-usage) montre la consommation des crédits. |
+| Mon assistant | Mettez l’IA en service : [Connexion aux canaux](/fr/guide/assistant/login-online) connecte les comptes de canaux et gère leur statut, [Personnalité de base](/fr/guide/assistant/persona) définit le style de communication et les instructions personnalisées, [Relations](/fr/guide/assistant/relationship-config) définit la relation avec les contacts et les groupes. |
+| Paramètres de réponse | Définissez comment l’IA s’exprime et quand elle doit s’abstenir : [Règles de réponse](/fr/guide/response/reply-rules) (réponses de repli, réponses de chat de groupe, rapports proactifs, réponse directe par mot-clé), [Garde-fous de sécurité](/fr/guide/response/safety-guardrails) (blocage, autorisation ou notification du superviseur), [Accueil des nouveaux clients](/fr/guide/response/new-customer-reception), [Horaires de service](/fr/guide/response/working-hours). |
+| Base de connaissances | Préparez la documentation que l’IA peut citer : [Génération de connaissances](/fr/guide/knowledge/generation) à partir de documents ou de pages web, ou saisie directe ; [Optimisation des connaissances](/fr/guide/knowledge/optimization) pour valider les contenus en attente ; [Gestion des connaissances](/fr/guide/knowledge/management) pour organiser les catégories. |
+| Bibliothèque de compétences | Définissez les étapes que l’IA suit face à un type de tâche, et associez-y les outils à utiliser ([Bibliothèque de compétences](/fr/guide/skills/library)). |
+
+En bas à gauche, « Paramètres du compte » regroupe les opérations liées au compte : Profil, Sécurité de la connexion, Autorisation des rôles auprès de l’IA, ainsi que le changement de langue de l’interface et la déconnexion.
+
+## Quand en avez-vous besoin ?
+
+- Vous recevez beaucoup de demandes de contact, de questions posées dans les groupes et de questions récurrentes : vous voulez que l’IA assure le premier accueil et que l’équipe ne traite que les cas que l’IA ne sait pas résoudre.
+- Vos demandes clients, campagnes, devis et questions après-vente sont répartis sur plusieurs comptes de canaux : vous voulez un discours homogène et la possibilité de revenir sur chaque échange.
+- Vous voulez que les réponses de l’IA soient sourcées — issues des contenus de l’entreprise et des connaissances accumulées dans les conversations — plutôt qu’improvisées ; les contenus sensibles doivent d’abord être bloqués ou signalés au superviseur.
+- Votre équipe a accumulé des documents, des FAQ ou des échanges réels : vous voulez les transformer en connaissances directement citables par l’IA pour réduire les réponses répétitives.
+
+## Accéder à l’interface d’administration
+
+Ouvrez [admin.marsmind.cc](https://admin.marsmind.cc) dans votre navigateur : si vous avez déjà un compte, saisissez votre « Nom d’utilisateur » et votre « Mot de passe », puis cliquez sur « Se connecter » ; sinon, cliquez sur « Créer un compte » — l’inscription exige un « Code d'invitation ». Une fois connecté, vous arrivez par défaut sur la page « Performances » (menu de gauche → Tableau de bord des données → Performances), la vue d’ensemble de la prise en charge par l’IA :
+
+<Frame>
+  ![Après la connexion, la page « Performances » s’affiche par défaut : à gauche, les menus des modules et le sélecteur de fenêtre ; la page présente les indicateurs clés et les courbes des messages reçus et des réponses](/images/fr/quick-start/introduction/01-dashboard.jpg)
+</Frame>
+
+## L’ordre de la première configuration
+
+<Steps>
+  <Step title="Se connecter à l’interface d’administration">
+    Ouvrez la page de connexion de l’interface d’administration, puis saisissez votre « Nom d’utilisateur » et votre « Mot de passe ». Sans compte, cliquez d’abord sur « Créer un compte » : renseignez le nom d’utilisateur, l’adresse e-mail, le mot de passe, sa confirmation et le « Code d'invitation », puis cochez les Conditions d’utilisation, la Politique de confidentialité et l’Accord sur l’utilisation des données.
+
+    Critère : après la connexion, la page « Performances » s’affiche automatiquement.
+  </Step>
+  <Step title="Choisir la « Fenêtre de conversation gérée actuellement »">
+    Le sélecteur de fenêtre se trouve en haut de la barre latérale, sous le logo ; sur les pages d’analyse comme « Performances » et « Données détaillées », il s’affiche comme « Fenêtre de conversation pour les statistiques », et comme « Fenêtre de conversation gérée actuellement » sur les autres pages. Sélectionnez d’abord le compte de canal que vous voulez gérer.
+
+    Critère : après le changement de fenêtre, les données et la configuration de la page suivent. Si aucune fenêtre n’est disponible, les pages qui en ont besoin affichent « Aucune fenêtre de conversation disponible » et « Se connecter et mettre en ligne » ; dans la barre latérale, le sélecteur devient « Connecter une fenêtre de conversation » — cliquez dessus pour connecter un compte.
+
+    Attention : la Personnalité de base, les Relations et les Paramètres de réponse sont enregistrés par fenêtre ; en choisissant la mauvaise fenêtre, vous modifiez les réglages d’un autre compte.
+  </Step>
+  <Step title="Se familiariser avec l’interface via « Aide et guides »">
+    Cliquez sur « Aide et guides », en haut à droite de la barre supérieure, pour ouvrir le « Centre d’aide » ; choisissez une rubrique — Tableau de bord, Paramètres de l’assistant, Base de connaissances ou Bibliothèque de compétences — puis cliquez sur « Démarrer ce guide » : le système met en surbrillance les points d’entrée correspondants, étape par étape.
+
+    Critère : une fois le parcours guidé terminé, vous saurez à quoi correspond chaque module et où configurer les détails sans vous tromper de page.
+  </Step>
+  <Step title="Compléter la configuration de base avec l’« Assistant initial de configuration »">
+    Tant que la configuration de base est incomplète, l’« Assistant initial de configuration » s’ouvre automatiquement après la connexion et vous guide dans l’ordre : Connecter l’assistant → Configurer les règles d'utilisation → Mettre en place la base de connaissances. Le bouton de l’étape en cours mène directement à la page correspondante ; pour avancer à votre rythme, cliquez sur « Plus tard ».
+
+    Critère : une fois les trois étapes terminées, cliquez sur « Ne plus afficher » pour fermer l’assistant ; l’interface indique « Configuration initiale terminée ». Pour le revoir ensuite, rouvrez-le depuis « Aide et guides » → « Assistant de configuration ».
+
+    Attention : « Plus tard » ne vaut que pour la session en cours ; après « Ne plus afficher », l’assistant ne s’ouvre plus automatiquement, mais reste accessible depuis « Aide et guides ».
+
+    Pour la suite : le détail de chaque étape se trouve dans [Prise en main en 30 minutes](/fr/quick-start/quick-start) ; si vos contenus ne sont pas encore prêts, commencez par [Activation et préparation](/fr/quick-start/preparation).
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Après la connexion, vous arrivez automatiquement sur « Performances » et les cinq modules sont visibles dans le menu de gauche.
+- Dans la barre latérale, une fenêtre réelle est sélectionnée sous « Fenêtre de conversation gérée actuellement » et la page n’affiche plus « Aucune fenêtre de conversation disponible ».
+- Les trois étapes de l’« Assistant initial de configuration » sont terminées, ou vous savez exactement laquelle manque et où la compléter.
+- Vous pouvez ouvrir à tout moment le guide interactif et le « Guide de l’utilisateur » depuis « Aide et guides ».
+
+<Warning>
+L’accès à l’interface d’administration se fait uniquement sur invitation : l’inscription exige un « Code d'invitation » et la page de connexion ne propose pas de récupération de mot de passe en libre-service. En cas de mot de passe oublié ou pour obtenir un nouveau compte, contactez votre interlocuteur dédié ou un administrateur.
+</Warning>
+
+<Info>
+Dans l’interface d’administration, la plupart des configurations suivent la « Fenêtre de conversation gérée actuellement » : après un changement de fenêtre, la Personnalité de base, les Relations et les Paramètres de réponse affichent les réglages d’une autre fenêtre de conversation. La Base de connaissances, elle, ne suit pas le changement de fenêtre : elle s’organise par « Portée des connaissances » (Personnel / Entreprise) et par « Catégorie de connaissances ».
+</Info>
+
+<Tip>
+L’interface est disponible en cinq langues : 中文, English, 日本語, Français, Español. Changez de langue dans « Paramètres du compte » → « Langue », en bas à gauche. Dans « Aide et guides » → « Centre d’aide », le « Guide de l’utilisateur » en bas de page ouvre directement cette documentation.
+</Tip>
+
+## Questions fréquentes
+
+### En quoi MarsMind diffère-t-il d’une réponse automatique par mots-clés classique ?
+
+La « Réponse directe par mot-clé » n’est qu’un mode de réponse fixe parmi les [Règles de réponse](/fr/guide/response/reply-rules) : les messages concernés ne passent pas par l’IA. Les autres messages sont rédigés par l’IA à partir des instructions personnalisées de la « Personnalité de base » et des contenus de la base de connaissances ; pour les questions sans réponse, les conversations de groupe et les formulations à risque, d’autres règles déterminent ce qu’elle dit, et quand elle s’abstient.
+
+### Par quoi commencer pour que l’IA prenne en charge les clients au plus vite ?
+
+Le chemin le plus court : « Connecter l’assistant → Configurer les règles d'utilisation → Mettre en place la base de connaissances ». Connectez d’abord un compte de canal principal, définissez clairement comment l’assistant répond et quand il s’abstient, puis ajoutez une première série de FAQ ou de contenus produit. La procédure complète est décrite dans [Prise en main en 30 minutes](/fr/quick-start/quick-start).
+
+### Que faire si l’IA se trompe ou ne sait pas répondre ?
+
+Dans [Données détaillées](/fr/guide/dashboard/data-export), ouvrez un message individuel pour consulter ses « Connaissances de référence » et ses « Étapes d'exécution », et déterminer s’il manque des connaissances ou si une règle est imprécise. Ajoutez les connaissances manquantes dans [Optimisation des connaissances](/fr/guide/knowledge/optimization) (les questions restées sans réponse de l’IA ou du superviseur arrivent dans « Besoins de réponse ») ; pour les formulations et les limites, ajustez les [Règles de réponse](/fr/guide/response/reply-rules) ou les [Garde-fous de sécurité](/fr/guide/response/safety-guardrails).
+
+### Comment suspendre les réponses automatiques de l’IA ?
+
+Dans [Connexion aux canaux](/fr/guide/assistant/login-online), faites passer le statut de la fenêtre concernée sur « Suspendu » : l’IA suspend ses réponses automatiques. Repassez sur « En service » pour les rétablir. La mise à jour du statut prend effet au bout d’environ 10 secondes.
+
+### Pourquoi certaines entrées sont-elles invisibles depuis mon compte ?
+
+Certaines entrées s’affichent selon vos droits : [Utilisation de l’IA](/fr/guide/dashboard/ai-usage) est réservée aux administrateurs de département ; [Examen des conversations](/fr/guide/dashboard/conversation-review) est réservé au service Mercado Libre et aux administrateurs de la plateforme. Si une page affiche « Accès refusé », votre compte n’a pas les droits nécessaires — contactez un administrateur.

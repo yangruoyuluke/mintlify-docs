@@ -1,0 +1,207 @@
+---
+title: API リファレンス
+description: MarsMind の対話機能を自社システムに接続するための、リクエストパラメータ、認証方式、4つの対話シナリオ、呼び出し例をまとめます。
+keywords:
+  - API連携
+  - リクエストパラメータ
+  - 認証
+  - 対話シナリオ
+  - メッセージ配信
+---
+
+このページは、自社システムをすでにお持ちの連携担当者向けです。MarsMind の管理画面を経由せず、API を直接呼び出してメッセージを MarsMind に渡します。決められた形式でリクエストを組み立てると、MarsMind は `event_type` に応じて処理結果を返すか、auto_dialog シナリオでは指定した `send_url` へメッセージを自動送信します。MarsMind の管理画面と標準のチャット窓口だけを利用する場合は、ここから始める必要はありません。
+
+## このページが必要なとき
+
+- 自社のアプリ、サポートシステム、メッセージチャネルがあり、標準のチャット窓口だけでなく MarsMind の対話機能を組み込みたい。
+- 自社システムから呼び出した時点で、あるメッセージに対する AI の処理結果をリアルタイムに取得したい。
+- コマンドでメッセージ処理を制御したい。たとえば特定シナリオの自動返信を停止する場合。
+
+## 連携前の準備
+
+このページに対応する管理画面のメニューはありません。リクエストは自社システムから送信するもので、セルフサービスでの申請もできません。呼び出しの前に、次の4つを準備してください。本番エンドポイント、client と secret、署名アルゴリズムの説明は MarsMind から提供されます（[sales@marsmind.co](mailto:sales@marsmind.co) までお問い合わせください）。連携するシナリオ（event_type）は業務に合わせて選択します：
+
+1. **本番エンドポイント**：例に登場する `{本番エンドポイント}` が実際の接続先ドメインです。本ページでは固定値を記載しません。
+2. **認証情報**：`client`（業務識別子）と `secret`。
+3. **署名アルゴリズム**：`signature` の計算方法は MarsMind が提供する連携資料に準拠します。本ページでは詳しく扱いません。
+4. **シナリオの確認**：auto_dialog、assist_dialog、website_dialog、cmd_dialog の4つから1つを選びます。パラメータ要件と応答の動作はそれぞれ異なります。「対話シナリオの説明」を参照してください。
+
+判断の目安：本番エンドポイント、client、secret、署名アルゴリズムの説明がそろっており、`event_type` も決まっていること。
+
+## 認証について
+
+すべてのリクエストに `client`、`signature`、`timestamp` の3つのフィールドが必須です。いずれか1つでも欠かせません。`signature` のアルゴリズムは [sales@marsmind.co](mailto:sales@marsmind.co) までお問い合わせください。各フィールドの型と説明は、下記「リクエストパラメータ」の「リクエストボディ」表を参照してください。
+
+この3つのフィールドに加えて、リクエストボディにはメッセージ内容を格納する `message_info` オブジェクトも必ず含めます。
+
+## リクエストパラメータ
+
+### リクエストボディ
+
+| パラメータ | 型 | 必須 | 説明 |
+| --- | --- | --- | --- |
+| client | string | はい | 業務識別子。値は MarsMind に確認してください |
+| signature | string | はい | リクエスト署名。アルゴリズムは sales@marsmind.co までお問い合わせください |
+| timestamp | int | はい | タイムスタンプ（Unix 秒） |
+| message_info | object | はい | メッセージの詳細。下記のフィールド定義を参照 |
+
+### `message_info` のフィールド
+
+| フィールド | 型 | 必須 | 説明 |
+| --- | --- | --- | --- |
+| msg_id | string | いいえ（assist_dialog では必須） | 一意のメッセージ ID。assist_dialog シナリオでは必須 |
+| group_id | string | シナリオによる | グループチャット ID。from_user_id と group_id がどちらも空の場合はエラー400 |
+| group_name | string | いいえ | グループチャット名 |
+| from_user_id | string | はい | 送信者 ID |
+| from_user_nickname | string | いいえ | 送信者のニックネーム |
+| to_user_id | string | いいえ | 受信者 ID |
+| to_user_nickname | string | いいえ | 受信者のニックネーム |
+| at_list | string[] | いいえ | メンション対象のユーザー ID リスト（auto_dialog のみ対応） |
+| content | string | content と files_info のいずれか一方が必須 | メッセージのテキスト内容 |
+| message_type | int | はい | 1 = 通常メッセージ、2 = 引用メッセージ |
+| event_type | string | はい | auto_dialog \| assist_dialog \| website_dialog \| cmd_dialog |
+| from_user_type | int | auto_dialog では必須 | 1 = ボット連携アカウント、2 = 顧客、3 = 有人オペレーター、4 = ボットのメッセージ |
+| create_timestamp | int | はい | メッセージの作成日時（Unix タイムスタンプ） |
+| files_info | File[] | content と files_info のいずれか一方が必須 | 添付ファイルのリスト。下表を参照 |
+| quote | object | message_type = 2 の場合必須 | 引用メッセージのオブジェクト。msg_id と message_type を含める必要があります |
+
+#### `files_info` の構造
+
+| フィールド | 型 | 必須 | 説明 |
+| --- | --- | --- | --- |
+| content | string（URL / base64） | はい | ファイルの URL または base64 データ |
+| file_type | "image" / "document" / "voice" | はい | ファイルの種類 |
+
+## 対話シナリオの説明
+
+### auto_dialog（自動対話）
+
+- `event_type = auto_dialog`
+- `send_url` を指定すると、以降のメッセージ送信は MarsMind が自動制御します
+- テキスト、画像、ファイルに対応（1回のリクエストにつき1種類のみ）
+
+`from_user_type` の指定目安：
+
+- 連携済みの対象：AI アシスタント自身のメッセージを除き、すべて1を指定します
+- 未連携の対象：社外の顧客は2、自社の担当者は3を指定します
+
+### assist_dialog（アシスト対話）
+
+- メッセージの処理結果をリアルタイムに返します
+- `msg_id` は必須です
+- パラメータが特定の auto_dialog メッセージと一致する場合、そのメッセージのコンテキストを再利用します
+
+### website_dialog（ウェブ対話）
+
+- 結果を即時に返し、コンテキストに追加します
+- `send_url` には対応していません
+
+### cmd_dialog（コマンド制御）
+
+- `content` に具体的なコマンドを指定します。現在対応しているものは次のとおりです：
+  - `stop_auto_reply`：自動返信を停止します（auto_dialog シナリオでのみ有効）
+
+## 呼び出し手順
+
+<Steps>
+  <Step title="本番エンドポイントと認証情報を取得する">
+    [sales@marsmind.co](mailto:sales@marsmind.co) までお問い合わせのうえ、本番エンドポイント、client、secret、signature アルゴリズムの説明を取得します。この手順が完了するまでは、例に記載されたアドレスやプレースホルダーの値を実際の呼び出しに使用しないでください。
+
+    判断の目安：本番エンドポイントのドメイン、client、secret、署名アルゴリズムの説明という4つが手元にあること。
+  </Step>
+
+  <Step title="シナリオを選び、message_info を組み立てる">
+    まず `event_type` を決め、上のフィールド表に沿って各項目を組み立てます。特に漏れやすいのは次の4点です：
+
+    - `content` と `files_info` のうち少なくとも一方を指定する
+    - `message_type` が 2（引用メッセージ）の場合は `quote` が必須で、`quote` に `msg_id` と `message_type` を含める
+    - `from_user_id` と `group_id` を同時に空にしない（どちらも空だとエラー400になります）
+    - auto_dialog シナリオでは `from_user_type` も指定する
+
+    判断の目安：フィールド表と照らし合わせて必須項目、とりわけ上記の4点を確認します。
+  </Step>
+
+  <Step title="リクエストを送信する">
+    リクエスト先は「本番エンドポイント + /custom-im/chat-messages」です。POST で送信し、`Content-Type: application/json` を指定します。例の `{本番エンドポイント}` は取得したドメインに置き換えてください。client、signature、メッセージ ID などはすべてプレースホルダーです：
+
+    ```bash
+    curl -X POST "https://{本番エンドポイント}/custom-im/chat-messages" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "client": "test",
+      "signature": "d97b383a532466b6c6c451e76a2ab57b",
+      "timestamp": 1748584621,
+      "message_info": {
+        "content": "",
+        "message_type": 1,
+        "group_id": "98765@chatroom",
+        "event_type": "auto_dialog",
+        "from_user_id": "aa123",
+        "from_user_type": 2,
+        "msg_id": "9005",
+        "create_timestamp": 1748584621,
+        "files_info": [
+          { "content": "https://example.com/img.png", "file_type": "image" }
+        ]
+      }
+    }'
+    ```
+
+    判断の目安：assist_dialog と website_dialog は、応答でこのメッセージの処理結果をリアルタイムに返します。auto_dialog はリクエストが受け付けられると、MarsMind が `send_url` に従って自動送信するため、送信 API を手動で呼び出す必要はありません。
+  </Step>
+
+  <Step title="管理画面で処理状況を確認する（任意）">
+    メッセージがシステムに取り込まれたら、管理画面の[明細データ](/jp/guide/dashboard/data-export)で今回の処理を確認できます。タブを「チャットデータ詳細」（AI と顧客の会話のみ）に切り替え、「集計ウィンドウ」と期間で絞り込み、「ユーザー問い合わせ」をクリックして「メッセージ処理チェーン」を開きます。「実行ステップ」「参照知識（N）」の2つのタブで順に照合してください。実行ステップは「当時の会話コンテキスト → グループチャットの処理 → 返信判定 → スキル呼び出し → ナレッジ生成 → 安全ガードレール」の順に表示されます。パネル上部の「返信の生成」「顧客への配信」「ガードレールによるブロック」の3つの証跡は独立して表示され、記録が取得できない項目は「不明」と表示されます。
+
+    注意：絞り込みを変更した後は、「検索」をクリックしないと結果が更新されません。
+
+    判断の目安：今回の呼び出しに対応するメッセージを特定でき、チェーンのどのステップまで進んだかを確認できます。ステップが欠けている場合は「実行ステップ」に直接表示されるため、どこで止まっているかを判断できます。
+  </Step>
+</Steps>
+
+## チェックポイント
+
+- assist_dialog、website_dialog：応答でこのメッセージの処理結果が返ります。
+- auto_dialog：`send_url` に MarsMind から送信されたメッセージが届いていれば、自動送信の経路は機能しています。
+- コンテキストの再利用：assist_dialog のパラメータが特定の auto_dialog メッセージと一致する場合、処理はゼロからではなく、そのコンテキストを引き継ぎます。
+- コマンド制御：cmd_dialog で `stop_auto_reply` を送信すると、対応する自動返信が停止します。
+- パラメータが受け付けられている：400が返らない（`from_user_id` と `group_id` が同時に空の場合、400になります）。
+
+## 注意事項
+
+<Warning>
+本番エンドポイント、client、secret、署名アルゴリズムはすべて MarsMind から提供されるもので、外部には公開されていません。[sales@marsmind.co](mailto:sales@marsmind.co) までお問い合わせください。認証情報は機密情報です。フロントエンドのコード、クライアントアプリ、公開リポジトリに記載せず、サーバー側でのみ保存・使用してください。
+</Warning>
+
+<Info>
+4つのシナリオの役割分担（送信を担うのはどれか、呼び出し時に結果をリアルタイムに返すのはどれか）は、上記の「対話シナリオの説明」と下記の「よくある質問」を参照してください。
+</Info>
+
+<Tip>
+assist_dialog で特定のメッセージのコンテキストを再利用したい場合は、パラメータをその auto_dialog メッセージと一致させるだけです。
+</Tip>
+
+## よくある質問
+
+### どの event_type を使えばよいですか？
+
+- MarsMind に送信ロジックを自動制御させたい（返信内容や送信タイミングを MarsMind が判断）→ auto_dialog。`send_url` の指定が必要です。
+- 呼び出し時にこのメッセージの処理結果を取得したい → assist_dialog（`msg_id` が必須）。
+- ウェブでの対話 → website_dialog（結果を即時に返してコンテキストに追加。`send_url` には対応していません）。
+- コマンドを送信したい → cmd_dialog。`content` にコマンド自体を指定します。
+
+### 本番エンドポイントと client、secret はどこで申請しますか？
+
+セルフサービスでの申請はできません。API のアドレス、認証情報、署名アルゴリズムはすべて MarsMind から提供されます。[sales@marsmind.co](mailto:sales@marsmind.co) までお問い合わせください。取得するまでは、例に記載された `{本番エンドポイント}`、`client: "test"`、例の署名を実際の呼び出しに使用しないでください。
+
+### リクエストで400が返るのはなぜですか？
+
+まず次の3点を確認してください。`from_user_id` と `group_id` が同時に空になっていないか（どちらも空だと400になります）。`content` と `files_info` のうち少なくとも一方を指定しているか。`message_type` が 2 の場合に `quote`（`msg_id` と `message_type` を含む）を指定しているか。修正後、もう一度リクエストを送信してください。
+
+### auto_dialog と assist_dialog の違いは何ですか？
+
+auto_dialog は MarsMind が送信ロジックを自動制御し、指定した `send_url` から送信します。テキスト、画像、ファイルに対応（1回のリクエストにつき1種類のみ）。assist_dialog は呼び出し時に処理結果をリアルタイムに返し、パラメータが特定の auto_dialog メッセージと一致する場合はそのコンテキストを再利用します。`msg_id` は必須です。「自動で送信」なら前者、「その場で結果を確認」なら後者を選びます。
+
+### メッセージが実際に処理されたかを確認するには？
+
+呼び出し側では応答と `send_url` を確認します。システム側で管理画面から確認する方法は、「呼び出し手順」のステップ4を参照してください。

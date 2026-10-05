@@ -1,0 +1,160 @@
+---
+title: Connexion aux canaux
+description: Connectez des comptes WeChat, WeCom, mini-programme, compte officiel et lien de site Web en tant que « fenêtres de conversation », et gérez le statut en ligne de chaque assistant.
+keywords:
+  - connexion aux canaux
+  - fenêtre de conversation
+  - connexion de canal
+  - connexion par code QR
+  - statut en ligne
+  - mise hors ligne
+---
+
+« Connexion aux canaux » permet de connecter les comptes de vos canaux en tant que « fenêtres de conversation » et de gérer le statut en ligne de chaque fenêtre. Commencez par y effectuer la connexion ou l’autorisation : ce n’est qu’ensuite que vous pourrez la sélectionner dans « Fenêtre de conversation gérée actuellement », à gauche, pour la configurer depuis les autres pages.
+
+## Quand en avez-vous besoin ?
+
+- Première connexion d’un canal : connectez un compte WeChat, WeCom, mini-programme ou compte officiel à MarsMind, ou créez un canal « Lien du site Web ».
+- Un assistant apparaît avec le statut « Hors ligne », ou un changement de statut vous demande de rescanner le code QR pour vous connecter.
+- Suspension temporaire du service : passez la fenêtre sur « Suspendu », ou choisissez « Mettre hors ligne » pour l’arrêter complètement.
+- Vous avez besoin du lien d’accès ou du code iframe du canal « Lien du site Web », ou vous souhaitez supprimer une fenêtre de conversation devenue inutile.
+
+## Comment y accéder ?
+
+Menu de gauche → Mon assistant → Connexion aux canaux (le fil d’Ariane en haut de page affiche « Mon assistant → Connexion aux canaux »). En haut de la page, le filtre de statut « En ligne et en pause / Afficher tout » se trouve à gauche, et le bouton « Créer un nouveau canal de communication » à droite.
+
+<Frame>
+  ![Page Connexion aux canaux : en haut, le filtre « En ligne et en pause / Afficher tout » et le bouton « Créer un nouveau canal de communication » ; en dessous, la liste des fenêtres de conversation sous forme de cartes, chacune affichant son nom, son canal, sa pastille de statut et le menu « ⋯ »](/images/fr/guide/assistant/login-online/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Ouvrir la fenêtre de création et choisir un canal">
+    Cliquez sur « Créer un nouveau canal de communication » en haut à droite. Dans la fenêtre, choisissez d’abord un canal, puis connectez ou autorisez le compte. Cinq canaux sont proposés :
+
+    - WeChat : connexion en scannant le code QR avec votre téléphone.
+    - WeCom : connexion en scannant le code QR avec votre téléphone.
+    - Lien du site Web : génère un lien de conversation partageable.
+    - Mini-programme : l’administrateur scanne le code QR pour autoriser l’accès.
+    - Compte officiel : l’administrateur scanne le code QR pour autoriser l’accès.
+
+    Les canaux qui ne font pas partie de ces cinq catégories ne peuvent pas être créés en libre-service : la fenêtre affiche en bas « Pour les autres canaux, veuillez contacter les ventes ».
+
+    Critère : une fois le canal sélectionné, sa carte affiche une coche et le bouton du bas change selon le canal — « Suivant: Scanner pour se connecter » pour WeChat et WeCom, « Créer un lien de chat » pour « Lien du site Web », « Suivant: Autoriser » pour « Mini-programme » et « Compte officiel ».
+
+    <Frame>
+      ![La fenêtre « Créer une fenêtre de conversation » : la zone « Sélectionner le canal » liste les cinq options WeChat, WeCom, Lien du site Web, Mini-programme et Compte officiel](/images/fr/guide/assistant/login-online/02-create-window.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="WeChat / WeCom : choisir la région de connexion, puis scanner le code QR">
+    Après avoir sélectionné « WeChat », le champ « Ville de connexion » apparaît : ouvrez-le et choisissez d’abord la province, puis la ville. Pour « WeCom », seul le champ « Province de connexion » est demandé. Cliquez ensuite sur « Suivant: Scanner pour se connecter ».
+
+    La fenêtre « Scanner le code QR » affiche le code QR : scannez-le avec votre téléphone et suivez les instructions affichées sur le téléphone pour confirmer. La fenêtre affiche successivement « En attente du scan » puis « En attente de confirmation... » ; ne la fermez pas pendant l’opération, certaines connexions demandant plus de 30 secondes.
+
+    - Avec WeCom, la fenêtre affiche parfois « Connexion sans scan en cours… » ou demande un code de vérification à 6 chiffres : saisissez-le dans la fenêtre, puis cliquez sur « Confirmer ».
+    - En cas d’échec, la fenêtre affiche « La connexion par code QR n’est pas terminée » : cliquez sur « Régénérer le code QR » pour réessayer, ou sur « Annuler » pour quitter.
+
+    Critère : le message « Connexion réussie » apparaît, la fenêtre du code QR se ferme, puis la fenêtre « Compte IA connecté » s’ouvre immédiatement (voir l’étape suivante).
+
+    <Frame>
+      ![Fenêtre de création après sélection du canal (ici « WeCom », avec le champ « Province de connexion » ; pour WeChat, il s’agit de « Ville de connexion »), le bouton en bas affichant « Suivant: Scanner pour se connecter »](/images/fr/guide/assistant/login-online/03-select-channel.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Lier l’identité dans « Compte IA connecté »">
+    Cette étape ne concerne que WeChat et WeCom : elle associe l’identité du superviseur au compte qui vient d’être connecté, afin que l’IA sache qui est le superviseur.
+
+    La fenêtre affiche un code d’autorisation commençant par #. Cliquez sur « Copier le code d'autorisation » (le bouton devient alors « Copié — prêt à envoyer »), puis demandez au superviseur d’envoyer ce message directement au compte IA qui vient d’être connecté, depuis son propre téléphone. L’interface indique « Téléphone Leader » → « Nouveau compte IA connecté » ; après l’envoi, l’IA reconnaîtra ce compte téléphonique comme celui du superviseur.
+
+    - Vous pouvez aussi fermer la fenêtre avec « Faites ceci plus tard » : le code d’autorisation reste consultable à tout moment dans [Autorisation des rôles auprès de l’IA](/fr/guide/account/ai-authorization).
+    - Si « Ce compte n'a pas encore de code d'autorisation Leader » s’affiche, cliquez sur « Générer un code » : les paramètres du compte s’ouvrent, par défaut sur l’onglet « Profil ». Basculez sur l’onglet « Autorisation des rôles auprès de l’IA », générez le code, puis envoyez-le comme à l’étape précédente.
+
+    Critère : le code d’autorisation a été copié et envoyé (le message « Code d'autorisation du leader copié » s’affiche).
+  </Step>
+
+  <Step title="Mini-programme / Compte officiel : autoriser par code QR">
+    Sélectionnez « Mini-programme » ou « Compte officiel », puis cliquez sur « Suivant: Autoriser » : la fenêtre « Autorisation Mini-programme » ou « Autorisation Compte officiel » affiche le code QR, vous invite à le scanner avec WeChat et précise que le système vérifiera automatiquement le statut de l’autorisation ; sous le code QR, « En attendant le scan... » s’affiche.
+
+    Scannez le code avec WeChat et terminez l’autorisation.
+
+    Critère : le message « Autorisation réussie » apparaît, puis la fenêtre « Connecté » s’ouvre (la connexion du canal est terminée) ; cliquez sur « Fermer » pour revenir à la liste.
+  </Step>
+
+  <Step title="Lien du site Web : nommer et créer le lien de conversation">
+    Sélectionnez « Lien du site Web », puis renseignez le « Nom du lien de discussion » :
+
+    - Seuls les lettres latines non accentuées, les chiffres et les traits de soulignement sont acceptés, et doivent comporter de 4 à 10 caractères ; les caractères non valides sont filtrés automatiquement.
+    - Si la règle n’est pas respectée, le champ devient rouge et affiche « Nom invalide : saisissez de 4 à 10 caractères composés uniquement de lettres latines non accentuées, de chiffres ou de traits de soulignement. » ; s’il est valide, « Le format de nom est valide » s’affiche et la section « Aperçu du lien » apparaît, ce qui vous permet de vérifier le lien définitif avant la création.
+
+    Cliquez sur « Créer un lien de chat ».
+
+    Critère : la fenêtre « Succès » s’affiche avec le message « Le canal URL a été créé. Vous pouvez copier le lien d'accès ou le code iframe. » ; vous pouvez cliquer directement sur « Copier le lien » ou « Copier le code », ou fermer la fenêtre et la rouvrir plus tard depuis la carte (voir la dernière étape).
+  </Step>
+
+  <Step title="Gérer le statut en ligne : En service / Suspendu / Hors ligne">
+    Sous chaque carte figurent une pastille de statut et une ligne d’explication. Deux statuts peuvent être basculés à tout moment :
+
+    - En service : l’IA applique les règles de réponse actuelles.
+    - Suspendu : les réponses automatiques sont interrompues.
+
+    Cliquez sur la pastille de statut, puis choisissez « En service » ou « Suspendu » dans le petit panneau qui s’affiche.
+
+    Pour mettre la fenêtre hors ligne, utilisez « ⋯ » en haut à droite de la carte, puis « Mettre hors ligne » ; la fenêtre de confirmation s’intitule « Mettre l’assistant hors ligne » et précise que la fenêtre cesse son service automatique jusqu’à sa remise en ligne. Après confirmation, la carte disparaît de la liste par défaut « En ligne et en pause » ; basculez sur « Afficher tout » pour la retrouver avec le statut « Hors ligne ».
+
+    Remise en ligne : basculez sur « Afficher tout », cliquez sur la pastille de statut de la carte et choisissez « En service ». Le système vérifie d’abord que le compte est en ligne ; s’il ne l’est pas, il affiche « Le compte est hors ligne. Veuillez scanner le code QR pour vous connecter à nouveau. » et ouvre la fenêtre de création (canal présélectionné et non modifiable) : refaites la connexion par code QR comme lors de la première connexion.
+
+    Critère : le message « État actualisé avec succès » suivi de « En raison du retard du système, l'état prendra effet dans environ 10 secondes » s’affiche ; la pastille prend immédiatement le statut cible, et le serveur l’applique après environ 10 secondes.
+  </Step>
+
+  <Step title="Copier le lien d’accès et supprimer une fenêtre de conversation">
+    - Canal « Lien du site Web » : cliquez sur le nom de la carte (une flèche figure à sa droite), ou passez par « ⋯ » → « Accès URL » pour rouvrir la fenêtre « Succès », puis cliquez sur « Copier le lien » ou « Copier le code » selon votre besoin.
+    - Supprimer une fenêtre : passez par « ⋯ » → « Supprimer le canal de communication », puis cliquez sur « Supprimer » dans la fenêtre de confirmation ; la carte est retirée de la liste et le message « Fenêtre de conversation supprimée » s’affiche.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La nouvelle fenêtre apparaît sous forme de carte dans la liste, avec son nom, son canal et sa pastille de statut correctement affichés.
+- Une connexion WeChat ou WeCom réussie par code QR affiche « Compte IA connecté » ; une autorisation réussie pour le Mini-programme ou le Compte officiel affiche « Connecté » ; la création réussie d’un Lien du site Web affiche « Succès ».
+- Après un changement de statut, la pastille affiche immédiatement le statut cible (le serveur l’applique après environ 10 secondes) ; après la mise hors ligne, la carte disparaît de la liste par défaut et réapparaît avec « Hors ligne » dans « Afficher tout ».
+- Le canal « Lien du site Web » permet de copier un lien d’accès commençant par `https://chat.marsmind.cc/` ainsi que le code iframe.
+
+<Warning>
+« Mettre hors ligne » arrête immédiatement le service automatique de cette fenêtre ; le service ne reprend qu’après la remise en ligne. Si le compte n’est pas en ligne, la remise en ligne nécessite de rescanner le code QR.
+</Warning>
+
+<Warning>
+« Supprimer le canal de communication » est irréversible. Après la suppression, vous devez recréer une fenêtre de conversation et refaire la connexion.
+</Warning>
+
+<Info>
+Les quatre statuts correspondent aux explications affichées sous la carte : « En service » — IA suit les règles de réponse actuelles ; « Suspendu » — les réponses automatiques sont interrompues ; « Hors ligne » — « Aller en ligne pour reprendre le service » ; « En attente » — « En attente de connexion ou d'autorisation ». Les cartes « En attente » n’ont pas de pastille de statut à basculer.
+</Info>
+
+<Info>
+La configuration de chaque fenêtre de conversation est indépendante. Une fois la fenêtre créée, sélectionnez-la d’abord dans « Fenêtre de conversation gérée actuellement », à gauche, puis configurez-la depuis des pages telles que [Personnalité de base](/fr/guide/assistant/persona), [Relations](/fr/guide/assistant/relationship-config) et [Règles de réponse](/fr/guide/response/reply-rules).
+</Info>
+
+## Questions fréquentes
+
+### Après le scan, la fenêtre reste bloquée sur « En attente du scan » ou « En attente de confirmation... » : que faire ?
+
+Vérifiez d’abord que toutes les confirmations ont été effectuées sur le téléphone (il faut parfois valider plusieurs fois). Avec WeCom, un code de vérification à 6 chiffres peut être demandé : un champ de saisie apparaît dans la fenêtre, renseignez-le puis cliquez sur « Confirmer ». Certaines connexions prennent plus de 30 secondes ; ne fermez pas la fenêtre pendant ce temps. Si rien ne se passe au bout d’un moment, cliquez sur « Régénérer le code QR » pour obtenir un nouveau code et réessayer — c’est aussi la solution lorsque la fenêtre affiche « La connexion par code QR n’est pas terminée ».
+
+### Pourquoi le message « Le compte est hors ligne. Veuillez scanner le code QR pour vous connecter à nouveau. » s’affiche-t-il quand je sélectionne « En service » ?
+
+Avant une remise en ligne, le système vérifie que le compte est en ligne. S’il ne l’est pas, il ne bascule pas directement le statut : il ouvre automatiquement la fenêtre de création (canal déjà sélectionné et non modifiable), et il suffit de refaire la connexion par code QR comme lors de la première connexion. Le passage à « Suspendu » effectue la même vérification et suit la même procédure de reconnexion si le compte n’est pas en ligne. Une mise hors ligne normale (« Mettre hors ligne ») n’est pas concernée par cette vérification.
+
+### Pourquoi une fenêtre de conversation n’apparaît-elle pas dans la liste ?
+
+Par défaut, le filtre « En ligne et en pause » n’affiche que les statuts « En service » et « Suspendu ». Les fenêtres « Hors ligne » et « En attente » nécessitent de passer à « Afficher tout » ; le texte affiché lorsque la liste est vide passe alors de « Pas encore de canaux de communication en ligne ou suspendus » à « Pas encore de canaux de communication ».
+
+### Que signifie « En attente » sur une carte ?
+
+Cela signifie que la connexion ou l’autorisation n’est pas encore terminée (l’explication affichée est « En attente de connexion ou d'autorisation »). Ces cartes n’ont pas de pastille de statut cliquable : commencez par terminer la connexion ou l’autorisation du côté du compte. Si rien ne change au bout d’un moment, vous pouvez supprimer la fenêtre et reprendre la procédure d’ajout depuis le début.
+
+### Où retrouver le lien d’accès et le code iframe du canal « Lien du site Web » ?
+
+Cliquez sur le nom de la carte (une flèche figure à sa droite), ou passez par « ⋯ » → « Accès URL » : la fenêtre « Succès » se rouvre avec « Copier le lien » et « Copier le code ».

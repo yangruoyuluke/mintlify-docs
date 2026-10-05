@@ -1,0 +1,129 @@
+---
+title: Service Time
+description: Set weekly and specific-date service hours for the Selected window, and choose which fixed UTC time zone all time slots follow.
+keywords:
+  - service time
+  - working hours
+  - weekly schedule
+  - specific date hours
+  - time zone
+---
+
+Service Time defines when the Selected window serves customers: the "Weekly schedule" on the left arranges slots from Monday to Sunday, "Time zone" on the right sets which fixed UTC offset those slots follow, and you can add "Specific date hours" separately for holidays or events. Settings are saved per Selected window, and changes only take effect after you click "Save working hours" at the bottom of the page.
+
+## When you'll need this
+
+- After you connect a new window, set the hours it serves customers.
+- You need to temporarily adjust the hours for a few days during a holiday or event.
+- Your customers or team are overseas, so you schedule by a specific UTC offset.
+- Replies look wrong, and you want to check whether the service hours are misconfigured first.
+
+## How to get there
+
+Left menu → Response Settings → Service Time.
+
+When the page opens, check the Selected window at the top of the left sidebar (below the logo) first: the weekly schedule, time zone, and specific dates are all saved per window, so switching windows shows a different set of settings. If no window is available, the page shows "No communication window is available"; click "Go to channel login" to connect one first (see [Channel Login](/en/guide/assistant/login-online)).
+
+<Frame>
+  ![Service Time page: "Selected window" at the top of the left sidebar; the main "Weekly schedule" card lists slots for Monday through Saturday (the "Add to multiple days" button below the table and the Sunday row after the bottom save bar are not captured in the screenshot); the "Time zone" and "Specific date hours" cards sit on the right, and "Save working hours" is at the bottom](/images/en/guide/response/working-hours/01-overview.jpg)
+</Frame>
+
+## Steps
+
+<Steps>
+  <Step title="Confirm the Selected window">
+    The weekly schedule, time zone, and specific dates are all saved per window. Before you continue, confirm that the Selected window at the top of the left sidebar (below the logo) is the window you want to schedule.
+
+    How to tell it worked: the window name matches the one you want to configure. If the page shows "Could not load settings for this window. Retry before editing or saving.", click "Retry" first, and do not edit until it loads successfully.
+  </Step>
+
+  <Step title="Set up the weekly schedule">
+    In the "Weekly schedule" card, click "Add to multiple days" (you can also click "Add Time Slot" next to a single day; days that are already set show an "Edit" button). The dialog description reads "Enter valid start and end times, or select All day. You can set up to three time slots." In the dialog:
+
+    1. Select weekdays: check Monday through Sunday one by one, or use "Select weekdays" (Monday–Friday) and "Select every day" (Monday–Sunday) for quick selection. When you edit a single day, the title reads "Edit Monday hours" and the weekday is fixed to that day.
+    2. Fill in the "Time Range": type the start and end times as plain text in HH:mm format, for example `09:00` and `18:00`. To cover the whole day, click "All day" to fill in `00:00`–`24:00` automatically. For more slots, click "Add Time Slot"; each day supports up to 3 slots.
+    3. Click "Apply to this page"; clicking "Cancel" discards this entry.
+
+    <Frame>
+      ![The "Edit Saturday hours" dialog: the red hint shown when Time Range is empty, plus "All day", "Add Time Slot", "Cancel", and "Apply to this page"](/images/en/guide/response/working-hours/02-add-time-slot.jpg)
+    </Frame>
+
+    How to tell it worked: the dialog closes, the matching row in the weekly table changes from "Not set" to the slots you entered, and the "N of 7 days configured" counter in the top-right corner of the card updates.
+
+    Note: this step only stages the changes on the page without submitting them — the status at the bottom of the page shows "Unsaved". Wait until you have made all your changes, then save them together. When you edit existing slots, the dialog also has "Clear this day" in the bottom-left corner to clear that day's slots in one go.
+  </Step>
+
+  <Step title="Choose the time zone">
+    In the "Time zone" card, choose a fixed UTC offset from the dropdown (17 offsets in total, for example UTC±0 and UTC+8). A window that has never been configured defaults to UTC+8.
+
+    How to tell it worked: the dropdown is set to the UTC offset you schedule by, and the hours you entered in the previous step are the times for that offset.
+
+    Note: "All time slots use the selected fixed UTC offset; daylight saving time is not applied automatically."
+  </Step>
+
+  <Step title="Add specific date hours (if needed)">
+    In the "Specific date hours" card, click "Add specific dates". In the dialog, select a date range — when it shows "Please select date range", open the calendar and pick the start and end dates in order (the desktop view shows two months at once). Then enter up to 3 time slots as in the weekly schedule and click "Apply to this page".
+
+    How to tell it worked: an entry in the format "2026/10/01 — 2026/10/07" appears in the card with its slots; when nothing is configured, the card shows "No specific date slots configured".
+
+    Note: you can add at most 3 specific dates; once they are full, the "Add specific dates" button no longer appears. The delete icon to the right of an entry removes just that entry.
+  </Step>
+
+  <Step title="Save all changes">
+    Once the weekly schedule, time zone, and specific dates all look right, click "Save working hours" at the bottom right of the page.
+
+    How to tell it worked: a "Save successful" message appears, the bottom status changes from "Unsaved" to "Saved", and the "Save working hours" button becomes disabled. Only now are your changes actually saved.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The Selected window on the left is the target window.
+- Every day you want to serve has slots, with no unexpected "Not set"; the "N of 7 days configured" counter in the top-right corner of the card matches what you expect.
+- "Time zone" is set to the target offset, and all slot values match that UTC offset.
+- Specific date entries (if any) number no more than 3, with the correct date ranges and slots.
+- After saving, the bottom status shows "Saved" and a "Save successful" message has appeared.
+
+## Important notes
+
+<Warning>
+None of the changes above take effect until you click "Save working hours". If you switch menus or windows midway, a "Discard unsaved changes?" prompt appears ("This page has unsaved changes. Leaving will discard them."): choosing "Discard changes" drops your edits, while "Keep editing" returns to the page. Refreshing or closing the tab triggers the browser's own leave confirmation, and leaving still discards unsaved changes. You cannot leave while a save is in progress — the page shows "Wait for the current save or upload to finish before leaving.".
+</Warning>
+
+<Warning>
+Overnight slots are not supported: the start time must be earlier than the end time (equal times also fail; the end time can be 24:00). To cover 22:00 to 02:00 the next day, split it into 22:00–24:00 on the first day, then edit the next day and add a 00:00–02:00 slot.
+</Warning>
+
+<Info>
+Times are plain text inputs, not a time picker: use the HH:mm format, with start times from 00:00 to 23:59 and end times up to 24:00. If the format or order is wrong, red text appears below the input (for example, "End time must be later than start time."), and "Apply to this page" cannot be clicked.
+</Info>
+
+<Info>
+Up to 3 slots per day and 3 specific date entries; slots in the same dialog cannot overlap with each other, and a slot that overlaps the existing configuration on the same weekday and time is rejected with "This time slot overlaps an existing slot for Monday. Adjust it and try again.".
+</Info>
+
+<Tip>
+Use "Add to multiple days" to set up Monday–Friday or the whole week in one pass, then fine-tune individual days with "Edit". When you edit a day, the dialog loads all the slots already set for that day.
+</Tip>
+
+## Frequently asked questions
+
+### I changed the hours, but they did not take effect. Why?
+
+Check the status at the bottom of the page first: "Unsaved" means the changes are still on the page and have not been submitted. Click "Save working hours" — they are only written when "Save successful" appears and the status changes to "Saved". If a "Discard unsaved changes?" prompt appeared while you were leaving and you chose "Discard changes", the changes were dropped, and you need to set them up again.
+
+### Why can't I click "Save working hours"?
+
+Common causes: 1) When the page has no new changes, the button is disabled by design (the status shows "Saved") — edit something first. 2) Red text appears at the top of the page: "A saved time range is invalid. Remove and re-enter it before saving; other settings will not be replaced automatically." — delete that invalid slot and re-enter it first. 3) The configuration is still "Loading configuration..." or "Saving..." — wait for it to finish.
+
+### I want 22:00 to 02:00 the next day. Why can't I enter it?
+
+Overnight slots are not supported. The start time must be earlier than the end time (equal times also fail; the end time can be 24:00). A slot crossing midnight must be split into two: 22:00–24:00 on the first day and 00:00–02:00 on the next.
+
+### Adding a slot shows "This time slot overlaps an existing slot for Monday". What should I do?
+
+Slots on the same weekday cannot overlap. Click "Edit" next to that day — the dialog loads all of that day's slots. Change them into non-overlapping ranges in that one dialog and click "Apply to this page"; remove extra slot rows with the delete button on the right.
+
+### My city is not in the time zone dropdown. Which option should I choose?
+
+The dropdown lists fixed UTC offsets only, with no city names (17 options, from UTC-10 to UTC+12). Check your region's offset from UTC and pick the matching option — for example, choose UTC+8 for Beijing time. The offset does not adjust automatically for daylight saving time, so if your region observes DST, come back and verify your slots before and after each change.

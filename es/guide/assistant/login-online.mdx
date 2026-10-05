@@ -1,0 +1,160 @@
+---
+title: "Inicio de sesión en canales"
+description: "Conecte WeChat, WeCom, enlaces de sitio web, miniprogramas y cuentas oficiales como ventanas de conversación, y gestione el estado en línea de cada asistente."
+keywords:
+  - "inicio de sesión en canales"
+  - "ventana de conversación"
+  - "conexión de canales"
+  - "inicio de sesión con código QR"
+  - "estado en línea"
+  - "desconectar"
+---
+
+«Inicio de sesión en canales» sirve para conectar cuentas de canal como ventanas de conversación y gestionar el estado en línea de cada ventana. Complete aquí el inicio de sesión o la autorización; solo entonces las demás páginas podrán seleccionarla en «Ventana de conversación actual», a la izquierda, para configurarla.
+
+## Cuándo la necesitará
+
+- Primera conexión de un canal: incorporar cuentas de WeChat, WeCom, miniprograma o cuenta oficial a MarsMind, o crear un canal de sitio web.
+- Cuando un asistente muestra «Sin conexión» o al cambiar su estado se le pide volver a escanear el código QR.
+- Para pausar el servicio temporalmente: cambiar la ventana a «Suspendido» o desconectarla por completo con «Desconectar».
+- Cuando necesita el enlace de acceso o el código iframe de un canal de sitio web, o quiere eliminar una ventana de conversación que ya no usa.
+
+## Ruta de acceso
+
+Menú de la izquierda → Mi asistente → Inicio de sesión en canales (la ruta de navegación de la barra superior muestra «Mi asistente → Inicio de sesión de canales»). En la parte superior de la página, a la izquierda está el filtro de estado «En línea y suspendidos / Mostrar todos» y, a la derecha, «Crear un nuevo canal de comunicación».
+
+<Frame>
+  ![Página completa de «Inicio de sesión en canales»: arriba, el filtro «En línea y suspendidos / Mostrar todos» y el botón «Crear un nuevo canal de comunicación»; abajo, la lista de tarjetas de ventanas de conversación, cada una con su nombre, canal, píldora de estado y menú «⋯»](/images/es/guide/assistant/login-online/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Abra la ventana de creación y elija un canal">
+    Haga clic en «Crear un nuevo canal de comunicación», en la esquina superior derecha. En la ventana emergente, elija primero el canal y luego complete el inicio de sesión o la autorización de la cuenta. Hay cinco canales disponibles:
+
+    - WeChat: inicie sesión escaneando el código QR con el teléfono.
+    - WeCom: inicie sesión escaneando el código QR con el teléfono.
+    - Sitio web: genere un enlace de chat que se puede compartir.
+    - Miniprograma: un administrador escanea el código QR para autorizar.
+    - Cuenta oficial: un administrador escanea el código QR para autorizar.
+
+    Los canales distintos de estos cinco no se pueden crear por cuenta propia; en la parte inferior de la ventana aparece «Para otros canales, por favor contacte con ventas».
+
+    Cómo verificarlo: la tarjeta del canal seleccionado muestra una marca de verificación y el botón inferior cambia según el canal: «Siguiente: escanear para iniciar sesión» para WeChat y WeCom, «Crear enlace de chat» para Sitio web y «Siguiente: Autorizar» para Miniprograma y Cuenta oficial.
+
+    <Frame>
+      ![Ventana «Crear una ventana de conversación»: el área «Seleccionar canal» lista las cinco opciones WeChat, WeCom, Sitio web, Miniprograma y Cuenta oficial](/images/es/guide/assistant/login-online/02-create-window.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="WeChat / WeCom: elija la región y escanee el código para iniciar sesión">
+    Al elegir «WeChat» aparece «Ciudad de inicio de sesión»: ábrala y seleccione primero la provincia y luego la ciudad. Para «WeCom» solo se elige «Provincia de inicio de sesión». Después, haga clic en «Siguiente: escanear para iniciar sesión».
+
+    En la ventana «Escanear código QR» se mostrará el código. Escanéelo con el teléfono y complete las confirmaciones que le pida el teléfono. La ventana irá mostrando «Esperando un escaneo» y «Esperando la confirmación...»; no la cierre durante el proceso, ya que algunos inicios de sesión tardan más de 30 segundos.
+
+    - WeCom a veces muestra «Iniciando sesión sin escanear…» o pide un código de verificación de 6 dígitos: introdúzcalo en la ventana y haga clic en «Confirmar».
+    - Si falla, la ventana muestra «No se completó el inicio de sesión mediante QR»; haga clic en «Regenerar código QR» para reintentarlo o en «Cancelar» para salir.
+
+    Cómo verificarlo: aparece «Sesión iniciada correctamente.», se cierra la ventana del código QR y, justo después, se abre la ventana «Cuenta de IA conectada» (vea el paso siguiente).
+
+    <Frame>
+      ![Ventana de creación con un canal ya seleccionado (en la imagen, WeCom, donde primero se elige «Provincia de inicio de sesión»; para WeChat es «Ciudad de inicio de sesión»); abajo, el botón «Siguiente: escanear para iniciar sesión»](/images/es/guide/assistant/login-online/03-select-channel.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Complete la vinculación de identidad en «Cuenta de IA conectada»">
+    Este paso solo se aplica a WeChat / WeCom: vincula la identidad del supervisor a la cuenta que acaba de iniciar sesión, para que la IA sepa quién es el supervisor.
+
+    La ventana muestra un código de autorización que empieza por #. Haga clic en «Copiar código de autorización» (el botón cambia entonces a «Copiado — listo para enviar») y pida al supervisor que envíe ese mensaje exacto desde su propio teléfono a la cuenta de IA que acaba de iniciar sesión. La interfaz lo indica como «Teléfono del supervisor» → «Cuenta de IA recién conectada»; una vez enviado, la IA reconocerá esa cuenta de teléfono como la del supervisor.
+
+    - También puede cerrar la ventana con «Hacerlo más tarde»: el código de autorización está disponible en cualquier momento en [Autorización de identidad de IA](/es/guide/account/ai-authorization).
+    - Si aparece «Esta cuenta todavía no tiene un código de autorización del supervisor», haga clic en «Generar un código» para abrir la configuración de la cuenta (se abre en la pestaña «Perfil» de forma predeterminada), cambie a la pestaña «Autorización de identidad de IA», genere el código y envíelo como se indica arriba.
+
+    Cómo verificarlo: el código de autorización se ha copiado y enviado (aparece «Se copió el código de autorización del supervisor»).
+  </Step>
+
+  <Step title="Miniprograma / Cuenta oficial: escanee para autorizar">
+    Elija «Miniprograma» o «Cuenta oficial» y haga clic en «Siguiente: Autorizar». Aparece un código QR de autorización con el título «Autorización Miniprograma» o «Autorización Cuenta oficial», y la indicación de escanearlo con WeChat, junto con el aviso de que el sistema comprobará el estado de la autorización automáticamente. Debajo del código se muestra «Esperando a escanear...».
+
+    Escanee el código con WeChat y complete la autorización.
+
+    Cómo verificarlo: aparece «Autorización exitosa» y se abre la ventana «Sesión iniciada» (que indica que el canal ya completó el inicio de sesión). Haga clic en «Cerrar» para volver a la lista.
+  </Step>
+
+  <Step title="Sitio web: asigne un nombre y cree el enlace de chat">
+    Elija «Sitio web» y complete «Nombre del enlace de chat»:
+
+    - Solo se admiten letras, números y guiones bajos, con una longitud de 4 a 10 caracteres; los caracteres no válidos se filtran al escribirlos.
+    - Si no cumple las reglas, el campo se marca en rojo y muestra «Formato de nombre no válido. Introduzca entre 4 y 10 letras, números o guiones bajos.»; cuando es válido, aparece «El formato de nombre es válido» junto con el «Enlace de vista previa», para confirmar el enlace final antes de crearlo.
+
+    Haga clic en «Crear enlace de chat».
+
+    Cómo verificarlo: aparece la ventana «Correcto», con la descripción «Se ha creado el canal URL. Puede copiar el enlace de acceso o el código iframe.»; puede usar «Copiar enlace» o «Código» directamente, o pulsar «Cerrar» y volver a abrirla desde la tarjeta cuando quiera (vea el último paso).
+  </Step>
+
+  <Step title="Gestione el estado en línea: En funcionamiento / Suspendido / Desconectar">
+    Cada tarjeta muestra debajo una píldora de estado y una línea de descripción. Hay dos estados que se pueden cambiar en cualquier momento:
+
+    - En funcionamiento: la IA sigue las reglas actuales.
+    - Suspendido: la IA pausa las respuestas automáticas.
+
+    Haga clic en la píldora de estado y elija «En funcionamiento» o «Suspendido» en el panel que se abre.
+
+    Para desconectar una ventana, use «⋯» → «Desconectar», en la esquina superior derecha de la tarjeta. El cuadro de confirmación se titula «Desconectar el asistente» y avisa de que el servicio automático de esa ventana se detiene hasta que se vuelva a conectar. Al confirmar, la tarjeta desaparece de la lista predeterminada «En línea y suspendidos»; cambie a «Mostrar todos» para verla con el estado «Sin conexión».
+
+    Para volver a conectarla: cambie a «Mostrar todos», haga clic en la píldora de estado de la tarjeta y elija «En funcionamiento». El sistema comprueba primero si la cuenta está en línea; si no lo está, muestra «La cuenta está desconectada. Vuelva a escanear el código QR para iniciar sesión.» y abre la ventana de creación (con el canal ya preseleccionado y no modificable); escanee el código QR de nuevo siguiendo el flujo del primer inicio de sesión.
+
+    Cómo verificarlo: aparece el aviso «Estado actualizado con éxito. Debido a la demora del sistema, el estado entrará en vigor en aproximadamente 10 segundos». Después de ese aviso, la píldora muestra de inmediato el estado de destino; el cambio se aplica en el servidor unos 10 segundos más tarde.
+  </Step>
+
+  <Step title="Copie el enlace de acceso y elimine ventanas de conversación">
+    - Canal de sitio web: haga clic en el nombre de la tarjeta (tiene una flecha a la derecha del nombre) o en «⋯» → «URL de acceso» para volver a abrir la ventana «Correcto» y usar «Copiar enlace» o «Código» según necesite.
+    - Eliminar una ventana: haga clic en «⋯» → «Eliminar el canal de comunicación» y luego en «Eliminar» en el cuadro de confirmación. La tarjeta desaparece de la lista y aparece el aviso «Canal de comunicación eliminado».
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La nueva ventana aparece en la lista como una tarjeta, con el nombre, el canal y la píldora de estado correctos.
+- Un escaneo correcto de WeChat / WeCom muestra «Cuenta de IA conectada»; una autorización correcta de Miniprograma / Cuenta oficial muestra «Sesión iniciada»; la creación correcta de un sitio web muestra «Correcto».
+- Tras cambiar el estado, la píldora muestra de inmediato el estado de destino (el servidor lo aplica unos 10 segundos después); tras desconectar, la tarjeta desaparece de la lista predeterminada y en «Mostrar todos» aparece «Sin conexión».
+- En el canal de sitio web puede copiar un enlace de acceso que empieza por `https://chat.marsmind.cc/` y su código iframe.
+
+<Warning>
+«Desconectar» detiene de inmediato el servicio automático de esa ventana; solo se reanuda cuando se vuelve a conectar. Si la cuenta no está en línea, para reconectarla tendrá que escanear el código QR e iniciar sesión de nuevo.
+</Warning>
+
+<Warning>
+«Eliminar el canal de comunicación» no se puede deshacer. Una vez eliminado, solo puede crear una ventana nueva y completar el inicio de sesión otra vez.
+</Warning>
+
+<Info>
+Los cuatro estados coinciden con las descripciones que aparecen debajo de cada tarjeta: En funcionamiento — la IA sigue las reglas de respuesta actuales; Suspendido — se detienen las respuestas automáticas; Sin conexión — el servicio se reanuda al volver a conectar; Pendiente — esperando a completar el inicio de sesión o la autorización. Las tarjetas en estado Pendiente no tienen una píldora de estado conmutable.
+</Info>
+
+<Info>
+La configuración de cada ventana de conversación es independiente. Una vez creada, selecciónela primero en «Ventana de conversación actual», a la izquierda, y luego configúrela en páginas como [Perfil base](/es/guide/assistant/persona), [Relaciones](/es/guide/assistant/relationship-config) y [Reglas de respuesta](/es/guide/response/reply-rules).
+</Info>
+
+## Preguntas frecuentes
+
+### Tras escanear, la ventana se queda en «Esperando un escaneo» o «Esperando la confirmación...». ¿Qué hago?
+
+Compruebe primero que completó todas las confirmaciones en el teléfono (a veces hay que pulsar «Aceptar» más de una vez). WeCom puede pedir un código de verificación de 6 dígitos: en la ventana aparecerá un campo; introdúzcalo y pulse «Confirmar». Algunos inicios de sesión tardan más de 30 segundos, así que no cierre la ventana; si no hay reacción durante mucho tiempo, pulse «Regenerar código QR» para obtener uno nuevo y reintentarlo, y haga lo mismo cuando la ventana muestre «No se completó el inicio de sesión mediante QR».
+
+### Al hacer clic en «En funcionamiento» aparece «La cuenta está desconectada. Vuelva a escanear el código QR para iniciar sesión.». ¿A qué se debe?
+
+Antes de volver a conectar una ventana, el sistema comprueba si la cuenta está en línea; si no lo está, no cambia el estado directamente, sino que abre la ventana «Crear una ventana de conversación» con el canal ya seleccionado y bloqueado; escanee el código QR de nuevo siguiendo el flujo del primer inicio de sesión. Cambiar a «Suspendido» también comprueba primero si la cuenta está en línea y, si no lo está, pasa por el mismo proceso de reescaneo. Una desconexión normal («Desconectar») no se ve afectada por esta comprobación.
+
+### ¿Por qué no encuentro una ventana de conversación en la lista?
+
+El filtro predeterminado «En línea y suspendidos» solo muestra las ventanas «En funcionamiento» y «Suspendido». Las ventanas «Sin conexión» y «Pendiente» requieren cambiar a «Mostrar todos»; al cambiar, el texto del estado vacío también pasa de «Todavía no hay canales en línea ni suspendidos.» a «Todavía no hay canales de comunicación.».
+
+### ¿Qué significa «Pendiente» en una tarjeta?
+
+Indica que el inicio de sesión o la autorización aún no han terminado (la descripción del estado es «Esperando la entrada o autorización»). Estas tarjetas no tienen una píldora de estado en la que se pueda hacer clic; deje que la cuenta complete el inicio de sesión o la autorización. Si no cambia durante mucho tiempo, puede eliminar la ventana y repetir el proceso de conexión.
+
+### ¿Dónde encuentro el enlace de acceso y el código iframe del canal de sitio web?
+
+Haga clic en el nombre de la tarjeta (tiene una flecha a la derecha del nombre) o use «⋯» → «URL de acceso» para volver a abrir la ventana «Correcto», que contiene «Copiar enlace» y «Código».

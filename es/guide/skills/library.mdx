@@ -1,0 +1,159 @@
+---
+title: Biblioteca de habilidades
+description: "Defina cómo debe actuar la IA ante un tipo de tarea: cree o desactive habilidades, indique en qué conversaciones se aplican y qué herramientas deben usar, y compruebe que la habilidad está activa."
+keywords:
+  - biblioteca de habilidades
+  - añadir habilidad
+  - cómo debe actuar la IA
+  - modo de selección de herramientas
+  - habilidades integradas
+---
+
+La «Biblioteca de habilidades» sirve para indicarle a la IA «cómo actuar ante un tipo de tarea»: redacte el procedimiento como una habilidad con pasos, indique en qué conversaciones se aplica y qué herramientas puede invocar. La «Base de conocimientos» resuelve lo que la IA «sabe»; la biblioteca de habilidades, «cómo lo hace».
+
+## Cuándo la necesitará
+
+- La IA conoce la respuesta, pero sigue un orden equivocado —no vuelve a preguntar lo que debería ni consulta las herramientas que debería—; si usted quiere fijar este tipo de tareas en un procedimiento estable, cree una habilidad con pasos.
+- Quiere convertir en un procedimiento reutilizable el modo de tratar una categoría de preguntas (por ejemplo, «recomendación de productos para comercio electrónico» o «gestión de objeciones de posventa») para que la IA ejecute siempre los mismos pasos en el mismo orden.
+- Necesita limitar el alcance de una habilidad o sus herramientas: usarla solo en conversaciones de clientes o solo en conversaciones de supervisor, o indicar qué herramientas puede invocar.
+- Quiere dejar de usar una habilidad por un tiempo: apague su interruptor en la lista y observe el resultado, sin necesidad de eliminarla.
+
+## Ruta de acceso
+
+Menú izquierdo → Biblioteca de habilidades. Es una entrada independiente del menú izquierdo, no está dentro del grupo «Base de conocimientos»; el título de la página es «Biblioteca de habilidades» y la descripción, «Gestione las habilidades que usa la IA para atender las consultas de los clientes.».
+
+La «Biblioteca de habilidades» no depende de la «Ventana de conversación actual»: al cambiar la «Ventana de conversación actual» de la izquierda, la lista de habilidades de esta página no cambia.
+
+<Frame>
+  ![Página de lista «Biblioteca de habilidades»: arriba, el campo «Buscar habilidades» y el botón «Añadir habilidad»; debajo, la tabla lista las habilidades por «Nombre de la habilidad», «Cuándo utilizarlo», «Estado» y «Acciones», y cada fila tiene el interruptor de estado y sus acciones](/images/es/guide/skills/library/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Localice la habilidad en la lista y confirme «Activo / Inactivo»">
+    Escriba una palabra clave en «Buscar habilidades»; la lista se filtra al momento por el nombre de la habilidad y por el contenido de «Cuándo utilizarlo», sin necesidad de pulsar ningún botón. En la lista, las habilidades personalizadas van primero y las integradas, después.
+
+    La columna «Estado» es un interruptor con una etiqueta de estado: encendido indica «Activo» y apagado, «Inactivo». Al pulsar el interruptor se envía de inmediato, sin confirmación; si falla, aparece «No se pudo cambiar el estado. Inténtelo de nuevo.» y el interruptor vuelve a su estado anterior.
+
+    - Las habilidades integradas llevan la insignia «Habilidad integrada» y su columna «Acciones» solo tiene «Ver».
+    - Las habilidades personalizadas muestran el menú «⋯» en «Acciones», con «Ver», «Editar» y «Eliminar».
+
+    Cómo comprobarlo: el interruptor coincide con la etiqueta «Activo / Inactivo» y la habilidad que quiere ajustar ya aparece localizada.
+
+    Nota: si la búsqueda no encuentra nada, aparece «No se encontraron habilidades. Pruebe otra palabra clave.»; si la lista está vacía, aparece «Todavía no hay habilidades. Añada una para empezar.».
+  </Step>
+
+  <Step title="Pulse «Añadir habilidad» y rellene «Nombre de la habilidad» y «Cuándo utilizarlo»">
+    Pulse «Añadir habilidad» en la esquina superior derecha para entrar en la página de edición; al editar una habilidad existente, el título es «Editar habilidad · nombre de la habilidad».
+
+    - Nombre de la habilidad: obligatorio. Use un nombre breve que diga lo que hace, por ejemplo «Gestión de objeciones de posventa». Si lo deja vacío y pulsa crear, aparece «Introduzca el nombre de la habilidad.».
+    - Cuándo utilizarlo: describa qué preguntarán los clientes y qué resuelve la habilidad. La IA se basa en este texto para decidir cuándo usarla.
+
+    Cómo comprobarlo: los dos campos tienen contenido y el botón de la esquina superior derecha muestra «Crear habilidad» («Guardar los cambios» si está editando).
+
+    <Frame>
+      ![Página de edición «Añadir habilidad»: el formulario incluye campos como «Nombre de la habilidad», «Cuándo utilizarlo», «Cómo debe actuar la IA» y «Tipos de conversación»; arriba a la derecha está el botón «Crear habilidad»](/images/es/guide/skills/library/02-add-skill.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Redacte «Cómo debe actuar la IA»">
+    Escriba los pasos en orden: qué comprobar primero, cómo repreguntar si falta información, qué consultar cuando se necesita una búsqueda, cómo responder al final y qué hacer si la consulta falla. Cuando se activa la habilidad, la IA sigue estos pasos; también puede indicar las herramientas que debe invocar y qué hacer si fallan.
+
+    - Si el área de edición está vacía, debajo aparece el botón «Insertar esquema»; púlselo para rellenar la plantilla de cinco pasos (Primera comprobación → Si falta información → Cuando se necesita una búsqueda → Al responder al cliente → Si la búsqueda falla). Modificar la plantilla es más rápido que empezar en blanco.
+    - Al escribir / se abre la lista de herramientas relacionadas; la herramienta que seleccione se inserta en este procedimiento como una etiqueta.
+
+    Cómo comprobarlo: el procedimiento tiene un orden claro y acciones para cada caso, no es una sola frase de resumen.
+  </Step>
+
+  <Step title="Elija «Tipos de conversación» y «Herramientas para usar»">
+    «Tipos de conversación» tiene tres opciones:
+
+    - Conversaciones de supervisor: la IA puede usar esta habilidad al consultar un problema con el supervisor, informarle de los avances o pedirle ayuda.
+    - Conversaciones de clientes: la IA puede usar esta habilidad al responder a los clientes, dar seguimiento a sus consultas o tramitar sus solicitudes.
+    - Ambos: la IA puede usar esta habilidad tanto en conversaciones con supervisores como con clientes.
+
+    «Herramientas para usar» está contraída por defecto; pulse el título para desplegarla. Al crear una habilidad se selecciona «Asignar herramientas automáticamente» por defecto, pero puede cambiar a «Elija las herramientas manualmente»:
+
+    - Asignar herramientas automáticamente: el sistema asigna herramientas a la habilidad según su contenido después de crearla.
+    - Elija las herramientas manualmente: marque herramientas por categoría; despliegue una categoría para marcarlas una a una, o marque la categoría entera para seleccionarlas todas. Si guarda sin seleccionar ninguna, la habilidad no tendrá herramientas vinculadas.
+
+    Cómo comprobarlo: el tipo de conversación corresponde al ámbito en el que realmente la usa; si eligió la selección manual, las herramientas que necesita están marcadas y, al contraer el panel, el resumen muestra «Selección manual; despliegue para ajustarla».
+
+    Nota: «Modo de selección de herramientas» solo se puede elegir al crear la habilidad. Al editar una existente, aquí se muestran directamente las casillas de herramientas; si desmarca todas y guarda, la habilidad dejará de tener herramientas vinculadas.
+  </Step>
+
+  <Step title="Guarde y verifique">
+    Pulse «Crear habilidad» en la esquina superior derecha («Guardar los cambios» si está editando). Cuando termine, aparece «Guardado con éxito» y la página vuelve a la lista.
+
+    Cómo comprobarlo: la habilidad aparece en la lista con el estado «Activo» —las habilidades nuevas se activan por defecto—; si no quiere usarla todavía, vuelva a la lista y apague el interruptor.
+
+    Nota: si aparece «Se guardó el contenido de la habilidad, pero no se completó la configuración posterior. Inténtelo de nuevo aquí.», el contenido de la habilidad ya se guardó y solo quedó pendiente la activación o el vínculo de herramientas. Quédese en esta página, donde el botón ya muestra «Guardar los cambios», y púlselo otra vez para reintentar; no se creará una habilidad duplicada.
+  </Step>
+
+  <Step title="Consulte, edite y elimine">
+    Pulse el nombre de la habilidad o «Ver» para entrar en la página de detalle: el contenido se muestra en dos secciones, «Cuándo utilizarlo» y «Cómo debe actuar la IA», con las insignias «Habilidad integrada / Habilidad personalizada» y «Activo / Inactivo» en la parte superior; en la esquina superior izquierda puede pulsar «Volver a la biblioteca de habilidades».
+
+    - Editar: para una habilidad personalizada, pulse «Editar» en la esquina superior derecha de la página de detalle, o elija «Editar» en el menú «⋯» de la lista; al terminar, pulse «Guardar los cambios».
+    - Habilidades integradas: el contenido no se puede modificar; la página de detalle indica «El contenido de las habilidades integradas no se puede editar. Puede activarlas o desactivarlas en la lista.» y no ofrece ninguna opción de edición ni de eliminación.
+    - Eliminar: para una habilidad personalizada, elija «Eliminar» en el menú «⋯»; el cuadro de confirmación «¿Seguro que desea eliminar esta habilidad?» muestra el nombre de la habilidad y, al confirmar, se elimina de inmediato.
+
+    Cómo comprobarlo: las dos secciones de la página de detalle coinciden con lo que escribió; tras eliminarla, la habilidad ya no aparece en la lista.
+
+    Nota: la eliminación no se puede deshacer. Si hay cambios sin guardar, al pulsar «Volver a la biblioteca de habilidades» o cambiar de menú aparece «¿Descartar los cambios sin guardar?»; elija «Seguir editando» para quedarse en la página.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- El estado de la habilidad objetivo en la lista es «Activo», y el interruptor coincide con la etiqueta.
+- Tras crearla o modificarla apareció «Guardado con éxito», y el contenido de la lista y de la página de detalle coincide con lo que escribió.
+- «Cuándo utilizarlo» describe el escenario que la activa y «Tipos de conversación» cubre el escenario en el que realmente la usará.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Eliminar una habilidad personalizada no se puede deshacer: se borra de inmediato al confirmar y no se puede recuperar. Si solo quiere dejar de usarla por un tiempo, apague primero el interruptor («Inactivo») para conservar la configuración.
+</Warning>
+
+<Warning>
+Si al editar una habilidad desmarca todas las herramientas y guarda, la habilidad dejará de tener herramientas vinculadas (la interfaz avisa: «Si desmarca todas las herramientas y guarda los cambios, esta habilidad no tendrá herramientas vinculadas.»). Si solo quiere cambiar de herramientas, desmarque las que ya no necesita, marque las que usará y guarde.
+</Warning>
+
+<Info>
+Las habilidades y los conocimientos cumplen funciones distintas: la «Base de conocimientos» ([Generación de conocimientos](/es/guide/knowledge/generation), [Optimización de conocimientos](/es/guide/knowledge/optimization), [Gestión de conocimientos](/es/guide/knowledge/management)) resuelve lo que la IA «sabe»; la «Biblioteca de habilidades» resuelve «cómo lo hace»: ante una misma pregunta, el conocimiento aporta la respuesta y la habilidad decide los pasos y las herramientas que se invocan.
+</Info>
+
+<Info>
+En la lista, las habilidades con la insignia «Habilidad integrada» son las que proporciona el sistema: su contenido es de solo lectura y puede activarlas o desactivarlas; las que no llevan insignia son habilidades personalizadas, que puede editar y eliminar.
+</Info>
+
+<Tip>
+Si no sabe cómo redactarla, consulte primero varias habilidades integradas con «Ver» y fíjese en cómo escriben «Cuándo utilizarlo» y «Cómo debe actuar la IA».
+</Tip>
+
+<Tip>
+Para confirmar si una habilidad se invoca de verdad, abra la consulta correspondiente en [Revisión detallada](/es/guide/dashboard/data-export) y consulte «Habilidades invocadas» en «Cadena de procesamiento de mensajes → Pasos de ejecución»: muestra el nombre de la habilidad cuando se invoca y «Ninguno» cuando no.
+</Tip>
+
+## Preguntas frecuentes
+
+### La IA no usa la habilidad que configuré. ¿Qué debo comprobar primero?
+
+Compruebe en orden: si el estado en la lista es «Activo» (interruptor encendido); si «Cuándo utilizarlo» explica con claridad qué preguntarán los clientes y qué resuelve la habilidad —la IA decide con este texto si la usa—; si «Tipos de conversación» cubre el escenario actual (una habilidad configurada solo para «Conversaciones de supervisor» no se invoca en conversaciones de clientes); y, en los escenarios que necesitan herramientas, si ya hay herramientas vinculadas. Si todo está correcto, vaya a «Pasos de ejecución → Habilidades invocadas» en [Revisión detallada](/es/guide/dashboard/data-export) para confirmar si en esa ronda se invocó o no.
+
+### Al editar una habilidad no encuentro «Asignar herramientas automáticamente / Elija las herramientas manualmente». ¿Por qué?
+
+«Modo de selección de herramientas» solo se puede elegir al crear la habilidad. Al editar una existente, despliegue «Herramientas para usar» y ajuste directamente las casillas; si desmarca todas y guarda, la habilidad dejará de tener herramientas vinculadas.
+
+### ¿Por qué no puedo modificar una habilidad integrada?
+
+El contenido de las habilidades integradas lo proporciona el sistema y no se puede modificar; puede activarlas o desactivarlas en la lista. Si necesita un procedimiento distinto, pulse «Añadir habilidad» y redacte una habilidad personalizada.
+
+### ¿Qué significa «Se guardó el contenido de la habilidad, pero no se completó la configuración posterior. Inténtelo de nuevo aquí.»?
+
+El contenido de la habilidad ya se guardó, pero la activación o el vínculo de herramientas no se completó. Quédese en esta página: el botón de la esquina superior derecha ahora muestra «Guardar los cambios»; púlselo otra vez para reintentar. No se creará una habilidad duplicada.
+
+### ¿Se puede recuperar una habilidad eliminada?
+
+No; la eliminación no se puede deshacer. Si solo quiere dejar de usarla por un tiempo, apague el interruptor para conservar la configuración.

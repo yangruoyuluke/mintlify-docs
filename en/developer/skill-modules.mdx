@@ -1,0 +1,193 @@
+---
+title: Skill Modules
+description: The AI assistant's capabilities fall into eight skill modules. This page helps you tell which capability a problem belongs to, which admin page configures it, and how to confirm it is actually in effect.
+keywords:
+  - skill modules
+  - capability modules
+  - skills library
+  - linked tools
+  - built-in skills
+---
+
+"Skill Modules" group the work the AI assistant can take on into eight categories. This page does not repeat the steps on each configuration page; it helps you with three things: telling which capability a problem belongs to, finding the admin page to configure it on, and confirming that it is in effect. You do not need to enable all eight at once — start with the category that directly affects customers.
+
+## When you'll need this
+
+- You have just finished [Channel Login](/en/guide/assistant/login-online) and are not sure which part to configure first.
+- The AI does not behave as expected (it cannot hold a conversation, replies at random in group chats, or answers on its own when it should hand off to a human), and you want to identify which capability is misconfigured.
+- You are handing over the admin console or training someone: you need to explain where each capability is maintained.
+- You are assessing the current setup: checking which capabilities are already enabled and which are still missing.
+
+## How to get there
+
+This page itself has no settings; the entry points for the eight modules are listed one by one below. There are two ways in:
+
+- See which skills the AI currently has: Left menu → Skills Library. Skills with a "Built-in skill" badge are provided by the system; those without are custom skills. The "Active / Inactive" toggle decides whether a skill is used.
+- Find a page by problem: match it against "The eight capability modules" below and follow the listed path. For example, to change how the AI speaks, go to Left menu → My Assistant → Base Persona.
+
+Most admin pages require you to select a "Selected window" in the sidebar first. When no window is available, the page shows an empty state and points you to [Channel Login](/en/guide/assistant/login-online) to connect a channel. The Skills Library is not saved per window: switching windows leaves the skill list unchanged. For the overall layout, see [Admin Console Tour](/en/guide/interface-tour).
+
+## The eight capability modules
+
+### 1. Human-like replies
+
+Get the AI to reply with near-human tone and pacing. Tone, wording, and context are all defined in [Base Persona](/en/guide/assistant/persona):
+
+- "AI Style" offers two options — Detailed and polite or Flexible and concise — and saves as soon as you select one.
+- "Custom Instructions" define the AI's identity, service scope, and reply principles; after saving, you still need to confirm the runtime side has applied them.
+- "Context Settings" let you check context items to inject into replies, such as the conversation scenario and user profile; after you edit and save the main prompt, the system may update these checkboxes automatically.
+- When a message must go out exactly as written, use "Keyword Direct Reply" under [Reply Rules](/en/guide/response/reply-rules): a keyword match sends the fixed content directly without AI generation.
+
+The AI carries chat context into every turn it processes; to check it, open the processing chain in [Detail Review](/en/guide/dashboard/data-export) and look at "Conversation Context at That Time".
+
+### 2. Enterprise-grade Q&A
+
+Customers arrive from different channels, the AI answers from the knowledge base, and risky replies pass through safety guardrails before they are sent.
+
+- Channels: [Channel Login](/en/guide/assistant/login-online) supports WeChat, WeCom, website link, Mini Program, and Official Account. Each channel maps to one communication window.
+- Answer source: knowledge is maintained on three pages — [Knowledge Generation](/en/guide/knowledge/generation), [Knowledge Optimization](/en/guide/knowledge/optimization), and [Knowledge Management](/en/guide/knowledge/management).
+- Risk interception: [Safety Guardrails](/en/guide/response/safety-guardrails) evaluate replies before they are sent and block, pass, or notify a supervisor according to the rules.
+- First conversation with a new customer: [New Contact Setup](/en/guide/response/new-customer-reception) handles auto-accepting friend requests, new-contact welcome messages, and lead capture rules.
+- Verify citations: "Reference Knowledge" in Detail Review lists the knowledge actually linked to each turn.
+
+### 3. Rapid self-learning
+
+Both documents and unanswered questions can become knowledge; anything learned automatically goes through manual review before it enters the knowledge base.
+
+- Generate knowledge: in [Knowledge Generation](/en/guide/knowledge/generation), use Generate from Document, Generate from Webpage, or Add Ready Knowledge. Generating from documents opens a credits consumption confirmation before submission (100 credits per document); after submission, check progress under "Generation history" — "Processing complete" only means the task has finished, not that the knowledge is stored.
+- Review knowledge: under "Pending review" in [Knowledge Optimization](/en/guide/knowledge/optimization), accept or discard items one by one. The page notes: "Auto-learned knowledge requires manual review. Other pending items are approved automatically after 24 hours if untouched."
+- Fill in missing answers: "Needs answer" collects questions the AI did not answer, that were forwarded to a supervisor, and that the supervisor has not replied to; clicking "Confirm" requires you to enter the answer first.
+- Teach one item directly: type # in "Assistant Chat" in the top bar; "Single knowledge entry" is in the forced command list.
+- Check learning volume: "Learned Items" in [Performance](/en/guide/dashboard/business-performance) is the amount of knowledge the AI learned automatically from group chats or one-on-one chats.
+
+### 4. Human-AI collaboration
+
+First tell who is who, then decide which conversations the AI joins and when it brings in a person.
+
+- Identify contacts: [Relationships](/en/guide/assistant/relationship-config) sets each contact as Customer, Colleague, Muted, or Supervisor; the supervisor relationship is a prerequisite for delivering "Key Event Active Reporting". "Sync contacts" can run at most once a day.
+- Group chat decisions: "Smart Group Chat" in [Reply Rules](/en/guide/response/reply-rules) defines "Questions That Need Reply" and "Questions That Do Not Need Reply" separately; these rules only take effect in WeChat and WeCom channels.
+- Reports and reminders: "Key Event Active Reporting" in [Reply Rules](/en/guide/response/reply-rules), and the "Leader notification" setting in each [Safety Guardrails](/en/guide/response/safety-guardrails) rule.
+- Switches and takeover: the status pill in [Channel Login](/en/guide/assistant/login-online) switches between "Working" and "Suspended"; type # in "Assistant Chat" to see forced commands such as "Start work", "Pause work", "Enable group chat response", and "Disable group chat response".
+- Time boundaries: [Service Time](/en/guide/response/working-hours) defines the service hours the AI promises externally; click "Save working hours" after changes.
+
+### 5. Data analysis and reporting
+
+See reception performance and consumption in the admin console, and turn daily and weekly reports on with commands.
+
+- See performance: [Performance](/en/guide/dashboard/business-performance) (Core Metrics, trends, business intents, and message activity by time; Messages Received ⊇ Inquiries ⊇ Replies, and the three cannot be added together); [Detail Review](/en/guide/dashboard/data-export) (each inquiry and AI response, exportable); [AI Usage](/en/guide/dashboard/ai-usage) (remaining credits and monthly usage, visible only to department admins).
+- Check definitions: the "Metric Guide" in [Performance](/en/guide/dashboard/business-performance) collects the definition of each field — for example, "Suggestions" is the number of question summaries the AI forwarded to a supervisor.
+- Scheduled reports: type # in "Assistant Chat" to see "Enable daily report", "Disable daily report", "Enable weekly report", and "Disable weekly report"; type / for natural-language examples such as "Generate this week's work report" and "View last week's business performance".
+
+### 6. Smart suggestions and follow-up
+
+When the AI cannot answer or a human decision is needed, it forwards the question to a supervisor, and you fill in the answer or step in from the admin console.
+
+- Suggestions: "Suggestions" in [Performance](/en/guide/dashboard/business-performance) (defined in module 5) is the number of these question summaries forwarded to supervisors.
+- Needs answer: the "Needs answer" queue in [Knowledge Optimization](/en/guide/knowledge/optimization) (see module 3) collects exactly these questions.
+- Timely reminders: "Key Event Active Reporting" in [Reply Rules](/en/guide/response/reply-rules), and notifications when a [Safety Guardrails](/en/guide/response/safety-guardrails) rule matches.
+- Limit the skill scope: when creating a skill in the [Skills Library](/en/guide/skills/library), "Which conversations" offers "Supervisor conversations", used when the AI confirms issues with a supervisor, reports progress, or requests human help.
+
+### 7. Admin console
+
+The admin console groups dashboards, settings, and usage into five sections on the left; the help entry is "Help and guides" in the top bar. Different accounts see different entries.
+
+- Section structure: Data Dashboard / My Assistant / Response Settings / Knowledge Base / Skills Library; "Account settings" (Profile / Login security / AI identity access) is at the bottom left.
+- Permission differences: "AI Usage" is visible only to department admins; "Conversation Review" is visible only to department or platform admins in the Mercado business. If you cannot see an entry, it is usually a permission issue, not a broken page.
+- Usage monitoring: "Credit Overview" and "Monthly Usage" in [AI Usage](/en/guide/dashboard/ai-usage); the individual items cannot be added together to get the total usage.
+- Built-in help: the top bar has "Assistant Chat" and "Help and guides"; the 4 guide cards under "Help and guides" (Dashboard / Assistant Settings / Knowledge Base / Skills Library) highlight the corresponding entry points step by step on the page. On first sign-in, an "Initial Setup Wizard" also opens, guiding you through "Complete assistant login → Configure usage rules → Set up knowledge base"; choose "Later" if you do not want to do it now.
+
+### 8. Value-added skills
+
+When the standard capabilities are not enough, use skills and tools to connect your internal processes.
+
+- Write a skill: in the [Skills Library](/en/guide/skills/library), click "Add Skill" and fill in "When to use it" and "How AI should handle it"; when a task needs ordered troubleshooting or steps, write the steps into "How AI should handle it".
+- Connect tools: when creating a skill, choose "Match tools automatically" or "Choose tools manually" and check tools by category under "Tools to use"; after saving, the skill can call these tools.
+- Verify calls: in [Detail Review](/en/guide/dashboard/data-export), check "Execution Steps → Skill Invocation" to see which skill and tool were called this turn; when nothing was called, it shows "None".
+- Connect your own systems: for API integration, see [API Reference](/en/developer/api-reference).
+
+## Steps
+
+<Steps>
+  <Step title="Identify which module the problem belongs to">
+    Match the problem against the list above. For example: a customer asks several times and the AI never answers to the point — most likely module 2 (knowledge does not cover it) or module 1 (persona and reply logic do not meet expectations); the AI replies out of turn in group chats — most likely module 4 (relationships or Smart Group Chat).
+
+    How to tell it worked: you can name the page involved, instead of just feeling that "the AI is not working well".
+
+    If you are unsure, start with [Detail Review](/en/guide/dashboard/data-export): open an inquiry's "Message Processing Chain → Execution Steps" and work backward from stages such as "Reply Decision", "Skill Invocation", "Knowledge Generation", and "Safety Guardrail" to find where the problem started.
+  </Step>
+
+  <Step title="Configure on the right page and confirm the save status">
+    After opening the page, first confirm that the "Selected window" is the one you want to change. Switches (AI Style, Auto Accept Friend Request, skill status) save as soon as you click; text fields need "Save Configuration" or the save button at the bottom of the page (for example "Save working hours").
+
+    How to tell it worked: the page shows "Saved". If it shows "Saved · Runtime unconfirmed", the configuration was submitted but the runtime side has not confirmed applying it — do not draw conclusions yet.
+
+    Note: saving does not mean the AI follows it immediately — verify it in the next step instead of changing the same page over and over.
+  </Step>
+
+  <Step title="Verify the AI's actual behavior in Detail Review">
+    Left menu → Data Dashboard → Detail Review. Find a relevant inquiry and open it to view the "Message Processing Chain": under "Execution Steps", check whether "Reply Decision", "Skill Invocation", "Knowledge Generation", and "Safety Guardrail" ran as expected; under "Reference Knowledge", check which knowledge was cited.
+
+    How to tell it worked: the stage you configured has a matching record in the chain. "Unknown" means no record was retrieved; it does not mean the stage was not triggered — try a more recent inquiry.
+  </Step>
+
+  <Step title="Expand to the next module only after it is stable">
+    Change one capability at a time; watch the relevant metrics in [Performance](/en/guide/dashboard/business-performance) for a day or two for abnormal swings before touching the next one. Handle high-frequency, clear-cut problems first, then expand to complex processes.
+
+    How to tell it worked: Replies and Inquiry Rate have not dropped abnormally, and the team has not reported new wrong answers.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- Pages you changed show "Saved", and pages that need runtime confirmation no longer show "Runtime unconfirmed".
+- Send a message from a test account to a connected channel and receive a reply generated under the new configuration; when a reply is blocked, the "Safety Guardrail" row under "Execution Steps" in [Detail Review](/en/guide/dashboard/data-export) shows "Intercepted" (the "Guardrail" evidence bar at the top of the panel also shows "Intercepted").
+- In [Detail Review](/en/guide/dashboard/data-export), the "Execution Steps" of the relevant inquiry show the stage you configured (Skill Invocation / Knowledge Generation / Safety Guardrail), and "Reference Knowledge" includes the target knowledge.
+- On the metrics side: "Learned Items" and "Suggestions" in [Performance](/en/guide/dashboard/business-performance) show data, meaning automatic learning and forwarding to supervisors are actually happening.
+
+## Important notes
+
+<Warning>
+Most settings apply to the "Selected window" (the Skills Library is the exception). Before changing anything, check which window is selected in the sidebar — the wrong window applies the rules to another account.
+</Warning>
+
+<Warning>
+Deleting a communication window or a skill cannot be undone: it is deleted immediately on confirmation, with no way to recover. When you are not using one for now, do not delete it — a skill can be turned off ("Inactive") instead.
+</Warning>
+
+<Info>
+"Skill Modules" and the "Skills Library" are two different layers: Skill Modules classify capabilities (the eight categories on this page); the [Skills Library](/en/guide/skills/library) is the execution layer, where you write down how a type of task is processed and which tools can be called. You only need to create a skill there when the built-in behavior is not enough.
+</Info>
+
+<Info>
+A successful save does not mean the runtime side has applied it. The page shows "Saved · Runtime unconfirmed" with the hint "Configuration saved. Runtime application has not been confirmed." Whether it actually takes effect is judged by the real chain in [Detail Review](/en/guide/dashboard/data-export).
+</Info>
+
+<Tip>
+If you cannot find an entry, use "Help and guides" in the top bar: the 4 guide cards (Dashboard / Assistant Settings / Knowledge Base / Skills Library) highlight the corresponding entry points step by step on the page.
+</Tip>
+
+<Tip>
+The "Assistant Chat" conversation is not bound to the window selected on the page, so it cannot confirm that a window's configuration is in effect. It is for issuing commands (type # for forced commands, / for natural-language examples); change window-level settings on the relevant page and verify them in [Detail Review](/en/guide/dashboard/data-export).
+</Tip>
+
+## Frequently asked questions
+
+### The AI is not replying the way I configured it. What should I check first?
+
+Check in order: (1) whether the right "Selected window" is selected in the sidebar; (2) whether the page's save status is "Saved · Runtime unconfirmed" (wait for runtime confirmation before judging the effect); (3) whether [Safety Guardrails](/en/guide/response/safety-guardrails) blocked the reply; (4) whether the time ranges and time zone in [Service Time](/en/guide/response/working-hours) cover the current time; (5) whether this contact is set to "Muted" or misidentified as a colleague in [Relationships](/en/guide/assistant/relationship-config); (6) whether the skill is "Active". Finally, go to "Execution Steps" in [Detail Review](/en/guide/dashboard/data-export) to confirm which stages this turn actually went through.
+
+### Do I have to configure all eight modules before I can use it?
+
+No. Follow your own business order and start with a category that directly affects customers and is easy to verify (usually "Enterprise-grade Q&A" and "Human-like replies"); add one module at a time and verify each addition in Detail Review.
+
+### What is the relationship between "Skill Modules" and the "Skills Library"?
+
+Skill Modules are how AI capabilities are classified — they answer "what capabilities exist". The Skills Library is execution-layer configuration — it answers "how this type of task is processed and which tools can be called". Not every capability in the eight modules requires a skill: when the built-in behavior is enough, you do not need to touch the Skills Library at all.
+
+### What is the relationship between the commands in "Assistant Chat" and page settings? Why can't it verify them?
+
+The "Assistant Chat" conversation is not bound to the communication window selected on the page (the interface note reads: "This entry is not bound to the communication window selected on the page. It cannot confirm that window's configuration is in effect."). You can use it to issue forced commands (such as Enable daily report, Pause work, or Single knowledge entry), but whether a window's configuration is in effect depends on the relevant page and the real chain in [Detail Review](/en/guide/dashboard/data-export).
+
+### Why don't I see "AI Usage" or "Conversation Review" in my menu?
+
+Both pages have permission restrictions: "AI Usage" is visible only to department admins, and opening it directly as a non-admin shows "Access denied"; "Conversation Review" is visible only to department or platform admins in the Mercado business. If you do not see the entry, your account does not have the permission — it is not a broken page.

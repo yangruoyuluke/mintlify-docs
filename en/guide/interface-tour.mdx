@@ -1,0 +1,146 @@
+---
+title: Admin Console Tour
+description: First time in the admin console? Start here to see where the five left-menu modules, the window switcher, Account settings, Help Center, and Assistant Chat are — and when to use each.
+keywords:
+  - admin console
+  - interface tour
+  - left menu
+  - window switcher
+  - account settings
+  - help center
+---
+
+The MarsMind admin console is a workspace that manages multiple communication windows from one interface: the left menu organizes features into five modules, and most settings and data on a page follow the window selected in the sidebar. This page walks you through each area so you know where every entry point is and when you will need it.
+
+## When to use it
+
+- You just logged in for the first time and want to understand the layout and where to start configuring.
+- You know what you want to change but are not sure which module it is under.
+- You are onboarding a new colleague or taking over an account and need a quick pass through the interface structure.
+- A page shows Connect a window or empty content, and you want to check whether you selected the right window.
+
+## Where to find it
+
+After you log in, you land on Business Performance (left menu → Data Dashboard → Performance). Here is the full page:
+
+<Frame>
+  ![The full admin console page: from top to bottom on the left are the logo, the window switcher, five modules such as Data Dashboard, and Account settings at the bottom; on the right of the top bar are Assistant Chat and Help and guides; the content area shows Business Performance metric cards and a trend chart](/images/en/guide/interface-tour/01-overview.jpg)
+</Frame>
+
+The interface has three areas: the left menu (modules, window switcher, Account settings), the top bar (breadcrumb, Assistant Chat, Help and guides), and the content area (settings or data for the current page). Let's go through them area by area.
+
+<Steps>
+  <Step title="Tour the five modules in the left menu">
+    The left menu groups features into five modules. Select a module name with an arrow to expand its pages, then select a page to open it; Skills Library has no subpages — select it to open it directly.
+
+    | Module | Pages |
+    | --- | --- |
+    | Data Dashboard | [Performance](/en/guide/dashboard/business-performance), [Detail Review](/en/guide/dashboard/data-export), [AI Usage](/en/guide/dashboard/ai-usage), [Conversation Review](/en/guide/dashboard/conversation-review) |
+    | My Assistant | [Channel Login](/en/guide/assistant/login-online), [Base Persona](/en/guide/assistant/persona), [Relationships](/en/guide/assistant/relationship-config) |
+    | Response Settings | [Reply Rules](/en/guide/response/reply-rules), [Safety Guardrails](/en/guide/response/safety-guardrails), [New Contact Setup](/en/guide/response/new-customer-reception), [Service Time](/en/guide/response/working-hours) |
+    | Knowledge Base | [Knowledge Generation](/en/guide/knowledge/generation), [Knowledge Optimization](/en/guide/knowledge/optimization), [Knowledge Management](/en/guide/knowledge/management) |
+    | Skills Library | [Skills Library](/en/guide/skills/library) |
+
+    Remember them by purpose: check results in Data Dashboard; connect accounts and set up persona and relationships in My Assistant; define how the assistant replies in Response Settings; give it source material in Knowledge Base; teach it to handle tasks in Skills Library.
+
+    How to verify: when you open a page under a module, the breadcrumb in the top bar shows Module → Page, for example Data Dashboard → Business Performance. You can tell which module any setting belongs to.
+  </Step>
+
+  <Step title="Locate Account settings at the bottom left">
+    Account-related actions are collected in the Account settings dropdown at the bottom left: Profile, Login security, AI identity access, Language, and Logout.
+
+    - To view your Supervisor Authorization Code or Colleague Authorization Code, go to AI identity access.
+    - To change your admin login password, go to Login security.
+    - To change the interface language, use the Language submenu (five options: 中文, English, 日本語, Français, Español).
+    - To sign out of the current account, select Logout.
+
+    How to verify: the three account pages have horizontal tabs at the top (Profile / Login security / AI identity access), and opening any one lets you switch between them.
+
+    <Frame>
+      ![The Account settings dropdown at the bottom left, expanded: Profile, Login security, AI identity access, Language, and Logout](/images/en/guide/interface-tour/02-account-menu.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Set the Selected window with the window switcher">
+    The window switcher sits below the logo on the left. On the Performance and Detail Review pages it appears as Statistics window, where you can select All Windows to see all channels combined; on other pages it appears as Selected window. On the analytics pages, department admins can also switch Account first.
+
+    To do it: open the dropdown and select the channel account you want to manage.
+
+    How to verify: after you switch windows, the data and settings on the page follow the new window. Except on Performance and Detail Review, if no window exists, the switcher becomes a Connect a window button — select it to connect an account on Channel Login. Those two pages keep the Statistics window dropdown, with empty data.
+
+    <Frame>
+      ![The window switcher at the top of the sidebar, below the logo: labeled Statistics window, with the dropdown open to choose the communication window to manage](/images/en/guide/interface-tour/03-window-switcher.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Top bar Help and guides: select it when you are unsure">
+    The question-mark button on the right of the top bar (hover text: Help and guides) opens Help Center. It has four guide cards: Dashboard, Assistant Settings, Knowledge Base, and Skills Library. Select Start guide on any card and the system highlights the corresponding entry points on the page step by step; follow Previous and Next at the lower right of the popover to go through it, and the bottom of the popover shows Step X of Y.
+
+    How to verify: after one full walkthrough, you can point out where each module's entry sits in the menu.
+
+    <Frame>
+      ![The Help Center dialog: four guide cards — Dashboard, Assistant Settings, Knowledge Base, and Skills Library — with the Setup Wizard entry at the bottom](/images/en/guide/interface-tour/04-help-center.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Top bar Assistant Chat: look up admin information in a chat">
+    The Assistant Chat button on the right of the top bar opens the Admin assistant chat drawer from the right. Type your message in the input box and send it; type "/" to get natural-language suggestions (for example, "Please help me organize today's conversation records"), or type "#" to list forced commands (for example, `#work` to start work, `#stop` to pause work, and `#help` to view all commands). You can also select the paperclip icon to upload an image and send it with your message.
+
+    How to verify: after sending, your message and the AI reply appear in the chat; if sending fails, an error message appears (its text is whatever the server returns).
+
+    Note: It is not bound to the window selected on the current page, so you cannot use it to verify whether a communication window's configuration is in effect.
+
+    <Frame>
+      ![The Admin assistant chat drawer open: the scope note at the top, with the message input box, image attachment, and send button below](/images/en/guide/interface-tour/05-chat-drawer.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="First login: complete the Initial Setup Wizard">
+    When you log in for the first time with incomplete basic setup, the admin console opens the Initial Setup Wizard automatically and guides you through three steps: Complete assistant login → Configure usage rules → Set up knowledge base. Select the button for the current step — Complete assistant login, Configure usage rules, or Set up knowledge base — to jump straight to the corresponding page.
+
+    How to verify: when you finish, the wizard shows Initial setup completed. To look around first, select Later (no more prompts this session) or Do not show again (no automatic prompts in the future).
+
+    To reopen it: open Help and guides → Help Center and select Setup Wizard at the bottom.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- Using the left menu, you can describe what each of the five modules is for.
+- The window switcher shows the window you want to manage instead of Connect a window.
+- You can find Assistant Chat and Help and guides on the right of the top bar.
+- Account settings at the bottom left opens the three account pages, and you found where to change the language.
+
+<Warning>
+Selected window determines which account your changes apply to: Base Persona, Relationships, and Response Settings are all saved per window. After you switch windows, the page shows another window's settings; if you edit under the wrong window, you change a different account.
+</Warning>
+
+<Info>
+Some entries appear based on permissions: AI Usage is visible only to department admins, and Conversation Review is visible only to the Mercado team or platform admins. If an entry is missing from the menu, it is usually not a malfunction — contact your admin to confirm.
+</Info>
+
+<Tip>
+The button at the far left of the top bar collapses the left menu to free up space for the content area. Also, User Manual at the bottom of Help Center opens the online documentation site (the Chinese interface opens the Chinese version and the Japanese interface opens the Japanese version; other languages currently open the English version).
+</Tip>
+
+## FAQ
+
+### Can't find where a feature is?
+
+Sort it by module first: data lives in Data Dashboard; account connection and persona setup in My Assistant; reply logic in Response Settings; source material in Knowledge Base; and task flows in Skills Library. If you are sure it should be in the menu but cannot see it, it is most likely a permission: AI Usage is visible only to department admins, and Conversation Review is visible only to the Mercado team or platform admins.
+
+### The page is empty or shows Connect a window. What should I do?
+
+On configuration pages (Base Persona, Relationships, Reply Rules, and similar), it means no window is currently available to manage: the sidebar switcher becomes Connect a window, and the content area shows "No communication window is available" with a "Go to channel login" button. Select it to connect a channel account on Channel Login, then come back and continue. Pages such as Performance and Detail Review do not show these prompts.
+
+### Can Assistant Chat test how a specific window replies?
+
+No. It is not tied to the window selected on the page, so you cannot use it to confirm that a window's configuration is in effect. To verify the results, send messages through a real channel and observe the replies, or open Detail Review to check the Reference Knowledge and Execution Steps of real conversations.
+
+### Where do I change the interface language?
+
+Account settings at the bottom left → Language. Choose from 中文, English, 日本語, Français, and Español.
+
+### Can I reopen the Initial Setup Wizard after closing it?
+
+Yes. Open Help and guides → Help Center and select Setup Wizard at the bottom. Later applies only to the current session; Do not show again stops the wizard from opening automatically, but you can still open it manually from here.

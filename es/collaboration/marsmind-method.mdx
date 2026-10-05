@@ -1,0 +1,142 @@
+---
+title: "El método de trabajo de MarsMind"
+description: "Entrene a la IA como a una compañera digital de trabajo: defina primero los escenarios y los límites, entrénela con conversaciones reales, responda cuando le consulte y revise con regularidad, para que la calidad de la atención mejore ronda tras ronda."
+keywords:
+  - "método de trabajo"
+  - "compañera digital"
+  - "entrenamiento de la IA"
+  - "escenarios y límites"
+  - "conversaciones reales"
+  - "revisión periódica"
+---
+
+La IA de MarsMind es una compañera digital que viene a trabajar, pero no es una herramienta que mejore sola en cuanto la conecta: usted define qué atiende y qué no, la alimenta y la corrige con conversaciones reales, responde cuando le consulta y revisa los datos con regularidad para decidir qué enseñarle después. Esta página divide ese ciclo en cuatro etapas, cada una ligada a páginas concretas de la consola de administración. Para saber cómo darle órdenes en la conversación, vea [Trabaje codo a codo con la IA](/es/collaboration/basics); para el detalle de los comandos, [Colaboración avanzada y comandos](/es/collaboration/advanced).
+
+## Cuándo la necesitará
+
+- Acaba de conectar su primera ventana de conversación y quiere que la IA atienda a clientes reales cuanto antes, sin improvisar mientras aprende.
+- La IA lleva un tiempo en funcionamiento: algunas preguntas las responde bien y otras las falla una y otra vez; quiere saber por dónde empezar a corregir.
+- Va a ampliar la atención a más canales o más negocios y prefiere estabilizar la IA en un escenario antes de copiar la configuración.
+- Quiere un ritmo de mantenimiento diario: qué hacer en unos minutos cada día y cada semana.
+
+## Ruta de acceso
+
+Este método abarca varios módulos y se usa por etapas:
+
+- Definir escenarios y límites: menú de la izquierda → Mi asistente (Inicio de sesión en canales, Perfil base, Relaciones), Configuración de respuestas (Reglas de respuesta, Controles de seguridad, Configuración de nuevos contactos, Horario de atención).
+- Enseñarle conocimientos y habilidades: menú de la izquierda → Base de conocimientos (Generación de conocimientos, Optimización de conocimientos, Gestión de conocimientos), Biblioteca de habilidades.
+- Ver cómo trabaja: menú de la izquierda → Panel de datos → Rendimiento, Revisión detallada.
+- Conversar con ella y darle órdenes: barra superior a la derecha → «Chat del asistente».
+
+La configuración de Mi asistente y Configuración de respuestas sigue la «Ventana de conversación actual» de la izquierda: si se equivoca de ventana, estará modificando la configuración de otro canal.
+
+## Pasos
+
+<Steps>
+  <Step title="Defina primero los escenarios y los límites: alcance pequeño y líneas rojas claras">
+    Entrene un solo escenario a la vez: elija un canal (WeChat, WeCom, sitio web, miniprograma o cuenta oficial) y un tipo de negocio (por ejemplo, consultas de preventa); no ponga varias ventanas en funcionamiento a la vez.
+
+    1. Conecte una ventana: Mi asistente → [Inicio de sesión en canales](/es/guide/assistant/login-online) → «Crear un nuevo canal de comunicación», arriba a la derecha. Solo el estado «En funcionamiento» indica que está atendiendo; «Pendiente» significa que el inicio de sesión o la autorización aún no ha terminado.
+    2. Defina quién es y cómo habla: Mi asistente → [Perfil base](/es/guide/assistant/persona). En «Estilo de la IA», elija «Detallado y cortés» o «Flexible y conciso» (se guarda al seleccionarlo); en la «Instrucción principal» de «Instrucciones personalizadas», escriba la identidad de la IA, el alcance del servicio y los principios de respuesta, y pulse «Guardar configuración».
+    3. Decida qué hacer cuando no esté segura: Configuración de respuestas → [Reglas de respuesta](/es/guide/response/reply-rules). En «Respuesta cuando la IA no sabe qué contestar», escriba el texto de respaldo y pulse «Guardar texto de respuesta»; después active «Use una respuesta fija». En «Notificación activa de eventos clave», indique en qué situaciones debe informar al supervisor y en qué formato.
+    4. Decida dónde no debe hablar: en la misma página, escriba las reglas de «Chat grupal inteligente» en «Mensajes a los que debe responder la IA» y «Mensajes a los que no debe responder la IA» (solo se aplican en los canales de WeChat y WeCom); si también recibe solicitudes de amistad, configure en [Configuración de nuevos contactos](/es/guide/response/new-customer-reception) la aceptación automática, los mensajes de bienvenida y las reglas de captación de datos.
+    5. Defina las líneas rojas: Configuración de respuestas → [Controles de seguridad](/es/guide/response/safety-guardrails). Pulse «Añadir regla», elija «Coincidencia exacta de palabras clave» o «Evaluación semántica mediante el modelo» como método de detección, ajuste «¿Bloquear la respuesta?» y, si decide no bloquear, escriba el contenido que se enviará al cliente; cuando haga falta, ponga «Notificación del líder» en «Notificar líder».
+    6. Defina el horario que promete a los clientes: Configuración de respuestas → [Horario de atención](/es/guide/response/working-hours). Organice las franjas de la semana y pulse «Guardar horario de atención». El horario de servicio que comunique al exterior es el que se define aquí (se calcula con un desfase UTC fijo y no se ajusta automáticamente al horario de verano).
+
+    Cómo verificarlo: en Perfil base y Reglas de respuesta no queda ningún estado «Sin guardar» y ya se ha pulsado «Guardar horario de atención»; después, envíe por un canal real unos cuantos mensajes que cubran los tres casos —uno que pueda responder, otro que no y otro que pueda activar una línea roja—; todas las respuestas cumplen las reglas que definió.
+
+    Nota: los interruptores se guardan al instante; el contenido de texto requiere pulsar el botón de guardado. El método de detección de un control de seguridad no puede cambiarse después de crear la regla: para modificarlo hay que eliminarla y crearla de nuevo; solo se permite una regla de «Evaluación semántica mediante el modelo» por ventana. Cuando la IA empiece a funcionar, haga una prueba piloto a pequeña escala con conversaciones reales y amplíe el volumen de atención solo cuando los límites estén confirmados.
+  </Step>
+
+  <Step title="Entrene con conversaciones reales: resuelva un tipo de problema a la vez">
+    El material de entrenamiento viene de clientes reales, no de preguntas y respuestas imaginadas. Trabaje en este orden —primero vea cómo lo resolvió y después decida qué cambiar—:
+
+    1. Vea dónde se atasca: Panel de datos → [Revisión detallada](/es/guide/dashboard/data-export), filtre según necesite (hora, usuario o grupo, categoría de intención, etc.) y abra una consulta para ver su «Cadena de procesamiento de mensajes»: compruebe primero si los «Conocimientos de referencia» recuperaron algo relevante y después en qué paso se detuvieron los «Pasos de ejecución» (Contexto de la conversación en ese momento → Procesamiento de chat grupal → Decisión → Invocación de habilidades → Generación de conocimientos → Control de seguridad).
+    2. Añada conocimiento: Base de conocimientos → [Generación de conocimientos](/es/guide/knowledge/generation). «Generar a partir de documentos» sirve para subir material existente (hasta 100 MB por archivo; al enviar aparece «Confirmar el consumo de créditos», a 100 créditos por documento); «Generar a partir de páginas web» sirve para el sitio web y las páginas de ayuda; si ya tiene preguntas y respuestas redactadas, use «Añadir contenido de conocimiento listo para usar». Tras el envío, siga la tarea en «Historial de generación» y, cuando el procesamiento termine, pulse «Resultado» para continuar.
+    3. Gestione lo que aprendió y lo que no pudo responder: Base de conocimientos → [Optimización de conocimientos](/es/guide/knowledge/optimization). En «Pendiente de revisión», pulse «Aprobar» o «Descartar» en cada elemento; en «Pendiente de respuesta», rellene «Introduzca una respuesta lista para enviar a los clientes» y pulse «Confirmar» (esta vista no está habilitada en todos los entornos). Para las preguntas que se repiten, corrija directamente la respuesta y el grupo en «Preguntas frecuentes recientes» (si está habilitada).
+    4. Cambie cómo lo resuelve: para problemas de proceso (qué pasos seguir, qué herramientas usar), edite «Cuándo utilizarlo» y «Cómo debe actuar la IA» en la [Biblioteca de habilidades](/es/guide/skills/library); si una pregunta fija falla siempre, configure el contenido en «Respuesta directa por palabras clave» de Reglas de respuesta: al coincidir, se envía directamente y ya no pasa por la generación de la IA.
+    5. Corrija sus juicios: si confunde la identidad de una persona, vaya a [Relaciones](/es/guide/assistant/relationship-config); si juzga mal qué responder y qué callar, revise «Chat grupal inteligente» en Reglas de respuesta; si el tono o el trato no es el adecuado, vuelva a Perfil base y edite la «Instrucción principal».
+
+    Consejos para redactar: formule las preguntas tal como las haría un cliente de verdad y escriba las respuestas como mensajes que podría enviar directamente, no con el tono de un documento interno. Tampoco corrija con un simple «está mal» en la conversación: escriba la versión correcta en el conocimiento o en las reglas; solo así aprende de verdad.
+
+    Cómo verificarlo: repita la misma clase de pregunta con un mensaje real: la pregunta que antes no podía responder ya no se deriva a una persona; el conocimiento añadido aparece al buscarlo en [Gestión de conocimientos](/es/guide/knowledge/management); y el procesamiento de una respuesta se corresponde, en Revisión detallada, con sus «Conocimientos de referencia» o «Pasos de ejecución».
+
+    Nota: «Procesamiento completado» solo indica que la tarea terminó, no que el conocimiento ya esté guardado; lo que descarte no entra en la base de conocimientos y no hay opción de deshacer; «Respuesta directa por palabras clave» guarda sobrescribiendo todo el conjunto de reglas, y su orden es el orden de coincidencia.
+  </Step>
+
+  <Step title="Cuando no esté segura, consúltela: haga de «venir a preguntarle» una rutina">
+    Las preguntas de clientes que la IA no tiene claras se derivan al supervisor (esto es lo que contabilizan las «Sugerencias» en [Rendimiento del negocio](/es/guide/dashboard/business-performance)); según la configuración de «Notificación activa de eventos clave», también informa de forma proactiva.
+
+    1. Asegúrese primero de que alguien pueda recibirlas: abajo a la izquierda, «Configuración de la cuenta» → «[Autorización de identidad de IA](/es/guide/account/ai-authorization)» para generar el «Código de autorización de supervisor» (al copiarlo ya lleva el prefijo `#`); pida al supervisor que lo envíe a la cuenta de IA desde su propio teléfono. También puede configurar el destinatario como «Supervisor» en [Relaciones](/es/guide/assistant/relationship-config). A la vez, vuelva a Reglas de respuesta y confirme que «Notificación activa de eventos clave» está activada y guardada.
+    2. Responda en cuanto llegue una consulta: conteste directamente en la conversación o vaya a Base de conocimientos → Optimización de conocimientos → «Pendiente de respuesta», escriba la respuesta y pulse «Confirmar»: la respuesta se guarda como conocimiento y la próxima pregunta similar tendrá una base.
+    3. Las preguntas que nadie responde se acumulan en «Pendiente de respuesta»; vacíelas con regularidad y no deje que se apilen.
+
+    Cómo verificarlo: el supervisor recibe las consultas e informes de la IA; «Sugerencias» en «Rendimiento del negocio» muestra datos; y el contador de «Pendiente de respuesta» baja.
+
+    Nota: para recibir consultas, el destinatario debe ser «Supervisor» a los ojos de la IA: haber enviado el código de autorización de supervisor o estar marcado como «Supervisor» en Relaciones. En una misma cuenta de IA prevalece el último código recibido, y las identidades de supervisor y compañero se sustituyen entre sí.
+  </Step>
+
+  <Step title="Revise con regularidad: deje que los datos decidan qué enseñar después">
+    Una revisión no consiste en ver si los totales subieron, sino en encontrar lo siguiente que hay que enseñarle. Empiece con esta periodicidad y ajústela según su volumen de mensajes:
+
+    | Periodicidad | Qué revisar | Dónde |
+    | --- | --- | --- |
+    | Diaria | Vacíe «Pendiente de revisión» y «Pendiente de respuesta»; trate primero el conocimiento de origen «Aprendizaje automático» | Base de conocimientos → Optimización de conocimientos |
+    | Semanal | La evolución de las Métricas principales, las Sugerencias y los Conocimientos aprendidos; revise la cadena de procesamiento de algunas respuestas | Panel de datos → Rendimiento, Revisión detallada |
+    | Mensual | Los créditos restantes y el consumo mensual; actualice el perfil y las reglas cuando cambie el negocio | [Uso de IA](/es/guide/dashboard/ai-usage) (solo visible para administradores del departamento), Mi asistente, Configuración de respuestas |
+
+    Antes de leer «Rendimiento del negocio», aclare los dos criterios: las tarjetas de «Métricas principales» muestran un solo período seleccionado (un día, una semana o un mes), mientras que las tendencias, la evolución de las tasas, las Sugerencias y los Conocimientos aprendidos usan un rango de muestreo; los dos no se pueden comparar directamente. «Mensajes recibidos», «Consultas» y «Respuestas» se superponen, así que no se pueden sumar. Pulse «Guía métrica» cuando quiera para comprobar las definiciones.
+
+    Cuando la revisión llegue a una conclusión, vuelva a la etapa correspondiente: las preguntas que se derivan a menudo a una persona se añaden a la base de conocimientos o se fijan con «Respuesta directa por palabras clave»; las respuestas que cruzan una línea roja necesitan una regla de Controles de seguridad o un ajuste en Relaciones; si el tono no es el adecuado, edite la «Instrucción principal».
+
+    Cómo verificarlo: puede decir en qué tipo de preguntas se atascó más la IA esta semana y qué cambiará primero; el cambio se ha comprobado con un mensaje real; y en la próxima revisión mira el mismo gráfico para ver qué se movió.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Cada ventana en funcionamiento tiene límites claros: Perfil base y Reglas de respuesta guardados, el calendario semanal organizado y guardado, reglas de Controles de seguridad configuradas y todo verificado con mensajes reales.
+- En Revisión detallada puede rastrear hasta los «Conocimientos de referencia» y los «Pasos de ejecución» de las respuestas que revisó últimamente.
+- Optimización de conocimientos no acumula pendientes: «Pendiente de revisión» (sobre todo los elementos de origen «Aprendizaje automático») y «Pendiente de respuesta» están al día.
+- El supervisor recibe las consultas e informes de la IA; «Sugerencias» y «Conocimientos aprendidos» muestran datos en «Rendimiento del negocio».
+- Cada revisión termina con una conclusión concreta: qué enseñar en la próxima ronda.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+  Conozca las consecuencias antes de actuar: al pulsar «Descartar», el conocimiento no entra en la base y no hay opción de deshacer; «Desconectar» detiene el servicio automático de esa ventana, y para volver a conectarla hay que volver a escanear el código QR; al coincidir una regla de «Respuesta directa por palabras clave», la respuesta se envía sin pasar por la IA y al guardar se sobrescribe todo el conjunto. Los códigos de autorización son credenciales de identidad: envíelos solo a la persona correspondiente y a la cuenta de IA.
+</Warning>
+
+<Info>
+  El aprendizaje autónomo de la IA necesita su supervisión: de los conocimientos que aprende por sí misma de las conversaciones (los «Conocimientos aprendidos»), los de origen «Aprendizaje automático» deben revisarse manualmente; los demás se aprueban automáticamente si no se procesan en 24 horas: no hacer nada equivale a aprobarlos.
+</Info>
+
+<Info>
+  Compruebe la configuración por un canal real: el «Chat del asistente» de la barra superior no está vinculado a la ventana de conversación seleccionada en la página, así que sus respuestas no sirven para confirmar que la configuración de una ventana está en vigor.
+</Info>
+
+<Tip>
+  No espere a tener un material de entrenamiento perfecto: empiece con un conjunto de conversaciones reales y una tanda de preguntas frecuentes que ya tenga a mano (vea [Activación y preparación](/es/quick-start/preparation)) y vaya cubriendo lo que descubra la prueba piloto. Cuando un mismo tipo de pregunta se repita, trátelo primero: añádalo a la base de conocimientos o fíjelo con «Respuesta directa por palabras clave».
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Hay que seguir las cuatro etapas en orden?
+
+En la primera puesta en marcha, conviene seguir el orden: defina los límites antes de abrir el servicio y después entre en el ciclo «entrenar → consultar → revisar». No es un flujo de una sola dirección: cuando una revisión detecte un problema, vuelva a la etapa correspondiente. Si solo quiere poner en marcha el circuito mínimo, vea [Puesta en marcha en 30 minutos](/es/quick-start/quick-start).
+
+### Actualicé el conocimiento y la IA sigue respondiendo mal: ¿cómo localizo el problema?
+
+Abra esa consulta en Revisión detallada y compruebe en qué paso se detuvieron los «Pasos de ejecución» y qué recuperaron los «Conocimientos de referencia»: si el conocimiento no se recuperó o es incorrecto, corríjalo en Optimización de conocimientos o Gestión de conocimientos; si juzgó mal si debía responder en un grupo, vaya a «Chat grupal inteligente» en Reglas de respuesta; si confunde a una persona, vaya a Relaciones; si una respuesta cruza una línea roja, añada una regla en Controles de seguridad. Vea la tabla completa «síntoma → dónde corregirlo» en [Colaboración avanzada y comandos](/es/collaboration/advanced).
+
+### ¿Qué indican «Sugerencias» y «Conocimientos aprendidos»?
+
+«Sugerencias» es el número de resúmenes de preguntas que la IA remite al supervisor: un valor alto indica que la IA duda a menudo, y esas son justo las próximas preguntas que conviene añadir. «Conocimientos aprendidos» es el número de conocimientos que la IA aprende por sí misma de las conversaciones. Ambos usan el criterio de rango de muestreo, y su subida o bajada no indica mejor o peor calidad: no saque conclusiones solo por la evolución.
+
+### Entreno con conversaciones reales: ¿puede filtrarse la información de los clientes?
+
+Revisión detallada contiene conversaciones con clientes: antes de exportarlas, hacer capturas o reenviarlas, confirme que el destinatario tiene permiso para verlas; envíe los códigos de autorización solo a la persona correspondiente y a la cuenta de IA. Antes de escribir contenido en la base de conocimientos, confirme que sirve como mensaje para clientes.
+
+### ¿Puedo dejar «Pendiente de revisión» sin tocar?
+
+Equivale a aprobarlo todo de forma predeterminada. Salvo los elementos de origen «Aprendizaje automático», que exigen revisión manual, el resto se aprueba automáticamente si no se procesa en 24 horas y pasa a estar disponible para la IA. Si quiere controlar qué conocimientos usa la IA, pulse usted «Aprobar» o «Descartar» antes de que se aplique la aprobación automática.

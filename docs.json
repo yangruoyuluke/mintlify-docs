@@ -1,188 +1,484 @@
 {
-    "$schema": "https://mintlify.com/docs.json",
-    "name": "MarsMindDocuments",
-    "theme": "mint",
-    "colors": {
-        "primary": "#0D47A1",
-        "light": "#ECEFF1",
-        "dark": "#212121"
-    },
-    "logo": {
-        "light": "/logo/logo-light.png",
-        "dark": "/logo/logo-dark.png"
-    },
-    "favicon": {
-        "light": "/logo/favicon.svg",
-        "dark": "/logo/favicon-dark.svg"
-    },
-    "banner": {
-        "content": "🚀 MarsMind Admin is now opened! Please contact sales@marsmind.co to check out more"
-    },
-    "navbar": {
-        "links": [
-            {
-                "label": "Business",
-                "href": "https://marsmind.co"
-            }
-        ],
-        "primary": {
-            "type": "button",
-            "label": "Log in",
-            "href": "https://admin.marsmind.co/#/index"
-        }
-    },
-    "topbarLinks": [],
-    "navigation": {
-        "languages": [
-            {
-                "language": "cn",
-                "pages": [
-                    {
-                        "group": "快速开始",
-                        "pages": [
-                            "cn/quick-start/introduction",
-                            "cn/quick-start/preparation",
-                            "cn/quick-start/quick-start"
-                        ]
-                    },
-                    {
-                        "group": "AI协作指南",
-                        "pages": [
-                            "cn/ai-assistant-guide/collaboration-basics",
-                            "cn/ai-assistant-guide/collaboration-advanced",
-                            "cn/ai-assistant-guide/marsmind-ai-method"
-                        ]
-                    },
-                    {
-                        "group": "开发文档",
-                        "pages": [
-                            "cn/developer-docs/api-reference",
-                            "cn/developer-docs/updates",
-                            "cn/developer-docs/skill-modules-detail"
-                        ]
-                    },
-                    {
-                        "group": "管理后台",
-                        "pages": [
-                            "cn/admin-backend/platform-login",
-                            {
-                                "group": "数据看板",
-                                "expanded": true,
-                                "pages": [
-                                    "cn/admin-backend/data-dashboard/business-performance",
-                                    "cn/admin-backend/data-dashboard/data-export",
-                                    "cn/admin-backend/data-dashboard/order-usage"
-                                ]
-                            },
-                            {
-                                "group": "助手设置",
-                                "expanded": true,
-                                "pages": [
-                                    "cn/admin-backend/assistant-settings/login-online",
-                                    "cn/admin-backend/assistant-settings/response-settings",
-                                    "cn/admin-backend/assistant-settings/safety-guardrails",
-                                    "cn/admin-backend/assistant-settings/relation-config",
-                                    "cn/admin-backend/assistant-settings/lead-cleaning",
-                                    "cn/admin-backend/assistant-settings/working-hours"
-                                ]
-                            },
-                            "cn/admin-backend/skills-library",
-                            {
-                                "group": "知识库",
-                                "expanded": true,
-                                "pages": [
-                                    "cn/admin-backend/knowledge-base/construction",
-                                    "cn/admin-backend/knowledge-base/audit",
-                                    "cn/admin-backend/knowledge-base/management"
-                                ]
-                            },
-                            "cn/admin-backend/web-chat",
-                            "cn/admin-backend/operation-guide",
-                            "cn/admin-backend/account-settings"
-                        ]
-                    }
-                ]
-            },
-            {
-                "language": "jp",
-                "pages": [
-                    {
-                        "group": "クイックスタート",
-                        "pages": [
-                            "jp/quick-start/introduction",
-                            "jp/quick-start/preparation",
-                            "jp/quick-start/quick-start"
-                        ]
-                    },
-                    {
-                        "group": "AIアシスタントガイド",
-                        "pages": [
-                            "jp/ai-assistant-guide/collaboration-basics",
-                            "jp/ai-assistant-guide/collaboration-advanced",
-                            "jp/ai-assistant-guide/marsmind-ai-method"
-                        ]
-                    },
-                    {
-                        "group": "開発者向けドキュメント",
-                        "pages": [
-                            "jp/developer-docs/api-reference",
-                            "jp/developer-docs/updates",
-                            "jp/developer-docs/skill-modules-detail"
-                        ]
-                    },
-                    {
-                        "group": "管理コンソール",
-                        "pages": [
-                            "jp/admin-backend/login-and-registration",
-                            "jp/admin-backend/run-avatar",
-                            "jp/admin-backend/qa-management",
-                            "jp/admin-backend/identity-setup",
-                            "jp/admin-backend/inbound-setup",
-                            "jp/admin-backend/data-module"
-                        ]
-                    }
-                ]
-            },
-            {
-                "language": "en",
-                "pages": [
-                    {
-                        "group": "Quick Start",
-                        "pages": [
-                            "en/quick-start/introduction",
-                            "en/quick-start/preparation",
-                            "en/quick-start/quick-start"
-                        ]
-                    },
-                    {
-                        "group": "AI Assistant Guide",
-                        "pages": [
-                            "en/ai-assistant-guide/collaboration-basics",
-                            "en/ai-assistant-guide/collaboration-advanced",
-                            "en/ai-assistant-guide/marsmind-ai-method"
-                        ]
-                    },
-                    {
-                        "group": "Developer Documentation",
-                        "pages": [
-                            "en/developer-docs/api-reference",
-                            "en/developer-docs/updates",
-                            "en/developer-docs/skill-modules-detail"
-                        ]
-                    },
-                    {
-                        "group": "Admin Backend",
-                        "pages": [
-                            "en/admin-backend/login-and-registration",
-                            "en/admin-backend/run-avatar",
-                            "en/admin-backend/qa-management",
-                            "en/admin-backend/identity-setup",
-                            "en/admin-backend/inbound-setup",
-                            "en/admin-backend/data-module"
-                        ]
-                    }
-                ]
-            }
-        ]
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "MarsMindDocuments",
+  "theme": "mint",
+  "colors": {
+    "primary": "#0D47A1",
+    "light": "#ECEFF1",
+    "dark": "#212121"
+  },
+  "logo": {
+    "light": "/logo/logo-light.png",
+    "dark": "/logo/logo-dark.png"
+  },
+  "favicon": {
+    "light": "/logo/favicon.svg",
+    "dark": "/logo/favicon-dark.svg"
+  },
+  "banner": {
+    "content": "🚀 MarsMind Admin is now opened! Please contact sales@marsmind.co to check out more"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Business",
+        "href": "https://marsmind.co"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Log in",
+      "href": "https://admin.marsmind.cc/login"
     }
+  },
+  "topbarLinks": [],
+  "navigation": {
+    "languages": [
+      {
+        "language": "cn",
+        "pages": [
+          {
+            "group": "快速开始",
+            "pages": [
+              "cn/quick-start/introduction",
+              "cn/quick-start/preparation",
+              "cn/quick-start/quick-start"
+            ]
+          },
+          {
+            "group": "用户操作指南",
+            "pages": [
+              "cn/guide/interface-tour",
+              {
+                "group": "数据看板",
+                "expanded": true,
+                "pages": [
+                  "cn/guide/dashboard/business-performance",
+                  "cn/guide/dashboard/ai-usage",
+                  "cn/guide/dashboard/data-export",
+                  "cn/guide/dashboard/conversation-review"
+                ]
+              },
+              {
+                "group": "我的助手",
+                "expanded": true,
+                "pages": [
+                  "cn/guide/assistant/login-online",
+                  "cn/guide/assistant/persona",
+                  "cn/guide/assistant/relationship-config"
+                ]
+              },
+              {
+                "group": "响应设定",
+                "expanded": true,
+                "pages": [
+                  "cn/guide/response/reply-rules",
+                  "cn/guide/response/safety-guardrails",
+                  "cn/guide/response/new-customer-reception",
+                  "cn/guide/response/working-hours"
+                ]
+              },
+              {
+                "group": "知识库",
+                "expanded": true,
+                "pages": [
+                  "cn/guide/knowledge/generation",
+                  "cn/guide/knowledge/optimization",
+                  "cn/guide/knowledge/management"
+                ]
+              },
+              {
+                "group": "技能库",
+                "expanded": true,
+                "pages": [
+                  "cn/guide/skills/library"
+                ]
+              },
+              {
+                "group": "账号设置",
+                "expanded": true,
+                "pages": [
+                  "cn/guide/account/profile",
+                  "cn/guide/account/security",
+                  "cn/guide/account/ai-authorization"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "协作指南",
+            "pages": [
+              "cn/collaboration/basics",
+              "cn/collaboration/advanced",
+              "cn/collaboration/marsmind-method"
+            ]
+          },
+          {
+            "group": "开发者文档",
+            "pages": [
+              "cn/developer/api-reference",
+              "cn/developer/skill-modules",
+              "cn/developer/updates"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "pages": [
+          {
+            "group": "Quick Start",
+            "pages": [
+              "en/quick-start/introduction",
+              "en/quick-start/preparation",
+              "en/quick-start/quick-start"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "en/guide/interface-tour",
+              {
+                "group": "Data Dashboard",
+                "expanded": true,
+                "pages": [
+                  "en/guide/dashboard/business-performance",
+                  "en/guide/dashboard/ai-usage",
+                  "en/guide/dashboard/data-export",
+                  "en/guide/dashboard/conversation-review"
+                ]
+              },
+              {
+                "group": "My Assistant",
+                "expanded": true,
+                "pages": [
+                  "en/guide/assistant/login-online",
+                  "en/guide/assistant/persona",
+                  "en/guide/assistant/relationship-config"
+                ]
+              },
+              {
+                "group": "Response Settings",
+                "expanded": true,
+                "pages": [
+                  "en/guide/response/reply-rules",
+                  "en/guide/response/safety-guardrails",
+                  "en/guide/response/new-customer-reception",
+                  "en/guide/response/working-hours"
+                ]
+              },
+              {
+                "group": "Knowledge Base",
+                "expanded": true,
+                "pages": [
+                  "en/guide/knowledge/generation",
+                  "en/guide/knowledge/optimization",
+                  "en/guide/knowledge/management"
+                ]
+              },
+              {
+                "group": "Skills Library",
+                "expanded": true,
+                "pages": [
+                  "en/guide/skills/library"
+                ]
+              },
+              {
+                "group": "Account settings",
+                "expanded": true,
+                "pages": [
+                  "en/guide/account/profile",
+                  "en/guide/account/security",
+                  "en/guide/account/ai-authorization"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Collaboration",
+            "pages": [
+              "en/collaboration/basics",
+              "en/collaboration/advanced",
+              "en/collaboration/marsmind-method"
+            ]
+          },
+          {
+            "group": "Developer Documentation",
+            "pages": [
+              "en/developer/api-reference",
+              "en/developer/skill-modules",
+              "en/developer/updates"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "jp",
+        "pages": [
+          {
+            "group": "クイックスタート",
+            "pages": [
+              "jp/quick-start/introduction",
+              "jp/quick-start/preparation",
+              "jp/quick-start/quick-start"
+            ]
+          },
+          {
+            "group": "操作ガイド",
+            "pages": [
+              "jp/guide/interface-tour",
+              {
+                "group": "データダッシュボード",
+                "expanded": true,
+                "pages": [
+                  "jp/guide/dashboard/business-performance",
+                  "jp/guide/dashboard/ai-usage",
+                  "jp/guide/dashboard/data-export",
+                  "jp/guide/dashboard/conversation-review"
+                ]
+              },
+              {
+                "group": "マイアシスタント",
+                "expanded": true,
+                "pages": [
+                  "jp/guide/assistant/login-online",
+                  "jp/guide/assistant/persona",
+                  "jp/guide/assistant/relationship-config"
+                ]
+              },
+              {
+                "group": "応答設定",
+                "expanded": true,
+                "pages": [
+                  "jp/guide/response/reply-rules",
+                  "jp/guide/response/safety-guardrails",
+                  "jp/guide/response/new-customer-reception",
+                  "jp/guide/response/working-hours"
+                ]
+              },
+              {
+                "group": "ナレッジベース",
+                "expanded": true,
+                "pages": [
+                  "jp/guide/knowledge/generation",
+                  "jp/guide/knowledge/optimization",
+                  "jp/guide/knowledge/management"
+                ]
+              },
+              {
+                "group": "スキルライブラリ",
+                "expanded": true,
+                "pages": [
+                  "jp/guide/skills/library"
+                ]
+              },
+              {
+                "group": "アカウント設定",
+                "expanded": true,
+                "pages": [
+                  "jp/guide/account/profile",
+                  "jp/guide/account/security",
+                  "jp/guide/account/ai-authorization"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "協働ガイド",
+            "pages": [
+              "jp/collaboration/basics",
+              "jp/collaboration/advanced",
+              "jp/collaboration/marsmind-method"
+            ]
+          },
+          {
+            "group": "開発者向けドキュメント",
+            "pages": [
+              "jp/developer/api-reference",
+              "jp/developer/skill-modules",
+              "jp/developer/updates"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "pages": [
+          {
+            "group": "Pour commencer",
+            "pages": [
+              "fr/quick-start/introduction",
+              "fr/quick-start/preparation",
+              "fr/quick-start/quick-start"
+            ]
+          },
+          {
+            "group": "Guide de l'utilisateur",
+            "pages": [
+              "fr/guide/interface-tour",
+              {
+                "group": "Tableau de bord des données",
+                "expanded": true,
+                "pages": [
+                  "fr/guide/dashboard/business-performance",
+                  "fr/guide/dashboard/ai-usage",
+                  "fr/guide/dashboard/data-export",
+                  "fr/guide/dashboard/conversation-review"
+                ]
+              },
+              {
+                "group": "Mon assistant",
+                "expanded": true,
+                "pages": [
+                  "fr/guide/assistant/login-online",
+                  "fr/guide/assistant/persona",
+                  "fr/guide/assistant/relationship-config"
+                ]
+              },
+              {
+                "group": "Paramètres de réponse",
+                "expanded": true,
+                "pages": [
+                  "fr/guide/response/reply-rules",
+                  "fr/guide/response/safety-guardrails",
+                  "fr/guide/response/new-customer-reception",
+                  "fr/guide/response/working-hours"
+                ]
+              },
+              {
+                "group": "Base de connaissances",
+                "expanded": true,
+                "pages": [
+                  "fr/guide/knowledge/generation",
+                  "fr/guide/knowledge/optimization",
+                  "fr/guide/knowledge/management"
+                ]
+              },
+              {
+                "group": "Bibliothèque de compétences",
+                "expanded": true,
+                "pages": [
+                  "fr/guide/skills/library"
+                ]
+              },
+              {
+                "group": "Paramètres du compte",
+                "expanded": true,
+                "pages": [
+                  "fr/guide/account/profile",
+                  "fr/guide/account/security",
+                  "fr/guide/account/ai-authorization"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Guide de collaboration",
+            "pages": [
+              "fr/collaboration/basics",
+              "fr/collaboration/advanced",
+              "fr/collaboration/marsmind-method"
+            ]
+          },
+          {
+            "group": "Documentation développeur",
+            "pages": [
+              "fr/developer/api-reference",
+              "fr/developer/skill-modules",
+              "fr/developer/updates"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "pages": [
+          {
+            "group": "Primeros pasos",
+            "pages": [
+              "es/quick-start/introduction",
+              "es/quick-start/preparation",
+              "es/quick-start/quick-start"
+            ]
+          },
+          {
+            "group": "Guía del usuario",
+            "pages": [
+              "es/guide/interface-tour",
+              {
+                "group": "Panel de datos",
+                "expanded": true,
+                "pages": [
+                  "es/guide/dashboard/business-performance",
+                  "es/guide/dashboard/ai-usage",
+                  "es/guide/dashboard/data-export",
+                  "es/guide/dashboard/conversation-review"
+                ]
+              },
+              {
+                "group": "Mi asistente",
+                "expanded": true,
+                "pages": [
+                  "es/guide/assistant/login-online",
+                  "es/guide/assistant/persona",
+                  "es/guide/assistant/relationship-config"
+                ]
+              },
+              {
+                "group": "Configuración de respuestas",
+                "expanded": true,
+                "pages": [
+                  "es/guide/response/reply-rules",
+                  "es/guide/response/safety-guardrails",
+                  "es/guide/response/new-customer-reception",
+                  "es/guide/response/working-hours"
+                ]
+              },
+              {
+                "group": "Base de conocimientos",
+                "expanded": true,
+                "pages": [
+                  "es/guide/knowledge/generation",
+                  "es/guide/knowledge/optimization",
+                  "es/guide/knowledge/management"
+                ]
+              },
+              {
+                "group": "Biblioteca de habilidades",
+                "expanded": true,
+                "pages": [
+                  "es/guide/skills/library"
+                ]
+              },
+              {
+                "group": "Configuración de la cuenta",
+                "expanded": true,
+                "pages": [
+                  "es/guide/account/profile",
+                  "es/guide/account/security",
+                  "es/guide/account/ai-authorization"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Guía de colaboración",
+            "pages": [
+              "es/collaboration/basics",
+              "es/collaboration/advanced",
+              "es/collaboration/marsmind-method"
+            ]
+          },
+          {
+            "group": "Documentación para desarrolladores",
+            "pages": [
+              "es/developer/api-reference",
+              "es/developer/skill-modules",
+              "es/developer/updates"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

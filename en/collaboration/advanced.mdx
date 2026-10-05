@@ -1,0 +1,153 @@
+---
+title: Advanced collaboration and commands
+description: Use # forced commands and / natural-language suggestions in Assistant Chat to manage the AI's work status, group chat replies, and daily and weekly reports — and find the right place to correct and coach it when it gets something wrong.
+keywords:
+  - "Assistant Chat"
+  - "forced commands"
+  - "natural language suggestions"
+  - "daily and weekly reports"
+  - "correcting and coaching the AI"
+---
+
+Assistant Chat is the conversation drawer on the right of the top bar. Beyond asking questions, you can type `#` in the input box to bring up **forced commands** (`#work` to start work, `#stop` to pause work, `#help` to view all commands, and more), or type `/` for **natural-language suggestions** such as "Please help me organize today's conversation records". This page covers two things: getting everyday tasks done with commands, and finding the right place to correct the AI — and coach it — when it answers wrong, so it becomes a coworker who understands your business better.
+
+## When you'll need this
+
+- You want the AI to start or pause work, or turn group chat replies on or off, right away — without digging through configuration pages.
+- You want to turn the AI's daily or weekly reports on or off.
+- You need to add just one key piece of knowledge, without going through document upload and generation tasks.
+- The AI answers inaccurately, mistakes someone's identity, or speaks in a group where it should not — and you need to find the right place to correct it.
+
+## How to get there
+
+Top bar, right side → "Assistant Chat" (the hover tooltip reads "Open admin assistant chat"). The drawer opens from the right side of the page; its title is "Admin assistant chat", and the input box is at the bottom of the drawer. It is not bound to the "Selected window" on the left.
+
+<Warning>
+The scope note at the top of the drawer reads: "This entry is not bound to the communication window selected on the page. It cannot confirm that window's configuration is in effect." To verify a communication window's configuration, test it with real conversations on that channel — do not draw conclusions from the replies here.
+</Warning>
+
+## Steps
+
+<Steps>
+  <Step title="Open the drawer and understand its conversation scope">
+    Once it opens, look at the conversation area and the input box first. When there is no message history, the conversation area reads: "Chat with the admin assistant using the existing chat service. The window selected on this page is not supplied as a test target."
+
+    How to tell it worked: the title reads "Admin assistant chat", and the input box placeholder is "Please enter your question".
+
+    Note: switching pages or changing the "Selected window" does not change the conversation scope of this drawer.
+  </Step>
+
+  <Step title='Type "#" to bring up forced commands and send one'>
+    Type `#` in the input box and a command list pops up above it, containing every forced command and its description. Use `↑` `↓` to move through the list, press `Enter` to select, press `Esc` or click outside the input box to dismiss — or click an item with the mouse. The command is written into the input box; press `Enter` again or click the send button at the bottom right to send it. Keep typing letters (for example `#w`) to filter the list.
+
+    How to tell it worked: your command and the AI's reply appear in the conversation. When the assistant returns several items at once, they are shown as separate messages, and "AI is thinking..." is displayed while you wait.
+
+    Note: while the list is open, `Enter` selects a command instead of sending it. If sending fails, an error message pops up (showing the reason returned by the server, commonly "Request failed. Please try again."), and that message is removed from the conversation history — type the original message again to resend it.
+  </Step>
+
+  <Step title="Pick the command for your scenario">
+    The list contains these commands, with the exact interface descriptions:
+
+    | Command | Description in the list |
+    | --- | --- |
+    | `#work` | Start work |
+    | `#stop` | Pause work |
+    | `#enable_hot_assistant` | Enable group chat response |
+    | `#disable_hot_assistant` | Disable group chat response |
+    | `#enable_daily_report` | Enable daily report |
+    | `#disable_daily_report` | Disable daily report |
+    | `#enable_weekly_report` | Enable weekly report |
+    | `#disable_weekly_report` | Disable weekly report |
+    | `#chatknowledge` | Single knowledge entry |
+    | `#help` | View all commands |
+
+    Group them by purpose:
+
+    - Work status: `#work` to start work and `#stop` to pause work. Use them to start or stop the AI on the spot.
+    - Group chat replies: `#enable_hot_assistant` to enable group chat response and `#disable_hot_assistant` to disable it.
+    - Daily and weekly reports: `#enable_daily_report` / `#disable_daily_report` turn the daily report on or off, and `#enable_weekly_report` / `#disable_weekly_report` do the same for the weekly report. These are work summaries the AI generates each day or week — stop them with the disable command when you no longer need them.
+    - Knowledge and help: `#chatknowledge` (Single knowledge entry) is for adding one key piece of knowledge — send it and follow the assistant's prompts to complete the content in the conversation, with no document upload needed. `#help` (View all commands) is what to send first when you cannot remember them all.
+
+    How to tell it worked: the AI replies to the command; use the reply to confirm the command did what you expected.
+  </Step>
+
+  <Step title='Type "/" to get things done with natural-language suggestions'>
+    Typing `/` brings up four natural-language suggestions. Pick any one — you can still reword it before sending:
+
+    - Please help me organize today's conversation records
+    - Generate this week's work report
+    - View last week's business performance
+    - Help me enable group chat replies
+
+    How to tell it worked: the AI's reply appears in the conversation after you send.
+
+    Note: these suggestions are one-line requests to the admin assistant — selecting one just writes an ordinary message. Change details such as the time range or the target to match your situation before sending.
+  </Step>
+
+  <Step title="Handle images and conversation history">
+    - Click "Attach image" at the bottom left of the input box to pick images and send them along with your message. The send button is unavailable while an image is uploading; pressing Enter during that time shows "Images are uploading, please wait..."; a failed upload is flagged with an error on the preview and an error message pops up.
+    - "Clear chat" at the top right of the drawer clears all messages in the current conversation; the confirmation dialog reads "Are you sure you want to clear all messages in the current conversation? This action cannot be undone.", and "Chat history cleared" appears after you confirm.
+
+    How to tell it worked: the image appears in the preview above the input box, and after sending you can see it in your own message bubble.
+  </Step>
+</Steps>
+
+## Correcting and coaching: where to fix the AI when it gets it wrong
+
+Whether the AI answered well is not a matter of feeling — it is a matter of records. Start in [Detail Review](/en/guide/dashboard/data-export): open the inquiry and look at its "Reference Knowledge" and "Execution Steps" (in order: Conversation Context at That Time → Group Handling → Reply Decision → Skill Invocation → Knowledge Generation → Safety Guardrail) to tell whether the problem lies in knowledge, rules, or identity recognition. Then use the table below to fix it in the right place.
+
+| What you see | Where to fix it | What to do |
+| --- | --- | --- |
+| New knowledge the AI learned is not right | Knowledge Base → [Knowledge Optimization](/en/guide/knowledge/optimization) → "Pending review" | Click "Approve" or "Discard" — single-item actions take effect immediately, with no second confirmation; you can also click the body, edit it, and save. Except for "Auto Learning", which always needs manual review, other knowledge is approved automatically if you do not process it within 24 hours. |
+| The AI cannot answer, and the question gets no reply after being handed over to a supervisor | Knowledge Base → [Knowledge Optimization](/en/guide/knowledge/optimization) → "Needs answer" (not enabled in every environment) | These questions enter the Needs answer queue (the AI did not answer, the question was handed over to a supervisor, and the supervisor did not reply). Click "Confirm" and fill in an answer to remove one from the queue, or click "Ignore". |
+| Stored knowledge is wrong | Knowledge Base → [Knowledge Management](/en/guide/knowledge/management) | Find the item, then edit its body, change its category, or delete it. For batch actions, everything you select is affected; permanent deletion cannot be undone. |
+| A certain type of task is handled the wrong way | [Skills Library](/en/guide/skills/library) | Edit "When to use it" and "How AI should handle it", or adjust "Which conversations" (Supervisor conversations / Customer conversations). Built-in skills are read-only. |
+| The reply contains something it should not say | Response Settings → [Safety Guardrails](/en/guide/response/safety-guardrails) | Add a rule, choose "Exact keyword match" or "Semantic model judgment" as the detection method, and set whether a match blocks the reply, lets it through, or notifies the Leader. The detection method cannot be changed after creation, and each window can have only one semantic model judgment rule. |
+| Replies to fixed questions keep going wrong | Response Settings → [Reply Rules](/en/guide/response/reply-rules) | Add a rule under "Keyword Direct Reply": inquiries that hit the keywords send fixed content directly and skip AI generation; rules match in order, and the first match is sent. |
+| The AI treats a colleague as a customer, or speaks in a group where it should stay quiet | My Assistant → [Relationships](/en/guide/assistant/relationship-config) | Set the contact or group as Customer, Colleague, Muted, or Supervisor; a Supervisor relationship is also a prerequisite for delivering "Key Event Active Reporting". If the AI does not recognize a supervisor or colleague at all, first go to [AI identity access](/en/guide/account/ai-authorization) to generate an authorization code, and have that person send the code with the `#` prefix to the AI account to complete the binding. |
+| Tone, forms of address, or persona are off | My Assistant → [Base Persona](/en/guide/assistant/persona) | Switch the "AI Style", or rewrite the main prompt under "Custom Instructions". After saving, still confirm that the runtime has applied it. |
+
+Verify every change: go to [Performance](/en/guide/dashboard/business-performance) and watch how "Suggestions" (the number of question summaries the AI forwarded to supervisors) and "Learned Items" (how much knowledge the AI learned automatically) change, then send a real message on the channel to retest. A quick daily pass through Pending review and Needs answer in [Knowledge Optimization](/en/guide/knowledge/optimization) takes less effort than letting a batch pile up.
+
+## Checkpoints
+
+- Typing `#` shows the full command list, and typing `/` shows the four natural-language suggestions; sending `#help` shows all commands in the conversation.
+- After you send a command, the conversation shows your message and the AI's reply (multiple replies appear as separate messages).
+- You can explain the relationship between Assistant Chat and the "Selected window": it is not bound to a window and cannot replace verification of that window's configuration.
+- When the AI gets something wrong, you can tell from the symptom whether to go to Knowledge Optimization, Knowledge Management, Skills Library, Safety Guardrails, Reply Rules, or Relationships.
+
+## Important notes
+
+<Warning>
+"Clear chat" cannot be undone. The confirmation dialog reads "Are you sure you want to clear all messages in the current conversation? This action cannot be undone."; clearing affects only the conversation history in this drawer.
+</Warning>
+
+<Info>
+The command list is the one that pops up when you type `#`; sending `#help` also shows all commands. Command names (such as `work` and `enable_daily_report`) are fixed spellings, while the descriptions in the list follow the interface language.
+</Info>
+
+<Tip>
+Commands are for quick actions; long-term, window-level configuration still happens on the matching pages — Base Persona, Reply Rules, and Safety Guardrails all save per "Selected window", while Assistant Chat is not bound to a window.
+</Tip>
+
+## Frequently asked questions
+
+### I typed "#" but the command list did not appear?
+
+Check whether `#` is the first character in the input box — the list pops up only when the message starts with `#` or `/`; once it is open, press `Esc` or click outside the input box to dismiss it. Also, the input box is disabled while the AI is replying ("AI is thinking..." is shown), so wait for the reply to finish before typing.
+
+### Chatting in Assistant Chat works fine — why is the AI still wrong in a real window?
+
+Because this drawer is not bound to the selected communication window, its conversation cannot stand in for a test of a window. To verify a window's configuration, test with real messages on that channel; to trace how a specific inquiry was handled, open its "Execution Steps" and "Reference Knowledge" in [Detail Review](/en/guide/dashboard/data-export).
+
+### Where do questions the AI cannot answer go, and how do I fill them in?
+
+The AI forwards a summary of the question to the supervisor (the "Suggestions" metric under [Performance](/en/guide/dashboard/business-performance) is the count). Questions the supervisor never answers enter the "Needs answer" queue in [Knowledge Optimization](/en/guide/knowledge/optimization) (not enabled in every environment — if you do not see it on the page, it has not been opened for your environment). There, click "Confirm" and fill in an answer: the question leaves the queue and becomes usable knowledge. If you do not need to handle it, click "Ignore".
+
+### I switched the interface language — do the commands still work?
+
+Yes. Command names are fixed spellings (such as `#enable_weekly_report`), and the descriptions in the list change with the interface language; if you are not sure what a command does, read its description in the list or send `#help`.
+
+### What does "Clear chat" clear?
+
+Only the conversation history in this drawer, and it cannot be undone; backend configuration is not affected. To keep the basis for a decision (for example, a conclusion from a correction), fix the knowledge or rule on its own page before clearing the chat.

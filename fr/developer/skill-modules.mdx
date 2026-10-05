@@ -1,0 +1,193 @@
+---
+title: Modules de compétences
+description: Les capacités de l’assistant IA sont réparties en huit modules de compétences. Cette page vous aide à déterminer à quelle capacité appartient un problème, sur quelle page d’administration la configurer et comment vérifier qu’elle est bien active.
+keywords:
+  - modules de compétences
+  - modules de capacités
+  - bibliothèque de compétences
+  - outils associés
+  - compétences intégrées
+---
+
+Les « Modules de compétences » répartissent le travail que l’assistant IA peut prendre en charge en huit catégories. Cette page ne reprend pas les manipulations de chaque page de configuration : elle vous aide sur trois points — déterminer à quelle capacité appartient le problème rencontré, sur quelle page d’administration la configurer et comment vérifier qu’elle est bien active. Vous n’avez pas besoin d’activer les huit d’un coup : commencez par celle qui concerne directement vos clients.
+
+## Quand en avez-vous besoin ?
+
+- Vous venez de terminer [Connexion aux canaux](/fr/guide/assistant/login-online) et vous ne savez pas quelle partie configurer en premier.
+- Le comportement de l’IA ne correspond pas à vos attentes (elle ne traite pas les questions, répond à tort et à travers dans les groupes, ou répond elle-même alors qu’elle devrait passer à un humain) et vous voulez d’abord identifier la capacité mal configurée.
+- Vous passez le relais sur l’interface d’administration ou formez un nouveau collaborateur : il faut pouvoir expliquer où chaque capacité se configure.
+- Vous faites le point : vérifier quelles capacités sont déjà activées et lesquelles manquent encore.
+
+## Comment y accéder ?
+
+Cette page ne porte aucune configuration ; les entrées des huit modules sont listées une par une ci-dessous. Deux points d’entrée possibles :
+
+- Voir les compétences actuelles de l’IA : menu de gauche → Bibliothèque de compétences. Les compétences portant le badge « Compétence intégrée » sont fournies par le système ; celles sans badge sont des compétences personnalisées. L’interrupteur « Activée / Inactif » détermine si la compétence est utilisée.
+- Retrouver une page à partir d’un problème : comparez avec la section « Les huit modules de capacités » ci-dessous et suivez le chemin indiqué. Par exemple, pour changer la façon de parler de l’IA : menu de gauche → Mon assistant → Personnalité de base.
+
+La plupart des pages d’administration demandent de sélectionner d’abord la « Fenêtre de conversation gérée actuellement » dans la barre latérale. Sans fenêtre disponible, la page affiche un état vide et vous invite à passer par [Connexion aux canaux](/fr/guide/assistant/login-online) pour connecter un canal. La Bibliothèque de compétences n’est pas liée à une fenêtre de conversation : changer de fenêtre ne modifie pas la liste des compétences. Pour l’ensemble de l’interface, voir la [Visite guidée de l’interface d’administration](/fr/guide/interface-tour).
+
+## Les huit modules de capacités
+
+### 1. Réponses quasi humaines
+
+Faites répondre l’IA avec un ton et un rythme proches d’une vraie personne. Le ton, le vocabulaire et le contexte se définissent tous dans [Personnalité de base](/fr/guide/assistant/persona) :
+
+- « Style IA » : deux choix — « Détaillé et poli » ou « Flexible et concis » — enregistrés dès la sélection.
+- « Instructions personnalisées » : rédigez l’identité, le périmètre de service et les principes de réponse ; après l’enregistrement, vérifiez encore que l’exécution a confirmé leur application.
+- « Paramètres du contexte » : cochez les éléments de contexte à injecter dans les réponses, comme la scène de conversation et le profil utilisateur ; après une modification et un enregistrement des instructions principales, le système peut mettre à jour automatiquement ces cases.
+- Pour qu’un message parte mot pour mot, utilisez la « Réponse directe par mot-clé » des [Règles de réponse](/fr/guide/response/reply-rules) : un mot-clé déclenche l’envoi du contenu fixe, sans repasser par la génération de l’IA.
+
+L’IA intègre le contexte de la conversation à chaque tour traité ; pour le vérifier, ouvrez la chaîne de traitement dans [Données détaillées](/fr/guide/dashboard/data-export) et consultez le « Contexte de conversation à ce moment-là ».
+
+### 2. Questions-réponses professionnelles de niveau entreprise
+
+Les clients arrivent par différents canaux ; l’IA répond à partir de la base de connaissances et les réponses à risque passent d’abord par les garde-fous de sécurité.
+
+- Canaux : [Connexion aux canaux](/fr/guide/assistant/login-online) prend en charge WeChat, WeCom, le lien de site Web, le mini-programme et le compte officiel ; chaque canal correspond à une « fenêtre de conversation ».
+- Source des réponses : les connaissances sont gérées sur trois pages — [Génération de connaissances](/fr/guide/knowledge/generation), [Optimisation des connaissances](/fr/guide/knowledge/optimization) et [Gestion des connaissances](/fr/guide/knowledge/management).
+- Blocage des risques : les [Garde-fous de sécurité](/fr/guide/response/safety-guardrails) évaluent la réponse avant l’envoi et, selon les règles, la bloquent, la laissent passer ou notifient le superviseur.
+- Premier échange avec un nouveau client : [Accueil des nouveaux clients](/fr/guide/response/new-customer-reception) gère l’acceptation automatique des demandes de contact, le message de bienvenue et les règles de collecte des informations sur les prospects.
+- Vérifier les citations : les « Connaissances de référence » de Données détaillées listent les connaissances réellement associées à chaque tour.
+
+### 3. Auto-apprentissage rapide
+
+Les documents comme les « questions restées sans réponse » deviennent des connaissances ; les contenus appris automatiquement passent d’abord par une validation manuelle avant d’entrer dans la base.
+
+- Générer des connaissances : dans [Génération de connaissances](/fr/guide/knowledge/generation), générez à partir d’un document, à partir d’une page Web, ou ajoutez des connaissances prêtes. La génération à partir d’un document affiche avant la soumission une confirmation de consommation des crédits (100 crédits par document) ; suivez ensuite l’avancement dans « Historique des générations » — « Traitement terminé » signifie seulement que la tâche est finie, pas que les connaissances sont enregistrées.
+- Valider les connaissances : dans « En attente de validation » de l’[Optimisation des connaissances](/fr/guide/knowledge/optimization), acceptez ou ignorez les éléments un par un. La page indique : « Les connaissances issues de l’apprentissage automatique doivent être validées manuellement. Les autres éléments sans action pendant 24 heures sont acceptés automatiquement. »
+- Compléter les réponses : « Besoins de réponse » recueille les questions sans réponse de l’IA, transmises au superviseur et restées sans retour ; cliquer sur « Confirmer » exige d’abord de saisir la réponse.
+- Enseigner une connaissance à l’unité : saisissez # dans l’« Assistant d’administration » de la barre supérieure ; « Saisir une connaissance » figure dans la liste des commandes forcées.
+- Suivre le volume d’apprentissage : les « Éléments appris » des [Performances](/fr/guide/dashboard/business-performance) correspondent aux connaissances que l’IA a apprises automatiquement dans les discussions de groupe ou individuelles.
+
+### 4. Collaboration humain-IA
+
+Distinguez d’abord qui est qui, puis décidez dans quelles conversations l’IA parle et quand elle fait appel à une personne.
+
+- Identifier les contacts : [Relations](/fr/guide/assistant/relationship-config) définit chaque contact comme Client, Collègue, En sourdine ou Superviseur ; la relation Superviseur est le prérequis de remise du « Signalement proactif des événements importants ». « Synchroniser les contacts » est possible au maximum une fois par jour.
+- Décisions en groupe : le « Chat de groupe intelligent » des [Règles de réponse](/fr/guide/response/reply-rules) définit séparément « Messages auxquels l’IA doit répondre » et « Messages auxquels l’IA ne doit pas répondre » ; ces règles ne s’appliquent en pratique qu’aux canaux WeChat et WeCom.
+- Signalements et rappels : le « Signalement proactif des événements importants » des [Règles de réponse](/fr/guide/response/reply-rules), et le réglage « Notification au Leader » de chaque règle des [Garde-fous de sécurité](/fr/guide/response/safety-guardrails).
+- Interrupteurs et reprise en main : la pastille de statut de [Connexion aux canaux](/fr/guide/assistant/login-online) bascule entre « En service » et « Suspendu » ; dans l’« Assistant d’administration », saisissez # pour afficher les commandes forcées telles que « Début du travail », « Mettre le travail en pause », « Activer la réponse de chat de groupe » et « Désactiver la réponse de chat de groupe ».
+- Limites horaires : les [Horaires de service](/fr/guide/response/working-hours) définissent les heures de service que l’IA engage vis-à-vis de l’extérieur ; après modification, cliquez sur « Enregistrer les horaires de service ».
+
+### 5. Analyse des données et rapports
+
+Suivez l’activité d’accueil et la consommation depuis l’interface d’administration, et activez les rapports quotidiens et hebdomadaires par commande.
+
+- Suivre l’activité : [Performances](/fr/guide/dashboard/business-performance) (indicateurs clés, tendances, intentions métier, activité des messages par créneau horaire ; Messages reçus ⊇ Demandes reçues ⊇ Réponses, qui ne s’additionnent pas) ; [Données détaillées](/fr/guide/dashboard/data-export) (chaque demande et la réponse de l’IA, exportables) ; [Utilisation de l’IA](/fr/guide/dashboard/ai-usage) (crédits restants et utilisation mensuelle, visibles uniquement par les administrateurs de département).
+- Vérifier les définitions : la « Définition des indicateurs » des [Performances](/fr/guide/dashboard/business-performance) rassemble la définition de chaque champ — par exemple, les « Propositions » correspondent au nombre de résumés de questions transmis par l’IA au superviseur.
+- Rapports programmés : dans l’« Assistant d’administration », saisissez # pour voir « Activer le rapport quotidien », « Désactiver le rapport quotidien », « Activer le rapport hebdomadaire » et « Désactiver le rapport hebdomadaire » ; saisissez / pour obtenir des exemples en langage naturel tels que « Générer le rapport de travail de cette semaine » et « Voir la performance commerciale de la semaine dernière ».
+
+### 6. Suggestions intelligentes et suivi
+
+Quand l’IA ne sait pas répondre ou qu’une décision humaine s’impose, elle transmet la question au superviseur ; à vous de compléter la réponse ou d’intervenir depuis l’interface d’administration.
+
+- Propositions : les « Propositions » des [Performances](/fr/guide/dashboard/business-performance) (définition au module 5) correspondent au nombre de ces résumés de questions transmis au superviseur.
+- Besoins de réponse : la file « Besoins de réponse » de l’[Optimisation des connaissances](/fr/guide/knowledge/optimization) (voir module 3) recueille précisément ces questions.
+- Rappels en temps utile : le « Signalement proactif des événements importants » des [Règles de réponse](/fr/guide/response/reply-rules), et les notifications lorsqu’une règle des [Garde-fous de sécurité](/fr/guide/response/safety-guardrails) se déclenche.
+- Limiter le périmètre des compétences : à la création d’une compétence dans la [Bibliothèque de compétences](/fr/guide/skills/library), « Quelles conversations » propose « Entretiens avec le superviseur », pour que l’IA confirme un point avec le superviseur, signale l’avancement ou demande une aide humaine.
+
+### 7. Interface d’administration
+
+L’interface d’administration regroupe tableaux de bord, configuration et consommation dans cinq sections à gauche ; l’entrée d’aide se trouve dans « Aide et guides » de la barre supérieure. Les entrées visibles varient selon le compte.
+
+- Structure des sections : Tableau de bord des données / Mon assistant / Paramètres de réponse / Base de connaissances / Bibliothèque de compétences ; en bas à gauche, « Paramètres du compte » (Profil / Sécurité de la connexion / Autorisation des rôles auprès de l’IA).
+- Différences de droits : « Utilisation de l’IA » n’est visible que par les administrateurs de département ; « Examen des conversations » n’est visible que par les administrateurs de département ou de plateforme du service Mercado Libre. Une entrée absente relève en général des droits, pas d’une panne de page.
+- Suivi de la consommation : « Aperçu des crédits » et « Utilisation mensuelle » de l’[Utilisation de l’IA](/fr/guide/dashboard/ai-usage) ; les catégories ne s’additionnent pas pour obtenir l’utilisation totale.
+- Aide intégrée : la barre supérieure contient l’« Assistant d’administration » et « Aide et guides » ; les 4 cartes de guide sous « Aide et guides » (Tableau de bord / Paramètres de l’assistant / Base de connaissances / Bibliothèque de compétences) mettent en évidence pas à pas les entrées correspondantes dans la page. À la première connexion, l’« Assistant initial de configuration » s’ouvre aussi et vous guide dans l’ordre « Connecter l’assistant → Configurer les règles d’utilisation → Mettre en place la base de connaissances » ; pour le faire plus tard, choisissez « Plus tard ».
+
+### 8. Compétences à valeur ajoutée
+
+Quand les capacités standard ne suffisent pas, reliez vos processus internes à l’aide de compétences et d’outils.
+
+- Rédiger une compétence : dans la [Bibliothèque de compétences](/fr/guide/skills/library), cliquez sur « Ajouter une compétence » et renseignez « Quand l’utiliser » et « Comment l’IA doit procéder » ; lorsqu’un traitement suit un ordre précis, écrivez les étapes dans « Comment l’IA doit procéder ».
+- Associer des outils : à la création, choisissez « Associer automatiquement les outils » ou « Choisissez les outils manuellement », puis cochez les outils par catégorie sous « Outils à utiliser » ; après l’enregistrement, la compétence peut appeler ces outils.
+- Vérifier les appels : dans [Données détaillées](/fr/guide/dashboard/data-export), sous « Étapes d’exécution → Invocation des compétences », vérifiez quelle compétence et quel outil ont été appelés lors du tour ; en l’absence d’appel, « Aucun » s’affiche.
+- Relier vos propres systèmes : pour l’intégration par API, voir la [Référence de l’API](/fr/developer/api-reference).
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Identifier à quel module appartient le problème">
+    Comparez avec la liste ci-dessus. Par exemple : un client pose plusieurs questions sans obtenir de réponse pertinente — probablement le module 2 (connaissances non couvertes) ou le module 1 (personnalité et logique de réponse non conformes) ; l’IA intervient à contretemps dans un groupe — probablement le module 4 (relations ou Chat de groupe intelligent).
+
+    Critère : vous savez nommer la page concernée, au lieu de vous limiter à un vague « l’IA ne fonctionne pas bien ».
+
+    En cas de doute, commencez par [Données détaillées](/fr/guide/dashboard/data-export) : ouvrez la « Chaîne de traitement des messages → Étapes d’exécution » d’une demande et remontez depuis les étapes « Décision de réponse », « Invocation des compétences », « Génération de connaissances » et « Garde-fous de sécurité » pour situer le problème.
+  </Step>
+
+  <Step title="Configurer sur la page correspondante et confirmer l’état d’enregistrement">
+    Une fois la page ouverte, vérifiez d’abord que la « Fenêtre de conversation gérée actuellement » est bien celle à modifier ; les interrupteurs (Style IA, Accepter automatiquement les demandes de contact, statut d’une compétence) s’enregistrent dès le clic, tandis que les champs texte passent par « Enregistrer la configuration » ou par le bouton d’enregistrement en bas de page (par exemple « Enregistrer les horaires de service »).
+
+    Critère : la page affiche « Enregistré ». Si elle affiche « Enregistré · Application non confirmée », la configuration a bien été soumise mais l’exécution n’a pas encore confirmé son application : ne concluez pas trop vite.
+
+    Remarque : un enregistrement ne signifie pas que l’IA applique aussitôt vos changements — vérifiez à l’étape suivante au lieu de modifier la même page sans fin.
+  </Step>
+
+  <Step title="Vérifier le comportement réel de l’IA avec Données détaillées">
+    Menu de gauche → Tableau de bord des données → Données détaillées : trouvez une demande concernée et ouvrez-la pour consulter la « Chaîne de traitement des messages ». Sous « Étapes d’exécution », vérifiez que « Décision de réponse », « Invocation des compétences », « Génération de connaissances » et « Garde-fous de sécurité » se sont exécutés comme prévu ; sous « Connaissances de référence », vérifiez quelles connaissances ont été citées.
+
+    Critère : l’étape que vous avez configurée possède une entrée correspondante dans la chaîne. « Inconnu » signifie qu’aucun enregistrement n’a été obtenu, pas que l’étape ne s’est pas déclenchée ; essayez une demande plus récente.
+  </Step>
+
+  <Step title="N’étendre au module suivant qu’une fois le résultat stable">
+    Ne modifiez qu’une capacité à la fois ; surveillez pendant un ou deux jours les indicateurs concernés dans [Performances](/fr/guide/dashboard/business-performance) pour détecter toute variation anormale avant de passer à la suivante. Traitez d’abord les problèmes fréquents et bien délimités, puis étendez aux processus complexes.
+
+    Critère : le nombre de Réponses et le Taux de demandes n’ont pas chuté anormalement et l’équipe ne signale pas de nouvelles erreurs de réponse.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Les pages modifiées affichent le statut « Enregistré » et celles qui exigent une confirmation de l’exécution n’affichent plus « Application non confirmée ».
+- Envoyez un message depuis un compte de test vers un canal connecté : la réponse générée selon la nouvelle configuration doit arriver ; en cas de blocage, la ligne « Garde-fous de sécurité » sous les « Étapes d’exécution » de [Données détaillées](/fr/guide/dashboard/data-export) affiche « Intercepté » (la barre de preuves « Contrôle des garde-fous » en haut du panneau affiche aussi « Intercepté »).
+- Dans [Données détaillées](/fr/guide/dashboard/data-export), les « Étapes d’exécution » de la demande concernée font apparaître l’étape configurée (Invocation des compétences / Génération de connaissances / Garde-fous de sécurité) et les « Connaissances de référence » contiennent la connaissance visée.
+- Côté indicateurs : les « Éléments appris » et les « Propositions » des [Performances](/fr/guide/dashboard/business-performance) affichent des données, signe que l’apprentissage automatique et la transmission au superviseur ont bien lieu.
+
+## Points d’attention
+
+<Warning>
+La plupart des configurations s’appliquent à la « Fenêtre de conversation gérée actuellement » (sauf la Bibliothèque de compétences). Avant de modifier quoi que ce soit, regardez quelle fenêtre est sélectionnée dans la barre latérale — une mauvaise fenêtre appliquerait les règles à un autre compte.
+</Warning>
+
+<Warning>
+La suppression d’une fenêtre de conversation ou d’une compétence est irréversible : elle est effective immédiatement après confirmation, sans restauration possible. Si vous ne les utilisez pas pour le moment, ne les supprimez pas : une compétence peut d’abord être désactivée (« Inactif »).
+</Warning>
+
+<Info>
+« Modules de compétences » et « Bibliothèque de compétences » sont deux niveaux différents : les modules de compétences sont la classification des capacités (les huit catégories de cette page) ; la [Bibliothèque de compétences](/fr/guide/skills/library) est le niveau d’exécution, où vous écrivez « comment traiter un type de tâche et quels outils appeler ». Vous ne devez y créer une compétence que lorsque le comportement intégré ne suffit pas.
+</Info>
+
+<Info>
+Un enregistrement réussi ne signifie pas que l’exécution l’a appliqué. La page affiche « Enregistré · Application non confirmée » avec le message « Configuration enregistrée. Il reste à vérifier qu’elle a été appliquée à l’assistant en cours d’exécution. » ; pour savoir si la configuration prend réellement effet, fiez-vous à la chaîne réelle dans [Données détaillées](/fr/guide/dashboard/data-export).
+</Info>
+
+<Tip>
+Si vous ne trouvez pas une entrée, utilisez « Aide et guides » dans la barre supérieure : les 4 cartes de guide (Tableau de bord / Paramètres de l’assistant / Base de connaissances / Bibliothèque de compétences) mettent en évidence pas à pas les entrées correspondantes dans la page.
+</Tip>
+
+<Tip>
+La conversation de l’« Assistant d’administration » n’est pas liée à la fenêtre sélectionnée dans la page et ne permet donc pas de confirmer qu’une configuration de fenêtre est active. Elle sert à donner des commandes (saisissez # pour les commandes forcées, / pour les exemples en langage naturel) ; une configuration au niveau d’une fenêtre se modifie sur la page correspondante et se vérifie dans [Données détaillées](/fr/guide/dashboard/data-export).
+</Tip>
+
+## Questions fréquentes
+
+### L’IA ne répond pas comme je l’ai configuré : que vérifier d’abord ?
+
+Vérifiez dans l’ordre : ① la « Fenêtre de conversation gérée actuellement » sélectionnée dans la barre latérale est-elle la bonne ; ② le statut d’enregistrement de la page est-il « Enregistré · Application non confirmée » (attendez la confirmation de l’exécution avant de juger le résultat) ; ③ les [Garde-fous de sécurité](/fr/guide/response/safety-guardrails) ont-ils bloqué cette réponse ; ④ les plages horaires et le fuseau des [Horaires de service](/fr/guide/response/working-hours) couvrent-ils l’heure actuelle ; ⑤ dans [Relations](/fr/guide/assistant/relationship-config), ce contact est-il réglé sur « En sourdine » ou identifié à tort comme collègue ; ⑥ la compétence est-elle « Activée ». Terminez par les « Étapes d’exécution » de [Données détaillées](/fr/guide/dashboard/data-export) pour voir par quelles étapes ce tour est réellement passé.
+
+### Faut-il configurer les huit modules avant de pouvoir utiliser l’assistant ?
+
+Non. Suivez votre ordre métier : commencez par une catégorie directement liée aux clients et facile à vérifier (en général « Questions-réponses professionnelles de niveau entreprise » et « Réponses quasi humaines »), ajoutez-en une à la fois et vérifiez chaque ajout dans Données détaillées.
+
+### Quel est le rapport entre les « Modules de compétences » et la « Bibliothèque de compétences » ?
+
+Les modules de compétences sont la façon de classer les capacités de l’IA — ils répondent à « quelles capacités existent ». La Bibliothèque de compétences est la configuration du niveau d’exécution — elle répond à « comment traiter ce type de tâche et quels outils appeler ». Les capacités des huit modules n’exigent pas toutes une compétence : lorsque le comportement intégré suffit, vous n’avez rien à toucher dans la Bibliothèque de compétences.
+
+### Quel est le rapport entre les commandes de l’« Assistant d’administration » et la configuration des pages ? Pourquoi ne pas s’en servir pour vérifier ?
+
+La conversation de l’« Assistant d’administration » n’est pas liée à la fenêtre de conversation sélectionnée dans la page (l’interface indique : « Cette conversation n’est pas liée à la fenêtre sélectionnée sur la page ; elle ne permet donc pas de vérifier si la configuration de cette fenêtre est appliquée. »). Elle permet de lancer des commandes forcées (activer le rapport quotidien, mettre le travail en pause, saisir une connaissance, etc.), mais l’effet d’une configuration de fenêtre se lit sur la page correspondante et dans la chaîne réelle de [Données détaillées](/fr/guide/dashboard/data-export).
+
+### Pourquoi mon menu n’affiche-t-il pas « Utilisation de l’IA » ni « Examen des conversations » ?
+
+Ces deux pages sont soumises à des droits : « Utilisation de l’IA » n’est visible que par les administrateurs de département — un non-administrateur qui l’ouvre directement voit « Accès refusé » ; « Examen des conversations » n’est visible que par les administrateurs de département ou de plateforme du service Mercado Libre. Une entrée absente signifie que le compte actuel n’a pas les droits correspondants, pas que la page est en panne.

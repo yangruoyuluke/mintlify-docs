@@ -1,0 +1,159 @@
+---
+title: Bibliothèque de compétences
+description: "Définissez la façon dont l’IA traite un type de tâche : créez ou désactivez des compétences, choisissez les conversations dans lesquelles elles s’appliquent et les outils à utiliser, puis vérifiez qu’elles sont bien actives."
+keywords:
+  - Bibliothèque de compétences
+  - Ajouter une compétence
+  - Comment l’IA doit procéder
+  - Mode de sélection de l'outil
+  - Compétences intégrées
+---
+
+La « Bibliothèque de compétences » indique à l’IA comment traiter un type de tâche : vous décrivez le processus sous forme de compétence étape par étape, puis vous précisez dans quelles conversations elle s’applique et quels outils elle peut appeler. La Base de connaissances détermine ce que l’IA sait ; la Bibliothèque de compétences détermine comment elle agit.
+
+## Quand en avez-vous besoin ?
+
+- L’IA connaît la réponse mais ne suit pas le bon ordre — elle omet les questions de relance ou les recherches d’outils nécessaires — et vous voulez fixer ce type de tâche dans un processus défini.
+- Vous voulez capitaliser le mode opératoire d’une catégorie de questions (par exemple « Recommandation produit » ou « Gestion des réclamations après-vente ») afin que l’IA suive toujours le même ordre.
+- Vous devez limiter le périmètre d’une compétence ou les outils qu’elle utilise : uniquement les conversations avec les clients ou les entretiens avec le superviseur, ou un ensemble précis d’outils appelables.
+- Vous souhaitez suspendre temporairement une compétence : désactivez-la dans la liste pour observer l’effet, sans avoir à la supprimer.
+
+## Comment y accéder ?
+
+Menu de gauche → Bibliothèque de compétences. La Bibliothèque de compétences est une entrée autonome du menu de gauche, elle ne figure pas dans le groupe « Base de connaissances » ; la page affiche le titre « Bibliothèque de compétences » et la description « Gérez les compétences métier que l’IA utilise pour répondre aux clients. ».
+
+La Bibliothèque de compétences n’est pas liée à la « Fenêtre de conversation gérée actuellement » : changez cette fenêtre à gauche, la liste des compétences reste inchangée.
+
+<Frame>
+  ![Page de la Bibliothèque de compétences : en haut, le champ « Rechercher une compétence » et le bouton « Ajouter une compétence » ; le tableau en dessous liste les compétences par « Nom de la compétence », « Quand l'utiliser », « Statut » et « Actions », chaque ligne affichant un interrupteur de statut et des actions](/images/fr/guide/skills/library/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Repérer la compétence dans la liste et vérifier le statut « Activée / Inactif »">
+    Saisissez un mot-clé dans « Rechercher une compétence » ; la liste se filtre en temps réel sur le nom de la compétence et sur le contenu de « Quand l'utiliser », sans bouton de recherche à cliquer. Les compétences personnalisées apparaissent en premier, les compétences intégrées ensuite.
+
+    La colonne « Statut » combine un interrupteur et une pastille : allumé, il affiche « Activée » ; éteint, « Inactif ». Un clic enregistre immédiatement, sans confirmation ; en cas d’échec, « Le changement de statut a échoué. Veuillez réessayer. » s’affiche et l’interrupteur revient à son état précédent.
+
+    - Les compétences intégrées portent le badge « Compétence intégrée » et leur colonne « Actions » ne contient que « Voir ».
+    - Pour les compétences personnalisées, la colonne « Actions » affiche un menu « ⋯ » avec « Voir », « Modifier » et « Supprimer ».
+
+    Critère : la position de l’interrupteur correspond à la pastille « Activée / Inactif » et la compétence à ajuster a bien été trouvée.
+
+    Remarque : une recherche sans résultat affiche « Pas de compétences correspondantes. Essayez un autre mot clé. » ; une liste vide affiche « Pas encore de compétences. Ajoutez-en un pour commencer. ».
+  </Step>
+
+  <Step title="Cliquer sur « Ajouter une compétence » et remplir « Nom de compétence » et « Quand l'utiliser »">
+    En haut à droite, cliquez sur « Ajouter une compétence » pour ouvrir l’éditeur ; pour une compétence existante, le titre devient « Modifier la compétence · nom de la compétence ».
+
+    - Nom de compétence : obligatoire. Utilisez un nom court qui décrit ce que fait la compétence, par exemple « Gestion des réclamations après-vente ». Si vous laissez le champ vide et cliquez sur créer, « Nom de compétence requis » s’affiche.
+    - Quand l'utiliser : précisez ce que le client va demander et ce que la compétence permet de résoudre. L’IA s’appuie sur ce texte pour décider quand l’utiliser.
+
+    Critère : les deux champs sont remplis et le bouton en haut à droite affiche « Créer une compétence » (ou « Enregistrer les modifications » en modification).
+
+    <Frame>
+      ![Page d’édition d’une nouvelle compétence : le formulaire comporte les champs « Nom de compétence », « Quand l'utiliser », « Comment l’IA doit procéder » et « Quelles conversations » ; le bouton « Créer une compétence » se trouve en haut à droite](/images/fr/guide/skills/library/02-add-skill.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Rédiger « Comment l’IA doit procéder »">
+    Écrivez les étapes dans l’ordre : ce qu’il faut vérifier d’abord, comment relancer lorsque des informations manquent, quoi rechercher lorsqu’une requête est nécessaire, comment répondre au final et quoi faire si la recherche échoue. Une fois la compétence déclenchée, l’IA suit ces étapes ; vous pouvez aussi indiquer les outils à appeler et la conduite à tenir en cas d’échec.
+
+    - Lorsque la zone d’édition est vide, le bouton « Insérer un schéma d'écriture » en dessous insère un modèle en cinq étapes (Premier contrôle → Si des informations manquent → Lorsqu’une recherche est nécessaire → Lors de la réponse au client → Si la recherche échoue) ; modifier ce modèle est plus rapide que d’écrire à partir d’une page blanche.
+    - Tapez / pour ouvrir la liste des outils connexes ; l’outil sélectionné est inséré comme balise dans ce processus.
+
+    Critère : le processus présente un ordre clair et des branchements, pas une simple phrase de résumé.
+  </Step>
+
+  <Step title="Choisir « Quelles conversations » et « Outils à utiliser »">
+    « Quelles conversations » propose trois options :
+
+    - Entretiens avec le superviseur : l’IA peut appeler cette compétence pour confirmer un point avec le superviseur, lui signaler l’avancement ou solliciter une aide humaine.
+    - Conversations avec les clients : l’IA peut appeler cette compétence pour répondre aux clients, assurer le suivi de leurs questions ou traiter leurs demandes.
+    - Les deux : la compétence est appelable dans les échanges de l’IA avec le superviseur comme avec les clients.
+
+    « Outils à utiliser » est replié par défaut ; cliquez sur le titre pour le déplier. Pour une nouvelle compétence, « Associer automatiquement les outils » est sélectionné par défaut ; vous pouvez aussi passer à « Choisissez les outils manuellement » :
+
+    - Associer automatiquement les outils : après la création, le système associe les outils adaptés en fonction du contenu de la compétence.
+    - Choisissez les outils manuellement : cochez les outils par catégorie ; dépliez une catégorie pour cocher les outils un à un, ou cochez la catégorie pour sélectionner tous ses outils. Si vous enregistrez sans rien cocher, la compétence n’a aucun outil lié.
+
+    Critère : le type de conversation correspond à votre usage réel ; en sélection manuelle, les outils nécessaires sont cochés et, une fois le panneau replié, le résumé affiche « Choisi manuellement; étendre pour ajuster ».
+
+    Remarque : le « Mode de sélection de l'outil » n’est disponible qu’à la création. Lorsque vous modifiez une compétence existante, la zone affiche directement les cases à cocher des outils ; si vous décochez tout et enregistrez, cette compétence n’aura plus aucun outil lié.
+  </Step>
+
+  <Step title="Enregistrer et vérifier">
+    Cliquez sur « Créer une compétence » en haut à droite (ou « Enregistrer les modifications » en modification). « Enregistrement réussi » s’affiche et la page revient à la liste.
+
+    Critère : la compétence apparaît dans la liste avec le statut « Activée » — les nouvelles compétences sont activées par défaut ; si vous ne voulez pas l’utiliser tout de suite, revenez dans la liste et éteignez l’interrupteur.
+
+    Remarque : si « Le contenu de la compétence a été enregistré, mais les paramètres suivants n’ont pas été appliqués. Réessayez sur cette page. » s’affiche, le contenu de la compétence est déjà enregistré ; seuls l’activation ou la liaison des outils n’ont pas abouti. Restez sur la page : le bouton affiche désormais « Enregistrer les modifications », cliquez dessus à nouveau pour réessayer — cette action ne crée pas de doublon.
+  </Step>
+
+  <Step title="Consulter, modifier et supprimer">
+    Cliquez sur le nom de la compétence ou sur « Voir » pour ouvrir la page de détail : le contenu est présenté en deux sections, « Quand l'utiliser » et « Comment l’IA doit procéder », avec en haut les badges « Compétence intégrée / Compétence personnalisée » et « Activée / Inactif », et « Retour aux compétences » en haut à gauche.
+
+    - Modifier : pour une compétence personnalisée, cliquez sur « Modifier » en haut à droite de la page de détail, ou choisissez « Modifier » dans le menu « ⋯ » de la liste ; cliquez ensuite sur « Enregistrer les modifications ».
+    - Compétences intégrées : leur contenu n’est pas modifiable. La page de détail indique « Le contenu des compétences intégrées ne peut pas être modifié. Vous pouvez l'activer ou l'éteindre dans la liste. » et n’offre aucune entrée de modification ni de suppression.
+    - Supprimer : pour une compétence personnalisée, choisissez « Supprimer » dans le menu « ⋯ » ; la boîte de confirmation « Voulez-vous vraiment supprimer cette compétence? » affiche le nom de la compétence et la suppression est immédiate après confirmation.
+
+    Critère : les deux sections de la page de détail correspondent à votre saisie ; après suppression, la compétence n’apparaît plus dans la liste.
+
+    Remarque : la suppression est irréversible. Si des modifications ne sont pas enregistrées, un clic sur « Retour aux compétences » ou un changement de menu ouvre la boîte « Ignorer les modifications non enregistrées ? » — choisissez « Continuer à modifier » pour rester sur la page.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Dans la liste, le statut de la compétence visée est « Activée » et l’interrupteur correspond à la pastille.
+- Après une création ou une modification, « Enregistrement réussi » s’est affiché et le contenu de la liste et de la page de détail correspond à votre saisie.
+- « Quand l'utiliser » décrit bien le scénario de déclenchement, et « Quelles conversations » couvre les scénarios dans lesquels vous l’utilisez réellement.
+
+## Points d’attention
+
+<Warning>
+La suppression d’une compétence personnalisée est irréversible : elle est effective immédiatement après confirmation, sans restauration possible. Pour une simple suspension, éteignez d’abord l’interrupteur (« Inactif ») pour conserver la configuration.
+</Warning>
+
+<Warning>
+Si vous décochez tous les outils lors de la modification d’une compétence et que vous enregistrez, cette compétence n’aura plus aucun outil lié (l’interface indique « Si vous désélectionnez chaque outil et enregistrez, cette compétence n'aura aucun outil lié. »). Pour passer à une autre sélection d’outils, décochez ceux dont vous n’avez plus besoin, cochez ceux à utiliser, puis enregistrez.
+</Warning>
+
+<Info>
+Les compétences et les connaissances ont des rôles différents : la Base de connaissances ([Génération de connaissances](/fr/guide/knowledge/generation), [Optimisation des connaissances](/fr/guide/knowledge/optimization), [Gestion des connaissances](/fr/guide/knowledge/management)) couvre ce que l’IA sait ; la Bibliothèque de compétences couvre la manière de faire — pour une même question, les connaissances fournissent la réponse et la compétence décide des étapes de traitement et des appels d’outils.
+</Info>
+
+<Info>
+Dans la liste, les compétences portant le badge « Compétence intégrée » sont fournies par le système : leur contenu est en lecture seule et vous pouvez les activer ou les désactiver ; celles sans badge sont des compétences personnalisées, que vous pouvez modifier et supprimer.
+</Info>
+
+<Tip>
+Vous ne savez pas comment rédiger ? Ouvrez d’abord « Voir » sur quelques compétences intégrées et inspirez-vous de la formulation de leur « Quand l'utiliser » et de leur « Comment l’IA doit procéder ».
+</Tip>
+
+<Tip>
+Pour vérifier qu’une compétence a bien été appelée, ouvrez la demande correspondante dans [Données détaillées](/fr/guide/dashboard/data-export) et regardez « Invocation des compétences » sous « Chaîne de traitement des messages → Étapes d'exécution » : le nom de la compétence s’affiche lorsqu’elle a été appelée, « Aucun » sinon.
+</Tip>
+
+## Questions fréquentes
+
+### L’IA n’utilise pas la compétence que j’ai configurée : que vérifier en premier ?
+
+Vérifiez dans l’ordre : le statut dans la liste est-il « Activée » (interrupteur allumé) ; « Quand l'utiliser » indique-t-il clairement ce que le client demande et ce que la compétence résout — c’est ce texte qui permet à l’IA de décider de l’utiliser ; « Quelles conversations » couvre-t-il le scénario actuel (une compétence limitée aux « Entretiens avec le superviseur » n’est pas appelée dans les conversations avec les clients) ; pour les scénarios qui nécessitent des outils, les outils sont-ils liés. Si tout est correct, ouvrez la ligne « Étapes d'exécution → Invocation des compétences » dans [Données détaillées](/fr/guide/dashboard/data-export) pour vérifier si elle a été appelée lors de ce tour.
+
+### Pourquoi « Associer automatiquement les outils / Choisissez les outils manuellement » sont-ils introuvables lors de la modification d’une compétence ?
+
+Le « Mode de sélection de l'outil » n’est proposé qu’à la création d’une compétence. Pour une compétence existante, dépliez « Outils à utiliser » et ajustez directement les cases à cocher ; si vous décochez tout et enregistrez, cette compétence n’aura plus aucun outil lié.
+
+### Pourquoi ne puis-je pas modifier une compétence intégrée ?
+
+Le contenu des compétences intégrées est fourni par le système et n’est pas modifiable ; vous pouvez les activer ou les désactiver dans la liste. Si vous avez besoin d’un processus différent, cliquez sur « Ajouter une compétence » pour créer une compétence personnalisée.
+
+### Que signifie le message « Le contenu de la compétence a été enregistré, mais les paramètres suivants n’ont pas été appliqués. Réessayez sur cette page. » ?
+
+Le contenu de la compétence est bien enregistré, mais l’activation ou la liaison des outils n’a pas abouti. Restez sur la page : le bouton en haut à droite affiche « Enregistrer les modifications » ; cliquez dessus à nouveau pour réessayer, sans créer de doublon.
+
+### Peut-on restaurer une compétence supprimée ?
+
+Non, la suppression est irréversible. Pour une simple suspension, éteignez l’interrupteur afin de conserver la configuration.

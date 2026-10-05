@@ -1,0 +1,134 @@
+---
+title: Configuración de nuevos contactos
+description: "Configure la recepción de nuevos contactos en la ventana de conversación seleccionada: acepte solicitudes de amistad automáticamente, envíe los mensajes de bienvenida en orden y recopile información del cliente en la primera conversación."
+keywords:
+  - configuración de nuevos contactos
+  - aceptar solicitudes de amistad automáticamente
+  - mensaje de bienvenida para nuevos contactos
+  - reglas de captación de datos
+  - aceptación automática de solicitudes de amistad
+---
+
+«Configuración de nuevos contactos» gestiona la primera conversación después de que llegue un nuevo contacto: acepta las solicitudes de amistad automáticamente, envía en orden los mensajes de bienvenida que usted redacte y recopila en esa primera conversación la información del cliente que le interesa. La página se organiza en tres tarjetas —01 Aceptar automáticamente las solicitudes de amistad, 02 Mensaje de bienvenida para nuevos contactos y 03 Reglas de captación de datos de clientes potenciales—, y su configuración solo se aplica a la ventana seleccionada en «Ventana de conversación actual», a la izquierda.
+
+## Cuándo la necesitará
+
+- Recibe muchas solicitudes de amistad y no quiere aceptarlas una por una.
+- Quiere que, en la primera conversación tras aceptar a un nuevo contacto, el asistente se presente y explique en qué puede ayudar y cómo pasar a un compañero.
+- Quiere que el asistente aproveche la conversación para recopilar datos como el presupuesto o las necesidades, y así facilitar el seguimiento posterior.
+- Una solicitud de amistad no se aceptó automáticamente, o un nuevo contacto no recibió el mensaje de bienvenida, y viene a revisar los interruptores y el contenido.
+
+## Ruta de acceso
+
+Menú izquierdo → Configuración de respuestas → Configuración de nuevos contactos.
+
+Al entrar, mire primero la «Ventana de conversación actual» de la parte superior izquierda: la configuración de las tres tarjetas se guarda por ventana, así que al cambiar de ventana verá otra configuración. Si no hay ventanas disponibles, la página muestra «No hay ventanas de conversación disponibles», «Primero, conecte una ventana de conversación que no sea de administración y después continúe con la configuración.» y el botón «Conectar una ventana»; conecte primero una desde [Inicio de sesión en canales](/es/guide/assistant/login-online).
+
+<Frame>
+  ![Página «Configuración de nuevos contactos»: arriba están el título y la descripción; a la izquierda, «Ventana de conversación actual»; a la derecha, de arriba abajo, las tres tarjetas 01 Aceptar automáticamente las solicitudes de amistad, 02 Mensaje de bienvenida para nuevos contactos y 03 Reglas de captación de datos de clientes potenciales](/images/es/guide/response/new-customer-reception/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Confirme la «Ventana de conversación actual»">
+    Antes de continuar, confirme que la «Ventana de conversación actual» de la parte superior izquierda es la ventana que desea configurar.
+
+    Cómo comprobarlo: el nombre de la ventana coincide con la ventana del asistente que quiere configurar.
+  </Step>
+
+  <Step title="Active «Aceptar automáticamente las solicitudes de amistad» (si es necesario)">
+    En la tarjeta 01, mueva el interruptor a la posición de activado. El interruptor se guarda al instante, sin necesidad de pulsar ningún botón; la etiqueta pasa de «Desactivado» a «Activado» y aparece el aviso «Aceptación automática de solicitudes de amistad activada.». Si no quiere aceptar solicitudes automáticamente, déjelo desactivado y pase al siguiente paso.
+
+    Cómo comprobarlo: la etiqueta muestra «Activado».
+
+    Nota: al activarlo, el sistema aceptará automáticamente todas las solicitudes de amistad de esa ventana, incluidas las de publicidad o las de personas que no quiere agregar. Confirme que esta ventana es adecuada antes de activarlo.
+  </Step>
+
+  <Step title="Añada y guarde el contenido de bienvenida">
+    En la tarjeta 02 «Mensaje de bienvenida para nuevos contactos», pulse «Añadir elemento» y elija un tipo de contenido en el menú desplegable:
+
+    - Texto: introduzca el texto; se admiten saltos de línea;
+    - Imagen / Archivo: seleccione un archivo local y se subirá automáticamente; cuando la subida termine, se muestra el nombre del archivo. Cada imagen o archivo no puede superar los 100 MB.
+
+    Puede añadir hasta 6 elementos y eliminar cada uno por separado; el orden de la lista es el orden de envío. Si no sabe cómo redactarlo, pulse «Ver ejemplo» para consultar un ejemplo. Cuando termine de editar el contenido, pulse «Guardar».
+
+    <Frame>
+      ![Menú desplegable que se abre al pulsar «Añadir elemento» en la tarjeta «Mensaje de bienvenida para nuevos contactos», con las opciones «Texto», «Imagen» y «Archivo»](/images/es/guide/response/new-customer-reception/02-add-item.jpg)
+    </Frame>
+
+    Cómo comprobarlo: el estado de la derecha pasa de «Sin guardar» a «Guardado» y aparece el aviso «Mensaje de bienvenida guardado con éxito»; si nunca se ha guardado contenido, se muestra «Sin contenido guardado todavía».
+
+    Nota: que la subida termine no significa que el contenido esté guardado: las imágenes y los archivos también requieren pulsar «Guardar». El mensaje de bienvenida solo se envía en la primera conversación con un contacto recién agregado; los clientes que ya están en la lista de contactos no lo reciben.
+  </Step>
+
+  <Step title="Active el interruptor de «Mensaje de bienvenida para nuevos contactos»">
+    Cuando el contenido esté guardado, mueva el interruptor de la tarjeta 02 a la posición de activado; aparece el aviso «Mensaje de bienvenida para nuevos contactos activado.».
+
+    Cómo comprobarlo: el resumen de la tarjeta pasa a «Nuevos contactos recibirán los mensajes de bienvenida guardados en orden.». Si muestra «Los mensajes de bienvenida están activados, pero aún no hay contenido guardado. Añádalo y guárdelo.», significa que el contenido todavía no está guardado; vuelva al paso anterior y pulse «Guardar».
+
+    Nota: también puede activar primero el interruptor y añadir el contenido después, pero no se enviará ningún mensaje de bienvenida hasta que el contenido esté guardado.
+  </Step>
+
+  <Step title="Complete y guarde las «Reglas de captación de datos de clientes potenciales»">
+    En la tarjeta 03, pulse «Añadir elemento» para añadir una fila con tres campos: «Dato que recopilar», «Descripción» y «Ejemplo». Los tres van marcados con `*` y son obligatorios; por ejemplo: «presupuesto / presupuesto de compra previsto por el cliente o intervalo de precios / menos de 30.000 yuanes». Pulse «Ver ejemplo» para consultar un ejemplo.
+
+    Puede añadir hasta 6 filas y eliminar cada una por separado. Cuando termine, pulse «Guardar» en la parte inferior.
+
+    Cómo comprobarlo: el «Estado actual» de la parte inferior pasa de «Sin guardar» a «Guardado · Aplicación en el servicio sin confirmar» y aparece el aviso «Reglas de recopilación de datos guardadas.». Si se equivoca, pulse «Descartar los cambios» para volver al último contenido guardado.
+
+    Nota: esta tarjeta no tiene un interruptor de activación independiente: una vez guardadas las reglas, el asistente recopilará información en las conversaciones según lo guardado. Si no quiere recopilarla, elimine todas las filas y pulse «Guardar»; el estado pasará a «No hay contenido personalizado».
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación actual» de la izquierda es la ventana objetivo.
+- La etiqueta de la tarjeta 01 muestra «Activado» (si necesita que se acepten automáticamente las solicitudes de amistad).
+- El interruptor de la tarjeta 02 está «Activado», el resumen es «Nuevos contactos recibirán los mensajes de bienvenida guardados en orden.» y el estado del contenido es «Guardado».
+- El «Estado actual» de la tarjeta 03 es «Guardado · Aplicación en el servicio sin confirmar», los tres campos están completos y no queda nada «Sin guardar».
+- Con una cuenta de prueba, agregue como contacto la ventana configurada: la solicitud de amistad se acepta automáticamente y los mensajes de bienvenida se envían en orden. «Guardado · Aplicación en el servicio sin confirmar» solo se puede confirmar con una conversación real; hasta entonces no se sabe si el servicio ya aplicó la configuración.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Al activar «Aceptar automáticamente las solicitudes de amistad», el sistema aceptará automáticamente todas las solicitudes de amistad de esa ventana, incluidas las de publicidad o las de personas que no quiere agregar. Si no está seguro de querer abrirlo, mantenga «Desactivado» y gestione las solicitudes manualmente.
+</Warning>
+
+<Warning>
+Si hay contenido sin guardar, el cambio de menú o de ventana se interceptará con el cuadro de diálogo «¿Descartar los cambios sin guardar?», cuya descripción es «Esta página contiene cambios sin guardar. Se perderán si sale de ella.»; elija «Descartar los cambios» para descartar lo introducido o «Seguir editando» para volver a la página. Si actualiza la página o cierra la pestaña directamente, es el navegador el que muestra la confirmación de salida. Mientras hay una operación de guardado o de subida en curso no se puede salir; se muestra «Espere a que termine el guardado o la subida en curso antes de salir.».
+</Warning>
+
+<Info>
+Las tres tarjetas se guardan de distinta forma: los interruptores de 01 y 02 se guardan al instante; el contenido de bienvenida y las reglas de captación solo se escriben al pulsar «Guardar». El interruptor y el contenido se envían por separado, así que para cambiar un interruptor no hace falta guardar antes el contenido.
+</Info>
+
+<Info>
+Después de guardar las reglas de captación, el estado muestra «Guardado · Aplicación en el servicio sin confirmar»: la configuración ya se guardó, pero aún no se ha confirmado que el servicio la haya aplicado; verifíquelo con la conversación de un nuevo contacto real.
+</Info>
+
+<Tip>
+No complete las 6 filas de captación de una vez: cuantas más filas, más parece un cuestionario y más baja la tasa de respuesta de los clientes; empiece con las 1–3 más importantes. Si no sabe cómo redactarlas, pulse «Ver ejemplo» y adáptelo.
+</Tip>
+
+## Preguntas frecuentes
+
+### El interruptor está activado, pero el nuevo contacto no recibe el mensaje de bienvenida. ¿Por qué?
+
+Revise en orden: si el resumen de la tarjeta 02 es «Los mensajes de bienvenida están activados, pero aún no hay contenido guardado. Añádalo y guárdelo.» —el interruptor solo decide si se envía o no, mientras que el contenido solo cuenta como guardado cuando se pulsa «Guardar»—; si el contenido está completo (si un texto está vacío, o una imagen o un archivo no se subió correctamente, al guardar aparece «Complete el contenido de todos los mensajes de bienvenida.»); y si la «Ventana de conversación actual» de la izquierda es la ventana en la que está el cliente, porque la configuración se guarda por ventana. Además, el mensaje de bienvenida solo se envía en la primera conversación con un contacto recién agregado; los clientes que ya están en la lista de contactos no lo reciben.
+
+### Subí una imagen o un archivo, pero al guardar sigue apareciendo que el contenido está incompleto. ¿Por qué?
+
+Al pulsar «Guardar» se revisa toda la lista elemento por elemento: la causa más común es que quede algún elemento de texto sin contenido (los elementos de texto no pueden estar vacíos); una imagen o un archivo solo cuentan como contenido válido cuando se ha seleccionado el archivo, la subida ha terminado y se muestra el nombre. Mientras hay una subida en curso la página no se puede editar, así que no habrá elementos adjuntos a medio subir; complete los que falten y vuelva a pulsar «Guardar». Cada imagen o archivo no puede superar los 100 MB; si se excede, aparece «La imagen no puede superar los 100 MB.» o «El archivo no puede superar los 100 MB.».
+
+### ¿Se pueden desactivar las reglas de captación?
+
+No tienen un interruptor independiente. Una vez guardadas, el asistente recopilará información en las conversaciones según las reglas guardadas; si no quiere recopilarla, elimine todas las filas y pulse «Guardar»: el estado de la tarjeta pasará a «No hay contenido personalizado». Para ajustar las reglas también debe volver a pulsar «Guardar»; si no quiere los cambios de este intento, pulse «Descartar los cambios».
+
+### ¿Por qué el botón «Guardar» está gris y no responde?
+
+El botón está deshabilitado mientras no haya cambios; modifique primero un campo (el estado pasa a «Sin guardar») o añada una fila con «Añadir elemento» y guarde después. Además, mientras se carga la configuración de la ventana, se está subiendo una imagen o un archivo, o hay un guardado en curso, la página no se puede editar temporalmente.
+
+### Aparece «No se pudo cargar la configuración de esta ventana de conversación. Inténtelo de nuevo antes de editar o guardar.». ¿Qué hago?
+
+Pulse «Reintentar», junto al aviso, para volver a cargar; hasta que la carga finalice correctamente, la página no permite editar ni guardar, para no sobrescribir la configuración existente. Si falla varias veces, compruebe primero la red o consulte a un administrador para verificar la configuración guardada de esta ventana.

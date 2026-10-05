@@ -1,0 +1,142 @@
+---
+title: "La méthode de travail MarsMind"
+description: "Encadrez l’IA comme un collègue numérique : fixez d’abord les scénarios et les limites, entraînez-la sur de vraies conversations, répondez à ses questions et faites le point régulièrement pour améliorer la qualité du service à chaque cycle."
+keywords:
+  - "méthode de travail"
+  - "collègue numérique"
+  - "prise en charge de l’IA"
+  - "scénarios et limites"
+  - "entraînement sur conversations réelles"
+  - "revue régulière"
+---
+
+L’IA de MarsMind est un collègue numérique qui vient faire le travail, mais elle ne s’améliore pas d’elle-même une fois connectée : vous délimitez ce qu’elle gère et ce qu’elle ne gère pas, vous la nourrissez et la corrigez avec de vraies conversations, elle vient vous consulter lorsqu’elle a un doute, et vous relisez régulièrement les données pour décider quoi lui apprendre ensuite. Cette page décompose ce cycle en quatre étapes, chacune rattachée à des pages précises de l’interface d’administration. Pour savoir comment la diriger dans la conversation, voir [Travailler aux côtés de l’IA](/fr/collaboration/basics) ; pour le détail des commandes, voir [Collaboration avancée et commandes](/fr/collaboration/advanced).
+
+## Quand en avez-vous besoin ?
+
+- Vous venez de connecter votre première fenêtre de conversation et vous voulez que l’IA prenne rapidement en charge de vrais clients, plutôt que d’avancer dans le désordre.
+- L’IA est en service depuis un moment : certaines questions reçoivent une réponse juste, d’autres échouent régulièrement, et vous voulez savoir par où commencer.
+- Vous vous apprêtez à étendre le service à d’autres canaux ou à d’autres activités, et vous voulez d’abord stabiliser l’IA dans un scénario avant de dupliquer la configuration.
+- Vous voulez donner un rythme à l’entretien courant : quelques minutes par jour, quelques minutes par semaine, et quoi faire pendant ce temps.
+
+## Comment y accéder ?
+
+Cette méthode traverse plusieurs modules, à utiliser étape par étape :
+
+- Fixer les scénarios et les limites : menu de gauche → Mon assistant (Connexion aux canaux, Personnalité de base, Relations), Paramètres de réponse (Règles de réponse, Garde-fous de sécurité, Accueil des nouveaux clients, Horaires de service).
+- Lui apprendre des connaissances et des compétences : menu de gauche → Base de connaissances (Génération de connaissances, Optimisation des connaissances, Gestion des connaissances), Bibliothèque de compétences.
+- Voir comment elle travaille : menu de gauche → Tableau de bord des données → Performances, Données détaillées.
+- Dialoguer directement avec elle et lui donner des ordres : barre supérieure, à droite → « Assistant d’administration ».
+
+Les configurations de Mon assistant et des Paramètres de réponse suivent la « Fenêtre de conversation gérée actuellement », à gauche : si vous changez de fenêtre par erreur, c’est la configuration d’un autre canal que vous modifiez.
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Fixer d’abord les scénarios et les limites : périmètre réduit, lignes rouges claires">
+    N’accompagnez qu’un scénario à la fois : choisissez d’abord un seul canal (WeChat, WeCom, Lien du site Web, Mini-programme ou Compte officiel) et un seul type d’activité (les demandes avant-vente, par exemple) ; ne mettez pas plusieurs fenêtres en service en même temps.
+
+    1. Connecter une fenêtre : Mon assistant → [Connexion aux canaux](/fr/guide/assistant/login-online) → « Créer un nouveau canal de communication » en haut à droite. Le statut « En service » indique qu’elle sert réellement les clients ; « En attente » signifie que la connexion ou l’autorisation n’est pas terminée.
+    2. Définir qui elle est et comment elle parle : Mon assistant → [Personnalité de base](/fr/guide/assistant/persona). Sous « Style IA », choisissez « Détaillé et poli » ou « Flexible et concis » (la sélection s’enregistre immédiatement) ; dans « Instructions personnalisées », rédigez l’identité de l’IA, son périmètre de service et ses principes de réponse, puis cliquez sur « Enregistrer la configuration ».
+    3. Décider quoi faire en cas de doute : Paramètres de réponse → [Règles de réponse](/fr/guide/response/reply-rules). Dans « Que répondre lorsque l’IA ne connaît pas la réponse ? », rédigez le message de repli puis cliquez sur « Enregistrer le texte de la réponse », et activez « Utiliser une réponse fixe » ; dans « Signalement proactif des événements importants », précisez quelles situations signaler au superviseur et sous quel format.
+    4. Définir où elle ne doit pas parler : sur la même page, renseignez les règles du « Chat de groupe intelligent » dans « Messages auxquels l’IA doit répondre » et « Messages auxquels l’IA ne doit pas répondre » (applicable uniquement sur les canaux WeChat/WeCom) ; si vous gérez des demandes de contact, configurez aussi l’acceptation automatique, le message de bienvenue et les informations à recueillir dans [Accueil des nouveaux clients](/fr/guide/response/new-customer-reception).
+    5. Poser les lignes rouges : Paramètres de réponse → [Garde-fous de sécurité](/fr/guide/response/safety-guardrails). Cliquez sur « Ajouter une règle », choisissez « Correspondance stricte avec les mots-clés » ou « Analyse sémantique par le modèle » comme méthode de détection, réglez « Bloquer la réponse ? », et pour une correspondance non bloquée, rédigez le contenu à envoyer au client ; si besoin, réglez « Notification au Leader » sur « Notifier le Leader ».
+    6. Définir les horaires promis aux clients : Paramètres de réponse → [Horaires de service](/fr/guide/response/working-hours). Planifiez les créneaux de la semaine puis cliquez sur « Enregistrer les horaires de service ». Les horaires communiqués à l’extérieur sont ceux définis ici (le fuseau applique un décalage UTC fixe, sans ajustement automatique à l’heure d’été).
+
+    Critère : dans la Personnalité de base et les Règles de réponse, plus aucune mention « Non enregistré », et le bouton « Enregistrer les horaires de service » a bien été cliqué ; envoyez ensuite quelques messages via un vrai canal couvrant les trois cas — une question à laquelle elle sait répondre, une question sans réponse, un cas pouvant franchir une ligne rouge — et toutes les réponses respectent vos règles.
+
+    Remarque : les interrupteurs s’enregistrent immédiatement, le contenu texte nécessite un clic sur le bouton d’enregistrement correspondant. La méthode de détection d’un garde-fou ne peut pas être modifiée après sa création : pour la changer, supprimez la règle et recréez-la ; une seule « Analyse sémantique par le modèle » est autorisée par fenêtre. À la mise en service, commencez par un test à petite échelle sur de vraies conversations et n’ouvrez le volume qu’après confirmation des limites.
+  </Step>
+
+  <Step title="Entraîner sur de vraies conversations : un type de problème à la fois">
+    Le matériel d’entraînement vient de vrais clients, pas de questions-réponses imaginées. Procédez dans cet ordre — d’abord voir comment elle a traité le cas, ensuite décider quoi modifier :
+
+    1. Voir où elle bloque : Tableau de bord des données → [Données détaillées](/fr/guide/dashboard/data-export), filtrez selon vos besoins (période, utilisateur/groupe, catégorie d’intention, etc.), puis ouvrez une demande pour consulter sa « Chaîne de traitement des messages » : vérifiez d’abord si les « Connaissances de référence » ont retrouvé des connaissances pertinentes, puis à quelle étape se sont arrêtées les « Étapes d’exécution » (Contexte de conversation → Gestion de groupe → Décision de réponse → Invocation des compétences → Génération de connaissances → Garde-fous de sécurité).
+    2. Compléter les connaissances : Base de connaissances → [Génération de connaissances](/fr/guide/knowledge/generation). « Générer à partir du document » convient pour importer vos documents existants (fichier ≤ 100 Mo ; à la soumission, la fenêtre « Confirmer la consommation des crédits » s’affiche, à raison de 100 crédits par document) ; « Générer à partir de la page Web » convient au site Web et aux pages d’aide ; pour les questions-réponses déjà rédigées, utilisez « Ajouter des connaissances prêtes ». Après la soumission, suivez la tâche dans « Historique des générations », puis cliquez sur « Voir le résultat » une fois le traitement terminé pour poursuivre.
+    3. Traiter ce qu’elle a appris et ce à quoi elle n’a pas su répondre : Base de connaissances → [Optimisation des connaissances](/fr/guide/knowledge/optimization). Dans « En attente de validation », « Accepter » ou « Ignorer » chaque élément ; dans « Besoins de réponse », remplissez le champ « Saisissez une réponse prête à envoyer aux clients » puis cliquez sur « Confirmer » (cette vue n’est pas activée dans tous les environnements). Pour les questions posées de façon répétée, révisez directement la réponse et le groupe dans « Questions fréquentes récentes » (si l’option est activée).
+    4. Modifier sa façon de traiter : pour les questions de processus (quelles étapes suivre, quels outils utiliser), modifiez « Quand l’utiliser » et « Comment l’IA doit procéder » dans la [Bibliothèque de compétences](/fr/guide/skills/library) ; si une question fixe échoue régulièrement, configurez le contenu fixe dans Règles de réponse → « Réponse directe par mot-clé » : en cas de correspondance, il est envoyé directement, sans passer par la génération de l’IA.
+    5. Corriger ses jugements : mauvaise identification d’une personne → [Relations](/fr/guide/assistant/relationship-config) ; erreur sur ce qu’elle doit dire ou taire → Règles de réponse → « Chat de groupe intelligent » ; ton ou appellation incorrects → Personnalité de base et « Instructions personnalisées ».
+
+    Conseils de rédaction : formulez les questions comme les clients les posent réellement, et rédigez les réponses comme des propos directement envoyables au client, pas dans le ton d’un document interne. Pour corriger une erreur, ne vous contentez pas d’un « ce n’est pas ça » dans la conversation : écrivez la bonne formulation dans les connaissances ou les règles, c’est ainsi que l’IA l’apprend vraiment.
+
+    Critère : après modification, retestez le même type de question avec un vrai message — une question qui restait sans réponse n’est plus transmise à un humain ; vos ajouts sont retrouvables dans [Gestion des connaissances](/fr/guide/knowledge/management) ; le traitement d’une réponse correspond bien, dans Données détaillées, à des « Connaissances de référence » ou à des « Étapes d’exécution ».
+
+    Remarque : « Traitement terminé » signifie seulement que la tâche est finie, pas que les connaissances sont enregistrées ; les connaissances ignorées ne sont pas stockées et aucun retour en arrière n’est possible ; « Réponse directe par mot-clé » s’enregistre en écrasant l’ensemble des règles, et leur ordre est celui de la correspondance.
+  </Step>
+
+  <Step title="En cas de doute, elle vous consulte : faites-en un réflexe">
+    Les questions client sur lesquelles l’IA a un doute sont transmises au superviseur pour consultation — c’est ce que compte la « Propositions » de la page [Performances](/fr/guide/dashboard/business-performance) ; selon la configuration du « Signalement proactif des événements importants », elle vous signale aussi certains événements de sa propre initiative.
+
+    1. Assurez-vous d’abord que quelqu’un peut répondre : « Paramètres du compte » en bas à gauche → « [Autorisation des rôles auprès de l’IA](/fr/guide/account/ai-authorization) » pour générer un « Code d’autorisation du superviseur » (une fois copié, il commence par `#`) ; demandez au superviseur de l’envoyer au compte IA depuis son propre téléphone. Vous pouvez aussi définir le destinataire sur « Superviseur » dans [Relations](/fr/guide/assistant/relationship-config). Dans Règles de réponse, vérifiez en même temps que le « Signalement proactif des événements importants » est activé et enregistré.
+    2. Répondez dès qu’une question vous parvient : répondez directement dans la conversation, ou allez dans Base de connaissances → Optimisation des connaissances → « Besoins de réponse », saisissez la réponse puis cliquez sur « Confirmer » — elle est enregistrée comme connaissance, ce qui donnera une base aux prochaines questions similaires.
+    3. Les questions sans réponse s’accumulent dans « Besoins de réponse » : traitez-les régulièrement, sans les laisser s’entasser.
+
+    Critère : le superviseur reçoit les questions et les signalements de l’IA ; la « Propositions » de Performances affiche des données ; le compteur de « Besoins de réponse » baisse.
+
+    Remarque : pour recevoir les questions, le destinataire doit être « Superviseur » aux yeux de l’IA — il a envoyé le code d’autorisation du superviseur, ou il est défini sur « Superviseur » dans Relations. Pour un même compte IA, c’est le dernier code reçu qui fait foi : superviseur et collègue s’écrasent l’un l’autre.
+  </Step>
+
+  <Step title="Faire le point régulièrement : laisser les données décider quoi enseigner ensuite">
+    Une revue ne consiste pas à regarder si les totaux augmentent, mais à identifier la prochaine catégorie de connaissances à enseigner. Commencez avec ce rythme, puis ajustez-le selon votre volume de messages :
+
+    | Rythme | Quoi examiner | Où |
+    | --- | --- | --- |
+    | Tous les jours | Traiter « En attente de validation » et « Besoins de réponse » ; priorité aux connaissances issues de l’« Auto-apprentissage » | Base de connaissances → Optimisation des connaissances |
+    | Toutes les semaines | Évolution des Indicateurs clés, des Propositions et des Éléments appris ; contrôler la chaîne de traitement de quelques réponses | Tableau de bord des données → Performances, Données détaillées |
+    | Tous les mois | Crédits restants et consommation mensuelle ; mettre à jour la personnalité et les règles quand l’activité change | [Utilisation de l’IA](/fr/guide/dashboard/ai-usage) (visible seulement pour l’administrateur de département), Mon assistant, Paramètres de réponse |
+
+    Avant de lire Performances, clarifiez les deux périmètres : les cartes des « Indicateurs clés » affichent les valeurs de la « période sélectionnée » (un jour, une semaine ou un mois), tandis que les tendances, l’évolution des taux, les Propositions et les Éléments appris relèvent de la « période échantillonnée » — les deux ne se comparent pas directement ; « Messages reçus », « Demandes reçues » et « Réponses » se recoupent et ne doivent pas être additionnés. Cliquez à tout moment sur « Définition des indicateurs » pour vérifier.
+
+    Une fois la conclusion tirée, revenez à l’étape correspondante : les questions souvent transmises à un humain s’ajoutent à la base de connaissances, ou se fixent avec « Réponse directe par mot-clé » ; les réponses qui dépassent les limites demandent une règle de garde-fou ou un ajustement dans Relations ; un ton inadapté se corrige dans les « Instructions personnalisées ».
+
+    Critère : vous savez dire sur quel type de question l’IA a le plus bloqué cette semaine et quoi modifier en premier ; la modification a été retestée avec un vrai message ; et la prochaine revue regarde les mêmes graphiques pour voir ce qui a évolué.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Chaque fenêtre active a des limites claires : la Personnalité de base et les Règles de réponse sont enregistrées, les Horaires de service ont été planifiés et enregistrés, les règles des Garde-fous de sécurité sont configurées, et le tout a été vérifié avec de vrais messages.
+- Les réponses récemment contrôlées peuvent être retracées dans Données détaillées jusqu’à leurs « Connaissances de référence » et à leurs « Étapes d’exécution ».
+- L’Optimisation des connaissances n’a pas d’arriéré : « En attente de validation » (en particulier les éléments d’« Auto-apprentissage ») et « Besoins de réponse » ont été traités.
+- Le superviseur reçoit les questions et les signalements de l’IA ; les « Propositions » et les « Éléments appris » affichent des données dans Performances.
+- Chaque revue aboutit à une conclusion concrète : quoi enseigner en priorité au cycle suivant.
+
+## Points d’attention
+
+<Warning>
+  Mesurez les conséquences avant d’agir : les connaissances « Ignorées » ne sont pas stockées et ne peuvent pas être restaurées ; « Mettre hors ligne » arrête le service automatique de la fenêtre, et sa remise en ligne exige un nouveau scan du code QR ; une correspondance de « Réponse directe par mot-clé » court-circuite la génération par l’IA, et l’enregistrement écrase l’ensemble des règles. Les codes d’autorisation sont des justificatifs d’identité : ne les envoyez qu’à la personne concernée et au compte IA.
+</Warning>
+
+<Info>
+  L’auto-apprentissage de l’IA a besoin de votre contrôle : parmi les connaissances apprises automatiquement dans les conversations (les « Éléments appris »), celles dont la source est « Auto-apprentissage » doivent être validées manuellement ; les autres sont acceptées automatiquement si rien n’est fait sous 24 heures — ne rien faire revient à accepter par défaut.
+</Info>
+
+<Info>
+  Vérifiez la configuration sur un vrai canal : l’« Assistant d’administration » de la barre supérieure n’est pas lié à la fenêtre de conversation sélectionnée sur la page ; ses réponses ne permettent donc pas de conclure qu’une configuration de fenêtre est appliquée.
+</Info>
+
+<Tip>
+  Inutile d’attendre un matériel d’entraînement parfait : commencez avec les vraies conversations et les questions fréquentes dont vous disposez (voir [Activation et préparation](/fr/quick-start/preparation)), puis complétez selon les problèmes révélés par le test. Quand une même question revient, traitez-la en priorité — ajoutez-la à la base de connaissances ou fixez-la en « Réponse directe par mot-clé ».
+</Tip>
+
+## Questions fréquentes
+
+### Les quatre étapes doivent-elles être suivies dans l’ordre ?
+
+Pour la première mise en service, suivez l’ordre : fixez les limites avant d’ouvrir le service, puis entrez dans la boucle « entraînement → consultation → revue ». Ce n’est pas un flux à sens unique : si une revue révèle un problème, revenez à l’étape correspondante. Pour ne mettre en place que le cycle minimal, voir [Prise en main en 30 minutes](/fr/quick-start/quick-start).
+
+### J’ai modifié les connaissances, mais l’IA répond encore mal : comment cerner le problème ?
+
+Ouvrez d’abord la demande dans Données détaillées et regardez à quelle étape se sont arrêtées les « Étapes d’exécution » et ce qu’ont retrouvé les « Connaissances de référence » : si les connaissances n’ont pas été retrouvées ou sont erronées, corrigez-les dans Optimisation des connaissances ou Gestion des connaissances ; si l’IA juge mal si un message de groupe mérite une réponse, allez dans Règles de réponse → « Chat de groupe intelligent » ; si elle se trompe de personne, allez dans Relations ; si une réponse dépasse les limites, ajoutez une règle dans Garde-fous de sécurité. Le tableau complet « symptôme → où corriger » se trouve dans [Collaboration avancée et commandes](/fr/collaboration/advanced).
+
+### Que signifient les « Propositions » et les « Éléments appris » ?
+
+Les « Propositions » comptent les résumés de questions que l’IA transmet aux superviseurs — une valeur élevée signale qu’elle est souvent hésitante, et ces questions sont précisément les prochaines connaissances à ajouter ; les « Éléments appris » comptent les connaissances que l’IA a apprises automatiquement dans les conversations. Les deux relèvent de la « période échantillonnée », et une hausse ou une baisse ne dit rien de la qualité : ne tirez pas de conclusion du seul mouvement.
+
+### En entraînant l’IA sur de vraies conversations, les informations clients risquent-elles de fuiter ?
+
+Les Données détaillées contiennent des échanges avec les clients : avant d’exporter, de faire une capture ou de transférer, vérifiez que le destinataire est autorisé à les consulter ; n’envoyez les codes d’autorisation qu’à la personne concernée et au compte IA. Avant d’intégrer un contenu à la base de connaissances, assurez-vous qu’il convient comme discours au client.
+
+### Puis-je ignorer totalement les éléments « En attente de validation » ?
+
+Cela revient à tout accepter par défaut. Hormis les éléments issus de l’« Auto-apprentissage », qui doivent être validés manuellement, les autres sont acceptés automatiquement au bout de 24 heures sans action et rejoignent les connaissances utilisables. Pour garder le contrôle sur ce que l’IA utilise, « Accepter » ou « Ignorer » vous-même les éléments avant l’acceptation automatique.

@@ -1,0 +1,150 @@
+---
+title: Données détaillées
+description: Filtrez les enregistrements de conversation selon vos critères et exportez-les au format xlsx, puis ouvrez un message individuel pour vérifier les connaissances de référence et les étapes de traitement de l’IA.
+keywords:
+  - Données détaillées
+  - enregistrements de conversation
+  - export
+  - chaîne de traitement des messages
+  - conversations avec intervention humaine
+---
+
+La page « Données détaillées » permet de consulter un par un les échanges d’origine entre l’IA et vos clients : filtrez la sélection voulue par fenêtre de conversation, période et autres conditions, exportez-la sous forme de tableau, puis ouvrez une demande précise pour voir quelles connaissances l’IA avait consultées et quelles étapes de traitement elle avait suivies.
+
+## Quand en avez-vous besoin ?
+
+- Un client signale qu’une réponse pose problème : retrouvez ce message et vérifiez les connaissances que l’IA avait consultées et l’étape à laquelle le traitement s’est arrêté.
+- Contrôle ponctuel de la qualité : filtrez un lot d’enregistrements par utilisateur, par groupe ou par catégorie d’intention, puis lisez une à une les demandes des utilisateurs et les réponses de l’IA.
+- Transmission et archivage : exportez les détails des échanges d’une période au format xlsx, à envoyer à un collègue ou à conserver en local.
+- Relecture des conversations avec intervention humaine : passez à « Données des conversations avec intervention humaine » pour voir aussi les messages échangés par les agents humains.
+
+## Comment y accéder ?
+
+Menu de gauche → Tableau de bord des données → Données détaillées ; le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Données détaillées ».
+
+Une fois sur la page, commencez par vérifier la « Fenêtre de conversation pour les statistiques » à gauche (les administrateurs de département disposent en plus d’un menu « Compte » au-dessus). La page s’organise autour de deux onglets : « Détail des conversations » (par défaut, uniquement les échanges entre l’IA et les clients) et « Données des conversations avec intervention humaine » (qui inclut les messages des agents humains).
+
+<Frame>
+  ![Page « Données détaillées » : en haut, les onglets « Détail des conversations » et « Données des conversations avec intervention humaine » ; la barre d’outils contient un champ de recherche et les boutons « Plus de filtres », « Exporter les résultats actuels » et « Rechercher » ; le tableau affiche les colonnes Heure, Utilisateur, Groupe, Demande de l’utilisateur, Réponse de l’IA et Action ; à gauche, le sélecteur de fenêtre de conversation pour les statistiques](/images/fr/guide/dashboard/data-export/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Confirmer la fenêtre de conversation pour les statistiques et la période de recherche">
+    Dans « Fenêtre de conversation pour les statistiques » à gauche, sélectionnez le canal à consulter (ou « Toutes les fenêtres de conversation »). À l’ouverture de la page, une recherche est lancée automatiquement avec les conditions par défaut (période « 30 derniers jours ») ; tout changement de « Fenêtre de conversation pour les statistiques » ou de « Compte » relance ensuite la recherche automatiquement.
+
+    La période se choisit dans « Date », sous « Plus de filtres » : Aujourd’hui, 3 derniers jours, 7 derniers jours, 30 derniers jours ou Personnalisé. Avec « Personnalisé », sélectionnez en plus les dates de début et de fin dans le calendrier ci-dessous ; la plage doit couvrir entre 2 et 31 jours. Si seule la date de début est sélectionnée, un clic sur « Rechercher » affiche seulement « Sélectionner la plage de dates » et le résultat n’est pas mis à jour.
+
+    Critère : la ligne de portée au-dessus du tableau indique les dates de début et de fin ainsi que le nombre de résultats de cette recherche, sous la forme « Résultats affichés et portée de l’export : du … au …, N enregistrements. ».
+
+    Remarque : si la « Fenêtre de conversation pour les statistiques » est mal choisie, vous consultez les enregistrements d’un autre canal.
+  </Step>
+
+  <Step title="Compléter les filtres selon vos besoins">
+    Le champ de recherche à gauche de la barre d’outils filtre sur la « Demande de l’utilisateur » ; les autres conditions sont regroupées sous « Plus de filtres » :
+
+    - « Nom d’utilisateur » et « Nom du groupe » : cibler les enregistrements d’une personne ou d’un groupe ;
+    - « Réponse de l’IA » (champ de saisie) : filtrer sur le texte des réponses de l’IA ;
+    - « Réponse de l’IA » (sélecteur) : choisir « Avec réponse de l’IA » ou « Sans réponse de l’IA » pour ne garder que les messages auxquels l’IA a répondu, ou l’inverse ;
+    - « Catégorie d’intention » : choisissez d’abord « Catégorie de premier niveau » ou « Catégorie de second niveau », puis saisissez le nom complet de la catégorie. Si le niveau reste sur « Tous niveaux » ou si le nom est vide, ce filtre reste sans effet.
+
+    Dès qu’une condition change, l’étiquette de la barre de filtres devient « Filtres non encore recherchés » et un bandeau jaune apparaît en dessous : « Les filtres ont changé. Recherchez avant d’exporter afin que le fichier corresponde à la table. » — s’il s’affiche, le tableau montre encore les résultats de la recherche précédente.
+
+    Si vous avez ajouté trop de conditions, « Réinitialiser » les efface pour revenir aux valeurs par défaut (là aussi, relancez « Rechercher » pour que ce soit pris en compte).
+
+    Astuce : en arrivant depuis « Performances » (clic sur une catégorie ou sur « Voir les échanges de cette période »), la date, la fenêtre de conversation, le compte et la catégorie sont repris automatiquement, sans ressaisie.
+  </Step>
+
+  <Step title="Cliquer sur « Rechercher » et vérifier la portée des résultats">
+    Après avoir modifié les conditions, cliquez sur « Rechercher » (appuyer sur Entrée dans l’un des champs fonctionne aussi). La ligne de portée au-dessus du tableau est mise à jour sous la forme « Résultats affichés et portée de l’export : du … au …, N enregistrements. » ; la liste « Lignes par page » (10/20/50) et la pagination en bas ne changent que l’affichage, pas l’export.
+
+    Critère : les dates et le nombre d’enregistrements de la ligne de portée correspondent à ce que vous cherchez ; l’étiquette de la barre de filtres redevient « Filtres appliqués » ; le bandeau jaune disparaît.
+
+    En cas d’échec, un bandeau rouge s’affiche (« La recherche a échoué. Aucun résultat n’est encore disponible. Réessayez. » ou « La recherche a échoué. Les derniers résultats positifs demeurent visibles. Réessayer avant d’exporter. ») ; cliquez sur « Réessayer la recherche » pour relancer. Ne lancez pas d’export tant que la recherche a échoué.
+  </Step>
+
+  <Step title="Basculer sur les conversations avec intervention humaine">
+    Cliquez sur le second onglet. La barre de filtres devient « Date », « ID de la conversation » et « Type de message » (Tous les types, Utilisateur, Assistant IA, Humain) ; le champ de recherche devient « Contenu du message » ; les colonnes du tableau sont Date de création, ID de la conversation, Contenu du message, Type de message et Expéditeur.
+
+    Le fonctionnement est identique à celui de « Détail des conversations » : relancez la recherche après chaque modification des filtres. Les filtres, les résultats et les exports des deux onglets sont indépendants.
+
+    Critère : les en-têtes du tableau et la barre de filtres changent ensemble ; la colonne « Type de message » fait bien apparaître les trois types de messages Utilisateur, Assistant IA et Humain.
+
+    <Frame>
+      ![Onglet « Données des conversations avec intervention humaine » : barre de filtres Date, ID de la conversation, Type de message ; colonnes Date de création, ID de la conversation, Contenu du message, Type de message et Expéditeur](/images/fr/guide/dashboard/data-export/03-agent-data-tab.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Ouvrir un message et consulter sa chaîne de traitement">
+    Dans « Détail des conversations », cliquez sur la cellule « Demande de l’utilisateur » d’une ligne (l’infobulle indique « Voir les étapes de traitement et les connaissances utilisées pour ce message ») : le panneau « Chaîne de traitement des messages » s’ouvre par-dessus le tableau ; cliquez sur « Retour » en haut à gauche pour le fermer.
+
+    Le panneau présente, de haut en bas :
+
+    - le « Message original » de ce tour et la « Réponse enregistrée de l’IA » ;
+    - trois éléments de preuve indépendants : « Production de réponses », « Remise au client » et « Contrôle des garde-fous » ; quand l’information n’est pas disponible, un libellé commençant par « Inconnu · … » s’affiche (le panneau précise en bas : « Une réponse enregistrée ne prouve pas qu’elle a été remise au client. L’absence de journal des garde-fous ne prouve pas qu’ils ne se sont pas déclenchés. ») ;
+    - deux onglets : « Connaissances de référence (N) », ouvert par défaut, liste les connaissances retrouvées pour ce message et leur « Correspondance » ; dans la colonne « Action », « Modifier » permet de corriger une connaissance (après l’enregistrement, le système relance le calcul des connaissances retrouvées). Certaines connaissances historiques, introuvables dans la base actuelle, restent en lecture seule ; « Étapes d’exécution » affiche ligne par ligne « Contexte de conversation à ce moment-là → Gestion de groupe → Décision de réponse → Invocation des compétences → Génération de connaissances → Garde-fous de sécurité » ; la ligne du contexte de conversation se déplie pour montrer les derniers messages de la conversation jusqu’à ce tour.
+
+    Critère : le titre de l’onglet des connaissances indique leur nombre ; chaque étape affiche une conclusion claire (par exemple « Réponse nécessaire », « Entré dans le traitement », « Validé ») ; sans connaissance associée, la zone affiche « Aucune connaissance de référence » et le lien « Afficher les étapes d’exécution » permet de passer au flux.
+
+    <Frame>
+      ![Panneau « Chaîne de traitement des messages » : en haut le message original et la réponse enregistrée de l’IA, au milieu les trois preuves Production de réponses, Remise au client et Contrôle des garde-fous, en bas les onglets « Connaissances de référence (N) » et « Étapes d’exécution »](/images/fr/guide/dashboard/data-export/02-message-trace.jpg)
+    </Frame>
+
+    Remarque : « Afficher cette entrée », en fin de ligne, ouvre une autre vue : elle ne montre que la demande, la réponse de l’IA et les pièces jointes de cet échange précis (la fenêtre précise qu’elle ne montre pas toute la conversation). Pour suivre le traitement, cliquez sur le contenu de la demande pour ouvrir la « Chaîne de traitement des messages ».
+  </Step>
+
+  <Step title="Exporter les résultats de la recherche">
+    Une fois les filtres réglés et la recherche terminée, cliquez sur « Exporter les résultats actuels » pour télécharger un fichier xlsx : « Détail des conversations » produit « Export des données de conversation.xlsx », « Données des conversations avec intervention humaine » produit « Sessions en ligne.xlsx », puis le message « Exportation réussie » s’affiche.
+
+    Règles :
+
+    - l’export couvre tous les enregistrements remontés par cette recherche, pas seulement la page affichée ;
+    - il n’utilise que les résultats actuellement affichés : si les filtres ont changé sans recherche, si la page est en cours de chargement ou si la recherche a échoué, le bouton reste inactif — lancez d’abord « Rechercher » ou « Réessayer la recherche » ;
+    - les champs sans valeur s’affichent « - » dans le tableau comme dans le fichier.
+
+    Critère : le navigateur termine le téléchargement et affiche « Exportation réussie » ; le nom du fichier correspond à l’onglet affiché.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation pour les statistiques » à gauche (et le « Compte » pour les administrateurs de département) correspond au périmètre voulu ; tout changement relance la recherche et met le tableau à jour.
+- L’étiquette de la barre de filtres est « Filtres appliqués » et le bandeau jaune « Les filtres ont changé » n’est plus visible.
+- La ligne de portée donne des dates de début et de fin précises ainsi qu’un nombre d’enregistrements ; la pagination ne la modifie pas.
+- « Exporter les résultats actuels » est cliquable et télécharge le fichier xlsx correspondant à l’onglet affiché.
+- En ouvrant une demande, la « Chaîne de traitement des messages » montre les connaissances de référence ou les étapes d’exécution de ce tour.
+
+<Warning>
+La page Données détaillées contient des échanges avec vos clients. Avant d’exporter un fichier, d’en faire une capture d’écran ou de le transmettre à quelqu’un, assurez-vous que cette personne est autorisée à consulter ces messages.
+</Warning>
+
+<Info>
+Les deux onglets n’ont pas la même portée : « Détail des conversations » ne contient que les échanges entre l’IA et les clients, tandis que « Données des conversations avec intervention humaine » inclut aussi les messages des agents humains. Un écart de volume entre les deux sur une même période est normal : ne mélangez pas leurs chiffres et ne les comparez pas.
+</Info>
+
+<Tip>
+Modifier les filtres dans la page Données détaillées n’affecte pas la page « Performances ».
+</Tip>
+
+## Questions fréquentes
+
+### J’ai modifié les filtres, pourquoi le tableau ne change-t-il pas ?
+
+Le tableau affiche les résultats de la dernière recherche réussie ; une modification des filtres ne le rafraîchit pas automatiquement. Cliquez sur « Rechercher » (ou appuyez sur Entrée dans un champ de filtre) pour relancer la recherche. Dès qu’une condition change, l’étiquette « Filtres non encore recherchés » et le bandeau jaune « Les filtres ont changé. Recherchez avant d’exporter afin que le fichier corresponde à la table. » apparaissent.
+
+### Pourquoi « Exporter les résultats actuels » reste-t-il inactif ?
+
+Trois causes fréquentes : la page est encore en cours de chargement, les filtres ont changé sans qu’une recherche ait été lancée, ou la dernière recherche a échoué (bandeau rouge). Dans l’ordre : attendez la fin du chargement, cliquez sur « Rechercher », puis sur « Réessayer la recherche ». Le bouton ne s’active que lorsque les résultats affichés dans le tableau peuvent être exportés.
+
+### Combien d’enregistrements le fichier exporté contient-il ? Seulement la page affichée ?
+
+Il contient tous les enregistrements remontés par cette recherche, pas seulement la page affichée. Vérifiez d’abord la mention « N enregistrements » de la ligne de portée avant d’exporter ; « Lignes par page » n’affecte que l’affichage à l’écran.
+
+### Pourquoi les deux onglets ne concordent-ils pas sur une même période ?
+
+Leur portée diffère : « Détail des conversations » ne contient que les échanges avec l’IA, alors que « Données des conversations avec intervention humaine » inclut les messages des agents humains ; les filtres disponibles ne sont pas non plus les mêmes (utilisateur / groupe / catégorie d’intention d’un côté, ID de la conversation / type de message de l’autre). Ils servent des vérifications différentes : ne cherchez pas à calculer d’écart entre les deux.
+
+### Pourquoi certaines entrées n’ouvrent-elles pas la « Chaîne de traitement des messages » ?
+
+Les enregistrements dont la « Demande de l’utilisateur » est vide (cellule affichée « - ») ne sont pas cliquables. Dans le panneau, si l’enregistrement n’a pas d’ID de message, le message suivant s’affiche : « Cet enregistrement n’a pas d’ID de message. Impossible de consulter les journaux des étapes de l’agent à l’aide de l’API des pièces jointes. » ; si aucune connaissance affichable n’est associée à ce tour, la zone des connaissances indique « Aucune connaissance de référence ». Dans ces deux cas, consultez les étapes reconstituables dans « Étapes d’exécution » ou complétez les connaissances dans [Gestion des connaissances](/fr/guide/knowledge/management).

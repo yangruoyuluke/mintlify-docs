@@ -1,0 +1,157 @@
+---
+title: Version Updates
+description: A summary of every admin console update, focused on the 2026-09 to 2026-10 navigation consolidation, renamed entries, and page split, to help you match the new interface and find old entries after upgrading.
+keywords:
+  - version updates
+  - release notes
+  - navigation redesign
+  - renamed entries
+  - AI Usage
+  - interface language
+---
+
+This page records admin console changes in chronological order. The latest major update ran from 2026-09 to 2026-10: the left menu was consolidated into five modules, entries under Data Dashboard, Knowledge Base, and Response Settings changed, and French and Spanish interfaces were added; earlier updates are kept below. If you cannot find a familiar entry after upgrading, or an old tutorial no longer matches the interface, check this page first.
+
+## When you'll need this
+
+- A menu entry you used often is missing after an upgrade.
+- You are following an old tutorial or screenshot and need to confirm the current name of an entry.
+- You want to confirm which release a feature shipped in and whether your environment has it.
+- You are handing over an account or training a new colleague and need a reference for old and new names.
+
+## How to get there
+
+This page is on the documentation site: left navigation → Developer Documentation → Version Updates. There is no matching menu page in the admin console; to operate a feature, open its page from the links in this article or from the User Guide.
+
+## The 2026-09 to 2026-10 major update
+
+This round changed the console structure: consolidated menus, renamed entries, and a split page, plus two new interface languages. The details are broken down by module below.
+
+### Navigation consolidated into five modules
+
+The left menu now has only five groups, and every feature page belongs to one of them:
+
+| Module | Pages |
+| --- | --- |
+| Data Dashboard | Performance, Detail Review, AI Usage, Conversation Review |
+| My Assistant | Channel Login, Base Persona, Relationships |
+| Response Settings | Reply Rules, Safety Guardrails, New Contact Setup, Service Time |
+| Knowledge Base | Knowledge Generation, Knowledge Optimization, Knowledge Management |
+| Skills Library | Skills Library (list and editor) |
+
+The Account settings menu at the bottom left now has three items: Profile, Login security, and AI identity access; the same menu also holds Language and Logout. The former “Web Chat” page is no longer available.
+
+### Data Dashboard
+
+- “AI Usage”: see your remaining credits and monthly usage; visible to department admins only. See [AI Usage](/en/guide/dashboard/ai-usage).
+- New “Conversation Review”: the conversation review page for the Mercado business; it opens an embedded review app, with filtering and lists handled inside the app; visible only to the Mercado business department or platform admins. See [Conversation Review](/en/guide/dashboard/conversation-review).
+- “Detail Review”: filter, review, and export communication records. See [Detail Review](/en/guide/dashboard/data-export).
+
+### Knowledge Base
+
+- Three entries were renamed: “Knowledge Creation” → “Knowledge Generation”, “Knowledge Management” → “Knowledge Optimization”, and “Knowledge Groups” → “Knowledge Management”.
+- After the rename, the division of work is: Knowledge Generation turns documents, webpages, or ready-made Q&A into knowledge; Knowledge Optimization reviews knowledge awaiting entry and handles questions the AI could not answer; Knowledge Management maintains the group structure and searches or edits stored knowledge.
+
+### Response Settings
+
+- Settings that were grouped on the single “Response Settings” page are now managed separately: the AI persona and main prompt are under “My Assistant → Base Persona”; fallback replies, group chat responses, and proactive reports are under “Response Settings → Reply Rules”.
+- “Keyword Direct Reply” moved from “New Contact Setup” to “Reply Rules”.
+- “Safety Guardrails”, “New Contact Setup”, and “Service Time” now belong to the Response Settings module, together with “Reply Rules”.
+
+### Interface languages
+
+- French (Français) and Spanish (Español) interfaces were added; the console now supports five interface languages: 中文, English, 日本語, Français, and Español.
+- To switch: Account settings at the bottom left → Language.
+- “Conversation Review” embeds an external app that recognizes only some interface languages; under French or Spanish it displays English.
+
+### Name mapping
+
+Check this table first when you are looking for an old entry:
+
+| Previous name | Current name |
+| --- | --- |
+| Order Usage | AI Usage |
+| Detail Review | Detail Review (unchanged) |
+| Knowledge Creation | Knowledge Generation |
+| Knowledge Management | Knowledge Optimization |
+| Knowledge Groups | Knowledge Management |
+| Relationship Management | Relationships |
+| Lead Cleaning | New Contact Setup |
+
+Note: “Knowledge Management” is not the same page in the old and new versions — the old “Knowledge Management” is today's “Knowledge Optimization”, and today's “Knowledge Management” was formerly “Knowledge Groups”. When a colleague uses an old name, confirm which page they mean first.
+
+## Earlier updates (still valid)
+
+- **2026-08-25 · “Safety Guardrails” added**: risk is assessed before an AI reply is sent, and rules block the reply, let it through, or notify a supervisor. Location: “Response Settings → Safety Guardrails”. See [Safety Guardrails](/en/guide/response/safety-guardrails).
+- **2025-09-05 · “Relationships” added** (then called “Relationship Management”): set how contacts and groups relate to the AI (Customer, Colleague, Muted, Supervisor) in one place; “Muted” keeps the selected people or groups from triggering AI responses. See [Relationships](/en/guide/assistant/relationship-config).
+- **2025-08-15 · Admin console v0.1.0 launched**: admin login and knowledge base management became available.
+- **2025-06-10 · Daily and weekly reports launched**: the assistant can summarize business progress; in a conversation, ask it to “Enable daily report”, “Disable daily report”, “Enable weekly report”, or “Disable weekly report”.
+
+## Steps
+
+Follow these three steps after upgrading to match up the entries:
+
+<Steps>
+  <Step title="Confirm you are on the new admin console">
+    Check that the left menu shows five modules: Data Dashboard, My Assistant, Response Settings, Knowledge Base, and Skills Library. Also check that the Account settings menu at the bottom left contains Profile, Login security, and AI identity access.
+
+    How to check: all five modules are present, and Account settings shows these three items. If the structure does not match, first check whether your environment has been updated to this version, then follow the records on this page.
+  </Step>
+
+  <Step title="Use the Name mapping table to translate old names">
+    Look up the old entry you need in the “Name mapping” table. For example, if you remember “Order Usage”, check “AI Usage”; if you remember “Lead Cleaning”, check “New Contact Setup”.
+
+    How to check: every old name you need maps to a single current name; open it through “left menu → module → page”, for example “left menu → Knowledge Base → Knowledge Generation”.
+
+    Note: “Knowledge Management” means different things before and after the update. Do not navigate by old memory alone — read the note under the table first.
+  </Step>
+
+  <Step title="Open the page, confirm it, then make changes">
+    Open the matching page and check whether its title and description match the feature you are looking for, then change settings following the steps for that page in the User Guide.
+
+    How to check: the page title matches the new name and the content loads normally. If you cannot see “AI Usage” or “Conversation Review”, check permissions using the FAQ first instead of going back through the menu again and again.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The left menu shows five modules: Data Dashboard / My Assistant / Response Settings / Knowledge Base / Skills Library.
+- Account settings at the bottom left contains Profile, Login security, and AI identity access, as well as Language and Logout.
+- Every old entry you need has a current name in the “Name mapping” table.
+- When you need to switch the language, Account settings → Language lists five options.
+
+## Important notes
+
+<Warning>
+“AI Usage” is visible only to department admins, and “Conversation Review” only to the Mercado business department or platform admins. Other accounts do not see these menu entries, and opening them directly shows “Access denied”. Missing these two entries is a permission difference, not a sign that the version was not updated.
+</Warning>
+
+<Info>
+After this update, “Response Settings” is a module name covering four pages: Reply Rules, Safety Guardrails, New Contact Setup, and Service Time. In older tutorials, “Response Settings” referred to a single configuration page from before the update — the two are not the same thing.
+</Info>
+
+<Tip>
+“Help and guides” in the top bar opens the Help Center, which can help you get familiar with the new entries: pick any guide card — Dashboard, Assistant Settings, Knowledge Base, or Skills Library — and the page highlights the matching entries step by step. Select “Setup Wizard” to walk through the three basic setups: assistant login, usage rules, and knowledge base.
+</Tip>
+
+## Frequently asked questions
+
+### Where do I change the settings I used to edit in “Response Settings”?
+
+They were split across two pages: the AI persona and main prompt are under “My Assistant → Base Persona”; fallback replies, group chat responses, proactive reports, and Keyword Direct Reply are under “Response Settings → Reply Rules”. Safety Guardrails, New Contact Setup, and Service Time remain separate pages, also under “Response Settings”. For steps, see [Base Persona](/en/guide/assistant/persona) and [Reply Rules](/en/guide/response/reply-rules).
+
+### Why can't I find “Knowledge Creation” or “Knowledge Groups”?
+
+They were renamed, and the features are still there: Knowledge Creation → Knowledge Generation, Knowledge Management → Knowledge Optimization, Knowledge Groups → Knowledge Management. Note that “Knowledge Management” now refers to the group structure and the maintenance of stored knowledge — it is not the same entry as the page once called “Knowledge Management” (now “Knowledge Optimization”).
+
+### Why can't my account see “AI Usage” or “Conversation Review”?
+
+Permissions differ: “AI Usage” is open to department admins only, while “Conversation Review” is open to the Mercado business department or platform admins only. Other accounts do not see the menu entries, and opening them directly shows “Access denied”; this has nothing to do with the console version.
+
+### Can I still follow old tutorials and screenshots?
+
+Anything written for the old structure — old menu names, old entry locations — no longer matches. Rely on the current pages in this site's User Guide; this page only keeps the update records that are still valid. The “Web Chat” entry mentioned in older tutorials is no longer offered in the new admin console.
+
+### Where do I switch the interface language, and why is “Conversation Review” still in English?
+
+Account settings → Language at the bottom left; five options are available: 中文, English, 日本語, Français, and Español. “Conversation Review” embeds an external app that recognizes only some interface languages: after you switch to French or Spanish, it still displays English.

@@ -1,0 +1,138 @@
+---
+title: "Relaciones"
+description: "Configure las relaciones Cliente, Compañero, Silenciado y Supervisor de los contactos y grupos de la ventana de conversación actual, y decida cómo trata la IA cada conversación."
+keywords:
+  - "relaciones"
+  - "configuración de relaciones"
+  - "cliente"
+  - "compañero"
+  - "silenciado"
+  - "supervisor"
+  - "sincronizar contactos"
+---
+
+«Relaciones» sirve para decirle a la IA quién es cliente, quién es compañero, con quién debe mantenerse en silencio y quién recibe informes. Se aplica a la «Ventana de conversación actual» que seleccione en la barra lateral; a partir de ahí, la IA gestiona las conversaciones según esas relaciones.
+
+## Cuándo las necesitará
+
+- Después de conectar una ventana nueva, revise sus contactos y grupos para que la IA no confunda las conversaciones internas con consultas de clientes.
+- Si un grupo de clientes o un grupo interno no debe recibir respuestas de la IA, establézcalo como «Silenciado».
+- Para designar a las personas que reciben la «Notificación activa de eventos clave», establézcalas como «Supervisor».
+- Si agregó nuevos contactos o grupos en el canal y no aparecen en la lista, sincronice los contactos.
+
+## Ruta de acceso
+
+Menú de la izquierda → Mi asistente → Relaciones. Seleccione primero la ventana que desea configurar en «Ventana de conversación actual», en la barra lateral. De arriba abajo, la página muestra la tarjeta «Sincronice los contactos cuando haya nuevos», el área de búsqueda y filtros, y la lista de contactos y grupos.
+
+<Frame>
+  ![Página completa de «Relaciones»: arriba, la tarjeta «Sincronice los contactos cuando haya nuevos» con el botón «Sincronizar contactos»; en el medio, el área de búsqueda y filtros; abajo, una tabla con Contacto, Grupo/Chat, Relación y la acción «Cambiar relación»](/images/es/guide/assistant/relationship-config/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+
+  <Step title="Confirme que la ventana actual sirve para configurar relaciones">
+    La configuración de relaciones solo se aplica a la «Ventana de conversación actual»; al cambiar de ventana, la lista y las relaciones ya configuradas pasan a los datos de esa ventana.
+
+    - Si aún no seleccionó una ventana: la página muestra «No hay ventanas de conversación disponibles»; haga clic en «Conectar una ventana» para acceder primero a un canal.
+    - Si seleccionó una ventana no compatible: solo las cuentas conectadas de WeChat y WeCom admiten la configuración de relaciones; las ventanas de Sitio web, Miniprograma o Cuenta oficial muestran «Esta ventana de conversación no tiene una cuenta WeChat o WeCom conectada para configurar las relaciones. Conecte una en "Inicio de sesión en canales".». Haga clic en «Conectar una ventana de conversación» para resolverlo.
+
+    Cómo verificarlo: si ve la tarjeta «Sincronice los contactos cuando haya nuevos» y la lista, la ventana actual es compatible.
+  </Step>
+
+  <Step title="Filtre las personas o los grupos que quiera gestionar">
+    De forma predeterminada, la lista muestra todos los contactos y grupos de la cuenta de la ventana actual. Acote primero con los filtros:
+
+    - Cuenta de WeChat: el cuadro de búsqueda busca por «Nombre del contacto o grupo»; «Más filtros» incluye «Etiqueta», «Relación» y «Tipo» (Chats de uno a uno y grupo / Chat individual / Chat de grupo).
+    - Cuenta de WeCom: el cuadro de búsqueda busca por «Nombre del contacto»; «Más filtros» incluye «Contacto móvil», «Tipo de relación» (Internos / Externo), «Relación» y «Tipo de contacto».
+
+    Después de cambiar las condiciones, haga clic en «Buscar» para actualizar la lista (pulsar Intro en el cuadro de búsqueda produce el mismo efecto). Las condiciones aplicadas se muestran en «Filtros aplicados»; con «Restablecer» vuelve a los valores predeterminados.
+
+    Cómo verificarlo: en la tabla solo quedan los contactos o grupos que desea gestionar, con las columnas «Contacto», «Grupo/Chat» y «Relación», y la acción «Cambiar relación» al final de cada fila.
+  </Step>
+
+  <Step title="Modifique las relaciones una por una">
+    Haga clic en «Cambiar relación» al final de una fila para abrir la ventana «Cambiar la relación de contacto»: elija, para el contacto seleccionado, una de las cuatro identidades — «Cliente», «Compañero», «Silenciado» o «Supervisor». Cada identidad tiene su descripción debajo:
+
+    - Cliente: se atiende como cliente, con las reglas de respuesta de servicio al cliente.
+    - Compañero: se reconoce como compañero interno y se aplican las reglas de comunicación de compañeros.
+    - Silenciado: se mantiene en silencio con este contacto, sin respuestas automáticas.
+    - Supervisor: se reconoce como supervisor y puede recibir informes del asistente.
+
+    Seleccione una identidad y haga clic en «Guardar relación»; si la relación no cambia, el botón permanece deshabilitado.
+
+    Cómo verificarlo: aparece el mensaje «Se estableció la relación "…" para 1 contacto» y la insignia de relación de esa fila se actualiza al mismo tiempo.
+
+    <Frame>
+      ![Ventana «Cambiar la relación de contacto»: para el contacto seleccionado se listan las cuatro opciones Cliente, Compañero, Silenciado y Supervisor, cada una con su descripción; abajo están «Cancelar» y «Guardar relación»](/images/es/guide/assistant/relationship-config/02-edit-relationship.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Configure varios contactos a la vez">
+    Marque las casillas de la izquierda de varias filas. La casilla del encabezado es «Seleccione todos los contactos en esta página» y solo abarca la página actual; al marcar algo aparece la barra de acciones «N elementos seleccionados». Para enviar, haga clic en «Establecer como cliente», «Establecer como compañero», «Silenciar» o «Establecer como supervisor».
+
+    Cómo verificarlo: aparece el mensaje «Se estableció la relación "…" para N contactos», la lista se actualiza automáticamente y la selección se borra. Si quiere cancelar la selección, haga clic en «Cancelar selección», a la derecha de la barra de acciones.
+
+    Nota: las acciones por lotes se aplican de inmediato y no piden confirmación; al cambiar de página se borran los contactos seleccionados.
+  </Step>
+
+  <Step title="Sincronice los contactos cuando haya nuevos">
+    La lista proviene de la última sincronización de contactos del canal. Si agregó nuevos contactos o grupos y no los encuentra en la lista, haga clic en «Sincronizar contactos» en la tarjeta superior; el sistema vuelve a obtener los contactos del canal. La tarjeta lo indica: «Hasta una sincronización por día.»; una vez que lo usa ese día, el botón se desactiva y vuelve a estar disponible después de las 0:00 del día siguiente.
+
+    Cómo verificarlo: aparece el mensaje «Actualización completada», la lista se recarga y el nuevo contacto aparece en ella.
+  </Step>
+
+</Steps>
+
+## Puntos de verificación
+
+- El contacto o grupo objetivo muestra en la columna «Relación» la relación que quería establecer.
+- Cada cambio muestra el mensaje «Se estableció la relación "…" para N contactos» y la lista se actualiza automáticamente; no hace falta actualizar la página a mano.
+- Una vez configuradas las relaciones, la IA trata a clientes, compañeros y contactos silenciados según las cuatro descripciones anteriores.
+
+<Warning>
+La configuración por lotes no pide confirmación: al hacer clic en «Establecer como …» se aplica de inmediato y la lista se actualiza; si se equivoca, solo puede volver a configurarla para corregirla. Al cambiar de página se borra la selección y las acciones por lotes solo se aplican a los contactos marcados en la página actual.
+</Warning>
+
+<Warning>
+«Sincronizar contactos» se puede usar como máximo una vez por día natural (de 00:00 a 24:00); después de usarlo ese día, el botón queda desactivado. Si necesita configurar la relación de un contacto nuevo de inmediato, procure sincronizar antes de esa operación.
+</Warning>
+
+<Info>
+El significado de las cuatro relaciones coincide con las descripciones de la ventana: Cliente — se atiende como cliente, con las reglas de respuesta de servicio al cliente; Compañero — se reconoce como compañero interno, con las reglas de comunicación de compañeros; Silenciado — se mantiene en silencio con el contacto, sin respuestas automáticas; Supervisor — se reconoce como supervisor y puede recibir informes del asistente.
+</Info>
+
+<Info>
+La relación «Supervisor» es un requisito previo para la entrega de la «Notificación activa de eventos clave»: solo los contactos establecidos como «Supervisor» reciben el contenido que envía la «Notificación activa de eventos clave» de [Reglas de respuesta](/es/guide/response/reply-rules).
+</Info>
+
+<Tip>
+Los chats de grupo también están en esta lista. Use «Tipo» o «Tipo de contacto» para filtrar «Chat de grupo» y establezca los grupos internos como «Silenciado» para evitar que la IA hable en grupos donde no debería.
+</Tip>
+
+<Tip>
+Configurar mal las relaciones suele causar dos problemas: que la IA responda a conversaciones internas como si fueran consultas de clientes, o que hable en grupos donde debería callar. Revisar la columna «Relación» con regularidad ayuda a reducir ambos casos.
+</Tip>
+
+## Preguntas frecuentes
+
+### La página muestra «Esta ventana de conversación no tiene una cuenta WeChat o WeCom conectada para configurar las relaciones». ¿Qué hago?
+
+La configuración de relaciones solo admite cuentas conectadas de WeChat y WeCom. El mensaje aparece cuando la ventana actual es un Sitio web, un Miniprograma o una Cuenta oficial, o cuando la cuenta no se emparejó. Haga clic en «Conectar una ventana de conversación» en el aviso, complete el inicio de sesión o la vinculación de ese canal en [Inicio de sesión en canales](/es/guide/assistant/login-online) y vuelva a configurar.
+
+### ¿Por qué no puedo hacer clic en «Sincronizar contactos»?
+
+Se puede sincronizar como máximo una vez por día natural (de 00:00 a 24:00); la tarjeta indica «Hasta una sincronización por día.». Si ya lo usó ese día, el botón se desactiva y vuelve a estar disponible después de las 0:00 del día siguiente.
+
+### ¿No encuentra en la lista un contacto o grupo recién agregado?
+
+Los datos de la lista provienen de la última sincronización de contactos. Haga clic primero en «Sincronizar contactos»; cuando aparezca «Actualización completada», vuelva a buscar o filtrar.
+
+### Si me equivoqué en una configuración por lotes, ¿puedo deshacerla?
+
+No. Los botones por lotes se aplican de inmediato y no piden confirmación. Vuelva a seleccionar esos contactos y use otro botón «Establecer como …» para corregirlo.
+
+### Establecí a alguien como «Supervisor», pero no recibo informes. ¿Por qué?
+
+«Supervisor» es solo un requisito previo para la entrega de informes; el momento y el formato de los informes se configuran en la «Notificación activa de eventos clave» de [Reglas de respuesta](/es/guide/response/reply-rules). Solo cuando ambas partes están configuradas, los contactos marcados como «Supervisor» reciben informes.

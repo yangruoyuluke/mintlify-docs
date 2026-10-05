@@ -1,0 +1,162 @@
+---
+title: Performances
+description: "Passez en revue la prise en charge des clients par l’IA selon la fenêtre de conversation pour les statistiques et la plage de dates : définitions des indicateurs clés, origine des variations et descente par catégorie métier jusqu’aux échanges."
+keywords:
+  - Performances
+  - performance de l'activité
+  - tableau de bord des données
+  - indicateurs clés
+  - taux de demandes
+  - activité des messages par créneau horaire
+  - définition des indicateurs
+---
+
+La page Performances est celle qui s’ouvre par défaut après la connexion. Ses graphiques répondent à une seule question : comment l’IA a-t-elle pris en charge les clients durant cette période ? Elle ne fait qu’afficher des données, sans rien configurer ; tous les graphiques suivent la « Fenêtre de conversation pour les statistiques » à gauche et la plage de dates en haut.
+
+## Quand en avez-vous besoin ?
+
+- Pour une revue quotidienne ou hebdomadaire : combien de messages l’IA a reçus, combien de demandes elle a générées et combien de réponses elle a envoyées.
+- Quand le volume de messages ou les retours clients changent : pour déterminer si la variation vient de la réception, des demandes ou des réponses.
+- Pour savoir ce que les clients demandent le plus, et quelle catégorie de besoins est la plus concentrée.
+- Pour descendre d’une catégorie très représentée jusqu’aux enregistrements d’origine et vérifier le traitement de l’IA.
+
+## Comment y accéder ?
+
+Menu de gauche → Tableau de bord des données → Performances (ouvert par défaut après la connexion ; le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Performances »). Une fois sur la page, vérifiez d’abord deux éléments : la « Fenêtre de conversation pour les statistiques », au milieu de la barre latérale, détermine le canal affiché ; la barre de filtres en haut détermine la période analysée.
+
+<Frame>
+  ![Page Performances complète : à gauche le sélecteur de fenêtre de conversation pour les statistiques, en haut le groupement temporel et les filtres de dates, puis dans la zone de contenu, de haut en bas, les cartes d’indicateurs clés, les messages et réponses dans le temps et l’activité des messages par créneau horaire](/images/fr/guide/dashboard/business-performance/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Définir la portée de l’analyse (fenêtre, compte, période)">
+    La portée dépend de deux zones ; toute modification s’applique immédiatement, sans bouton de confirmation.
+
+    - « Fenêtre de conversation pour les statistiques » (à gauche) : choisissez la fenêtre à analyser, ou « Toutes les fenêtres de conversation » pour la vue agrégée. Si vous êtes administrateur de département, un menu « Compte » s’affiche au-dessus pour passer à un autre membre ; sinon, seules les données de votre propre compte sont comptabilisées et le menu « Compte » n’apparaît pas.
+    - Barre de filtres (en haut) : choisissez d’abord le « Groupement temporel » — Par jour, Par semaine, Par mois ou Personnalisé (« Par mois » par défaut) — puis cliquez sur le bouton de date à côté pour sélectionner des dates précises.
+
+    Deux cas particuliers :
+
+    - « Par semaine » : cliquer sur n’importe quel jour du calendrier sélectionne la semaine entière à laquelle il appartient (du lundi au dimanche).
+    - « Personnalisé » : choisissez une date de début et une date de fin ; la plage est limitée à 2–31 jours, et les données ne se mettent pas à jour tant que les deux extrémités ne sont pas sélectionnées.
+
+    Critère : après un changement, les cartes et les graphiques se rafraîchissent ensemble. À droite de la barre de filtres figure en permanence le rappel « Les dates de comparaison exactes ne sont pas disponibles. Les changements de quantité n’indiquent pas la qualité. » — gardez-le en tête avant d’interpréter une flèche à la hausse ou à la baisse.
+
+    Remarque : si vous vous trompez de fenêtre, toute la page affiche les données d’un autre canal.
+  </Step>
+
+  <Step title="Lire les indicateurs clés (ouvrez « Définition des indicateurs » à tout moment)">
+    « Indicateurs clés » comprend quatre cartes : Messages reçus, Demandes reçues, Réponses et Taux de demandes. Leur définition :
+
+    - Messages reçus : nombre total de messages reçus par l’assistant IA.
+    - Demandes reçues : nombre de messages par lesquels un utilisateur sollicite activement l’IA. Les messages regroupés sont comptés individuellement, avant leur regroupement ; les conversations individuelles et les messages adressés à @IA dans les groupes sont inclus ; les réponses spontanées de l’assistant de groupe ne sont pas comptées.
+    - Réponses : nombre de réponses non vides réellement envoyées par l’IA, en ne comptant que les réponses déclenchées par une demande client ; les réponses spontanées de l’assistant de groupe sont exclues. Chaque réponse valide compte 1 fois.
+    - Taux de demandes : Demandes reçues ÷ Messages reçus.
+
+    Les trois indicateurs de volume entretiennent des relations d’inclusion et de déclenchement : ne les additionnez jamais. Le coin inférieur droit d’une carte peut afficher un pourcentage de variation ↑/↓ (Messages reçus, Demandes reçues, Réponses, ainsi que les Propositions lorsque l’interface en renvoie) ; « — » signale que la valeur n’est pas retournée pour la période actuelle ; les Éléments appris, le Taux de demandes et d’autres indicateurs n’ont pas de comparaison d’une période à l’autre.
+
+    Le bouton « Définition des indicateurs », à droite d’« Indicateurs clés », ouvre un panneau depuis la droite. Il liste, sous « Indicateurs de volume » et « Indicateurs de taux », les définitions des 5 indicateurs de volume (Messages reçus, Demandes reçues, Réponses, Propositions, Éléments appris) et des 3 indicateurs de taux (Taux de demandes, Réponses / demandes de renseignements, Taux d’adoption).
+
+    <Frame>
+      ![Panneau « Définition des indicateurs » : champs regroupés par Indicateurs de volume et Indicateurs de taux, avec la définition de chacun](/images/fr/guide/dashboard/business-performance/02-metric-glossary.jpg)
+    </Frame>
+
+    Critère : après avoir lu le panneau, vous savez expliquer le calcul de chacune des quatre cartes — et vous savez que le « Taux d’adoption » ne mesure pas la conversion des ventes.
+  </Step>
+
+  <Step title="Analyser « Messages et réponses dans le temps »">
+    « Messages et réponses dans le temps » trace trois courbes — messages reçus, demandes, réponses — pour repérer à partir de quand le volume a changé ; ces trois courbes entretiennent des relations d’inclusion et ne doivent pas être additionnées. Lorsqu’il y a des données, une annotation au-dessus du graphique indique « Créneau avec le plus de demandes sur la période affichée : date · nombre ».
+  </Step>
+
+  <Step title="Consulter l’activité des messages par créneau horaire">
+    « Activité des messages par créneau horaire » est une carte thermique qui répond à une question : à quels moments de la journée les clients sont-ils les plus actifs. Chaque case représente un créneau de 3 heures d’une journée ; plus la couleur est foncée, plus les messages sont nombreux. Chaque case compte les messages bruts, selon une définition différente du nombre de demandes.
+
+    - Les données suivent le compte sélectionné, la fenêtre statistique et la plage de dates ; si la période choisie dépasse 31 jours, seuls les 31 derniers jours s’affichent (la carte précise « Affichage seulement des 31 derniers jours de la période sélectionnée »), et les heures sont affichées à l’heure de Pékin.
+    - Le créneau le plus actif est indiqué par défaut (« Période la plus active · date, créneau · nombre ») ; après un clic sur une case, l’annotation devient « Période sélectionnée ».
+    - Si les dates ou les créneaux sont nombreux, faites défiler horizontalement pour voir tout le contenu.
+
+    <Frame>
+      ![Carte thermique de l’activité des messages par créneau horaire : chaque case indique le nombre de messages d’un créneau de 3 heures d’une journée, plus la couleur est foncée plus le nombre est élevé ; en dessous, l’annotation de la période la plus active et la légende de « Moins » à « Plus »](/images/fr/guide/dashboard/business-performance/03-message-heatmap.jpg)
+    </Frame>
+
+    Critère : vous voyez l’annotation « Période la plus active » et la légende « Moins → Plus » ; si les dates sélectionnées ne contiennent aucun message, le message « Aucun message dans cette période » s’affiche.
+  </Step>
+
+  <Step title="Suivre l’évolution des taux et les indicateurs complémentaires">
+    Plus bas, « Évolution des taux » regroupe trois cartes : Évolution du taux de demandes, Évolution du rapport réponses/demandes et Taux d’adoption dans le temps ; en dessous viennent « Suggestions dans le temps » et « Éléments appris au fil du temps », puis les quatre cartes des « Indicateurs complémentaires » : Propositions, Éléments appris, Réponses / demandes de renseignements et Taux d’adoption.
+
+    - Réponses / demandes de renseignements = Réponses ÷ Demandes reçues ; une demande peut entraîner plusieurs réponses, la valeur peut donc dépasser 100 % — ce n’est pas un taux de réponses réussies.
+    - Le Taux d’adoption reprend la valeur renvoyée par l’interface d’administration ; son mode de calcul reste à confirmer, ne vous en servez pas pour juger la qualité du service.
+    - Les Propositions correspondent au nombre de résumés de questions transmis par l’IA aux superviseurs ; les Éléments appris, au nombre de connaissances que l’IA a apprises automatiquement à partir des conversations.
+
+    Rappel des définitions : les cartes d’indicateurs clés ci-dessus portent sur une seule période (un jour, une semaine ou un mois), tandis que les tendances, l’évolution des taux, les Propositions et les Éléments appris utilisent un intervalle échantillonné — les 30 derniers jours par jour, les 12 dernières semaines par semaine, les 6 derniers mois par mois. Chaque graphique de tendance indique sa plage réelle (« Cette fourchette diffère des mesures à une seule période ci-dessus »). Les deux périmètres ne se comparent pas directement.
+
+    Critère : après un changement de groupement ou de dates, les courbes et les barres se rafraîchissent ensemble ; si un graphique ne se charge pas, cliquez sur « Recharger la tendance » (certains graphiques affichent « Recharger le graphique ») pour réessayer. Si la fenêtre sélectionnée n’a pas de données sur cette période, le message « Pas de données de tendance pour cette fenêtre dans cette période » s’affiche ; basculez sur « Toutes les fenêtres de conversation » à gauche pour voir la vue d’ensemble.
+  </Step>
+
+  <Step title="Lire les intentions métier et les classements d’activité">
+    La section « Intentions métier » contient, de haut en bas :
+
+    - « Ce que les clients demandent » : un graphique en anneau compté par tours d’intention fusionnés — plusieurs messages consécutifs relevant de la même intention ne comptent qu’une fois. L’en-tête affiche « Tours d’intention … · Catégories … », et le résumé en dessous met en avant le besoin actuellement le plus concentré.
+    - « Champ d’affichage de la catégorie » : en haut à droite, « Cacher les autres catégories » est actif par défaut ; si le graphique vous semble trop pauvre, passez à « Afficher toutes les catégories ». Ce filtre s’applique aux principaux sujets, à l’évolution de leurs parts et aux besoins détaillés.
+    - « Évolution de la part des catégories métier » : compare deux périodes adjacentes, chacune totalisant 100 % ; les bandes ne relient que des catégories de même nom et ne représentent pas le parcours des clients ; les flèches indiquent la variation de part en points de pourcentage. Le groupement « Personnalisé » n’est pas pris en charge : l’écran affiche alors « Choisir une comparaison quotidienne, hebdomadaire ou mensuelle », et vous pouvez cliquer sur « Par mois » pour basculer ; la journée en cours affiche « Aucune date complète à comparer ».
+    - « Besoins détaillés des clients » : déploie les intentions de niveau 2 sous chaque catégorie de niveau 1 ; plus la barre est longue, plus le nombre de tours est élevé.
+
+    Approfondir : cliquez sur une catégorie de la légende à côté du graphique en anneau (sous le graphique sur petit écran) ou sur n’importe quel élément de « Besoins détaillés des clients » pour ouvrir [Données détaillées](/fr/guide/dashboard/data-export) avec la fenêtre, la plage de dates et la catégorie correspondantes déjà appliquées, afin de vérifier chaque enregistrement.
+
+    Plus bas se trouvent « Top 5 des groupes actifs » et « Top 5 des utilisateurs actifs » : seuls les 5 premiers éléments renvoyés par les statistiques sont listés ; ces valeurs ne sont pas des nombres de clients uniques.
+
+    Critère : après avoir activé « Afficher toutes les catégories », les catégories masquées réapparaissent ; après un clic sur une catégorie, les filtres de « Données détaillées » correspondent à ceux d’ici.
+  </Step>
+
+  <Step title="Poursuivre le traitement à partir des données">
+    Tout en bas de la page se trouve « Continuer à partir des données ». Cliquez sur « Voir les échanges de cette période » pour rejoindre « Données détaillées » avec le compte, la fenêtre de conversation et la plage de dates actuels, et examiner une à une les demandes, les réponses de l’IA et leur traitement.
+
+    Critère : après le saut, la plage de dates de « Données détaillées » correspond à celle d’ici.
+
+    Remarque : si la plage de statistiques est incomplète (souvent parce que « Personnalisé » ne comporte qu’une seule date), le bouton est inactif et la zone affiche « Sélectionnez d’abord une plage complète de dates. ».
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation pour les statistiques » à gauche affiche le canal à analyser (ou « Toutes les fenêtres de conversation ») ; les administrateurs de département vérifient en plus le « Compte ».
+- Après un changement de groupement temporel ou de dates, les indicateurs clés, les tendances, l’activité des messages par créneau horaire et les intentions métier se rafraîchissent ensemble.
+- « Définition des indicateurs » recense bien les 5 indicateurs de volume et les 3 indicateurs de taux.
+- Un clic sur n’importe quelle catégorie métier ouvre « Données détaillées » avec les filtres de date et de catégorie correspondants.
+
+<Warning>
+Si la « Fenêtre de conversation pour les statistiques » est mal choisie, toute la page affiche les données d’un autre canal. « Performances » et « Données détaillées » partagent ce choix : les deux pages changent ensemble. « Performances » ne fait qu’afficher les résultats statistiques ; pour modifier la personnalité, les règles de réponse ou les connaissances, passez par les pages de configuration correspondantes.
+</Warning>
+
+<Info>
+Les statistiques ne couvrent que les échanges entre l’IA et les clients ; les conversations prises en charge par des conseillers humains ne sont pas incluses.
+</Info>
+
+<Tip>
+Survolez la carte « Taux de demandes » ou « Réponses / demandes de renseignements » : la page met en évidence les cartes de volume impliquées dans le calcul (le Taux de demandes vient de Messages reçus et de Demandes reçues ; le rapport Réponses / demandes vient de Demandes reçues et de Réponses), ce qui permet de vérifier rapidement les relations entre les définitions.
+</Tip>
+
+## Questions fréquentes
+
+### Les graphiques semblent moins remplis que prévu : que vérifier en premier ?
+
+Vérifiez trois points dans l’ordre : la « Fenêtre de conversation pour les statistiques » n’est-elle pas réglée sur une seule fenêtre (basculez sur « Toutes les fenêtres de conversation ») ; « Intentions métier » est-elle encore sur « Cacher les autres catégories » par défaut (passez à « Afficher toutes les catégories ») ; la plage de dates et le groupement couvrent-ils bien la période voulue. Certains états vides proposent un bouton « Réinitialiser les filtres » pour revenir en un clic à la plage par défaut.
+
+### Pourquoi les chiffres des cartes et des graphiques de tendance ne concordent-ils pas ?
+
+Parce que les périmètres diffèrent : les cartes portent sur une seule période (un jour, une semaine ou un mois), tandis que les tendances, l’évolution des taux, les Propositions et les Éléments appris utilisent un intervalle échantillonné. Les deux séries ne se comparent pas directement.
+
+### Pourquoi « Voir les échanges de cette période » est-il inactif ?
+
+Il exige une plage de dates complète. Avec le groupement « Personnalisé », les dates de début et de fin doivent toutes les deux être sélectionnées ; tant que ce n’est pas le cas, le bouton est inactif et la zone affiche « Sélectionnez d’abord une plage complète de dates. ».
+
+### Pourquoi « Évolution de la part des catégories métier » ne s’affiche-t-elle pas ?
+
+Deux cas fréquents : le groupement actuel est « Personnalisé » — ce bloc ne prend en charge que Par jour, Par semaine ou Par mois, et la page affiche « Choisir une comparaison quotidienne, hebdomadaire ou mensuelle » ; ou bien vous consultez la journée en cours — elle n’est pas terminée, la comparaison au même moment est impossible et le message « Aucune date complète à comparer » s’affiche ; choisissez une date déjà terminée.
+
+### Comment le « Taux d’adoption » est-il calculé ?
+
+Le Taux d’adoption reprend tel quel la valeur renvoyée par l’interface d’administration ; les données actuelles ne permettent pas de confirmer sa formule — ne l’interprétez pas comme un taux de conversion des ventes et ne le déduisez pas vous-même des Propositions. Il n’a pas de comparaison d’une période à l’autre ; lorsqu’aucune valeur n’est renvoyée, il affiche « — ».

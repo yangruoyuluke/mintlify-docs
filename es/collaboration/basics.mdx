@@ -1,0 +1,160 @@
+---
+title: Trabaje codo a codo con la IA
+description: Reconozca las cuatro identidades que ve la IA —Cliente, Compañero, Silenciado y Supervisor—, déle órdenes en la conversación y sepa cómo responder cuando le consulte.
+keywords:
+  - guía de colaboración
+  - identidades de contacto
+  - Chat del asistente
+  - comandos forzados
+  - consulta al supervisor
+  - colaboración con la IA
+---
+
+La IA de MarsMind es una compañera digital de trabajo: atiende cada conversación según la identidad que usted defina, le consulta cuando no está segura y las respuestas que usted dé se convierten en conocimiento que la IA podrá usar la próxima vez. Esta página recorre ese ciclo completo: cómo definir las identidades, dónde darle órdenes, cuándo vendrá a consultarle y cómo responderle.
+
+## Cuándo la necesitará
+
+- Acaba de conectar una ventana de conversación y va a dejar que la IA atienda a los clientes: defina primero «quién es quién» para que no confunda a las personas ni responda mal.
+- Quiere darle órdenes directamente: que empiece o pause el trabajo, active o desactive las respuestas en chats grupales, ordene registros o genere informes.
+- La IA le ha derivado una pregunta que no pudo responder: quiere saber por qué consulta, cómo responderle y qué pasa si no contesta.
+- Solución de problemas: si la IA responde a un compañero como si fuera un cliente o habla en un grupo donde no debería, revise primero la configuración de relaciones.
+
+## Las cuatro identidades que ve la IA
+
+La IA trata cada conversación según quién cree que está al otro lado. Estas identidades se mantienen en [Relaciones](/es/guide/assistant/relationship-config) y significan lo siguiente:
+
+| Identidad | Cómo la trata la IA |
+| --- | --- |
+| Cliente | Se atiende como cliente, con las reglas de respuesta de servicio al cliente |
+| Compañero | Se reconoce como compañero interno, con las reglas de comunicación de compañeros |
+| Silenciado | Se mantiene en silencio con ese contacto, sin respuestas automáticas |
+| Supervisor | Se reconoce como supervisor y puede recibir informes del asistente |
+
+Su propia identidad se vincula con un código de autorización: en [Autorización de identidad de IA](/es/guide/account/ai-authorization) genere un «Código de autorización de supervisor» o un «Código de autorización de compañero» y envíelo a la cuenta de IA desde su propio teléfono. En una misma cuenta de IA prevalece el último código recibido; los códigos de supervisor y de compañero se sustituyen entre sí.
+
+<Info>
+  La configuración de relaciones solo admite cuentas conectadas de WeChat y WeCom; las ventanas de sitio web, miniprograma y cuenta oficial no tienen esta lista de contactos y grupos.
+</Info>
+
+## Ruta de acceso
+
+Esta página combina varias entradas, que se usan en conjunto:
+
+- Conversar con la IA y darle órdenes: barra superior a la derecha → «Chat del asistente».
+- Configurar la identidad de contactos y grupos: menú de la izquierda → Mi asistente → Relaciones.
+- Vincular su propia identidad: abajo a la izquierda «Configuración de la cuenta» → «Autorización de identidad de IA».
+
+## Pasos
+
+<Steps>
+
+  <Step title="Compruebe quién es quién en «Relaciones»">
+    Entrada: menú de la izquierda → Mi asistente → Relaciones. Seleccione primero la ventana que quiere revisar en «Ventana de conversación actual», en la barra lateral.
+
+    Recorra la columna «Relación» de la lista de contactos y grupos fila por fila. Si algo no cuadra, haga clic en «Cambiar relación» al final de la fila y, en la ventana «Cambiar la relación de contacto», elija «Cliente», «Compañero», «Silenciado» o «Supervisor», y pulse «Guardar relación». Para cambiar varios a la vez, márquelos y use los botones «Establecer como cliente», «Establecer como compañero», «Silenciar» o «Establecer como supervisor» de la barra de acciones.
+
+    Cómo verificarlo: la columna «Relación» muestra justo el resultado que quería; confirme con especial atención «Supervisor», porque es quien recibe las preguntas que la IA deriva y sus informes proactivos.
+
+    Nota: las acciones por lotes se aplican al instante y no piden confirmación. Si un amigo o un grupo recién agregado no aparece en la lista, pulse «Sincronizar contactos» en la parte superior (la tarjeta indica «Hasta una sincronización por día.»). Si todavía no hay ninguna ventana, la página muestra «No hay ventanas de conversación disponibles»; pulse «Conectar una ventana» para acceder primero a una.
+  </Step>
+
+  <Step title="Haga que la IA le reconozca con un código de autorización (supervisor / compañero)">
+    Abajo a la izquierda, «Configuración de la cuenta» → «Autorización de identidad de IA»; copie el «Código de autorización de supervisor» o el «Código de autorización de compañero»: el de supervisor se copia ya listo para enviar, con el prefijo `#` (por ejemplo, `#A1b2C3`), mientras que del de compañero se copian los 6 caracteres del código. Abra en su teléfono la conversación con esta cuenta de IA y envíe directamente lo que copió.
+
+    Cómo verificarlo: aparece «Se ha copiado Código de autorización de supervisor» (para el de compañero, «Se ha copiado Código de autorización de compañero»); tras enviarlo, la IA reconocerá esa cuenta de teléfono como supervisor o como compañero.
+
+    Nota: en una misma cuenta de IA prevalece el último código recibido y los códigos de supervisor y compañero se sustituyen entre sí; para volver a ser supervisor, basta con reenviar el código de supervisor. «Generar y guardar un código nuevo» sustituye el código anterior de inmediato, sin confirmación, y el antiguo deja de funcionar, así que hay que enviar el nuevo.
+  </Step>
+
+  <Step title="Converse y dé órdenes en el «Chat del asistente»">
+    En la barra superior, a la derecha, haga clic en «Chat del asistente» para abrir el panel «Chat del asistente de administración»; escriba en el cuadro de mensaje y envíe para conversar con él.
+
+    - Escriba «/»: se muestran sugerencias en lenguaje natural, como «Ayúdame a ordenar las conversaciones de hoy» y «Generar el informe de trabajo de esta semana»; puede seleccionar una o escribirla con sus propias palabras.
+    - Escriba «#»: se muestran los comandos forzados, como `#work` (iniciar el trabajo), `#stop` (pausar el trabajo) y `#help` (ver todos los comandos); si no recuerda cuáles hay, envíe primero `#help`.
+
+    Cómo verificarlo: en la conversación aparecen sus mensajes y las respuestas de la IA; si el envío falla, sale un aviso de error (cuando no hay un mensaje concreto, «No se pudo enviar el mensaje. Inténtelo de nuevo.»).
+
+    <Frame>
+      ![Panel «Chat del asistente de administración» abierto: arriba la nota de alcance y abajo el cuadro de mensaje, la carga de imágenes y el botón de enviar](/images/es/collaboration/basics/01-chat-drawer.jpg)
+    </Frame>
+
+    Nota: en la cabecera del panel se lee «Esta entrada no está vinculada a la ventana de conversación seleccionada en la página. No puede confirmar que la configuración de la ventana está en vigor.»: aquí puede dar órdenes y preguntar información, pero no use este chat para probar las respuestas de una ventana de conversación concreta.
+  </Step>
+
+  <Step title="Responda cuando la IA venga a consultarle">
+    La IA le busca de forma proactiva en tres situaciones:
+
+    - No sabe responder: cuando no puede contestar una pregunta de un cliente, envía un resumen al supervisor; las «Sugerencias» de «Rendimiento del negocio» contabilizan esas derivaciones.
+    - Eventos clave: cuando ocurre la situación que usted escribió en «Reglas de respuesta → Notificación activa de eventos clave», le informa de forma proactiva.
+    - Disparo de un control: si en una regla de [Controles de seguridad](/es/guide/response/safety-guardrails) se eligió «Notificar líder» en «Notificación del líder», al coincidir la regla envía la notificación.
+
+    Responda cuanto antes a las consultas; las preguntas que se quedan sin respuesta se acumulan en «Pendiente de respuesta» de [Optimización de conocimientos](/es/guide/knowledge/optimization) (aún no está habilitada en todos los entornos). La etiqueta de la vista lleva el sufijo «(Prueba)»; en esta página la llamamos «Pendiente de respuesta» para abreviar.
+
+    Cómo verificarlo: la pregunta derivada ya tiene respuesta en la conversación; o rellenó «Introduzca una respuesta lista para enviar a los clientes» en «Pendiente de respuesta» y, al pulsar «Confirmar», apareció «Respuesta confirmada; se quitó de la lista de preguntas pendientes».
+
+    Nota: para recibir consultas e informes, antes debe ser «Supervisor» a los ojos de la IA —haber enviado el código de autorización de supervisor o estar marcado como «Supervisor» en Relaciones—; además, el interruptor y el contenido de «Notificación activa de eventos clave» deben estar activados y guardados en [Reglas de respuesta](/es/guide/response/reply-rules).
+  </Step>
+
+  <Step title="Revise la colaboración en los datos y decida qué enseñarle después">
+    Menú de la izquierda → Panel de datos → [Rendimiento del negocio](/es/guide/dashboard/business-performance): observe la evolución de «Sugerencias» (número de resúmenes de preguntas que la IA deriva al supervisor) y «Conocimientos aprendidos» (conocimiento que aprende automáticamente a partir de las conversaciones) para saber si resuelve por su cuenta o consulta a menudo; las preguntas que más consulta son justo lo que conviene añadir a la base de conocimientos.
+
+    Para entender por qué una respuesta se dio así, vaya al menú de la izquierda → Panel de datos → [Revisión detallada](/es/guide/dashboard/data-export), abra una consulta y revise «Conocimiento de referencia» y los «Pasos de ejecución».
+
+    Cómo verificarlo: «Sugerencias» y «Conocimientos aprendidos» muestran datos y, en los registros que revise, la respuesta se corresponde con un conocimiento de referencia o unos pasos de ejecución.
+
+    Nota: mensajes recibidos, consultas y respuestas se superponen, así que no se pueden sumar; para la definición de cualquier otro indicador, pulse «Guía métrica» cuando quiera.
+  </Step>
+
+</Steps>
+
+## Puntos de verificación
+
+- La columna «Relación» de Relaciones coincide con lo esperado y quién es «Supervisor» está claro.
+- El código de supervisor o de compañero ya se envió a la cuenta de IA correspondiente y es el que está vigente (si generó uno nuevo, tiene que reenviarlo).
+- El «Chat del asistente» puede enviar y recibir mensajes; al escribir «#» y «/» se ven las listas de comandos y sugerencias.
+- Las preguntas que la IA derivó ya están respondidas; las que quedaron pendientes se completaron en «Optimización de conocimientos → Pendiente de respuesta».
+- En «Rendimiento del negocio», «Sugerencias» y «Conocimientos aprendidos» muestran datos.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+  El código de autorización es una credencial de identidad: envíelo solo a la persona que quiera autorizar y a la cuenta de IA correspondiente; no lo reenvíe a grupos ni a personas ajenas. «Generar y guardar un código nuevo» sustituye el antiguo de inmediato, sin confirmación adicional, y el código anterior deja de ser válido.
+</Warning>
+
+<Info>
+  El código de autorización identifica «quién es usted» y la configuración de relaciones indica «quiénes son los contactos y los grupos»; ambas cosas juntas determinan cómo trata la IA a cada interlocutor.
+</Info>
+
+<Info>
+  La conversación del «Chat del asistente» no está vinculada a la ventana de conversación seleccionada en la página, así que no sirve para confirmar que la configuración de una ventana está en vigor. Para validarla, envíe mensajes por un canal real o despliegue conversaciones reales en «Revisión detallada».
+</Info>
+
+<Tip>
+  Escribir «/» y expresar lo que necesita es más rápido que memorizar comandos; si no los recuerda todos, envíe `#help` y la IA le listará todos los comandos compatibles.
+</Tip>
+
+<Tip>
+  Las respuestas que añada en «Pendiente de respuesta» se guardan como conocimiento: redáctelas como un texto estándar listo para enviar al cliente y, la próxima vez, una pregunta similar tendrá base.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Qué son las «Sugerencias»? ¿Cuándo vendrá la IA a consultarme?
+
+«Sugerencias» contabiliza los resúmenes de preguntas que la IA deriva al supervisor. Cuando una pregunta de un cliente no se puede responder, la IA le envía el resumen al supervisor; según los eventos clave configurados en «Reglas de respuesta → Notificación activa de eventos clave», le informa de forma proactiva; y si una regla de Controles de seguridad tiene seleccionado «Notificar líder», también le avisa.
+
+### La IA me derivó una pregunta y no llegué a responderla. ¿Qué pasa?
+
+Las preguntas que se quedan sin respuesta entran en «Pendiente de respuesta» de «Optimización de conocimientos»; escriba ahí una respuesta que pueda enviar directamente al cliente y pulse «Confirmar»: la pregunta sale de la lista y la respuesta se guarda como conocimiento. Si no quiere procesarla, pulse «Ignorar»; ignorar no genera conocimiento. Esta vista aún no está habilitada en todos los entornos; si no la ve en la página, significa que su entorno todavía no la ofrece.
+
+### ¿Por qué el supervisor nunca recibe los informes proactivos de la IA?
+
+Compruebe tres puntos en orden: ① si el destinatario es «Supervisor» —bien porque se envió el código de autorización de supervisor, bien porque está marcado como «Supervisor» en Relaciones—; ② si en «Reglas de respuesta» la «Notificación activa de eventos clave» está activada y su contenido se guardó con «Guardar configuración»; ③ si es una notificación de los controles de seguridad, si en la regla «Notificación del líder» está seleccionado «Notificar líder».
+
+### Lo que converso en el «Chat del asistente», ¿sirve para validar la configuración de una ventana de conversación?
+
+No. No está vinculado a la ventana seleccionada en la página; para validar, envíe mensajes por un canal real o abra «Revisión detallada» y despliegue una conversación real para consultar su «Conocimiento de referencia» y sus «Pasos de ejecución».
+
+### La IA responde siempre a un compañero como si fuera un cliente. ¿Cómo lo corrijo?
+
+Elija una de las dos opciones: cambie su «Relación» a «Compañero» en Relaciones, o pídale al compañero que envíe el «Código de autorización de compañero» a esta cuenta de IA. Después, confirme con un mensaje real que el trato de la IA ya cambió; las modificaciones por lotes se aplican al instante y no hay forma de deshacerlas.

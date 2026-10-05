@@ -1,0 +1,142 @@
+---
+title: Perfil base
+description: "Configure la identidad y la forma de hablar de la IA en la ventana de conversación seleccionada: elija el estilo de la IA, redacte la instrucción principal y revise los ajustes de contexto que se inyectan en las respuestas."
+keywords:
+  - perfil base
+  - estilo de la IA
+  - instrucción principal
+  - ajustes de contexto
+  - ventana de conversación
+---
+
+«Perfil base» determina quién es la IA y cómo habla en la ventana de conversación seleccionada: en «Estilo de la IA» se define el tono, en «Instrucciones personalizadas» se redacta la instrucción principal y con «Ajustes de contexto» se decide qué información se inyecta en las respuestas. Los ajustes de esta página solo se aplican a la «Ventana de conversación actual», a la izquierda.
+
+## Cuándo la necesitará
+
+- Acaba de conectar una ventana nueva mediante [Inicio de sesión en canales](/es/guide/assistant/login-online) y quiere que la IA atienda a los clientes con la identidad y el tono de su negocio.
+- El trato, el tono o los principios de respuesta de la IA no son los correctos y necesita editar la instrucción principal.
+- Su escenario de negocio ha cambiado (por ejemplo, de consultas de preventa a soporte de posventa) y quiere adoptar otro estilo de expresión.
+- Quiere comprobar qué escenarios de conversación, perfiles de usuario y otros datos se inyectarán en las respuestas de la IA.
+
+## Ruta de acceso
+
+Menú izquierdo → Mi asistente → Perfil base. Al entrar, mire primero la «Ventana de conversación actual», en el centro de la barra lateral: toda la configuración de esta página se guarda por ventana, así que al cambiar de ventana verá los ajustes de otra.
+
+<Frame>
+  ![Página completa de «Perfil base»: arriba, las dos opciones de «Estilo de la IA», «Detallado y cortés» y «Flexible y conciso»; abajo, el área de edición de la instrucción principal de «Instrucciones personalizadas», los botones «Historial» y «Generar con ayuda de la IA» y el estado de guardado; la tarjeta «Ajustes de contexto» aparece contraída de forma predeterminada](/images/es/guide/assistant/persona/01-overview.jpg)
+</Frame>
+
+Si no hay ninguna ventana seleccionada, la página solo muestra «No hay ventanas de conversación disponibles», «Primero, conecte una ventana de conversación que no sea de administración y después continúe con la configuración.» y el botón «Conectar una ventana»; en ese caso no se puede editar.
+
+## Pasos
+
+<Steps>
+  <Step title="Confirme la «Ventana de conversación actual»">
+    El Perfil base, las Relaciones y la Configuración de respuestas se guardan por ventana. Antes de empezar a editar, confirme que la «Ventana de conversación actual», en el centro de la barra lateral, es la ventana que quiere configurar.
+
+    Cómo comprobarlo: el menú desplegable muestra el nombre de la ventana objetivo.
+
+    Nota: si hay contenido sin guardar, al cambiar de ventana o de menú aparece primero el aviso «¿Descartar los cambios sin guardar?»; elija «Seguir editando» para quedarse en la página y continuar.
+  </Step>
+
+  <Step title="Elija el «Estilo de la IA»">
+    «Estilo de la IA» tiene dos opciones y se guarda al seleccionarla; no hay un botón de guardado aparte:
+
+    - Detallado y cortés: respuestas más completas y un tono más atento, para situaciones que requieren una explicación clara.
+    - Flexible y conciso: respuestas más directas que conservan el detalle necesario, para avanzar rápido en la conversación.
+
+    Cómo comprobarlo: la opción seleccionada queda resaltada y aparece el aviso «El estilo IA cambió a …». El aviso permanente de la parte superior de la página, «Los interruptores se guardan por separado; los cambios del contenido deben guardarse.», se refiere a esto.
+
+    Nota: si la actualización falla, la opción vuelve al lado anterior y aparece un mensaje de error; vuelva a seleccionarla.
+  </Step>
+
+  <Step title="Redacte y guarde la instrucción principal">
+    En la tarjeta «Instrucciones personalizadas» redacte la instrucción principal: deje claros la identidad de la IA, su alcance de servicio y sus principios de respuesta. El texto de ayuda del área de edición es «Describa el perfil del asistente de IA, su tono de comunicación y sus principios de respuesta.»; si no sabe cómo escribirla, pulse «Ver ejemplo» para desplegar un conjunto de ejemplos de referencia.
+
+    Debajo del área de edición está la zona de guardado de esta tarjeta:
+
+    - «Guardar configuración»: solo está disponible cuando el contenido tiene cambios. Tras guardarlo, el estado pasa de «Sin guardar» a «Guardado» o «Guardado · Aplicación en el servicio sin confirmar».
+    - «Historial»: lista las versiones anteriores, por ejemplo «10/4 14:30 Versión». Al seleccionar una versión se abre la ventana de comparación: a la izquierda, «Borrador actual»; a la derecha, «Texto candidato». «Aplicar propuesta» solo devuelve el contenido al área de edición; después todavía hay que pulsar «Guardar configuración» para guardarlo de verdad. «Conservar el borrador actual» cierra la ventana. Si el borrador actual tiene cambios sin guardar, la ventana avisa de que aplicar la propuesta los sustituirá.
+    - «Generar con ayuda de la IA»: genera una propuesta a partir del contenido actual del área de edición; confírmela también en la ventana de comparación antes de guardar. El botón no está disponible cuando el contenido está vacío.
+
+    Cómo comprobarlo: el estado ya no es «Sin guardar». «Guardado · Aplicación en el servicio sin confirmar» significa que la configuración se ha guardado en el sistema, pero que aún no se ha confirmado que el servicio la haya aplicado.
+
+    Nota: guardar la instrucción principal actualiza también los «Ajustes de contexto» de abajo; es el comportamiento esperado, vea el paso siguiente.
+  </Step>
+
+  <Step title="Revise los «Ajustes de contexto»">
+    «Ajustes de contexto» determina qué escenarios de conversación, perfiles de usuario y otros datos se inyectan automáticamente en las respuestas de la IA. La tarjeta aparece contraída de forma predeterminada; pulse el título para desplegarla. A la derecha del título se muestra «x de y seleccionadas».
+
+    - Las opciones se listan por grupos; despliegue cada grupo y marque lo que necesite. Los elementos con la etiqueta «Sensible» son contexto sensible: decida si los inyecta según su negocio.
+    - «Sugerir con IA» marca automáticamente las opciones recomendadas según la instrucción principal actual y muestra «Motivo de la sugerencia: …» bajo cada opción seleccionada. El botón solo está disponible cuando el área de edición contiene la instrucción principal.
+    - Cuando termine, pulse «Guardar configuración» y aparecerá el aviso «Ajustes de contexto guardados». Estas selecciones se guardan por separado de la instrucción principal.
+
+    Guardar la instrucción principal también actualiza esta sección: el sistema la analiza de nuevo según la nueva instrucción y sobrescribe las selecciones actuales. Durante el proceso se muestra «Actualizando automáticamente la configuración de contexto según la instrucción principal…»; al terminar, «Configuración de contexto actualizada según la instrucción principal.»; si falla, «No se pudo actualizar el contexto automáticamente. Se conserva la configuración anterior; puede ajustarla y guardarla manualmente.». Si el resultado automático no es el esperado, despliegue la tarjeta, ajuste las selecciones y guarde de nuevo.
+
+    Si en la lista aparece «Opciones desconocidas o desactivadas», significa que esos elementos ya no están entre las opciones disponibles y solo se pueden desmarcar.
+
+    Cómo comprobarlo: el título ya no lleva la etiqueta «Sin guardar» y «x de y seleccionadas» coincide con la información que quiere inyectar.
+
+    <Frame>
+      ![«Ajustes de contexto» desplegados: las opciones se listan por grupos y algunas llevan la etiqueta «Sensible»; abajo están los botones «Sugerir con IA» y «Guardar configuración», y a la derecha del título de la tarjeta se muestra el número de seleccionadas](/images/es/guide/assistant/persona/02-context-settings.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Gestione las «Instrucciones derivadas» (opcional)">
+    «Instrucciones derivadas» aparece contraída de forma predeterminada. Cuando la instrucción principal esté lista, pulse «Volver a generar» y el sistema creará instrucciones candidatas para cada uso, para que pulse «Aplicar» o «Descartar» en cada una. «Volver a generar» solo crea las candidatas y no escribe nada: no afecta al servicio hasta que las aplique.
+
+    Cómo comprobarlo: al gestionar un elemento, su etiqueta «Nuevo» desaparece y el contador «N con nuevos candidatos» del título de la tarjeta disminuye o desaparece.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación actual» de la izquierda es la ventana que quiere configurar.
+- La opción seleccionada en «Estilo de la IA» es la esperada y, al seleccionarla, apareció el aviso de cambio.
+- El estado de la instrucción principal es «Guardado» o «Guardado · Aplicación en el servicio sin confirmar», no «Sin guardar».
+- En «Ajustes de contexto», «x de y seleccionadas» coincide con lo que necesita inyectar y los cambios están guardados.
+- Envíe un mensaje por el canal correspondiente: el trato, el tono y los principios de respuesta de la IA son los esperados.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Esta página se guarda por «Ventana de conversación actual». Antes de cambiar algo, confirme que no se ha equivocado de ventana; de lo contrario, el estilo y la instrucción principal se modificarán en otra cuenta.
+</Warning>
+
+<Warning>
+Si hay contenido sin guardar, al salir de la página (cambiar de menú, cambiar de ventana, actualizar o cerrar la pestaña) aparecerá la ventana «¿Descartar los cambios sin guardar?»; elija «Seguir editando» para volver a terminar los cambios, o «Descartar los cambios» para perderlos. Mientras se está guardando se muestra «Espere a que termine el guardado o la subida en curso antes de salir.».
+</Warning>
+
+<Info>
+Guardar la instrucción principal actualiza también los «Ajustes de contexto»: el sistema los vuelve a analizar según la nueva instrucción y sobrescribe las casillas marcadas. Es el comportamiento esperado; si la actualización automática falla, se conserva la configuración anterior y puede ajustarla y guardarla manualmente.
+</Info>
+
+<Info>
+El aviso de la parte superior de la página, «Los interruptores se guardan por separado; los cambios del contenido deben guardarse.», significa que «Estilo de la IA» se aplica al seleccionarlo, mientras que la instrucción principal y las selecciones de «Ajustes de contexto» requieren pulsar «Guardar configuración».
+</Info>
+
+<Tip>
+«Guardado · Aplicación en el servicio sin confirmar» solo indica que el guardado se realizó correctamente, no que el servicio ya lo haya aplicado. Tras cambiar el perfil, lo más directo es enviar un mensaje en una conversación real de esa ventana para verificarlo. El perfil solo define el tono y los principios: para decidir cómo responder cuando la IA no sabe qué contestar y si debe intervenir en chats grupales, configure las [Reglas de respuesta](/es/guide/response/reply-rules); para decidir quién puede hablar con la IA y quién debe permanecer en silencio, configure las [Relaciones](/es/guide/assistant/relationship-config).
+</Tip>
+
+## Preguntas frecuentes
+
+### Cambié el perfil, pero las respuestas de la IA no cambian. ¿Qué reviso primero?
+
+Revise tres cosas en orden: si la «Ventana de conversación actual» de la izquierda es la ventana en la que está conversando —esta página se guarda por ventana, así que es fácil cambiar por error la de otra—; si el estado de la instrucción principal es «Guardado · Aplicación en el servicio sin confirmar» —la configuración ya está guardada en el sistema, pero aún no se ha confirmado que el servicio la haya aplicado—; y, por último, envíe un mensaje en una conversación real de esa ventana para verificarlo.
+
+### Después de guardar la instrucción principal, ¿por qué cambiaron las casillas de «Ajustes de contexto»?
+
+El sistema vuelve a analizar y sobrescribe los ajustes de contexto según la nueva instrucción principal; es el comportamiento esperado. Si el resultado automático no es el esperado, despliegue «Ajustes de contexto», ajuste las selecciones y pulse «Guardar configuración». Si la actualización automática falla, se conserva la configuración anterior y aparece un aviso.
+
+### ¿Por qué no puedo pulsar «Sugerir con IA»?
+
+Se necesita que el área de edición contenga la instrucción principal (basta con escribirla; no hace falta guardarla antes); si el contenido está vacío, el botón no está disponible. Tampoco está disponible si falla la carga de las opciones de contexto o mientras el sistema se está actualizando automáticamente; inténtelo de nuevo más tarde.
+
+### Apliqué una versión antigua desde el «Historial», ¿por qué no ha surtido efecto?
+
+Seleccionar una versión solo coloca su contenido en la ventana de comparación; tras pulsar «Aplicar propuesta», el contenido vuelve al área de edición y todavía hay que pulsar «Guardar configuración» para guardarlo de verdad. Si la ventana avisa de que el borrador actual tiene cambios sin guardar, aplicar la propuesta los sustituirá: confírmelo antes de aplicar.
+
+### ¿Por qué no puedo editar la página?
+
+Cuando no hay ninguna ventana de conversación seleccionada, la página solo muestra «No hay ventanas de conversación disponibles». Pulse «Conectar una ventana» para conectar una primero y vuelva después a esta página.

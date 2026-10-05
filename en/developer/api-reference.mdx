@@ -1,0 +1,207 @@
+---
+title: API Reference
+description: "Connect MarsMind conversations to your own system: request parameters, authentication, four conversation scenarios, and call examples."
+keywords:
+  - API integration
+  - request parameters
+  - authentication
+  - conversation scenarios
+  - message delivery
+---
+
+This page is for integrators who already have a system of their own: hand messages to MarsMind by calling the API directly, without going through the MarsMind admin console. You assemble requests in the agreed format; MarsMind returns the processing result based on `event_type`, or, in the auto_dialog scenario, sends messages automatically to the `send_url` you provide. If you only use the MarsMind admin console and the standard chat entry, you do not need to start here.
+
+## When you'll need this
+
+- You have your own app, customer service system, or messaging channel, and you want to plug MarsMind conversations into it instead of using only the standard chat entry.
+- Your own system needs the AI's processing result for a message in real time, at call time.
+- You need to control message processing by command, for example to stop automatic replies for a scenario.
+
+## Before you start
+
+There is no admin console menu entry for this page — requests come from your own system — and there is no self-service application form either. Get four things ready before you call the API: the production endpoint, the client and secret, and the signature algorithm are assigned by MarsMind (contact [sales@marsmind.co](mailto:sales@marsmind.co) to obtain them); you choose the integration scenario (`event_type`) based on your business:
+
+1. **Production endpoint**: `{production-endpoint}` in the examples stands for your access domain; this documentation does not hard-code it.
+2. **Credentials**: `client` (business identifier) and `secret`.
+3. **Signature algorithm**: how `signature` is calculated is defined in the integration material MarsMind provides; this page does not cover it.
+4. **Confirm the scenario**: choose one of the four — auto_dialog, assist_dialog, website_dialog, cmd_dialog. They differ in required parameters and return behavior; see "Conversation scenarios".
+
+You are ready when: you have all four items — the production endpoint domain, client, secret, and signature algorithm — and have decided on the `event_type`.
+
+## Authentication
+
+Every request must carry the `client`, `signature`, and `timestamp` fields; none of them can be omitted. For the `signature` algorithm, contact [sales@marsmind.co](mailto:sales@marsmind.co). Field types and descriptions are in the "Request body" table under "Request parameters" below.
+
+Beyond these three fields, the request body must also carry a `message_info` object that holds the message content.
+
+## Request parameters
+
+### Request body
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| client | string | Yes | Business identifier; confirm it with MarsMind |
+| signature | string | Yes | Request signature; contact sales@marsmind.co for the algorithm |
+| timestamp | int | Yes | Timestamp (Unix, in seconds) |
+| message_info | object | Yes | Message details, see the field definitions below |
+
+### `message_info` fields
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| msg_id | string | No (required for assist_dialog) | Unique message ID; required in the assist_dialog scenario |
+| group_id | string | Depends on the scenario | Group chat ID; error 400 if both from_user_id and group_id are empty |
+| group_name | string | No | Group chat name |
+| from_user_id | string | Yes | Sender ID |
+| from_user_nickname | string | No | Sender nickname |
+| to_user_id | string | No | Recipient ID |
+| to_user_nickname | string | No | Recipient nickname |
+| at_list | string[] | No | List of user IDs to @ (auto_dialog only) |
+| content | string | At least one of content and files_info required | Message text content |
+| message_type | int | Yes | 1 = normal message, 2 = quoted message |
+| event_type | string | Yes | auto_dialog \| assist_dialog \| website_dialog \| cmd_dialog |
+| from_user_type | int | Required for auto_dialog | 1 = bot-bound account, 2 = customer, 3 = human agent, 4 = bot message |
+| create_timestamp | int | Yes | Message creation time (Unix timestamp) |
+| files_info | File[] | At least one of content and files_info required | Attachment list; see the table below |
+| quote | object | Required when message_type = 2 | Quoted message object; must include msg_id and message_type |
+
+#### `files_info` structure
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| content | string (URL / base64) | Yes | File URL or base64 data |
+| file_type | "image" / "document" / "voice" | Yes | File type |
+
+## Conversation scenarios
+
+### auto_dialog (automatic conversation)
+
+- `event_type = auto_dialog`
+- You provide the `send_url`; MarsMind then controls the message-sending logic automatically
+- Supports text, images, and files (one type per request)
+
+Suggestions for `from_user_type`:
+
+- Bound contact: use 1 for everything except messages from the AI assistant itself
+- Unbound contact: use 2 for external customers, 3 for people within the same company
+
+### assist_dialog (assisted conversation)
+
+- Returns the message processing result in real time
+- `msg_id` is required
+- If the parameters match an auto_dialog message, that message's context is reused
+
+### website_dialog (website conversation)
+
+- The message returns a result immediately and enters the context
+- `send_url` is not supported
+
+### cmd_dialog (command control)
+
+- `content` carries the command; currently supported:
+  - `stop_auto_reply`: stops automatic replies (effective only in the auto_dialog scenario)
+
+## Steps
+
+<Steps>
+  <Step title="Get the production endpoint and credentials">
+    Contact [sales@marsmind.co](mailto:sales@marsmind.co) to obtain the production endpoint, client, secret, and signature algorithm. Until this step is complete, do not use the addresses or placeholder values in the examples for real calls.
+
+    How to verify: you have all four items in hand — the production endpoint domain, client, secret, and signature algorithm.
+  </Step>
+
+  <Step title="Choose a scenario and assemble message_info">
+    Decide on `event_type` first, then fill in each field from the tables above. These are the ones most often missed:
+
+    - Fill in at least one of `content` and `files_info`;
+    - When `message_type` is 2 (quoted message), you must include `quote`, and `quote` must contain `msg_id` and `message_type`;
+    - Do not leave both `from_user_id` and `group_id` empty; if both are empty you get error 400;
+    - In the auto_dialog scenario you must also fill in `from_user_type`.
+
+    How to verify: check the required fields against the tables, especially the four points above.
+  </Step>
+
+  <Step title="Send the request">
+    The request URL is your production endpoint plus `/custom-im/chat-messages`, sent with POST and `Content-Type: application/json`. Replace `{production-endpoint}` in the example with the domain you obtained; the client, signature, message ID, and other values are all placeholders:
+
+    ```bash
+    curl -X POST "https://{production-endpoint}/custom-im/chat-messages" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "client": "test",
+      "signature": "d97b383a532466b6c6c451e76a2ab57b",
+      "timestamp": 1748584621,
+      "message_info": {
+        "content": "",
+        "message_type": 1,
+        "group_id": "98765@chatroom",
+        "event_type": "auto_dialog",
+        "from_user_id": "aa123",
+        "from_user_type": 2,
+        "msg_id": "9005",
+        "create_timestamp": 1748584621,
+        "files_info": [
+          { "content": "https://example.com/img.png", "file_type": "image" }
+        ]
+      }
+    }'
+    ```
+
+    How to verify: assist_dialog and website_dialog return this message's processing result in the response in real time; once an auto_dialog request is accepted, MarsMind sends automatically through your `send_url` — you do not need to call a send API yourself.
+  </Step>
+
+  <Step title="Review the result in the admin console (optional)">
+    Once the message enters the system, use [Detail Review](/en/guide/dashboard/data-export) in the admin console to check how this turn was handled: switch the data scope to "Chat Data Details" (AI conversations only), filter by window and time, click the User Query content to open "Message Processing Chain", and compare it stage by stage under the two tabs, "Execution Steps" and "Reference Knowledge (N)". Execution Steps shows "Conversation Context at That Time → Group Handling → Reply Decision → Skill Invocation → Knowledge Generation → Safety Guardrail"; at the top of the panel, the three evidence items — "Response generation", "Customer delivery", and "Guardrail" — are shown independently, and anything missing appears as unknown.
+
+    Note: after you change the filters, click Search to refresh the results.
+
+    How to verify: you can locate the message from this call and see which stage it reached in the chain; when a stage is missing, Execution Steps shows it directly, so you can tell where it got stuck.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- assist_dialog, website_dialog: the response brings back the processing result for this message.
+- auto_dialog: your `send_url` receives the message from MarsMind — the automatic sending path works.
+- Context reuse: when assist_dialog parameters match an auto_dialog message, processing continues from that context instead of starting from scratch.
+- Command control: after cmd_dialog sends `stop_auto_reply`, the matching automatic replies stop.
+- Parameters accepted: no 400 error (error 400 is returned when both `from_user_id` and `group_id` are empty).
+
+## Important notes
+
+<Warning>
+The production endpoint, client, secret, and signature algorithm are all assigned by MarsMind and are not public; contact [sales@marsmind.co](mailto:sales@marsmind.co) to obtain them. Credentials are sensitive: never put them in front-end code, a client app, or a public repository — store and use them only on the server.
+</Warning>
+
+<Info>
+How the four scenarios divide the work — who sends messages, and who returns results in real time at call time — is covered in "Conversation scenarios" above and "Frequently asked questions" below.
+</Info>
+
+<Tip>
+To make assist_dialog reuse a message's context, just keep its parameters identical to that auto_dialog message.
+</Tip>
+
+## Frequently asked questions
+
+### Which event_type should I use?
+
+- Let MarsMind control the sending logic (how and when messages go out is up to MarsMind) → auto_dialog; you need to provide `send_url`.
+- Need the processing result for this message at call time → assist_dialog (`msg_id` required).
+- Website conversation → website_dialog (returns the result immediately and enters the context; `send_url` not supported).
+- Send commands → cmd_dialog; put the command itself in `content`.
+
+### Where do I apply for the production endpoint, client, and secret?
+
+There is no self-service application form: the API endpoint, credentials, and signature algorithm are all assigned by MarsMind. Contact [sales@marsmind.co](mailto:sales@marsmind.co) to obtain them. Until you have them, the `{production-endpoint}`, `client: "test"`, and example signature in this page cannot be used for real calls.
+
+### Why does the request return 400?
+
+Check these three places first: whether `from_user_id` and `group_id` are both empty (both empty returns 400); whether at least one of `content` and `files_info` is filled in; and when `message_type` is 2, whether `quote` is included (with `msg_id` and `message_type`). Fix them and send the request again.
+
+### What is the difference between auto_dialog and assist_dialog?
+
+auto_dialog has MarsMind control the sending logic and send through the `send_url` you provide; it supports text, images, and files (one type per request). assist_dialog returns the processing result in real time at call time; when its parameters match an auto_dialog message, it reuses that context, and `msg_id` is required. Choose the former to "send automatically", the latter to "see the result on the spot".
+
+### How do I confirm the message was really processed?
+
+On the calling side, check the response and your `send_url`; on the system side, review it in the admin console as described in step 4 of "Steps".

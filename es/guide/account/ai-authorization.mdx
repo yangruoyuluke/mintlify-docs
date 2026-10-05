@@ -1,0 +1,128 @@
+---
+title: Autorización de identidad de IA
+description: Genere y consulte los códigos de autorización de supervisor y de compañero, cópielos con el formato que indica la interfaz (el código de supervisor lleva automáticamente el prefijo #) y envíelos a la cuenta de IA para que reconozca su identidad.
+keywords:
+  - autorización de identidad de IA
+  - código de autorización de supervisor
+  - código de autorización de compañero
+  - vinculación de identidad
+  - código de autorización
+---
+
+«Autorización de identidad de IA» sirve para generar los códigos de autorización que se envían a las cuentas de IA: el «Código de autorización de supervisor» hace que la IA le reconozca como supervisor y el «Código de autorización de compañero», como compañero. El código solo surte efecto cuando se envía a la cuenta de IA correspondiente, y en una misma cuenta de IA prevalece el último código recibido.
+
+## Cuándo la necesitará
+
+- La primera vez que la IA deba reconocerle: envíe a la cuenta de IA el código que le corresponde. Si en [Inicio de sesión en canales](/es/guide/assistant/login-online) eligió «Hacerlo más tarde», puede enviarlo después desde esta página.
+- Para consultar o copiar el código actual: si ha olvidado cuál es y necesita abrir la página para comprobarlo.
+- Para cambiar el código: si sospecha que el anterior se ha filtrado o su equipo le pide uno nuevo.
+- Para cambiar de identidad: vuelva a enviar otro código a la misma cuenta de IA y la identidad anterior quedará sustituida.
+
+## Ruta de acceso
+
+«Configuración de la cuenta» (abajo a la izquierda) → «Autorización de identidad de IA». (También puede abrir primero [Perfil](/es/guide/account/profile) o [Seguridad de inicio de sesión](/es/guide/account/security) y cambiar después a esta pestaña en la parte superior.) Al abrir la página, arriba están las tres pestañas «Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA» y la vista se queda en «Autorización de identidad de IA»; la descripción de la página es «Genere códigos de supervisor o de compañero para enviarlos a las cuentas de IA.». Los códigos de esta página pertenecen a su cuenta de administración y no cambian al cambiar la «Ventana de conversación actual» de la izquierda.
+
+<Frame>
+  ![Página «Autorización de identidad de IA»: arriba, las tres pestañas «Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA»; en la tarjeta «Códigos de autorización de identidad de IA» están los campos «Código de autorización de supervisor» y «Código de autorización de compañero», cada uno con los iconos de copiar y mostrar/ocultar y el botón «Generar y guardar un código nuevo» a la derecha, y abajo la barra de guardado](/images/es/guide/account/ai-authorization/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Localice el código que desea enviar">
+    En la tarjeta «Códigos de autorización de identidad de IA» hay dos campos: «Código de autorización de supervisor» y «Código de autorización de compañero». Ambos están ocultos de forma predeterminada (se muestran como puntos); haga clic en el icono de ojo a la derecha del campo («Mostrar código de autorización de supervisor» / «Mostrar código de autorización de compañero») para verlos, y vuelva a hacer clic para ocultarlos de nuevo.
+
+    El icono ⓘ junto al título de la tarjeta, «Códigos de autorización de identidad de IA», es la descripción de la regla: «En una misma cuenta de IA, el último código recibido determina la identidad que se le asigna. Los códigos de supervisor y de compañero sustituyen la identidad anterior.»; los ⓘ junto a cada campo explican el formato de copia y el reconocimiento que produce cada código.
+
+    Cómo comprobarlo: debe ver un código de autorización de 6 caracteres formado por letras mayúsculas o minúsculas y números. Si la página muestra «No se pudo cargar su perfil» y «Vuelva a cargar su perfil antes de editar sus datos o los códigos de autorización.», pulse primero «Reintentar».
+
+    Nota: es posible que una cuenta nueva todavía no tenga códigos (los campos están vacíos); si el «Código de autorización de compañero» también está vacío, rellene primero un código válido de 6 caracteres y continúe con el paso 3 para generar el código; después vuelva aquí para copiarlo y enviarlo.
+  </Step>
+
+  <Step title="Copie el código y envíelo a la cuenta de IA">
+    Haga clic en el icono de copiar a la derecha del campo para copiar el código correspondiente:
+
+    - Código de autorización de supervisor: el resultado incluye automáticamente el prefijo `#`, por ejemplo `#A1b2C3`; envíelo directamente con ese formato.
+    - Código de autorización de compañero: se copia el código de 6 caracteres tal cual.
+
+    Después, abra en su propio WeChat o WeCom el chat con esa cuenta de IA y envíe directamente lo que ha copiado. Una vez enviado, la IA le reconocerá como supervisor o como compañero.
+
+    Cómo comprobarlo: aparece el aviso «Se ha copiado Código de autorización de supervisor» o «Se ha copiado Código de autorización de compañero»; al pegar el código de compañero, el contenido coincide con lo que muestra la página, y delante del código de supervisor que muestra la página aparece automáticamente un `#`.
+
+    Nota: en una misma cuenta de IA prevalece el último código recibido: si envía primero el de supervisor y luego el de compañero, la identidad pasa a ser de compañero; para volver a la de supervisor, basta con reenviar el código de supervisor.
+  </Step>
+
+  <Step title="Si necesita un código nuevo, genérelo y guárdelo">
+    Haga clic en «Generar y guardar un código nuevo» junto al campo correspondiente. Con un solo clic se genera y se guarda de inmediato en el servidor, sustituyendo el código anterior; cada campo tiene su propio botón y solo se sustituye el del campo en el que ha hecho clic.
+
+    Nota: tanto la generación como el guardado exigen que los dos campos de código tengan ya un código válido de 6 caracteres; si el otro campo está vacío, la validación bloquea la operación y muestra el texto en rojo correspondiente, así que complete antes ese campo.
+
+    Cómo comprobarlo: aparece «Código de supervisor generado y guardado» o «Código de compañero generado y guardado», el campo ya muestra el código nuevo (pulse el icono de ojo para ver los 6 caracteres nuevos) y el estado de la parte inferior de la página es «No hay cambios sin guardar».
+
+    Nota: la generación no tiene segunda confirmación y no se puede deshacer; el código anterior deja de ser válido en ese momento. Si ya lo había enviado a una cuenta de IA, deberá copiar y enviar de nuevo el código nuevo para que la IA le reconozca con él.
+
+    Nota: si hay cambios sin guardar, el botón no está disponible y debajo de la tarjeta aparece «Guarde los cambios antes de generar un código nuevo. Los códigos generados se guardan de inmediato.»: pulse primero «Guardar».
+  </Step>
+
+  <Step title="También puede editar el código a mano y guardarlo">
+    Puede editar el código directamente en el campo (por ejemplo, para cambiarlo por el acordado con su equipo): debe tener exactamente 6 caracteres y contener solo letras mayúsculas o minúsculas y números. Si no cumple estos requisitos, al pulsar «Guardar» aparece el texto en rojo bajo el campo:
+
+    - Vacío: «Introduzca el código de autorización de supervisor.» / «Introduzca el código de autorización de compañero.»
+    - No tiene 6 caracteres: «El código de autorización de supervisor debe tener 6 caracteres.» / «El código de autorización de compañero debe tener 6 caracteres.»
+    - Contiene otros caracteres: «El código de autorización de supervisor solo puede contener letras mayúsculas o minúsculas y números.» / «El código de autorización de compañero solo puede contener letras mayúsculas o minúsculas y números.»
+
+    Cuando esté corregido, pulse «Guardar» en la parte inferior de la página (mientras se guarda muestra «Guardando…»); el texto de estado inferior indica «Solo guarda los códigos de autorización de esta página.».
+
+    Cómo comprobarlo: aparece «Guardado correctamente.», el estado inferior pasa de «Hay cambios sin guardar» a «No hay cambios sin guardar» y el botón de copiar vuelve a estar disponible.
+
+    Nota: si ha modificado un código a mano y aún no lo ha guardado, el botón de copiar de ese campo no está disponible y debajo aparece «Guarde este código antes de copiarlo para usarlo.»; el botón «Generar y guardar un código nuevo» tampoco está disponible. Si cambia de pestaña o sale de la página con cambios sin guardar, aparece «¿Descartar los cambios sin guardar?» (con el texto «Esta página contiene cambios sin guardar. Se perderán si sale de ella.»): elija «Seguir editando» para conservar lo introducido o «Descartar los cambios» para perder esta modificación. Mientras se está guardando no se puede salir y aparece «Espere a que termine el guardado o la subida en curso antes de salir.».
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Los dos códigos se muestran correctamente (no aparece «No se pudo cargar su perfil») y cada uno tiene 6 caracteres de letras mayúsculas o minúsculas y números.
+- Al copiar aparece el aviso «Se ha copiado…»; el código de supervisor empieza por `#` y el de compañero es el código de 6 caracteres tal cual.
+- Una vez enviado el código a la cuenta de IA, la IA le reconoce con la identidad correspondiente; si envía otro código a la misma cuenta, la identidad queda sustituida.
+- Tras editar a mano, ha pulsado «Guardar» y aparece «Guardado correctamente.»; el estado inferior es «No hay cambios sin guardar».
+- Tras generar un código nuevo aparece «Código de supervisor generado y guardado» o «Código de compañero generado y guardado», y debe volver a enviarlo a la cuenta de IA correspondiente.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Al pulsar «Generar y guardar un código nuevo» el código se guarda de inmediato en el servidor: no hay segunda confirmación y no es posible recuperar el código anterior, que deja de ser válido en ese momento. Después de generarlo, recuerde copiar y enviar el código nuevo a la cuenta de IA que deba usarlo.
+</Warning>
+
+<Warning>
+Los códigos sirven para reconocer su identidad: entréguelos solo a la persona que deba autorizarse y envíelos a la cuenta de IA correspondiente; no los reenvíe a grupos ni a personas sin relación. El prefijo `#` que acompaña al código de supervisor al copiarlo forma parte del formato de envío: no lo elimine ni modifique ningún carácter.
+</Warning>
+
+<Info>
+La diferencia entre las dos identidades: si la IA le reconoce como supervisor, usted pasa a ser el destinatario de sus informes proactivos; si le reconoce como compañero, se comunica con usted como con un compañero, no como con un cliente. Cómo informa la IA y a quién lo hace también dependen de «Notificación activa de eventos clave» en [Reglas de respuesta](/es/guide/response/reply-rules) y del ajuste «Supervisor» en [Relaciones](/es/guide/assistant/relationship-config).
+</Info>
+
+<Tip>
+Si el botón de copiar está en gris porque ha editado el código a mano y aún no lo ha guardado, al pasar el cursor por encima aparece «Guarde este código antes de copiarlo para usarlo.»: pulse primero «Guardar» y luego copie.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué el botón «Generar y guardar un código nuevo» no responde?
+
+Hay tres causas habituales: ① la página todavía está cargando (muestra «Cargando…») o la carga falló (muestra «No se pudo cargar su perfil»): pulse primero «Reintentar»; ② hay cambios sin guardar —debajo de la tarjeta aparece «Guarde los cambios antes de generar un código nuevo. Los códigos generados se guardan de inmediato.»—: pulse primero «Guardar»; ③ se está guardando (el botón muestra «Guardando…»): espere a que termine.
+
+### ¿Por qué el botón de copiar no responde?
+
+El código de ese campo se ha editado a mano y aún no se ha guardado: debajo del campo aparece «Guarde este código antes de copiarlo para usarlo.». Pulse primero «Guardar» y, cuando aparezca «Guardado correctamente.», cópielo. Si la carga de la página falla, el botón de copiar tampoco está disponible: pulse antes «Reintentar». Tampoco se puede copiar mientras el campo aún no tiene código o la página está cargando.
+
+### ¿En qué se diferencian el código de supervisor y el de compañero?
+
+El código que envíe determina la identidad con la que la IA le reconoce: el de supervisor → supervisor; el de compañero → compañero. Si envía códigos distintos a una misma cuenta de IA, la identidad anterior queda sustituida: para volver a la de supervisor, basta con reenviar el código de supervisor. Los dos códigos pertenecen solo a su cuenta de administración y cada uno tiene 6 caracteres de letras mayúsculas o minúsculas y números.
+
+### ¿Adónde se envía el código y cómo?
+
+Abra en su propio WeChat o WeCom el chat con esa cuenta de IA y envíe directamente lo que ha copiado. El código de supervisor ya se copia con el prefijo `#` (por ejemplo, `#A1b2C3`): envíelo tal cual, sin borrar ni modificar caracteres. Envíelo a la cuenta de IA con la que quiera que la IA le reconozca.
+
+### Envié el código, pero la IA no parece tratarme según esa identidad
+
+Compruebe primero tres cosas: ① que el código enviado siga siendo válido —al generar un código nuevo, el anterior deja de serlo, así que debe copiar y enviar el nuevo—; ② que lo haya enviado a la cuenta de IA que desea autorizar (en el chat del canal correspondiente); ③ que el contenido pegado sea correcto —el código de compañero debe coincidir con lo que muestra la página y, en el caso del de supervisor, delante del código que muestra la página aparece automáticamente un `#`—. Si todo es correcto, copie y envíe de nuevo el código: en una misma cuenta de IA prevalece el último código recibido.

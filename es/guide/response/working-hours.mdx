@@ -1,0 +1,129 @@
+---
+title: Horario de atención
+description: Configure las franjas de servicio semanales y de fechas específicas de la ventana de conversación actual, e indique con qué desfase UTC fijo se ejecutan todas las franjas.
+keywords:
+  - horario de atención
+  - calendario semanal
+  - horarios para fechas específicas
+  - zona horaria
+  - guardar horario de atención
+---
+
+«Horario de atención» define las franjas de servicio de la ventana seleccionada: a la izquierda, el «Calendario semanal» organiza los horarios de lunes a domingo; a la derecha se especifica con qué desfase UTC fijo se ejecutan esas franjas y se pueden añadir «Horarios para fechas específicas» para festivos o eventos. La configuración se guarda por la «Ventana de conversación actual» de la izquierda y, para que se aplique, debe pulsar «Guardar horario de atención» al final de la página.
+
+## Cuándo la necesitará
+
+- Después de conectar una ventana nueva, para definir sus franjas de servicio al cliente.
+- Para ajustar temporalmente las franjas de días concretos durante festivos o eventos.
+- Para organizar el horario según un desfase UTC concreto cuando los clientes o el equipo están en el extranjero.
+- Si las respuestas presentan anomalías, para comprobar primero si el horario de atención está mal configurado.
+
+## Ruta de acceso
+
+Menú izquierdo → Configuración de respuestas → Horario de atención.
+
+Al entrar, mire primero la «Ventana de conversación actual» de la parte superior de la barra lateral (debajo del logotipo): el calendario semanal, la zona horaria y las fechas específicas se guardan por ventana, así que al cambiar de ventana verá otra configuración. Si no hay ventanas disponibles, la página muestra «No hay ventanas de conversación disponibles»; pulse «Conectar una ventana» para conectar una primero (consulte [Inicio de sesión en canales](/es/guide/assistant/login-online)).
+
+<Frame>
+  ![Página «Horario de atención»: a la izquierda, «Ventana de conversación actual»; la tarjeta principal «Calendario semanal» lista las franjas de lunes a sábado (el botón «Añadir a varios días» está debajo de la tabla y la fila del domingo queda después de la barra de guardado inferior; ninguno aparece en la captura); a la derecha, las tarjetas «Zona horaria» y «Horarios para fechas específicas»; abajo, el botón «Guardar horario de atención»](/images/es/guide/response/working-hours/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Confirme la «Ventana de conversación actual»">
+    El calendario semanal, la zona horaria y las fechas específicas se guardan por ventana. Confirme primero que la «Ventana de conversación actual» de la parte superior de la barra lateral (debajo del logotipo) es la ventana que desea organizar y después continúe.
+
+    Cómo comprobarlo: el nombre de la ventana coincide con la que desea configurar. Si la página muestra «No se pudo cargar la configuración de esta ventana de conversación. Inténtelo de nuevo antes de editar o guardar.», pulse «Reintentar» y no edite hasta que la carga termine correctamente.
+  </Step>
+
+  <Step title="Configure el «Calendario semanal»">
+    En la tarjeta «Calendario semanal», pulse «Añadir a varios días» (también puede pulsar «Añadir franja horaria» a la derecha de un día concreto; en los días ya configurados el botón muestra «Editar»). El cuadro de diálogo lo indica: introduzca horas de inicio y fin válidas o seleccione «Todo el día»; se pueden configurar hasta tres franjas horarias. Dentro del cuadro:
+
+    1. Marque los días: selecciónelos uno a uno de lunes a domingo, o use «Seleccionar días laborables» (lunes a viernes) y «Seleccionar todos los días» (lunes a domingo) para elegir más rápido. Al editar un día concreto, el título es «Editar horario del Lunes» y ese día queda fijo.
+    2. Complete la «Franja horaria»: introduzca las horas de inicio y fin como texto, en formato HH:mm, por ejemplo `09:00` y `18:00`; para cubrir todo el día pulse «Todo el día» y se rellenarán `00:00`–`24:00` automáticamente; si necesita varias franjas, pulse «Añadir franja horaria»; se admiten hasta 3 al día.
+    3. Pulse «Aplicar a esta página»; si pulsa «Cancelar», lo que haya introducido no se aplica.
+
+    <Frame>
+      ![Cuadro de diálogo «Editar horario del Sábado»: aviso en rojo cuando la franja horaria está vacía, con «Todo el día», «Añadir franja horaria», «Cancelar» y «Aplicar a esta página»](/images/es/guide/response/working-hours/02-add-time-slot.jpg)
+    </Frame>
+
+    Cómo comprobarlo: el cuadro de diálogo se cierra, la fila correspondiente del calendario semanal pasa de «Sin configurar» a mostrar las franjas y el indicador «N de 7 días configurados» de la esquina superior derecha de la tarjeta se actualiza.
+
+    Nota: este paso solo lleva los cambios a la página actual; todavía no los guarda, así que el estado de la parte inferior muestra «Sin guardar». Guarde todo junto cuando termine. Al editar franjas existentes, en la esquina inferior izquierda del cuadro de diálogo aparece «Borrar horario de este día» para vaciar de una vez las franjas de ese día.
+  </Step>
+
+  <Step title="Seleccione la zona horaria">
+    En la lista desplegable de la tarjeta «Zona horaria», seleccione un desfase UTC fijo (hay 17 en total, por ejemplo UTC±0 y UTC+8); las ventanas que nunca se han configurado usan UTC+8 de forma predeterminada.
+
+    Cómo comprobarlo: la lista muestra el desfase UTC con el que quiere ejecutar el horario y las horas introducidas en el paso anterior corresponden a ese desfase.
+
+    Nota: todas las franjas se ejecutan con el desfase UTC fijo seleccionado y no se ajustan automáticamente al horario de verano.
+  </Step>
+
+  <Step title="Añada horarios para fechas específicas (si es necesario)">
+    En la tarjeta «Horarios para fechas específicas», pulse «Agregar fechas específicas». En el cuadro de diálogo, seleccione el rango de fechas (cuando muestre «Seleccione el rango de fecha», abra el calendario y elija el primer y el último día; en la versión de escritorio se muestran dos meses a la vez) y, con el mismo método de antes, configure hasta 3 franjas; después pulse «Aplicar a esta página».
+
+    Cómo comprobarlo: en la tarjeta aparece un registro con el formato «2026/10/01 — 2026/10/07» y sus franjas correspondientes; si no hay ninguno configurado, se muestra «No hay horarios configurados para fechas específicas».
+
+    Nota: se admiten como máximo 3 registros de fechas específicas; cuando están completos, el botón «Agregar fechas específicas» deja de mostrarse. El icono de eliminar a la derecha de cada registro permite borrar uno solo.
+  </Step>
+
+  <Step title="Guarde todos los cambios">
+    Cuando confirme que el calendario semanal, la zona horaria y las fechas específicas están bien, pulse «Guardar horario de atención» en la parte inferior derecha de la página.
+
+    Cómo comprobarlo: aparece el aviso «Guardado correctamente», el estado inferior pasa de «Sin guardar» a «Guardado» y el botón «Guardar horario de atención» queda deshabilitado. Solo entonces los cambios se guardan de verdad.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación actual» de la izquierda es la ventana que desea configurar.
+- Cada día que debe prestar servicio tiene franjas en el calendario semanal y no queda ningún «Sin configurar» inesperado; el indicador «N de 7 días configurados» de la esquina superior derecha coincide con lo previsto.
+- La «Zona horaria» es la que desea y todas las horas de las franjas corresponden a ese desfase UTC.
+- Los registros de fechas específicas (si los hay) no pasan de 3 y el rango de fechas y las franjas son correctos.
+- Después de guardar, el estado inferior es «Guardado» y ha aparecido el aviso «Guardado correctamente».
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Si no pulsa «Guardar horario de atención», ninguno de los cambios anteriores se aplica. Si cambia de menú o de ventana a mitad de la edición, aparece «¿Descartar los cambios sin guardar?» (con el texto «Esta página contiene cambios sin guardar. Se perderán si sale de ella.»): «Descartar los cambios» descarta la edición y «Seguir editando» vuelve a la página. Al actualizar o cerrar la pestaña, el navegador muestra su propia confirmación de salida y salir también descarta los cambios sin guardar. Tampoco se puede salir mientras se está guardando: se muestra «Espere a que termine el guardado o la subida en curso antes de salir.».
+</Warning>
+
+<Warning>
+No se admiten franjas que cruzan la medianoche: la hora de inicio debe ser anterior a la de finalización (si son iguales también da error; la hora de finalización puede ser 24:00). Para cubrir de 22:00 a 02:00 del día siguiente, divídalo en 22:00–24:00 de ese día y, al editar el día siguiente, añada una franja de 00:00–02:00.
+</Warning>
+
+<Info>
+Las horas se introducen como texto, no con un selector de hora: el formato es HH:mm, la hora de inicio va de 00:00 a 23:59 y la de finalización puede ser como máximo 24:00. Si el formato o el orden no son correctos, debajo del campo aparece un aviso en rojo (por ejemplo, «La hora de finalización debe ser posterior a la hora de inicio.») y el botón «Aplicar a esta página» del cuadro de diálogo no se puede pulsar.
+</Info>
+
+<Info>
+Cada día admite un máximo de 3 franjas y las fechas específicas un máximo de 3 registros. Las franjas de un mismo cuadro de diálogo no pueden solaparse; las que se solapan con una configuración existente del mismo día de la semana también se rechazan, con el aviso «Esta franja se solapa con una franja existente de “Lunes”. Corríjala e inténtelo de nuevo.».
+</Info>
+
+<Tip>
+Use primero «Añadir a varios días» para organizar de una vez de lunes a viernes o la semana completa, y luego ajuste días sueltos con «Editar»; al editar un día, el cuadro de diálogo carga todas las franjas ya configuradas de ese día.
+</Tip>
+
+## Preguntas frecuentes
+
+### Cambié las franjas y no se aplicaron. ¿Por qué?
+
+Mire primero el estado de la parte inferior: si muestra «Sin guardar», la edición sigue en la página y no se ha enviado; pulse «Guardar horario de atención» y espere a que aparezca «Guardado correctamente» y el estado pase a «Guardado» para que se escriba de verdad. Si al salir de la página apareció «¿Descartar los cambios sin guardar?» y eligió «Descartar los cambios», la edición ya se descartó y tendrá que configurarla otra vez.
+
+### ¿Por qué el botón «Guardar horario de atención» no responde?
+
+Causas habituales: 1) si la página no tiene cambios nuevos, el botón ya está deshabilitado (el estado muestra «Guardado»); modifique algo primero; 2) si en la parte superior aparece el aviso en rojo «Un intervalo horario guardado no es válido. Elimínelo y vuelva a introducirlo antes de guardar. El resto de la configuración no se sobrescribirá automáticamente.», elimine esa franja no válida y vuelva a introducirla; 3) si la configuración aún muestra «Cargando configuración…» o «Guardando…», espere a que termine.
+
+### Quiero configurar de 22:00 a 02:00 del día siguiente. ¿Por qué no se puede introducir?
+
+No se admiten horarios que cruzan la medianoche. La hora de inicio debe ser anterior a la de finalización (si son iguales también da error; la de finalización puede ser 24:00), así que una franja que pasa por las 00:00 debe dividirse en dos: 22:00–24:00 ese día y 00:00–02:00 del día siguiente.
+
+### Al añadir franjas aparece «Esta franja se solapa con una franja existente de “Lunes”». ¿Qué hago?
+
+Las franjas de un mismo día de la semana no pueden solaparse. Pulse «Editar» a la derecha de ese día: el cuadro de diálogo carga todas sus franjas; ajuste en ese mismo cuadro las franjas para que no se solapen y pulse «Aplicar a esta página». Las franjas sobrantes se eliminan con el botón de eliminar de su derecha.
+
+### En la lista de zonas horarias no aparece mi ciudad. ¿Qué opción elijo?
+
+La lista solo contiene desfases UTC fijos, sin nombres de ciudades (17 en total, de UTC-10 a UTC+12). Confirme primero el desfase de su región respecto a UTC y elija la opción correspondiente; por ejemplo, para la hora de Pekín, UTC+8. El desfase no se ajusta automáticamente al horario de verano, así que en regiones con horario de verano conviene volver a revisar las franjas antes y después del cambio.

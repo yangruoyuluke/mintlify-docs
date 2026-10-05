@@ -1,0 +1,134 @@
+---
+title: Accueil des nouveaux clients
+description: Configurez, pour la fenêtre de conversation sélectionnée, l’accueil des nouveaux contacts — acceptation automatique des demandes de contact, envoi des messages de bienvenue dans l’ordre et collecte des informations client lors du premier échange.
+keywords:
+  - accueil des nouveaux clients
+  - accepter automatiquement les demandes de contact
+  - message de bienvenue aux nouveaux contacts
+  - règles de collecte des informations sur les prospects
+  - acceptation automatique des demandes de contact
+---
+
+« Accueil des nouveaux clients » gère le premier échange qui suit l’arrivée d’un nouveau contact : acceptation automatique des demandes de contact, envoi des messages de bienvenue que vous avez rédigés, dans l’ordre, et collecte dès la première conversation des informations client qui vous intéressent. La page s’organise en trois cartes — 01 « Accepter automatiquement les demandes de contact », 02 « Message de bienvenue aux nouveaux contacts » et 03 « Règles de collecte des informations sur les prospects » — et la configuration ne s’applique qu’à la fenêtre sélectionnée dans « Fenêtre de conversation gérée actuellement », à gauche.
+
+## Quand en avez-vous besoin ?
+
+- Vous recevez trop de demandes de contact pour les accepter une par une.
+- Vous voulez que le tout premier échange après l’acceptation d’un nouveau contact présente l’assistant, ce qu’il peut faire et comment passer à un humain.
+- Vous souhaitez que l’assistant recueille au fil de la conversation des informations comme le budget ou les besoins, pour faciliter le suivi.
+- Une demande de contact n’a pas été acceptée automatiquement ou un nouveau contact n’a pas reçu de message de bienvenue : c’est ici que vous vérifiez les interrupteurs et le contenu.
+
+## Comment y accéder ?
+
+Menu de gauche → Paramètres de réponse → Accueil des nouveaux clients.
+
+À l’ouverture, vérifiez d’abord la « Fenêtre de conversation gérée actuellement », en haut à gauche : les trois cartes sont enregistrées par fenêtre, et après un changement de fenêtre vous voyez une autre configuration. Sans fenêtre disponible, la page affiche « Aucune fenêtre de conversation disponible », « Connectez-vous et mettez en ligne une fenêtre de conversation autre que celle de l’administration avant de poursuivre la configuration. » et le bouton « Se connecter et mettre en ligne » : connectez d’abord une fenêtre via [Connexion aux canaux](/fr/guide/assistant/login-online).
+
+<Frame>
+  ![Page « Accueil des nouveaux clients » : en haut, le titre et la description de la page ; à gauche, « Fenêtre de conversation gérée actuellement » ; à droite, de haut en bas, les trois cartes 01 « Accepter automatiquement les demandes de contact », 02 « Message de bienvenue aux nouveaux contacts » et 03 « Règles de collecte des informations sur les prospects »](/images/fr/guide/response/new-customer-reception/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Confirmer la « Fenêtre de conversation gérée actuellement »">
+    Vérifiez d’abord que la « Fenêtre de conversation gérée actuellement », en haut à gauche, correspond bien à la fenêtre à configurer, puis poursuivez.
+
+    Critère : le nom de la fenêtre correspond à celui de la fenêtre de l’assistant à configurer.
+  </Step>
+
+  <Step title="Activer « Accepter automatiquement les demandes de contact » (si nécessaire)">
+    Dans la carte 01, faites basculer l’interrupteur sur activé. Il est enregistré immédiatement, sans bouton supplémentaire ; le badge passe de « Désactivé » à « Activé » et le message « Acceptation automatique des demandes de contact activée. » s’affiche. Si vous ne voulez pas d’acceptation automatique, laissez-le désactivé et passez directement à l’étape suivante.
+
+    Critère : le badge affiche « Activé ».
+
+    Remarque : une fois l’option activée, le système accepte automatiquement toutes les demandes de contact de cette fenêtre, y compris les publicités ou les personnes que vous ne souhaitez pas ajouter ; assurez-vous de vouloir ouvrir cette fenêtre à toutes les demandes avant d’activer.
+  </Step>
+
+  <Step title="Ajouter et enregistrer le contenu des messages de bienvenue">
+    Dans la carte 02 « Message de bienvenue aux nouveaux contacts », cliquez sur « Ajouter un élément » et choisissez un type de contenu dans le menu déroulant :
+
+    - Texte : saisissez votre message, les retours à la ligne sont pris en charge ;
+    - Image / Fichier : sélectionnez un fichier sur votre appareil, l’importation démarre automatiquement et le nom du fichier s’affiche une fois l’importation réussie ; une image ou un fichier ne peut pas dépasser 100 Mo.
+
+    6 messages au maximum, chacun pouvant être supprimé individuellement ; l’ordre d’envoi est celui de la liste. En cas de doute sur la rédaction, cliquez sur « Voir l’exemple » pour afficher un exemple. Une fois le contenu modifié, cliquez sur « Enregistrer ».
+
+    <Frame>
+      ![Menu déroulant ouvert après un clic sur « Ajouter un élément » dans la carte « Message de bienvenue aux nouveaux contacts », avec les options « Texte », « Image » et « Fichier »](/images/fr/guide/response/new-customer-reception/02-add-item.jpg)
+    </Frame>
+
+    Critère : le statut à droite passe de « Non enregistré » à « Enregistré » et le message « Message de bienvenue enregistré avec succès » s’affiche ; si aucun contenu n’a jamais été enregistré, la page affiche « Pas encore de contenu enregistré ».
+
+    Remarque : la fin de l’importation ne signifie pas que le contenu est enregistré — pour les images et les fichiers aussi, il faut cliquer sur « Enregistrer » pour valider. Les messages de bienvenue ne sont envoyés que lors du premier échange avec un nouveau contact ; les clients déjà présents dans la liste de contacts ne les reçoivent pas.
+  </Step>
+
+  <Step title="Activer l’interrupteur « Message de bienvenue aux nouveaux contacts »">
+    Une fois le contenu enregistré, faites basculer l’interrupteur de la carte 02 sur activé : le message « Message de bienvenue aux nouveaux contacts activé. » s’affiche.
+
+    Critère : le résumé de la carte devient « De nouveaux contacts recevront les messages de bienvenue enregistrés dans l’ordre. ». S’il affiche « Les messages de bienvenue sont activés, mais aucun contenu n'a été enregistré. Ajoutez du contenu et enregistrez-le. », le contenu n’est pas enregistré : revenez à l’étape précédente et cliquez sur « Enregistrer ».
+
+    Remarque : vous pouvez activer l’interrupteur avant d’ajouter le contenu, mais aucun message de bienvenue ne partira tant que le contenu n’est pas enregistré.
+  </Step>
+
+  <Step title="Remplir et enregistrer les « Règles de collecte des informations sur les prospects »">
+    Dans la carte 03, cliquez sur « Ajouter un élément » : une ligne de trois champs apparaît — « Informations à recueillir », « Description » et « Exemple ». Les trois sont marqués d’un `*` et doivent tous être remplis ; par exemple « budget / budget d’achat prévu par le client ou fourchette de prix / moins de 30 000 yuans ». Cliquez sur « Voir l’exemple » pour afficher un exemple.
+
+    Vous pouvez ajouter jusqu’à 6 informations, chacune pouvant être supprimée individuellement. Cliquez ensuite sur « Enregistrer », en bas de la carte.
+
+    Critère : l’« État actuel », en bas, passe de « Non enregistré » à « Enregistré · Application non confirmée » et le message « Règles de collecte des informations sur les prospects enregistrées. » s’affiche. En cas de modification erronée, « Ignorer les modifications » restaure le dernier contenu enregistré.
+
+    Remarque : cette carte n’a pas d’interrupteur d’activation séparé — après l’enregistrement, l’assistant collecte les informations dans les conversations selon les règles enregistrées ; pour ne plus rien collecter, supprimez toutes les lignes puis cliquez sur « Enregistrer » : l’état devient « Aucun contenu personnalisé ».
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation gérée actuellement », à gauche, est bien la fenêtre visée.
+- Le badge de la carte 01 affiche « Activé » (si vous avez besoin de l’acceptation automatique des demandes de contact).
+- L’interrupteur de la carte 02 est « Activé », le résumé affiche « De nouveaux contacts recevront les messages de bienvenue enregistrés dans l’ordre. » et le contenu est « Enregistré ».
+- L’« État actuel » de la carte 03 est « Enregistré · Application non confirmée », les trois champs sont remplis et aucun « Non enregistré » ne subsiste.
+- Depuis un compte de test, ajoutez la fenêtre comme contact : la demande de contact est acceptée automatiquement et les messages de bienvenue partent dans l’ordre. Seule une vraie conversation avec un nouveau contact permet de confirmer que la configuration a bien été appliquée côté exécution — l’état « Enregistré · Application non confirmée » ne suffit pas.
+
+## Points d’attention
+
+<Warning>
+Une fois « Accepter automatiquement les demandes de contact » activé, le système accepte automatiquement toutes les demandes de contact de cette fenêtre, y compris les publicités ou les personnes que vous ne souhaitez pas ajouter. En cas de doute, laissez cet interrupteur sur « Désactivé » et traitez les demandes manuellement.
+</Warning>
+
+<Warning>
+En présence de contenu non enregistré, changer de menu ou de fenêtre est intercepté : la fenêtre de dialogue affiche comme titre « Ignorer les modifications non enregistrées ? » et comme texte « Cette page contient des modifications non enregistrées. Elles seront perdues si vous la quittez. » ; choisissez « Ignorer les modifications » pour perdre la saisie en cours, ou « Continuer à modifier » pour revenir à la page. En cas d’actualisation ou de fermeture directe de l’onglet, c’est le navigateur qui affiche la confirmation. Pendant un enregistrement ou une importation, impossible de quitter la page : le message « Attendez la fin de l’enregistrement ou de l’importation en cours avant de quitter la page. » s’affiche.
+</Warning>
+
+<Info>
+Les trois cartes ne s’enregistrent pas de la même manière : les interrupteurs des cartes 01 et 02 sont enregistrés immédiatement ; le contenu des messages de bienvenue et les règles de collecte ne sont écrits qu’après un clic sur « Enregistrer ». Interrupteurs et contenu sont soumis séparément : modifier un interrupteur ne demande pas d’enregistrer d’abord le contenu.
+</Info>
+
+<Info>
+Après l’enregistrement des règles de collecte, l’état « Enregistré · Application non confirmée » signifie que la configuration a bien été écrite côté serveur, mais que son application côté exécution n’a pas encore été confirmée ; fiez-vous à une vraie conversation avec un nouveau contact.
+</Info>
+
+<Tip>
+N’ajoutez pas d’emblée 6 informations à recueillir : plus la liste est longue, plus elle ressemble à un questionnaire et plus le taux de réponse baisse. Commencez par 1 à 3 informations essentielles. Si vous manquez d’inspiration pour la rédaction, cliquez sur « Voir l’exemple » et adaptez-le.
+</Tip>
+
+## Questions fréquentes
+
+### L’interrupteur est activé, mais le nouveau contact n’a pas reçu de message de bienvenue. Pourquoi ?
+
+Vérifiez dans l’ordre : le résumé de la carte 02 affiche-t-il « Les messages de bienvenue sont activés, mais aucun contenu n'a été enregistré. Ajoutez du contenu et enregistrez-le. » ? — l’interrupteur ne fait qu’autoriser l’envoi, le contenu doit être enregistré avec « Enregistrer » ; le contenu est-il complet ? (si un texte est vide ou qu’une image ou un fichier n’a pas été importé, l’enregistrement affiche « Veuillez compléter tout le contenu du message de bienvenue ») ; la « Fenêtre de conversation gérée actuellement » est-elle bien celle du client ? — la configuration est enregistrée par fenêtre. Par ailleurs, les messages de bienvenue ne concernent que le premier échange avec un nouveau contact : les clients déjà présents dans la liste de contacts ne les reçoivent pas.
+
+### J’ai importé une image ou un fichier, mais l’enregistrement signale encore un contenu incomplet. Pourquoi ?
+
+Le clic sur « Enregistrer » vérifie toute la liste, élément par élément : la cause la plus fréquente est un élément de type texte laissé vide (un élément texte ne peut pas être vide) ; pour une image ou un fichier, il faut choisir le fichier, attendre la fin de l’importation et voir le nom du fichier s’afficher. Pendant une importation, la page entière n’est pas modifiable : aucune « pièce jointe non importée » ne peut donc subsister. Complétez les éléments signalés, puis cliquez de nouveau sur « Enregistrer ». Une image ou un fichier ne peut pas dépasser 100 Mo ; au-delà, le message « La taille de l'image ne peut pas dépasser 100 Mo » ou « Le fichier ne peut pas dépasser 100 Mo. » s’affiche.
+
+### Les règles de collecte peuvent-elles être désactivées ?
+
+Il n’existe pas d’interrupteur séparé. Après l’enregistrement, l’assistant collecte les informations dans les conversations selon les règles enregistrées ; pour ne plus rien collecter, supprimez toutes les lignes puis cliquez sur « Enregistrer » : l’état de la carte devient « Aucun contenu personnalisé ». Toute modification des règles doit de même être enregistrée à nouveau avec « Enregistrer » pour prendre effet ; pour renoncer à une modification en cours, cliquez sur « Ignorer les modifications ».
+
+### Pourquoi le bouton « Enregistrer » est-il grisé et non cliquable ?
+
+Sans modification, le bouton est désactivé : modifiez d’abord un champ (l’état passe à « Non enregistré ») ou ajoutez une ligne avec « Ajouter un élément », puis enregistrez. Par ailleurs, pendant le chargement de la configuration de la fenêtre, l’importation d’une image ou d’un fichier, ou un enregistrement en cours, toute la page est temporairement non modifiable.
+
+### La page affiche « Impossible de charger les paramètres de cette fenêtre de conversation. Réessayez avant de les modifier ou de les enregistrer. » Comment faire ?
+
+Cliquez sur « Réessayer » à côté du message pour recharger ; tant que le chargement n’a pas abouti, la page ne peut être ni modifiée ni enregistrée, afin de ne pas écraser la configuration existante. En cas d’échec répété, vérifiez d’abord le réseau ou contactez un administrateur pour contrôler la configuration enregistrée de cette fenêtre.

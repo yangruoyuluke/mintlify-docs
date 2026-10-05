@@ -1,0 +1,164 @@
+---
+title: "Puesta en marcha en 30 minutos"
+description: "Recorra en seis pasos —iniciar sesión, conectar el canal, perfil base, reglas de respuesta, generar conocimientos y verificar los resultados— el circuito mínimo de MarsMind."
+keywords:
+  - "puesta en marcha"
+  - "circuito mínimo"
+  - "inicio de sesión"
+  - "perfil base"
+  - "reglas de respuesta"
+  - "generación de conocimientos"
+---
+
+Esta página le lleva por la ruta más corta para poner MarsMind en marcha: conecte una ventana de conversación, enseñe a la IA cómo hablar y cómo responder cuando no sabe, cárguele los primeros conocimientos y confirme en el panel de datos que está atendiendo de verdad a los clientes. Cada paso incluye el punto de entrada, el criterio para saber si salió bien y los errores más fáciles de cometer. La preparación de la cuenta y los materiales está en [Activación y preparación](/es/quick-start/preparation).
+
+## Cuándo la necesitará
+
+- Acaba de activar su cuenta y quiere que la IA atienda a clientes reales lo antes posible.
+- Ya completó el registro y la preparación, pero no sabe por dónde empezar a configurar.
+- Quiere recorrer primero el circuito mínimo y después ampliar conocimientos, habilidades y reglas de respuesta según los problemas reales.
+- Necesita presentar el sistema a un compañero o hacer un traspaso explicando, por la ruta más corta, cómo se configura.
+
+## Antes de empezar
+
+- Disponga de una cuenta del panel de administración con la que iniciar sesión en [https://admin.marsmind.cc/login](https://admin.marsmind.cc/login). Si no tiene cuenta, consulte primero [Activación y preparación](/es/quick-start/preparation).
+- Toda la configuración sigue a la «Ventana de conversación actual». Seleccione en el centro de la barra lateral la ventana que acaba de conectar; en el panel de datos ese selector se llama «Ventana de conversación de estadísticas». Sin una ventana seleccionada, la página muestra un estado vacío con el botón «Conectar una ventana».
+- Salvo el inicio de sesión, el resto de pasos están en el menú de la izquierda: Mi asistente → Inicio de sesión en canales, Mi asistente → Perfil base, Configuración de respuestas → Reglas de respuesta, Base de conocimientos → Generación de conocimientos, Panel de datos → Rendimiento.
+
+## Pasos
+
+<Steps>
+  <Step title="Inicie sesión en el panel de administración">
+    Abra [https://admin.marsmind.cc/login](https://admin.marsmind.cc/login), complete «Nombre de usuario» y «Contraseña» y haga clic en «Iniciar sesión».
+
+    Cómo verificarlo: aparece «Sesión iniciada correctamente.» y se entra en «Panel de datos → Rendimiento». En el primer inicio de sesión aparece automáticamente el «Asistente de configuración inicial», que le guía por «Completar el inicio de sesión del asistente → Configurar reglas de uso → Configurar la base de conocimientos»; puede cerrarlo con «Más tarde» y seguir el orden de esta página.
+
+    Nota: el inicio de sesión usa el nombre de usuario, no el correo electrónico, y la página de inicio de sesión no tiene recuperación de contraseña de autoservicio. Si no tiene cuenta, haga clic primero en «Registrarse» y actívela con el código de invitación que le proporcione el equipo comercial; para más detalles, consulte [Activación y preparación](/es/quick-start/preparation).
+  </Step>
+
+  <Step title="Conecte la primera ventana de conversación (Mi asistente → Inicio de sesión en canales)">
+    Acceso: menú de la izquierda → Mi asistente → Inicio de sesión en canales. Haga clic en «Crear un nuevo canal de comunicación», arriba a la derecha, y en la ventana emergente elija primero «Seleccionar canal».
+
+    - WeChat: elija «Provincia de inicio de sesión» y «Ciudad de inicio de sesión», y después escanee el código con el teléfono y confirme.
+    - WeCom: elija «Provincia de inicio de sesión» y escanee el código; si la página le pide un código de verificación de 6 dígitos, introdúzcalo según las indicaciones del teléfono.
+    - Sitio web: no hace falta escanear. Indique un «Nombre del enlace de chat» de 4 a 10 caracteres (letras, números o guiones bajos); al crearlo aparecerá «Correcto» y podrá copiar la «URL de acceso» o el «Código iframe».
+    - Miniprograma y Cuenta oficial: requieren que un administrador escanee el código para autorizar. Si algún canal muestra «Este canal todavía no admite la configuración autónoma. Póngase en contacto con el equipo comercial.», elija otro canal o hable con el equipo comercial.
+
+    <Frame>
+      ![Página «Inicio de sesión en canales»: arriba a la derecha está el botón «Crear un nuevo canal de comunicación» y la lista de abajo muestra las ventanas conectadas y su estado](/images/es/quick-start/quick-start/01-login-online.jpg)
+    </Frame>
+
+    Cómo verificarlo: la ventana aparece en la lista con el estado «En funcionamiento». «Pendiente» indica que el inicio de sesión o la autorización aún no se han completado. Debajo de la tarjeta se explica el significado de cada estado: «En funcionamiento» significa que la IA trabaja según las reglas actuales; «Suspendido», que ha pausado las respuestas automáticas, y «Sin conexión», que hay que volver a conectarla para reanudar el servicio. El cambio de estado tarda unos 10 segundos en aplicarse.
+
+    Cuando el inicio de sesión con código QR de WeChat o WeCom termina, aparece a continuación «Cuenta de IA conectada»: haga clic en «Copiar código de autorización» y envíe ese mensaje, que lleva `#`, al teléfono del supervisor para que él lo reenvíe desde su propio teléfono a la cuenta de IA recién conectada; así la IA le reconocerá como supervisor. Si todavía no hay código de autorización de supervisor, haga clic en «Generar un código» para abrir la página de configuración de la cuenta, cambie a la pestaña «Autorización de identidad de IA» y, una vez generado, envíelo.
+
+    Nota: «Desconectar», en el menú «⋯», detiene el servicio automático de esa ventana, y para volver a conectarla habrá que escanear el código de nuevo; «Eliminar el canal de comunicación» no se puede deshacer.
+  </Step>
+
+  <Step title="Configure el perfil base (Mi asistente → Perfil base)">
+    Acceso: menú de la izquierda → Mi asistente → Perfil base. Confirme primero que la «Ventana de conversación actual» de la barra lateral apunta a la ventana que acaba de conectar.
+
+    1. En «Estilo de la IA», elija una de las dos opciones: «Detallado y cortés» ofrece respuestas más completas y un tono más atento; «Flexible y conciso» responde de forma más directa. La opción se guarda al seleccionarla.
+    2. En la «Instrucción principal» de «Instrucciones personalizadas», escriba con claridad quién es la IA, qué negocio atiende, con qué tono habla y en qué casos debe preguntar antes de responder. Por ejemplo: usted es el asesor de ventas de MarsMind; identifique primero la intención del cliente y responda después; ante preguntas sobre precios, acreditaciones o posventa, consulte primero la base de conocimientos; si falta información, pida aclaraciones y no invente datos.
+    3. Haga clic en «Guardar configuración». El estado pasa de «Sin guardar» a «Guardado» o «Guardado · Aplicación en el servicio sin confirmar».
+
+    <Frame>
+      ![Página «Perfil base»: las dos opciones de «Estilo de la IA» y el área de edición de la instrucción principal en «Instrucciones personalizadas»](/images/es/quick-start/quick-start/02-persona.jpg)
+    </Frame>
+
+    Cómo verificarlo: el estado de la página ya no es «Sin guardar». Después de modificar la instrucción principal, es posible que el sistema actualice automáticamente los «Ajustes de contexto»; despliegue la sección para comprobarlo, es un comportamiento normal. Si intenta salir de la página con contenido sin guardar, el sistema se lo impedirá.
+
+    La explicación completa está en [Perfil base](/es/guide/assistant/persona).
+  </Step>
+
+  <Step title="Configure las reglas de respuesta (Configuración de respuestas → Reglas de respuesta)">
+    Acceso: menú de la izquierda → Configuración de respuestas → Reglas de respuesta. Para el circuito mínimo basta con configurar bien las dos tarjetas siguientes; el resto pueden esperar.
+
+    1. «Respuesta cuando la IA no sabe qué contestar»: escriba el texto exacto que la IA enviará como respuesta de reserva y haga clic en «Guardar texto de respuesta»; después, active el interruptor «Use una respuesta fija» situado junto al título. Con el interruptor activado, la IA enviará ese texto tal cual cuando no esté segura; sin activarlo, no responderá a las preguntas dudosas.
+    2. «Chat grupal inteligente (solo en WeChat y WeCom)»: si su canal es WeChat o WeCom, active primero el interruptor de la tarjeta y escriba las reglas en «Mensajes a los que debe responder la IA» y «Mensajes a los que no debe responder la IA»; después, haga clic en «Guardar configuración».
+
+    Cómo verificarlo: junto al interruptor de la tarjeta aparece «Activado» y el estado de guardado de la parte inferior ya no es «Sin guardar». Los cambios del interruptor se guardan al instante; el texto requiere pulsar el botón de guardar.
+
+    Nota: el chat grupal inteligente solo se aplica realmente en los canales WeChat y WeCom. La explicación completa está en [Reglas de respuesta](/es/guide/response/reply-rules).
+  </Step>
+
+  <Step title="Genere los primeros conocimientos (Base de conocimientos → Generación de conocimientos)">
+    Acceso: menú de la izquierda → Base de conocimientos → Generación de conocimientos.
+
+    1. En «¿De dónde procede el conocimiento?», elija el método de creación:
+       - «Generar a partir de documentos»: suba archivos PDF, Word, Excel, Markdown, txt, etc. (hasta 100 MB por archivo y un máximo de 500 archivos). El archivo se sube automáticamente al seleccionarlo; al pulsar «Enviar tarea de generación» aparece primero «Confirmar el consumo de créditos»: 100 créditos por documento.
+       - «Generar a partir de páginas web»: pegue direcciones http/https y separe varias con comas o saltos de línea; no hay ventana de confirmación de créditos, la tarea se envía directamente.
+       - «Añadir contenido de conocimiento listo para usar»: escriba directamente «¿Qué podría preguntar un cliente?» y «¿Cómo debe responder la IA?», o suba por lotes un archivo .xlsx con la plantilla; el botón de envío es «Enviar tarea de incorporación».
+    2. En «2. Elija un destino», a la derecha, seleccione el «Ámbito de conocimiento» (Personal o Empresa) y la «Categoría de conocimientos» (Predeterminado). Hay que elegir ambos; de lo contrario, el envío se bloqueará.
+
+    <Frame>
+      ![Página «Generación de conocimientos»: arriba, las tres formas de creación y, a la derecha, «2. Elija un destino» con el ámbito y la categoría de conocimientos](/images/es/quick-start/quick-start/03-knowledge-upload.jpg)
+    </Frame>
+
+    Cómo verificarlo: al enviar, la página salta automáticamente a «Historial de generación»; el estado de la tarea muestra primero «En proceso» (el progreso de la tarea comienza en «Enviada») y, al terminar, pasa a «Procesamiento completado». Con «Resultado» puede saltar a los elementos pendientes de revisión o a los ya almacenados.
+
+    Nota: «Procesamiento completado» no significa que el conocimiento ya esté en la base. Si quiere que la IA lo use de inmediato, vaya a «Base de conocimientos → Optimización de conocimientos», a la lista «Pendiente de revisión», y haga clic en «Aprobar»; si no lo procesa, salvo el «Aprendizaje automático», que siempre requiere revisión manual, el resto de conocimientos se aceptan automáticamente si no se procesan en 24 horas. Además, las tareas en proceso no se pueden eliminar.
+
+    La explicación completa está en [Generación de conocimientos](/es/guide/knowledge/generation) y [Optimización de conocimientos](/es/guide/knowledge/optimization).
+  </Step>
+
+  <Step title="Verifique los resultados (Panel de datos → Rendimiento)">
+    Empiece enviando una consulta real a la IA desde el canal conectado. Acceso: menú de la izquierda → Panel de datos → Rendimiento.
+
+    1. En «Ventana de conversación de estadísticas» de la barra lateral, seleccione la ventana que acaba de conectar y, en la barra de filtros, elija el intervalo de tiempo y la granularidad (Por día / Por semana / Por mes / Personalizado).
+    2. Consulte «Mensajes recibidos», «Consultas» y «Respuestas» dentro de «Métricas principales».
+
+    <Frame>
+      ![Página «Rendimiento»: la barra de filtros y las tarjetas de «Métricas principales», con los mensajes recibidos, las consultas y las respuestas](/images/es/quick-start/quick-start/04-dashboard.jpg)
+    </Frame>
+
+    Cómo verificarlo: si aparecen datos en «Mensajes recibidos» y «Consultas», los mensajes del canal ya entran en las estadísticas; si hay datos en «Respuestas», la IA ya ha enviado respuestas. Para ver cómo se procesó una consulta concreta, haga clic en «Ver registros de este período» para saltar a «Revisión detallada» y despliegue la consulta para ver el «Conocimiento de referencia» y los «Pasos de ejecución».
+
+    Nota: los mensajes recibidos incluyen las consultas y las consultas incluyen las respuestas, así que las tres cifras no se suman entre sí; si elige la ventana equivocada verá los datos de otro canal, y aquí no se incluyen las conversaciones con agentes humanos. La explicación completa está en [Rendimiento del negocio](/es/guide/dashboard/business-performance).
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Puede iniciar sesión en el panel con «Nombre de usuario» y «Contraseña» y entra en «Panel de datos → Rendimiento».
+- En «Inicio de sesión en canales» hay al menos una ventana de conversación con el estado «En funcionamiento»; si el canal es WeChat o WeCom, ya ha enviado el código de autorización de supervisor y ha completado la vinculación de identidad.
+- En «Perfil base» ha cambiado el «Estilo de la IA» y ha guardado la «Instrucción principal»; el estado ya no es «Sin guardar».
+- En «Reglas de respuesta», la opción «Respuesta cuando la IA no sabe qué contestar» muestra el estado «Activado» y el texto de respuesta de reserva está guardado.
+- En «Generación de conocimientos» hay al menos una tarea «Procesamiento completado» y ha aprobado al menos un conocimiento en «Optimización de conocimientos → Pendiente de revisión».
+- Después de enviar un mensaje de prueba desde el canal, «Rendimiento» muestra los mensajes recibidos, las consultas y las respuestas correspondientes.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+  Tras «Desconectar», esa ventana deja de ofrecer el servicio automático y, para volver a conectarla, hay que escanear el código de nuevo; «Eliminar el canal de comunicación» y la eliminación definitiva de conocimientos no se pueden deshacer.
+</Warning>
+
+<Info>
+  El estado «Guardado · Aplicación en el servicio sin confirmar» significa que la configuración ya se ha guardado en el panel, pero el servicio aún no ha confirmado su aplicación; es un estado normal. Cuando lo vea, no vuelva a guardar: compruebe el resultado directamente con un mensaje real.
+</Info>
+
+<Tip>
+  Los 30 minutos solo sirven para completar el circuito. Después, amplíe según los problemas reales: añada en «Optimización de conocimientos» las preguntas que la IA no sepa responder, distinga clientes de compañeros en «Relaciones», bloquee respuestas de riesgo con «Controles de seguridad», defina el horario de servicio en [Horario de atención](/es/guide/response/working-hours) y documente sus procesos de negocio en la [Biblioteca de habilidades](/es/guide/skills/library).
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué la página muestra «No hay ventanas de conversación disponibles»?
+
+Significa que no hay ninguna ventana utilizable seleccionada en la «Ventana de conversación actual». Vaya primero a «Inicio de sesión en canales» y confirme que la ventana está conectada (que su estado no sea «Pendiente» ni «Sin conexión»); después, selecciónela en el centro de la barra lateral. El botón «Conectar una ventana» del estado vacío también le lleva directamente allí.
+
+### ¿Cuál es la diferencia entre «Suspendido» y «Sin conexión»?
+
+«Suspendido» significa que la IA ha pausado las respuestas automáticas y la ventana no necesita volver a iniciar sesión; «Sin conexión» requiere volver a conectarla (escanear el código de nuevo) para reanudar el servicio.
+
+### La tarea de conocimiento muestra «Procesamiento completado», ¿por qué la IA sigue sin saber responder?
+
+«Procesamiento completado» no significa que el conocimiento ya esté en la base; haga clic en «Resultado» para ir a «Pendiente de revisión» y aprobarlo, o búsquelo en «Gestión de conocimientos» para confirmarlo. Las reglas de aceptación automática se explican arriba, en «Genere los primeros conocimientos».
+
+### He guardado la instrucción principal, ¿por qué no cambian las respuestas de la IA?
+
+Mire primero el estado de guardado: si muestra «Guardado · Aplicación en el servicio sin confirmar», el servicio aún no ha confirmado que la configuración esté aplicada. También puede ir a «Panel de datos → Revisión detallada» y desplegar esa consulta para revisar el «Conocimiento de referencia» y los «Pasos de ejecución», y determinar si el problema es que no se encontró conocimiento o que la regla no se aplicó.
+
+### Una vez completado el circuito mínimo, ¿qué configuro después?
+
+Vaya ampliando la configuración según los problemas reales; las direcciones concretas están en el consejo de arriba. Para el funcionamiento detallado de cada página, consulte las guías de usuario correspondientes.

@@ -1,0 +1,138 @@
+---
+title: Reply Rules
+description: Set the fallback reply when the AI cannot answer in the Selected window, group chat responses, proactive reports on key events, and keyword direct replies; switches save instantly, content must be saved.
+keywords:
+  - reply rules
+  - keyword direct reply
+  - smart group chat
+  - key event active reporting
+  - response settings
+---
+
+Reply Rules controls what the AI says in the Selected window across four situations: how it replies when it cannot answer, whether it speaks up in group chats, which events it reports proactively to a supervisor, and which inquiries bypass AI generation and send fixed content directly. The four cards — "What to reply when AI does not know", "Smart Group Chat", "Key Event Active Reporting", and "Keyword Direct Reply" — are saved independently. A switch takes effect the moment you click it; content inside a card requires that card's own save button.
+
+## When you'll need this
+
+- The AI's fallback reply for questions outside the knowledge base is not good enough, and you want a fixed line to cover those cases.
+- The AI misses group messages it should answer and jumps into ones it should skip, so you need to spell out what to reply to and what to leave alone.
+- When key events occur — a customer shows purchase intent, a complaint comes in — you want the AI to report to a supervisor proactively.
+- High-frequency questions such as business hours and price lists should get an instant fixed reply instead of going through AI generation every time.
+
+## How to get there
+
+Left menu → Response Settings → Reply Rules. When the page opens, check the Selected window on the left first: all four cards are saved per window, so after you switch windows you see another window's settings. A persistent notice at the top of the page reads "Switches are submitted separately; edited content must be saved."
+
+<Frame>
+  ![Reply Rules page: the page description and the "Switches are submitted separately; edited content must be saved." notice at the top; the "What to reply when AI does not know" card with its switch set to "Enabled", the editor labeled "Exact message AI should send", and the "Save reply text" button at the bottom right; the "Smart Group Chat" card below](/images/en/guide/response/reply-rules/01-overview.jpg)
+</Frame>
+
+When no window is selected, the page only shows "No communication window is available", "Log in and bring a non-admin communication window online before continuing.", and a "Go to channel login" button; editing is unavailable at this point.
+
+## Steps
+
+<Steps>
+  <Step title="Confirm the Selected window">
+    All four cards are saved per window. Before you start editing, confirm that the Selected window on the left is the window you want to configure.
+
+    How to tell it worked: the dropdown shows the name of your target window.
+
+    Note: with unsaved content, switching menus or windows first triggers the "Discard unsaved changes?" prompt; choose "Keep editing" to stay on the page. Refreshing or closing the tab is intercepted by the browser's native dialog. While a save is in progress, the page shows "Wait for the current save or upload to finish before leaving."
+  </Step>
+
+  <Step title='Configure "What to reply when AI does not know"'>
+    In the "Exact message AI should send" editor, write the text to send, click "Save reply text", then turn on the switch to the right of the title. While the switch is off, the card description reads "AI currently does not reply when uncertain. You can edit and save the message before enabling it."; once enabled, "AI sends the text here exactly as written."
+
+    How to tell it worked: the save status changes from "Unsaved" to "Saved" or "Saved · Runtime unconfirmed", and the badge next to the switch shows "Enabled".
+
+    To use an earlier version, click "History Records" and pick a version (formatted like "10/4 16:25 Version"); in the comparison dialog, review "Current draft" against "Candidate text", then click "Apply candidate" — it only places the content back in the editor, and you still need to click "Save reply text".
+
+    Note: a switch submits the moment you click it, with no confirmation dialog; if you edit the text without saving, the live conversation keeps using the old reply.
+  </Step>
+
+  <Step title='Configure "Smart Group Chat"'>
+    Turn on the "Smart Group Chat" switch first (the two tabs appear only after it is on), then write rules under the "Questions That Need Reply" and "Questions That Do Not Need Reply" tabs — describe them in as much detail as you like, or add examples. Both tabs are saved together by the same "Save Configuration" button.
+
+    How to tell it worked: the save status becomes "Saved" or "Saved · Runtime unconfirmed".
+
+    Note: Smart Group Chat rules only take effect in WeChat and WeCom channels.
+  </Step>
+
+  <Step title='Configure "Key Event Active Reporting"'>
+    Turn on the "Key Event Active Reporting" switch, then write in the editor what situations should be reported proactively to your supervisor (the placeholder reads "Fill in: what situations require active reporting to supervisor"). Be as specific as possible about timing and format, for example "when a customer repeatedly shows purchase intent, makes a serious complaint or insult, or asks for a contract or quote". Then click "Save Configuration".
+
+    How to tell it worked: the status is no longer "Unsaved", and the switch shows "Enabled".
+
+    Note: for reports to reach a supervisor, first set the recipient to "Supervisor" in [Relationships](/en/guide/assistant/relationship-config).
+  </Step>
+
+  <Step title='Configure "Keyword Direct Reply"'>
+    Turn on the switch, then manage rules in the card: click "Add Rule" to create one; rules are collapsed by default, so click a rule title to expand it for editing. The first time you turn the switch on with no rules yet, one empty rule appears automatically. When there are many rules, use "Search keywords or content" to filter — it only affects the current list view and does not change rule order.
+
+    1. "Trigger Keywords": type a keyword and press Enter to add it; you can add several, and matching any one triggers the rule. Matching is case insensitive.
+    2. "Match Type": choose "Exact match" (triggers only when the whole query equals the keyword) or "Contains" (triggers when the query contains the keyword).
+    3. "Content on Match": enter what to send, item by item; click "Add Row" to add "Text", "Image", or "File". Items are sent one by one in order, up to 6 items. After uploading an image or file, you can click "Replace" and add a line of text to send with it.
+    4. Click "Save Configuration".
+
+    <Frame>
+      !["Keyword Direct Reply" card: the switch is "Enabled" and the summary reads "4 rule(s) configured, matched in order; the first match is sent directly."; below are the search box and Rules 1–4 (each showing its trigger keywords, match type, and item count), with "Current state", "Add Rule", and "Save Configuration" at the bottom](/images/en/guide/response/reply-rules/02-keyword-direct-reply.jpg)
+    </Frame>
+
+    How to tell it worked: the card summary reads "N rule(s) configured, matched in order; the first match is sent directly.", and a "Keyword direct reply configuration saved" message appears.
+
+    Note:
+
+    - Rules are matched in list order; the first match is sent directly and skips AI generation. The list order is the match order, so put more specific rules first.
+    - Saving overwrites the whole configuration. When the message "Complete the keywords and content for every rule" appears, the rules missing content are expanded automatically.
+    - A single image or file cannot exceed 100MB; turning the switch off only disables the rules — saved rules are not deleted.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The Selected window on the left is the window you want to configure.
+- The switches of all four cards are in the states you expect, and any card you edited no longer shows "Unsaved".
+- Test in the corresponding channel: ask a question that is not in the knowledge base and check whether the fallback reply is sent; post something covered (or not covered) by the rules in a group chat and check whether the AI replies or stays silent as expected; send a message that hits a keyword and check whether the fixed content arrives immediately.
+
+## Important notes
+
+<Warning>
+Switches and content are saved separately: a switch submits the moment you click it, while the text and rules inside a card all require that card's save button. Unsaved changes do not take effect, and leaving the page is intercepted.
+</Warning>
+
+<Warning>
+"Keyword Direct Reply" saves by overwriting the whole rule set: rule order is match order, and the first match is sent directly. Messages that hit fixed content no longer go through AI generation. Save after you reorder or delete rules.
+</Warning>
+
+<Info>
+"Key Event Active Reporting" sends to contacts with the "Supervisor" relationship. If you have not set a supervisor in [Relationships](/en/guide/assistant/relationship-config), reports have no recipient.
+</Info>
+
+<Info>
+"Smart Group Chat" rules only take effect in WeChat and WeCom channels.
+</Info>
+
+<Tip>
+High-frequency questions with fixed answers (business hours, address, price list) are good candidates for "Keyword Direct Reply". Leave questions that need context or the knowledge base to normal AI replies, and let "What to reply when AI does not know" cover the cases the AI cannot answer.
+</Tip>
+
+## Frequently asked questions
+
+### The switch is on, but the AI's replies have not changed. What should I check first?
+
+Check three things in order: whether the Selected window on the left is the window you are chatting in — this page saves per window; whether the card content has been saved — the status must not be "Unsaved", which is exactly what "Switches are submitted separately; edited content must be saved." refers to; and note that "Saved · Runtime unconfirmed" only means the backend saved it, without confirmation that the runtime has applied it — sending a real message in the channel is the most direct verification.
+
+### I configured "Keyword Direct Reply", but messages are not sent directly. What is easy to get wrong?
+
+Check "Match Type" first: with "Exact match", only a query that exactly equals the keyword triggers, so you usually want to switch to "Contains". Then check rule order — when several rules match, only the first one takes effect, so a broad rule placed early blocks the rules after it. After changing anything, remember to click "Save Configuration"; unsaved changes do not take effect.
+
+### Why does saving "Keyword Direct Reply" show "Complete the keywords and content for every rule"?
+
+Every rule must have at least one trigger keyword and at least one item of content to send. When the message appears, the card automatically expands the rules that are missing content; complete them and save again.
+
+### Why do "Smart Group Chat" rules not take effect in some channels?
+
+Smart Group Chat rules only take effect in WeChat and WeCom channels. It is also saved separately from the switch, so after editing either tab, click "Save Configuration" to write the changes.
+
+### "Key Event Active Reporting" is on, but no reports arrive. What should I check?
+
+First confirm the switch shows "Enabled" and the content is saved; then confirm the recipient is set to "Supervisor" in [Relationships](/en/guide/assistant/relationship-config) — without a supervisor relationship there is no delivery target.

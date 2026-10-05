@@ -1,0 +1,159 @@
+---
+title: Knowledge Generation
+description: "Turn documents, webpages, or ready-made Q&A into knowledge the AI can use: choose a creation method and destination, submit the generation task, and track progress and results in Generation history."
+keywords:
+  - knowledge generation
+  - generate knowledge from documents
+  - generate knowledge from webpages
+  - add ready knowledge
+  - generation history
+  - knowledge destination
+---
+
+"Knowledge Generation" turns your material into knowledge the AI can use: upload documents, crawl webpages, or add ready-made Q&A directly. Only one method is shown at a time — pick one, set the destination on the right, and submit; then check processing progress and results in "Generation history".
+
+## When you'll need this
+
+- You have product documentation, price lists, FAQs, and similar material that you want to turn into AI-usable knowledge in bulk.
+- Your material is scattered across a help center or a few webpages, and you want the system to crawl it by URL instead of copying it by hand.
+- You have a verified Q&A or explanation and want to add it directly, without waiting for review.
+- You want to look back at where an earlier task got to, or process the knowledge it generated.
+
+## How to get there
+
+Left menu → Knowledge Base → Knowledge Generation.
+
+<Frame>
+  ![Full Knowledge Generation page: on the left, the Where is your knowledge coming from? section with the three method cards Generate from Document, Generate from Webpage, and Add Ready Knowledge, and the document upload area below; on the right, the "2. Choose a destination" panel with Knowledge Scope and Knowledge Category](/images/en/guide/knowledge/generation/01-overview.jpg)
+</Frame>
+
+## Steps
+
+<Steps>
+  <Step title="Choose the creation method in Where is your knowledge coming from?">
+    The three methods map to three cards — click a card to switch, and only one method's form is shown at a time:
+
+    - Generate from Document: upload existing documents, spreadsheets, or reference material;
+    - Generate from Webpage: extract business knowledge from specified web pages;
+    - Add Ready Knowledge: write a verified Q&A or explanation.
+
+    How to tell it worked: the selected card is highlighted and the form below switches to that method.
+
+    Note: switching methods does not clear content already filled in for the others; if you leave the page with unsubmitted content, you are stopped with a prompt.
+  </Step>
+
+  <Step title="Set the scope and category in 2. Choose a destination on the right">
+    All three methods share this panel. First choose the Knowledge Scope: Personal or Enterprise. Then click Knowledge Category; in the popup group list, select the target group and click Confirm.
+
+    How to tell it worked: the group path shown on the panel is where this knowledge will go.
+
+    Note: it defaults to Personal and the first available group (usually "Default") — adjust before submitting. If the group list fails to load, "Failed to get category tree" appears (click Retry); if there are no enabled groups, the panel shows "No enabled groups are available. Use group management to create or enable a group." In either case you cannot select a group, and submission is blocked. To create or adjust groups, click the gear button to the right of Knowledge Category (tooltip: "Knowledge Management") to add a top-level group, add a child group, or save group changes.
+  </Step>
+
+  <Step title="Generate from Document: upload your material and submit">
+    In "1. Upload your material", click the upload area to select files, or drag files in. Supported file types are .pdf, .docx, .doc, .xls, .xlsx, .md, .txt; up to 100MB per file and 500 files at a time.
+
+    Files upload automatically as soon as they are selected: a progress bar shows while uploading, and a green check appears next to each file when it finishes. If an upload fails, click the retry icon to upload it again, or delete it and re-upload. Once every file has uploaded successfully, click "Submit generation task"; the "Confirm Credits Consumption" dialog shows "Expected credits consumption: …" and "Rule: N documents × 100 credits per document". Click Confirm to submit, or Cancel to not submit this time.
+
+    How to tell it worked: "Task submitted. View its result in Generation history." appears and the page switches to Generation history.
+
+    Note: as long as any file is still uploading or has failed, "Submit generation task" stays disabled; the button also requires a knowledge group to be selected. The credits confirmation only appears for the document method.
+  </Step>
+
+  <Step title="Generate from Webpage: add links and submit">
+    In "1. Add web page sources", enter or paste web addresses in the "Upload Link" field; separate multiple URLs with commas or line breaks. A bare domain (for example, www.marsmind.co) is completed to https:// automatically, with the message "Added https:// to N URL(s)". Only addresses starting with http:// or https:// are supported.
+
+    To limit the crawl, expand "Advanced Parameters": Crawl Limit and Crawl Depth both default to 1, are required, and cannot be less than 1; "Translate to Chinese?" defaults to No; Keywords is optional and is used as the search keyword. When you are done, click "Submit generation task".
+
+    <Frame>
+      ![Generate from Webpage mode: the Upload Link input, the expandable Advanced Parameters section (Crawl Limit, Crawl Depth, Translate to Chinese?, Keywords), and the destination panel on the right](/images/en/guide/knowledge/generation/02-generate-from-webpage.jpg)
+    </Frame>
+
+    How to tell it worked: "Task submitted. View its result in Generation history." appears and the page switches to Generation history.
+
+    Note: the webpage method has no credits confirmation — clicking "Submit generation task" submits directly. If an address cannot be recognized or uses an unsupported protocol, an inline error appears, and you can submit only after fixing it.
+  </Step>
+
+  <Step title="Add Ready Knowledge: Q&A, paragraph, or batch">
+    In "1. Write your knowledge", choose an Entry Type:
+
+    - Q&A Knowledge: fill in "What might a customer ask?" and "How should AI answer?". The answer is rich text, and you can click "Insert File"; the right side lists the three requirements under "Write a useful answer" for you to check against before submitting.
+    - Paragraph Knowledge: fill in "Text Description" only.
+    - Batch Import: only template .xlsx files are accepted. Click "Download Template" and choose "Download QA format knowledge import template" or "Download paragraph format knowledge import template"; fill in the template columns, then upload. The upload area warns: "Do not upload a regular Excel or document file directly, or parsing may fail."
+
+    <Frame>
+      ![Add Ready Knowledge mode: Entry Type set to Q&A Knowledge, with "What might a customer ask?" above and the "How should AI answer?" editor below, and the three requirements under "Write a useful answer" on the right](/images/en/guide/knowledge/generation/03-manual-entry.jpg)
+    </Frame>
+
+    How to tell it worked: after submitting, "Task submitted. View its result in Generation history." appears.
+
+    Note: Q&A and paragraph entries submit with "Submit entry task"; Batch Import uses "Submit generation task". Submission is blocked when the question or answer is empty, the paragraph text is empty, or no template file has been uploaded for batch import.
+  </Step>
+
+  <Step title="Track progress and results in Generation history">
+    The page switches here automatically after you submit, and you can also open it at any time from "Generation history" at the top right of the page. The list mixes tasks from all three methods and shows Method, Name, Status, Knowledge Scope, Category, and Task Time; the statuses are Processing, Processing complete, Processing failed, and Stopped. Tasks that are processing refresh automatically and show the "Submitted → Processing" task progress.
+
+    For a task that is processing, click the stop icon in the row (the status becomes "Stopped", and you can click the retry icon to restart it); failed tasks also have a retry icon. Once a task is complete, click "View result" in the Name column: the system first checks whether anything is still awaiting review, then opens [Knowledge Optimization](/en/guide/knowledge/optimization) → Pending review or the stored knowledge view of [Knowledge Management](/en/guide/knowledge/management); while it checks, the button shows "Checking...".
+
+    Selecting task rows brings up the "N selected" action bar, where you can use "Batch Delete".
+
+    <Frame>
+      ![Generation history list: the Search knowledge box at the top, the table columns Method, Name, Status, Knowledge Scope, Category, Task Time, and Operation, and View result next to the name of a processing-complete task](/images/en/guide/knowledge/generation/04-generation-history.jpg)
+    </Frame>
+
+    How to tell it worked: the task you just submitted is listed with the correct status, and "View result" opens the corresponding results page.
+
+    Note: "Processing complete" only means the task has finished — it does not mean the knowledge is stored; whether it is usable depends on the review result. Tasks that are still parsing cannot be selected, and their delete button is disabled — click the stop icon before deleting them.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- After submitting, the page switches to Generation history and shows "Task submitted. View its result in Generation history."
+- The task you just submitted shows the same Method, Name, Knowledge Scope, and Category as at submission.
+- For the document method, every file shows a green check before you submit, with no failed files.
+- A task with "Processing complete" has a "View result" link that opens pending-review or stored content.
+
+## Important notes
+
+<Warning>
+When deleting a task, if you check "Also delete the knowledge generated from this document", the generated knowledge is deleted as well and cannot be recovered. Leave it unchecked to delete only the task record — the generated knowledge stays in use by the AI. When in doubt, leave it unchecked.
+</Warning>
+
+<Warning>
+Tasks that are still parsing cannot be selected or deleted; click the stop icon in the row first, and delete once the status is "Stopped".
+</Warning>
+
+<Info>
+"Processing complete" only means the task has ended, not that the knowledge is stored (the page copy reads: "Processing complete means the task has finished, not that its knowledge is stored. Select View result to open pending review or stored knowledge."). To get knowledge to the AI sooner, work through items in Knowledge Optimization → Pending review one by one; except for Auto Learning, which always needs manual review, other knowledge is accepted automatically if it is not processed within 24 hours.
+</Info>
+
+<Info>
+Only the document method shows "Confirm Credits Consumption" (100 credits per document, counted by the number of documents); webpage generation and Add Ready Knowledge do not have this dialog.
+</Info>
+
+<Tip>
+When crawling Chinese webpages, keep "Translate to Chinese?" set to No to avoid unnecessary translation; when writing Q&A, check against the three requirements under "Write a useful answer" on the right — that is easier than writing first and fixing later.
+</Tip>
+
+## Frequently asked questions
+
+### Where can I check progress after submitting? Does "Processing complete" mean it is stored?
+
+After a successful submission, the page switches to Generation history automatically; you can also click the "Generation history" button at the top right of the page. The status moves from "Processing" to "Processing complete" or "Processing failed", and tasks that are processing refresh automatically. Note that "Processing complete" only means the task has finished, not that the knowledge is stored: click "View result" on that task, and the system opens Knowledge Optimization → Pending review or the stored knowledge view of Knowledge Management based on the review status.
+
+### Why is "Submit generation task" grayed out?
+
+Check the cause for your method: Document — no files selected, files still uploading or failed, or no knowledge group selected; Webpage and entry — no knowledge group selected; Batch Import — the template file has not been uploaded. The button is also unavailable while files are uploading or a submission is in progress. For webpages with no link entered, an invalid URL, or an invalid crawl limit or depth, the button is clickable, but submitting reports an inline error and nothing is submitted.
+
+### How many credits does document generation use? What happens if I click Cancel?
+
+Before submitting, the dialog shows "Expected credits consumption: …" based on "N documents × 100 credits per document". The task is submitted only after you click Confirm; if you click Cancel, this submission does not go through. Webpage generation and Add Ready Knowledge do not have this confirmation dialog.
+
+### Does deleting a task delete the knowledge it generated?
+
+Not by default. If "Also delete the knowledge generated from this document" is not checked in the delete dialog, only the task record is deleted; the generated knowledge stays and continues to be used by the AI. If it is checked, the knowledge is deleted too and cannot be recovered. When the deletion completes, a message shows "Task deleted, along with N knowledge entries" or "Task deleted; no matching knowledge was found".
+
+### Do web addresses have to start with https://? What happens if I get them wrong?
+
+Addresses starting with http:// or https:// are supported. A bare domain (for example, www.marsmind.co) is completed to https:// automatically, and a message tells you how many were completed. Other protocols or unrecognizable addresses show an inline error, and you can submit only after fixing them. Separate multiple addresses with commas or line breaks.

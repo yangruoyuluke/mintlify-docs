@@ -1,0 +1,99 @@
+---
+title: Perfil
+description: Cambie el apodo y el correo electrónico con el que la cuenta de administración recibe notificaciones, y conozca el alcance del guardado y por qué esto no cambia el reconocimiento de identidad de la IA.
+keywords:
+  - perfil
+  - apodo
+  - correo electrónico
+  - configuración de la cuenta
+  - correo de notificaciones
+---
+
+«Perfil» sirve para gestionar la cuenta de administración con la que inicia sesión: cambiar el «Apodo» y el «Correo electrónico» donde recibe las notificaciones. El apodo solo afecta a lo que se muestra en la consola de administración y el correo se usa para recibir avisos como la conexión y la desconexión de la IA; ninguno de los dos campos cambia el reconocimiento de identidad de la IA.
+
+## Cuándo la necesitará
+
+- Si acaba de empezar a usar la consola de administración: para comprobar primero que el apodo y el correo electrónico son los suyos.
+- Si quiere pasar a un correo que use habitualmente, para recibir avisos como la conexión y la desconexión de la IA.
+- Si el apodo o el correo electrónico están mal escritos y necesita corregirlos.
+
+## Ruta de acceso
+
+«Configuración de la cuenta» (abajo a la izquierda) → «Perfil».
+
+Al entrar, en la parte superior de la página están las tres pestañas «Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA»; la vista se abre en «Perfil» de forma predeterminada y la descripción de la página es «Gestione su apodo y el correo electrónico donde recibe notificaciones.». Esta página modifica la cuenta de administración con la que inicia sesión y no cambia al cambiar la «Ventana de conversación actual» de la izquierda.
+
+<Frame>
+  ![Página «Perfil»: arriba, las tres pestañas «Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA»; en la tarjeta «Datos básicos», los dos campos «Apodo» y «Correo electrónico»; abajo, la barra de guardado con el botón «Guardar»](/images/es/guide/account/profile/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Modifique el apodo">
+    Escriba o modifique el apodo en el campo «Apodo» de la tarjeta «Datos básicos». Junto al nombre del campo hay una marca de obligatorio, y si hace clic en el icono ⓘ que está a su lado verá la descripción del campo.
+
+    Para qué sirve el apodo: solo se usa para mostrarlo en la consola de administración (una vez guardado, es lo que aparece en el menú «Configuración de la cuenta» de abajo a la izquierda); no cambia la identidad externa de la IA ni otros datos.
+
+    Cómo comprobarlo: al escribir, el estado de la parte inferior de la página pasa de «No hay cambios sin guardar» a «Hay cambios sin guardar» y el botón «Guardar» de la derecha se activa.
+
+    Nota: mientras la página muestra «Cargando…» los campos no se pueden editar; si aparece «No se pudo cargar su perfil», pulse primero «Reintentar» y modifique los datos cuando la carga se complete.
+  </Step>
+
+  <Step title="Complete el correo electrónico">
+    En el campo «Correo electrónico», introduzca la dirección donde quiere recibir las notificaciones. El correo es obligatorio y se usa para recibir avisos como la conexión y la desconexión de la IA; la página recomienda usar QQ Mail, que también permite recibirlos a través de WeChat.
+
+    Cómo comprobarlo: el correo debe tener el formato habitual (con `@` y un dominio, por ejemplo `name@example.com`). Al pulsar «Guardar», si el campo está vacío aparece «Introduzca una dirección de correo electrónico.»; si el formato no es correcto, corríjalo según el aviso (cuando falta el `@` o hay espacios, es el navegador el que muestra directamente su propio aviso de formato; el texto rojo de la aplicación es «Introduzca una dirección de correo electrónico.» o «Introduzca una dirección de correo electrónico válida.»). Cuando el correo sea correcto, el aviso desaparece.
+  </Step>
+
+  <Step title="Pulse «Guardar» para enviar">
+    Cuando confirme que el apodo y el correo electrónico están bien, pulse «Guardar» en la parte inferior de la página.
+
+    Cómo comprobarlo: aparece «Guardado correctamente.», el estado inferior vuelve a «No hay cambios sin guardar» y el botón «Guardar» queda desactivado; si en ese momento despliega el menú «Configuración de la cuenta» de abajo a la izquierda, arriba ya aparece el nuevo apodo. Mientras se guarda, el botón muestra «Guardando…».
+
+    Nota: la línea de texto pequeño de la parte inferior explica el alcance del guardado: «Solo guarda el nombre y el correo electrónico de esta página.». Guardar el perfil no modifica los códigos de autorización de «Autorización de identidad de IA». Si sale de la página a mitad de camino (por ejemplo, pulsa otra pestaña o menú), aparece «¿Descartar los cambios sin guardar?» (con el mensaje «Esta página contiene cambios sin guardar. Se perderán si sale de ella.»): elija «Seguir editando» para volver a la página o «Descartar los cambios» para perder esta modificación; si actualiza o cierra la página directamente, es el navegador el que muestra la confirmación de salida. Mientras se está guardando no se puede salir: aparece «Espere a que termine el guardado o la subida en curso antes de salir.».
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La página carga correctamente: no aparece «No se pudo cargar su perfil» y los dos campos se pueden editar.
+- El apodo y el correo electrónico son los que desea, y el correo es una dirección que revisa con frecuencia y en la que recibe los mensajes sin problema.
+- Ha pulsado «Guardar» y aparece «Guardado correctamente.»; el estado de la parte inferior es «No hay cambios sin guardar».
+- En el menú «Configuración de la cuenta» de abajo a la izquierda se muestra el nuevo apodo.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+El apodo y el correo electrónico de «Perfil» no tienen nada que ver con el reconocimiento de identidad de la IA: cambiarlos no hará que la IA le reconozca como supervisor o como compañero. Para que la IA reconozca su identidad, vaya a «Autorización de identidad de IA», genere un código de autorización y envíelo a la cuenta de IA correspondiente (en una misma cuenta de IA prevalece el último código recibido); consulte [Autorización de identidad de IA](/es/guide/account/ai-authorization).
+</Warning>
+
+<Info>
+El apodo y el correo electrónico son obligatorios: si el apodo está vacío aparece «Introduzca un apodo.»; si el correo está vacío o el formato no es correcto, aparece «Introduzca una dirección de correo electrónico.» o «Introduzca una dirección de correo electrónico válida.». El correo no se guarda automáticamente: solo se guarda en el servidor cuando pulsa «Guardar» y aparece «Guardado correctamente.»; a partir de entonces, los avisos como la conexión y la desconexión de la IA se enviarán a esta dirección.
+</Info>
+
+<Tip>
+Para confirmar que el apodo se ha guardado no necesita quedarse en esta página: despliegue «Configuración de la cuenta» de abajo a la izquierda; en la parte superior del menú aparece el apodo actual.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué el botón «Guardar» no responde?
+
+Hay tres causas habituales: (1) la página no tiene cambios nuevos —abajo se muestra «No hay cambios sin guardar» y el botón ya está desactivado; basta con modificar un campo—; (2) la página todavía está cargando (muestra «Cargando…») o la carga falló (muestra «No se pudo cargar su perfil»): pulse primero «Reintentar» y edite cuando la carga se complete; (3) se está guardando: el botón muestra «Guardando…»; espere a que termine.
+
+### ¿Cambiar el apodo o el correo electrónico afecta a cómo me reconoce la IA?
+
+No. El apodo solo se usa para mostrarlo en la consola de administración y el correo solo para recibir notificaciones; ninguno de los dos participa en el reconocimiento de identidad de la IA. Ese reconocimiento lo determina el código de autorización generado en la página «Autorización de identidad de IA»; para más detalles, consulte [Autorización de identidad de IA](/es/guide/account/ai-authorization).
+
+### ¿Por qué aparece «Introduzca una dirección de correo electrónico válida.» si el correo parece correcto?
+
+El formato exigido es el habitual: contenido antes del `@` y un dominio con punto detrás del `@` (por ejemplo, `name@example.com`). Los errores frecuentes son olvidar el `@`, introducir espacios o usar caracteres no válidos; cuando falta el `@` o hay espacios, suele ser el navegador el que lo bloquea primero con su aviso de formato, y no siempre aparece el texto rojo de la aplicación. El texto rojo de la aplicación, «Introduzca una dirección de correo electrónico válida.», aparece cuando el correo pasa la validación de formato del navegador pero aún no cumple el formato indicado (por ejemplo, `name@example`). Corrija el correo según el aviso y vuelva a pulsar «Guardar».
+
+### Después de cambiar el correo electrónico, ¿cuándo surte efecto?
+
+El correo no se guarda automáticamente: solo se guarda en el servidor cuando pulsa «Guardar» en la parte inferior de la página y aparece «Guardado correctamente.»; a partir de entonces, los avisos como la conexión y la desconexión de la IA se enviarán al nuevo correo. El correo anterior dejará de recibir estos avisos.
+
+### Si dejo la página a medias sin guardar y paso a otra pestaña o página, ¿qué pasa?
+
+Aparece el cuadro de confirmación «¿Descartar los cambios sin guardar?», con el mensaje «Esta página contiene cambios sin guardar. Se perderán si sale de ella.». Elija «Seguir editando» para quedarse en la página conservando lo escrito, o «Descartar los cambios» para perder esta modificación. Si actualiza o cierra el navegador directamente, es el navegador el que muestra la confirmación de salida. Mientras se está guardando no se puede salir: aparece «Espere a que termine el guardado o la subida en curso antes de salir.».

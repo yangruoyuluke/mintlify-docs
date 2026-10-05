@@ -1,0 +1,130 @@
+---
+title: Autorisation des rôles auprès de l’IA
+description: Générez et consultez les codes d’autorisation du superviseur et du collègue, copiez-les au format demandé par l’interface (le code du superviseur comporte automatiquement un préfixe #) et envoyez-les au compte IA pour que l’assistant reconnaisse votre identité.
+keywords:
+  - autorisation des rôles auprès de l’IA
+  - code d’autorisation du superviseur
+  - code d’autorisation du collègue
+  - identification
+  - code d’autorisation
+---
+
+« Autorisation des rôles auprès de l’IA » sert à générer les codes d’autorisation à envoyer à un compte IA : le « Code d’autorisation du superviseur » amène l’IA à vous identifier comme superviseur (Leader), tandis que le « Code d’autorisation du collègue » la fait vous reconnaître comme collègue. Un code ne prend effet qu’une fois envoyé au compte IA correspondant ; pour un même compte IA, c’est le dernier code reçu qui fait foi.
+
+## Quand en avez-vous besoin ?
+
+- Première identification auprès de l’IA : envoyez votre code d’autorisation au compte IA concerné. Si vous avez cliqué sur « Faites ceci plus tard » pendant la [Connexion aux canaux](/fr/guide/assistant/login-online), revenez sur cette page pour l’envoyer.
+- Consulter ou copier votre code actuel : vous avez oublié le code et devez l’ouvrir pour le vérifier.
+- Renouveler un code : vous soupçonnez la fuite de l’ancien code, ou votre équipe demande un nouveau code.
+- Changer d’identité : renvoyez un autre code au même compte IA pour remplacer l’identité précédente.
+
+## Comment y accéder ?
+
+« Paramètres du compte » en bas à gauche → « Autorisation des rôles auprès de l’IA » (vous pouvez aussi ouvrir d’abord [Profil](/fr/guide/account/profile) ou [Sécurité de la connexion](/fr/guide/account/security), puis basculer avec les onglets en haut).
+
+Une fois la page ouverte, trois onglets s’affichent en haut — « Profil / Sécurité de la connexion / Autorisation des rôles auprès de l’IA » — avec l’onglet « Autorisation des rôles auprès de l’IA » actif ; la description de la page indique « Générez un code de superviseur ou de collègue à envoyer au compte de l’assistant IA. ». Les codes de cette page appartiennent à votre compte administrateur : ils ne changent pas avec la « Fenêtre de conversation gérée actuellement » sélectionnée à gauche.
+
+<Frame>
+  ![Page Autorisation des rôles auprès de l’IA : en haut, les trois onglets « Profil / Sécurité de la connexion / Autorisation des rôles auprès de l’IA » ; la carte « Codes d’autorisation pour l’assistant IA » contient les deux champs « Code d’autorisation du superviseur » et « Code d’autorisation du collègue », chacun avec les icônes Copier et Afficher/Masquer et le bouton « Générer et enregistrer un nouveau code » à droite ; en bas, la barre d’enregistrement](/images/fr/guide/account/ai-authorization/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Trouver le code à envoyer">
+    La carte « Codes d’autorisation pour l’assistant IA » contient deux champs : « Code d’autorisation du superviseur » et « Code d’autorisation du collègue ». Tous deux sont masqués par défaut (affichés sous forme de points) ; cliquez sur l’icône en forme d’œil à droite du champ (« Afficher le code d’autorisation du superviseur » / « Afficher le code d’autorisation du collègue ») pour les consulter, puis cliquez de nouveau pour les masquer.
+
+    L’icône ⓘ à côté du titre de la carte est la règle d’identification : « Pour un même compte IA, le dernier code d’autorisation reçu détermine si l’assistant vous reconnaît comme superviseur ou comme collègue. L’envoi d’un nouveau code remplace l’identité précédente. » ; les icônes ⓘ à côté des deux champs expliquent, pour chaque code, le format de copie et le résultat d’identification.
+
+    Critère : un code d’autorisation de 6 caractères, composé de lettres majuscules ou minuscules et de chiffres, est visible. Si la page affiche « Impossible de charger votre profil » et « Vous devez charger votre profil avant de modifier vos informations ou vos codes d’autorisation. Réessayez. », cliquez d’abord sur « Réessayer ».
+
+    Remarque : un nouveau compte peut ne pas encore avoir de code (champ vide) ; si le code du collègue est également vide, saisissez d’abord un code valide de 6 caractères, générez ensuite un nouveau code à l’étape 3, puis revenez ici pour le copier et l’envoyer.
+  </Step>
+
+  <Step title="Copier le code et l’envoyer au compte IA">
+    Cliquez sur l’icône Copier à droite du champ pour copier le code correspondant :
+
+    - Code d’autorisation du superviseur : le texte copié inclut automatiquement le préfixe `#`, par exemple `#A1b2C3` ; envoyez-le tel quel, avec ce format.
+    - Code d’autorisation du collègue : c’est le code de 6 caractères lui-même qui est copié.
+
+    Ouvrez ensuite, depuis votre propre WeChat ou WeCom, la conversation avec ce compte IA et envoyez directement le contenu copié. Après l’envoi, l’IA vous identifie comme Leader (superviseur) ou comme collègue.
+
+    Critère : le message « Copié : Code d’autorisation du superviseur » ou « Copié : Code d’autorisation du collègue » s’affiche ; une fois collé, le code du collègue correspond à celui affiché sur la page, tandis que le code du superviseur comporte automatiquement un `#` devant le code affiché.
+
+    Remarque : pour un même compte IA, c’est le dernier code reçu qui fait foi — si vous envoyez d’abord le code du superviseur puis celui du collègue, l’identité devient « collègue » ; pour redevenir superviseur, il suffit de renvoyer le code d’autorisation du superviseur.
+  </Step>
+
+  <Step title="En cas de besoin, générer et enregistrer un nouveau code">
+    Cliquez sur « Générer et enregistrer un nouveau code » à côté du champ concerné. Un clic génère immédiatement un nouveau code et l’enregistre sur le serveur, en remplaçant l’ancien ; chaque champ dispose de son propre bouton, et seul le champ sur lequel vous cliquez est remplacé.
+
+    Remarque : la génération et l’enregistrement exigent que les deux champs de code contiennent déjà un code valide de 6 caractères ; si l’autre champ est vide, l’opération est bloquée par la validation et un message rouge s’affiche — complétez d’abord ce champ.
+
+    Critère : le message « Code d’autorisation du superviseur généré et enregistré. » ou « Code d’autorisation du collègue généré et enregistré. » s’affiche, le contenu du champ est renouvelé (cliquez sur l’icône en forme d’œil pour voir le nouveau code de 6 caractères) et le statut en bas de page indique « Aucune modification à enregistrer ».
+
+    Remarque : la génération part dès le clic, sans confirmation préalable, et il est impossible de revenir en arrière ; l’ancien code devient alors invalide. Si vous l’avez déjà envoyé à un compte IA, copiez le nouveau code et renvoyez-le pour que l’IA vous identifie selon celui-ci.
+
+    Remarque : en présence de modifications non enregistrées, le bouton est indisponible et le texte sous la carte indique « Enregistrez d’abord vos modifications avant de générer un nouveau code. Le nouveau code sera enregistré immédiatement. » — cliquez d’abord sur « Enregistrer ».
+  </Step>
+
+  <Step title="Vous pouvez aussi modifier le code manuellement, puis l’enregistrer">
+    Modifiez directement le code dans le champ de saisie (par exemple pour appliquer un code convenu par l’équipe) : il doit comporter exactement 6 caractères, uniquement des lettres majuscules ou minuscules et des chiffres. Sinon, un clic sur « Enregistrer » fait apparaître un message rouge sous le champ :
+
+    - Champ vide : « Saisissez le code d’autorisation du superviseur. » / « Saisissez le code d’autorisation du collègue. »
+    - Longueur différente de 6 : « Le code d’autorisation du superviseur doit comporter 6 caractères. » / « Le code d’autorisation du collègue doit comporter 6 caractères. »
+    - Autres caractères : « Le code d’autorisation du superviseur ne peut contenir que des lettres non accentuées, majuscules ou minuscules, et des chiffres. » / « Le code d’autorisation du collègue ne peut contenir que des lettres non accentuées, majuscules ou minuscules, et des chiffres. »
+
+    Après correction, cliquez sur « Enregistrer » en bas de page (pendant l’enregistrement, le bouton affiche « Enregistrement… ») ; la ligne de statut en bas précise « Enregistre uniquement les codes d’autorisation de cette page. ».
+
+    Critère : le message « Modifications enregistrées. » s’affiche, le statut en bas passe de « Modifications non enregistrées » à « Aucune modification à enregistrer » et le bouton Copier redevient disponible.
+
+    Remarque : si un code a été modifié manuellement sans être enregistré, le bouton Copier de ce champ est indisponible et le texte sous le champ indique « Ce code n’a pas encore été enregistré. Enregistrez-le avant de le copier et de l’utiliser. » ; le bouton « Générer et enregistrer un nouveau code » est alors également indisponible. Si vous changez d’onglet ou quittez la page avec des modifications non enregistrées, la fenêtre « Ignorer les modifications non enregistrées ? » s’affiche (description : « Cette page contient des modifications non enregistrées. Elles seront perdues si vous la quittez. ») : « Continuer à modifier » conserve votre saisie, « Ignorer les modifications » l’abandonne ; pendant un enregistrement, impossible de quitter la page — le message « Attendez la fin de l’enregistrement ou de l’importation en cours avant de quitter la page. » s’affiche.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Les deux codes s’affichent normalement (aucun « Impossible de charger votre profil ») et comportent chacun 6 caractères, uniquement des lettres majuscules ou minuscules et des chiffres.
+- À la copie, le message « Copié : … » s’affiche ; le code du superviseur commence par `#` et celui du collègue correspond au code de 6 caractères lui-même.
+- Une fois le code envoyé au compte IA, l’IA vous identifie selon l’identité correspondante ; si vous envoyez un autre code au même compte, l’identité est remplacée.
+- Après une modification manuelle, vous avez cliqué sur « Enregistrer » et le message « Modifications enregistrées. » est apparu ; le statut en bas indique « Aucune modification à enregistrer ».
+- Après la génération d’un nouveau code, le message « … généré et enregistré. » s’affiche, et vous devez renvoyer le nouveau code au compte IA concerné.
+
+## Points d’attention
+
+<Warning>
+Le bouton « Générer et enregistrer un nouveau code » enregistre immédiatement le nouveau code sur le serveur, sans confirmation préalable, et l’ancien code ne peut pas être restauré : il devient invalide. Une fois le code généré, pensez à le copier et à l’envoyer au compte IA qui doit l’utiliser.
+</Warning>
+
+<Warning>
+Les codes d’autorisation servent à vous identifier : ne les remettez qu’à la personne concernée et envoyez-les uniquement au compte IA correspondant, sans les transférer à des groupes ou à des personnes sans rapport. Le préfixe `#` ajouté automatiquement lors de la copie du code du superviseur fait partie du format d’envoi : ne le supprimez pas et ne modifiez aucun caractère du code.
+</Warning>
+
+<Info>
+Différence entre les deux identités : une fois reconnu comme superviseur (Leader), vous devenez le destinataire des signalements proactifs de l’IA ; reconnu comme collègue, l’IA communique avec vous comme avec un collègue, et non comme avec un client. La façon dont l’IA effectue ses signalements et choisit leur destinataire dépend aussi du « Signalement proactif des événements importants » dans les [Règles de réponse](/fr/guide/response/reply-rules) et du réglage « Superviseur » dans les [Relations](/fr/guide/assistant/relationship-config).
+</Info>
+
+<Tip>
+Si le bouton Copier est grisé parce qu’un code a été modifié manuellement sans être enregistré, son survol affiche « Ce code n’a pas encore été enregistré. Enregistrez-le avant de le copier et de l’utiliser. » — cliquez d’abord sur « Enregistrer », puis copiez.
+</Tip>
+
+## Questions fréquentes
+
+### Pourquoi le bouton « Générer et enregistrer un nouveau code » reste-t-il inactif ?
+
+Trois causes fréquentes : ① la page est encore en cours de chargement (affichage « Chargement… ») ou le chargement a échoué (« Impossible de charger votre profil ») — cliquez d’abord sur « Réessayer » ; ② des modifications ne sont pas enregistrées — le texte sous la carte indique « Enregistrez d’abord vos modifications avant de générer un nouveau code. Le nouveau code sera enregistré immédiatement. », cliquez d’abord sur « Enregistrer » ; ③ un enregistrement est en cours (le bouton affiche « Enregistrement… ») — attendez la fin.
+
+### Pourquoi le bouton Copier reste-t-il inactif ?
+
+Le code de ce champ a été modifié manuellement sans être enregistré : le texte sous le champ indique « Ce code n’a pas encore été enregistré. Enregistrez-le avant de le copier et de l’utiliser. ». Cliquez d’abord sur « Enregistrer », puis, une fois le message « Modifications enregistrées. » affiché, copiez le code. Le bouton Copier est également indisponible si le chargement de la page a échoué (cliquez alors sur « Réessayer »), si le champ ne contient encore aucun code ou pendant le chargement de la page.
+
+### Quelle est la différence entre le code d’autorisation du superviseur et le code d’autorisation du collègue ?
+
+C’est le code envoyé qui détermine l’identité reconnue par l’IA : code du superviseur → superviseur (Leader), code du collègue → collègue. Envoyer un autre code au même compte IA remplace l’identité précédente — pour redevenir superviseur, il suffit de renvoyer le code d’autorisation du superviseur. Les deux codes appartiennent uniquement à votre compte administrateur et comportent chacun 6 caractères, uniquement des lettres majuscules ou minuscules et des chiffres.
+
+### Où et comment envoyer le code d’autorisation ?
+
+Ouvrez, depuis votre propre WeChat ou WeCom, la conversation avec ce compte IA et envoyez directement le contenu copié. Le code du superviseur est copié avec le préfixe `#` (par exemple `#A1b2C3`) : envoyez-le tel quel, sans supprimer ni modifier de caractère. Envoyez votre code au compte IA dont vous voulez qu’il vous reconnaisse.
+
+### J’ai envoyé un code d’autorisation, mais l’IA ne me traite pas selon l’identité attendue ?
+
+Vérifiez d’abord trois points : ① le code envoyé est-il bien le code actuellement valide — après la génération d’un nouveau code, l’ancien devient invalide et il faut copier puis envoyer le nouveau ; ② l’avez-vous envoyé au compte IA à autoriser (dans la conversation du canal correspondant) ; ③ le contenu collé est-il correct — le code du collègue doit correspondre à celui affiché sur la page, et le code du superviseur comporte automatiquement un `#` devant le code affiché. Après vérification, copiez de nouveau le code et envoyez-le une fois — pour un même compte IA, c’est le dernier code d’autorisation reçu qui fait foi.

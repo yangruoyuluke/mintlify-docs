@@ -1,0 +1,138 @@
+---
+title: Règles de réponse
+description: Configurez, dans la fenêtre de conversation sélectionnée, la réponse de l’IA lorsqu’elle ne sait pas, sa prise de parole en chat de groupe, le signalement proactif des événements importants et la réponse directe par mot-clé ; les interrupteurs sont enregistrés immédiatement, le contenu doit être enregistré.
+keywords:
+  - Règles de réponse
+  - Réponse directe par mot-clé
+  - Chat de groupe intelligent
+  - Signalement proactif des événements importants
+  - Paramètres de réponse
+---
+
+« Règles de réponse » détermine ce que l’IA dit dans la fenêtre de conversation sélectionnée, dans quatre situations : comment elle répond lorsqu’elle n’a pas la solution, si elle prend la parole dans un groupe, quels événements signaler proactivement au superviseur et quelles demandes reçoivent directement un contenu fixe sans passer par l’IA. Les quatre cartes — « Que répondre lorsque l’IA ne connaît pas la réponse ? », « Chat de groupe intelligent (efficace uniquement sur les canaux WeChat/WeCom) », « Signalement proactif des événements importants » et « Réponse directe par mot-clé » — sont enregistrées indépendamment : un interrupteur s’applique dès le clic, tandis que le contenu d’une carte exige le bouton d’enregistrement de cette carte.
+
+## Quand en avez-vous besoin ?
+
+- L’IA ne trouve pas la réponse dans la base de connaissances et sa réponse n’est pas satisfaisante : vous voulez une phrase type pour prendre le relais.
+- Dans les conversations de groupe, l’IA se tait quand elle devrait répondre et s’immisce quand elle devrait se taire : il faut écrire clairement quels messages méritent une réponse et lesquels non.
+- Quand un client manifeste une intention d’achat ou qu’une plainte survient, vous voulez que l’IA prévienne le superviseur de sa propre initiative.
+- Les questions fréquentes à réponse fixe, comme les horaires d’ouverture ou la grille tarifaire, doivent obtenir une réponse immédiate sans passer à chaque fois par la génération de l’IA.
+
+## Comment y accéder ?
+
+Menu de gauche → Paramètres de réponse → Règles de réponse. À l’ouverture, vérifiez d’abord la « Fenêtre de conversation gérée actuellement », à gauche : les quatre cartes sont enregistrées pour cette fenêtre, et après un changement de fenêtre vous voyez les réglages d’une autre fenêtre. Le rappel permanent en haut de la page indique « Les interrupteurs sont enregistrés séparément ; les modifications du contenu doivent être enregistrées. ».
+
+<Frame>
+  ![Page « Règles de réponse » : en tête, la description de la page et le rappel « Les interrupteurs sont enregistrés séparément ; les modifications du contenu doivent être enregistrées. » ; la carte « Que répondre lorsque l’IA ne connaît pas la réponse ? » avec l’interrupteur sur « Activé », la zone d’édition intitulée « Message exact que l’IA doit envoyer » et, en bas à droite, le bouton « Enregistrer le texte de la réponse » ; en dessous, la carte « Chat de groupe intelligent »](/images/fr/guide/response/reply-rules/01-overview.jpg)
+</Frame>
+
+Lorsqu’aucune fenêtre n’est sélectionnée, la page affiche uniquement « Aucune fenêtre de conversation disponible », « Connectez-vous et mettez en ligne une fenêtre de conversation autre que celle de l’administration avant de poursuivre la configuration. » et le bouton « Se connecter et mettre en ligne » ; l’édition est alors impossible.
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Confirmer la « Fenêtre de conversation gérée actuellement »">
+    Les quatre cartes sont enregistrées par fenêtre. Vérifiez d’abord que la « Fenêtre de conversation gérée actuellement », à gauche, correspond bien à la fenêtre à configurer, puis commencez l’édition.
+
+    Critère : la liste déroulante affiche le nom de la fenêtre visée.
+
+    Remarque : en présence de modifications non enregistrées, changer de menu ou de fenêtre ouvre la boîte de dialogue « Ignorer les modifications non enregistrées ? » ; choisissez « Continuer à modifier » pour rester sur la page. L’actualisation ou la fermeture de l’onglet est interceptée par la boîte de dialogue native du navigateur. Pendant un enregistrement, le message « Attendez la fin de l’enregistrement ou de l’importation en cours avant de quitter la page. » s’affiche.
+  </Step>
+
+  <Step title="Configurer « Que répondre lorsque l’IA ne connaît pas la réponse ? »">
+    Rédigez d’abord le texte à envoyer dans la zone « Message exact que l’IA doit envoyer », cliquez sur « Enregistrer le texte de la réponse », puis activez l’interrupteur à droite du titre. Tant qu’il est désactivé, la carte indique « L’IA ne répond actuellement pas aux questions dont la réponse est incertaine. Vous pouvez rédiger et enregistrer le message avant d’activer cette option. » ; une fois activé, « L’IA envoie le texte saisi ici sans le modifier. ».
+
+    Critère : le statut d’enregistrement passe de « Non enregistré » à « Enregistré » ou « Enregistré · Application non confirmée », et le badge à côté de l’interrupteur affiche « Activé ».
+
+    Pour reprendre une version antérieure, cliquez sur « Historique » et choisissez une version (au format « Version du 4/10 à 16:25 ») ; dans la boîte de dialogue de comparaison, vérifiez le « Brouillon actuel » face au « Contenu proposé », puis cliquez sur « Appliquer le contenu proposé » — le contenu revient simplement dans la zone d’édition, et il faut encore cliquer sur « Enregistrer le texte de la réponse ».
+
+    Remarque : l’interrupteur est soumis dès le clic, sans boîte de dialogue de confirmation ; si vous modifiez le texte sans l’enregistrer, la conversation en ligne continue d’utiliser l’ancienne phrase.
+  </Step>
+
+  <Step title="Configurer « Chat de groupe intelligent (efficace uniquement sur les canaux WeChat/WeCom) »">
+    Activez d’abord l’interrupteur de la carte (les deux onglets n’apparaissent qu’après activation), puis écrivez les règles dans les onglets « Messages auxquels l’IA doit répondre » et « Messages auxquels l’IA ne doit pas répondre » : détaillez autant que nécessaire, exemples à l’appui. Les deux onglets sont enregistrés ensemble par le même bouton « Enregistrer la configuration ».
+
+    Critère : le statut d’enregistrement devient « Enregistré » ou « Enregistré · Application non confirmée ».
+
+    Remarque : en pratique, les règles du Chat de groupe intelligent ne s’appliquent qu’aux canaux WeChat et WeCom.
+  </Step>
+
+  <Step title="Configurer « Signalement proactif des événements importants »">
+    Activez l’interrupteur « Signalement proactif des événements importants », puis décrivez dans la zone d’édition les situations qui doivent être signalées au superviseur (texte indicatif : « Décrivez les situations que l’IA doit signaler au superviseur. »). Plus vous précisez le moment et le format, mieux c’est, par exemple « lorsqu’un client manifeste à plusieurs reprises son intention d’acheter, formule une plainte grave avec des propos injurieux, ou demande un contrat ou un devis » ; cliquez ensuite sur « Enregistrer la configuration ».
+
+    Critère : le statut n’est plus « Non enregistré » et l’interrupteur affiche « Activé ».
+
+    Remarque : pour que les signalements atteignent le superviseur, définissez d’abord le destinataire sur « Superviseur » dans [Relations](/fr/guide/assistant/relationship-config).
+  </Step>
+
+  <Step title="Configurer « Réponse directe par mot-clé »">
+    Activez l’interrupteur, puis gérez les règles dans la carte : cliquez sur « Ajouter une règle » pour en créer une ; les règles sont repliées par défaut, cliquez sur le titre d’une règle pour la déplier et la modifier. La première fois que vous activez l’interrupteur sans aucune règle, une règle vide apparaît automatiquement. Quand les règles sont nombreuses, filtrez avec « Recherche de mots-clés ou de contenu » : cela n’affecte que l’affichage de la liste, sans modifier l’ordre des règles.
+
+    1. « Mots-clés déclencheurs » : saisissez un mot-clé puis appuyez sur Entrée pour l’ajouter ; vous pouvez en mettre plusieurs, la présence de l’un d’eux suffit à déclencher la règle, sans tenir compte des majuscules et minuscules.
+    2. « Type de correspondance » : choisissez « Correspondance exacte » (la demande entière doit être égale au mot-clé) ou « Contient le mot-clé » (le mot-clé apparaît dans la demande).
+    3. « Contenu à envoyer en cas de correspondance » : saisissez les contenus à envoyer un par un ; « Ajouter une ligne » permet d’ajouter « Texte », « Image » ou « Fichier ». Les éléments sont envoyés dans l’ordre, jusqu’à 6 éléments. Après l’importation d’une image ou d’un fichier, vous pouvez cliquer sur « Remplacer » et leur associer un texte d’accompagnement.
+    4. Cliquez sur « Enregistrer la configuration ».
+
+    <Frame>
+      ![La carte « Réponse directe par mot-clé » : l’interrupteur est activé et le résumé indique « 4 règles définies. Elles sont vérifiées dans l’ordre ; le contenu de la première règle correspondante est envoyé directement. » En dessous, le champ de recherche et la liste des règles 1 à 4 (mots-clés déclencheurs, type de correspondance et nombre d’éléments), avec en bas « État actuel », « Ajouter une règle » et « Enregistrer la configuration »](/images/fr/guide/response/reply-rules/02-keyword-direct-reply.jpg)
+    </Frame>
+
+    Critère : le résumé de la carte affiche « N règles définies. Elles sont vérifiées dans l’ordre ; le contenu de la première règle correspondante est envoyé directement. » ; après un enregistrement réussi, le message « Configuration de la réponse directe des mots clés enregistrée » s’affiche.
+
+    Remarque :
+
+    - Les règles sont vérifiées dans l’ordre de la liste : la première correspondance est envoyée directement, sans repasser par la génération de l’IA. L’ordre de la liste est l’ordre de vérification, donc placez les règles les plus précises en premier.
+    - L’enregistrement écrase toute la configuration ; lorsque le message « Compléter les mots clés et le contenu pour chaque règle » apparaît, les règles auxquelles il manque du contenu se déplient automatiquement.
+    - Une image ou un fichier ne peut pas dépasser 100 Mo ; désactiver l’interrupteur ne fait que suspendre les règles, celles déjà enregistrées ne sont pas supprimées.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation gérée actuellement », à gauche, est bien la fenêtre visée.
+- L’état des interrupteurs des quatre cartes correspond à vos attentes ; les cartes modifiées n’affichent plus « Non enregistré ».
+- Testez sur le canal concerné : posez une question absente de la base de connaissances pour vérifier l’envoi de la phrase de repli ; publiez dans un groupe un message prévu (ou non) par les règles pour voir si l’IA répond ou reste silencieuse comme attendu ; envoyez un message qui déclenche un mot-clé pour vérifier que le contenu fixe arrive immédiatement.
+
+## Points d’attention
+
+<Warning>
+Les interrupteurs et le contenu sont enregistrés séparément : un interrupteur est soumis dès le clic, tandis que les textes et les règles d’une carte passent tous par le bouton d’enregistrement de cette carte. Les modifications non enregistrées ne prennent pas effet et la sortie de la page est interceptée.
+</Warning>
+
+<Warning>
+La « Réponse directe par mot-clé » s’enregistre en écrasant toute la configuration : l’ordre des règles est l’ordre de vérification, et la première correspondance est envoyée directement. Les messages qui reçoivent un contenu fixe ne passent plus par la génération de l’IA. Enregistrez après avoir modifié l’ordre ou supprimé une règle.
+</Warning>
+
+<Info>
+Le « Signalement proactif des événements importants » est envoyé aux contacts ayant la relation « Superviseur ». Sans superviseur défini dans [Relations](/fr/guide/assistant/relationship-config), le signalement n’a pas de destinataire.
+</Info>
+
+<Info>
+En pratique, les règles du « Chat de groupe intelligent » ne s’appliquent qu’aux canaux WeChat et WeCom.
+</Info>
+
+<Tip>
+Les questions fréquentes à réponse fixe (horaires, adresse, grille tarifaire) ont tout intérêt à passer par la « Réponse directe par mot-clé ». Laissez à l’IA les questions qui demandent du contexte ou la base de connaissances, et confiez à « Que répondre lorsque l’IA ne connaît pas la réponse ? » les cas où elle n’a pas la solution.
+</Tip>
+
+## Questions fréquentes
+
+### L’interrupteur est activé, mais les réponses de l’IA n’ont pas changé : que vérifier en premier ?
+
+Vérifiez trois points dans l’ordre : la « Fenêtre de conversation gérée actuellement », à gauche, est-elle bien celle avec laquelle vous dialoguez ? — cette page enregistre par fenêtre ; le contenu des cartes a-t-il été enregistré ? — le statut ne doit pas être « Non enregistré », comme le rappelle « Les interrupteurs sont enregistrés séparément ; les modifications du contenu doivent être enregistrées. » ; enfin, « Enregistré · Application non confirmée » signifie seulement que le serveur a bien enregistré la configuration, sans confirmation de son application côté exécution : le plus direct est d’envoyer un vrai message sur le canal pour vérifier.
+
+### J’ai configuré la « Réponse directe par mot-clé », mais les messages ne partent pas directement : où est l’erreur la plus fréquente ?
+
+Regardez d’abord le « Type de correspondance » : avec « Correspondance exacte », seule une demande entièrement égale au mot-clé déclenche, et il faut généralement passer à « Contient le mot-clé » ; vérifiez ensuite l’ordre des règles — lorsque plusieurs correspondent, seule la première s’applique, et une règle trop large placée en tête bloque les suivantes. Après modification, pensez à cliquer sur « Enregistrer la configuration » : les changements non enregistrés ne prennent pas effet.
+
+### L’enregistrement de la « Réponse directe par mot-clé » affiche « Compléter les mots clés et le contenu pour chaque règle » ?
+
+Chaque règle doit comporter au moins un mot-clé déclencheur et au moins un contenu à envoyer. À l’apparition du message, la carte déplie automatiquement les règles auxquelles il manque du contenu : complétez-les, puis enregistrez de nouveau.
+
+### J’ai écrit des règles pour le « Chat de groupe intelligent » : pourquoi ne s’appliquent-elles pas sur certains canaux ?
+
+En pratique, les règles du Chat de groupe intelligent ne s’appliquent qu’aux canaux WeChat et WeCom. Elles sont par ailleurs enregistrées séparément de l’interrupteur : après avoir modifié l’un des deux onglets, cliquez sur « Enregistrer la configuration » pour les écrire.
+
+### Le « Signalement proactif des événements importants » est activé, mais je ne reçois aucun signalement ?
+
+Vérifiez d’abord que l’interrupteur affiche « Activé » et que le contenu est enregistré ; puis que le destinataire est bien défini sur « Superviseur » dans [Relations](/fr/guide/assistant/relationship-config) — sans relation de superviseur, il n’y a aucun destinataire.

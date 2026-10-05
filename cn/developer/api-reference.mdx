@@ -1,0 +1,207 @@
+---
+title: API 参考
+description: 把 MarsMind 的对话能力接入自有系统：请求参数、鉴权方式、四种对话场景与调用示例。
+keywords:
+  - API 接入
+  - 请求参数
+  - 鉴权
+  - 对话场景
+  - 消息回传
+---
+
+本页给已有自有系统的接入方：不经过 MarsMind 后台，直接调用接口把消息交给 MarsMind 处理。你按约定格式组装请求，MarsMind 根据 `event_type` 返回处理结果，或在 auto_dialog 场景下按你提供的 `send_url` 自动发送消息。如果你只是使用 MarsMind 后台和标准聊天入口，不需要从这里开始。
+
+## 什么时候会用到它
+
+- 你有自己的 App、客服系统或消息渠道，想把 MarsMind 的对话能力接进去，而不是只用标准聊天入口。
+- 自有系统需要在调用时实时拿到 AI 对某条消息的处理结果。
+- 需要以命令方式控制消息处理，例如停止某个场景的自动回复。
+
+## 接入前准备
+
+这一页没有后台菜单入口——请求从你自己的系统发起，也没有自助申请入口。调用前先准备好四项：正式接口入口、client 与 secret、签名算法说明由 MarsMind 分配（请联系 [sales@marsmind.co](mailto:sales@marsmind.co) 获取）；接入场景（event_type）由你按业务选择：
+
+1. **正式接口入口**：示例中的 `{正式入口}` 就是你的接入域名，本文档不写死。
+2. **凭据**：`client`（业务标识）与 `secret`。
+3. **签名算法**：`signature` 的计算方式以 MarsMind 提供的接入资料为准，本页不展开。
+4. **确认场景**：auto_dialog、assist_dialog、website_dialog、cmd_dialog 四选一。它们的参数要求和返回行为不同，见「对话场景说明」。
+
+判断标准：入口、client、secret、签名算法说明齐备，且已确定 `event_type`。
+
+## 鉴权说明
+
+每个请求都必须带 `client`、`signature`、`timestamp` 三个字段，缺一不可；`signature` 的算法请联系 [sales@marsmind.co](mailto:sales@marsmind.co) 获取。字段的类型与说明见下方「请求参数」的「请求主体」表。
+
+这三个字段之外，请求体里还必须带 `message_info` 对象，用来承载消息内容。
+
+## 请求参数
+
+### 请求主体
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| client | string | 是 | 业务标识，请与 MarsMind 确认 |
+| signature | string | 是 | 请求签名；算法请联系 sales@marsmind.co 获取 |
+| timestamp | int | 是 | 时间戳（Unix 秒级） |
+| message_info | object | 是 | 消息详情，见下方字段定义 |
+
+### `message_info` 字段
+
+| 字段 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| msg_id | string | 否（assist_dialog 必填） | 唯一消息 ID，assist_dialog 场景下必填 |
+| group_id | string | 视场景而定 | 群聊 ID；from_user_id 与 group_id 同为空报错 400 |
+| group_name | string | 否 | 群聊名称 |
+| from_user_id | string | 是 | 发送者 ID |
+| from_user_nickname | string | 否 | 发送者昵称 |
+| to_user_id | string | 否 | 接收者 ID |
+| to_user_nickname | string | 否 | 接收者昵称 |
+| at_list | string[] | 否 | @ 的用户 ID 列表（仅 auto_dialog 支持） |
+| content | string | content 与 files_info 至少有一个必填 | 消息文本内容 |
+| message_type | int | 是 | 1 = 普通消息，2 = 引用消息 |
+| event_type | string | 是 | auto_dialog \| assist_dialog \| website_dialog \| cmd_dialog |
+| from_user_type | int | auto_dialog 必填 | 1 = 机器人绑定账号，2 = 客户，3 = 客服，4 = 机器人消息 |
+| create_timestamp | int | 是 | 消息创建时间（Unix 时间戳） |
+| files_info | File[] | content 与 files_info 至少有一个必填 | 附件列表，见下表 |
+| quote | object | message_type = 2 必填 | 引用消息对象，需含 msg_id、message_type |
+
+#### `files_info` 结构
+
+| 字段 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| content | string（URL / base64） | 是 | 文件地址或 base64 数据 |
+| file_type | "image" / "document" / "voice" | 是 | 文件类型 |
+
+## 对话场景说明
+
+### auto_dialog（自动对话）
+
+- `event_type = auto_dialog`
+- 由你提供 `send_url`，之后的消息发送逻辑由 MarsMind 自动控制
+- 支持文本、图片、文件（每次请求类型唯一）
+
+`from_user_type` 填写建议：
+
+- 绑定对象：除智能助手本身消息外，均填 1
+- 未绑定对象：外部客户填 2，同公司人员填 3
+
+### assist_dialog（辅助对话）
+
+- 实时返回消息处理结果
+- `msg_id` 必填
+- 参数若与某条 auto_dialog 消息一致，将复用那条消息的上下文
+
+### website_dialog（网页对话）
+
+- 消息立即返回结果并入上下文
+- 不支持 `send_url`
+
+### cmd_dialog（命令控制）
+
+- `content` 为具体命令，目前支持：
+  - `stop_auto_reply`：停止自动回复（仅 auto_dialog 场景下有效）
+
+## 调用步骤
+
+<Steps>
+  <Step title="拿到正式入口与凭据">
+    联系 [sales@marsmind.co](mailto:sales@marsmind.co)，获取正式接口入口、client、secret 与 signature 算法说明。在这一步完成前，不要把示例中的地址和占位值用于真实调用。
+
+    判断标准：你手上有四项信息——正式入口域名、client、secret、签名算法说明。
+  </Step>
+
+  <Step title="选择场景并组装 message_info">
+    先定 `event_type`，再按上面的字段表逐项组装。最容易漏的是这几条：
+
+    - `content` 与 `files_info` 至少填一个；
+    - `message_type` 为 2（引用消息）时必须带 `quote`，`quote` 里要有 `msg_id` 与 `message_type`；
+    - `from_user_id` 与 `group_id` 不要同时为空，两者同为空会报错 400；
+    - auto_dialog 场景还要填 `from_user_type`。
+
+    判断标准：对照字段表检查必填项，尤其是上面四条。
+  </Step>
+
+  <Step title="发起请求">
+    请求地址是「正式入口 + /custom-im/chat-messages」，用 POST 发送，`Content-Type: application/json`。示例里的 `{正式入口}` 请替换成你获取到的域名；client、signature、消息 ID 等均为占位值：
+
+    ```bash
+    curl -X POST "https://{正式入口}/custom-im/chat-messages" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "client": "test",
+      "signature": "d97b383a532466b6c6c451e76a2ab57b",
+      "timestamp": 1748584621,
+      "message_info": {
+        "content": "",
+        "message_type": 1,
+        "group_id": "98765@chatroom",
+        "event_type": "auto_dialog",
+        "from_user_id": "aa123",
+        "from_user_type": 2,
+        "msg_id": "9005",
+        "create_timestamp": 1748584621,
+        "files_info": [
+          { "content": "https://example.com/img.png", "file_type": "image" }
+        ]
+      }
+    }'
+    ```
+
+    判断标准：assist_dialog 与 website_dialog 会在响应里实时带回这条消息的处理结果；auto_dialog 的请求被接受后，MarsMind 按 `send_url` 自动发送，不需要你再手动调用发送接口。
+  </Step>
+
+  <Step title="回后台核对处理情况（可选）">
+    消息进入系统后，用后台的[明细数据](/cn/guide/dashboard/data-export)核对这次处理：把数据口径切到「沟通数据详情」（仅 AI 对话），按窗口与时间筛选，点用户问询内容打开「消息处理链路」，在「执行步骤」「参考知识（N）」两个标签页里逐步对照。执行步骤按「当时的聊天上下文 → 群聊处理 → 回复判定 → 技能调用 → 知识生成 → 安全围栏」展示；面板顶部的「回复生成」「客户送达」「护栏拦截」三项证据独立展示，缺失即未知。
+
+    注意：改动筛选后要点「搜索」才会刷新结果。
+
+    判断标准：能定位到这次调用对应的消息，并看到它走到链路里的哪一步；某一步缺失时，「执行步骤」里会直接显示出来，方便判断卡在哪一环。
+  </Step>
+</Steps>
+
+## 检查点
+
+- assist_dialog、website_dialog：响应里带回这条消息的处理结果。
+- auto_dialog：你的 `send_url` 收到了 MarsMind 发出的消息，自动发送链路就通了。
+- 上下文复用：assist_dialog 的参数与某条 auto_dialog 消息一致时，处理会延续那段上下文，而不是从零开始。
+- 命令控制：cmd_dialog 发送 `stop_auto_reply` 后，对应的自动回复停止。
+- 参数没被拒绝：没有收到 400（`from_user_id` 与 `group_id` 同时为空会报 400）。
+
+## 注意事项
+
+<Warning>
+正式接口入口、client、secret 与签名算法均由 MarsMind 分配、不对外公开，需要联系 [sales@marsmind.co](mailto:sales@marsmind.co) 获取。凭据属敏感信息：不要写进前端代码、客户端 App 或公开仓库，只在服务端保存和使用。
+</Warning>
+
+<Info>
+四个场景如何分工（谁负责发送、谁在调用时实时返回结果），见上文「对话场景说明」与下文「常见问题」。
+</Info>
+
+<Tip>
+想让 assist_dialog 复用某条消息的上下文，把参数与那条 auto_dialog 消息保持一致即可。
+</Tip>
+
+## 常见问题
+
+### 我该用哪个 event_type？
+
+- 让 MarsMind 自动控制发送逻辑（消息怎么回、什么时候发都由 MarsMind 处理）→ auto_dialog，需要提供 `send_url`；
+- 调用时就要拿到这条消息的处理结果 → assist_dialog（`msg_id` 必填）；
+- 网页对话 → website_dialog（立即返回结果并入上下文，不支持 `send_url`）；
+- 下发命令 → cmd_dialog，`content` 填命令本身。
+
+### 正式入口和 client、secret 在哪里申请？
+
+没有自助申请入口：接口地址、凭据与签名算法都由 MarsMind 分配。请联系 [sales@marsmind.co](mailto:sales@marsmind.co) 获取；拿到之前，示例中的 `{正式入口}`、`client: "test"`、示例签名都不能用于真实调用。
+
+### 请求报 400 是什么原因？
+
+先检查这三处参数：`from_user_id` 与 `group_id` 是否同时为空（同为空会报 400）；`content` 与 `files_info` 是否至少填了一个；`message_type` 为 2 时是否带了 `quote`（含 `msg_id`、`message_type`）。改好后重新发起请求即可。
+
+### auto_dialog 和 assist_dialog 有什么不同？
+
+auto_dialog 由 MarsMind 自动控制发送逻辑、按你提供的 `send_url` 发出，支持文本、图片、文件（每次请求类型唯一）；assist_dialog 在调用时实时返回处理结果，参数与某条 auto_dialog 消息一致时会复用那段上下文，`msg_id` 必填。要「自动发」选前者，要「当场看结果」选后者。
+
+### 怎么确认消息真的被处理了？
+
+调用侧看响应和 `send_url`；系统侧回到后台核对的方法见「调用步骤」第 4 步。

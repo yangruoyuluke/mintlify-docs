@@ -1,0 +1,108 @@
+---
+title: Utilisation de l’IA
+description: Consultez les crédits restants et la consommation mensuelle de crédits, vérifiez l’utilisation du mois et dépliez le détail par utilisateur.
+keywords:
+  - utilisation de l’IA
+  - crédits
+  - consommation de crédits
+  - utilisation mensuelle
+  - détail par utilisateur
+  - tableau de bord des données
+---
+
+La page « Utilisation de l’IA » est le registre des crédits du Tableau de bord des données : ouvrez-la pour voir combien de crédits il reste, combien ont été consommés chaque mois, et pour déplier le détail jusqu’à chaque utilisateur. Elle ne demande aucune configuration : on ne fait que consulter et vérifier. L’entrée n’est visible que pour les administrateurs de département.
+
+## Quand en avez-vous besoin ?
+
+- Vérification en fin ou en début de mois : contrôler la consommation de crédits d’un mois calendaire.
+- Suivi des crédits : voir ce qu’il reste et s’il faut anticiper un dépassement du quota.
+- Analyse d’un pic de consommation : lorsqu’un mois affiche une utilisation élevée, le déplier pour voir laquelle des trois catégories — génération de connaissances, traitement des messages ou génération de réponses — a le plus consommé.
+- Répartition entre membres : consulter le détail par utilisateur pour savoir qui consomme et pour quel usage.
+
+## Comment y accéder ?
+
+Menu de gauche → Tableau de bord des données → Utilisation de l’IA. Une fois sur la page, le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Utilisation de l’IA ».
+
+La page comporte deux blocs : « Aperçu des crédits » et « Utilisation mensuelle ».
+
+<Frame>
+  ![Page Utilisation de l’IA complète : en haut la carte « Aperçu des crédits » avec la barre de progression, les crédits utilisés sur le total, les crédits restants et le pourcentage ; en dessous le tableau « Utilisation mensuelle » avec les colonnes Date, Crédits consommés pour générer des connaissances, Crédits consommés pour traiter les messages, Crédits consommés pour générer les réponses et Utilisation totale](/images/fr/guide/dashboard/ai-usage/01-overview.jpg)
+</Frame>
+
+Si vous ne voyez pas cette entrée, c’est en général parce que le compte n’est pas administrateur de département ; voir « Points d’attention » ci-dessous.
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Consulter « Aperçu des crédits » et vérifier les crédits restants">
+    À l’ouverture de la page, la carte du haut est « Aperçu des crédits » :
+
+    - la barre de progression indique la part déjà utilisée ;
+    - juste en dessous, aux deux extrémités de la même ligne, s’affichent « X crédits utilisés sur Y » et « Z crédits restants (P %) » (sur un écran étroit, ces informations passent sur deux lignes).
+
+    Critère : toutes ces informations sont lisibles et aucun bandeau « Échec du chargement » n’apparaît en haut de la page.
+
+    Si les crédits utilisés dépassent le total, le titre de la carte devient « Utilisation (dépassement du quota) » et une ligne « Utilisation supplémentaire » s’ajoute, avec la valeur « N Crédits » ; N correspond à la part dépassant le total.
+  </Step>
+
+  <Step title="Repérer le mois à vérifier dans « Utilisation mensuelle »">
+    Dans « Utilisation mensuelle », chaque ligne correspond à un mois ; les colonnes sont, dans l’ordre, « Date », « Crédits consommés pour générer des connaissances », « Crédits consommés pour traiter les messages », « Crédits consommés pour générer les réponses » et « Utilisation totale ». Le mois le plus récent figure en haut.
+
+    Pour changer de page, utilisez « Précédent » et « Suivant » au bas du tableau ; le pied de page affiche également « Total des enregistrements X, Page Y / Z ». Pour afficher plus de mois d’un coup, réglez « Lignes par page » sur « 20 par page » ou « 50 par page ».
+
+    Critère : vous trouvez la ligne du mois visé et les quatre colonnes de chiffres s’affichent normalement.
+
+    Remarque : la description de la carte indique « Sélectionnez un mois pour les détails de l'utilisateur. Les catégories ne peuvent pas être additionnées pour obtenir le total. » — pour vos vérifications, référez-vous à la colonne « Utilisation totale » et n’additionnez pas vous-même les trois catégories.
+  </Step>
+
+  <Step title="Déplier un mois pour consulter le détail par utilisateur">
+    Cliquez sur le mois dans la colonne « Date » (précédé d’une flèche) : les lignes d’utilisation de chaque utilisateur se déplient sous ce mois, avec les mêmes colonnes que ci-dessus ; un second clic les replie.
+
+    Critère : après le dépliage, les noms d’utilisateur et les quatre chiffres apparaissent ; pendant le chargement, la page affiche « Chargement… ».
+
+    Remarque : si le dépliage échoue, « Échec du chargement » et « Réessayer » s’affichent ; si le mois n’a pas de détail, la page affiche « Pas de détails utilisateur ».
+
+    <Frame>
+      ![Un mois déplié dans « Utilisation mensuelle » : sous ce mois apparaissent les lignes de détail par utilisateur, avec les mêmes colonnes que ci-dessus](/images/fr/guide/dashboard/ai-usage/02-month-details.jpg)
+    </Frame>
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Dans « Aperçu des crédits », vous lisez les trois valeurs — utilisés, total et restants ; la barre de progression correspond à la part utilisée (elle apparaît pleine en cas de dépassement).
+- Dans « Utilisation mensuelle », vous trouvez le mois visé et lisez les quatre colonnes : « Crédits consommés pour générer des connaissances », « Crédits consommés pour traiter les messages », « Crédits consommés pour générer les réponses » et « Utilisation totale ».
+- Un clic sur un mois déplie le détail par utilisateur de ce mois ; un second clic le replie.
+- En cas de dépassement, le titre de la carte est « Utilisation (dépassement du quota) » et la valeur « Utilisation supplémentaire » est visible.
+
+## Points d’attention
+
+<Warning>
+« Utilisation de l’IA » n’est visible que pour les administrateurs de département : les autres comptes n’ont pas cette entrée dans le menu de gauche et l’ouverture directe de l’adresse de la page est bloquée, avec « Accès refusé » et le message « Ce compte n’a pas les droits d’administrateur de département et ne peut pas consulter les données d’utilisation. Revenez au tableau de bord ou demandez l’accès à un administrateur. » Si vous devez consulter cette page, demandez à un administrateur de vous accorder l’accès.
+</Warning>
+
+<Info>
+En cas de dépassement, la barre de progression n’affiche pas plus que le maximum ; la part excédentaire correspond à la valeur « Utilisation supplémentaire » (N Crédits).
+</Info>
+
+<Tip>
+Lorsque les mois sont nombreux, réglez « Lignes par page » sur « 50 par page ». Les mois dépliés restent ouverts pendant la session de navigation en cours, ce qui évite d’attendre entre deux comparaisons (changer « Lignes par page » replie les mois dépliés, mais les données restent en cache et le redépliage est immédiat). Pour évaluer la prise en charge des clients, comparez les volumes de messages et de réponses dans [Performances](/fr/guide/dashboard/business-performance).
+</Tip>
+
+## Questions fréquentes
+
+### L’addition des trois catégories ne correspond pas à la colonne « Utilisation totale » : les statistiques sont-elles erronées ?
+
+Non. La description d’« Utilisation mensuelle » indique que « les catégories ne peuvent pas être additionnées pour obtenir le total » : l’utilisation totale est un chiffre calculé indépendamment. Pour la vérification comme pour le reporting, fiez-vous toujours à la colonne « Utilisation totale » et n’additionnez pas vous-même les trois catégories.
+
+### Que se passe-t-il lorsque les crédits utilisés dépassent le total ?
+
+Le titre de la carte passe d’« Aperçu des crédits » à « Utilisation (dépassement du quota) », la barre de progression reste pleine et une ligne « Utilisation supplémentaire » (N Crédits) s’ajoute ; N correspond à la part dépassant le total.
+
+### Que faire lorsque la page affiche « Échec du chargement » ?
+
+En cas d’échec du chargement, l’« Aperçu des crédits » et l’« Utilisation mensuelle » affichent « Échec du chargement » et ne donnent aucun chiffre exploitable ; cliquez d’abord sur « Réessayer » dans le bandeau, puis reprenez la vérification une fois les données rétablies. Si l’échec concerne un mois déplié, la zone dépliée contient elle aussi « Réessayer ».
+
+### Où trouver les mois plus anciens ?
+
+Le tableau affiche 10 lignes par page par défaut, le mois le plus récent en premier ; les mois plus anciens se trouvent dans les pages suivantes.

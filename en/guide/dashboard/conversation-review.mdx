@@ -1,0 +1,101 @@
+---
+title: Conversation Review
+description: Filter and review conversation records in the embedded Mercado conversation review app, plus access permissions, what to do when loading fails, and interface language limitations.
+keywords:
+  - conversation review
+  - Mercado
+  - data dashboard
+  - conversation records
+  - access denied
+  - embedded app
+---
+
+Conversation Review is the conversation review entry point for the Mercado business: the entire page embeds Mercado's conversation review app, so you filter and inspect that business's conversation records directly in the admin console; the page itself has no other settings.
+
+## When you'll need this
+
+- Routine spot checks: look back at the AI-to-customer conversations in the Mercado business and review each interaction one by one.
+- Verify something in question: when a customer or a supervisor questions a conversation, come back here to check the original record.
+- Filter down to a set of conversations with your own criteria inside the embedded app.
+
+## How to get there
+
+Left menu → Data Dashboard → Conversation Review. Once you are in, the top bar shows the breadcrumb Data Dashboard → Conversation Review, and the content area is the embedded app filling the whole page.
+
+<Frame>
+  ![Full Conversation Review page: the top bar shows the breadcrumb Data Dashboard → Conversation Review, and the content area embeds the complete Mercado conversation review app with its own filters and list](/images/en/guide/dashboard/conversation-review/01-overview.jpg)
+</Frame>
+
+If this entry is missing from the left menu, your account is not in the visible scope — see Important notes below.
+
+## Steps
+
+<Steps>
+  <Step title="Open the page and confirm your account can see it">
+    Under Data Dashboard in the left menu, click Conversation Review.
+
+    How to tell it worked: the page opens normally, the top-bar breadcrumb reads Data Dashboard → Conversation Review, and the content area starts loading the review app.
+
+    Note: if you see "Access denied", your account is not in the open scope; click "Back to dashboard" to leave. See Important notes below for the scope.
+  </Step>
+
+  <Step title="Wait for the embedded app to finish loading">
+    The page itself has only one loading overlay: while loading it shows "Loading conversation review…"; once the app is ready, the overlay disappears and the app's own filters and list appear.
+
+    How to tell it worked: the overlay is gone and you can use the filters and list inside the app.
+
+    Note: if the app is still not ready after about 15 seconds, the page shows "The conversation review page could not be loaded. Please try again." and a "Reload" button. Clicking Reload reloads the entire app block; if repeated retries still fail, return to the dashboard, try again later, or contact an admin.
+  </Step>
+
+  <Step title="Review conversations inside the embedded app">
+    Filtering, the list, and conversation content all happen inside the embedded app — the admin console does not wrap another layer of controls around it. Which filters to use and how to page through follow the app's actual interface. Filter out the conversations you want to review, then go through them one by one.
+
+    How to tell it worked: the list refreshes after you apply filters, and you can open the conversation record you want to review.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The top-bar breadcrumb reads Data Dashboard → Conversation Review.
+- The loading overlay is gone and you see the app's own filters and list, rather than being stuck on "Loading conversation review…" or "The conversation review page could not be loaded. Please try again."
+- Switching the Selected window on the left does not change this page — this page does not use that selection.
+
+## Important notes
+
+<Warning>
+Conversation Review is available only to the Mercado department (department codes mercado and mercado_local) or platform admins. Other accounts do not see this entry in the left menu, and entering the page URL directly is blocked with "Access denied": "This page is available to Mercado teams and admins. Return to the dashboard or ask an admin to check your access." If you need access, contact an admin to confirm which department your account belongs to.
+</Warning>
+
+<Info>
+This page is an external app (Mercado's conversation review app) embedded as a full page. The admin console only passes the current sign-in identity and interface language to it: no second sign-in is needed. When loading works normally, the page has no other controls — the only exception is the Reload button when loading fails, and all actions happen inside the app.
+</Info>
+
+<Info>
+The embedded app recognizes only some interface languages: Chinese, English, and Japanese display normally; if the interface language is French or Spanish, the app shows in English. To review in Chinese, go to "Account settings → Language" at the bottom left, switch the interface language to Chinese, and return to this page.
+</Info>
+
+<Tip>
+To see the overall numbers before reviewing individual conversations, go to [Performance](/en/guide/dashboard/business-performance); to query or export communication records by condition, go to [Detail Review](/en/guide/dashboard/data-export).
+</Tip>
+
+## Frequently asked questions
+
+### Why is Conversation Review missing from the left menu?
+
+This page is open only to accounts in a specific scope; if you cannot see the menu entry, your account is not in it. See Important notes above for the scope and what to do.
+
+### The page is stuck on "Loading conversation review…" or reports a load failure — what should I do?
+
+On failure, click Reload on the page to retry; if repeated attempts still do not recover it, return to the dashboard and continue with other work, then try again later or contact an admin to investigate.
+
+### I picked French or Spanish as the interface language — why is the review app in English?
+
+The embedded app recognizes only some interface languages: Chinese, English, and Japanese work normally, while French and Spanish fall back to English. To review in Chinese, go to "Account settings → Language" at the bottom left, switch the interface language to Chinese, and return to this page.
+
+### Why does switching the Selected window on the left not change this page?
+
+Conversation Review does not read the Selected window: the range of conversations the review app displays is decided by the app itself, so switching windows does not change this page. To locate a specific conversation, use the filters inside the app.
+
+### How is this page different from Detail Review?
+
+They are not the same data view. Detail Review is the admin console's built-in communication records page, where you can query and export by window, user/group, and other conditions; Conversation Review is the embedded review app for the Mercado business, with no admin-console filter controls on the page — its usage follows the app itself. To export records, use [Detail Review](/en/guide/dashboard/data-export).

@@ -1,0 +1,129 @@
+---
+title: Horaires de service
+description: Définissez, pour la fenêtre de conversation sélectionnée, les plages de service hebdomadaires et par date, ainsi que le décalage UTC fixe appliqué à tous les créneaux.
+keywords:
+  - horaires de service
+  - horaire hebdomadaire
+  - dates spécifiques
+  - fuseau horaire
+  - enregistrer les horaires de service
+---
+
+« Horaires de service » définit les plages de service de la fenêtre sélectionnée : à gauche, « Horaire hebdomadaire » organise les créneaux du lundi au dimanche ; à droite, vous précisez dans quel fuseau horaire ils s’exécutent et pouvez ajouter, si besoin, des « Dates spécifiques » pour les jours fériés ou les événements. La configuration est enregistrée par la « Fenêtre de conversation gérée actuellement », à gauche, et ne prend effet qu’après un clic sur « Enregistrer les horaires de service », en bas de page.
+
+## Quand en avez-vous besoin ?
+
+- Vous venez de connecter une fenêtre et vous définissez ses plages de service.
+- Vous devez ajuster temporairement certaines journées pour un jour férié ou un événement.
+- Vos clients ou votre équipe sont à l’étranger et vous planifiez selon un décalage UTC précis.
+- Les réponses sont anormales : vérifiez d’abord si les horaires de service sont mal définis.
+
+## Comment y accéder ?
+
+Menu de gauche → Paramètres de réponse → Horaires de service.
+
+À l’ouverture, vérifiez d’abord la « Fenêtre de conversation gérée actuellement », en haut de la barre latérale gauche (sous le logo) : l’horaire hebdomadaire, le fuseau horaire et les dates spécifiques sont tous enregistrés par fenêtre, et après un changement de fenêtre vous voyez une autre configuration. Sans fenêtre disponible, la page affiche « Aucune fenêtre de conversation disponible » : cliquez sur « Se connecter et mettre en ligne » pour connecter d’abord une fenêtre (voir [Connexion aux canaux](/fr/guide/assistant/login-online)).
+
+<Frame>
+  ![Page « Horaires de service » : à gauche, la « Fenêtre de conversation gérée actuellement » ; la carte principale « Horaire hebdomadaire » liste les créneaux du lundi au samedi (le bouton « Ajouter à plusieurs jours », situé sous le tableau, et la ligne du dimanche, placée après la barre d’enregistrement en bas, ne figurent pas sur la capture) ; à droite, les cartes « Fuseau horaire » et « Dates spécifiques » ; en bas, le bouton « Enregistrer les horaires de service »](/images/fr/guide/response/working-hours/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Confirmer la « Fenêtre de conversation gérée actuellement »">
+    L’horaire hebdomadaire, le fuseau horaire et les dates spécifiques sont tous enregistrés par fenêtre. Vérifiez d’abord que la « Fenêtre de conversation gérée actuellement », en haut de la barre latérale gauche (sous le logo), correspond bien à la fenêtre à planifier, puis poursuivez.
+
+    Critère : le nom de la fenêtre correspond à celui de la fenêtre à configurer. Si la page affiche « Impossible de charger les paramètres de cette fenêtre de conversation. Réessayez avant de les modifier ou de les enregistrer. », cliquez d’abord sur « Réessayer » ; n’éditez rien tant que le chargement n’a pas abouti.
+  </Step>
+
+  <Step title="Définir l’horaire hebdomadaire">
+    Dans la carte « Horaire hebdomadaire », cliquez sur « Ajouter à plusieurs jours » (vous pouvez aussi cliquer sur « Ajouter un créneau horaire » à droite d’un jour ; pour les jours déjà définis, ce bouton affiche « Modifier »). La fenêtre de dialogue indique : « Saisissez des heures de début et de fin valides, ou sélectionnez “Toute la journée”. Vous pouvez définir jusqu’à trois plages horaires. » :
+
+    1. Cochez les jours : sélectionnez-les un à un du lundi au dimanche, ou utilisez les raccourcis « Sélectionnez les jours de semaine » (du lundi au vendredi) et « Choisir chaque jour » (du lundi au dimanche) ; en modification d’un jour, la fenêtre s’intitule « Modifier les créneaux du Lundi » et ce jour est figé.
+    2. Remplissez la « Plage de temps » : saisissez l’heure de début et de fin en texte brut au format HH:mm, par exemple `09:00` et `18:00` ; pour couvrir toute la journée, cliquez sur « Toute la journée », qui remplit automatiquement `00:00`–`24:00` ; pour plusieurs plages, cliquez sur « Ajouter un créneau horaire » — trois plages maximum par jour.
+    3. Cliquez sur « Appliquer sur cette page » ; « Annuler » laisse la saisie sans effet.
+
+    <Frame>
+      ![Fenêtre « Modifier les créneaux du Samedi » : message rouge lorsque la plage horaire est vide, et boutons « Toute la journée », « Ajouter un créneau horaire », « Annuler » et « Appliquer sur cette page »](/images/fr/guide/response/working-hours/02-add-time-slot.jpg)
+    </Frame>
+
+    Critère : la fenêtre se ferme, la ligne correspondante du tableau passe de « Non défini » à des créneaux renseignés, et l’indication « N de 7 jours configurés », en haut à droite de la carte, est mise à jour.
+
+    Remarque : cette étape ne fait que placer les modifications dans la page, sans les soumettre — l’état en bas de page affiche « Non enregistré ». Enregistrez l’ensemble une fois tous les réglages terminés. Lors de la modification de créneaux existants, « Effacer ce jour », en bas à gauche de la fenêtre, efface d’un coup tous les créneaux de la journée.
+  </Step>
+
+  <Step title="Choisir le fuseau horaire">
+    Dans la liste déroulante de la carte « Fuseau horaire », choisissez un décalage UTC fixe (17 au total, par exemple UTC±0, UTC+8) ; une fenêtre jamais configurée utilise UTC+8 par défaut.
+
+    Critère : le décalage sélectionné correspond au fuseau dans lequel vous planifiez, et les heures saisies à l’étape précédente sont bien exprimées dans ce décalage.
+
+    Remarque : tous les créneaux suivent le décalage UTC fixe sélectionné ; le passage à l’heure d’été n’est pas automatique.
+  </Step>
+
+  <Step title="Ajouter des dates spécifiques (si nécessaire)">
+    Dans la carte « Dates spécifiques », cliquez sur « Ajouter des dates spécifiques » ; dans la fenêtre, choisissez une plage de dates (lorsqu’elle affiche « Sélectionnez une plage de dates », ouvrez le calendrier et sélectionnez le premier puis le dernier jour ; sur ordinateur, deux mois s’affichent à la fois), puis saisissez jusqu’à trois créneaux de la même façon qu’à l’étape précédente et cliquez sur « Appliquer sur cette page ».
+
+    Critère : une entrée au format « 2026/10/01 — 2026/10/07 » et les créneaux correspondants apparaissent dans la carte ; sans configuration, elle affiche « Aucun créneau défini pour une date particulière ».
+
+    Remarque : trois dates spécifiques maximum ; une fois la limite atteinte, le bouton « Ajouter des dates spécifiques » n’est plus affiché. L’icône de suppression à droite d’une entrée permet de la supprimer individuellement.
+  </Step>
+
+  <Step title="Enregistrer toutes les modifications">
+    Une fois l’horaire hebdomadaire, le fuseau horaire et les dates spécifiques vérifiés, cliquez sur « Enregistrer les horaires de service », en bas à droite de la page.
+
+    Critère : le message « Enregistrement réussi » s’affiche, l’état en bas passe de « Non enregistré » à « Enregistré » et le bouton « Enregistrer les horaires de service » devient non cliquable. Les modifications ne sont réellement enregistrées qu’à ce moment.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation gérée actuellement », à gauche, est bien la fenêtre visée.
+- Chaque jour à couvrir dans le tableau hebdomadaire possède des créneaux, sans « Non défini » inattendu ; l’indication « N de 7 jours configurés », en haut à droite de la carte, correspond à vos attentes.
+- Le « Fuseau horaire » est bien celui visé, et toutes les heures saisies respectent ce décalage UTC.
+- Les entrées de dates spécifiques (le cas échéant) ne dépassent pas trois, avec des plages de dates et des créneaux corrects.
+- Après l’enregistrement, l’état en bas affiche « Enregistré » et le message « Enregistrement réussi » est bien apparu.
+
+## Points d’attention
+
+<Warning>
+Sans clic sur « Enregistrer les horaires de service », aucune des modifications ci-dessus ne prend effet. Si vous changez de menu ou de fenêtre en cours de route, la fenêtre de dialogue « Ignorer les modifications non enregistrées ? » s’affiche (texte : « Cette page contient des modifications non enregistrées. Elles seront perdues si vous la quittez. ») : « Ignorer les modifications » abandonne la saisie, « Continuer à modifier » vous ramène à la page ; en cas d’actualisation ou de fermeture de l’onglet, c’est le navigateur qui affiche sa propre confirmation de sortie, et quitter perd également les modifications non enregistrées. Pendant un enregistrement, impossible de quitter la page : le message « Attendez la fin de l’enregistrement ou de l’importation en cours avant de quitter la page. » s’affiche.
+</Warning>
+
+<Warning>
+Les créneaux à cheval sur deux jours ne sont pas pris en charge : l’heure de début doit être antérieure à l’heure de fin (une heure identique déclenche aussi une erreur ; l’heure de fin peut être 24:00). Pour couvrir 22:00–02:00, séparez la plage en deux : 22:00–24:00 le jour même, puis 00:00–02:00 le jour suivant.
+</Warning>
+
+<Info>
+Les heures se saisissent en texte brut, et non via un sélecteur d’heure : format HH:mm, heure de début entre 00:00 et 23:59, heure de fin au plus tard 24:00. En cas de format ou d’ordre incorrect, un message rouge apparaît sous le champ (par exemple « L’heure de fin doit être postérieure à l’heure de début. ») et « Appliquer sur cette page » devient non cliquable.
+</Info>
+
+<Info>
+Trois plages maximum par jour et trois dates spécifiques maximum ; les créneaux d’une même fenêtre de dialogue ne peuvent pas se chevaucher, et tout chevauchement avec la configuration existante sur les mêmes jours et horaires est refusé avec le message « Ce créneau chevauche un créneau déjà défini pour “Lundi”. Modifiez-le et réessayez. ».
+</Info>
+
+<Tip>
+Utilisez d’abord « Ajouter à plusieurs jours » pour définir d’un coup du lundi au vendredi ou la semaine entière, puis affinez jour par jour avec « Modifier » ; lors de la modification d’un jour, la fenêtre reprend tous les créneaux déjà définis pour ce jour.
+</Tip>
+
+## Questions fréquentes
+
+### Pourquoi les modifications de créneaux ne prennent-elles pas effet ?
+
+Regardez d’abord l’état en bas de page : « Non enregistré » signifie que les modifications sont encore à l’écran sans être soumises — cliquez sur « Enregistrer les horaires de service » ; elles ne sont réellement écrites qu’une fois le message « Enregistrement réussi » affiché et l’état passé à « Enregistré ». Si la fenêtre « Ignorer les modifications non enregistrées ? » est apparue en quittant la page et que vous avez choisi « Ignorer les modifications », la saisie a été abandonnée et doit être refaite.
+
+### Pourquoi le bouton « Enregistrer les horaires de service » reste-t-il inactif ?
+
+Causes fréquentes : ① sans nouvelle modification, le bouton est désactivé par défaut (l’état affiche « Enregistré ») — modifiez d’abord un contenu ; ② si un message rouge « Une plage horaire enregistrée est invalide. Supprimez-la puis saisissez-la à nouveau avant d’enregistrer. Les autres paramètres ne seront pas écrasés automatiquement. » apparaît en haut de la page, supprimez d’abord ce créneau invalide puis ressaisissez-le ; ③ pendant « Chargement de la configuration... » ou « Enregistrement… », attendez la fin de l’opération.
+
+### Je veux définir 22:00–02:00 jusqu’au lendemain, pourquoi la saisie est-elle refusée ?
+
+Les créneaux à cheval sur deux jours ne sont pas pris en charge. L’heure de début doit être antérieure à l’heure de fin (une heure identique déclenche aussi une erreur ; l’heure de fin peut être 24:00) ; séparez la plage en deux : 22:00–24:00 le jour même, puis 00:00–02:00 le lendemain.
+
+### Que faire lorsque le message « Ce créneau chevauche un créneau déjà défini pour “Lundi”. Modifiez-le et réessayez. » s’affiche à l’ajout d’un créneau ?
+
+Les créneaux d’un même jour ne peuvent pas se chevaucher. Cliquez sur « Modifier » à droite de ce jour : la fenêtre reprend tous les créneaux de la journée ; rendez-les non chevauchants dans cette même fenêtre, puis cliquez sur « Appliquer sur cette page » ; supprimez les lignes superflues avec le bouton de suppression à droite.
+
+### Mon fuseau n’apparaît pas dans la liste déroulante. Comment choisir ?
+
+La liste ne contient que des décalages UTC fixes, sans nom de ville (17 au total, de UTC-10 à UTC+12). Vérifiez d’abord le décalage de votre région par rapport à UTC, puis sélectionnez l’entrée correspondante — par exemple UTC+8 pour l’heure de Pékin ; ce décalage ne suit pas automatiquement l’heure d’été : dans les régions concernées, revenez vérifier les créneaux avant et après le changement d’heure.

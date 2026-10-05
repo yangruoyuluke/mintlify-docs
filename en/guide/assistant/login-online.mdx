@@ -1,0 +1,160 @@
+---
+title: Channel Login
+description: Connect WeChat, WeCom, website links, Mini Program, and Official Account channels as communication windows, and manage each assistant's online status.
+keywords:
+  - channel login
+  - communication window
+  - channel connection
+  - QR code login
+  - online status
+  - take offline
+---
+
+Channel Login is where you connect channel accounts as communication windows and manage whether each window is online. Sign in or authorize here first; only then can other pages use the window you select under "Selected window" in the left sidebar.
+
+## When you'll need this
+
+- Connecting a channel for the first time: bring WeChat, WeCom, Mini Program, or Official Account accounts into MarsMind, or create a website link channel.
+- An assistant shows "Offline", or switching its status asks you to scan the QR code and sign in again.
+- Pausing service temporarily: switch a window to "Suspended", or take it fully offline with "Take offline".
+- You need the access link or iframe code for a website link channel, or want to delete a communication window you no longer use.
+
+## How to get there
+
+Left menu → My Assistant → Channel Login (the top bar breadcrumb shows My Assistant → Channel Login). At the top of the page, the left side is the status filter "Online & Suspended / Show All", and the right side is "Create New Communication Channel".
+
+<Frame>
+  ![Full Channel Login page: the top shows the "Online & Suspended / Show All" filter and the "Create New Communication Channel" button; below is a list of communication window cards, each showing its name, channel, status pill, and a "⋯" menu](/images/en/guide/assistant/login-online/01-overview.jpg)
+</Frame>
+
+## Steps
+
+<Steps>
+  <Step title="Open the create dialog and choose a channel">
+    Click "Create New Communication Channel" in the top-right corner. In the dialog, choose a channel first, then complete account sign-in or authorization. Five channels are available:
+
+    - WeChat: sign in by scanning the QR code with your phone.
+    - WeCom: sign in by scanning the QR code with your phone.
+    - Website link: generate a shareable chat link.
+    - Mini Program: an administrator scans the QR code to authorize.
+    - Official Account: an administrator scans the QR code to authorize.
+
+    Channels outside these five cannot be created self-service; the bottom of the dialog says "For other channels, please contact sales".
+
+    How to tell it worked: the selected channel card shows a checkmark, and the bottom button changes with the channel — "Next: Scan to sign in" for WeChat and WeCom, "Create chat link" for Website link, and "Next: Authorize" for Mini Program and Official Account.
+
+    <Frame>
+      !["Create a communication window" dialog: the "Select Channel" area lists WeChat, WeCom, Website link, Mini Program, and Official Account](/images/en/guide/assistant/login-online/02-create-window.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="WeChat / WeCom: choose the login region, then scan to sign in">
+    After you choose "WeChat", "Login city" appears — open it and pick a province, then a city. For "WeCom", you only choose "Login province". Once selected, click "Next: Scan to sign in".
+
+    The "Scan QR Code" dialog then shows the QR code. Scan it with your phone and complete the confirmation steps on the phone. The dialog shows "Waiting for scan", then "Waiting for confirmation..." — keep it open; some logins take more than 30 seconds.
+
+    - WeCom occasionally shows "Logging in without scanning...", or asks for a 6-digit verification code: enter it in the dialog and click "Confirm".
+    - If login fails, the dialog shows "QR login is not complete"; click "Regenerate QR code" to retry, or "Cancel" to exit.
+
+    How to tell it worked: a "Login successful" message appears, the QR dialog closes, and the "AI account logged in" dialog opens right after (see the next step).
+
+    <Frame>
+      ![The create dialog after a channel is selected (WeCom is shown, where you first choose "Login province"; WeChat uses "Login city"), with "Next: Scan to sign in" at the bottom](/images/en/guide/assistant/login-online/03-select-channel.jpg)
+    </Frame>
+  </Step>
+
+  <Step title='Complete the identity binding in "AI account logged in"'>
+    This step applies only to WeChat / WeCom: it binds the supervisor identity to the account you just logged in, so the AI can recognize who the supervisor is.
+
+    The dialog shows an authorization code starting with #. Click "Copy authorization code" (the button then changes to "Copied — ready to send") and ask the supervisor to send this exact message from their own phone to the AI account you just logged in. The interface labels the flow "Leader phone" → "Newly logged-in AI account"; once the message is sent, the AI recognizes that phone account as the Leader.
+
+    - You can also close the dialog with "Do this later": the authorization code is always available on [AI identity access](/en/guide/account/ai-authorization).
+    - If "This account does not have a Leader authorization code yet" appears, click "Generate a code" to open Account settings (it lands on the "Profile" tab by default). Switch to the "AI identity access" tab, generate an authorization code, then send it as described above.
+
+    How to tell it worked: the authorization code has been copied and sent (a "Leader authorization code copied" message appears).
+  </Step>
+
+  <Step title="Mini Program / Official Account: scan to authorize">
+    Choose "Mini Program" or "Official Account" and click "Next: Authorize". An authorization QR code appears, titled "Mini Program Authorization" or "Official Account Authorization", with a note to scan it using WeChat and a notice that the system checks the authorization status automatically. "Waiting for scan..." shows below the QR code.
+
+    Scan the code with WeChat and complete the authorization.
+
+    How to tell it worked: an "Authorization successful" message appears, followed by the "Logged In" dialog (confirming the channel login is complete). Click "Close" to return to the list.
+  </Step>
+
+  <Step title="Website link: name the link and create it">
+    Choose "Website link" and fill in "Chat link name":
+
+    - Only letters, numbers, and underscores are supported, 4-10 characters long; invalid characters are filtered out as you type.
+    - If the name does not meet the rules, the input turns red with "Invalid name format. Please enter 4-10 characters (letters, numbers, or underscores)". When it is valid, "Name format is valid" appears along with "Link preview", so you can confirm the final link before creating it.
+
+    Click "Create chat link".
+
+    How to tell it worked: the "Chat link created" dialog appears with the description "The URL channel has been created. You can copy the access link or iframe code." You can click "Copy Link" or "Copy Code" directly, or click "Close" and reopen it from the card at any time (see the last step).
+  </Step>
+
+  <Step title="Manage online status: Working / Suspended / Offline">
+    Each card shows a status pill and a one-line status description below it. Two statuses can be switched at any time:
+
+    - Working: the AI follows the current reply rules.
+    - Suspended: automatic replies are paused.
+
+    Click the status pill and choose "Working" or "Suspended" in the small panel that opens.
+
+    To take a window offline, use "⋯" → "Take offline" in the top-right corner of the card. The confirmation dialog is titled "Take assistant offline" and explains that the window stops automatic service until it is brought online again. After you confirm, the card disappears from the default "Online & Suspended" list; switch to "Show All" and its status shows "Offline".
+
+    To bring it back online: switch to "Show All", click the card's status pill, and choose "Working". The system checks whether the account is online first; if it is not, it shows "Account is offline. Please scan the QR code to log in again." and opens the create dialog (the channel is preselected and cannot be changed). Scan the QR code again following the first-login flow.
+
+    How to tell it worked: the message "Status updated successfully. Due to system delay, the status will take effect in approximately 10 seconds." appears. Once it does, the pill shows the target status immediately; the change takes effect on the server about 10 seconds later.
+  </Step>
+
+  <Step title="Copy the access link and delete communication windows">
+    - Website link channel: click the card name (it has an arrow to the right of the name), or "⋯" → "Access URL", to reopen the "Chat link created" dialog, where you can "Copy Link" or "Copy Code" as needed.
+    - Delete a window: click "⋯" → "Delete communication channel", then "Delete" in the confirmation dialog. The card is removed from the list and a "Communication channel deleted" message appears.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The new window appears in the list as a card, with its name, channel, and status pill showing correctly.
+- A successful WeChat / WeCom scan shows "AI account logged in"; successful Mini Program / Official Account authorization shows "Logged In"; successful website link creation shows "Chat link created".
+- After a status change, the pill immediately shows the target status (the change takes effect on the server after about 10 seconds); after going offline, the card disappears from the default list and shows "Offline" under "Show All".
+- For a website link channel you can copy an access link starting with `https://chat.marsmind.cc/` and its iframe code.
+
+<Warning>
+"Take offline" immediately stops automatic service for that window; it resumes only after you bring the window online again. If the account is not online, bringing it back online requires scanning the QR code and signing in again.
+</Warning>
+
+<Warning>
+"Delete communication channel" cannot be undone. Once deleted, you can only create a new window and complete login again.
+</Warning>
+
+<Info>
+The four statuses match the descriptions below each card: Working — the AI follows the current reply rules; Suspended — automatic replies are paused; Offline — service resumes after you bring the window online again; Pending — waiting for login or authorization to finish. Pending cards have no switchable status pill.
+</Info>
+
+<Info>
+Each communication window is configured independently. After creating one, select it under "Selected window" in the left sidebar first, then configure it on pages such as [Base Persona](/en/guide/assistant/persona), [Relationships](/en/guide/assistant/relationship-config), and [Reply Rules](/en/guide/response/reply-rules).
+</Info>
+
+## Frequently asked questions
+
+### After I scan, the dialog stays on "Waiting for scan" or "Waiting for confirmation..." — what should I do?
+
+First check that you completed every confirmation step on the phone (you may need to tap "OK" more than once). WeCom may require a 6-digit verification code — an input field appears in the dialog; enter the code and click "Confirm". Some logins take more than 30 seconds, so keep the dialog open. If nothing happens for a long time, click "Regenerate QR code" for a fresh code and try again; do the same when the dialog shows "QR login is not complete".
+
+### Why does clicking "Working" show "Account is offline. Please scan the QR code to log in again."?
+
+Before bringing a window online, the system checks whether the account is online. If it is not, it does not switch the status directly — it opens the "Create a communication window" dialog with the channel already selected and locked. Scan the QR code again following the first-login flow. Switching to "Suspended" also checks whether the account is online first and goes through the same re-scan flow if not. A normal "Take offline" is not affected by this check.
+
+### Why can't I find a communication window in the list?
+
+The default "Online & Suspended" filter shows only "Working" and "Suspended" windows. Offline and Pending windows require switching to "Show All"; the empty-state text also changes from "No online or suspended communication channels yet" to "No communication channels yet".
+
+### What does "Pending" on a card mean?
+
+It means login or authorization has not finished yet (the status description reads "Waiting for login or authorization"). These cards have no clickable status pill; let the account finish login or authorization first. If it stays unchanged for a long time, you can delete the window and go through the connection flow again.
+
+### Where do I find the access link and iframe code for a website link channel?
+
+Click the card name (it has an arrow to the right of the name), or use "⋯" → "Access URL", to reopen the "Chat link created" dialog, which contains "Copy Link" and "Copy Code".

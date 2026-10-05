@@ -1,25 +1,164 @@
 ---
-title: "Launch Process"
-description: "Using our product, we will guide you through the following steps together."
+title: "30-minute quick start"
+description: "Follow six steps — sign in, connect a channel, set up the base persona, configure reply rules, generate knowledge, and verify results — to complete the MarsMind minimum loop."
+keywords:
+  - "quick start"
+  - "minimum loop"
+  - "channel login"
+  - "base persona"
+  - "reply rules"
+  - "knowledge generation"
 ---
 
-# Role Communication - Payment - Design - Generation - Implementation - Full Launch
+This page walks you through the shortest path to get MarsMind running: connect a communication window, tell the AI how to speak and how to fall back, feed it its first batch of knowledge, and then use the Data Dashboard to confirm it is really serving customers. Each step gives you the entry point, how to tell it worked, and the pitfalls to avoid. To prepare your account and materials first, see [Activation and preparation](/en/quick-start/preparation).
+
+## When you'll need this
+
+- You just activated your account and want the AI to start serving real customers as soon as possible.
+- You have finished registration and material preparation, but you are not sure where configuration starts.
+- You want to run the minimum loop first, then add knowledge, skills, and response rules based on real questions.
+- You need to demo the system to colleagues or hand it over, and want one short path that explains how it is configured.
+
+## Before you start
+
+- You have an admin account and can sign in at [https://admin.marsmind.cc/login](https://admin.marsmind.cc/login). If you do not have one, see [Activation and preparation](/en/quick-start/preparation) first.
+- All settings follow the "Selected window". Select the window you just connected at the top of the sidebar, below the logo; on the Data Dashboard this selector is called "Statistics window". When no window is selected, pages show an empty state with a "Go to channel login" button.
+- Except for signing in, every step is in the left menu: My Assistant → Channel Login, My Assistant → Base Persona, Response Settings → Reply Rules, Knowledge Base → Knowledge Generation, and Data Dashboard → Performance.
+
+## Steps
 
 <Steps>
-  <Step title="Understand the Product">
-    Browse our [official website](marsmind.co) to understand, communicate through friend demonstrations, or speak directly with MarsMind sales to understand product capabilities.
+  <Step title="Sign in to the admin console">
+    Open [https://admin.marsmind.cc/login](https://admin.marsmind.cc/login), enter your "Username" and "Password", and click "Login".
+
+    How to verify: you see "Login successful!" and land on Data Dashboard → Performance. On your first login, the "Initial Setup Wizard" opens automatically and walks you through "Complete assistant login → Configure usage rules → Set up knowledge base"; click "Later" to dismiss it and continue in the order on this page.
+
+    Note: you sign in with your username, not your email, and the login page has no self-service password recovery. If you do not have an account yet, click "Register" and use the invitation code from sales; for details, see [Activation and preparation](/en/quick-start/preparation).
   </Step>
-  <Step title="Pay Deposit">
-    Enterprise: After confirming role selection and configuration plan, pay the deposit, and MarsMind will initiate role generation. Currently only available by invitation. You can contact [sales@marsmind.co](mailto:sales@marsmind.co) to discuss.
+
+  <Step title="Connect your first communication window (My Assistant → Channel Login)">
+    Go to: left menu → My Assistant → Channel Login. Click "Create New Communication Channel" in the top-right corner, then choose a channel under "Select Channel" in the dialog.
+
+    - WeChat: select "Login province" and "Login city", then scan the QR code with your phone and confirm.
+    - WeCom: select "Login province", then scan; if the page asks for a 6-digit verification code, enter it as shown on your phone.
+    - Website link: no QR code. Enter a 4–10 character "Chat link name" using letters, numbers, or underscores. Once it is created, the "Chat link created" dialog lets you copy the "Access URL" or "Iframe embed code".
+    - Mini Program and Official Account: an administrator must scan the QR code to authorize. If a channel shows "This channel is not self-service yet. Please contact sales.", pick another channel or contact sales.
+
+    <Frame>
+      ![Channel Login page: the "Create New Communication Channel" button in the top-right corner, with the list of connected communication windows and their statuses below](/images/en/quick-start/quick-start/01-login-online.jpg)
+    </Frame>
+
+    How to verify: the window appears in the list with the status "Working". "Pending" means login or authorization is not finished yet. Each card explains its status below: "Working" means the AI follows the current reply rules, "Suspended" means automatic replies are paused, and "Offline" means you must bring the window online again to resume service. A status switch takes about 10 seconds to take effect due to system delay.
+
+    After a successful WeChat or WeCom scan login, the "AI account logged in" dialog appears: click "Copy authorization code" and share the message (it starts with `#`) with your supervisor. Ask the supervisor to send that exact message from their own phone to the AI account you just logged in; the AI will then recognize them as the Leader. If there is no supervisor authorization code yet, click "Generate a code" to open Account settings and create one on the "AI identity access" tab before sending it.
+
+    Note: "Take offline" from the "⋯" menu stops automatic service in that window, and you must scan the QR code again to bring it back online. "Delete communication channel" cannot be undone.
   </Step>
-  <Step title="Role Generation (Enterprise Customers Only)">
-    MarsMind will serve you to complete your role generation. You need to provide four elements:
-    - 10+ sets of real conversations
-    - Enterprise documentation knowledge and official website
-    - Assign 1 dedicated contact person
-    - AI role business process flowchart
+
+  <Step title="Set up the base persona (My Assistant → Base Persona)">
+    Go to: left menu → My Assistant → Base Persona. First make sure the "Selected window" in the sidebar is the one you just connected.
+
+    1. Under "AI Style", pick one of two options: "Detailed and polite" gives fuller, more considerate replies; "Flexible and concise" answers more directly. Your choice is saved as soon as you click it.
+    2. Under "Custom Instructions" → "Main Prompt", spell out who the AI is, which business it serves, what tone it uses, and when it should ask a follow-up question first. For example: You are the MarsMind sales consultant; identify customer intent before you answer; for pricing, qualification, and after-sales questions, prefer knowledge base references; when information is missing, ask a follow-up question instead of making things up.
+    3. Click "Save Configuration". The status changes from "Unsaved" to "Saved" or "Saved · Runtime unconfirmed".
+
+    <Frame>
+      ![Base Persona page: the two "AI Style" options and the Main Prompt editor under "Custom Instructions"](/images/en/quick-start/quick-start/02-persona.jpg)
+    </Frame>
+
+    How to verify: the page status is no longer "Unsaved". After you edit the Main Prompt, the system may update "Context Settings" automatically — expand it to check; this is expected. If you try to leave with unsaved changes, you will be asked to confirm first.
+
+    For the full workflow, see [Base Persona](/en/guide/assistant/persona).
   </Step>
-  <Step title="Implementation and Launch">
-    Start enjoying the ultra-efficient AI Agent empowerment and collaboration provided by MarsMind.
+
+  <Step title="Configure reply rules (Response Settings → Reply Rules)">
+    Go to: left menu → Response Settings → Reply Rules. For the minimum loop, set up just the two cards below; you can add the rest later.
+
+    1. "What to reply when AI does not know": write the exact fallback text the AI should send, click "Save reply text", then turn on the switch next to the title (the switch is labeled "Use a fixed reply"). When it is on, the AI sends this text exactly as written for questions it cannot answer; when it is off, it does not reply to uncertain questions.
+    2. "Smart Group Chat": if your channel is WeChat or WeCom, turn on the card switch first, then describe the rules under "Questions That Need Reply" and "Questions That Do Not Need Reply", and click "Save Configuration".
+
+    How to verify: the card switch shows "Enabled", and the save status at the bottom is no longer "Unsaved". Switch changes save immediately; text content needs the save button.
+
+    Note: Smart Group Chat takes effect only in WeChat and WeCom channels. For the full workflow, see [Reply Rules](/en/guide/response/reply-rules).
+  </Step>
+
+  <Step title="Generate your first knowledge (Knowledge Base → Knowledge Generation)">
+    Go to: left menu → Knowledge Base → Knowledge Generation.
+
+    1. Under "Where is your knowledge coming from?", choose how to create knowledge:
+       - "Generate from Document": upload PDF, Word, Excel, Markdown, txt, and similar files (up to 100MB per file, 500 files max). Files upload automatically as soon as you select them; clicking "Submit generation task" first opens "Confirm Credits Consumption" — 100 credits per document.
+       - "Generate from Webpage": paste http/https URLs, separated by commas or line breaks; there is no credits confirmation and it submits directly.
+       - "Add Ready Knowledge": write "What might a customer ask?" and "How should AI answer?" directly, or batch-upload an xlsx template; the submit button is "Submit entry task".
+    2. Under "2. Choose a destination" on the right, select the "Knowledge Scope" ("Personal" or "Enterprise") and a "Knowledge Category" (defaults to "Default"). Both are required, or the submission is blocked.
+
+    <Frame>
+      ![Knowledge Generation page: the three creation methods at the top, and "2. Choose a destination" with Knowledge Scope and Knowledge Category on the right](/images/en/quick-start/quick-start/03-knowledge-upload.jpg)
+    </Frame>
+
+    How to verify: after you submit, the page switches to "Generation history". The task first shows "Processing" (its progress starts at "Submitted") and changes to "Processing complete" when done. Click "View result" to open the pending review list or the stored knowledge.
+
+    Note: "Processing complete" does not mean the knowledge is stored. To make the AI use it right away, go to "Knowledge Base → Knowledge Optimization", open the "Pending review" list, and click "Approve". If you leave it alone, all knowledge except "Auto Learning" (which always requires manual review) is approved automatically after 24 hours. Tasks in parsing cannot be deleted.
+
+    For the full workflow, see [Knowledge Generation](/en/guide/knowledge/generation) and [Knowledge Optimization](/en/guide/knowledge/optimization).
+  </Step>
+
+  <Step title="Verify the results (Data Dashboard → Performance)">
+    First send the AI a real inquiry from the channel you connected, then go to: left menu → Data Dashboard → Performance.
+
+    1. In the sidebar, select the window you just connected under "Statistics window"; on the filter bar, choose the time range and "Time grouping" ("By Day", "By Week", "By Month", or "Custom").
+    2. Look at "Core Metrics": Messages Received, Inquiries, and Replies.
+
+    <Frame>
+      ![Business Performance page: the filter bar and the "Core Metrics" cards showing Messages Received, Inquiries, and Replies](/images/en/quick-start/quick-start/04-dashboard.jpg)
+    </Frame>
+
+    How to verify: once Messages Received and Inquiries show data, channel messages are being counted; once Replies shows data, the AI has sent replies. To inspect how one inquiry was handled, click "View records in this range" to open "Detail Review", then expand the inquiry to see its "Reference Knowledge" and "Execution Steps".
+
+    Note: Messages Received includes Inquiries, and Inquiries includes Replies — do not add the three numbers together. If you select the wrong window, you will see another channel's data, and conversations handled by human agents are not included here. For the full workflow, see [Business Performance](/en/guide/dashboard/business-performance).
   </Step>
 </Steps>
+
+## Checkpoints
+
+- You can sign in with your "Username" and "Password" and land on Data Dashboard → Performance.
+- "Channel Login" shows at least one communication window with the status "Working"; for WeChat and WeCom channels, the supervisor authorization code has been sent to the supervisor to bind their identity.
+- In "Base Persona", the "AI Style" has been switched and the "Main Prompt" has been saved; the status is not "Unsaved".
+- In "Reply Rules", "What to reply when AI does not know" is on and a fallback message has been saved.
+- "Knowledge Generation" shows at least one task with the status "Processing complete", and at least one knowledge item has been approved under "Knowledge Optimization → Pending review".
+- After you send a test message from the channel, "Performance" shows the matching Messages Received, Inquiries, and Replies.
+
+## Important notes
+
+<Warning>
+  After "Take offline", that window stops automatic service, and bringing it back online requires scanning the QR code again. "Delete communication channel" and permanently deleting knowledge cannot be undone.
+</Warning>
+
+<Info>
+  The status "Saved · Runtime unconfirmed" means the configuration has been written to the admin console but the runtime has not acknowledged it yet — this is normal. When you see it, do not save again; verify with a real message instead.
+</Info>
+
+<Tip>
+  Thirty minutes only proves the loop works. After that, expand based on the questions you run into: fill the gaps in "Knowledge Optimization", tell customers and colleagues apart in "Relationships", block risky replies with "Safety Guardrails", define service hours under [Service Time](/en/guide/response/working-hours), and write your business processes into the [Skills Library](/en/guide/skills/library).
+</Tip>
+
+## Frequently asked questions
+
+### Why does the page say "No communication window is available"?
+
+It means no usable window is selected under "Selected window". Go to "Channel Login" and confirm the window is logged in (its status is not "Pending" or "Offline"), then select it at the top of the sidebar, below the logo; the "Go to channel login" button in the empty state takes you there directly.
+
+### What is the difference between "Suspended" and "Offline"?
+
+"Suspended" means the AI pauses automatic replies, and the window does not need to log in again. "Offline" means you must bring the window online again (scan the QR code again) before it resumes service.
+
+### A knowledge task shows "Processing complete" — why can the AI still not answer?
+
+"Processing complete" does not mean the knowledge is stored. Click "View result" and approve it under "Pending review", or search for it in "Knowledge Management" to confirm. For the auto-approval rules, see the notes in "Generate your first knowledge" above.
+
+### I saved the Main Prompt — why haven't the AI's replies changed?
+
+Check the save status first: when it shows "Saved · Runtime unconfirmed", the runtime has not acknowledged the configuration yet. You can also drill into that inquiry under "Data Dashboard → Detail Review" and check "Reference Knowledge" and "Execution Steps" to tell whether the knowledge was not matched or the rule is not in effect.
+
+### The minimum loop is done — what should I configure next?
+
+Add configuration step by step based on real questions; see the tip above for directions. For detailed operations on each page, see the user guide for each page.

@@ -1,0 +1,161 @@
+---
+title: Business Performance
+description: "Review how the AI handled customers by Statistics window and time range — understand how the core metrics are defined, trace where a change came from, and drill down to conversation records by business category."
+keywords:
+  - business performance
+  - data dashboard
+  - core metrics
+  - inquiry rate
+  - message activity by time
+  - metric guide
+---
+
+Business Performance is the default landing page after you sign in. Its charts answer one question: how well did the AI handle customers during this period? It only shows data and does not configure anything; every chart follows the Statistics window on the left and the time range at the top.
+
+## When you'll need this
+
+- Daily or weekly review: how many messages the AI received, how many inquiries it generated, and how many replies it sent.
+- Message volume or customer feedback has changed, and you need to tell whether the shift sits in messages received, inquiries, or replies.
+- You want to know what customers ask about most and which need category is the most concentrated.
+- You want to drill from a high-share category into the raw records and review how the AI handled them.
+
+## How to get there
+
+Left menu → Data Dashboard → Performance (this is the default page after sign-in, and the top bar shows the breadcrumb Data Dashboard → Business Performance). Once you are in, confirm two things first: the Statistics window at the top of the left sidebar decides which channel you are viewing, and the filter bar at the top decides which period.
+
+<Frame>
+  ![Full Business Performance page: the Statistics window switcher on the left, time grouping and date filters at the top, and from top to bottom in the content area core metric cards, messages and replies over time, and message activity by time](/images/en/guide/dashboard/business-performance/01-overview.jpg)
+</Frame>
+
+## Steps
+
+<Steps>
+  <Step title="Set the reporting scope (window, account, time)">
+    The scope comes from two places. Changes take effect immediately — there is no extra confirm button.
+
+    - Statistics window (left): choose the communication window you want to review, or All Windows for the combined view. Department admins also see an Account dropdown above it for switching to another member; everyone else only reports on their own account, and no Account dropdown is shown.
+    - Filter bar (top): choose the Time grouping first — By Day, By Week, By Month, or Custom (By Month by default) — then click the date button next to it to pick specific dates.
+
+    Two special cases:
+
+    - By Week: clicking any day in the calendar selects the whole week it belongs to (Monday to Sunday).
+    - Custom: pick a start and end date; the range is limited to 2–31 days, and the data does not update until both ends are selected.
+
+    How to tell it worked: cards and charts refresh together after you switch. The right side of the filter bar always shows "Exact comparison dates are unavailable. Quantity changes do not indicate quality." — keep that in mind before reading any up or down arrow.
+
+    Note: if you pick the wrong window, the whole page shows another channel's data.
+  </Step>
+
+  <Step title="Read the core metrics (open Metric Guide any time)">
+    Core Metrics has four cards: Messages Received, Inquiries, Replies, and Inquiry Rate. Their definitions:
+
+    - Messages Received: the total number of messages the AI assistant received.
+    - Inquiries: messages in which users actively ask the AI a question. Merged messages are counted per original user message, and both one-on-one chats and @AI conversations in group chats are included; proactive replies from the smart group assistant are excluded.
+    - Replies: replies the AI actually sent with non-empty content, counting only replies triggered by a customer inquiry — each valid reply counts once. The smart group assistant and proactive replies are excluded.
+    - Inquiry Rate: Inquiries ÷ Messages Received.
+
+    The three counts overlap and trigger one another; never add them together. A card may show a ↑/↓ comparison percentage in its lower-right corner (Messages Received, Inquiries, Replies, and the Suggestions returned by the API); "—" means that value was not returned for the current range, and metrics such as Learned Items and Inquiry Rate have no comparison data.
+
+    The Metric Guide button to the right of Core Metrics opens a drawer from the right side. Under Count Metrics and Rate Metrics it lists all 5 count metrics (Messages Received, Inquiries, Replies, Suggestions, Learned Items) and 3 rate metrics (Inquiry Rate, Replies / inquiries, Adoption Rate) with their definitions.
+
+    <Frame>
+      ![Metric Guide drawer: fields grouped under Count Metrics and Rate Metrics, each with its definition](/images/en/guide/dashboard/business-performance/02-metric-glossary.jpg)
+    </Frame>
+
+    How to tell it worked: after reading the drawer, you can explain how each of the four cards is calculated — and you know Adoption Rate is not a customer conversion rate.
+  </Step>
+
+  <Step title="Check messages and replies over time">
+    Messages and replies over time plots messages received, inquiries, and replies as three lines, so you can see where volume started to change; the three lines overlap and must not be added together. When there is data, a label above the chart reads "Most inquiries in this trend: [date] · [count]".
+  </Step>
+
+  <Step title="Check message activity by time">
+    Message activity by time is a heatmap that answers one question: when during the day are customers most active. Each cell is one 3-hour period on one day — the darker the color, the more messages. Each cell counts raw messages, which is a different definition from inquiries.
+
+    - Data follows the current account, Statistics window, and date range. When the selected period is longer than 31 days, only the last 31 days are shown (the card notes "Showing only the last 31 days of the selected period"), and times are displayed in Beijing time.
+    - The busiest period is labeled by default: "Busiest period" plus the date, time slot, and count. After you click any cell, the label switches to "Selected period".
+    - When there are many dates or time slots, scroll sideways to see the full content.
+
+    <Frame>
+      ![Message activity by time heatmap: each cell is the message count for one 3-hour period on one day, with darker colors meaning more messages; below are the busiest-period label and the light-to-dark legend](/images/en/guide/dashboard/business-performance/03-message-heatmap.jpg)
+    </Frame>
+
+    How to tell it worked: you can see the busiest-period label and the Less → More legend. When the selected dates have no messages, the chart shows "No messages in this period".
+  </Step>
+
+  <Step title="Check rate trends and supporting metrics">
+    Further down, Rate Trend has three cards: Inquiry rate over time, Replies per inquiry, and Adoption rate over time. Below those are Suggestions over time and Learned items over time, followed by four Supporting metrics cards: Suggestions, Learned Items, Replies / inquiries, and Adoption Rate.
+
+    - Replies / inquiries = Replies ÷ Inquiries. One inquiry can produce several replies, so the value can exceed 100% — it is not a reply success rate.
+    - Adoption Rate uses the value returned by the backend; its calculation is still awaiting confirmation, so do not judge service quality by it.
+    - Suggestions is the number of question summaries the AI forwarded to supervisors; Learned Items is the number of knowledge items the AI learned automatically from conversations.
+
+    Definition reminder: the Core Metrics cards above show a single selected period (one day, one week, or one month), while the trends, rate trends, Suggestions, and Learned Items use a sampled range — the last 30 days by day, the last 12 weeks by week, the last 6 months by month. Each trend chart is labeled with its actual start and end range ("This range differs from the single-period metrics above"). The two scopes cannot be compared directly.
+
+    How to tell it worked: curves and bar charts refresh when you change the time grouping or dates. If a single chart fails to load, click Reload trend on the chart (some charts say Reload chart) to try again. If the selected window has no data for that period, the chart shows "No trend data for this window in this period"; switch to All Windows on the left to see the overall picture.
+  </Step>
+
+  <Step title="Check business intents and activity rankings">
+    The Business intents section contains, from top to bottom:
+
+    - What customers ask about: a donut chart counted by merged user intent turns — consecutive messages in the same intent count once. The chart header shows "[count] intent turns · [categories] categories", and the summary below calls out the demand that is currently the most concentrated.
+    - Category display scope: the upper right defaults to "Hide other categories"; if the chart looks sparse, switch to "Show all categories". This switch also applies to the main intents, the share change, and the detailed needs.
+    - Business category share change: compares two adjacent periods, each side totaling 100%. Bands connect only categories with the same name — they do not represent customer movement — and arrows show the change in share in percentage points. It does not support the Custom time grouping: when you pick Custom, the page says "Choose a daily, weekly, or monthly comparison", and you can click "By Month" to switch; viewing the current day shows "No complete dates to compare yet".
+    - Detailed customer needs: expands level 1 categories into level 2 intents; a longer bar means more turns.
+
+    Drill down: click a category in the donut legend (below the chart on narrow screens) or any item in Detailed customer needs, and you jump to [Detail Review](/en/guide/dashboard/data-export) with the window, date range, and category carried over, so you can review each record.
+
+    Further down are Top 5 active groups and Top 5 active users: each lists only the top 5 items returned by the statistics API, and the values are not unique customer counts.
+
+    How to tell it worked: after switching to Show all categories, previously hidden categories appear; after you click a category, the filters in Detail Review match the ones here.
+  </Step>
+
+  <Step title="Continue from the data">
+    At the bottom of the page is Continue from the data. Click View records in this range to jump to Detail Review with the current account, communication window, and time range, and inspect each inquiry, AI reply, and processing path.
+
+    How to tell it worked: after the jump, the date range in Detail Review matches this page.
+
+    Note: when the date range is incomplete (usually because Custom has only one date selected), the button is disabled and the section shows "Select a complete date range first."
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The Statistics window on the left shows the channel you want to review (or All Windows); department admins should also confirm the Account.
+- After you change the time grouping or dates, the core metrics, trends, message activity by time, and business intents all refresh together.
+- Metric Guide lists all 5 count metrics and 3 rate metrics.
+- Clicking any business category opens Detail Review with the matching date and category filters.
+
+<Warning>
+If you pick the wrong Statistics window, the whole page shows another channel's data. Business Performance and Detail Review share this selection, so both pages change together. Business Performance only reports results — to change the persona, reply rules, or knowledge, go to the matching settings page.
+</Warning>
+
+<Info>
+Statistics cover only AI-to-customer conversations; messages handled by human agents are not included.
+</Info>
+
+<Tip>
+Hover over the Inquiry Rate or Replies / inquiries card and the page highlights the count cards used in the calculation (Inquiry Rate comes from Messages Received and Inquiries; Replies / inquiries comes from Inquiries and Replies), so you can check how the definitions relate.
+</Tip>
+
+## Frequently asked questions
+
+### The charts look emptier than expected — what should I check first?
+
+Check three places in order: whether the Statistics window is set to a single window (switch to All Windows); whether Business intents is still on the default Hide other categories (switch to Show all categories); and whether the date range and time grouping cover the period you want. Some empty states offer a Reset Filters button that returns everything to the default range in one click.
+
+### Why do the numbers on the metric cards and the trend charts not match?
+
+They use different scopes: the cards show a single selected period (one day, one week, or one month), while the trends, rate trends, Suggestions, and Learned Items use a sampled range. The two sets of numbers cannot be compared directly.
+
+### Why is View records in this range disabled?
+
+It needs a complete date range. With the Custom time grouping, both the start and end dates must be selected; until they are, the button is disabled and the section shows "Select a complete date range first."
+
+### Why does Business category share change not display?
+
+Two common cases: the current time grouping is Custom — this chart only supports By Day, By Week, or By Month, and the page says "Choose a daily, weekly, or monthly comparison"; or you are viewing the current day — the day is not over yet, so it cannot be compared at the same point in time, and the chart says "No complete dates to compare yet". Pick a completed date instead.
+
+### How is Adoption Rate calculated?
+
+Adoption Rate uses the value returned by the backend as-is, and the current data is not enough to confirm the formula — do not read it as a customer conversion rate, and do not derive it from Suggestions yourself. It has no comparison data, and it shows "—" when no value is returned.

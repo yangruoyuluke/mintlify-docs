@@ -1,0 +1,150 @@
+---
+title: "Revisión detallada"
+description: "Filtre registros de conversación por condiciones y expórtelos a xlsx; además puede desplegar hasta un mensaje individual para comprobar los conocimientos y los pasos de procesamiento que utilizó la IA."
+keywords:
+  - "revisión detallada"
+  - "registros de conversación"
+  - "exportar"
+  - "cadena de procesamiento de mensajes"
+  - "datos de conversaciones con intervención humana"
+---
+
+«Revisión detallada» sirve para consultar registro por registro las conversaciones originales entre la IA y los clientes: filtre por ventana, fechas y condiciones el conjunto de mensajes que necesita, expórtelo a una hoja de cálculo y descienda hasta una consulta concreta para ver qué conocimientos utilizó la IA en ese momento y qué pasos de procesamiento siguió.
+
+## Cuándo la necesitará
+
+- Un cliente indica que una respuesta tiene un problema: localice ese mensaje y vea qué conocimientos consultó la IA y hasta qué paso llegó.
+- Auditoría de la calidad de atención: filtre un lote de registros por usuario, grupo o categoría de intención y lea consulta por consulta las preguntas del usuario y las respuestas de la IA.
+- Entrega y archivo: exporte los detalles de conversaciones de un período a xlsx y envíelos a un compañero o guárdelos localmente.
+- Revisión de conversaciones con agente humano: cambie a «Datos de conversaciones con intervención humana» para ver juntos los mensajes que envió y recibió el agente humano.
+
+## Ruta de acceso
+
+Menú de la izquierda → Panel de datos → Revisión detallada; la ruta de navegación de la barra superior muestra «Panel de datos → Revisión detallada».
+
+Al entrar, confirme primero la «Ventana de conversación de estadísticas» de la izquierda (los administradores del departamento ven además «Cuenta» encima); el cuerpo de la página tiene dos pestañas: «Detalles de conversaciones» (la predeterminada, solo diálogos entre la IA y los clientes) y «Datos de conversaciones con intervención humana» (incluye los mensajes del agente humano).
+
+<Frame>
+  ![Página completa de «Revisión detallada»: arriba, las pestañas «Detalles de conversaciones» y «Datos de conversaciones con intervención humana»; la barra de herramientas incluye el cuadro de búsqueda y los botones «Más filtros», «Exportar resultados actuales» y «Buscar»; las columnas de la tabla son Hora, Usuario, Grupo, Consulta del usuario, Respuesta de la IA y Acción; a la izquierda, el selector de la ventana de conversación de estadísticas](/images/es/guide/dashboard/data-export/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Confirme la ventana de estadísticas y el período de consulta">
+    En la izquierda, elija el canal que quiere consultar en «Ventana de conversación de estadísticas» (o «Todas las ventanas de conversación»). Al abrir la página se ejecuta automáticamente una consulta con las condiciones predeterminadas (rango de fechas «Últimos 30 días»); después, al cambiar la «Ventana de conversación de estadísticas» o la «Cuenta», la consulta también se repite sola.
+
+    Las fechas se eligen en «Fecha», dentro de «Más filtros»: Hoy, Últimos 3 días, Últimos 7 días, Últimos 30 días y Personalizado. Con «Personalizado», elija además las fechas de inicio y fin en el calendario; el rango está limitado a 2–31 días. Si solo elige la fecha de inicio y pulsa «Buscar», solo aparece «Seleccionar rango de fecha» y los resultados no se actualizan.
+
+    Cómo verificarlo: la línea de alcance, encima de la tabla, indica las fechas de inicio y fin y el número de registros de esta consulta (con la forma «Período y resultados de exportación: fecha de inicio a fecha de fin, N registros»).
+
+    Nota: si elige mal la «Ventana de conversación de estadísticas», verá registros de otro canal.
+  </Step>
+
+  <Step title="Añada los filtros que necesite">
+    El cuadro de búsqueda, a la izquierda de la barra de herramientas, busca por «Solicitud de usuario»; las demás condiciones están en «Más filtros»:
+
+    - «Nombre de usuario» y «Nombre del grupo»: localizan los registros de una persona o de un grupo;
+    - «Respuesta de la IA»: filtra por el texto de la respuesta de la IA;
+    - «Respuesta de la IA» (lista desplegable): elija «Con respuesta de la IA» o «Sin respuesta de la IA» para ver solo si la IA respondió;
+    - «Categoría de intención»: elija primero «Categoría 1» o «Categoría 2» y escriba el nombre completo de la categoría. Si el nivel queda en «Cualquier nivel» o el nombre está vacío, esta condición no se aplica.
+
+    Después de modificar los filtros, la etiqueta de la barra de filtros pasa a «Filtros aún no buscados» y debajo aparece el aviso amarillo «Los filtros han cambiado. Vuelva a buscar antes de exportar para que el archivo coincida con la tabla.»: mientras lo vea, la tabla sigue mostrando los resultados de la búsqueda anterior.
+
+    Si acumula muchas condiciones, use «Restablecer» para vaciarlas y volver a los valores predeterminados (después de restablecer también hay que volver a pulsar «Buscar» para que se apliquen).
+
+    Sugerencia: si llegó desde «Rendimiento del negocio» haciendo clic en una categoría o desde «Ver registros de este período», la fecha, la ventana, la cuenta y la categoría ya vienen aplicadas; no hace falta volver a introducirlas.
+  </Step>
+
+  <Step title="Pulse «Buscar» y confirme el alcance de los resultados">
+    Después de cambiar las condiciones, pulse «Buscar» (pulsar Intro en cualquiera de los campos también funciona). La línea de alcance, encima de la tabla, se actualiza a «Período y resultados de exportación: fecha de inicio a fecha de fin, N registros»; «Filas por página» (10/20/50) y el cambio de página solo afectan a la vista, no a la exportación.
+
+    Cómo verificarlo: las fechas y el número de registros de la línea de alcance coinciden con lo que quería consultar; la etiqueta de la barra de filtros vuelve a «Filtros aplicados» y el aviso amarillo desaparece.
+
+    Si la consulta falla, aparece una barra roja («La búsqueda falló y todavía no hay resultados disponibles. Vuelva a intentarlo.» o «La búsqueda falló. Los últimos resultados correctos siguen visibles. Vuelva a intentarlo antes de exportar.»); pulse «Reintentar búsqueda» y no exporte mientras dure el fallo.
+  </Step>
+
+  <Step title="¿Necesita ver conversaciones con agente humano? Cambie a «Datos de conversaciones con intervención humana»">
+    Pulse la segunda pestaña. La barra de filtros pasa a «Fecha», «Sesión ID» y «Tipo de mensaje» (Todos los tipos, Usuario, Asistente de IA y Humano), y el cuadro de búsqueda pasa a «Contenido del mensaje»; las columnas de la tabla son Fecha de creación, Sesión ID, Contenido del mensaje, Tipo de mensaje y Remitente.
+
+    Se usa igual que «Detalles de conversaciones»: después de cambiar los filtros hay que volver a pulsar «Buscar». Los filtros, los resultados y la exportación de las dos pestañas no se afectan entre sí.
+
+    Cómo verificarlo: al cambiar de pestaña, los encabezados y la barra de filtros cambian juntos; en la columna «Tipo de mensaje» se ven los tres tipos de mensajes: Usuario, Asistente de IA y Humano.
+
+    <Frame>
+      ![Pestaña «Datos de conversaciones con intervención humana»: la barra de filtros es Fecha, Sesión ID y Tipo de mensaje; las columnas son Fecha de creación, Sesión ID, Contenido del mensaje, Tipo de mensaje y Remitente](/images/es/guide/dashboard/data-export/03-agent-data-tab.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Descienda a un mensaje y vea la cadena de procesamiento de ese momento">
+    En «Detalles de conversaciones», haga clic en la celda «Consulta del usuario» de una fila (al pasar el cursor se muestra «Haga clic para ver los pasos de procesamiento y los conocimientos de referencia de este mensaje»): se abre el panel «Cadena de procesamiento de mensajes» que cubre toda la tabla; para cerrarlo, pulse «Volver», arriba a la izquierda.
+
+    El panel, de arriba abajo:
+
+    - El «Mensaje original» de este turno y la «Respuesta de IA registrada»;
+    - Tres evidencias independientes: «Generación de respuestas», «Entrega al cliente» y «Control de seguridad»; cuando no hay registro, se muestra una nota que empieza por «Desconocido · …» (debajo del panel se aclara: «Una respuesta registrada no confirma que se haya entregado al cliente. La ausencia de registros de los controles no implica que no se hayan activado.»);
+    - Dos pestañas: «Conocimiento de referencia (N)», abierta de forma predeterminada, lista los conocimientos recuperados para este mensaje y su «Puntuación de coincidencia»; en la columna «Acción» puede pulsar «Editar» para modificar ese conocimiento (al guardar, el sistema vuelve a calcular la recuperación). Algunos conocimientos históricos solo se pueden consultar cuando no se localiza su entrada en la base de conocimientos. «Pasos de ejecución» muestra fila a fila el proceso «Contexto de la conversación en ese momento → Procesamiento de chat grupal → Decisión → Invocación de habilidades → Generación de conocimientos → Control de seguridad», y la fila del contexto se puede desplegar para ver la conversación anterior a este turno (incluido el turno actual).
+
+    Cómo verificarlo: el título de la pestaña «Conocimiento de referencia» incluye el número de elementos; en «Pasos de ejecución», cada etapa da una conclusión clara (por ejemplo, «Respuesta necesaria», «En proceso» o «Aprobado»); si no hay conocimientos, se muestra «No hay conocimiento de referencia» y puede pulsar «Ver pasos de ejecución» para cambiar al flujo.
+
+    <Frame>
+      ![Panel «Cadena de procesamiento de mensajes»: arriba, el mensaje original y la respuesta de IA registrada; en el centro, las tres evidencias Generación de respuestas, Entrega al cliente y Control de seguridad; abajo, las pestañas «Conocimiento de referencia (N)» y «Pasos de ejecución»](/images/es/guide/dashboard/data-export/02-message-trace.jpg)
+    </Frame>
+
+    Nota: «Ver esta entrada», al final de la fila, es otro punto de entrada: solo muestra la consulta, la respuesta de la IA y los archivos adjuntos de esta entrada (el aviso aclara que muestra la pregunta, la respuesta de IA y los archivos adjuntos de este intercambio, no la conversación completa). Para seguir el procesamiento completo, haga clic en el contenido de la consulta y abra «Cadena de procesamiento de mensajes».
+  </Step>
+
+  <Step title="Exporte los resultados de la consulta actual">
+    Con los filtros definidos y la consulta hecha, pulse «Exportar resultados actuales» para descargar el xlsx: «Detalles de conversaciones» exporta «Exportación de datos de chat.xlsx» y «Datos de conversaciones con intervención humana» exporta «Datos de conversaciones en línea.xlsx»; al terminar aparece «Exportación completada».
+
+    Reglas:
+
+    - Se exportan todos los registros que cumplen esta consulta, no solo la página actual;
+    - Solo se usa el resultado que muestra la tabla en ese momento: si los filtros cambiaron y aún no ha buscado, si la página está cargando o si la consulta falló, el botón está deshabilitado; pulse primero «Buscar» o «Reintentar búsqueda»;
+    - Los campos sin valor se muestran como «-» en la tabla y en el archivo.
+
+    Cómo verificarlo: el navegador completa la descarga y aparece «Exportación completada», con el nombre de archivo que corresponde a la pestaña.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación de estadísticas» de la izquierda (y la «Cuenta», para los administradores del departamento) es el alcance que quiere consultar; al cambiarla, la tabla vuelve a consultar.
+- La etiqueta de la barra de filtros es «Filtros aplicados» y no aparece el aviso amarillo «Los filtros han cambiado».
+- La línea de alcance da fechas de inicio y fin y el número de registros; cambiar de página no la modifica.
+- «Exportar resultados actuales» se puede pulsar y descarga el xlsx correspondiente a la pestaña.
+- Al abrir una consulta, en «Cadena de procesamiento de mensajes» se ven el conocimiento de referencia o los pasos de ejecución de ese turno.
+
+<Warning>
+«Revisión detallada» contiene contenido de conversaciones con clientes. Antes de exportar archivos, hacer capturas o reenviarlos a otras personas, confirme que tienen permiso para ver estos mensajes.
+</Warning>
+
+<Info>
+Las dos pestañas usan criterios distintos: «Detalles de conversaciones» solo incluye diálogos entre la IA y los clientes; «Datos de conversaciones con intervención humana» incluye además los mensajes del agente humano. Es normal que el número de registros no coincida entre ambas para el mismo período; no los mezcle ni los compare entre sí.
+</Info>
+
+<Tip>
+Cambiar los filtros en «Revisión detallada» no afecta a «Rendimiento del negocio».
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué no cambia la tabla después de modificar los filtros?
+
+La tabla muestra el resultado de la última búsqueda correcta; cambiar los filtros no la actualiza sola. Pulse «Buscar» (o Intro en un campo de filtro) para volver a consultar; tras el cambio aparecen la etiqueta «Filtros aún no buscados» y el aviso amarillo «Los filtros han cambiado. Vuelva a buscar antes de exportar para que el archivo coincida con la tabla.».
+
+### ¿Por qué no se puede pulsar «Exportar resultados actuales»?
+
+Hay tres causas habituales: la página aún está cargando, los filtros cambiaron y no ha pulsado «Buscar», o la última búsqueda falló (hay una barra de aviso roja). En cada caso: espere a que termine la carga, pulse «Buscar» o pulse «Reintentar búsqueda». El botón de exportación solo se activa cuando el resultado que muestra la tabla se puede exportar.
+
+### ¿Cuántos registros incluye el archivo exportado? ¿Solo la página actual?
+
+Incluye todos los registros que cumplen esta consulta, no solo la página actual. Confirme antes «N registros» en la línea de alcance y exporte después; «Filas por página» solo afecta a la tabla en pantalla.
+
+### ¿Por qué no coinciden los registros de las dos pestañas en el mismo período?
+
+Porque usan criterios distintos: «Detalles de conversaciones» solo incluye diálogos con la IA y «Datos de conversaciones con intervención humana» incluye los mensajes del agente humano; además, los filtros disponibles tampoco son los mismos (usuario, grupo y categoría de intención frente a Sesión ID y tipo de mensaje). Sirven a objetivos de revisión diferentes; no los reste entre sí.
+
+### ¿Por qué algunos registros no abren «Cadena de procesamiento de mensajes»?
+
+Los registros cuya «Consulta del usuario» está vacía (la celda muestra «-») no se pueden abrir. Si a un registro le falta el ID de mensaje, el panel indica «Este registro no incluye un ID de mensaje, por lo que no se pueden consultar los registros del proceso del agente.»; si este turno no está asociado a conocimientos que se puedan mostrar, el área de conocimiento muestra «No hay conocimiento de referencia». En ambos casos puede revisar las etapas que sí se pueden reconstruir en «Pasos de ejecución» o añadir los conocimientos correspondientes en [Gestión de conocimientos](/es/guide/knowledge/management).

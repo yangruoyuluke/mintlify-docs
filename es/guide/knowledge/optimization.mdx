@@ -1,0 +1,130 @@
+---
+title: Optimización de conocimientos
+description: "Revise los nuevos conocimientos de la IA: en «Pendiente de revisión» puede comprobarlos, editarlos, aprobarlos o descartarlos; en «Pendiente de respuesta», convertir en conocimiento las preguntas que la IA no pudo responder."
+keywords:
+  - optimización de conocimientos
+  - pendiente de revisión
+  - pendiente de respuesta
+  - aprendizaje automático
+  - revisión de conocimientos
+  - protección de borradores
+---
+
+«Optimización de conocimientos» es el paso de confirmación previo a guardar conocimiento: lo que la IA ha aprendido o generado llega primero aquí y solo después de que pulse «Aprobar» pasa a los conocimientos guardados y queda a disposición de la IA (salvo los conocimientos de «Aprendizaje automático», que requieren revisión manual; los demás elementos pendientes se aceptan automáticamente si no se procesan en un plazo de 24 horas). Las preguntas que la IA no pudo responder y ya se derivaron a un supervisor también se acumulan aquí, a la espera de que añada una respuesta.
+
+## Cuándo la necesitará
+
+- Cuando termine una tarea de [Generación de conocimientos](/es/guide/knowledge/generation) y pulse «Resultado»: si la tarea aún tiene elementos pendientes de revisión, se le lleva a «Pendiente de revisión» de esta página para confirmar uno a uno lo que la IA ha aprendido; si todo está ya guardado, se abre «Gestión de conocimientos».
+- En la lista aparece un conocimiento con la etiqueta «Revisión manual» (origen «Aprendizaje automático»): este tipo no se aprueba automáticamente y debe decidir usted si lo conserva o lo descarta.
+- Se han acumulado en «Pendiente de respuesta» preguntas de clientes que la IA no supo responder, y quiere añadir una respuesta que pueda enviarse directamente al cliente.
+
+## Ruta de acceso
+
+Menú izquierdo → Base de conocimientos → Optimización de conocimientos.
+
+La página abre por defecto en «Pendiente de revisión»; «Pendiente de respuesta» es otra vista de la misma página (su pestaña muestra «Pendiente de respuesta» con el sufijo «(Prueba)») para añadir respuestas a las preguntas que la IA no pudo atender. Esta vista aún no está habilitada en todos los entornos; si no la ve, omita el paso correspondiente.
+
+<Frame>
+  ![Página «Optimización de conocimientos», vista «Pendiente de revisión»: arriba, el cuadro de búsqueda y los filtros «Todos» (origen) y «Todas las categorías»; la lista muestra por filas el título, el cuerpo, el grupo, el origen y la fecha de envío de cada conocimiento pendiente, con las acciones «Aprobar» y «Descartar» a la derecha](/images/es/guide/knowledge/optimization/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="En «Pendiente de revisión», filtre los elementos que va a procesar">
+    La página abre en «Pendiente de revisión» y cada fila es un conocimiento que espera confirmación: título y cuerpo, y debajo la información de «Grupo», «Origen» y «Fecha de envío», con una etiqueta al final de la fila:
+
+    - «Los elementos no procesados siguen la regla de revisión automática de 24 horas»: si no lo procesa, se aprueba automáticamente en un plazo de 24 horas;
+    - «Revisión manual»: este elemento procede de «Aprendizaje automático», nunca se aprueba automáticamente y debe procesarlo usted a mano.
+
+    La barra de herramientas contiene el cuadro de búsqueda (con el marcador «Buscar conocimientos pendientes de revisión en esta página»), los filtros «Todos» y «Todas las categorías», y el botón «Buscar». Escriba las palabras clave y pulse «Buscar» (o Intro). La búsqueda solo filtra los resultados ya cargados en la página actual; cambiar el origen o la categoría vuelve a consultar toda la cola, así que, si no encuentra un elemento en la lista, cambie primero un filtro en lugar de limitarse a pasar de página. También puede pulsar «Origen» dentro de una fila de conocimiento para filtrar por ese origen.
+
+    Para saber de qué conversación se aprendió un conocimiento, pulse «Ver contexto» (esta opción solo está disponible en algunos entornos; si no la ve, omita ese paso): la ventana emergente «Contexto de la conversación · orden cronológico» muestra la conversación original en orden temporal, con la pregunta actual marcada como «Esta pregunta»; si no hay una conversación rastreable, aparece «No hay contexto de conversación disponible para este elemento.».
+
+    Cómo comprobarlo: en la parte inferior se muestra «N registros · Página X de Y»; al cambiar de filtro, el número de registros y el contenido se actualizan.
+  </Step>
+
+  <Step title="Pulse el cuerpo para modificar este conocimiento directamente">
+    Pulse la zona del cuerpo (excepto enlaces y botones) para entrar en edición: el título se convierte en un campo de texto (con el marcador «Introduzca un título») y el cuerpo en un editor de texto enriquecido (con el marcador «Introduzca el contenido»); mientras edita, la fila deja de mostrar «Aprobar» y «Descartar», y vuelven a aparecer al guardar o descartar.
+
+    Cuando haga algún cambio, el estado inferior pasa de «No hay cambios sin guardar» a «Cambios sin guardar · Aún no se han añadido a la base de conocimientos» y solo entonces se puede pulsar «Guardar los cambios». Si necesita adjuntar material al conocimiento, pulse «Insertar archivo»; cada archivo no puede superar los 100 MB (si se supera, aparece «El archivo no puede superar los 100 MB.»). Cuando termine, pulse «Guardar los cambios»: aparece «Guardado correctamente» y la lista muestra el contenido actualizado.
+
+    <Frame>
+      ![Estado de edición tras pulsar el cuerpo de un conocimiento en «Pendiente de revisión»: arriba, el campo del título; debajo, el editor de texto enriquecido del cuerpo; en la parte inferior izquierda, «Insertar archivo» y el estado «No hay cambios sin guardar»; a la derecha, «Cancelar» y el botón «Guardar los cambios» atenuado](/images/es/guide/knowledge/optimization/02-edit-knowledge.jpg)
+    </Frame>
+
+    Cómo comprobarlo: tras guardar, la fila muestra el título y el cuerpo que ha editado; al volver a abrir el editor, el estado es «No hay cambios sin guardar».
+
+    Nota (protección de borradores): si cambia de vista, pulsa en otro sitio o sale de la página sin guardar, aparece «¿Descartar los cambios sin guardar?»: «Seguir editando» conserva lo introducido, mientras que «Descartar los cambios…» descarta esta edición y ejecuta la acción que acababa de intentar. Los cambios sin guardar se conservan temporalmente en la pestaña actual del navegador; al volver y abrir el mismo elemento, aparece «Se ha restaurado el borrador conservado en esta pestaña. Aún no se ha guardado en la base de conocimientos.». Si la página muestra «No se puede respaldar el borrador en esta pestaña. Guárdelo primero: si actualiza la página o usa Atrás/Adelante en el navegador, podría perder lo escrito.», significa que esta vez no se pudo respaldar: guarde antes de salir. El borrador solo existe en la pestaña actual; no se ve en otra pestaña ni en otro dispositivo.
+  </Step>
+
+  <Step title="Apruebe o descarte este conocimiento">
+    Para procesar un solo elemento, pulse los botones a la derecha de la fila:
+
+    - «Aprobar»: aparece «Aprobado», el elemento desaparece de la lista y pasa a los conocimientos guardados;
+    - «Descartar»: aparece «Descartado», el elemento se quita de la lista, no se guarda y no se puede deshacer.
+
+    Las acciones individuales no piden confirmación: se aplican al momento. Para procesar varios a la vez, márquelos primero (la casilla de la cabecera es «Seleccionar toda la página»), aparecerá la barra de acciones con «N elementos seleccionados» y después pulse «Aprobar en lote» o «Descartar en lote»; en el cuadro de diálogo «¿Procesar los N elementos de conocimiento seleccionados que están pendientes de revisión?», pulse «Confirmar» para ejecutar la acción (si pulsa «Cancelar», no se hace nada); al terminar aparece «Aprobación por lotes completada» o «Descarte por lotes completado» y la lista se recarga automáticamente.
+
+    Cómo comprobarlo: los elementos procesados desaparecen de la lista y el total disminuye; los conocimientos aprobados se pueden buscar y comprobar en «Gestión de conocimientos».
+
+    Nota: las acciones en lote solo procesan las filas que haya marcado; el cuadro de diálogo es la última oportunidad de confirmación, así que revise bien la cifra antes de pulsar «Confirmar».
+  </Step>
+
+  <Step title="Convierta en conocimiento las preguntas que la IA no pudo responder en «Pendiente de respuesta» (si está habilitada)">
+    Cambie a la vista «Pendiente de respuesta» (la pestaña muestra el número de preguntas pendientes). Cada pregunta procede de consultas de clientes que la IA no pudo responder, que ya se derivaron a un supervisor y que este aún no ha contestado.
+
+    A la izquierda de cada fila están la pregunta y el selector de «Grupo»; a la derecha, el cuadro de respuesta (con el marcador «Introduzca una respuesta lista para enviar a los clientes»). Escriba la respuesta y pulse «Confirmar»: aparece «Respuesta confirmada; se quitó de la lista de preguntas pendientes» y este par de pregunta y respuesta pasa a la base de conocimientos; si la respuesta está vacía, no se puede confirmar y aparece «Introduzca una respuesta antes de confirmar.». Si no quiere procesarla, pulse «Ignorar»: aparece «Pregunta ignorada; se quitó de la lista de preguntas pendientes»; ignorarla no genera conocimiento.
+
+    Cómo comprobarlo: las filas procesadas desaparecen de la lista y el contador de la vista disminuye; si la lista queda vacía, se muestra «No hay preguntas pendientes de respuesta».
+
+    Nota: esta vista aún no está habilitada en todos los entornos; si no aparece en la interfaz, omita este paso.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Los conocimientos aprobados ya no aparecen en la lista de «Pendiente de revisión» y se pueden encontrar con una palabra clave en «Gestión de conocimientos».
+- Tras guardar una edición, el título y el cuerpo de la lista son los modificados, y el estado del editor es «No hay cambios sin guardar».
+- Al terminar una acción en lote aparece «Aprobación por lotes completada» o «Descarte por lotes completado», y la lista se recarga.
+- Tras confirmar o ignorar en «Pendiente de respuesta» aparece el aviso correspondiente y el contador disminuye.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+«Aprobar» y «Descartar» individuales se aplican al momento, sin confirmación adicional (solo las acciones en lote muestran un cuadro de diálogo). Preste especial atención a «Descartar»: elimina este conocimiento de la lista de pendientes, no pasa a los conocimientos guardados y no hay opción de deshacer. Si tiene dudas, no lo descarte todavía: puede pulsar el cuerpo, corregirlo y después «Aprobar»; los elementos con la etiqueta «Los elementos no procesados siguen la regla de revisión automática de 24 horas» también pueden dejarse para que se aprueben solos.
+</Warning>
+
+<Info>
+Regla de aprobación automática: la parte superior de la página muestra siempre el aviso «Los conocimientos aprendidos automáticamente requieren revisión manual. Los demás elementos pendientes se aceptan automáticamente si no se procesan en un plazo de 24 horas.». Los elementos con la etiqueta «Los elementos no procesados siguen la regla de revisión automática de 24 horas» pasan solos a los conocimientos guardados si no se tocan; los marcados como «Revisión manual» son conocimientos de origen «Aprendizaje automático»: no se aprueban automáticamente y debe pulsar usted «Aprobar» o «Descartar».
+</Info>
+
+<Info>
+La lista de «Pendiente de revisión» solo recoge conocimientos de calidad: no todos los resultados generados aparecen aquí.
+</Info>
+
+<Tip>
+Antes de empezar, filtre el origen por «Aprendizaje automático»: este tipo de conocimiento no se aprueba automáticamente y permanecerá en la lista mientras no lo procese; los elementos de otros orígenes se aprueban automáticamente en un plazo de 24 horas aunque no llegue a procesarlos.
+</Tip>
+
+## Preguntas frecuentes
+
+### Si aún no los he procesado, ¿los conocimientos de «Pendiente de revisión» desaparecen solos?
+
+Sí. Salvo el «Aprendizaje automático», que requiere revisión manual, el resto de los conocimientos se aprueban automáticamente si no se procesan en 24 horas, así que la lista se va acortando con el tiempo (la etiqueta al final de la fila es «Los elementos no procesados siguen la regla de revisión automática de 24 horas»). Los conocimientos de «Aprendizaje automático» marcados como «Revisión manual» no se aprueban solos y seguirán aquí mientras no los procese. Si quiere controlar qué conocimientos usa la IA, pulse usted «Aprobar» o «Descartar» antes de que se aplique la aprobación automática.
+
+### ¿En qué se diferencian «Descartar» y «Aprobar»? ¿Se pueden deshacer?
+
+«Aprobar» acepta el conocimiento: el elemento pasa a los conocimientos guardados y después se puede buscar, editar y cambiar de grupo en [Gestión de conocimientos](/es/guide/knowledge/management). «Descartar» elimina el conocimiento de la lista de pendientes: el contenido no se guarda y no hay opción de deshacer. Las acciones individuales no piden confirmación; las acciones en lote muestran antes un cuadro de diálogo.
+
+### Si salgo de la página a mitad de una edición, ¿se pierden los cambios?
+
+No se pierden de inmediato. Los cambios sin guardar se conservan temporalmente en la pestaña actual del navegador y, al volver a abrir el mismo conocimiento, aparece «Se ha restaurado el borrador conservado en esta pestaña. Aún no se ha guardado en la base de conocimientos.»; revíselo y pulse «Guardar los cambios». El borrador solo existe en la pestaña actual: no se ve en otra pestaña ni en otro dispositivo. Si la página muestra «No se puede respaldar el borrador en esta pestaña. Guárdelo primero: si actualiza la página o usa Atrás/Adelante en el navegador, podría perder lo escrito.», esta vez no se pudo respaldar: guarde antes de salir.
+
+### ¿Por qué la búsqueda no encuentra conocimientos que están en otras páginas?
+
+La búsqueda de «Pendiente de revisión» solo filtra los resultados ya cargados en la página actual, no abarca otras páginas. Para encontrar un conocimiento, use los filtros de origen («Todos») y de categoría («Todas las categorías»), que vuelven a consultar toda la cola; pulse «Origen» en la fila del conocimiento para filtrar por ese origen; o cambie de palabra clave y vaya pasando páginas.
+
+### ¿De dónde salen las preguntas de «Pendiente de respuesta» y adónde van después?
+
+Son consultas de clientes que la IA no pudo responder, que ya se derivaron a un supervisor y que este aún no ha contestado. Si añade una respuesta y pulsa «Confirmar», la pregunta sale de «Pendiente de respuesta» y la respuesta se guarda como conocimiento; si no quiere procesarla, pulse «Ignorar»: la pregunta también sale, pero no se genera ningún conocimiento. Esta vista aún no está habilitada en todos los entornos; si no la ve, significa que el entorno actual todavía no la ofrece.

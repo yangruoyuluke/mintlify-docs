@@ -1,0 +1,146 @@
+---
+title: Gestion des connaissances
+description: Recherchez et modifiez les connaissances enregistrées, gérez la structure des groupes, et restaurez ou supprimez définitivement les connaissances depuis la corbeille.
+keywords:
+  - Gestion des connaissances
+  - Catégorie de connaissances
+  - Recherche de connaissances
+  - Modifier la catégorie
+  - Corbeille
+---
+
+« Gestion des connaissances » sert à organiser les connaissances déjà enregistrées : gérer la structure des groupes (création, renommage, activation, désactivation), retrouver une connaissance par groupe ou par mot-clé, modifier son contenu, la reclasser ou la supprimer. Une suppression accidentelle place d'abord l'élément dans la corbeille, d'où il peut être restauré. Les nouvelles connaissances passent d'abord par [Optimisation des connaissances](/fr/guide/knowledge/optimization) avant d'être ajoutées à la base : c'est le contenu déjà enregistré que vous gérez ici.
+
+## Quand en avez-vous besoin ?
+
+- Le contenu mémorisé par l'IA est inexact ou obsolète : vous devez retrouver la connaissance concernée pour la corriger ou la supprimer.
+- Les connaissances s'accumulent : vous voulez créer une structure de groupes pour séparer les différents domaines d'activité.
+- Une connaissance a été placée dans le mauvais groupe et doit être déplacée ; ou un groupe n'est plus utilisé et doit être désactivé.
+- Une connaissance a été supprimée par erreur et doit être restaurée, ou vous voulez vider définitivement la corbeille.
+
+## Comment y accéder ?
+
+Menu de gauche → Base de connaissances → Gestion des connaissances.
+
+La page s'ouvre par défaut sur « Structure du groupe » ; la barre de recherche en haut sert à retrouver les connaissances enregistrées : dès que vous saisissez un mot-clé, la page bascule sur les résultats. « Par défaut » est un groupe fourni par le système : il ne peut être ni renommé, ni supprimé, ni désactivé.
+
+<Frame>
+  ![Page « Gestion des connaissances » : en haut, la barre de recherche avec le champ de mot-clé et les boutons « Plus de filtres », « Corbeille » et « Rechercher » ; en dessous, « Structure du groupe » liste chaque groupe sur une ligne avec son nom, le nombre de sous-groupes, le texte d'état et l'interrupteur, et le menu d'actions « ⋯ » en fin de ligne](/images/fr/guide/knowledge/management/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Gérer la structure des groupes : créer, renommer, activer/désactiver, supprimer">
+    Dans « Structure du groupe », chaque groupe occupe une ligne : à gauche le nom du groupe (accompagné de « N sous-groupes » s'il en contient), à droite le texte d'état et l'interrupteur, et en fin de ligne le menu « ⋯ » avec « Modifier », « Ajouter un sous-groupe » et « Supprimer ».
+
+    - Création : cliquez sur « ⋯ » à droite du titre « Structure du groupe » puis sur « Ajouter un groupe de premier niveau » pour créer un groupe racine ; pour créer un niveau inférieur, choisissez « Ajouter un sous-groupe » dans le menu « ⋯ » d'une ligne.
+    - Renommage : « ⋯ » → « Modifier » ; le nom devient un champ de saisie (indication « Saisissez le nom du groupe »). Validez avec Entrée ou cliquez ailleurs pour terminer.
+    - Activation/désactivation : cliquez sur l'interrupteur en fin de ligne ; le texte d'état passe alors à « Activer après l'enregistrement » ou « Désactiver après enregistrement » — ces mentions indiquent que la modification n'est pas encore écrite.
+    - Suppression : « ⋯ » → « Supprimer », puis « Supprimer » dans la boîte de dialogue « Supprimer le groupe de connaissances ». Celle-ci précise « Ce groupe sera immédiatement retiré de la liste. » : cette action prend effet immédiatement, sans possibilité de récupération ; les autres modifications, elles, doivent être enregistrées.
+
+    Dès qu'une modification est en attente, la ligne affiche le marqueur « En attente » et « N modifications en attente » s'affiche à côté du titre ; cliquez sur « Enregistrer les modifications de groupe » en bas de page pour faire apparaître « Enregistrement réussi ». Critère : après l'enregistrement, le marqueur « En attente » disparaît et le texte d'état devient « Connaissances activées » ou « Connaissances désactivées ».
+
+    Remarques :
+
+    - Cliquer sur le nom d'un groupe sert à l'ouvrir, pas à le renommer : au dernier niveau, sans sous-groupe, la liste des connaissances du groupe s'affiche directement (voir l'étape suivante). Pour renommer, passez par « ⋯ » → « Modifier ».
+    - Quatre niveaux au maximum : au 4e niveau, le menu « ⋯ » ne propose plus « Ajouter un sous-groupe ».
+    - Après la désactivation d'un groupe, ses connaissances ne sont plus utilisées (effet après enregistrement) ; « Par défaut » reste toujours activé, son interrupteur est inactif et son menu ne contient ni « Modifier » ni « Supprimer ».
+    - Un nouveau groupe sans nom empêche l'enregistrement : le message « Renseignez le nom de chaque groupe. » s'affiche.
+    - Si vous quittez la page avec des modifications de groupe non enregistrées, la boîte de dialogue « Ignorer les modifications du groupe ? » s'affiche : « Annuler » vous laisse poursuivre vos modifications, « Ignorer les modifications » les abandonne.
+  </Step>
+
+  <Step title="Trouver la connaissance à traiter : parcourir les groupes ou rechercher par mot-clé">
+    Parcourir par groupe : dans « Structure du groupe », cliquez sur le nom d'un groupe pour descendre niveau par niveau ; à un niveau sans sous-groupe, la liste affiche directement les connaissances de ce groupe. Vous pouvez basculer entre « Questions et réponses » et « Connaissances sous forme de paragraphes » pour changer le type affiché, et « Retour » vous ramène au niveau précédent.
+
+    Recherche par mot-clé : saisissez un mot-clé dans la barre de recherche en haut (indication « Saisissez le mot-clé de recherche ») ; après une courte pause, la page bascule sur les résultats. Vous pouvez aussi appuyer sur Entrée ou cliquer sur « Rechercher » pour lancer la recherche immédiatement. La recherche couvre toutes les connaissances enregistrées, sans être limitée au groupe que vous avez ouvert ; pour la restreindre, dépliez « Plus de filtres » :
+
+    - « Type de contenu » : « Questions et réponses » ou « Connaissances sous forme de paragraphes » ;
+    - « Portée des connaissances » : « Toutes les bases de connaissances », « Entreprise » ou « Personnel » ;
+    - « Catégorie de connaissances » : limiter à un groupe précis ;
+    - « Source » : filtrer par source de la connaissance (« Document », « Site Web », « Conversation avec un responsable », etc.).
+
+    Règle importante : si le mot-clé est vide et qu'aucun filtre n'est sélectionné (portée, groupe et source tous à « Tous »), aucune requête n'est lancée : la page affiche « Saisissez un mot-clé ou choisissez des filtres pour commencer la recherche » (texte d'accompagnement : « Pour éviter une recherche sans filtre, saisissez un mot-clé ou choisissez un périmètre de connaissances, un groupe et une source. »). Pour consulter directement un groupe, cliquez sur son nom ou choisissez-le dans « Catégorie de connaissances ».
+
+    Les filtres appliqués s'affichent au-dessus de la liste (« Filtres appliqués ») ; vous pouvez les retirer un à un ou cliquer sur « Effacer les filtres ». Dans les résultats, cliquer sur la « Source des connaissances » d'un élément revient à filtrer rapidement par cette source.
+
+    Critère : la liste présente ses résultats en colonnes « Contenu des connaissances », « Source des connaissances », « Catégorie de connaissances » et « Attribut des connaissances », avec en bas « N enregistrements au total · Page X sur Y ». Après une recherche lancée depuis « Structure du groupe », le bouton « Retour aux groupes » en haut à gauche permet de revenir à la liste des groupes.
+  </Step>
+
+  <Step title="Modifier une connaissance, changer son groupe ou la supprimer">
+    Modification : « ⋯ » → « Modifier » fait passer la ligne en mode édition — le titre devient un champ de saisie (indication « Saisissez le titre ») et le contenu un éditeur de texte enrichi (indication « Entrez le contenu ») ; pour joindre un fichier à la connaissance, cliquez sur « Insérer un fichier » (un fichier ne doit pas dépasser 100 Mo). Dès que vous modifiez quelque chose, le statut en bas passe de « Aucune modification à enregistrer » à « Modifications non enregistrées · Pas encore ajoutées à la base de connaissances », et « Enregistrer les modifications » ne devient cliquable qu'à ce moment. Après l'enregistrement, le message « Enregistrement réussi. Recalcul du score de correspondance en cours. » s'affiche et la liste montre aussitôt le nouveau contenu.
+
+    Changement de groupe : cliquez sur la cellule « Catégorie de connaissances » de la ligne (icône de dossier) pour ouvrir la fenêtre « Modifier la catégorie » ; sélectionnez le groupe cible puis cliquez sur « Confirmer », et le message « N éléments déplacés vers le groupe cible. » apparaît. Pour en déplacer plusieurs d'un coup, cochez-les d'abord (la case d'en-tête sert à « Tout sélectionner sur cette page ») : la barre d'action « N éléments sélectionnés » apparaît, cliquez sur « Modifier la catégorie ».
+
+    Condition préalable : avant de déplacer des éléments, choisissez « Entreprise » ou « Personnel » dans « Plus de filtres → Portée des connaissances ». Si vous restez sur « Toutes les bases de connaissances », l'action est bloquée et le message « Avant de déplacer des éléments, sélectionnez la base de connaissances de l'entreprise ou votre base personnelle dans Plus de filtres. » s'affiche. Changer de portée recharge la liste et efface les cases cochées : recochez les éléments après avoir choisi la portée.
+
+    Suppression : « ⋯ » → « Supprimer », puis « Confirmer » dans la boîte de dialogue « Confirmer la suppression » : le message « Suppression réussie » apparaît, la ligne disparaît de la liste et rejoint la corbeille. Suppression par lot : cochez les éléments puis cliquez sur « Supprimer par lot » dans la barre d'action ; la boîte de dialogue indique « Supprimer N éléments sélectionnés ? ».
+
+    Critère : après l'enregistrement d'une modification, le titre et le contenu affichés dans la liste correspondent aux changements ; après un déplacement, la catégorie de la ligne devient le groupe cible ; après une suppression, l'élément n'apparaît plus dans la liste (vous le retrouvez dans la corbeille).
+
+    Remarque : si vous changez de vue sans enregistrer, la boîte de dialogue « Ignorer les modifications non enregistrées ? » s'affiche — « Continuer à modifier » conserve votre saisie, « Ignorer les modifications… » l'abandonne et exécute l'action demandée. Les modifications non enregistrées ne sont conservées que dans l'onglet du navigateur en cours.
+  </Step>
+
+  <Step title="Restaurer ou supprimer définitivement depuis la corbeille">
+    Cliquez sur « Corbeille » à droite de la barre de recherche ; la page affiche « Voir les connaissances supprimées, les restaurer ou les supprimer définitivement. ».
+
+    - Restaurer un élément : cliquez sur l'icône de restauration en fin de ligne et confirmez avec « Confirmer la récupération » : le message « Restauration réussie » apparaît et l'élément revient dans la base de connaissances ;
+    - Supprimer définitivement un élément : cliquez sur l'icône de suppression en fin de ligne ; la boîte de dialogue « Confirmer la suppression permanente » indique « La suppression permanente de “…” ne peut pas être annulée. Continuez ? ». Cliquez sur « Confirmer la suppression permanente » : le message « Suppression réussie » s'affiche ;
+    - Par lot : cochez les éléments pour faire apparaître la barre d'action, puis cliquez sur « Récupération par lots » ou « Supprimer définitivement » ; la boîte de dialogue précise le nombre et les conséquences (« Restaurer les éléments N sélectionnés ? » / « La suppression permanente des éléments sélectionnés N ne peut être annulée. Continuez ? »).
+
+    Une fois le traitement terminé, cliquez sur « Retour à la liste des connaissances » en haut à droite pour revenir à la vue précédente.
+
+    <Frame>
+      ![Vue « Corbeille » de la gestion des connaissances : en haut, le message « Voir les connaissances supprimées, les restaurer ou les supprimer définitivement. » et, à droite, le bouton « Retour à la liste des connaissances » ; chaque ligne comporte à droite deux icônes, de restauration et de suppression définitive](/images/fr/guide/knowledge/management/02-recycle-bin.jpg)
+    </Frame>
+
+    Critère : après une restauration, l'élément disparaît de la corbeille et redevient recherchable par mot-clé depuis la liste ; après une suppression définitive, il n'existe plus dans la corbeille et ne peut pas être récupéré ; corbeille vide, le message « La corbeille est vide » s'affiche.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Groupe : la ligne affiche le marqueur « En attente » → cliquez sur « Enregistrer les modifications de groupe » → « Enregistrement réussi » s'affiche et le marqueur disparaît ; une suppression de groupe, elle, retire la ligne immédiatement.
+- Recherche : avec un mot-clé ou un filtre, la liste affiche des résultats et, en bas, « N enregistrements au total · Page X sur Y » ; sans aucun critère, la page affiche « Saisissez un mot-clé ou choisissez des filtres pour commencer la recherche » et ne charge pas toute la base.
+- Déplacement : le message « N éléments déplacés vers le groupe cible. » s'affiche et la « Catégorie de connaissances » de la ligne devient le groupe cible.
+- Suppression et restauration : après une suppression, l'élément part dans la corbeille ; après une restauration, « Restauration réussie » s'affiche et il quitte la corbeille.
+
+## Points d'attention
+
+<Warning>
+La suppression définitive dans la corbeille (unitaire ou par lot) est irréversible : aucun retour en arrière n'est possible. Une action par lot ne traite que les lignes cochées : vérifiez le nombre affiché dans « N éléments sélectionnés » avant de confirmer.
+</Warning>
+
+<Warning>
+La suppression d'un groupe prend effet immédiatement, sans annulation possible ; désactiver un groupe fait que ses connaissances ne sont plus utilisées (effet après enregistrement). Avant d'agir, assurez-vous que ce groupe et ses connaissances ne sont plus nécessaires.
+</Warning>
+
+<Info>
+La recherche par mot-clé porte sur toutes les connaissances enregistrées, sans se limiter au groupe ouvert ; seule la sélection d'une « Catégorie de connaissances » la restreint à ce groupe. « Par défaut » est un groupe fourni par le système, toujours activé, qui ne peut être ni renommé, ni supprimé, ni désactivé. La hiérarchie des groupes compte au maximum 4 niveaux.
+</Info>
+
+<Tip>
+En arrivant ici via « Voir le résultat » depuis [Génération de connaissances](/fr/guide/knowledge/generation), les résultats sont limités par « Tâche source : … » ; cliquez sur « Voir tous les éléments de connaissance correspondant aux filtres » à côté pour retirer ce filtre de tâche tout en conservant les autres. Autre raccourci : cliquer sur la « Source des connaissances » d'un résultat filtre par cette source, plus rapide que d'ouvrir « Plus de filtres » à la main.
+</Tip>
+
+## Questions fréquentes
+
+### Pourquoi la liste est-elle vide, sans aucun résultat ?
+
+« Gestion des connaissances » ne lance aucune requête tant que le mot-clé est vide et qu'aucun filtre n'est sélectionné : la page affiche « Saisissez un mot-clé ou choisissez des filtres pour commencer la recherche », afin d'éviter de charger toute la base sans filtre. Saisissez un mot-clé ou choisissez au moins un critère dans « Plus de filtres » (par exemple une « Catégorie de connaissances » ou une « Source ») : la liste se charge. La recherche couvre toute la base, sans se limiter au groupe ouvert.
+
+### Pourquoi « Modifier la catégorie » m'indique-t-il de choisir d'abord une portée de connaissances ?
+
+Tant que « Toutes les bases de connaissances » est sélectionné, le déplacement est impossible : choisissez d'abord « Entreprise » ou « Personnel » dans « Plus de filtres → Portée des connaissances », puis cochez les connaissances à déplacer et cliquez sur « Modifier la catégorie ». Changer de portée recharge la liste et efface les cases cochées : recochez-les après avoir fait votre choix.
+
+### Où vont les connaissances supprimées ? Peut-on les restaurer ?
+
+« Supprimer » dans la liste (unitaire ou par lot) ne fait que placer la connaissance dans la corbeille : elle n'apparaît plus dans la recherche normale. Rendez-vous dans « Corbeille » et cliquez sur l'icône de restauration en fin de ligne (ou sur « Récupération par lots » après avoir coché les éléments) pour la récupérer ; elle redevient alors recherchable par mot-clé. « Supprimer définitivement » dans la corbeille est en revanche une action finale : aucun retour n'est possible.
+
+### Pourquoi mes créations, renommages ou activations/désactivations de groupes semblent-ils sans effet ?
+
+Ces trois types de modifications prennent effet après enregistrement : cliquez sur « Enregistrer les modifications de groupe » en bas de page et attendez « Enregistrement réussi » pour qu'elles soient écrites ; les marqueurs « En attente » et « Activer après l'enregistrement / Désactiver après enregistrement » disparaissent alors. La suppression de groupe fait exception : elle prend effet immédiatement après « Supprimer » dans la boîte de dialogue « Supprimer le groupe de connaissances », sans passer par l'enregistrement.
+
+### Pourquoi « Par défaut » est-il impossible à modifier ? Combien de niveaux de groupes peut-on créer ?
+
+« Par défaut » est un groupe fourni par le système : toujours activé, il ne peut être ni renommé, ni supprimé, ni désactivé, et son interrupteur est inactif ; les autres groupes se modifient et se suppriment normalement via le menu « ⋯ ». La hiérarchie compte au maximum 4 niveaux : au 4e niveau, le menu ne propose plus « Ajouter un sous-groupe ».

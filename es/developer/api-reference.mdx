@@ -1,0 +1,207 @@
+---
+title: Referencia de API
+description: "Integre las capacidades de conversación de MarsMind en su propio sistema: parámetros de solicitud, autenticación, cuatro escenarios de conversación y ejemplos de llamada."
+keywords:
+  - integración de API
+  - parámetros de solicitud
+  - autenticación
+  - escenarios de conversación
+  - entrega de mensajes
+---
+
+Esta página está dirigida a integradores que ya cuentan con un sistema propio: envían los mensajes a MarsMind mediante llamadas directas a la API, sin pasar por el panel de administración de MarsMind. Usted arma la solicitud en el formato acordado y MarsMind devuelve el resultado del procesamiento según el `event_type` o, en el escenario auto_dialog, envía los mensajes automáticamente a la `send_url` que usted proporcione. Si solo usa el panel de administración de MarsMind y la entrada de chat estándar, no necesita empezar por aquí.
+
+## Cuándo la necesitará
+
+- Tiene su propia app, sistema de atención al cliente o canal de mensajería, y quiere integrar en él las capacidades de conversación de MarsMind en lugar de usar solo la entrada de chat estándar.
+- Su sistema necesita obtener en tiempo real, al hacer la llamada, el resultado que la IA dio a un mensaje determinado.
+- Necesita controlar el procesamiento de mensajes mediante comandos, por ejemplo, para detener las respuestas automáticas de un escenario.
+
+## Antes de empezar
+
+Esta página no tiene entrada en el menú del panel de administración —las solicitudes parten de su propio sistema— y tampoco existe un formulario de solicitud autoservicio. Antes de llamar, prepare cuatro elementos. MarsMind le asigna el endpoint de producción, el client y el secret, y la descripción del algoritmo de firma (para obtenerlos, escriba a sales@marsmind.co); el escenario de integración (`event_type`) lo elige usted según su negocio:
+
+1. **Endpoint de producción**: `{endpoint-de-producción}` en los ejemplos representa su dominio de acceso; esta documentación no fija un valor concreto.
+2. **Credenciales**: `client` (identificador de negocio) y `secret`.
+3. **Algoritmo de firma**: la forma de calcular `signature` se define en el material de integración que proporciona MarsMind; esta página no lo detalla.
+4. **Confirme el escenario**: elija uno de los cuatro —auto_dialog, assist_dialog, website_dialog, cmd_dialog—. Sus requisitos de parámetros y su comportamiento de respuesta son distintos; consulte «Escenarios de conversación».
+
+Cómo verificarlo: tiene los cuatro datos —el dominio del endpoint de producción, el client, el secret y la descripción del algoritmo de firma— y ya definió el `event_type`.
+
+## Autenticación
+
+Toda solicitud debe incluir los campos `client`, `signature` y `timestamp`; ninguno puede faltar. Para obtener el algoritmo de `signature`, escriba a [sales@marsmind.co](mailto:sales@marsmind.co). Los tipos y las descripciones de los campos están en la tabla «Cuerpo de la solicitud», dentro de «Parámetros de la solicitud», más abajo.
+
+Además de estos tres campos, el cuerpo de la solicitud debe incluir el objeto `message_info`, que contiene el contenido del mensaje.
+
+## Parámetros de la solicitud
+
+### Cuerpo de la solicitud
+
+| Parámetro | Tipo | Obligatorio | Descripción |
+| --- | --- | --- | --- |
+| client | string | Sí | Identificador de negocio; confírmelo con MarsMind |
+| signature | string | Sí | Firma de la solicitud; escriba a sales@marsmind.co para obtener el algoritmo |
+| timestamp | int | Sí | Marca de tiempo (Unix, en segundos) |
+| message_info | object | Sí | Detalles del mensaje; consulte las definiciones de campos más abajo |
+
+### Campos de `message_info`
+
+| Campo | Tipo | Obligatorio | Descripción |
+| --- | --- | --- | --- |
+| msg_id | string | No (obligatorio en assist_dialog) | ID único del mensaje; obligatorio en el escenario assist_dialog |
+| group_id | string | Según el escenario | ID del chat grupal; si from_user_id y group_id están ambos vacíos, se devuelve el error 400 |
+| group_name | string | No | Nombre del grupo |
+| from_user_id | string | Sí | ID del remitente |
+| from_user_nickname | string | No | Apodo del remitente |
+| to_user_id | string | No | ID del destinatario |
+| to_user_nickname | string | No | Apodo del destinatario |
+| at_list | string[] | No | Lista de ID de usuario a los que se menciona con @ (solo auto_dialog) |
+| content | string | Se requiere al menos uno de content y files_info | Contenido de texto del mensaje |
+| message_type | int | Sí | 1 = mensaje normal, 2 = mensaje citado |
+| event_type | string | Sí | auto_dialog \| assist_dialog \| website_dialog \| cmd_dialog |
+| from_user_type | int | Obligatorio en auto_dialog | 1 = cuenta vinculada al bot, 2 = cliente, 3 = agente humano, 4 = mensaje del bot |
+| create_timestamp | int | Sí | Hora de creación del mensaje (marca de tiempo Unix) |
+| files_info | File[] | Se requiere al menos uno de content y files_info | Lista de archivos adjuntos; consulte la tabla siguiente |
+| quote | object | Obligatorio si message_type = 2 | Objeto del mensaje citado; debe incluir msg_id y message_type |
+
+#### Estructura de `files_info`
+
+| Campo | Tipo | Obligatorio | Descripción |
+| --- | --- | --- | --- |
+| content | string (URL / base64) | Sí | Dirección del archivo o datos en base64 |
+| file_type | "image" / "document" / "voice" | Sí | Tipo de archivo |
+
+## Escenarios de conversación
+
+### auto_dialog (conversación automática)
+
+- `event_type = auto_dialog`
+- Usted proporciona la `send_url`; a partir de ahí, MarsMind controla automáticamente la lógica de envío de mensajes
+- Admite texto, imágenes y archivos (un solo tipo por solicitud)
+
+Sugerencias para completar `from_user_type`:
+
+- Contacto vinculado: use 1 en todos los casos excepto en los mensajes del propio asistente de IA
+- Contacto no vinculado: use 2 para clientes externos y 3 para personas de la misma empresa
+
+### assist_dialog (conversación asistida)
+
+- Devuelve el resultado del procesamiento en tiempo real
+- `msg_id` es obligatorio
+- Si los parámetros coinciden con un mensaje de auto_dialog, se reutiliza el contexto de ese mensaje
+
+### website_dialog (conversación web)
+
+- El mensaje devuelve el resultado de inmediato y entra en el contexto
+- No admite `send_url`
+
+### cmd_dialog (control por comandos)
+
+- `content` lleva el comando; por ahora se admite:
+  - `stop_auto_reply`: detiene las respuestas automáticas (solo tiene efecto en el escenario auto_dialog)
+
+## Pasos de la llamada
+
+<Steps>
+  <Step title="Obtenga el endpoint de producción y las credenciales">
+    Escriba a [sales@marsmind.co](mailto:sales@marsmind.co) para obtener el endpoint de producción, el client, el secret y la descripción del algoritmo de firma. Hasta completar este paso, no use las direcciones ni los valores de ejemplo en llamadas reales.
+
+    Cómo verificarlo: tiene los cuatro datos —el dominio del endpoint de producción, el client, el secret y la descripción del algoritmo de firma—.
+  </Step>
+
+  <Step title="Elija el escenario y arme message_info">
+    Defina primero el `event_type` y luego complete campo por campo según las tablas anteriores. Estos son los que más se pasan por alto:
+
+    - Complete al menos uno de `content` y `files_info`;
+    - Si `message_type` es 2 (mensaje citado), debe incluir `quote`, y `quote` debe contener `msg_id` y `message_type`;
+    - No deje `from_user_id` y `group_id` vacíos a la vez; si ambos están vacíos, se devuelve el error 400;
+    - En el escenario auto_dialog también debe completar `from_user_type`.
+
+    Cómo verificarlo: compare los campos obligatorios con las tablas, en especial los cuatro puntos anteriores.
+  </Step>
+
+  <Step title="Envíe la solicitud">
+    La dirección de la solicitud es el endpoint de producción + `/custom-im/chat-messages`; envíela con POST y `Content-Type: application/json`. Reemplace `{endpoint-de-producción}` del ejemplo por el dominio que obtuvo; el client, la signature y el ID del mensaje son valores de ejemplo:
+
+    ```bash
+    curl -X POST "https://{endpoint-de-producción}/custom-im/chat-messages" \
+    -H "Content-Type: application/json" \
+    -d '{
+      "client": "test",
+      "signature": "d97b383a532466b6c6c451e76a2ab57b",
+      "timestamp": 1748584621,
+      "message_info": {
+        "content": "",
+        "message_type": 1,
+        "group_id": "98765@chatroom",
+        "event_type": "auto_dialog",
+        "from_user_id": "aa123",
+        "from_user_type": 2,
+        "msg_id": "9005",
+        "create_timestamp": 1748584621,
+        "files_info": [
+          { "content": "https://example.com/img.png", "file_type": "image" }
+        ]
+      }
+    }'
+    ```
+
+    Cómo verificarlo: assist_dialog y website_dialog devuelven en la respuesta el resultado del procesamiento de este mensaje en tiempo real; una vez aceptada la solicitud de auto_dialog, MarsMind envía automáticamente según la `send_url`, sin que usted tenga que llamar a otra interfaz de envío.
+  </Step>
+
+  <Step title="Compruebe el procesamiento en el panel de administración (opcional)">
+    Cuando el mensaje haya entrado en el sistema, use [Revisión detallada](/es/guide/dashboard/data-export) del panel de administración para comprobar este procesamiento: cambie el alcance de datos a «Detalles de conversaciones» (solo diálogos entre la IA y los clientes), filtre por ventana de conversación y fecha, y haga clic en el contenido de la «Consulta del usuario» para abrir «Cadena de procesamiento de mensajes»; compare paso a paso en las dos pestañas, «Pasos de ejecución» y «Conocimiento de referencia (N)». «Pasos de ejecución» muestra la secuencia «Contexto de la conversación en ese momento → Procesamiento de chat grupal → Decisión → Invocación de habilidades → Generación de conocimientos → Control de seguridad»; en la parte superior del panel, las tres evidencias —«Generación de respuestas», «Entrega al cliente» y «Control de seguridad»— se muestran de forma independiente; si falta alguna, aparece como desconocida.
+
+    Nota: después de cambiar los filtros, pulse «Buscar» para actualizar los resultados.
+
+    Cómo verificarlo: puede localizar el mensaje correspondiente a esta llamada y ver en qué paso de la cadena quedó; cuando falta un paso, «Pasos de ejecución» lo muestra directamente, lo que ayuda a identificar dónde se atascó.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- assist_dialog y website_dialog: la respuesta incluye el resultado del procesamiento de este mensaje.
+- auto_dialog: su `send_url` recibe el mensaje que envía MarsMind; con eso, la ruta de envío automático funciona.
+- Reutilización del contexto: cuando los parámetros de assist_dialog coinciden con un mensaje de auto_dialog, el procesamiento continúa desde ese contexto en lugar de empezar de cero.
+- Control por comandos: después de que cmd_dialog envíe `stop_auto_reply`, se detiene la respuesta automática correspondiente.
+- Parámetros aceptados: no recibe un error 400 (el error 400 aparece cuando `from_user_id` y `group_id` están ambos vacíos).
+
+## Aspectos a tener en cuenta
+
+<Warning>
+El endpoint de producción, el client, el secret y el algoritmo de firma los asigna MarsMind y no son públicos; para obtenerlos, escriba a [sales@marsmind.co](mailto:sales@marsmind.co). Las credenciales son información sensible: no las escriba en el código del front-end, en la app cliente ni en repositorios públicos; guárdelas y úselas solo en el servidor.
+</Warning>
+
+<Info>
+Cómo se reparten el trabajo los cuatro escenarios —quién envía los mensajes y quién devuelve el resultado en tiempo real al llamar— se explica en «Escenarios de conversación» y en «Preguntas frecuentes».
+</Info>
+
+<Tip>
+Para que assist_dialog reutilice el contexto de un mensaje, basta con mantener los parámetros idénticos a los de ese mensaje de auto_dialog.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Qué event_type debo usar?
+
+- Si quiere que MarsMind controle la lógica de envío (cómo y cuándo responder los mensajes lo decide MarsMind) → auto_dialog; deberá proporcionar la `send_url`.
+- Necesita el resultado del procesamiento de este mensaje en el momento de la llamada → assist_dialog (`msg_id` obligatorio).
+- Conversación web → website_dialog (devuelve el resultado de inmediato y entra en el contexto; no admite `send_url`).
+- Enviar comandos → cmd_dialog; ponga el comando en `content`.
+
+### ¿Dónde se solicitan el endpoint de producción, el client y el secret?
+
+No hay formulario de solicitud autoservicio: la dirección de la API, las credenciales y el algoritmo de firma los asigna MarsMind. Escriba a [sales@marsmind.co](mailto:sales@marsmind.co) para obtenerlos; hasta entonces, `{endpoint-de-producción}`, `client: "test"` y la firma de ejemplo de esta página no sirven para llamadas reales.
+
+### ¿Por qué la solicitud devuelve el error 400?
+
+Revise primero estos tres puntos de la solicitud: si `from_user_id` y `group_id` están ambos vacíos (ambos vacíos devuelven el error 400); si completó al menos uno de `content` y `files_info`; y si, cuando `message_type` es 2, incluyó `quote` (con `msg_id` y `message_type`). Corrija lo que corresponda y vuelva a enviar la solicitud.
+
+### ¿Cuál es la diferencia entre auto_dialog y assist_dialog?
+
+auto_dialog hace que MarsMind controle la lógica de envío y envíe a través de la `send_url` que usted proporciona; admite texto, imágenes y archivos (un solo tipo por solicitud). assist_dialog devuelve el resultado del procesamiento en tiempo real al hacer la llamada; si sus parámetros coinciden con un mensaje de auto_dialog, reutiliza ese contexto, y `msg_id` es obligatorio. Elija el primero para «enviar automáticamente» y el segundo para «ver el resultado en el momento».
+
+### ¿Cómo confirmo que el mensaje se procesó realmente?
+
+Del lado de la llamada, revise la respuesta y su `send_url`; del lado del sistema, consulte el paso 4 de «Pasos de la llamada» para verificarlo en el panel de administración.

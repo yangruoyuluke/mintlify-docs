@@ -1,0 +1,164 @@
+---
+title: "Prise en main en 30 minutes"
+description: "Se connecter, connecter un canal, définir la personnalité de base et les règles de réponse, générer un premier lot de connaissances, vérifier les résultats : six étapes pour boucler le cycle minimal de MarsMind."
+keywords:
+  - "prise en main"
+  - "cycle minimal"
+  - "connexion aux canaux"
+  - "personnalité de base"
+  - "règles de réponse"
+  - "génération de connaissances"
+---
+
+Cette page vous fait démarrer MarsMind par le chemin le plus court : connecter une fenêtre de conversation, indiquer à l’IA comment s’exprimer et comment répondre en cas de doute, lui fournir un premier lot de connaissances, puis vérifier dans le « Tableau de bord des données » qu’elle traite réellement les clients. Chaque étape indique le point d’entrée, le critère de réussite et les pièges courants. Pour la préparation du compte et des ressources, consultez [Activation et préparation](/fr/quick-start/preparation).
+
+## Quand en avez-vous besoin ?
+
+- Vous venez d’activer votre compte et vous voulez que l’IA serve de vrais clients au plus vite.
+- Votre compte et vos ressources sont prêts, mais vous ne savez pas par où commencer la configuration.
+- Vous préférez d’abord dérouler le cycle minimal, puis enrichir connaissances, compétences et règles de réponse à partir des questions réelles.
+- Vous devez présenter le système à des collègues ou leur transmettre la configuration, et expliquer en un chemin court comment le paramétrer.
+
+## Avant de commencer
+
+- Avoir un compte d’administration et pouvoir se connecter depuis [https://admin.marsmind.cc/login](https://admin.marsmind.cc/login). Sans compte, consultez d’abord [Activation et préparation](/fr/quick-start/preparation).
+- Toute la configuration suit la « Fenêtre de conversation gérée actuellement ». Sélectionnez dans la partie centrale de la barre latérale la fenêtre que vous venez de connecter ; dans le tableau de bord, ce sélecteur s’appelle « Fenêtre de conversation pour les statistiques ». Sans fenêtre sélectionnée, la page affiche un état vide avec un bouton « Se connecter et mettre en ligne ».
+- Hormis la connexion, toutes les étapes se trouvent dans le menu de gauche : Mon assistant → Connexion aux canaux, Mon assistant → Personnalité de base, Paramètres de réponse → Règles de réponse, Base de connaissances → Génération de connaissances, Tableau de bord des données → Performances.
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Se connecter à l’interface d’administration">
+    Ouvrez [https://admin.marsmind.cc/login](https://admin.marsmind.cc/login), renseignez « Nom d’utilisateur » et « Mot de passe », puis cliquez sur « Se connecter ».
+
+    Critère : le message « Connexion réussie ! » s’affiche et vous arrivez sur « Tableau de bord des données → Performances ». À la première connexion, l’« Assistant initial de configuration » s’ouvre automatiquement et vous guide dans l’ordre « Connecter l’assistant → Configurer les règles d'utilisation → Créer une base de connaissances » ; cliquez sur « Plus tard » pour le fermer, puis poursuivez dans l’ordre de cette page.
+
+    Remarque : la connexion se fait avec le nom d’utilisateur, pas avec l’adresse e-mail ; la page de connexion ne propose pas de récupération de mot de passe en libre-service. Sans compte, cliquez d’abord sur « Créer un compte » et activez-le avec le code d'invitation fourni par les ventes ; pour le détail, voir [Activation et préparation](/fr/quick-start/preparation).
+  </Step>
+
+  <Step title="Connecter une première fenêtre de conversation (Mon assistant → Connexion aux canaux)">
+    Point d’entrée : menu de gauche → Mon assistant → Connexion aux canaux. Cliquez en haut à droite sur « Créer un nouveau canal de communication », puis, dans la fenêtre qui s’ouvre, sur « Sélectionner le canal ».
+
+    - WeChat : choisissez « Province de connexion » et « Ville de connexion », puis scannez le code QR avec votre téléphone et confirmez.
+    - WeCom : choisissez « Province de connexion » puis scannez le code QR ; si la page demande un code de vérification à 6 chiffres, saisissez celui indiqué sur le téléphone.
+    - Lien du site Web : aucun scan n’est nécessaire. Saisissez un « Nom du lien de discussion » de 4 à 10 caractères (lettres latines non accentuées, chiffres ou traits de soulignement) ; une fois la création terminée, la fenêtre « Succès » s’affiche et vous pouvez copier l’« Accès URL » ou le « Code iframe ».
+    - Mini-programme et Compte officiel : l’administrateur doit scanner le code QR pour autoriser l’accès. Si un canal affiche « Ce canal n'est pas encore en libre-service. Veuillez contacter les ventes. », choisissez un autre canal ou contactez les ventes.
+
+    <Frame>
+      ![Page Connexion aux canaux : bouton « Créer un nouveau canal de communication » en haut à droite, liste des fenêtres connectées et leur statut](/images/fr/quick-start/quick-start/01-login-online.jpg)
+    </Frame>
+
+    Critère : la fenêtre apparaît dans la liste avec le statut « En service ». « En attente » signifie que la connexion ou l’autorisation n’est pas terminée. Sous la carte, le statut est expliqué : « En service » indique que l’IA suit les règles de réponse actuelles, « Suspendu » que les réponses automatiques sont interrompues, « Hors ligne » qu’il faut repasser en ligne pour reprendre le service ; après un changement de statut, comptez environ 10 secondes de délai système.
+
+    Une fois la connexion par code QR terminée pour WeChat ou WeCom, la fenêtre « Compte IA connecté » s’affiche : cliquez sur « Copier le code d'autorisation », envoyez ce message (il commence par `#`) au téléphone du superviseur, et demandez-lui de le transmettre depuis son propre téléphone au compte IA qui vient d’être connecté : l’IA l’identifiera comme superviseur. Si aucun code d’autorisation n’existe encore, cliquez sur « Générer un code » pour ouvrir les paramètres du compte, passez à l’onglet « Autorisation des rôles auprès de l’IA », générez le code, puis envoyez-le.
+
+    Remarque : dans le menu « ⋯ », « Mettre hors ligne » arrête le service automatique de cette fenêtre, et il faut rescanner le code QR pour la remettre en ligne ; « Supprimer le canal de communication » est irréversible.
+  </Step>
+
+  <Step title="Définir la personnalité de base (Mon assistant → Personnalité de base)">
+    Point d’entrée : menu de gauche → Mon assistant → Personnalité de base. Vérifiez d’abord que la « Fenêtre de conversation gérée actuellement » de la barre latérale est bien la fenêtre que vous venez de connecter.
+
+    1. Dans « Style IA », choisissez l’une des deux options : « Détaillé et poli » répond de façon plus complète avec un ton plus attentionné ; « Flexible et concis » va plus directement au fait. Le choix est enregistré dès le clic.
+    2. Dans « Instructions personnalisées », rédigez les « Instructions principales » : qui est l’IA, quels services elle couvre, quel ton elle emploie et dans quels cas elle pose d’abord une question. Exemple : vous êtes le conseiller commercial de MarsMind ; identifiez d’abord l’intention du client avant de répondre ; pour les questions de prix, de qualifications ou de service après-vente, citez en priorité la base de connaissances ; si les informations manquent, posez des questions complémentaires au lieu d’inventer.
+    3. Cliquez sur « Enregistrer la configuration ». Le statut passe de « Non enregistré » à « Enregistré » ou « Enregistré · Application non confirmée ».
+
+    <Frame>
+      ![Page Personnalité de base : les deux options de « Style IA » et la zone des « Instructions principales » des « Instructions personnalisées »](/images/fr/quick-start/quick-start/02-persona.jpg)
+    </Frame>
+
+    Critère : le statut de la page n’est plus « Non enregistré ». Après une modification des instructions principales, le système peut mettre à jour automatiquement les « Paramètres du contexte » ; dépliez-les pour vérifier, c’est un comportement normal. Quitter la page avec des modifications non enregistrées déclenche une alerte.
+
+    Pour tout connaître de cette page, voir [Personnalité de base](/fr/guide/assistant/persona).
+  </Step>
+
+  <Step title="Configurer les règles de réponse (Paramètres de réponse → Règles de réponse)">
+    Point d’entrée : menu de gauche → Paramètres de réponse → Règles de réponse. Pour le cycle minimal, configurez d’abord les deux cartes ci-dessous ; les autres pourront être complétées plus tard.
+
+    1. « Que répondre lorsque l’IA ne connaît pas la réponse ? » : rédigez le message exact que l’IA enverra en secours, cliquez sur « Enregistrer le texte de la réponse », puis activez l’interrupteur « Utiliser une réponse fixe » à droite du titre. Une fois activé, l’IA envoie ce texte tel quel lorsqu’elle rencontre une question dont la réponse est incertaine ; désactivé, elle ne répond pas à ces questions.
+    2. « Chat de groupe intelligent (efficace uniquement sur les canaux WeChat/WeCom) » : si vos canaux sont WeChat ou WeCom, activez d’abord l’interrupteur de la carte, puis précisez les règles dans « Messages auxquels l’IA doit répondre » et « Messages auxquels l’IA ne doit pas répondre », et cliquez sur « Enregistrer la configuration ».
+
+    Critère : à côté de l’interrupteur de la carte s’affiche « Activé », et le statut d’enregistrement en bas de page n’est plus « Non enregistré ». Les interrupteurs sont enregistrés séparément, immédiatement ; le contenu texte nécessite un clic sur le bouton d’enregistrement.
+
+    Remarque : le chat de groupe intelligent ne s’applique réellement qu’aux canaux WeChat et WeCom. Pour le détail, voir [Règles de réponse](/fr/guide/response/reply-rules).
+  </Step>
+
+  <Step title="Générer un premier lot de connaissances (Base de connaissances → Génération de connaissances)">
+    Point d’entrée : menu de gauche → Base de connaissances → Génération de connaissances.
+
+    1. Dans « D'où viennent vos connaissances ? », choisissez la méthode de création :
+       - « Générer à partir du document » : importez des fichiers PDF, Word, Excel, Markdown, txt, etc. (100 Mo maximum par fichier, 500 fichiers au plus). Le fichier est envoyé automatiquement dès sa sélection ; au clic sur « Soumettre la tâche de génération », la fenêtre « Confirmer la consommation des crédits » s’affiche d’abord, à raison de 100 crédits par document.
+       - « Générer à partir de la page Web » : collez des adresses http/https, séparées par des virgules ou des sauts de ligne ; aucune confirmation de crédits ne s’affiche, la soumission est directe.
+       - « Ajouter des connaissances prêtes » : saisissez directement « Que peut demander un client ? » et « Comment l’IA doit-elle répondre ? », ou importez un fichier xlsx par lot selon le modèle ; le bouton de soumission est « Soumettre la tâche de saisie ».
+    2. À droite, dans « 2. Choisissez une destination », sélectionnez la « Portée des connaissances » (Personnel ou Entreprise) et la « Catégorie de connaissances » (Par défaut). Les deux champs sont obligatoires, sinon la soumission est bloquée.
+
+    <Frame>
+      ![Page Génération de connaissances : les trois méthodes de création en haut, et à droite « 2. Choisissez une destination » avec la portée et la catégorie des connaissances](/images/fr/quick-start/quick-start/03-knowledge-upload.jpg)
+    </Frame>
+
+    Critère : après la soumission, la page bascule automatiquement vers « Historique des générations » ; le statut de la tâche affiche d’abord « Traitement » (le suivi de la tâche commence par « Soumise »), puis devient « Traitement terminé » une fois l’analyse finie. Cliquez sur « Voir le résultat » pour accéder aux éléments en attente de validation ou déjà enregistrés.
+
+    Remarque : « Traitement terminé » ne signifie pas que les connaissances sont entrées dans la base. Pour que l’IA les utilise tout de suite, ouvrez « Base de connaissances → Optimisation des connaissances », dans la liste « En attente de validation », et cliquez sur « Accepter » ; si vous ne faites rien, les connaissances non traitées sont acceptées automatiquement sous 24 heures, sauf celles issues de l’« Auto-apprentissage », qui exigent une validation manuelle. Par ailleurs, une tâche en cours d’analyse ne peut pas être supprimée.
+
+    Pour le détail, voir [Génération de connaissances](/fr/guide/knowledge/generation) et [Optimisation des connaissances](/fr/guide/knowledge/optimization).
+  </Step>
+
+  <Step title="Vérifier les résultats (Tableau de bord des données → Performances)">
+    Envoyez d’abord une vraie question à l’IA depuis le canal connecté, puis ouvrez : menu de gauche → Tableau de bord des données → Performances.
+
+    1. Dans « Fenêtre de conversation pour les statistiques » de la barre latérale, sélectionnez la fenêtre que vous venez de connecter, puis, dans la barre de filtres, choisissez la période et le groupement temporel (« Par jour », « Par semaine », « Par mois » ou « Personnalisé »).
+    2. Consultez les « Indicateurs clés » : Messages reçus, Demandes reçues et Réponses.
+
+    <Frame>
+      ![Page Performances : barre de filtres et cartes d’« Indicateurs clés » affichant les Messages reçus, les Demandes reçues et les Réponses](/images/fr/quick-start/quick-start/04-dashboard.jpg)
+    </Frame>
+
+    Critère : si « Messages reçus » et « Demandes reçues » affichent des données, les messages du canal sont bien entrés dans les statistiques ; si « Réponses » en affiche, l’IA a bien envoyé des réponses. Pour inspecter le traitement d’une demande précise, cliquez sur « Voir les échanges de cette période » pour ouvrir « Données détaillées » ; en dépliant la demande, vous voyez les « Connaissances de référence » et les « Étapes d'exécution ».
+
+    Remarque : « Messages reçus » inclut les « Demandes reçues », qui incluent elles-mêmes les « Réponses » : ces trois chiffres ne s’additionnent pas. Si vous vous trompez de fenêtre, vous verrez les données d’un autre canal, et les échanges traités par des agents humains ne sont pas comptés ici. Pour le détail, voir [Performances](/fr/guide/dashboard/business-performance).
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Pouvoir se connecter à l’interface d’administration avec « Nom d’utilisateur » et « Mot de passe », et arriver sur « Tableau de bord des données → Performances ».
+- Avoir dans « Connexion aux canaux » au moins une fenêtre de conversation au statut « En service » ; pour les canaux WeChat et WeCom, le code d’autorisation du superviseur a été envoyé au superviseur et l’identité est liée.
+- Dans « Personnalité de base », le « Style IA » a été changé et les « Instructions principales » enregistrées ; le statut n’est plus « Non enregistré ».
+- Dans « Règles de réponse », « Que répondre lorsque l’IA ne connaît pas la réponse ? » est activé et le message de secours est enregistré.
+- Dans « Génération de connaissances », au moins une tâche est au statut « Traitement terminé », et au moins une connaissance a été acceptée dans « Optimisation des connaissances → En attente de validation ».
+- Après l’envoi d’un message de test depuis le canal, « Performances » affiche les Messages reçus, Demandes reçues et Réponses correspondants.
+
+## Points d’attention
+
+<Warning>
+  Après « Mettre hors ligne », la fenêtre arrête son service automatique et doit être reconnectée par un nouveau scan du code QR ; « Supprimer le canal de communication » et la suppression définitive de connaissances sont irréversibles.
+</Warning>
+
+<Info>
+  Le statut « Enregistré · Application non confirmée » signifie que la configuration a bien été écrite côté administration, mais que l’assistant en cours d’exécution n’a pas encore renvoyé d’accusé de réception : c’est normal. Dans ce cas, n’enregistrez pas une deuxième fois ; vérifiez directement avec un vrai message.
+</Info>
+
+<Tip>
+  Les 30 minutes servent seulement à boucler le cycle. Enrichissez ensuite à partir des problèmes réels : complétez dans « Optimisation des connaissances » les questions restées sans réponse, distinguez clients et collègues dans « Relations », interceptez les réponses à risque avec les « Garde-fous de sécurité », définissez vos plages de service dans [Horaires de service](/fr/guide/response/working-hours) et décrivez vos processus métier dans la [Bibliothèque de compétences](/fr/guide/skills/library).
+</Tip>
+
+## Questions fréquentes
+
+### Pourquoi la page affiche-t-elle « Aucune fenêtre de conversation disponible » ?
+
+Cela signifie qu’aucune fenêtre utilisable n’est sélectionnée dans la « Fenêtre de conversation gérée actuellement ». Vérifiez d’abord dans « Connexion aux canaux » que la fenêtre est connectée (statut autre que « En attente » ou « Hors ligne »), puis sélectionnez-la dans la partie centrale de la barre latérale ; le bouton « Se connecter et mettre en ligne » de l’état vide vous y conduit aussi directement.
+
+### Quelle différence entre « Suspendu » et « Hors ligne » ?
+
+« Suspendu » signifie que l’IA a interrompu ses réponses automatiques ; la fenêtre n’a pas besoin d’être reconnectée. Une fenêtre « Hors ligne » doit être remise en ligne (nouveau scan du code QR) avant de reprendre le service.
+
+### La tâche de connaissances affiche « Traitement terminé », mais l’IA ne sait toujours pas répondre. Pourquoi ?
+
+« Traitement terminé » ne veut pas dire que les connaissances sont entrées dans la base : cliquez sur « Voir le résultat » pour les accepter dans « En attente de validation », ou vérifiez-les par une recherche dans « Gestion des connaissances ». Les règles d’acceptation automatique sont décrites plus haut, à l’étape « Générer un premier lot de connaissances ».
+
+### J’ai enregistré les instructions principales, mais les réponses de l’IA n’ont pas changé. Pourquoi ?
+
+Vérifiez d’abord le statut d’enregistrement : tant qu’il affiche « Enregistré · Application non confirmée », l’assistant en cours d’exécution n’a pas encore renvoyé d’accusé de réception. Vous pouvez aussi ouvrir « Tableau de bord des données → Données détaillées », déplier la demande et consulter les « Connaissances de référence » et les « Étapes d'exécution » pour voir si le problème vient de connaissances non trouvées ou de règles non appliquées.
+
+### Le cycle minimal est terminé : que configurer ensuite ?
+
+Complétez progressivement selon les problèmes réels ; les pistes sont données dans l’encadré ci-dessus. Chaque page détaillée est traitée dans le guide d’utilisation correspondant.

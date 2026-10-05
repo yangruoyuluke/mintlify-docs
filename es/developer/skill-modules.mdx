@@ -1,0 +1,193 @@
+---
+title: Módulos de habilidades
+description: Las capacidades del asistente de IA se dividen en ocho módulos de habilidad. Esta página le ayuda a determinar a qué tipo de capacidad pertenece un problema, en qué página del panel se configura y cómo comprobar que está realmente en vigor.
+keywords:
+  - módulos de habilidades
+  - módulos de capacidad
+  - biblioteca de habilidades
+  - herramientas vinculadas
+  - habilidades integradas
+---
+
+Los «Módulos de habilidades» reparten el trabajo que puede asumir el asistente de IA en ocho categorías. Esta página no repite las operaciones de cada página de configuración; le ayuda en tres cosas: determinar a qué tipo de capacidad pertenece el problema, en qué página del panel se configura y cómo comprobar que está en vigor. No hace falta activar las ocho categorías a la vez: empiece por la que está directamente relacionada con los clientes.
+
+## Cuándo la necesitará
+
+- Acaba de completar el [Inicio de sesión en canales](/es/guide/assistant/login-online) y no sabe qué parte configurar primero.
+- La IA no se comporta como esperaba (no logra responder a las preguntas, responde de manera desordenada en los grupos o insiste en contestar sola cuando debería derivar a una persona) y quiere localizar qué capacidad está mal configurada.
+- Va a entregar el panel a otra persona o a formar a alguien nuevo: necesita explicar dónde se mantiene cada tipo de capacidad.
+- Evalúa la situación actual: comprueba qué capacidades tiene activadas la IA y cuáles faltan.
+
+## Ruta de acceso
+
+Esta página no aloja configuración; las entradas de los ocho módulos se enumeran a continuación una por una. Puede llegar por dos vías:
+
+- Ver qué habilidades tiene configuradas la IA: menú izquierdo → Biblioteca de habilidades. Las que llevan la insignia «Habilidad integrada» las proporciona el sistema; las que no la llevan son habilidades personalizadas. El interruptor «Activo / Inactivo» decide si se usan.
+- Buscar la página según el problema: compárelo con «Los ocho módulos de capacidad» de abajo y siga la ruta indicada. Por ejemplo, para cambiar el estilo de comunicación: menú izquierdo → Mi asistente → Perfil base.
+
+La mayoría de las páginas del panel exigen seleccionar antes una «Ventana de conversación actual» en la barra lateral; si no hay ninguna ventana disponible, la página muestra un estado vacío y le remite al [Inicio de sesión en canales](/es/guide/assistant/login-online) para conectar un canal. La Biblioteca de habilidades no se guarda por ventana: al cambiar de ventana, la lista de habilidades no cambia. Para conocer la estructura general de la interfaz, consulte el [Recorrido por el panel de administración](/es/guide/interface-tour).
+
+## Los ocho módulos de capacidad
+
+### 1. Respuestas humanizadas
+
+Haga que la IA responda con un tono y un ritmo cercanos a los de una persona real. El tono, las palabras y el contexto se definen en el [Perfil base](/es/guide/assistant/persona):
+
+- «Estilo de la IA», con dos opciones: Detallado y cortés o Flexible y conciso; se guarda al seleccionarla.
+- «Instrucciones personalizadas»: escriba la identidad, el alcance del servicio y los principios de respuesta; después de guardar, confirme que el servicio ya las ha aplicado.
+- «Ajustes de contexto»: marque los elementos de contexto que deben inyectarse en las respuestas, como el escenario de conversación o los datos del usuario; tras editar y guardar la instrucción principal, el sistema puede actualizar estas casillas automáticamente.
+- Si un mensaje debe salir exactamente igual, use la «Respuesta directa por palabras clave» de [Reglas de respuesta](/es/guide/response/reply-rules): al coincidir la palabra clave se envía el contenido fijo directamente, sin pasar por la generación de la IA.
+
+La IA incorpora el contexto de la conversación en cada turno que procesa; para comprobarlo, consulte «Contexto de la conversación en ese momento» en la cadena de procesamiento de [Revisión detallada](/es/guide/dashboard/data-export).
+
+### 2. Preguntas y respuestas profesionales de nivel empresarial
+
+Los clientes llegan desde distintos canales, la IA responde con el contenido de la base de conocimientos y las respuestas de riesgo pasan antes por los controles de seguridad.
+
+- Canales: el [Inicio de sesión en canales](/es/guide/assistant/login-online) admite WeChat, WeCom, Sitio web, Miniprograma y Cuenta oficial; cada canal se corresponde con una «ventana de conversación».
+- Base de las respuestas: el conocimiento se mantiene en tres páginas: [Generación de conocimientos](/es/guide/knowledge/generation), [Optimización de conocimientos](/es/guide/knowledge/optimization) y [Gestión de conocimientos](/es/guide/knowledge/management).
+- Bloqueo de riesgos: los [Controles de seguridad](/es/guide/response/safety-guardrails) evalúan la respuesta antes de enviarla y, según las reglas, la bloquean, la permiten o notifican al supervisor.
+- Primera conversación con un cliente nuevo: la [Configuración de nuevos contactos](/es/guide/response/new-customer-reception) se encarga de «Aceptar automáticamente las solicitudes de amistad», el «Mensaje de bienvenida para nuevos contactos» y las «Reglas de captación de datos de clientes potenciales».
+- Verificación de las citas: los «Conocimientos de referencia» de Revisión detallada enumeran los conocimientos que se asociaron realmente en cada turno.
+
+### 3. Aprendizaje autónomo rápido
+
+Tanto los materiales como las «preguntas que la IA no sabe responder» pueden convertirse en conocimiento; el contenido aprendido de forma automática pasa antes por una revisión manual y luego se incorpora a la base.
+
+- Generar conocimiento: en [Generación de conocimientos](/es/guide/knowledge/generation), genere a partir de documentos, genere a partir de páginas web o añada contenido de conocimiento listo para usar. Al generar a partir de documentos, antes de enviar aparece la confirmación del consumo de créditos (100 créditos por documento); tras enviarla, consulte el progreso en «Historial de generación»: «Procesamiento completado» solo indica que la tarea terminó, no que el conocimiento ya esté en la base.
+- Revisar conocimiento: en «Pendiente de revisión» de [Optimización de conocimientos](/es/guide/knowledge/optimization), apruebe o descarte elemento por elemento. La interfaz indica: «Los conocimientos aprendidos automáticamente requieren revisión manual. Los demás elementos pendientes se aceptan automáticamente si no se procesan en un plazo de 24 horas.»
+- Completar respuestas: «Pendiente de respuesta» reúne las preguntas que la IA no respondió, que ya se derivaron al supervisor y que este aún no contestó; al pulsar «Confirmar» debe escribir primero la respuesta.
+- Enseñar un solo elemento directamente: escriba # en el «Chat del asistente» de la barra superior; «Añadir un conocimiento» está en la lista de comandos forzados.
+- Ver el volumen de aprendizaje: los «Conocimientos aprendidos» de [Rendimiento](/es/guide/dashboard/business-performance) son el conocimiento que la IA aprendió automáticamente de chats grupales o individuales.
+
+### 4. Colaboración entre personas y la IA
+
+Primero aclare quién es quién y después decida en qué conversaciones habla la IA y cuándo busca a una persona.
+
+- Identificar contactos: en [Relaciones](/es/guide/assistant/relationship-config) ajuste cada contacto como «Cliente», «Compañero», «Silenciado» o «Supervisor»; la relación de supervisor es un requisito previo para la entrega de la «Notificación activa de eventos clave». «Sincronizar contactos» se puede ejecutar como máximo una vez al día.
+- Decisión en chats grupales: el «Chat grupal inteligente (solo en WeChat y WeCom)» de [Reglas de respuesta](/es/guide/response/reply-rules) define por separado «Mensajes a los que debe responder la IA» y «Mensajes a los que no debe responder la IA»; estas reglas solo se aplican en los canales de WeChat y WeCom.
+- Informes y recordatorios: la «Notificación activa de eventos clave» de [Reglas de respuesta](/es/guide/response/reply-rules), y el ajuste «Notificación del líder» de cada regla de [Controles de seguridad](/es/guide/response/safety-guardrails).
+- Interruptores y toma del control: la píldora de estado del [Inicio de sesión en canales](/es/guide/assistant/login-online) alterna entre «En funcionamiento» y «Suspendido»; escriba # en el «Chat del asistente» para ver comandos forzados como `#work` (iniciar el trabajo), `#stop` (pausarlo), `#enable_hot_assistant` y `#disable_hot_assistant` (activar o desactivar las respuestas en chats grupales).
+- Límites de tiempo: el [Horario de atención](/es/guide/response/working-hours) define el horario de servicio que la IA promete hacia el exterior; después de cambiarlo, pulse «Guardar horario de atención».
+
+### 5. Análisis de datos e informes
+
+Consulte el rendimiento de la atención y el consumo desde el panel, y active los informes diarios y semanales con comandos.
+
+- Ver el rendimiento: [Rendimiento](/es/guide/dashboard/business-performance) («Métricas principales», tendencias, «Intenciones empresariales» y «Actividad de mensajes por franja horaria»; Mensajes recibidos ⊇ Consultas ⊇ Respuestas, y no se pueden sumar); [Revisión detallada](/es/guide/dashboard/data-export) (cada consulta y la respuesta de la IA, exportable); [Uso de IA](/es/guide/dashboard/ai-usage) (créditos restantes y consumo mensual, visible solo para los administradores del departamento).
+- Consultar los criterios: la «Guía métrica» de [Rendimiento](/es/guide/dashboard/business-performance) reúne la definición de cada campo; por ejemplo, las «Sugerencias» son el número de resúmenes de preguntas que la IA reenvió al supervisor.
+- Informes programados: escriba # en el «Chat del asistente» para ver `#enable_daily_report`, `#disable_daily_report`, `#enable_weekly_report` y `#disable_weekly_report`; escriba / para ver ejemplos en lenguaje natural como «Generar el informe de trabajo de esta semana» o «Mostrar el rendimiento del negocio de la semana pasada».
+
+### 6. Sugerencias inteligentes y seguimiento
+
+Cuando la IA no puede responder o hace falta una decisión humana, deriva la pregunta al supervisor, y usted añade la respuesta o interviene desde el panel.
+
+- Sugerencias: las «Sugerencias» de [Rendimiento](/es/guide/dashboard/business-performance) (definidas en el módulo 5) son el número de estos resúmenes de preguntas reenviados al supervisor.
+- Pendiente de respuesta: la cola «Pendiente de respuesta» de [Optimización de conocimientos](/es/guide/knowledge/optimization) (vea el módulo 3) reúne precisamente estas preguntas.
+- Recordatorios oportunos: la «Notificación activa de eventos clave» de [Reglas de respuesta](/es/guide/response/reply-rules), y las notificaciones cuando coincide una regla de [Controles de seguridad](/es/guide/response/safety-guardrails).
+- Limitar el alcance de la habilidad: al crear una habilidad en la [Biblioteca de habilidades](/es/guide/skills/library), en «Tipos de conversación» puede elegir «Conversaciones de supervisor», para que la IA confirme problemas con el supervisor, informe de avances o solicite ayuda humana.
+
+### 7. Panel de administración
+
+El panel concentra las vistas de datos, la configuración y el uso en cinco grupos a la izquierda; la entrada de ayuda está en «Ayuda y guías», en la barra superior. Cada cuenta ve entradas distintas.
+
+- Estructura de grupos: Panel de datos / Mi asistente / Configuración de respuestas / Base de conocimientos / Biblioteca de habilidades; abajo a la izquierda está «Configuración de la cuenta» (Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA).
+- Diferencias de permisos: «Uso de IA» solo lo ven los administradores del departamento; «Revisión de conversaciones» solo el equipo de Mercado Libre o los administradores de la plataforma. Si no ve una entrada, normalmente es por permisos, no por un fallo de la página.
+- Monitorización del uso: «Resumen de créditos» y «Uso mensual» de [Uso de IA](/es/guide/dashboard/ai-usage); las partidas no se pueden sumar para obtener el Uso total.
+- Ayuda integrada: la barra superior incluye «Chat del asistente» y «Ayuda y guías»; las 4 tarjetas de guía de «Ayuda y guías» (Panel de control / Configuración del asistente / Base de conocimientos / Biblioteca de habilidades) resaltan en la página las entradas correspondientes paso a paso. En el primer inicio de sesión también aparece el «Asistente de configuración inicial», que guía con «Completar el inicio de sesión del asistente → Configurar reglas de uso → Configurar la base de conocimientos»; si no quiere hacerlo ahora, elija «Más tarde».
+
+### 8. Habilidades de valor añadido
+
+Cuando las capacidades estándar no bastan, conecte sus procesos internos mediante habilidades y herramientas.
+
+- Escribir una habilidad: en la [Biblioteca de habilidades](/es/guide/skills/library) pulse «Añadir habilidad» y rellene «Cuándo utilizarlo» y «Cómo debe actuar la IA»; cuando haya que diagnosticar o actuar siguiendo un orden, escriba los pasos en «Cómo debe actuar la IA».
+- Conectar herramientas: al crear la habilidad, elija «Asignar herramientas automáticamente» o «Elija las herramientas manualmente» y marque las herramientas por categoría en «Herramientas para usar»; tras guardar, la habilidad podrá invocarlas.
+- Verificar las invocaciones: en [Revisión detallada](/es/guide/dashboard/data-export), compruebe en «Pasos de ejecución → Invocación de habilidades» qué habilidad y qué herramienta se invocaron en el turno; si no se invocó ninguna, muestra «Ninguno».
+- Conectar sus propios sistemas: para la integración por API, consulte la [Referencia de API](/es/developer/api-reference).
+
+## Pasos
+
+<Steps>
+  <Step title="Localice a qué módulo pertenece el problema">
+    Compárelo con la lista de arriba. Por ejemplo: si el cliente pregunta varias veces y la IA no da con la respuesta, lo más probable es que sea el módulo 2 (el conocimiento no lo cubre) o el módulo 1 (el perfil y la lógica de respuesta no cumplen lo esperado); si la IA interviene sin criterio en los grupos, probablemente sea el módulo 4 (relaciones o Chat grupal inteligente).
+
+    Cómo verificarlo: puede nombrar la página correspondiente, y no limitarse a sentir que «la IA no funciona bien».
+
+    Si tiene dudas, empiece por [Revisión detallada](/es/guide/dashboard/data-export): abra «Cadena de procesamiento de mensajes → Pasos de ejecución» de una consulta y identifique en qué paso se originó el problema a partir de etapas como «Decisión», «Invocación de habilidades», «Generación de conocimientos» y «Control de seguridad».
+  </Step>
+
+  <Step title="Configure en la página correspondiente y confirme el estado de guardado">
+    Al abrir la página, confirme primero que la «Ventana de conversación actual» es la que quiere modificar; los interruptores (Estilo de la IA, Aceptar automáticamente las solicitudes de amistad, estado de la habilidad) se guardan al seleccionarlos, mientras que los campos de texto requieren «Guardar configuración» o el botón de guardado al final de la página (por ejemplo, «Guardar horario de atención»).
+
+    Cómo verificarlo: aparece «Guardado». Si muestra «Guardado · Aplicación en el servicio sin confirmar», la configuración ya se envió pero el servicio aún no ha confirmado aplicarla; no saque conclusiones todavía.
+
+    Atención: guardar no significa que la IA lo cumpla de inmediato; verifíquelo en el paso siguiente en lugar de cambiar una y otra vez la misma página.
+  </Step>
+
+  <Step title="Compruebe el comportamiento real de la IA en Revisión detallada">
+    Menú izquierdo → Panel de datos → Revisión detallada; busque una consulta relacionada y ábrala para ver la «Cadena de procesamiento de mensajes»: en «Pasos de ejecución», compruebe si «Decisión», «Invocación de habilidades», «Generación de conocimientos» y «Control de seguridad» se ejecutaron como esperaba, y en «Conocimientos de referencia», qué conocimientos se citaron.
+
+    Cómo verificarlo: la etapa que configuró tiene un registro correspondiente en la cadena. «Desconocido» indica que no se obtuvo registro, no que no se haya activado; pruebe con una consulta más reciente.
+  </Step>
+
+  <Step title="Espere a que se estabilice y pase al siguiente módulo">
+    Cambie solo un tipo de capacidad a la vez; observe durante uno o dos días si las métricas relacionadas de [Rendimiento](/es/guide/dashboard/business-performance) sufren oscilaciones anómalas antes de tocar el siguiente. Empiece por los problemas frecuentes y bien delimitados, y amplíe después a los procesos complejos.
+
+    Cómo verificarlo: las Respuestas y la Tasa de consultas no caen de forma anómala y el equipo no informa de nuevas respuestas erróneas.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Las páginas que modificó muestran «Guardado» y las que necesitan confirmación del servicio ya no muestran «Aplicación en el servicio sin confirmar».
+- Envíe un mensaje con una cuenta de prueba a un canal ya conectado y recibirá una respuesta generada con la nueva configuración; cuando una respuesta se bloquee, la fila «Control de seguridad» de «Pasos de ejecución» en [Revisión detallada](/es/guide/dashboard/data-export) muestra «Bloqueado» (la evidencia «Control de seguridad» de la parte superior del panel también muestra «Bloqueado»).
+- En [Revisión detallada](/es/guide/dashboard/data-export), los «Pasos de ejecución» de la consulta correspondiente muestran la etapa que configuró (Invocación de habilidades / Generación de conocimientos / Control de seguridad) y en «Conocimientos de referencia» aparece el conocimiento objetivo.
+- En las métricas: los «Conocimientos aprendidos» y las «Sugerencias» de [Rendimiento](/es/guide/dashboard/business-performance) tienen datos, lo que indica que el aprendizaje automático y la derivación al supervisor ya están ocurriendo.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+La mayoría de la configuración se aplica a la «Ventana de conversación actual» (salvo la Biblioteca de habilidades). Antes de cambiar algo, mire qué ventana está seleccionada en la barra lateral: elegir la ventana equivocada aplica las reglas a otra cuenta.
+</Warning>
+
+<Warning>
+Eliminar una ventana de conversación o una habilidad no se puede deshacer: se eliminan de inmediato al confirmar y no se pueden recuperar. Si no va a usarlas por un tiempo, no las elimine: en el caso de una habilidad, desactívela primero («Inactivo»).
+</Warning>
+
+<Info>
+Los «Módulos de habilidades» y la «Biblioteca de habilidades» son dos niveles distintos: los módulos de habilidades clasifican las capacidades (las ocho categorías de esta página); la [Biblioteca de habilidades](/es/guide/skills/library) es la capa de ejecución, donde se escribe cómo se realiza un tipo de tarea y qué herramientas puede invocar. Solo cuando el comportamiento integrado no basta hay que crear una habilidad en la Biblioteca.
+</Info>
+
+<Info>
+Que el guardado se complete no significa que el servicio ya lo haya aplicado. La página muestra «Guardado · Aplicación en el servicio sin confirmar» con el aviso «La configuración se ha guardado, pero aún no se ha confirmado que esté aplicada en el servicio.»; si de verdad está en vigor, lo determina la cadena real de [Revisión detallada](/es/guide/dashboard/data-export).
+</Info>
+
+<Tip>
+Si no encuentra una entrada, use «Ayuda y guías» en la barra superior: las 4 tarjetas de guía (Panel de control / Configuración del asistente / Base de conocimientos / Biblioteca de habilidades) resaltan en la página las entradas correspondientes paso a paso.
+</Tip>
+
+<Tip>
+La conversación del «Chat del asistente» no está vinculada a la ventana seleccionada en la página, así que no sirve para confirmar que la configuración de una ventana está en vigor. Es útil para enviar comandos (escriba # para ver los comandos forzados y / para ver ejemplos en lenguaje natural); la configuración por ventana se cambia en su página y se verifica en [Revisión detallada](/es/guide/dashboard/data-export).
+</Tip>
+
+## Preguntas frecuentes
+
+### La IA no responde como la configuré. ¿Qué debo revisar primero?
+
+Revise en orden: ① que la «Ventana de conversación actual» de la barra lateral sea la correcta; ② que el estado de guardado de la página sea «Guardado · Aplicación en el servicio sin confirmar» (espere a la confirmación del servicio antes de juzgar el resultado); ③ que los [Controles de seguridad](/es/guide/response/safety-guardrails) no hayan bloqueado esta respuesta; ④ que el horario y la zona horaria del [Horario de atención](/es/guide/response/working-hours) cubran la hora actual; ⑤ que este contacto no esté puesto como «Silenciado» ni identificado por error como compañero en [Relaciones](/es/guide/assistant/relationship-config); ⑥ que el estado de la habilidad sea «Activo». Por último, vaya a «Pasos de ejecución» en [Revisión detallada](/es/guide/dashboard/data-export) para confirmar qué etapas recorrió realmente este turno.
+
+### ¿Hay que configurar los ocho módulos de capacidad para poder usarlos?
+
+No. Siga el orden de su negocio y empiece por una categoría directamente relacionada con los clientes y fácil de verificar (normalmente «Preguntas y respuestas profesionales de nivel empresarial» y «Respuestas humanizadas»); añada una a una y verifique cada incorporación con Revisión detallada.
+
+### ¿Qué relación hay entre los «Módulos de habilidades» y la «Biblioteca de habilidades»?
+
+Los módulos de habilidades son la forma de clasificar las capacidades de la IA: responden a «qué capacidades hay». La Biblioteca de habilidades es la configuración de la capa de ejecución: responde a «cómo se realiza este tipo de tarea y qué herramientas puede invocar». No todas las capacidades de los ocho módulos requieren escribir una habilidad: cuando el comportamiento integrado basta, no hay que tocar la Biblioteca.
+
+### ¿Qué relación hay entre los comandos del «Chat del asistente» y la configuración de las páginas? ¿Por qué no sirve para verificar?
+
+La conversación del «Chat del asistente» no está vinculada a la ventana de conversación seleccionada en la página (la interfaz indica: «Esta entrada no está vinculada a la ventana de conversación seleccionada en la página. No puede confirmar que la configuración de la ventana está en vigor.»). Sirve para enviar comandos forzados (como `#enable_daily_report`, `#stop` o `#chatknowledge`), pero para saber si la configuración de una ventana está en vigor hay que mirar su página y la cadena real de [Revisión detallada](/es/guide/dashboard/data-export).
+
+### ¿Por qué en mi menú no aparece «Uso de IA» ni «Revisión de conversaciones»?
+
+Ambas páginas tienen restricciones de permisos: «Uso de IA» solo lo ven los administradores del departamento y, si la abre directamente una cuenta sin ese rol, muestra «Acceso denegado»; «Revisión de conversaciones» solo lo ven el equipo de Mercado Libre o los administradores de la plataforma. Si no ve la entrada, su cuenta no tiene los permisos correspondientes; no es un fallo de la página.

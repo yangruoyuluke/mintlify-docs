@@ -1,0 +1,101 @@
+---
+title: Examen des conversations
+description: "Filtrez et examinez les enregistrements de conversation dans l’application intégrée de revue de conversation de Mercado Libre : droits d’accès, gestion des échecs de chargement et limites de langue de l’interface."
+keywords:
+  - examen des conversations
+  - Mercado Libre
+  - tableau de bord des données
+  - revue de conversation
+  - accès refusé
+  - application intégrée
+---
+
+« Examen des conversations » est le point d’entrée pour revoir les conversations de l’activité Mercado Libre : la page entière intègre l’application de revue de conversation de Mercado Libre, dans laquelle vous filtrez et consultez directement les enregistrements de conversation de cette activité depuis l’interface d’administration. La page elle-même ne comporte aucun autre élément de configuration.
+
+## Quand en avez-vous besoin ?
+
+- Contrôle périodique : revenez sur les conversations entre l’IA et les clients de l’activité Mercado Libre et examinez une par une la façon dont elles ont été prises en charge.
+- Vérification en cas de doute : lorsqu’un client ou un superviseur s’interroge sur un échange, revenez ici consulter l’enregistrement d’origine.
+- Lorsque vous devez filtrer et localiser un ensemble de conversations selon vos propres critères dans l’application intégrée.
+
+## Comment y accéder ?
+
+Menu de gauche → Tableau de bord des données → Examen des conversations. À l’ouverture, le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Examen des conversations » et la zone de contenu est une application intégrée qui occupe toute la page.
+
+<Frame>
+  ![Page Examen des conversations complète : le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Examen des conversations », la zone de contenu intègre entièrement l’application de revue de conversation Mercado Libre, avec ses propres filtres et sa liste](/images/fr/guide/dashboard/conversation-review/01-overview.jpg)
+</Frame>
+
+Si cette entrée n’apparaît pas dans le menu de gauche, c’est que le compte actuel n’est pas dans le périmètre autorisé ; voir « Points d’attention » ci-dessous.
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Ouvrir la page et confirmer que le compte actuel y a accès">
+    Dans le menu de gauche, sous « Tableau de bord des données », cliquez sur « Examen des conversations ».
+
+    Critère : la page s’ouvre normalement, le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Examen des conversations » et la zone de contenu commence à charger l’application de revue.
+
+    Remarque : si « Accès refusé » s’affiche, le compte actuel n’est pas dans le périmètre autorisé ; vous pouvez cliquer sur « Retour au tableau de bord » pour quitter. Le périmètre autorisé est décrit dans « Points d’attention » ci-dessous.
+  </Step>
+
+  <Step title="Attendre la fin du chargement de l’application intégrée">
+    La page ne comporte qu’un seul écran de chargement : pendant celui-ci, l’affichage indique « Chargement de la revue de conversation... » ; une fois l’application prête, l’écran disparaît et laisse apparaître ses propres filtres et sa liste.
+
+    Critère : l’écran de chargement a disparu et vous pouvez utiliser les filtres et la liste de l’application.
+
+    Remarque : si la page n’est pas prête après une quinzaine de secondes d’attente, elle affiche « La page de revue de conversation ne pouvait pas être chargée. Veuillez réessayer. » et un bouton « Recharger ». Un clic sur « Recharger » recharge l’ensemble de l’application ; si les tentatives répétées échouent, revenez d’abord au tableau de bord, puis réessayez plus tard ou contactez un administrateur.
+  </Step>
+
+  <Step title="Examiner les conversations dans l’application intégrée">
+    Le filtrage, la liste et le contenu des conversations se font entièrement dans l’application intégrée ; l’interface d’administration n’ajoute aucune couche de contrôles. Les filtres disponibles et la façon de parcourir les échanges suivent l’interface réelle de l’application. Filtrez les conversations visées selon votre objectif de revue, puis consultez-les une à une.
+
+    Critère : après le filtrage, la liste se rafraîchit et vous pouvez consulter l’enregistrement de conversation à examiner.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Le fil d’Ariane de la barre supérieure affiche « Tableau de bord des données → Examen des conversations ».
+- L’écran de chargement a disparu et les filtres et la liste propres à l’application sont visibles ; la page ne reste pas bloquée sur « Chargement de la revue de conversation... » ou « La page de revue de conversation ne pouvait pas être chargée. Veuillez réessayer. ».
+- Le changement de « Fenêtre de conversation gérée actuellement » à gauche ne modifie pas le contenu de cette page : elle n’utilise pas ce sélecteur.
+
+## Points d’attention
+
+<Warning>
+« Examen des conversations » n’est ouvert qu’au département Mercado Libre (codes de département mercado, mercado_local) ou aux administrateurs de la plateforme. Les autres comptes ne voient pas cette entrée dans le menu de gauche, et la saisie directe de l’adresse de la page est également bloquée, avec « Accès refusé » : « Cette page est réservée au service Mercado Libre et aux administrateurs. Retournez au tableau de bord ou demandez à un administrateur de vérifier vos droits. » Si vous devez y accéder, contactez un administrateur pour confirmer le département auquel le compte est rattaché.
+</Warning>
+
+<Info>
+Cette page est une application externe intégrée sur toute la page (l’application de revue de conversation de Mercado Libre). L’interface d’administration se contente de lui transmettre l’identité de connexion actuelle et la langue de l’interface : aucune reconnexion n’est nécessaire ; lorsque le chargement se déroule normalement, la page ne comporte aucun autre contrôle, à la seule exception du bouton « Recharger » en cas d’échec du chargement, et toutes les opérations se font dans l’application.
+</Info>
+
+<Info>
+L’application intégrée ne reconnaît qu’une partie des langues d’interface : le chinois, l’anglais et le japonais s’affichent normalement ; si la langue de l’interface est le français ou l’espagnol, l’application s’affiche en anglais. Pour examiner les conversations en chinois, passez la langue de l’interface au chinois via « Paramètres du compte → Langue » en bas à gauche, puis revenez sur cette page.
+</Info>
+
+<Tip>
+Pour une vue d’ensemble des données avant la revue, allez sur [Performances](/fr/guide/dashboard/business-performance) ; pour rechercher ou exporter des enregistrements de communication selon des critères, allez sur [Données détaillées](/fr/guide/dashboard/data-export).
+</Tip>
+
+## Questions fréquentes
+
+### Pourquoi « Examen des conversations » n’apparaît-il pas dans le menu de gauche ?
+
+Cette page n’est ouverte qu’à un périmètre de comptes précis : si l’entrée n’est pas visible, c’est que le compte actuel n’en fait pas partie ; le périmètre et la marche à suivre sont décrits dans « Points d’attention » ci-dessus.
+
+### La page reste bloquée sur « Chargement de la revue de conversation... » ou signale un échec de chargement : que faire ?
+
+En cas d’échec, commencez par cliquer sur « Recharger » pour réessayer ; si le problème persiste après plusieurs tentatives, revenez au tableau de bord pour traiter d’autres tâches, puis revenez plus tard ou contactez un administrateur.
+
+### Pourquoi l’application de revue s’affiche-t-elle en anglais alors que la langue de l’interface est le français ou l’espagnol ?
+
+L’application intégrée ne reconnaît qu’une partie des langues d’interface : le chinois, l’anglais et le japonais s’affichent normalement ; avec le français ou l’espagnol, l’application bascule en anglais. Pour examiner les conversations en chinois, passez la langue de l’interface au chinois via « Paramètres du compte → Langue » en bas à gauche, puis revenez sur cette page.
+
+### Pourquoi cette page reste-t-elle inchangée lorsque vous changez de « Fenêtre de conversation gérée actuellement » à gauche ?
+
+« Examen des conversations » ne tient pas compte de la « Fenêtre de conversation gérée actuellement » : le périmètre des conversations affiché est déterminé par l’application elle-même, et changer de fenêtre ne modifie pas le contenu de cette page. Pour localiser une conversation, utilisez directement les filtres de l’application.
+
+### Quelle est la différence entre cette page et « Données détaillées » ?
+
+Il ne s’agit pas de la même vue de données. « Données détaillées » est la page d’enregistrements de communication intégrée à l’interface d’administration, où vous pouvez rechercher et exporter selon la fenêtre, l’utilisateur ou le groupe, entre autres critères ; « Examen des conversations » est l’application de revue intégrée à l’activité Mercado Libre : elle ne comporte aucun contrôle de filtrage ajouté par l’interface d’administration et toutes les opérations se font directement dans l’application. Pour exporter des enregistrements, utilisez [Données détaillées](/fr/guide/dashboard/data-export).

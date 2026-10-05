@@ -1,0 +1,111 @@
+---
+title: Seguridad de inicio de sesión
+description: "Cambie la contraseña de acceso al panel de administración de MarsMind: reglas de validación de «Contraseña actual», «Nueva contraseña» y «Confirmar contraseña», y por qué no hace falta volver a iniciar sesión después del cambio."
+keywords:
+  - seguridad de inicio de sesión
+  - cambiar contraseña
+  - contraseña actual
+  - contraseña nueva
+  - actualizar contraseña
+  - configuración de la cuenta
+---
+
+«Seguridad de inicio de sesión» sirve para cambiar la contraseña con la que inicia sesión en el panel de administración de MarsMind: introduzca la contraseña actual, defina una nueva y confírmela; cuando el envío se complete, la sesión actual no se interrumpe y la próxima vez que inicie sesión usará la contraseña nueva. Esta página modifica la cuenta con la que inicia sesión y no cambia al cambiar la «Ventana de conversación actual» de la izquierda.
+
+## Cuándo la necesitará
+
+- Necesita cambiar la contraseña de acceso al panel de administración.
+- Le preocupa que alguien conozca su contraseña (por ejemplo, si inició sesión en un dispositivo compartido) y quiere cambiarla cuanto antes.
+- Las normas de seguridad de su equipo exigen actualizar la contraseña periódicamente.
+
+## Ruta de acceso
+
+Abajo a la izquierda, «Configuración de la cuenta» → «Seguridad de inicio de sesión». (También puede abrir primero [Perfil](/es/guide/account/profile) o [Autorización de identidad de IA](/es/guide/account/ai-authorization) y cambiar después a esta pestaña en la parte superior.)
+
+Al abrir la página, arriba están las tres pestañas «Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA» y la página se queda en «Seguridad de inicio de sesión»; debajo está la tarjeta «Actualizar contraseña», con los tres campos «Contraseña actual», «Nueva contraseña» y «Confirmar contraseña» (cada uno con un icono de ojo a la derecha), y abajo a la derecha, el botón «Actualizar contraseña».
+
+<Frame>
+  ![Página «Seguridad de inicio de sesión»: arriba, las tres pestañas «Perfil / Seguridad de inicio de sesión / Autorización de identidad de IA»; en la tarjeta «Actualizar contraseña», los campos «Contraseña actual», «Nueva contraseña» y «Confirmar contraseña», cada uno con un icono de ojo a la derecha; bajo «Nueva contraseña» aparece el aviso «Use una contraseña de al menos 6 caracteres que sea distinta de la actual.»; abajo a la derecha, el botón «Actualizar contraseña»](/images/es/guide/account/security/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Introduzca la contraseña actual">
+    En el campo «Contraseña actual» de la tarjeta «Actualizar contraseña» (texto de ejemplo: «Introduzca la contraseña actual»), escriba la contraseña con la que inicia sesión actualmente.
+
+    Cómo comprobarlo: lo escrito se muestra como puntos; pulse el icono de ojo a la derecha del campo para alternar entre texto visible y oculto y verificar lo que ha escrito.
+
+    Nota: no se puede saber si la contraseña actual es correcta antes de enviar. Si al enviar aparece un aviso de fallo, revise primero si escribió mal la contraseña actual.
+  </Step>
+
+  <Step title="Defina la contraseña nueva">
+    En el campo «Nueva contraseña» (texto de ejemplo: «Introduzca una contraseña nueva») escriba la contraseña nueva. La regla que aparece bajo el campo dice: «Use una contraseña de al menos 6 caracteres que sea distinta de la actual.».
+
+    Cómo comprobarlo: cuando la contraseña nueva tenga al menos 6 caracteres y sea distinta de la actual, este paso deja de bloquear el envío; si no cumple los requisitos, el botón «Actualizar contraseña» permanece desactivado.
+
+    Nota: la validación de la contraseña nueva se nota en el botón: si no cumple la regla, el botón no se puede pulsar y no aparece ningún error bajo el campo.
+  </Step>
+
+  <Step title="Vuelva a introducir la contraseña nueva">
+    En el campo «Confirmar contraseña» (texto de ejemplo: «Vuelva a introducir la contraseña nueva»), escriba otra vez la contraseña nueva tal cual.
+
+    Cómo comprobarlo: si las dos entradas coinciden exactamente, no aparece nada debajo; en cuanto «Confirmar contraseña» no está vacío y no coincide con la contraseña nueva, bajo el campo aparece al instante el texto en rojo «Las contraseñas nuevas no coinciden.», que desaparece al corregirlo. Cuando coinciden y se cumplen las demás condiciones, el botón «Actualizar contraseña» pasa a estar activo.
+
+    Nota: las mayúsculas y los espacios cuentan como diferencias. Si aparece el aviso de que no coinciden, use el icono de ojo para mostrar el contenido de los dos campos y compárelos carácter por carácter.
+  </Step>
+
+  <Step title="Pulse «Actualizar contraseña» para enviar">
+    Cuando los tres campos sean correctos, pulse «Actualizar contraseña» abajo a la derecha de la tarjeta.
+
+    Cómo comprobarlo: durante el envío, el botón pasa a mostrar «Enviando…» y los tres campos no se pueden editar; si el cambio se realiza correctamente, aparece «Contraseña actualizada correctamente.» y los tres campos se vacían (vuelven al texto de ejemplo). La contraseña ya está cambiada y no hace falta volver a iniciar sesión.
+
+    Nota: el envío no tiene segunda confirmación; al pulsar el botón se inicia el cambio. Si aparece «No se pudo actualizar la contraseña. Inténtelo de nuevo.», significa que esta vez no se ha cambiado: compruebe la contraseña actual e inténtelo otra vez. Si a mitad de la edición cambia de menú o de pestaña, o pulsa el botón Atrás del navegador, aparece primero «¿Descartar los cambios sin guardar?» (con la descripción «Esta página contiene cambios sin guardar. Se perderán si sale de ella.»): elija «Seguir editando» para quedarse en la página y conservar lo introducido, o «Descartar los cambios» para descartar esta edición; mientras se está enviando no se puede salir y aparece el aviso «Espere a que termine el guardado o la subida en curso antes de salir.»; al actualizar o cerrar la página, la confirmación de salida la muestra el propio navegador (sin los botones «Seguir editando» y «Descartar los cambios») y, si sale, también se pierde lo introducido.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Ha aparecido el aviso «Contraseña actualizada correctamente.» y los tres campos se han vaciado.
+- La sesión actual no se ha interrumpido: la página no pide volver a iniciar sesión y puede seguir usando el panel.
+- La próxima vez que inicie sesión en el panel, use la contraseña nueva que acaba de definir.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Al pulsar «Actualizar contraseña», el cambio se envía de inmediato y la página no pide una segunda confirmación. Si el cambio se realiza correctamente, la sesión actual no se interrumpe: no dé el cambio por fallido solo porque no se haya cerrado la sesión; guíese por si aparece «Contraseña actualizada correctamente.».
+</Warning>
+
+<Info>
+La regla de la contraseña es la que se muestra bajo el campo «Nueva contraseña»: «Use una contraseña de al menos 6 caracteres que sea distinta de la actual.». Si no alcanza la longitud mínima o coincide con la contraseña actual, el botón «Actualizar contraseña» permanece desactivado y no se envía.
+</Info>
+
+<Info>
+Esta página modifica la contraseña de acceso al panel de administración (la descripción de la página dice «Cambie su contraseña de acceso al panel de administración.»). En cuanto se haya escrito algo en alguno de los tres campos, cambiar de menú o de pestaña, o pulsar el botón Atrás del navegador, activa la confirmación «¿Descartar los cambios sin guardar?»; al actualizar o cerrar la página, la confirmación de salida la muestra el propio navegador (sin los botones «Seguir editando» y «Descartar los cambios») y, si sale, también se pierde lo introducido.
+</Info>
+
+<Tip>
+Antes de enviar, pulse el icono de ojo a la derecha de los tres campos para mostrar la contraseña actual y la nueva y comprobarlas una vez; si «Confirmar contraseña» no coincide, el texto en rojo aparece al momento, así que corregirlo antes de enviar le ahorra un intento fallido.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Hay que volver a iniciar sesión después de cambiar la contraseña?
+
+No. Una vez cambiada, la sesión actual no se interrumpe y la página no le pide volver a iniciar sesión; los tres campos se vacían y aparece «Contraseña actualizada correctamente.». La próxima vez que inicie sesión, use la contraseña nueva.
+
+### ¿Por qué no se puede pulsar el botón «Actualizar contraseña»?
+
+El botón solo se activa cuando se cumplen las tres condiciones: ① «Contraseña actual» tiene contenido; ② «Nueva contraseña» tiene al menos 6 caracteres y es distinta de la actual; ③ «Confirmar contraseña» coincide con la contraseña nueva. Si acaba de pulsar enviar, el botón muestra «Enviando…» y los campos no se pueden editar; espere a que termine.
+
+### ¿Qué requisitos debe cumplir la contraseña nueva?
+
+La regla es la que se muestra bajo el campo «Nueva contraseña»; mientras no se cumpla, el botón «Actualizar contraseña» permanece desactivado.
+
+### He olvidado la contraseña actual, ¿puedo cambiarla aquí?
+
+No. Para cambiar la contraseña en esta página hay que introducir la contraseña actual, y la página de inicio de sesión no ofrece ninguna opción de recuperación automática. Si ha olvidado la contraseña actual, póngase en contacto con un administrador.
+
+### ¿Qué pasa si cambio a otra página a mitad de la edición?
+
+Mientras haya algo escrito en los campos, antes de salir de la página aparece una confirmación; durante el envío no se puede salir y, una vez cambiada la contraseña, los campos quedan vacíos y la confirmación ya no aparece.

@@ -1,0 +1,146 @@
+---
+title: Knowledge Management
+description: Search and edit stored knowledge, maintain the knowledge group structure, and restore or permanently delete deleted knowledge in the Recycle Bin.
+keywords:
+  - knowledge management
+  - knowledge groups
+  - knowledge search
+  - change category
+  - recycle bin
+---
+
+"Knowledge Management" is where you organize knowledge that is already stored: maintain the group structure (add, rename, enable or disable groups), find a specific item by group or keyword, and edit its content, change its category, or delete it. Anything deleted by mistake goes to the Recycle Bin first, where you can restore it. New knowledge must first pass review in [Knowledge Optimization](/en/guide/knowledge/optimization) before it enters the library; this page manages what is already stored.
+
+## When you'll need this
+
+- Something the AI knows is inaccurate or out of date, and you need to find that stored item to correct or delete it.
+- Knowledge keeps piling up and you want a group structure that keeps different parts of the business separate.
+- An item is filed under the wrong group and needs to move, or a group is no longer in use and should be disabled.
+- You deleted something by mistake and need it back, or you want to clear items out of the Recycle Bin for good.
+
+## How to get there
+
+Left menu → Knowledge Base → Knowledge Management.
+
+The page opens on "Group Structure"; the search bar at the top searches stored knowledge, and typing a keyword switches to the search results. The "Default" group is built in: you cannot rename, delete, or disable it.
+
+<Frame>
+  ![Full Knowledge Management page: the top search bar with the keyword input and the More Filters, Recycle Bin, and Search buttons; below, "Group Structure" lists each group per row with its name, child group count, status text, and toggle, ending with a "⋯" actions menu](/images/en/guide/knowledge/management/01-overview.jpg)
+</Frame>
+
+## Steps
+
+<Steps>
+  <Step title="Adjust the group structure: add, rename, enable or disable, and delete">
+    In "Group Structure", each group is a row: the name on the left (with an "N child groups" label when it has children), status text and a toggle on the right, and a "⋯" menu at the end with "Edit", "Add Child Group", and "Delete".
+
+    - Add: click "⋯" to the right of the "Group Structure" header row and choose "Add Top-Level Group" to create a top-level group; in a row's "⋯" menu, choose "Add Child Group" to create the level below it.
+    - Rename: row "⋯" → "Edit" — the group name becomes an input (placeholder "Enter group name"); press Enter or click elsewhere to finish.
+    - Enable or disable: click the toggle at the end of the row; after the change, the status text reads "Enable after saving" or "Disable after saving" — these labels mean the change is not written yet.
+    - Delete: row "⋯" → "Delete", then click "Delete" in the "Delete Knowledge Group" dialog. The dialog states, "This group will be removed from the list immediately." This step takes effect right away and has no recovery path; every other change must be saved.
+
+    When a row has changes, it shows a "Pending" mark and the header shows "N changes pending"; click "Save group changes" at the bottom and "Save successful" appears. How to tell it worked: the "Pending" mark is gone and the status text reads "Knowledge enabled" or "Knowledge disabled".
+
+    Notes:
+
+    - Clicking a group name opens it for viewing — it does not rename it. At a level with no child groups, the page shows the knowledge in that group directly (see the next step); to rename, use "⋯" → "Edit".
+    - Four levels maximum: a level-4 group's "⋯" menu has no "Add Child Group".
+    - Disabling a group takes its knowledge out of use (applied when you save); the "Default" group is always enabled — its toggle is not clickable and its menu has no "Edit" or "Delete".
+    - A new group cannot be saved without a name; you are asked to "Please fill in all category names".
+    - If you leave the page with unsaved group changes, a "Discard group changes?" dialog appears: click "Cancel" to stay and keep editing, or "Discard changes" to drop this round of changes.
+  </Step>
+
+  <Step title="Find the knowledge you need: browse by group or search by keyword">
+    Browse by group: in "Group Structure", click a group name to go down level by level; at a level with no child groups, the list shows that group's knowledge directly. Switch the displayed type with "Questions & answers" and "Paragraph Knowledge", and click "Back" to return to the previous level.
+
+    Search by keyword: enter a keyword in the top search bar (placeholder "Enter search keyword") and the page switches to the search results after a brief pause; you can also press Enter or click "Search" to run it right away. The search covers all stored knowledge in the library, not just the group you have open. To narrow it down, expand "More Filters":
+
+    - "Content type": "Questions & answers" or "Paragraph Knowledge";
+    - "Knowledge Scope": "All Knowledge Bases", "Enterprise", or "Personal";
+    - "Knowledge Category": restrict results to one group;
+    - "Source": filter by where the knowledge came from (for example, "Document", "Website", or "Supervisor Conversation").
+
+    Key rule: when the keyword is empty and no filter is chosen (scope, category, and source all left at their defaults), the page does not run a query — it shows "Enter a keyword or choose filters to start searching" with the note "To avoid an unscoped query, enter a keyword or choose knowledge scope, group, and source filters." To go straight to a group, browse by clicking its name, or select a "Knowledge Category" filter.
+
+    Applied filters appear above the list ("Applied Filters" — remove them one by one, or click "Clear Filters"). Clicking a result's "Knowledge source" applies a quick filter on that source.
+
+    How to tell it worked: the list returns results under "Knowledge Content / Knowledge source / Knowledge Category / Knowledge Attribute", with "Total N records, Page X / Y" at the bottom; if you searched from Group Structure, "Back to groups" at the top left returns to the group list.
+  </Step>
+
+  <Step title="Edit knowledge, change its category, or delete it">
+    Edit: click "⋯" → "Edit" at the end of the row; the row switches to edit mode — the title becomes an input (placeholder "Enter title") and the body becomes a rich text editor (placeholder "Enter content"). To attach a file to the knowledge, click "Insert File" (up to 100MB per file). After a change, the status at the bottom changes from "No unsaved changes" to "Unsaved changes · Not saved to knowledge", and only then does "Save changes" become clickable. After saving, "Save successful, recalculating match score" appears and the list shows the new content.
+
+    Change category: click the "Knowledge Category" cell in the row (with the folder icon) to open the "Change Category" dialog, pick the target group, and click "Confirm" — the message "Moved N items to the target knowledge group" appears. To move several items at once, select them first (the header checkbox selects only the current page); the "N selected" action bar appears — click "Change Category".
+
+    Prerequisite: before moving items, you must choose "Enterprise" or "Personal" under "More Filters → Knowledge Scope". Left on "All Knowledge Bases", the move is blocked with "Choose Enterprise or Personal in More Filters before moving items to a group". Switching the scope reloads the list and clears the selection, so select items again after setting the scope.
+
+    Delete: row "⋯" → "Delete", then click "Confirm" in the "Confirm Delete" dialog; "Deleted" appears and the item leaves the list for the Recycle Bin. For batch deletion, select items and click "Batch Delete" in the action bar; the dialog asks "Delete N selected items?".
+
+    How to tell it worked: after saving an edit, the list shows the updated title and content; after a move, the row's "Knowledge Category" is the target group; after a delete, the item no longer appears in the list (look it up in the Recycle Bin).
+
+    Note: if you switch away without saving, a "Discard unsaved changes?" dialog appears — "Keep editing" retains your input, and "Discard changes…" drops it and continues the action you started; unsaved content is only parked in the current browser tab.
+  </Step>
+
+  <Step title="Restore or permanently delete items in the Recycle Bin">
+    Click "Recycle Bin" to the right of the search bar; the page shows "View deleted knowledge, restore it, or delete it permanently."
+
+    - Restore one item: click the restore icon at the end of the row and click "Confirm Recover" in the dialog; "Restored" appears and the item returns to the library;
+    - Permanently delete one item: click the delete icon at the end of the row; the "Confirm Permanent Delete" dialog says "Permanently deleting "…" cannot be undone. Continue?" — click "Confirm Permanent Delete" and "Deleted" appears;
+    - Batch: select items to bring up the action bar, then click "Batch Recover" or "Delete Permanently"; the dialogs spell out the count and the consequence ("Restore the selected N items?" / "Permanently deleting N selected items cannot be undone. Continue?").
+
+    When you are done, click "Back to Knowledge List" at the top right to return to the previous list view.
+
+    <Frame>
+      ![Knowledge Management Recycle Bin view: the hint "View deleted knowledge, restore it, or delete it permanently." at the top and the "Back to Knowledge List" button at the top right; each row has restore and permanent-delete icon buttons on the right](/images/en/guide/knowledge/management/02-recycle-bin.jpg)
+    </Frame>
+
+    How to tell it worked: after restoring, the item leaves the Recycle Bin and can be found again by keyword; after permanent deletion it is gone from the Recycle Bin with no way to recover it; when the Recycle Bin is empty it shows "Recycle bin is empty".
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- Group changes: the row shows "Pending" → click "Save group changes" → "Save successful" appears and the mark disappears; a deleted group is removed from the list immediately.
+- Search: with a keyword or filters, the list returns results and shows "Total N records, Page X / Y" at the bottom; with nothing entered it shows "Enter a keyword or choose filters to start searching" and does not pull the whole library.
+- Move: "Moved N items to the target knowledge group" appears and the row's "Knowledge Category" changes to the target group.
+- Delete and restore: a deleted item goes to the Recycle Bin; restoring it shows "Restored" and removes it from the Recycle Bin.
+
+## Important notes
+
+<Warning>
+"Delete Permanently" in the Recycle Bin (including the batch action) cannot be undone — there is no recovery path. Batch actions only touch the rows you selected, so check the number in "N selected" before you confirm.
+</Warning>
+
+<Warning>
+Deleting a group takes effect immediately, with no undo; disabling a group takes its knowledge out of use (applied when you save). Before you proceed, make sure you no longer need that group and its knowledge.
+</Warning>
+
+<Info>
+Keyword searches cover all stored knowledge in the library, not just the group you have open; only a "Knowledge Category" filter narrows the results to one group. The "Default" group is built in and always enabled — it cannot be renamed, deleted, or disabled. Groups can go up to four levels deep.
+</Info>
+
+<Tip>
+When you jump in from "View result" in [Knowledge Generation](/en/guide/knowledge/generation), the results are scoped with "From task: …"; click "View all matching knowledge" next to it to remove the task scope while keeping the other filters. Clicking "Knowledge source" in a result also filters by that source — faster than expanding More Filters by hand.
+</Tip>
+
+## Frequently asked questions
+
+### Why is the list empty — why does nothing come up?
+
+Knowledge Management does not run a query when the keyword is empty and no filter is selected; it shows "Enter a keyword or choose filters to start searching" instead, so it does not pull the whole library without a scope. Enter a keyword, or choose at least one filter under "More Filters" (such as "Knowledge Category" or "Source"), and the list loads. Searching covers the whole library, not just the group you have open.
+
+### Why does "Change Category" say to choose a Knowledge Scope first?
+
+You cannot move items while the scope is "All Knowledge Bases": go to "More Filters → Knowledge Scope" and choose "Enterprise" or "Personal", then select the knowledge to move and click "Change Category". Switching the scope reloads the list and clears the selection, so select the items again after setting the scope.
+
+### Where does deleted knowledge go? Can I still recover it?
+
+"Delete" in the list (single or batch) only moves the item to the Recycle Bin, and it stops appearing in normal searches. Open the Recycle Bin and click the restore icon at the end of the row (or select items and use "Batch Recover") to get it back; after restoring, you can find it again by keyword. "Delete Permanently" in the Recycle Bin is final — once it is gone, it cannot be recovered.
+
+### I added, renamed, enabled, or disabled a group — why doesn't it seem to take effect?
+
+All three kinds of changes apply only after saving: click "Save group changes" at the bottom and wait for "Save successful" to write them. The row's "Pending" mark and the "Enable after saving / Disable after saving" labels then disappear. Deleting a group is the exception: it takes effect as soon as you click "Delete" in the "Delete Knowledge Group" dialog, with no save step.
+
+### Why can't I change the "Default" group? How many levels can groups have?
+
+The "Default" group is built in and always enabled — you cannot rename, delete, or disable it, and its toggle is not clickable; all other groups can be edited and deleted from the "⋯" menu as usual. Groups can go up to four levels; a level-4 group's menu no longer shows "Add Child Group".

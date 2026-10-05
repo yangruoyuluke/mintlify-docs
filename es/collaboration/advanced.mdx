@@ -1,0 +1,153 @@
+---
+title: "Colaboración avanzada y comandos"
+description: "Con los comandos forzados (#) y las sugerencias en lenguaje natural (/) del «Chat del asistente», gestione el estado de trabajo de la IA, sus respuestas en chats grupales y los informes diario y semanal; y sepa dónde corregirla y formarla cuando se equivoca."
+keywords:
+  - "Chat del asistente"
+  - "comandos forzados"
+  - "sugerencias en lenguaje natural"
+  - "informe diario e informe semanal"
+  - "corregir y formar a la IA"
+---
+
+El «Chat del asistente» es el panel de conversación de la barra superior derecha. Además de hacer preguntas, puede escribir `#` en el cuadro de mensaje para abrir los **comandos forzados** (`#work` para iniciar el trabajo, `#stop` para pausarlo, `#help` para ver todos los comandos, etc.) y `/` para abrir las **sugerencias en lenguaje natural** (por ejemplo, «Ayúdame a ordenar las conversaciones de hoy»). Esta página trata dos cosas: resolver las operaciones diarias con comandos y, cuando la IA responde mal o se desvía, corregirla en el lugar correcto y formarla hasta que sea una compañera que entiende mejor el negocio.
+
+## Cuándo la necesitará
+
+- Quiere que la IA empiece o pause el trabajo al momento, o activar y desactivar las respuestas en chats grupales, sin recorrer página por página.
+- Quiere activar o detener los informes diario y semanal de la IA.
+- Solo necesita añadir un conocimiento clave, sin pasar por subir un documento y generar una tarea.
+- La IA responde con imprecisión, confunde identidades o habla en un grupo donde no debería; hay que encontrar el lugar exacto para corregirla.
+
+## Ruta de acceso
+
+Barra superior a la derecha → «Chat del asistente» (la ayuda emergente dice «Abrir el chat del asistente de administración»). El panel se abre desde la derecha de la página, su título es «Chat del asistente de administración» y el cuadro de mensaje está en la parte inferior. No está vinculado a la «Ventana de conversación actual» de la izquierda.
+
+<Warning>
+La nota de alcance, en la parte superior del panel, dice: «Esta entrada no está vinculada a la ventana de conversación seleccionada en la página. No puede confirmar que la configuración de la ventana está en vigor.». Para validar la configuración de una ventana de conversación, pruebe con una conversación real de ese canal; no saque conclusiones de las respuestas de este panel.
+</Warning>
+
+## Pasos
+
+<Steps>
+  <Step title="Abra el panel y reconozca el alcance de la conversación">
+    Al abrirlo, revise primero el área de conversación y el cuadro de mensaje. Cuando no hay mensajes previos, el área muestra: «Converse aquí con el asistente de administración. Se utiliza el servicio de chat existente y la ventana seleccionada en esta página no se usa como destino de prueba.».
+
+    Cómo verificarlo: el título dice «Chat del asistente de administración» y el texto de marcador del cuadro de mensaje es «Por favor, introduzca su pregunta».
+
+    Nota: cambiar de página o cambiar la «Ventana de conversación actual» no modifica el alcance de este panel.
+  </Step>
+
+  <Step title="Escriba «#» para abrir los comandos forzados y envíelos">
+    Escriba `#` en el cuadro de mensaje y encima de él aparecerá la lista de comandos, con todos los comandos forzados y su texto descriptivo. Muévase con `↑` `↓`, seleccione con `Enter` y cierre la lista con `Esc` o con un clic fuera del cuadro; también puede seleccionar con el ratón. Al seleccionar, el comando se escribe en el cuadro de mensaje; para enviarlo, pulse `Enter` de nuevo o el botón de enviar de la esquina inferior derecha. Si sigue escribiendo letras (por ejemplo, `#w`), la lista se filtra.
+
+    Cómo verificarlo: en la conversación aparecen su comando y la respuesta de la IA; cuando el asistente responde con varios elementos, estos se muestran por separado, y mientras espera se lee «La IA está pensando…».
+
+    Nota: con la lista desplegada, `Enter` selecciona el comando, no lo envía; si el envío falla, aparece un aviso de error (con el motivo que devuelve el servidor, como «No se pudo enviar el mensaje. Inténtelo de nuevo.»), ese mensaje se quita del historial de la conversación y tendrá que volver a escribir y enviar el mensaje original.
+  </Step>
+
+  <Step title="Elija el comando según lo que necesite">
+    La lista contiene estos comandos; el texto descriptivo es el que muestra la interfaz:
+
+    | Comando | Texto de la lista |
+    | --- | --- |
+    | `#work` | Inicio del trabajo |
+    | `#stop` | Trabajo de pausa |
+    | `#enable_hot_assistant` | Activar respuesta de chat de grupo |
+    | `#disable_hot_assistant` | Desactivar las respuestas en chats grupales |
+    | `#enable_daily_report` | Activar el informe diario |
+    | `#disable_daily_report` | Desactivar el informe diario |
+    | `#enable_weekly_report` | Habilitar el informe semanal |
+    | `#disable_weekly_report` | Desactivar el informe semanal |
+    | `#chatknowledge` | Añadir un conocimiento |
+    | `#help` | Ver todos los comandos |
+
+    Memorícelos en cuatro grupos:
+
+    - Estado de trabajo: `#work` inicia el trabajo y `#stop` lo pausa. Úselos para que la IA empiece o se detenga de forma temporal.
+    - Respuestas en chats grupales: `#enable_hot_assistant` las activa y `#disable_hot_assistant` las desactiva.
+    - Informes diario y semanal: `#enable_daily_report` / `#disable_daily_report` controlan el informe diario, y `#enable_weekly_report` / `#disable_weekly_report`, el informe semanal. El informe diario y el semanal son resúmenes de trabajo que la IA genera por día o por semana; si no los necesita, recuerde detenerlos con el comando de desactivación.
+    - Conocimiento y ayuda: `#chatknowledge`, para añadir un solo conocimiento — úselo cuando solo quiera completar un dato clave; después de enviarlo, siga las indicaciones del asistente y complete el contenido en la conversación, sin subir documentos. `#help`, para ver todos los comandos — envíelo primero cuando no recuerde la lista completa.
+
+    Cómo verificarlo: la IA responde al comando; confirme en esa respuesta si se ejecutó como esperaba.
+  </Step>
+
+  <Step title="Escriba «/» para resolver cosas con sugerencias en lenguaje natural">
+    Al escribir `/` aparecen cuatro sugerencias en lenguaje natural; elija cualquiera y aún puede reescribirla antes de enviarla:
+
+    - Ayúdame a ordenar las conversaciones de hoy
+    - Generar el informe de trabajo de esta semana
+    - Mostrar el rendimiento del negocio de la semana pasada
+    - Ayúdame a activar las respuestas automáticas en chats grupales
+
+    Cómo verificarlo: después de enviarla, aparece una respuesta de la IA en la conversación.
+
+    Nota: estas sugerencias son peticiones de una frase para el asistente y, al seleccionarlas, se convierten en un mensaje normal; puede adaptar el período, el destinatario y otros datos a su situación antes de enviarlo.
+  </Step>
+
+  <Step title="Gestione imágenes e historial de conversación">
+    - Pulse «Adjuntar imagen», a la izquierda debajo del cuadro de mensaje, para elegir imágenes y enviarlas junto con el mensaje. Mientras se suben, el botón de enviar está deshabilitado; si pulsa `Enter` en ese momento, aparece «Las imágenes se están subiendo. Espere un momento…»; si la carga falla, el error se marca en la vista previa y aparece un aviso.
+    - «Borrar conversación», en la esquina superior derecha del panel, borra todo el historial de esta conversación. El cuadro de confirmación dice «¿Seguro que desea borrar todos los mensajes de la conversación actual? Esta acción no se puede deshacer.» y, al confirmar, aparece «Historial de conversación borrado.».
+
+    Cómo verificarlo: las imágenes aparecen en la vista previa, encima del cuadro de mensaje, y tras enviarlas se ven en su propia burbuja de mensaje.
+  </Step>
+</Steps>
+
+## Corrección y formación: dónde corregir a la IA
+
+Que la IA acierte no depende de la intuición, sino de los registros. Abra esa consulta en [Revisión detallada](/es/guide/dashboard/data-export) y revise el «Conocimiento de referencia» y los «Pasos de ejecución» (el orden es: contexto de la conversación en ese momento → procesamiento de chat grupal → decisión → invocación de habilidades → generación de conocimientos → control de seguridad) para determinar si el problema está en el conocimiento, en las reglas o en la identificación de identidades; después, corrija en el lugar correcto según la tabla:
+
+| Lo que ve | Dónde corregirlo | Qué hacer |
+| --- | --- | --- |
+| Un conocimiento nuevo que la IA aprendió no es adecuado | Base de conocimientos → [Optimización de conocimientos](/es/guide/knowledge/optimization) → «Pendiente de revisión» | Pulse «Aprobar» o «Descartar»: la acción individual surte efecto de inmediato y no pide una segunda confirmación; también puede pulsar el cuerpo, editarlo y guardar. Salvo el «Aprendizaje automático», que exige revisión manual, los demás conocimientos se aprueban automáticamente si no se procesan en 24 horas. |
+| La IA no supo responder y, tras derivar la pregunta al supervisor, tampoco hubo respuesta | Base de conocimientos → [Optimización de conocimientos](/es/guide/knowledge/optimization) → «Pendiente de respuesta» (aún no está habilitada en todos los entornos) | Estas consultas entran en la cola «Pendiente de respuesta» (la IA no respondió, se derivó al supervisor y el supervisor no contestó). Pulse «Confirmar», escriba una respuesta y la consulta sale de la cola; si no va a procesarla, pulse «Ignorar». |
+| Un conocimiento ya guardado está mal escrito | Base de conocimientos → [Gestión de conocimientos](/es/guide/knowledge/management) | Busque ese conocimiento y edite su contenido, use «Cambiar grupo» o elimínelo. En las operaciones por lotes, los filtros delimitan exactamente lo que se modifica; la eliminación definitiva no se puede recuperar. |
+| La forma de tratar cierto tipo de tareas no es la correcta | [Biblioteca de habilidades](/es/guide/skills/library) | Modifique «Cuándo utilizarlo» y «Cómo debe actuar la IA», o ajuste los «Tipos de conversación» («Conversaciones de supervisor» / «Conversaciones de clientes»). Las habilidades integradas son de solo lectura. |
+| En una respuesta aparece algo que no debería decirse | Configuración de respuestas → [Controles de seguridad](/es/guide/response/safety-guardrails) | Añada una regla; en «Método de detección» elija «Coincidencia exacta de palabras clave» o «Evaluación semántica mediante el modelo», y decida en «¿Bloquear la respuesta?» si se bloquea o no, además de la «Notificación del líder». El método de detección no puede cambiarse después de crear la regla y cada ventana de conversación solo admite una regla de evaluación semántica. |
+| Las respuestas a preguntas fijas siempre fallan | Configuración de respuestas → [Reglas de respuesta](/es/guide/response/reply-rules) | Añada una regla en «Respuesta directa por palabras clave»: las consultas que coincidan con la palabra clave reciben directamente el contenido fijo, sin pasar por la generación de la IA. Las reglas se evalúan en orden y se envía la primera coincidencia. |
+| La IA trata a un compañero como cliente, o habla en grupos donde no debería | Mi asistente → [Relaciones](/es/guide/assistant/relationship-config) | Establezca el contacto o el grupo como «Cliente», «Compañero», «Silenciado» o «Supervisor»; la relación «Supervisor» es además un requisito previo para la entrega de la «Notificación activa de eventos clave». Si la IA no reconoce en absoluto al supervisor o al compañero, genere primero un código de autorización en [Autorización de identidad de IA](/es/guide/account/ai-authorization) y pida a esa persona que envíe a la cuenta de IA el código con el prefijo `#` para completar la vinculación. |
+| El tono, el trato o el perfil no son los correctos | Mi asistente → [Perfil base](/es/guide/assistant/persona) | Cambie el «Estilo de la IA» o reescriba la instrucción principal de «Instrucciones personalizadas». Después de guardar, todavía debe confirmarse que el servicio la haya aplicado. |
+
+Para verificar los cambios: observe en [Rendimiento del negocio](/es/guide/dashboard/business-performance) la evolución de «Sugerencias» (número de resúmenes de preguntas que el asistente de IA remite al supervisor) y «Conocimientos aprendidos» (conocimiento que la IA aprende automáticamente), y vuelva al canal para enviar un mensaje real y probar de nuevo. Revisar cada día «Pendiente de revisión» y «Pendiente de respuesta» de [Optimización de conocimientos](/es/guide/knowledge/optimization) cuesta menos que acumular una tanda y corregirla después.
+
+## Puntos de verificación
+
+- Al escribir `#` se ve la lista completa de comandos y al escribir `/`, las cuatro sugerencias en lenguaje natural; al enviar `#help` se ven todos los comandos en la conversación.
+- Después de enviar un comando, en la conversación aparecen su mensaje y la respuesta de la IA (los elementos múltiples se muestran uno por uno).
+- Puede explicar la relación entre el «Chat del asistente» y la «Ventana de conversación actual»: no está vinculado a la ventana y no puede sustituirla para validar su configuración.
+- Cuando la IA se equivoca, puede decidir por el síntoma si debe corregir en Optimización de conocimientos, Gestión de conocimientos, Biblioteca de habilidades, Controles de seguridad, Reglas de respuesta o Relaciones.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+«Borrar conversación» no se puede deshacer. El cuadro de confirmación dice «¿Seguro que desea borrar todos los mensajes de la conversación actual? Esta acción no se puede deshacer.»; borrar solo afecta al historial de conversación de este panel.
+</Warning>
+
+<Info>
+La lista de comandos es la que aparece al escribir `#`; enviar `#help` también muestra todos los comandos. Los nombres de los comandos (como `work` o `enable_daily_report`) tienen una ortografía fija; el texto descriptivo de la lista cambia con el idioma de la interfaz.
+</Info>
+
+<Tip>
+Los comandos sirven para operar rápido; la configuración de largo plazo por ventana sigue haciéndose en sus páginas correspondientes: «Perfil base», «Reglas de respuesta» y «Controles de seguridad» se guardan por «Ventana de conversación actual», mientras que el «Chat del asistente» no está vinculado a ninguna ventana.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué no aparece la lista de comandos al escribir «#»?
+
+Compruebe que `#` sea el primer carácter del cuadro de mensaje: la lista solo se abre cuando el texto empieza por `#` o `/`; con la lista desplegada, `Esc` o un clic fuera del cuadro la cierran. Además, mientras la IA responde (se lee «La IA está pensando…»), el cuadro de mensaje está deshabilitado; espere a que termine la respuesta para escribir.
+
+### Si en el «Chat del asistente» todo va bien, ¿por qué la IA de la ventana real sigue fallando?
+
+Porque este panel no está vinculado a la ventana de conversación seleccionada y sus conversaciones no sirven para validar la configuración de una ventana. Para validar la configuración de una ventana, pruébela con mensajes reales de ese canal; para investigar cómo se procesó una consulta, abra [Revisión detallada](/es/guide/dashboard/data-export) y consulte sus «Pasos de ejecución» y su «Conocimiento de referencia».
+
+### ¿Adónde van las preguntas que la IA no supo responder y cómo las completo?
+
+La IA envía un resumen de la pregunta al supervisor (las «Sugerencias» de [Rendimiento del negocio](/es/guide/dashboard/business-performance) contabilizan esas derivaciones); las que el supervisor nunca responde entran en la cola «Pendiente de respuesta» de [Optimización de conocimientos](/es/guide/knowledge/optimization) (aún no está habilitada en todos los entornos; si no la ve en la interfaz, su entorno todavía no la ofrece). Allí, pulse «Confirmar» y escriba una respuesta: la pregunta sale de la cola y pasa a ser conocimiento disponible; si no necesita procesarla, pulse «Ignorar».
+
+### Si cambio el idioma de la interfaz, ¿los comandos siguen funcionando?
+
+Sí. Los nombres de los comandos tienen una ortografía fija (por ejemplo, `#enable_weekly_report`) y el texto descriptivo de la lista cambia con el idioma de la interfaz; si no está seguro de qué hace un comando, consulte la descripción en la lista o envíe `#help`.
+
+### ¿Qué borra «Borrar conversación»?
+
+Solo el historial de conversación de este panel, y no se puede deshacer; la configuración del sistema no se ve afectada. Si necesita conservar algún criterio de juicio (por ejemplo, la conclusión de una corrección), ajuste antes el conocimiento o la regla en su página correspondiente y borre la conversación después.

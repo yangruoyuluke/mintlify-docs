@@ -1,0 +1,142 @@
+---
+title: The MarsMind method
+description: Onboard the AI like a digital coworker — set the scenarios and boundaries first, train it on real conversations, answer when it asks, and review on a schedule, so service quality improves round after round.
+keywords:
+  - MarsMind method
+  - digital coworker
+  - AI onboarding
+  - scenarios and boundaries
+  - real conversation training
+  - regular review
+---
+
+MarsMind's AI is a digital coworker that comes to do real work, but it is not a tool that improves on its own the moment you connect it: you draw the line on what it handles and what it does not, feed and correct it with real conversations, answer when it asks, and review the data on a schedule to decide what to teach next. This page breaks that loop into four stages, each tied to specific pages in the admin console. For how to direct it in chat, see [Working side by side with your AI](/en/collaboration/basics); for the commands in detail, see [Advanced collaboration and commands](/en/collaboration/advanced).
+
+## When you'll need this
+
+- You just connected your first communication window and want the AI serving real customers soon, without making a mess while it learns.
+- The AI has been live for a while: some questions it answers well, others it keeps getting wrong, and you want to know where to start fixing it.
+- You are about to expand service to more channels or lines of business and want the AI steady in one scenario before you copy the setup over.
+- You want a routine for day-to-day maintenance: what to do in a few minutes each day and each week.
+
+## How to get there
+
+This method spans several modules, used stage by stage:
+
+- Set scenarios and boundaries: left menu → My Assistant (Channel Login, Base Persona, Relationships), Response Settings (Reply Rules, Safety Guardrails, New Contact Setup, Service Time).
+- Teach it knowledge and skills: left menu → Knowledge Base (Knowledge Generation, Knowledge Optimization, Knowledge Management), Skills Library.
+- See how it is doing: left menu → Data Dashboard → Performance, Detail Review.
+- Talk to it directly and give commands: top bar, right side → "Assistant Chat".
+
+The settings under My Assistant and Response Settings follow the "Selected window" on the left — pick the wrong window and you are changing another channel's configuration.
+
+## Steps
+
+<Steps>
+  <Step title="Set scenarios and boundaries first: keep the scope small and the red lines clear">
+    Onboard one scenario at a time: pick a single channel (WeChat, WeCom, Website link, Mini Program, or Official Account) and one line of business (pre-sales inquiries, for example). Do not bring several windows online at once.
+
+    1. Connect a window: My Assistant → [Channel Login](/en/guide/assistant/login-online) → "Create New Communication Channel" in the top-right corner. Only a "Working" status means it is serving customers; "Pending" means sign-in or authorization is not finished yet.
+    2. Define who it is and how it speaks: My Assistant → [Base Persona](/en/guide/assistant/persona). Under "AI Style", choose "Detailed and polite" or "Flexible and concise" (selecting saves immediately); in the Main Prompt under "Custom Instructions", write the AI's identity, service scope, and reply principles, then click "Save Configuration".
+    3. Decide what happens when it is unsure: Response Settings → [Reply Rules](/en/guide/response/reply-rules). Under "What to reply when AI does not know", write the fallback text and click "Save reply text", then turn on "Use a fixed reply"; under "Key Event Active Reporting", spell out which situations to report to the supervisor and in what format.
+    4. Decide where it should stay quiet: on the same page, write the rules for "Smart Group Chat" under "Questions That Need Reply" and "Questions That Do Not Need Reply" (only effective in WeChat and WeCom channels); if you handle friend requests, also configure Auto Accept Friend Request, welcome messages, and Lead Capture Rules in [New Contact Setup](/en/guide/response/new-customer-reception).
+    5. Set the red lines: Response Settings → [Safety Guardrails](/en/guide/response/safety-guardrails). Click "Add rule", choose "Exact keyword match" or "Semantic model judgment" as the detection method, set "Block reply?", and for a match that is not blocked, write the reply content to send to the customer; when needed, set "Leader notification" to "Notify Leader".
+    6. Set the hours you promise customers: Response Settings → [Service Time](/en/guide/response/working-hours). Arrange the weekly schedule and click "Save working hours". The service hours you communicate externally are the ones set here (times follow a fixed UTC offset and do not shift with daylight saving time).
+
+    How to tell it worked: Base Persona and Reply Rules show no "Unsaved" status left, and "Save working hours" has been clicked; then send a few messages through a real channel covering the three cases — one it can answer, one it cannot, and one that may trip a red line — and every reply follows the rules you set.
+
+    Note: switch changes save instantly, while text content needs its save button. A guardrail's detection method cannot be changed after the rule is created — changing it means deleting and recreating the rule; only one "Semantic model judgment" rule is allowed per window. When the AI first goes live, pilot it on real conversations at a small scale and open up the volume only after the boundaries hold.
+  </Step>
+
+  <Step title="Train it on real conversations: solve one type of problem at a time">
+    Training material comes from real customers, not imagined Q&A. Work in this order — first see how it handled the case, then decide what to change:
+
+    1. See where it gets stuck: Data Dashboard → [Detail Review](/en/guide/dashboard/data-export), filter as needed (time, user/group, intent category, and so on), and open an inquiry to view its "Message Processing Chain": first check whether "Reference Knowledge" retrieved anything relevant, then check where the "Execution Steps" stopped (Conversation Context → Group Handling → Reply Decision → Skill Invocation → Knowledge Generation → Safety Guardrail).
+    2. Add knowledge: Knowledge Base → [Knowledge Generation](/en/guide/knowledge/generation). "Generate from Document" suits material you already have (up to 100MB per file; submitting opens a "Confirm Credits Consumption" dialog at 100 credits per document); "Generate from Webpage" suits your website and help pages; for Q&A you have already written, use "Add Ready Knowledge". After you submit, follow the task in "Generation history", and once it shows "Processing complete", click "View result" to continue.
+    3. Handle what it learned and what it could not answer: Knowledge Base → [Knowledge Optimization](/en/guide/knowledge/optimization). In "Pending review", "Approve" or "Discard" each item; in "Needs answer", fill in the answer box ("Enter an answer ready to send to customers") and click "Confirm" (this view is not enabled in every environment). For questions that keep coming up, revise the answer and category directly under "Recent frequent questions" (if enabled).
+    4. Change how it handles things: for process questions (which steps to follow, which tools to use), edit "When to use it" and "How AI should handle it" in the [Skills Library](/en/guide/skills/library); when a fixed question keeps going wrong, set up the fixed content in Reply Rules → "Keyword Direct Reply" — a match is sent directly and no longer goes through AI generation.
+    5. Fix its judgments: wrong identity recognition goes to [Relationships](/en/guide/assistant/relationship-config); misjudging what to answer and what to skip goes back to Reply Rules → "Smart Group Chat"; the wrong tone or form of address goes back to Base Persona and the Main Prompt.
+
+    Tips for writing answers: phrase questions the way customers actually ask them, and write answers as words you could send to a customer directly — not in the tone of an internal document. And do not correct it with just a "that's wrong" in chat — write the correct wording into knowledge or rules; that is what actually teaches it.
+
+    How to tell it worked: retest the same kind of question with a real message — a question it once could not answer is no longer handed to a human; the knowledge you added turns up in a search in [Knowledge Management](/en/guide/knowledge/management); and a reply's processing maps to "Reference Knowledge" or "Execution Steps" in Detail Review.
+
+    Note: "Processing complete" only means the task finished — it does not mean the knowledge is stored yet; discarded knowledge is not stored and there is no undo; saving "Keyword Direct Reply" overwrites the entire rule set, and its order is the match order.
+  </Step>
+
+  <Step title="When it is unsure, it asks: make that a routine">
+    Customer questions the AI is not sure about are forwarded to the supervisor (this is what "Suggestions" in [Performance](/en/guide/dashboard/business-performance) counts); depending on how "Key Event Active Reporting" is configured, it also reports proactively.
+
+    1. First make sure someone can catch them: bottom-left "Account settings" → "[AI identity access](/en/guide/account/ai-authorization)" to generate a "Supervisor Authorization Code" (copying gives it the `#` prefix), then ask the supervisor to send it to the AI account from their own phone; alternatively, set the recipient to "Supervisor" in [Relationships](/en/guide/assistant/relationship-config). At the same time, return to Reply Rules and confirm "Key Event Active Reporting" is enabled and saved.
+    2. Answer as soon as a question reaches you: reply directly in the conversation, or go to Knowledge Base → Knowledge Optimization → "Needs answer", fill in the answer, and click "Confirm" — the answer is stored as knowledge, so the AI has a basis for the next similar question.
+    3. Questions no one answers collect under "Needs answer". Clear them regularly; do not let them pile up.
+
+    How to tell it worked: the supervisor receives the AI's questions and reports; "Suggestions" in Performance shows data; and the count under "Needs answer" is going down.
+
+    Note: to receive questions, the recipient must be a "Supervisor" in the AI's eyes — they have sent the Supervisor Authorization Code, or they are set as "Supervisor" in Relationships. For the same AI account, the last code received wins, and the supervisor and colleague identities overwrite each other.
+  </Step>
+
+  <Step title="Review on a schedule: let the data decide what to teach next">
+    A review is not about whether the totals went up — it is about finding the next thing to teach. Start with this cadence, then adjust it to your message volume:
+
+    | Cadence | What to review | Where |
+    | --- | --- | --- |
+    | Daily | Clear Pending review and Needs answer; handle knowledge from "Auto Learning" first | Knowledge Base → Knowledge Optimization |
+    | Weekly | How Core Metrics, Suggestions, and Learned Items are moving; spot-check the processing chain of a few replies | Data Dashboard → Performance, Detail Review |
+    | Monthly | Remaining credits and monthly consumption; update the persona and rules when the business changes | [AI Usage](/en/guide/dashboard/ai-usage) (visible to department admins only), My Assistant, Response Settings |
+
+    Before reading Performance, get the two scopes straight: the Core Metrics cards show the selected single period (one day, one week, or one month), while the trends, rate changes, Suggestions, and Learned Items use a sampled range — the two cannot be compared directly. Messages Received, Inquiries, and Replies overlap and cannot be added together. Click "Metric Guide" at any time to check a definition.
+
+    Once the review has a conclusion, go back to the matching stage and act: questions that keep going to a human go into the knowledge base or get pinned with "Keyword Direct Reply"; replies that cross the line need a guardrail rule or a Relationships adjustment; the wrong tone means editing the Main Prompt.
+
+    How to tell it worked: you can say which type of question the AI struggled with most this week and what you will change first; the change has been retested with a real message; and the next review looks at the same chart to see what moved.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- Every window that is running has clear boundaries: Base Persona and Reply Rules are saved, the weekly schedule is arranged and saved, guardrail rules are configured, and all of it has been verified with real messages.
+- The replies you spot-checked recently can be traced in Detail Review to their "Reference Knowledge" and "Execution Steps".
+- Knowledge Optimization has no long-standing backlog: Pending review (especially items from "Auto Learning") and Needs answer have both been cleared.
+- The supervisor receives the AI's questions and reports; Suggestions and Learned Items show data in Performance.
+- Each review ends with one concrete conclusion: what to teach next.
+
+## Important notes
+
+<Warning>
+  Know the consequences before you act: discarded knowledge is not stored and cannot be undone; "Take offline" stops automatic service in that window, and bringing it back online requires scanning the QR code again; a "Keyword Direct Reply" match skips AI generation entirely, and saving overwrites the entire rule set. Authorization codes are identity credentials — send them only to the person concerned and the AI account.
+</Warning>
+
+<Info>
+  The AI's self-learning needs your oversight: among the knowledge learned automatically from conversations (the "Learned Items" metric), items whose source is "Auto Learning" require manual review; the rest are approved automatically if left untouched for 24 hours — doing nothing means accepting them by default.
+</Info>
+
+<Info>
+  Verify configurations through a real channel: "Assistant Chat" in the top bar is not bound to the communication window selected on the page, so its replies cannot tell you whether a window's configuration is in effect.
+</Info>
+
+<Tip>
+  Do not wait for perfect training material: start with one set of real conversations and a batch of frequent Q&A you already have (see [Activation and preparation](/en/quick-start/preparation)), then fill the gaps the pilot exposes. When the same question keeps coming up, handle it first — add it to the knowledge base, or pin it as a "Keyword Direct Reply".
+</Tip>
+
+## Frequently asked questions
+
+### Do the four stages have to be done in order?
+
+For your first onboarding, follow the order: set boundaries before opening up service, then move into the train → ask → review loop. It is not a one-way flow — when a review turns up a problem, go back to the matching stage and handle it. If you just want the smallest loop working first, see [30-minute quick start](/en/quick-start/quick-start).
+
+### I updated the knowledge but the AI still answers wrong — how do I locate the problem?
+
+Open that inquiry in Detail Review and check where the "Execution Steps" stopped and what the "Reference Knowledge" retrieved: if the knowledge was not retrieved or is wrong, fix it in Knowledge Optimization or Knowledge Management; if it misjudged whether a group message needed a reply, go to Reply Rules → "Smart Group Chat"; if it misidentifies a person, go to Relationships; if a reply crosses the line, add a Safety Guardrails rule. For the full symptom → fix table, see [Advanced collaboration and commands](/en/collaboration/advanced).
+
+### What do "Suggestions" and "Learned Items" tell me?
+
+"Suggestions" is the number of question summaries the AI forwarded to supervisors — a high value means the AI is often unsure, and those are exactly the next batch of knowledge to add. "Learned Items" is the number of knowledge items the AI learned automatically from conversations. Both use the sampled-range scope, and a rise or fall does not mean quality is better or worse — do not judge by the movement alone.
+
+### I train on real conversations — will customer information leak?
+
+Detail Review contains customer communication content: before exporting, screenshotting, or forwarding it, confirm the recipient is authorized to view it; send authorization codes only to the person concerned and the AI account. Before writing content into the knowledge base, confirm it is suitable to be used as customer-facing wording.
+
+### Can I just ignore Pending review?
+
+That amounts to accepting everything by default. Apart from items from "Auto Learning", which must be reviewed manually, other items are approved automatically within 24 hours and enter the usable knowledge. To control what the AI uses, "Approve" or "Discard" items yourself before the automatic approval happens.

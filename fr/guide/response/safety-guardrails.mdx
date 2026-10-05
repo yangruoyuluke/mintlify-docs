@@ -1,0 +1,137 @@
+---
+title: Garde-fous de sécurité
+description: "Évaluez le risque par règle avant l’envoi d’une réponse de l’IA : bloquez les réponses qui correspondent, envoyez à la place le contenu que vous avez rédigé à l’avance, et notifiez éventuellement le Leader."
+keywords:
+  - Garde-fous de sécurité
+  - Règles de garde
+  - Analyse sémantique par le modèle
+  - Correspondance stricte avec les mots-clés
+  - Blocage des réponses
+  - Notification au Leader
+---
+
+« Garde-fous de sécurité » effectue un dernier contrôle avant l’envoi des réponses de l’IA : une réponse qui déclenche une règle est bloquée ou remplacée par le contenu que vous avez rédigé à l’avance, et le Leader (le superviseur) peut être notifié en même temps. Les règles sont enregistrées par « Fenêtre de conversation gérée actuellement » et ne s’appliquent qu’à la fenêtre sélectionnée.
+
+## Quand en avez-vous besoin ?
+
+- L’IA affirme parfois au client des choses inexactes, du type « Je vous ai ajouté au groupe » ou « J’ai déjà vérifié » : vous voulez bloquer ces réponses.
+- Pour les sujets sensibles — réclamations, remboursements, questions juridiques —, vous voulez que l’IA en dise moins ou passe la main à un humain : bloquez la réponse et notifiez le Leader.
+- Dans certains cas, vous ne voulez pas laisser l’IA improviser : envoyez directement votre formulation figée dès que la condition correspond.
+- Une nouvelle fenêtre vient d’être mise en ligne : commencez par une ligne de défense pour les scénarios à risque.
+
+## Comment y accéder ?
+
+Menu de gauche → Paramètres de réponse → Garde-fous de sécurité. À l’ouverture, vérifiez d’abord la « Fenêtre de conversation gérée actuellement », en haut à gauche de la barre latérale (sous le logo) : les règles de garde sont enregistrées par fenêtre, et un changement de fenêtre affiche un autre jeu de règles. Lorsqu’aucune fenêtre n’est sélectionnée, la page affiche « Aucune fenêtre de conversation disponible », « Connectez-vous et mettez en ligne une fenêtre de conversation autre que celle de l’administration avant de poursuivre la configuration. » et le bouton « Se connecter et mettre en ligne » : connectez d’abord une fenêtre via [Connexion aux canaux](/fr/guide/assistant/login-online).
+
+<Frame>
+  ![Page « Garde-fous de sécurité » : en haut, la carte « Règles de garde » avec le badge du nombre de règles (« Règles 2 ») et le bouton « Ajouter une règle » ; en dessous, les règles numérotées avec leur méthode de détection, leur condition de déclenchement, le blocage ou non de la réponse et la notification au Leader](/images/fr/guide/response/safety-guardrails/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Confirmer la « Fenêtre de conversation gérée actuellement »">
+    Les règles ne s’appliquent que dans la fenêtre à laquelle elles appartiennent. Avant d’en ajouter, vérifiez que la « Fenêtre de conversation gérée actuellement », en haut à gauche de la barre latérale (sous le logo), est bien celle à configurer.
+
+    Critère : le nom de la fenêtre correspond à celle que vous voulez configurer.
+  </Step>
+
+  <Step title="Cliquer sur « Ajouter une règle » et choisir la méthode de détection">
+    Cliquez sur « Ajouter une règle » en haut à droite de la page (si la liste est vide, le bouton se trouve dans l’état vide, au centre de la page), puis choisissez l’une des deux méthodes de détection :
+
+    - Analyse sémantique par le modèle : décrivez le scénario en langage naturel ; le modèle juge si la réponse générée par l’IA correspond.
+    - Correspondance stricte avec les mots-clés : saisissez des mots ou expressions explicites ; la règle se déclenche dès que la réponse générée par l’IA contient l’une des balises.
+
+    Une fois votre choix fait, une carte « Règle N » apparaît dans la liste, avec le badge « Non enregistré » à droite du titre ; la carte passe en mode édition.
+
+    <Frame>
+      ![Menu déroulant ouvert depuis « Ajouter une règle » : les options « Analyse sémantique par le modèle » et « Correspondance stricte avec les mots-clés » avec leur description ; l’option de modèle est grisée et rappelle qu’une règle de modèle existe déjà](/images/fr/guide/response/safety-guardrails/02-add-rule.jpg)
+    </Frame>
+
+    Remarque : la méthode de détection ne peut plus être modifiée après la création — la page affiche « Verrouillé après la création. Supprimer et recréer la règle pour la modifier. » ; chaque fenêtre ne peut contenir qu’une seule règle d’analyse sémantique : si une règle de modèle existe déjà, cette option est indisponible et le menu déroulant affiche « Une règle de modèle existe déjà; conservez tous les scénarios de modèle dans cette règle unique. ».
+  </Step>
+
+  <Step title="Renseigner la condition de déclenchement">
+    Correspondance stricte avec les mots-clés : saisissez des mots dans le champ « Déclencher les mots-clés », puis appuyez sur Entrée (ou sur une virgule, un point-virgule) pour créer une balise ; les listes collées sont découpées et dédoublées automatiquement. Choisissez ensuite la « Correspondance » (par défaut « Au moins un mot-clé ») : « Au moins un mot-clé » déclenche dès qu’un mot correspond ; « Tous les mots clés » exige que tous soient présents.
+
+    Analyse sémantique par le modèle : dans « Condition de l’analyse sémantique », décrivez clairement l’intention, le scénario ou la limite à reconnaître, sans empiler les mots-clés. Par exemple : « la réponse générée par IA promet une compensation ou rend un jugement juridique ».
+
+    Critère : les mots-clés apparaissent sous forme de balises dans le champ, ou la condition de l’analyse sémantique est renseignée.
+  </Step>
+
+  <Step title="Choisir s’il faut bloquer la réponse">
+    « Bloquer la réponse ? » détermine le sort de la réponse en cas de déclenchement :
+
+    - Bloquer : cette réponse de l’IA n’est pas envoyée.
+    - Ne pas bloquer : le « Contenu des réponses » que vous avez rédigé est envoyé à la place. Vous pouvez saisir du texte ; « Insérer un fichier » permet d’importer une image ou un fichier, et les pièces jointes apparaissent comme des blocs colorés dans la zone de saisie.
+
+    Après avoir choisi « Ne pas bloquer », la zone « Contenu des réponses » apparaît en dessous : il faut au moins du texte ou une pièce jointe.
+
+    Critère : « Bloquer la réponse ? » est renseigné ; si vous avez choisi « Ne pas bloquer », le « Contenu des réponses » n’est pas vide.
+
+    Remarque : repasser « Bloquer la réponse ? » de « Ne pas bloquer » à « Bloquer » efface le contenu déjà saisi ; en revenant à « Ne pas bloquer », il faudra le ressaisir.
+  </Step>
+
+  <Step title="Choisir la « Notification au Leader » et enregistrer">
+    Pour « Notification au Leader », choisissez « Notifier le Leader » ou « Ne pas notifier », puis cliquez sur « Enregistrer » en haut à droite de la carte.
+
+    Critère : le message « Cette règle de sécurité a été enregistrée. » apparaît et le badge devient « Enregistré ».
+
+    Remarque : si des champs obligatoires sont incomplets, « Enregistrer » affiche « Remplissez les champs requis dans cette règle » ; « Annuler » abandonne les modifications en cours — une règle déjà enregistrée retrouve son contenu du dernier enregistrement, et une nouvelle règle jamais enregistrée est supprimée.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- La « Fenêtre de conversation gérée actuellement » à gauche est bien la fenêtre à configurer.
+- Aucune carte de la liste n’affiche « Non enregistré » ni « Édition » : toutes les modifications sont enregistrées.
+- Pour les règles où « Bloquer la réponse ? » vaut « Ne pas bloquer », le « Contenu des réponses » contient du texte ou une pièce jointe.
+- Envoyez dans une vraie conversation de cette fenêtre un message qui déclenche la condition : avec « Bloquer », l’IA n’envoie pas la réponse ; avec « Ne pas bloquer », le client reçoit le contenu configuré ; avec « Notifier le Leader », le superviseur confirme la réception de la notification.
+
+## Points d’attention
+
+<Warning>
+La suppression d’une règle est irréversible. Pour une règle enregistrée, « Supprimer » ouvre la confirmation « Supprimer cette règle ? » : après « Supprimer la règle », elle est retirée immédiatement de la fenêtre de conversation et ne peut pas être restaurée. Une nouvelle règle non enregistrée est supprimée directement par « Supprimer », sans confirmation.
+</Warning>
+
+<Warning>
+Tant qu’une règle n’est pas enregistrée, impossible de quitter la page directement : changer de menu, de fenêtre ou revenir à la page précédente ouvre la confirmation « Ignorer les modifications non enregistrées ? » — choisissez « Continuer à modifier » pour revenir la terminer, ou cliquez sur « Enregistrer » / « Annuler » sur la carte avant de partir. L’actualisation ou la fermeture de l’onglet déclenche la confirmation de sortie du navigateur et vous retient de la même façon.
+</Warning>
+
+<Info>
+Dès qu’une règle est déclenchée, les règles qui la suivent ne sont plus vérifiées.
+</Info>
+
+<Info>
+Le bouton « Enregistrer » de chaque règle soumet ses modifications séparément, mais le serveur écrit l’ensemble de la liste d’un seul tenant. C’est pourquoi la page interdit l’édition et l’enregistrement lorsque « Impossible de charger les règles de garde-fous » s’affiche — pour ne pas écraser la configuration existante. Si plusieurs personnes modifient en même temps les règles d’une même fenêtre, le dernier enregistrement écrase le précédent.
+</Info>
+
+<Tip>
+Deux combinaisons courantes : pour continuer à servir le client avec une autre formulation, utilisez « Ne pas bloquer » + « Contenu des réponses » ; pour qu’une réponse ne parte pas du tout, utilisez « Bloquer ». En cas de doute, commencez par « Bloquer » et activez la « Notification au Leader », observez les déclenchements, puis décidez si vous laissez passer.
+</Tip>
+
+<Tip>
+Pour comprendre pourquoi une réponse a été bloquée, ouvrez dans [Données détaillées](/fr/guide/dashboard/data-export) la « Chaîne de traitement des messages » de la demande correspondante : l’onglet « Étapes d’exécution » affiche l’étape « Garde-fous de sécurité ». Les réponses de repli utilisées quand l’IA ne sait pas répondre se configurent dans les [Règles de réponse](/fr/guide/response/reply-rules).
+</Tip>
+
+## Questions fréquentes
+
+### La règle est créée, mais les réponses ne sont pas bloquées : que vérifier en premier ?
+
+Vérifiez quatre points dans l’ordre : la « Fenêtre de conversation gérée actuellement » à gauche est-elle bien la fenêtre qui pose problème ? — les règles sont enregistrées par fenêtre, et l’on configure vite une autre fenêtre ; le badge de la règle affiche-t-il « Enregistré » ? — les modifications « Non enregistré » et « Édition » ne prennent pas effet ; pour une règle à mots-clés, les mots sont-ils bien devenus des balises (après la saisie, appuyez sur Entrée, une virgule ou un point-virgule, ou cliquez en dehors du champ : la balise se crée automatiquement) et la « Correspondance » n’est-elle pas sur « Tous les mots clés », qui rend la condition trop stricte ? Enfin, la correspondance porte sur la réponse générée par l’IA, pas sur le message du client : pour bloquer une réponse du type « Je vous ai ajouté au groupe », les mots-clés doivent reprendre ce que l’IA dirait, pas la question du client.
+
+### Pourquoi l’option « Analyse sémantique par le modèle » est-elle indisponible ?
+
+Chaque fenêtre ne peut contenir qu’une seule règle d’analyse sémantique. Une fois la première créée, l’option est grisée dans le menu « Ajouter une règle » et affiche « Une règle de modèle existe déjà; conservez tous les scénarios de modèle dans cette règle unique. ». Ajoutez le nouveau scénario dans la « Condition de l’analyse sémantique » de cette règle, ou passez à la correspondance stricte avec les mots-clés.
+
+### J’ai choisi la mauvaise méthode de détection : peut-on la changer directement ?
+
+Non. La méthode de détection ne peut pas être modifiée après la création : supprimez la règle et recréez-en une avec « Ajouter une règle ». La suppression est irréversible — notez le contenu de la condition d’origine avant de supprimer.
+
+### Après être passé de « Ne pas bloquer » à « Bloquer », le contenu des réponses a disparu ?
+
+Le passage à « Bloquer » efface le contenu déjà saisi ; pour revenir à « Ne pas bloquer », il faut le ressaisir, et il n’est écrit qu’après avoir cliqué sur « Enregistrer ».
+
+### La page affiche « Impossible de charger les règles de garde-fous » : peut-on encore modifier ?
+
+Non. Pour éviter d’écraser la configuration existante, la page ne peut être ni modifiée ni enregistrée tant que le chargement n’a pas réussi ; cliquez sur « Recharger » pour réessayer, puis modifiez après l’affichage de la liste des règles.

@@ -1,0 +1,146 @@
+---
+title: Gestión de conocimientos
+description: "Busque y edite los conocimientos almacenados, mantenga la estructura de grupos y recupere o elimine definitivamente los conocimientos borrados desde la papelera de reciclaje."
+keywords:
+  - gestión de conocimientos
+  - estructura de grupos
+  - búsqueda de conocimientos
+  - cambiar grupo
+  - papelera de reciclaje
+---
+
+«Gestión de conocimientos» sirve para organizar los conocimientos ya almacenados: mantener la estructura de grupos (añadir, renombrar, activar o desactivar), encontrar un conocimiento por grupo o por palabra clave, editarlo, cambiarle el grupo o eliminarlo. Los conocimientos eliminados por error pasan primero a la papelera de reciclaje, desde donde se pueden recuperar. El conocimiento nuevo debe ser aprobado antes en la [Optimización de conocimientos](/es/guide/knowledge/optimization); aquí se gestiona el contenido ya almacenado.
+
+## Cuándo la necesitará
+
+- La IA recuerda algo incorrecto o desactualizado y necesita encontrar ese conocimiento almacenado para corregirlo o eliminarlo.
+- Los conocimientos se acumulan y quiere crear una estructura de grupos para separar los de cada área de negocio.
+- Un conocimiento está en el grupo equivocado y hay que moverlo al correcto; o un grupo ha dejado de usarse y hay que desactivarlo.
+- Necesita recuperar conocimientos eliminados por error o vaciar definitivamente el contenido de la papelera de reciclaje.
+
+## Ruta de acceso
+
+Menú izquierdo → Base de conocimientos → Gestión de conocimientos.
+
+La página abre por defecto en «Estructura de grupos»; el cuadro de búsqueda de la parte superior sirve para buscar entre los conocimientos almacenados: al introducir una palabra clave, cambia a los resultados de la búsqueda. «Predeterminado» es un grupo del sistema y no se puede renombrar, eliminar ni desactivar.
+
+<Frame>
+  ![Página «Gestión de conocimientos» completa: arriba, el cuadro de búsqueda con el campo de palabra clave y los botones «Más filtros», «Papelera de reciclaje» y «Buscar»; debajo, «Estructura de grupos» muestra por filas el nombre del grupo, el número de subgrupos, el texto de estado y el interruptor, con el menú «⋯» al final de cada fila](/images/es/guide/knowledge/management/01-overview.jpg)
+</Frame>
+
+## Pasos
+
+<Steps>
+  <Step title="Ajuste la estructura de grupos: añada, renombre, active o desactive y elimine">
+    En «Estructura de grupos» cada grupo es una fila: a la izquierda el nombre (junto al que se indica «N subgrupos» si los tiene), a la derecha el texto de estado y el interruptor, y al final de la fila el menú «⋯» con «Editar», «Añadir subgrupo» y «Eliminar».
+
+    - Añadir: pulse «⋯» a la derecha del título «Estructura de grupos» y elija «Añadir grupo principal» para crear un grupo de primer nivel; en el menú «⋯» de una fila, elija «Añadir subgrupo» para crear el nivel inferior.
+    - Renombrar: «⋯» de la fila → «Editar»; el nombre se convierte en un campo de texto (con el marcador «Nombre del grupo») y, al terminar, pulse Intro o haga clic en otro lugar.
+    - Activar o desactivar: pulse el interruptor del final de la fila; tras el cambio, el texto de estado pasa a «Se activará al guardar» o «Se desactivará al guardar»: estas marcas indican que el ajuste aún no se ha guardado.
+    - Eliminar: «⋯» de la fila → «Eliminar» y, en el cuadro de diálogo «¿Eliminar el grupo de conocimientos?», pulse «Eliminar». El diálogo indica «El grupo desaparecerá inmediatamente de la lista.»: este paso se aplica al momento y no tiene opción de recuperación; el resto de los cambios sí deben guardarse.
+
+    Cuando hay cambios, la fila muestra la marca «Pendiente» y junto al título aparece «N cambios pendientes»; pulse «Guardar cambios de grupo» en la parte inferior y aparece «Guardado correctamente». Cómo comprobarlo: tras guardar, la marca «Pendiente» desaparece y el texto de estado pasa a «Conocimientos habilitados» o «Conocimientos desactivados».
+
+    Notas:
+
+    - Al pulsar el nombre de un grupo entra a verlo, no lo renombra: en un nivel sin subgrupos se muestran directamente los conocimientos de ese grupo (vea el paso siguiente); para renombrar, use «⋯» → «Editar».
+    - Máximo 4 niveles: el menú «⋯» de un grupo de cuarto nivel no incluye «Añadir subgrupo».
+    - Al desactivar un grupo, sus conocimientos dejan de estar disponibles (se aplica al guardar); «Predeterminado» siempre está activado, su interruptor no se puede pulsar y su menú no incluye «Editar» ni «Eliminar».
+    - Un grupo nuevo sin nombre no se puede guardar: aparece «Introduzca un nombre para cada grupo.».
+    - Si sale de la página con cambios de grupo sin guardar, aparece «¿Descartar los cambios del grupo?»: pulse «Cancelar» para quedarse y seguir editando, o «Descartar los cambios» para perder esta modificación.
+  </Step>
+
+  <Step title="Encuentre el conocimiento que va a gestionar: navegue por grupos o busque por palabra clave">
+    Por grupo: en «Estructura de grupos» pulse el nombre de un grupo y vaya entrando nivel a nivel; en un nivel sin subgrupos, la lista muestra directamente los conocimientos de ese grupo; puede alternar entre «Preguntas y respuestas» y «Conocimientos por párrafos» para cambiar el tipo que se muestra, y pulsar «Volver» para regresar al nivel anterior.
+
+    Por palabra clave: escriba la palabra clave en el cuadro de búsqueda superior (con el marcador «Introduzca la palabra clave de búsqueda») y, tras una breve pausa, la página cambia a los resultados; también puede pulsar Intro o «Buscar» para consultar de inmediato. La búsqueda abarca todos los conocimientos almacenados, sin limitarse al grupo que tenga abierto; para acotarla, despliegue «Más filtros»:
+
+    - «Tipo de contenido»: «Preguntas y respuestas» o «Conocimientos por párrafos»;
+    - «Ámbito de conocimiento»: «Todas las bases de conocimientos», «Empresa» o «Personal»;
+    - «Categoría de conocimientos»: limita la búsqueda a un grupo concreto;
+    - «Origen»: filtra por el origen del conocimiento (por ejemplo, «Documento», «Sitio web» o «Conversación con un supervisor»).
+
+    Regla clave: si la palabra clave está vacía y no hay ningún filtro seleccionado (con el ámbito, la categoría y el origen en sus valores por defecto), la página no lanza la consulta, sino que muestra «Introduzca una palabra clave o elija filtros para empezar a buscar» (con la descripción «Para evitar una búsqueda sin filtros, introduzca una palabra clave o seleccione el ámbito de conocimientos, un grupo y un origen.»); si quiere ver directamente un grupo, pulse su nombre para navegar o seleccione el filtro «Categoría de conocimientos».
+
+    Los filtros aplicados aparecen encima de la lista («Filtros aplicados»: puede quitarlos uno a uno o pulsar «Borrar filtros»). En los resultados, pulse «Fuente de conocimiento» de un conocimiento para filtrar rápidamente por ese origen.
+
+    Cómo comprobarlo: la lista devuelve resultados con «Contenido del conocimiento» / «Fuente de conocimiento» / «Categoría de conocimientos» / «Atributo del conocimiento» y, abajo, «N registros · Página X de Y»; si lanzó la búsqueda desde la estructura de grupos, arriba a la izquierda aparece «Volver a grupos» para volver a la lista de grupos.
+  </Step>
+
+  <Step title="Edite el conocimiento, cámbiele el grupo o elimínelo">
+    Editar: pulse «⋯» al final de la fila → «Editar»; la fila entra en edición: el título es un campo de texto (con el marcador «Título») y el cuerpo un editor de texto enriquecido (con el marcador «Introduzca el contenido»); si necesita adjuntar material al conocimiento, pulse «Insertar archivo» (cada archivo no puede superar los 100 MB). Tras el cambio, el estado inferior pasa de «No hay cambios sin guardar» a «Cambios sin guardar · Aún no se han añadido a la base de conocimientos» y solo entonces se puede pulsar «Guardar los cambios». Al guardar aparece «Guardado correctamente. Recalculando la puntuación de coincidencia…» y la lista muestra el contenido actualizado.
+
+    Cambiar de grupo: pulse la celda «Categoría de conocimientos» de la fila (con el icono de carpeta) para abrir el cuadro de diálogo «Cambiar grupo», elija el grupo de destino y pulse «Confirmar»: aparece «Se han movido N elementos al grupo de conocimientos seleccionado.». Para mover varios a la vez, márquelos primero (la casilla de la cabecera es «Seleccionar toda la página»), aparecerá la barra con «N elementos seleccionados» y pulse «Cambiar grupo».
+
+    Requisito: antes de mover elementos a un grupo, seleccione «Empresa» o «Personal» en «Más filtros → Ámbito de conocimiento». Si mantiene «Todas las bases de conocimientos», la operación se bloquea con el aviso «Seleccione «Empresa» o «Personal» en «Más filtros» antes de mover elementos a un grupo.»; cambiar el ámbito recarga la lista y borra la selección, así que vuelva a marcar los elementos después de elegirlo.
+
+    Eliminar: «⋯» de la fila → «Eliminar» y, en el cuadro de diálogo «Confirmar eliminación», pulse «Confirmar»; aparece «Tarea eliminada», el conocimiento desaparece de la lista y pasa a la papelera de reciclaje. Para eliminar en lote, marque los elementos y pulse «Eliminar en lote» en la barra de acciones; el cuadro de diálogo «Confirmar eliminación en lote» indica «¿Eliminar los N elementos seleccionados?».
+
+    Cómo comprobarlo: tras guardar la edición, el título y el cuerpo de la lista son los modificados; tras mover, el grupo de la fila pasa a ser el destino; tras eliminar, el conocimiento ya no aparece en la lista (puede consultarlo en la papelera de reciclaje).
+
+    Nota: si cambia a otro sitio sin guardar, aparece «¿Descartar los cambios sin guardar?»: «Seguir editando» conserva lo introducido y «Descartar los cambios…» lo descarta y continúa con la acción anterior; el contenido sin guardar solo se conserva temporalmente en la pestaña actual del navegador.
+  </Step>
+
+  <Step title="Restaure o elimine definitivamente desde la papelera de reciclaje">
+    Pulse «Papelera de reciclaje» a la derecha del cuadro de búsqueda; la página indica «Consulte los conocimientos eliminados, restáurelos o elimínelos definitivamente.».
+
+    - Restaurar un elemento: pulse el icono de restaurar al final de la fila y, en el cuadro de diálogo «Restaurar», pulse «Restaurar»; aparece «Elemento restaurado.» y el conocimiento vuelve a la base de conocimientos;
+    - Eliminar un elemento definitivamente: pulse el icono de eliminar de la fila; el cuadro de diálogo «¿Eliminar definitivamente?» indica «La eliminación definitiva de «…» no se puede deshacer. ¿Desea continuar?»; confirme en el cuadro de diálogo «¿Eliminar definitivamente?» y aparece «Tarea eliminada»;
+    - En lote: al marcar elementos aparece la barra de acciones; pulse «Recuperar en lote» o «Eliminar definitivamente»; los cuadros de diálogo indican la cifra y las consecuencias («¿Restaurar los N elementos seleccionados?» / «Los N elementos seleccionados se eliminarán definitivamente y no podrán recuperarse. ¿Desea continuar?»).
+
+    Al terminar, pulse «Volver a la lista de conocimientos» en la esquina superior derecha para volver a la vista de lista anterior.
+
+    <Frame>
+      ![Vista de papelera de reciclaje de «Gestión de conocimientos»: arriba, el aviso «Consulte los conocimientos eliminados, restáurelos o elimínelos definitivamente.» y el botón «Volver a la lista de conocimientos»; a la derecha de cada fila de la lista, los dos iconos de restaurar y eliminar definitivamente](/images/es/guide/knowledge/management/02-recycle-bin.jpg)
+    </Frame>
+
+    Cómo comprobarlo: tras restaurar, el elemento desaparece de la papelera y se puede encontrar con una palabra clave en la lista; tras eliminar definitivamente, ya no está en la papelera y no se puede recuperar; cuando la papelera queda vacía, se muestra «La papelera de reciclaje está vacía».
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- Cambios de grupo: la fila muestra «Pendiente» → pulse «Guardar cambios de grupo» → aparece «Guardado correctamente» y la marca desaparece; al eliminar un grupo, este se quita de la lista de inmediato.
+- Búsqueda: con una palabra clave o un filtro, la lista devuelve resultados y abajo se muestra «N registros · Página X de Y»; si no se indica nada, aparece «Introduzca una palabra clave o elija filtros para empezar a buscar» y no se consulta toda la base.
+- Mover: aparece «Se han movido N elementos al grupo de conocimientos seleccionado.» y «Categoría de conocimientos» de la fila pasa al grupo de destino.
+- Eliminar y restaurar: al eliminar, el elemento pasa a la papelera de reciclaje; al restaurar aparece «Elemento restaurado.» y desaparece de la papelera.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+«Eliminar definitivamente» en la papelera (incluida la acción en lote) no se puede deshacer y no hay ninguna opción de recuperación. Las acciones en lote solo procesan las filas marcadas: compruebe la cifra de «N elementos seleccionados» antes de ejecutarlas.
+</Warning>
+
+<Warning>
+Eliminar un grupo se aplica al momento y no tiene opción de deshacer; desactivar un grupo hace que sus conocimientos dejen de estar disponibles (se aplica al guardar). Antes de hacerlo, confirme que este grupo y sus conocimientos ya no se necesitan.
+</Warning>
+
+<Info>
+La búsqueda por palabra clave abarca todos los conocimientos almacenados, no solo el grupo que tenga abierto; únicamente el filtro «Categoría de conocimientos» limita la búsqueda a un grupo. «Predeterminado» es un grupo del sistema, siempre activado, y no se puede renombrar, eliminar ni desactivar; la estructura admite un máximo de 4 niveles.
+</Info>
+
+<Tip>
+Si llega desde «Resultado» de la [Generación de conocimientos](/es/guide/knowledge/generation), los resultados quedan limitados por el filtro «Tarea de origen:…»; pulse «Ver todo el contenido de conocimiento que coincide con los filtros» para quitarlo y conservar los demás filtros. Además, pulsar «Fuente de conocimiento» en un resultado filtra por ese origen, más rápido que desplegar «Más filtros» a mano.
+</Tip>
+
+## Preguntas frecuentes
+
+### ¿Por qué la lista está vacía y no encuentra nada?
+
+«Gestión de conocimientos» no lanza la consulta si no hay palabra clave ni filtros seleccionados; en su lugar muestra «Introduzca una palabra clave o elija filtros para empezar a buscar» para evitar descargar toda la base sin criterio. Escriba una palabra clave, o seleccione al menos un filtro en «Más filtros» (por ejemplo, «Categoría de conocimientos» u «Origen»), y la lista se cargará. La búsqueda abarca toda la base, no solo el grupo que tenga abierto.
+
+### ¿Por qué al pulsar «Cambiar grupo» se pide elegir primero el ámbito?
+
+Con «Todas las bases de conocimientos» no se puede mover: seleccione antes «Empresa» o «Personal» en «Más filtros → Ámbito de conocimiento», marque los conocimientos que quiera mover y pulse «Cambiar grupo». Al cambiar el ámbito, la lista se recarga y se borra la selección, así que vuelva a marcar los elementos después de elegir el ámbito.
+
+### ¿Dónde van los conocimientos eliminados? ¿Se pueden recuperar?
+
+La acción «Eliminar» de la lista (individual o en lote) solo mueve el conocimiento a la papelera de reciclaje, así que deja de aparecer en las búsquedas normales; en «Papelera de reciclaje», pulse el icono de restaurar al final de la fila (o marque elementos y pulse «Recuperar en lote») para recuperarlos, y después podrá encontrarlos de nuevo con una palabra clave. «Eliminar definitivamente» en la papelera es la operación final: una vez hecha, no se puede recuperar.
+
+### Después de añadir, renombrar o activar y desactivar un grupo, ¿por qué parece no tener efecto?
+
+Estos tres tipos de cambios se aplican al guardar: tras hacerlos, pulse «Guardar cambios de grupo» en la parte inferior; solo cuando aparece «Guardado correctamente» se han escrito, y entonces desaparecen la marca «Pendiente» y las marcas «Se activará al guardar» / «Se desactivará al guardar» de las filas. La eliminación de grupos es la excepción: se aplica de inmediato al pulsar «Eliminar» en el cuadro de diálogo «¿Eliminar el grupo de conocimientos?» y no pasa por el guardado.
+
+### ¿Por qué no puedo modificar «Predeterminado»? ¿Cuántos niveles de grupos se pueden crear?
+
+«Predeterminado» es un grupo del sistema, siempre activado: no se puede renombrar, eliminar ni desactivar, y su interruptor tampoco se puede pulsar; los demás grupos se pueden editar y eliminar con normalidad desde el menú «⋯». La estructura admite un máximo de 4 niveles, y el menú «⋯» de un grupo de cuarto nivel ya no muestra «Añadir subgrupo».

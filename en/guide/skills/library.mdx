@@ -1,0 +1,159 @@
+---
+title: Skills Library
+description: "Define how the AI handles a type of task: create or disable skills, choose which conversations and tools each skill applies to, and confirm the skill is active."
+keywords:
+  - skills library
+  - add skill
+  - how AI handles it
+  - tool selection mode
+  - built-in skills
+---
+
+"Skills Library" tells the AI how to handle a type of task: write the process as a step-by-step skill, choose which conversations it applies to, and specify which tools it can call. The Knowledge Base determines what the AI knows; the Skills Library determines how it acts.
+
+## When you'll need this
+
+- The AI knows the answer but handles it in the wrong order — it skips follow-up questions it should ask or tools it should check — and you want to fix this type of task into a set process.
+- You want to standardize how a category of questions is handled (for example, "product recommendation" or "after-sales objection handling") so the AI follows the same order every time.
+- You need to limit where a skill applies or which tools it uses: customer conversations only, supervisor conversations only, or a specific set of callable tools.
+- You want to stop using a skill for now: turn it off in the list and watch the effect instead of deleting it.
+
+## How to get there
+
+Left menu → Skills Library. Skills Library is a standalone entry in the left menu, not under the "Knowledge Base" group. The page title is "Skills Library" and the description reads "Manage the skills AI uses to answer customer questions."
+
+Skills Library is not saved per Selected window: switching the "Selected window" on the left does not switch the skill list here.
+
+<Frame>
+  ![Skills Library list page: the top has the "Search for skills" input and the "Add Skill" button; the table below lists skills by "Skill Name", "When to use it", "Status", and "Actions", with a status toggle and row actions on each row](/images/en/guide/skills/library/01-overview.jpg)
+</Frame>
+
+## Steps
+
+<Steps>
+  <Step title="Find the skill in the list and check whether it is “Active” or “Inactive”">
+    Type a keyword in "Search for skills"; the list filters as you type by skill name and by the content of "When to use it" — no need to click a search button. Custom skills come first, built-in skills after.
+
+    The "Status" column is a toggle with a pill: on reads "Active", off reads "Inactive". Clicking the toggle submits immediately with no confirmation; if the change fails, "Status change failed. Please try again." appears and the toggle returns to its previous state.
+
+    - Built-in skills carry a "Built-in skill" badge, and their "Actions" column only has "View".
+    - Custom skills show a "⋯" menu under "Actions" with "View", "Edit", and "Delete".
+
+    How to tell it worked: the toggle position matches the "Active / Inactive" pill, and the skill you want to adjust has been found.
+
+    Notes: a search with no results shows "No matching skills. Try another keyword."; an empty list shows "No skills yet. Add one to get started.".
+  </Step>
+
+  <Step title="Click “Add Skill” and fill in “Skill name” and “When to use it”">
+    Click "Add Skill" at the top right to open the editor; when editing an existing skill, the title reads "Edit skill · skill name".
+
+    - Skill name: required. Use a short name that says what it does, for example "Handle after-sales objections". If you leave it empty and click create, "Skill name is required" appears.
+    - When to use it: state what customers ask and what the skill can resolve. The AI uses this to decide when to use the skill.
+
+    How to tell it worked: both fields have content, and the top-right button reads "Create skill" (it reads "Save changes" when editing).
+
+    <Frame>
+      ![Add Skill editor page: the form includes fields such as "Skill name", "When to use it", "How AI should handle it", and "Which conversations"; the "Create skill" button is at the top right](/images/en/guide/skills/library/02-add-skill.jpg)
+    </Frame>
+  </Step>
+
+  <Step title="Write “How AI should handle it”">
+    Write the steps in order: what to check first, how to follow up when information is missing, what to look up when a lookup is needed, how to reply at the end, and what to do if the lookup fails. Once the skill is triggered, the AI follows these steps; you can also note the tools it should call and what to do when they fail.
+
+    - When the editor is empty, click "Insert writing outline" below to fill in a five-step template (First check → If information is missing → When a lookup is needed → When replying to the customer → If the lookup fails). Editing the template is faster than starting from a blank page.
+    - Type / to open the list of related tools; the tool you select is inserted into the process as a tag.
+
+    How to tell it worked: the process has a clear order and branch-specific actions, not just a one-line summary.
+  </Step>
+
+  <Step title="Choose “Which conversations” and “Tools to use”">
+    "Which conversations" has three options:
+
+    - Supervisor conversations: the AI can call this skill when confirming issues with a supervisor, reporting progress, or asking for human help.
+    - Customer conversations: the AI can call this skill when replying to customers, following up on their issues, or handling their requests.
+    - Both: the AI can call this skill in both supervisor-facing and customer-facing exchanges.
+
+    "Tools to use" is collapsed by default; click the heading to expand it. For a new skill, "Match tools automatically" is selected by default, or you can switch to "Choose tools manually":
+
+    - Match tools automatically: the system matches tools to the skill based on its content after creation.
+    - Choose tools manually: check tools by category; expand a category to check tools one by one, or check the category to select every tool in it. If you save with nothing selected, the skill has no linked tools.
+
+    How to tell it worked: the conversation type matches where you actually use the skill; with manual selection, the tools you need are checked and, once the panel is collapsed, the summary reads "Chosen manually; expand to adjust".
+
+    Notes: "Tool selection mode" can only be chosen when creating a skill. When editing an existing skill, this area shows the tool checkboxes directly; if you clear every selection and save, the skill will have no linked tools.
+  </Step>
+
+  <Step title="Save and verify">
+    Click "Create skill" at the top right (or "Save changes" when editing). "Saved successfully" appears and the page returns to the list.
+
+    How to tell it worked: the skill appears in the list with the status "Active" — new skills are enabled by default; if you do not want to use it yet, go back to the list and turn the toggle off.
+
+    Note: if "Skill content was saved, but later settings were not completed. Retry here." appears, the skill content is already saved — only enablement or tool binding did not finish. Stay on the page (the button now reads "Save changes") and click it again to retry; this does not create a duplicate.
+  </Step>
+
+  <Step title="View, edit, and delete">
+    Click a skill name or "View" to open the detail page: content is split into "When to use it" and "How AI should handle it", with "Built-in skill / Custom skill" and "Active / Inactive" badges at the top and "Back to skills" at the top left.
+
+    - Edit: for a custom skill, click "Edit" at the top right of the detail page, or choose "Edit" from the "⋯" menu in the list; click "Save changes" when done.
+    - Built-in skills: their content cannot be edited. The detail page notes "Built-in skill content cannot be edited. You can turn it on or off in the list." and offers no edit or delete entry.
+    - Delete: for a custom skill, choose "Delete" from the "⋯" menu; the "Are you sure you want to delete this skill?" dialog shows the skill name, and confirming deletes it immediately.
+
+    How to tell it worked: the two sections on the detail page match what you entered; after deletion, the skill no longer appears in the list.
+
+    Note: deletion cannot be undone. If you have unsaved changes, clicking "Back to skills" or switching menus opens a "Discard unsaved changes?" dialog — choose "Keep editing" to stay on the page.
+  </Step>
+</Steps>
+
+## Checkpoints
+
+- The target skill's status reads "Active", and the toggle matches the pill.
+- After creating or editing a skill, "Saved successfully" appeared, and the list and detail page match what you entered.
+- "When to use it" describes the trigger scenario, and "Which conversations" covers the scenarios where you actually use the skill.
+
+## Important notes
+
+<Warning>
+Deleting a custom skill cannot be undone: it is deleted immediately on confirmation, with no way to recover. If you only want to pause it, turn the toggle off ("Inactive") and keep the configuration.
+</Warning>
+
+<Warning>
+If you clear every tool selection while editing a skill and save, the skill will have no linked tools (the page notes "If you deselect every tool and save, this skill will have no linked tools."). To switch to a different set of tools, deselect the ones you no longer need, check the ones you want, and save.
+</Warning>
+
+<Info>
+Skills and knowledge do different jobs: the Knowledge Base ([Knowledge Generation](/en/guide/knowledge/generation), [Knowledge Optimization](/en/guide/knowledge/optimization), [Knowledge Management](/en/guide/knowledge/management)) covers what the AI knows; the Skills Library covers how it acts — for the same question, knowledge supplies the answer while the skill decides the processing steps and tool calls.
+</Info>
+
+<Info>
+Skills with a "Built-in skill" badge in the list are provided by the system: content is read-only, and you can enable or disable them. Skills without the badge are custom skills, which you can edit and delete.
+</Info>
+
+<Tip>
+Not sure how to write one? "View" a few built-in skills first and see how their "When to use it" and "How AI should handle it" are worded.
+</Tip>
+
+<Tip>
+To confirm whether a skill was actually called, open the corresponding inquiry in [Detail Review](/en/guide/dashboard/data-export) and look at "Skill Invocation" under "Message Processing Chain → Execution Steps": it shows the skill name when the skill was called, and "None" when it was not.
+</Tip>
+
+## Frequently asked questions
+
+### The AI is not using the skill I configured. What should I check first?
+
+Check in order: whether the status in the list is "Active" (toggle on); whether "When to use it" clearly states what customers ask and what the skill resolves — the AI uses this to decide whether to use the skill; whether "Which conversations" covers the current scenario (a skill set to "Supervisor conversations" only is not called in customer conversations); and, for scenarios that need tools, whether the tools are linked. If all of that is in order, go to the "Execution Steps → Skill Invocation" row in [Detail Review](/en/guide/dashboard/data-export) to confirm whether this turn called it at all.
+
+### Why can't I find "Match tools automatically / Choose tools manually" when editing a skill?
+
+"Tool selection mode" can only be chosen when creating a skill. When editing an existing skill, expand "Tools to use" and adjust the checkboxes directly; if you clear every selection and save, the skill will have no linked tools.
+
+### Why can't I edit a built-in skill?
+
+Built-in skill content is provided by the system and cannot be edited; you can enable or disable it in the list. If you need a different process, click "Add Skill" to write a custom skill.
+
+### What does "Skill content was saved, but later settings were not completed. Retry here." mean?
+
+The skill content is saved, but enablement or tool binding did not finish. Stay on the page; the button at the top right now reads "Save changes" — click it again to retry. This does not create a duplicate.
+
+### Can I recover a skill after deleting it?
+
+No. Deletion cannot be undone. If you only want to pause it, turn the toggle off and keep the configuration.

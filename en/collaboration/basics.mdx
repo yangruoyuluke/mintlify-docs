@@ -1,0 +1,160 @@
+---
+title: Working side by side with your AI
+description: Learn the four roles the AI sees — Customer, Colleague, Muted, and Supervisor — direct it in chat, and catch the questions it hands to you.
+keywords:
+  - collaboration guide
+  - identity model
+  - Assistant Chat
+  - forced commands
+  - supervisor handoff
+  - human-AI collaboration
+---
+
+MarsMind's AI is a digital coworker that shares the work with you: it serves each conversation under the role you set, asks you when it is unsure, and your answers settle into knowledge it can use next time. This page walks you through that loop — how roles are set, where to give it commands, when it comes to ask, and how to respond.
+
+## When you'll need this
+
+- You just connected a communication window and are about to let the AI serve customers: set who is who first, so it does not mistake one person for another or give the wrong answer.
+- You want to direct the AI yourself: start or pause its work, turn group chat replies on or off, organize records, or generate reports.
+- The AI forwarded a question it could not answer: understand why it is asking, how to respond, and what happens if you never reply.
+- Troubleshooting: when the AI answers a colleague as if they were a customer, or speaks in a group where it should stay quiet, go back to the role settings first.
+
+## The four roles the AI sees
+
+How the AI handles a conversation depends on who the other side is in its eyes. These roles are maintained in [Relationships](/en/guide/assistant/relationship-config); the four roles mean:
+
+| Role | How the AI handles it |
+| --- | --- |
+| Customer | Served as a customer, with customer service reply rules |
+| Colleague | Recognized as an internal colleague, with colleague rules |
+| Muted | Kept silent for that contact — no automatic replies |
+| Supervisor | Recognized as a supervisor who can receive assistant reports |
+
+Your own identity is bound by an authorization code: generate a Supervisor Authorization Code or a Colleague Authorization Code in [AI identity access](/en/guide/account/ai-authorization) and send it to the AI account from your own phone. For the same AI account, the last code received wins — supervisor and colleague overwrite each other.
+
+<Info>
+  Relationships supports only logged-in WeChat and WeCom accounts; Website link, Mini Program, and Official Account windows do not have this contact and group list.
+</Info>
+
+## How to get there
+
+This page spans several entry points that work together:
+
+- Chat with the AI and give commands: top bar, right side → "Assistant Chat".
+- Set roles for contacts and groups: left menu → My Assistant → Relationships.
+- Bind your own identity: bottom-left "Account settings" → "AI identity access".
+
+## Steps
+
+<Steps>
+
+  <Step title="Check who is who in Relationships">
+    Entry: left menu → My Assistant → Relationships. First select the window you want to check under "Selected window" in the sidebar.
+
+    In the contact and group list, check the "Relationship" column row by row. To correct a row, click "Change role" at the end of it and pick one of "Customer", "Colleague", "Muted", or "Supervisor" in the "Change contact relationship" dialog, then click "Save relationship". To change several at once, select them and click "Set as Customer", "Set as Colleague", "Mute", or "Set as Supervisor" on the action bar.
+
+    How to tell it worked: the "Relationship" column shows the result you wanted — pay special attention to "Supervisor", which is the recipient for questions the AI forwards and reports it sends proactively.
+
+    Note: batch buttons take effect immediately, with no confirmation step. If a newly added friend or group is missing from the list, click "Sync contacts" at the top first (one sync per day at most). If no window is available yet, the page shows "No communication window is available"; click "Go to channel login" to connect one first.
+  </Step>
+
+  <Step title="Make the AI recognize you with an authorization code (Supervisor / Colleague)">
+    Bottom-left "Account settings" → "AI identity access". Copy the Supervisor Authorization Code or the Colleague Authorization Code: the Supervisor code copies in the send-ready format with the `#` prefix (for example, `#A1b2C3`), while the Colleague code copies as the 6-character code itself. Open the chat with this AI account on your phone and send the copied content as-is.
+
+    How to tell it worked: "Supervisor Authorization Code copied" appears (the colleague code shows "Colleague Authorization Code copied"); after you send it, the AI recognizes that phone account as a supervisor or a colleague.
+
+    Note: for the same AI account, the last code received wins, and supervisor and colleague overwrite each other — to switch back to Supervisor, just send the Supervisor Authorization Code again. "Generate and save a new code" replaces the old code immediately, with no confirmation step; the old code stops working, so you must send the new one.
+  </Step>
+
+  <Step title="Chat and give commands in Assistant Chat">
+    Click "Assistant Chat" on the right of the top bar to open the "Admin assistant chat" drawer, then type your message in the input box and send it to start chatting.
+
+    - Type "/": natural-language suggestions appear, such as "Please help me organize today's conversation records" and "Generate this week's work report" — pick one or write your own.
+    - Type "#": forced commands appear, such as `#work` (start work), `#stop` (pause work), and `#help` (view all commands) — if you cannot remember the commands, send `#help` first.
+
+    How to tell it worked: your message and the AI's reply appear in the conversation; if sending fails, an error pops up (when there is no specific error message, it reads "Failed to send message, please try again").
+
+    <Frame>
+      ![The open "Admin assistant chat" drawer: the scope note at the top, with the message input box, image upload, and send button below](/images/en/collaboration/basics/01-chat-drawer.jpg)
+    </Frame>
+
+    Note: the drawer header reads "This entry is not bound to the communication window selected on the page. It cannot confirm that window's configuration is in effect." — you can give commands and ask questions here, but do not use it to test how a specific communication window replies.
+  </Step>
+
+  <Step title="Answer when the AI comes to you for help">
+    The AI proactively comes to you in three situations:
+
+    - It cannot answer: when the AI cannot answer a customer's question, it forwards a question summary to the supervisor — the "Suggestions" metric under Performance counts these forwards.
+    - Key events: when a situation you wrote under Reply Rules → "Key Event Active Reporting" occurs, it reports proactively.
+    - Guardrail hit: when a rule in [Safety Guardrails](/en/guide/response/safety-guardrails) has "Leader notification" set to "Notify Leader" and the rule is triggered, it sends a notification.
+
+    Reply as soon as you can when the AI asks for help; questions left unanswered accumulate under "Needs answer (Test)" in [Knowledge Optimization](/en/guide/knowledge/optimization) (not enabled in every environment). The tab label carries a "(Test)" suffix; this page calls it "Needs answer" for short.
+
+    How to tell it worked: the forwarded question has been answered in the conversation; or you filled in "Enter an answer ready to send to customers" under Needs answer and clicked "Confirm", after which "Confirmed and removed from needs answer" appears.
+
+    Note: to receive questions and reports, you must first be a "Supervisor" in the AI's eyes — you have sent the Supervisor Authorization Code, or you are set as "Supervisor" in Relationships. The switch and content for "Key Event Active Reporting" must also be enabled and saved in [Reply Rules](/en/guide/response/reply-rules).
+  </Step>
+
+  <Step title="Review the collaboration in reports and decide what to teach next">
+    Left menu → Data Dashboard → [Performance](/en/guide/dashboard/business-performance): watch how "Suggestions" (the number of question summaries the AI forwarded to supervisors) and "Learned Items" (the knowledge it learned automatically from conversations) change, and judge whether it is resolving things on its own or asking frequently — questions it asks about often are what to add to the knowledge base next.
+
+    To understand why a reply was given the way it was, go to left menu → Data Dashboard → [Detail Review](/en/guide/dashboard/data-export) and open an inquiry to check its "Reference Knowledge" and "Execution Steps".
+
+    How to tell it worked: "Suggestions" and "Learned Items" show data; in the records you spot-check, replies map to reference knowledge or execution steps.
+
+    Note: Messages Received, Inquiries, and Replies overlap and cannot be added together; for the definition of any other metric, click "Metric Guide" at any time.
+  </Step>
+
+</Steps>
+
+## Checkpoints
+
+- The "Relationship" column in Relationships matches your intent, and the "Supervisor" recipients are clear.
+- The Supervisor or Colleague Authorization Code has been sent to the corresponding AI account, and it is the one currently in effect (after generating a new code, send it again).
+- Assistant Chat can send and receive messages; typing "#" and "/" shows the command and suggestion lists.
+- Questions the AI forwarded have been answered; any you did not get to have answers filled in under Knowledge Optimization → Needs answer.
+- Suggestions and Learned Items show data in Performance.
+
+## Important notes
+
+<Warning>
+  Authorization codes are identity credentials: send them only to the person being authorized and the corresponding AI account — never forward them to unrelated groups or people. "Generate and save a new code" replaces the old code immediately, with no confirmation step, and the old code stops working.
+</Warning>
+
+<Info>
+  Authorization codes tell the AI "who you are"; Relationships show "who your contacts and groups are" — together they decide how the AI treats each conversation partner.
+</Info>
+
+<Info>
+  Assistant Chat is not bound to the communication window selected on the page, so it cannot confirm that a window's configuration is in effect. To verify a configuration, send messages through a real channel, or drill into real conversations in Detail Review.
+</Info>
+
+<Tip>
+  Typing "/" and describing what you need is faster than memorizing commands; if you cannot remember them, send `#help` to get the full list of commands the AI currently supports.
+</Tip>
+
+<Tip>
+  Answers you add under "Needs answer" are stored as knowledge — write them as standard replies you can send to customers directly, and similar questions will have a basis next time.
+</Tip>
+
+## Frequently asked questions
+
+### What is "Suggestions", and when will the AI ask me for help?
+
+"Suggestions" counts the question summaries the AI forwards to supervisors. When the AI cannot answer a customer's question, it forwards a summary to the supervisor; it also reports proactively on the key events configured under Reply Rules → "Key Event Active Reporting"; and when a rule in Safety Guardrails is set to "Notify Leader", it notifies you as well.
+
+### The AI forwarded a question to me and I did not reply in time — what happens?
+
+Questions that stay unanswered go to "Needs answer" under Knowledge Optimization. Fill in an answer you can send to the customer directly and click "Confirm": the question leaves the queue and the answer is stored as knowledge. If you would rather not handle it, click "Ignore"; ignored questions do not create knowledge. This view is not enabled in every environment — if you do not see it on the page, it is not available in your environment.
+
+### Why has the supervisor never received a proactive report from the AI?
+
+Check three places in order: (1) whether the recipient is a "Supervisor" — either they have sent the Supervisor Authorization Code, or they are set as "Supervisor" in Relationships; (2) whether "Key Event Active Reporting" in Reply Rules is enabled and its content saved (click "Save Configuration"); (3) for a guardrail notification, whether the rule's "Leader notification" is set to "Notify Leader".
+
+### Can I use Assistant Chat to verify a communication window's configuration?
+
+No. It is not bound to the window selected on the page. To verify, send messages through a real channel, or open Detail Review and drill into a real conversation to check its "Reference Knowledge" and "Execution Steps".
+
+### A colleague keeps being answered as a customer — how do I fix that?
+
+Use either fix: change their "Relationship" to "Colleague" in Relationships, or have the colleague send the Colleague Authorization Code to this AI account. Afterward, confirm the AI's treatment has changed with a real message. Batch changes take effect immediately, and there is no undo.

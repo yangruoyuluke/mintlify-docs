@@ -1,0 +1,160 @@
+---
+title: Travailler aux côtés de l’IA
+description: Distinguez les quatre identités que l’IA reconnaît — client, collègue, en sourdine, superviseur — et apprenez à lui donner des ordres dans la conversation et à répondre lorsqu’elle vient vous consulter.
+keywords:
+  - guide de collaboration
+  - identités de l’IA
+  - assistant d’administration
+  - commandes forcées
+  - consultation du superviseur
+  - collaboration humain-IA
+---
+
+L’IA de MarsMind est une collègue numérique avec qui vous travaillez : elle accueille chaque conversation selon l’identité que vous avez définie, vient vous consulter lorsqu’elle a un doute, et vos réponses se transforment en connaissances qu’elle pourra réutiliser. Cette page explique tout ce cycle — comment définir les identités, où lui donner des ordres, quand elle vient vous consulter et comment y répondre.
+
+## Quand en avez-vous besoin ?
+
+- Vous venez de connecter une fenêtre de conversation et l’IA s’apprête à accueillir vos clients : commencez par définir « qui est qui », pour éviter qu’elle confonde les interlocuteurs ou réponde à côté.
+- Vous voulez commander l’IA directement : la faire démarrer ou se mettre en pause, activer ou désactiver les réponses de chat de groupe, faire le point sur les conversations ou produire un rapport.
+- L’IA vous a transmis une question à laquelle elle n’a pas su répondre : vous voulez savoir pourquoi elle vous consulte, comment répondre et ce qui se passe en l’absence de réponse.
+- Vous diagnostiquez un problème : si l’IA répond à un collègue comme à un client ou prend la parole dans un groupe où elle devrait se taire, cherchez d’abord du côté des identités définies.
+
+## Les quatre identités aux yeux de l’IA
+
+La façon dont l’IA traite une conversation dépend de l’identité qu’elle attribue à son interlocuteur. Ces identités se définissent dans [Relations](/fr/guide/assistant/relationship-config) ; voici ce que chacune signifie :
+
+| Identité | Traitement par l’IA |
+| --- | --- |
+| Client | Accueilli comme un client, avec les règles de réponse du service à la clientèle |
+| Collègue | Reconnu comme collègue interne, avec les règles de communication entre collègues |
+| En sourdine | Contact maintenu en sourdine, sans réponse automatique |
+| Superviseur | Reconnu comme superviseur, peut recevoir les rapports de l’assistant |
+
+Votre propre identité est liée par un code d’autorisation : dans [Autorisation des rôles auprès de l’IA](/fr/guide/account/ai-authorization), générez un « Code d’autorisation du superviseur » ou un « Code d’autorisation du collègue », puis envoyez-le au compte IA depuis votre propre téléphone. Pour un même compte IA, c’est le dernier code reçu qui fait foi : superviseur et collègue se remplacent l’un l’autre.
+
+<Info>
+  La configuration des relations ne prend en charge que les comptes connectés à WeChat et à WeCom ; les fenêtres « Lien du site Web », « Mini-programme » et « Compte officiel » ne disposent pas de cette liste de contacts et de groupes.
+</Info>
+
+## Comment y accéder ?
+
+Cette page s’appuie sur plusieurs points d’entrée, à utiliser ensemble :
+
+- Dialoguer avec l’IA et lui donner des ordres : barre supérieure, à droite → « Assistant d’administration ».
+- Définir l’identité des contacts et des groupes : menu de gauche → Mon assistant → Relations.
+- Lier votre propre identité : « Paramètres du compte » en bas à gauche → « Autorisation des rôles auprès de l’IA ».
+
+## Étapes à suivre
+
+<Steps>
+
+  <Step title="Vérifier qui est qui avec « Relations »">
+    Point d’entrée : menu de gauche → Mon assistant → Relations. Sous « Fenêtre de conversation gérée actuellement », dans la barre latérale, sélectionnez d’abord la fenêtre à vérifier.
+
+    Dans la liste des contacts et des groupes, contrôlez ligne par ligne la colonne « Relation ». En cas d’erreur, cliquez en fin de ligne sur « Modifier la relation » : dans la fenêtre « Changer la relation de contact », choisissez « Client », « Collègue », « En sourdine » ou « Superviseur », puis cliquez sur « Enregistrer la relation ». Pour en modifier plusieurs d’un coup, cochez-les puis utilisez, dans la barre d’actions, « Définir comme client », « Définir comme collègue », « Mettre en sourdine » ou « Définir comme superviseur ».
+
+    Critère : la colonne « Relation » affiche bien le résultat attendu ; vérifiez tout particulièrement « Superviseur », car c’est le destinataire des questions transmises par l’IA et de ses rapports proactifs.
+
+    Remarque : les actions par lot prennent effet immédiatement, sans seconde confirmation. Si un contact ou un groupe récemment ajouté n’apparaît pas dans la liste, cliquez d’abord en haut sur « Synchroniser les contacts » (une synchronisation par jour au maximum). Si aucune fenêtre n’est encore disponible, la page affiche « Aucune fenêtre de conversation disponible » : cliquez sur « Se connecter et mettre en ligne » pour en connecter une.
+  </Step>
+
+  <Step title="Faire reconnaître votre identité avec un code d’autorisation (superviseur / collègue)">
+    « Paramètres du compte » en bas à gauche → « Autorisation des rôles auprès de l’IA » : copiez le « Code d’autorisation du superviseur » ou le « Code d’autorisation du collègue ». Le code du superviseur est copié automatiquement avec le préfixe `#` (par exemple `#A1b2C3`) ; celui du collègue est le code à 6 caractères lui-même. Ouvrez ensuite, sur votre téléphone, la conversation avec ce compte IA et envoyez directement le contenu copié.
+
+    Critère : le message « Copié : Code d’autorisation du superviseur » s’affiche (« Copié : Code d’autorisation du collègue » pour l’autre code) ; après l’envoi, l’IA identifie ce compte téléphonique comme superviseur ou comme collègue.
+
+    Remarque : pour un même compte IA, c’est le dernier code d’autorisation reçu qui fait foi — superviseur et collègue se remplacent l’un l’autre : pour redevenir superviseur, renvoyez simplement le code du superviseur. « Générer et enregistrer un nouveau code » remplace immédiatement l’ancien, qui devient invalide ; il faut alors envoyer le nouveau code.
+  </Step>
+
+  <Step title="Dialoguer et donner des ordres dans l’« Assistant d’administration »">
+    Cliquez sur « Assistant d’administration », à droite de la barre supérieure : le panneau « Conversation avec l’assistant d’administration » s’ouvre. Saisissez votre message dans le champ et envoyez-le pour dialoguer avec l’IA.
+
+    - Saisie de « / » : la liste des suggestions en langage naturel s’affiche, par exemple « Aide-moi à faire le point sur les conversations d’aujourd’hui. » ou « Générer le rapport de travail de cette semaine » ; vous pouvez cliquer sur une suggestion ou écrire la vôtre.
+    - Saisie de « # » : la liste des commandes forcées s’affiche, par exemple `#work` (« Début du travail »), `#stop` (« Mettre le travail en pause ») et `#help` (« Afficher toutes les commandes ») — si vous ne les retenez pas, envoyez d’abord un `#help`.
+
+    Critère : votre message et la réponse de l’IA apparaissent dans la conversation ; en cas d’échec, un message d’erreur s’affiche (à défaut d’information précise : « Échec de l'envoi du message, veuillez réessayer »).
+
+    <Frame>
+      ![Panneau « Conversation avec l’assistant d’administration » ouvert : la portée est indiquée en haut ; en dessous, le champ de saisie du message, la pièce jointe image et le bouton d’envoi](/images/fr/collaboration/basics/01-chat-drawer.jpg)
+    </Frame>
+
+    Remarque : en haut du panneau figure la mention « Cette conversation n’est pas liée à la fenêtre sélectionnée sur la page ; elle ne permet donc pas de vérifier si la configuration de cette fenêtre est appliquée. » — vous pouvez y donner des ordres et demander des informations, mais pas y tester l’effet des réponses d’une fenêtre de conversation donnée.
+  </Step>
+
+  <Step title="Répondre présent lorsque l’IA vient vous consulter">
+    L’IA s’adresse à vous de sa propre initiative dans trois cas :
+
+    - Elle ne sait pas répondre : lorsqu’une question client dépasse ses connaissances, elle transmet un résumé de la question au superviseur — l’indicateur « Propositions » de la page « Performances » compte précisément ces transmissions.
+    - Un événement important survient : quand la situation que vous avez décrite dans « Règles de réponse → Signalement proactif des événements importants » se produit, elle fait un signalement proactif.
+    - Un garde-fou se déclenche : dans les règles des [Garde-fous de sécurité](/fr/guide/response/safety-guardrails), si « Notification au Leader » est réglé sur « Notifier le Leader », elle envoie une notification lorsque la règle correspond.
+
+    Répondez rapidement aux questions reçues ; celles restées sans réponse s’accumulent dans « Besoins de réponse (essai) » d’[Optimisation des connaissances](/fr/guide/knowledge/optimization) (cette vue n’est pas encore activée dans tous les environnements). L’onglet porte le suffixe « (essai) » ; dans cette page, nous l’appelons simplement « Besoins de réponse ».
+
+    Critère : la question transmise a reçu une réponse dans la conversation ; ou, dans « Besoins de réponse », vous avez rempli le champ « Saisissez une réponse prête à envoyer aux clients » puis cliqué sur « Confirmer », ce qui affiche « Confirmé et retiré de la réponse aux besoins ».
+
+    Remarque : pour recevoir ces questions et signalements, vous devez d’abord être « Superviseur » aux yeux de l’IA — le code d’autorisation du superviseur a été envoyé, ou votre contact est défini sur « Superviseur » dans Relations ; l’interrupteur et le contenu du « Signalement proactif des événements importants » doivent aussi être activés et enregistrés dans les [Règles de réponse](/fr/guide/response/reply-rules).
+  </Step>
+
+  <Step title="Relire la collaboration dans les données et décider quoi lui apprendre ensuite">
+    Menu de gauche → Tableau de bord des données → [Performances](/fr/guide/dashboard/business-performance) : suivez l’évolution des « Propositions » (nombre de résumés de questions transmis par l’IA aux superviseurs) et des « Éléments appris » (nombre de connaissances que l’IA a apprises automatiquement dans les conversations) pour voir si elle traite les demandes seule ou si elle vient souvent vous consulter — les questions fréquentes sont précisément ce qu’il faut ajouter ensuite à la base de connaissances.
+
+    Pour comprendre pourquoi une réponse a été formulée ainsi, passez par le menu de gauche → Tableau de bord des données → [Données détaillées](/fr/guide/dashboard/data-export), puis ouvrez une demande pour consulter les « Connaissances de référence » et les « Étapes d'exécution ».
+
+    Critère : les « Propositions » et les « Éléments appris » affichent des données ; sur les enregistrements contrôlés, la réponse correspond bien à des connaissances de référence ou à des étapes d’exécution.
+
+    Remarque : « Messages reçus », « Demandes reçues » et « Réponses » se recoupent et ne doivent pas être additionnés ; pour les autres indicateurs, cliquez sur « Définition des indicateurs » à tout moment.
+  </Step>
+
+</Steps>
+
+## Points de contrôle
+
+- La colonne « Relation » de la page Relations correspond à ce qui est attendu, et le « Superviseur » est clairement identifié.
+- Le code d’autorisation du superviseur ou du collègue a été envoyé au compte IA concerné, et c’est bien le code actuellement valide (après la génération d’un nouveau code, renvoyez-le).
+- L’« Assistant d’administration » envoie et reçoit normalement les messages ; la saisie de « # » et de « / » affiche les listes de commandes et de suggestions.
+- Les questions transmises par l’IA ont reçu une réponse ; celles qui n’ont pas pu l’être ont été complétées dans « Optimisation des connaissances → Besoins de réponse ».
+- La page « Performances » affiche des données pour les Propositions et les Éléments appris.
+
+## Points d’attention
+
+<Warning>
+  Les codes d’autorisation sont des justificatifs d’identité : ne les remettez qu’à la personne à autoriser et au compte IA correspondant, sans les transférer à des groupes ou à des personnes sans lien. « Générer et enregistrer un nouveau code » remplace immédiatement l’ancien, sans seconde confirmation : l’ancien code devient alors invalide.
+</Warning>
+
+<Info>
+  Les codes d’autorisation déterminent « qui vous êtes » ; la page Relations indique « qui sont les contacts et les groupes ». C’est la combinaison des deux qui définit la façon dont l’IA traite chaque interlocuteur.
+</Info>
+
+<Info>
+  La conversation de l’« Assistant d’administration » n’est liée à aucune fenêtre sélectionnée sur la page : elle ne permet pas de confirmer qu’une configuration a bien été appliquée. Pour vérifier, envoyez un message via un vrai canal ou descendez jusqu’aux conversations réelles dans « Données détaillées ».
+</Info>
+
+<Tip>
+  Avec « / », exprimez directement votre besoin : c’est plus rapide que de mémoriser les commandes ; si vous ne les retenez pas toutes, envoyez `#help` pour afficher la liste complète des commandes prises en charge.
+</Tip>
+
+<Tip>
+  Les réponses complétées dans « Besoins de réponse » entrent dans la base de connaissances : rédigez-les comme des réponses types directement envoyables aux clients — la prochaine fois, l’IA aura une base pour les questions similaires.
+</Tip>
+
+## Questions fréquentes
+
+### Que mesure « Propositions » ? Quand l’IA vient-elle me consulter ?
+
+« Propositions » compte les résumés de questions que l’IA transmet aux superviseurs. Lorsqu’une question client la dépasse, elle en transfère le résumé au superviseur pour le consulter ; elle fait aussi un signalement proactif pour les événements configurés dans « Règles de réponse → Signalement proactif des événements importants », et vous notifie lorsque « Notifier le Leader » est sélectionné dans une règle de garde-fou.
+
+### L’IA m’a transmis une question et je n’ai pas eu le temps d’y répondre : que se passe-t-il ?
+
+Les questions restées sans réponse arrivent dans « Besoins de réponse » d’« Optimisation des connaissances ». Rédigez-y une réponse directement utilisable auprès du client puis cliquez sur « Confirmer » : la question quitte la liste et la réponse entre dans la base de connaissances. Pour ne pas la traiter, cliquez sur « Ignorer » : aucune connaissance n’est créée. Cette vue n’est pas encore activée dans tous les environnements ; si vous ne la voyez pas dans l’interface, c’est qu’elle n’est pas ouverte dans le vôtre.
+
+### Pourquoi le superviseur ne reçoit-il toujours pas les signalements proactifs de l’IA ?
+
+Vérifiez trois points dans l’ordre : ① le destinataire est-il bien « Superviseur » — le code d’autorisation du superviseur a été envoyé, ou son contact est défini sur « Superviseur » dans Relations ; ② le « Signalement proactif des événements importants » des « Règles de réponse » est-il activé et son contenu enregistré via « Enregistrer la configuration » ; ③ s’il s’agit d’une notification de garde-fou, vérifiez que « Notification au Leader » est réglé sur « Notifier le Leader » dans la règle.
+
+### Les échanges avec l’« Assistant d’administration » permettent-ils de vérifier la configuration d’une fenêtre de conversation ?
+
+Non. Il n’est lié à aucune fenêtre sélectionnée sur la page ; pour vérifier, envoyez un message via un vrai canal ou descendez jusqu’à une conversation réelle dans « Données détaillées » pour consulter les « Connaissances de référence » et les « Étapes d'exécution ».
+
+### Un collègue est toujours traité comme un client par l’IA : comment corriger ?
+
+Deux solutions au choix : passez sa « Relation » sur « Collègue » dans Relations ; ou demandez-lui d’envoyer son « Code d’autorisation du collègue » à ce compte IA. Confirmez ensuite avec un vrai message que le traitement de l’IA a changé ; la modification par lot prend effet immédiatement, sans possibilité d’annulation.

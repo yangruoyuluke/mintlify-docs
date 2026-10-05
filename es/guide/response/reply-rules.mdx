@@ -1,0 +1,138 @@
+---
+title: Reglas de respuesta
+description: Configure las respuestas de la IA cuando no sabe qué contestar, la participación en chats grupales, las notificaciones proactivas de eventos clave y las respuestas directas por palabras clave en la ventana de conversación seleccionada; los interruptores se guardan al instante y el contenido debe guardarse.
+keywords:
+  - reglas de respuesta
+  - respuesta directa por palabras clave
+  - chat grupal inteligente
+  - notificación activa de eventos clave
+  - configuración de respuestas
+---
+
+«Reglas de respuesta» controla lo que dice la IA en la ventana de conversación seleccionada en cuatro situaciones: cómo responder cuando no sabe qué contestar, si debe intervenir en los chats grupales, qué eventos debe notificar de forma proactiva al supervisor y qué consultas se responden con contenido fijo sin pasar por la IA. Las cuatro tarjetas —«Respuesta cuando la IA no sabe qué contestar», «Chat grupal inteligente (solo en WeChat y WeCom)», «Notificación activa de eventos clave» y «Respuesta directa por palabras clave»— se guardan de forma independiente; los interruptores se aplican al instante con un solo clic y el contenido de las tarjetas requiere pulsar su propio botón de guardado.
+
+## Cuándo la necesitará
+
+- La IA responde mal a las preguntas que no están en la base de conocimientos y quiere contar con un texto fijo como respuesta de respaldo.
+- La IA no participa en los chats grupales cuando debería, o interviene cuando no debería: necesita dejar claro qué mensajes del grupo debe responder y cuáles no.
+- Cuando un cliente muestra interés de compra, presenta una queja u ocurre otro evento clave, quiere que la IA informe de forma proactiva al supervisor.
+- Preguntas frecuentes como el horario de atención o la lista de precios deben responderse al instante con contenido fijo, sin pasar cada vez por la IA.
+
+## Ruta de acceso
+
+Menú izquierdo → Configuración de respuestas → Reglas de respuesta. Al entrar, mire primero la «Ventana de conversación actual» de la izquierda: las cuatro tarjetas se guardan según esta ventana, así que al cambiar de ventana verá los ajustes de otra. En la parte superior de la página aparece siempre el aviso «Los interruptores se guardan por separado; los cambios del contenido deben guardarse.».
+
+<Frame>
+  ![Página de «Reglas de respuesta»: la cabecera muestra la descripción de la página y el aviso «Los interruptores se guardan por separado; los cambios del contenido deben guardarse.»; el interruptor de la tarjeta «Respuesta cuando la IA no sabe qué contestar» está «Activado», el título del área de edición es «Mensaje exacto que enviará la IA» y en la esquina inferior derecha está el botón «Guardar texto de respuesta»; debajo aparece la tarjeta «Chat grupal inteligente»](/images/es/guide/response/reply-rules/01-overview.jpg)
+</Frame>
+
+Si no hay ninguna ventana seleccionada, la página solo muestra «No hay ventanas de conversación disponibles», «Primero, conecte una ventana de conversación que no sea de administración y después continúe con la configuración.» y el botón «Conectar una ventana»; en ese caso no se puede editar.
+
+## Pasos
+
+<Steps>
+  <Step title="Confirme la «Ventana de conversación actual»">
+    Las cuatro tarjetas se guardan según la ventana. Antes de empezar a editar, confirme que la «Ventana de conversación actual» de la izquierda es la ventana que quiere configurar.
+
+    Cómo comprobarlo: el menú desplegable muestra el nombre de la ventana objetivo.
+
+    Nota: si hay contenido sin guardar, al cambiar de menú o de ventana aparecerá el aviso «¿Descartar los cambios sin guardar?»; elija «Seguir editando» para quedarse en la página. La actualización de la página o el cierre de la pestaña los intercepta el cuadro de diálogo nativo del navegador. Mientras se está guardando se muestra «Espere a que termine el guardado o la subida en curso antes de salir.».
+  </Step>
+
+  <Step title="Configure la «Respuesta cuando la IA no sabe qué contestar»">
+    Escriba primero el texto que se enviará en el área «Mensaje exacto que enviará la IA», pulse «Guardar texto de respuesta» y, después, active el interruptor a la derecha del título. Con el interruptor desactivado, la descripción de la tarjeta es «Actualmente, la IA no responde cuando tiene dudas. Puede editar y guardar el mensaje antes de activar la opción.»; al activarlo, «La IA enviará este texto tal como está escrito.».
+
+    Cómo comprobarlo: el estado de guardado pasa de «Sin guardar» a «Guardado» o «Guardado · Aplicación en el servicio sin confirmar», y la etiqueta junto al interruptor muestra «Activado».
+
+    Para usar una versión anterior, pulse «Historial» y elija una versión (con un formato como «10/4 16:25 Versión»); en la ventana de comparación, revise el «Borrador actual» y el «Texto candidato» y pulse «Aplicar propuesta»: solo devuelve el contenido al área de edición, así que todavía hay que pulsar «Guardar texto de respuesta».
+
+    Nota: el interruptor se guarda con un solo clic y no muestra ninguna ventana de confirmación; si modifica el texto y no lo guarda, el servicio seguirá usando el texto anterior.
+  </Step>
+
+  <Step title="Configure el «Chat grupal inteligente»">
+    Active primero el interruptor de «Chat grupal inteligente» (las dos pestañas solo aparecen tras activarlo) y escriba las reglas por separado en «Mensajes a los que debe responder la IA» y «Mensajes a los que no debe responder la IA»; puede describir con todo detalle o añadir ejemplos. El contenido de las dos pestañas se guarda junto con el mismo botón «Guardar configuración».
+
+    Cómo comprobarlo: el estado de guardado pasa a «Guardado» o «Guardado · Aplicación en el servicio sin confirmar».
+
+    Nota: las reglas del chat grupal inteligente solo se aplican en los canales de WeChat y WeCom.
+  </Step>
+
+  <Step title="Configure la «Notificación activa de eventos clave»">
+    Active primero el interruptor de «Notificación activa de eventos clave» y escriba en el área de edición en qué situaciones debe informarse de forma proactiva al supervisor (el texto de ayuda es «Indique en qué situaciones debe informarse al supervisor de forma proactiva»); cuanto más concretos sean el momento y el formato, mejor; por ejemplo: «cuando un cliente manifieste interés de compra de forma reiterada, presente una queja grave o solicite un contrato o un presupuesto». Al terminar, pulse «Guardar configuración».
+
+    Cómo comprobarlo: el estado ya no es «Sin guardar» y el interruptor muestra «Activado».
+
+    Nota: para que las notificaciones lleguen al supervisor, primero debe configurar al destinatario como «Supervisor» en [Relaciones](/es/guide/assistant/relationship-config).
+  </Step>
+
+  <Step title="Configure la «Respuesta directa por palabras clave»">
+    Tras activar el interruptor, gestione las reglas en la tarjeta: pulse «Añadir regla» para crear una; las reglas aparecen contraídas de forma predeterminada y se expanden al pulsar su título. La primera vez que active el interruptor y aún no haya reglas, aparecerá automáticamente una regla vacía. Si hay muchas reglas, use «Buscar palabras clave o contenido» para filtrarlas; el filtro solo afecta a la vista actual de la lista y no cambia el orden de las reglas.
+
+    1. «Palabras clave que activan la regla»: escriba una palabra clave y pulse Enter para añadirla; puede añadir varias y basta con que coincida una; no se distinguen mayúsculas de minúsculas.
+    2. «Tipo de coincidencia»: elija «Coincidencia exacta» (solo se activa si la consulta completa coincide exactamente con la palabra clave) o «Contiene» (se activa si la consulta contiene la palabra clave).
+    3. «Contenido que se enviará al coincidir»: complete el contenido de cada elemento; pulse «Añadir fila» para añadir «Texto», «Imagen» o «Archivo»; se envían uno por uno, en orden, hasta un máximo de 6. Después de subir una imagen o un archivo, puede «Volver a subir» o añadir un texto que se envíe junto con él.
+    4. Pulse «Guardar configuración».
+
+    <Frame>
+      ![La tarjeta «Respuesta directa por palabras clave»: el interruptor está activado y el resumen indica «4 reglas configuradas. Se evalúan en orden y se envía directamente la respuesta de la primera coincidencia.» Debajo están el buscador y la lista de reglas 1 a 4 (palabras clave, tipo de coincidencia y número de elementos), con «Estado actual», «Añadir regla» y «Guardar configuración» al final](/images/es/guide/response/reply-rules/02-keyword-direct-reply.jpg)
+    </Frame>
+
+    Cómo comprobarlo: el resumen de la tarjeta muestra «N reglas configuradas. Se evalúan en orden y se envía directamente la respuesta de la primera coincidencia.»; cuando se guarda correctamente, aparece «Configuración de respuesta directa de palabras clave guardada».
+
+    Nota:
+
+    - Las reglas se evalúan en el orden de la lista y, en la primera coincidencia, se envía el contenido sin pasar por la IA; el orden de la lista es el orden de coincidencia, así que coloque delante las reglas más específicas.
+    - Al guardar se sobrescribe toda la configuración; cuando aparezca «Complete las palabras clave y el contenido de cada regla.», las reglas a las que les falte contenido se expandirán automáticamente.
+    - Cada imagen o archivo no puede superar los 100 MB; desactivar el interruptor solo pausa la función y no elimina las reglas guardadas.
+  </Step>
+</Steps>
+
+## Puntos de verificación
+
+- La «Ventana de conversación actual» de la izquierda es la ventana objetivo.
+- El estado de los interruptores de las cuatro tarjetas coincide con lo esperado y las tarjetas modificadas ya no muestran «Sin guardar».
+- Haga una prueba real en el canal correspondiente: pregunte algo que no esté en la base de conocimientos y compruebe si se envía la respuesta de respaldo; envíe a un grupo un mensaje que esté (o no) descrito en las reglas y compruebe si la IA responde o guarda silencio como espera; envíe un mensaje que coincida con una palabra clave y compruebe si recibe de inmediato el contenido fijo.
+
+## Aspectos a tener en cuenta
+
+<Warning>
+Los interruptores y el contenido se guardan por separado: el interruptor se guarda al instante con un solo clic; el texto y las reglas de las tarjetas requieren pulsar el botón de guardado de cada tarjeta. Las modificaciones sin guardar no surten efecto y se bloquean al salir de la página.
+</Warning>
+
+<Warning>
+La «Respuesta directa por palabras clave» guarda sobrescribiendo toda la configuración; el orden de las reglas es el orden de coincidencia y, en la primera coincidencia, se envía el contenido sin pasar por la IA. Después de reordenar o eliminar reglas, guarde de nuevo.
+</Warning>
+
+<Info>
+La «Notificación activa de eventos clave» se envía al contacto con la relación «Supervisor». Si no se ha configurado un supervisor en [Relaciones](/es/guide/assistant/relationship-config), las notificaciones no tendrán destinatario.
+</Info>
+
+<Info>
+Las reglas del «Chat grupal inteligente» solo se aplican en los canales de WeChat y WeCom.
+</Info>
+
+<Tip>
+Las preguntas frecuentes con respuesta fija (horario de atención, dirección, lista de precios) pueden ir en «Respuesta directa por palabras clave»; las preguntas que requieren contexto o la base de conocimientos se dejan a la respuesta normal de la IA, y los casos en los que la IA no sabe qué contestar se cubren con «Respuesta cuando la IA no sabe qué contestar».
+</Tip>
+
+## Preguntas frecuentes
+
+### El interruptor está activado, pero las respuestas de la IA no cambian. ¿Qué reviso primero?
+
+Revise tres cosas en orden: si la «Ventana de conversación actual» de la izquierda es la ventana en la que está conversando (esta página se guarda por ventana); si el contenido de la tarjeta ya está guardado (el estado no puede ser «Sin guardar»: a eso se refiere el aviso «Los interruptores se guardan por separado; los cambios del contenido deben guardarse.»); y, por último, tenga en cuenta que «Guardado · Aplicación en el servicio sin confirmar» solo significa que se guardó en el sistema, pero que aún no se ha confirmado que el servicio lo haya aplicado; lo más directo es enviar un mensaje real por el canal para verificarlo.
+
+### Configuré la «Respuesta directa por palabras clave», pero el mensaje no se envía directamente. ¿Dónde suele estar el error?
+
+Mire primero el «Tipo de coincidencia»: con «Coincidencia exacta» solo se activa si la consulta completa coincide exactamente con la palabra clave, por lo que lo habitual es cambiarlo a «Contiene». Después, revise el orden de las reglas: cuando varias coinciden, solo surte efecto la primera, así que una regla demasiado amplia colocada delante bloquea las siguientes. Recuerde pulsar «Guardar configuración» después de los cambios; las modificaciones sin guardar no surten efecto.
+
+### Al guardar la «Respuesta directa por palabras clave» aparece «Complete las palabras clave y el contenido de cada regla.»
+
+Cada regla debe tener al menos una palabra clave de activación y al menos un elemento que enviar. Cuando aparece el aviso, la tarjeta expande automáticamente las reglas a las que les falta contenido; complételas y vuelva a guardar.
+
+### Escribí reglas en el «Chat grupal inteligente»: ¿por qué no se aplican en algunos canales?
+
+Las reglas del chat grupal inteligente solo se aplican en los canales de WeChat y WeCom. Además, se guardan por separado del interruptor: después de modificar el contenido de las dos pestañas, pulse «Guardar configuración» para guardarlo.
+
+### No recibo las notificaciones de la «Notificación activa de eventos clave». ¿Qué puede fallar?
+
+Confirme primero que el interruptor muestre «Activado» y que el contenido esté guardado; después, que el destinatario esté configurado como «Supervisor» en [Relaciones](/es/guide/assistant/relationship-config): sin una relación de supervisor no hay destinatario.

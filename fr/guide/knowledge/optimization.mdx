@@ -1,0 +1,130 @@
+---
+title: Optimisation des connaissances
+description: "Examinez les connaissances nouvellement apprises par l’IA : vérifiez, modifiez, acceptez ou ignorez les éléments dans « En attente de validation », et complétez dans « Besoins de réponse » les questions restées sans réponse."
+keywords:
+  - Optimisation des connaissances
+  - En attente de validation
+  - Besoins de réponse
+  - Auto-apprentissage
+  - Validation des connaissances
+  - Protection du brouillon
+---
+
+« Optimisation des connaissances » est l’étape de confirmation avant l’ajout à la base : les connaissances apprises ou générées par l’IA arrivent d’abord ici et n’entrent dans les connaissances enregistrées, utilisables par l’IA, qu’après votre clic sur « Accepter » ; les connaissances qui ne relèvent pas de l’auto-apprentissage sont, elles, acceptées automatiquement si elles restent sans traitement pendant 24 heures. Les questions auxquelles l’IA n’a pas su répondre et qui ont déjà été transmises à un superviseur arrivent également ici, en attendant que vous ajoutiez la réponse.
+
+## Quand en avez-vous besoin ?
+
+- Une tâche de [Génération de connaissances](/fr/guide/knowledge/generation) est terminée et vous cliquez sur « Voir le résultat » : si la tâche contient encore des éléments à confirmer, vous êtes conduit vers « En attente de validation » de cette page pour vérifier un par un les contenus appris par l’IA ; si tout est déjà enregistré, c’est « Gestion des connaissances » qui s’ouvre.
+- Des connaissances marquées « Validation manuelle » apparaissent dans la liste (source « Auto-apprentissage ») : elles ne sont pas acceptées automatiquement, et c’est à vous de décider de les garder ou de les ignorer.
+- Des questions posées par des clients, auxquelles l’IA n’a pas su répondre, se sont accumulées dans « Besoins de réponse » : vous voulez rédiger une réponse directement utilisable auprès du client.
+
+## Comment y accéder ?
+
+Menu de gauche → Base de connaissances → Optimisation des connaissances.
+
+La page s’ouvre par défaut sur « En attente de validation » ; « Besoins de réponse » est une autre vue de la même page (l’onglet affiche « Besoins de réponse (essai) ») pour compléter les questions restées sans réponse de l’IA. Cette vue n’est pas encore activée dans tous les environnements : si vous ne la voyez pas, passez simplement l’étape correspondante.
+
+<Frame>
+  ![Page « Optimisation des connaissances », vue « En attente de validation » : en haut, le champ de recherche, le filtre de source « Tous » et le filtre « Toutes catégories » ; la liste présente pour chaque élément son titre, son contenu, son groupe, sa source et sa date de soumission ; à droite, les actions « Accepter » et « Ignorer »](/images/fr/guide/knowledge/optimization/01-overview.jpg)
+</Frame>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Filtrer les connaissances à traiter dans « En attente de validation »">
+    La page s’ouvre par défaut sur « En attente de validation » ; chaque ligne de la liste correspond à une connaissance à confirmer : le titre et le contenu, puis les informations « Groupe », « Source » et « Soumis le », et un marqueur en fin de ligne :
+
+    - « Les éléments non traités sont automatiquement examinés après 24 heures » : sans action de votre part, l’élément sera accepté automatiquement dans les 24 heures ;
+    - « Validation manuelle » : cet élément vient de l’« Auto-apprentissage », il n’est pas accepté automatiquement et doit être traité manuellement.
+
+    La barre d’outils comprend le champ de recherche (indication « Rechercher parmi les connaissances en attente sur cette page »), les filtres de source (« Tous ») et de catégorie (« Toutes catégories »), ainsi que le bouton « Rechercher ». Saisissez un mot-clé puis cliquez sur « Rechercher » (ou appuyez sur Entrée). La recherche ne filtre que les résultats déjà chargés sur la page en cours ; changer de source ou de catégorie relance une requête sur toute la file d’attente — si vous ne trouvez pas l’élément voulu, changez donc d’abord de filtre plutôt que de tourner les pages. Cliquer sur la « Source » affichée dans une ligne filtre également par cette source.
+
+    Pour savoir de quelle conversation provient une connaissance, cliquez sur « Consulter le contexte » (cette entrée n’est disponible que dans certains environnements ; si vous ne la voyez pas, passez). La fenêtre « Contexte de conversation · dans l’ordre temporel » liste la conversation d’origine dans l’ordre chronologique, la question en cours étant signalée par « Cette question » ; lorsqu’aucune conversation n’est traçable, le message « Aucun contexte de conversation traçable n’est disponible pour cet article. » s’affiche.
+
+    Critère : le bas de la liste affiche « N enregistrements au total · Page X sur Y » ; le nombre d’éléments et le contenu se rafraîchissent après un changement de filtre.
+  </Step>
+
+  <Step title="Cliquer sur le contenu pour modifier la connaissance">
+    Cliquez sur la zone de contenu (sauf les liens et les boutons) pour passer en édition : le titre devient un champ de saisie (indication « Saisissez un titre ») et le contenu un éditeur de texte enrichi (indication « Saisissez le contenu ») ; pendant l’édition, la ligne n’affiche plus « Accepter » ni « Ignorer », qui réapparaissent après enregistrement ou abandon.
+
+    Dès que vous modifiez quelque chose, le statut en bas passe de « Aucune modification à enregistrer » à « Modifications non enregistrées · Pas encore ajoutées à la base de connaissances », et le bouton « Enregistrer les modifications » devient alors cliquable. Pour joindre un document à la connaissance, cliquez sur « Insérer un fichier » ; un fichier ne doit pas dépasser 100 Mo (au-delà, le message « La taille du fichier ne doit pas dépasser 100 Mo. » s’affiche). Une fois vos modifications terminées, cliquez sur « Enregistrer les modifications » : le message « Modifications enregistrées. » apparaît et la liste affiche immédiatement le contenu modifié.
+
+    <Frame>
+      ![État d’édition après un clic sur le contenu d’une connaissance dans « En attente de validation » : en haut, le champ du titre ; en dessous, l’éditeur de texte enrichi ; en bas à gauche, « Insérer un fichier » et le statut « Aucune modification à enregistrer » ; à droite, « Annuler » et le bouton « Enregistrer les modifications » grisé](/images/fr/guide/knowledge/optimization/02-edit-knowledge.jpg)
+    </Frame>
+
+    Critère : après l’enregistrement, la ligne affiche bien le titre et le contenu modifiés ; à la réouverture de l’éditeur, le statut est « Aucune modification à enregistrer ».
+
+    Remarque (protection du brouillon) : si vous changez de vue, cliquez ailleurs ou quittez la page sans enregistrer, la boîte de dialogue « Ignorer les modifications non enregistrées ? » s’affiche — « Continuer à modifier » conserve votre saisie, « Ignorer les modifications… » abandonne les modifications en cours et exécute l’action demandée. Les modifications non enregistrées sont conservées temporairement dans l’onglet du navigateur : en revenant sur le même élément, le message « Le brouillon conservé dans cet onglet a été restauré. Il n’est pas encore enregistré dans la base de connaissances. » s’affiche. Si la page indique « Impossible de sauvegarder le brouillon dans cet onglet. Enregistrez-le d’abord : actualiser la page ou utiliser les boutons Précédent/Suivant du navigateur pourrait faire perdre votre saisie. », la sauvegarde n’a pas pu se faire cette fois : enregistrez avant de quitter. Le brouillon n’existe que dans l’onglet en cours ; il est invisible depuis un autre onglet ou un autre appareil.
+  </Step>
+
+  <Step title="Accepter ou ignorer la connaissance">
+    Pour traiter un élément seul, cliquez directement sur le bouton à droite de la ligne :
+
+    - « Accepter » : le message « Connaissance acceptée. » apparaît, l’élément disparaît de la liste et rejoint les connaissances enregistrées ;
+    - « Ignorer » : le message « Connaissance ignorée. » apparaît, l’élément est retiré de la liste, n’entre pas dans la base et ne peut pas être annulé.
+
+    Une action sur un élément seul prend effet immédiatement, sans confirmation. Pour traiter plusieurs éléments d’un coup, cochez-les d’abord (la case d’en-tête sert à « Tout sélectionner sur cette page ») ; la barre d’action « N éléments sélectionnés » apparaît, cliquez sur « Accepter les éléments sélectionnés » ou « Ignorer les éléments sélectionnés », puis, dans la boîte de dialogue « Traiter les N connaissances en attente de validation sélectionnées ? », cliquez sur « Confirmer » pour exécuter (sur « Annuler », rien ne se passe). Une fois terminé, le message « Les éléments sélectionnés ont été acceptés. » ou « Les éléments sélectionnés ont été ignorés. » s’affiche et la liste se recharge automatiquement.
+
+    Critère : les éléments traités disparaissent de la liste et le total diminue ; les connaissances acceptées peuvent être recherchées et vérifiées dans « Gestion des connaissances ».
+
+    Remarque : une action par lots ne traite que les lignes cochées, et la boîte de dialogue est la dernière occasion de confirmer — vérifiez le nombre d’éléments avant de cliquer sur « Confirmer ».
+  </Step>
+
+  <Step title="Compléter dans « Besoins de réponse » les questions restées sans réponse de l’IA (si la vue est activée)">
+    Basculez vers la vue « Besoins de réponse » (le compteur de questions à traiter s’affiche sur l’onglet). Chaque question provient d’un client : l’IA n’a pas su y répondre, la question a été transmise à un superviseur, et celui-ci n’a pas encore répondu.
+
+    Sur chaque ligne, la question et la sélection du « Groupe » sont à gauche, la zone de réponse à droite (indication « Saisissez une réponse prête à envoyer aux clients »). Saisissez la réponse puis cliquez sur « Confirmer » : le message « Confirmé et retiré de la réponse aux besoins » apparaît et le couple question-réponse entre dans la base de connaissances. Une réponse vide empêche la confirmation : « Saisissez une réponse avant de confirmer. » s’affiche. Pour ne pas traiter une question, cliquez sur « Ignorer » : « Ignoré et retiré de la réponse aux besoins » s’affiche, sans créer de connaissance.
+
+    Critère : les lignes traitées disparaissent de la liste et le compteur de la vue diminue ; une liste vide affiche « Aucune question n’a besoin de réponses ».
+
+    Remarque : cette vue n’est pas encore activée dans tous les environnements ; si elle n’apparaît pas dans l’interface, passez cette étape.
+  </Step>
+</Steps>
+
+## Points de contrôle
+
+- Les connaissances acceptées ne figurent plus dans la liste en attente de validation et restent recherchables par mot-clé dans « Gestion des connaissances ».
+- Après un enregistrement, le titre et le contenu affichés dans la liste correspondent aux modifications ; l’éditeur indique « Aucune modification à enregistrer ».
+- À la fin d’une action par lots, « Les éléments sélectionnés ont été acceptés. » ou « Les éléments sélectionnés ont été ignorés. » s’affiche et la liste se recharge.
+- Dans « Besoins de réponse », confirmer ou ignorer une question affiche le message correspondant et fait diminuer le compteur.
+
+## Points d’attention
+
+<Warning>
+Une action « Accepter » ou « Ignorer » sur un élément seul prend effet immédiatement, sans confirmation (seules les actions par lots affichent une boîte de dialogue). Attention surtout à « Ignorer » : il retire la connaissance de la liste en attente, elle n’entre pas dans les connaissances enregistrées et aucun retour en arrière n’est possible. En cas de doute, ne l’ignorez pas tout de suite — cliquez sur le contenu pour le corriger, puis cliquez sur « Accepter » ; les éléments marqués « Les éléments non traités sont automatiquement examinés après 24 heures » peuvent aussi être laissés tels quels pour être acceptés automatiquement.
+</Warning>
+
+<Info>
+Règle d’acceptation automatique : un rappel permanent en haut de page indique « Les connaissances issues de l’apprentissage automatique doivent être validées manuellement. Les autres éléments sans action pendant 24 heures sont acceptés automatiquement. » Les éléments marqués « Les éléments non traités sont automatiquement examinés après 24 heures » rejoignent automatiquement les connaissances enregistrées si vous ne faites rien ; ceux marqués « Validation manuelle » proviennent de l’« Auto-apprentissage », ne sont jamais acceptés automatiquement et exigent un clic sur « Accepter » ou « Ignorer ».
+</Info>
+
+<Info>
+La liste « En attente de validation » ne récupère que les connaissances de qualité : tous les contenus générés n’y apparaissent pas.
+</Info>
+
+<Tip>
+Avant de traiter, filtrez d’abord la source « Auto-apprentissage » : ces connaissances ne sont jamais acceptées automatiquement et restent dans la liste tant qu’elles ne sont pas traitées ; les éléments des autres sources sont acceptés automatiquement sous 24 heures, même si vous ne les traitez pas à temps.
+</Tip>
+
+## Questions fréquentes
+
+### Si je ne les traite pas, les connaissances en attente de validation disparaissent-elles toutes seules ?
+
+Oui. Hormis l’« Auto-apprentissage », qui exige une validation manuelle, les connaissances non traitées sont acceptées automatiquement dans les 24 heures : la liste se raccourcit avec le temps (les éléments concernés portent le marqueur « Les éléments non traités sont automatiquement examinés après 24 heures »). Les connaissances issues de l’auto-apprentissage, marquées « Validation manuelle », ne sont pas acceptées automatiquement et restent ici tant qu’elles ne sont pas traitées. Pour maîtriser les connaissances utilisées par l’IA, cliquez vous-même sur « Accepter » ou « Ignorer » avant l’acceptation automatique.
+
+### Quelle est la différence entre « Ignorer » et « Accepter » ? Peut-on annuler ?
+
+« Accepter » valide la connaissance : l’élément rejoint les connaissances enregistrées, où il pourra être recherché, modifié et reclassé dans [Gestion des connaissances](/fr/guide/knowledge/management). « Ignorer » retire la connaissance de la liste en attente : le contenu n’entre pas dans la base et aucun retour en arrière n’est possible. Une action sur un élément seul ne demande pas de confirmation ; une action par lots affiche d’abord une boîte de dialogue.
+
+### Si je quitte la page en pleine modification, mes changements sont-ils perdus ?
+
+Non, pas immédiatement. Les modifications non enregistrées sont conservées temporairement dans l’onglet du navigateur : en rouvrant le même élément, le message « Le brouillon conservé dans cet onglet a été restauré. Il n’est pas encore enregistré dans la base de connaissances. » s’affiche, et il suffit de vérifier puis de cliquer sur « Enregistrer les modifications ». Le brouillon n’existe que dans l’onglet en cours : il est invisible depuis un autre onglet ou un autre appareil. Si la page indique « Impossible de sauvegarder le brouillon dans cet onglet. Enregistrez-le d’abord : actualiser la page ou utiliser les boutons Précédent/Suivant du navigateur pourrait faire perdre votre saisie. », la sauvegarde n’a pas pu se faire cette fois : enregistrez avant de quitter.
+
+### Pourquoi la recherche ne trouve-t-elle pas les connaissances des autres pages ?
+
+La recherche de « En attente de validation » ne filtre que les résultats déjà chargés sur la page en cours, sans couvrir les autres pages. Pour retrouver une connaissance, utilisez plutôt les filtres de source (« Tous ») et de catégorie (« Toutes catégories »), qui interrogent toute la file d’attente, ou cliquez sur la « Source » affichée dans la ligne pour filtrer par source ; vous pouvez aussi changer de mot-clé et parcourir les pages.
+
+### D’où viennent les questions de « Besoins de réponse » et que deviennent-elles après traitement ?
+
+Ce sont des questions posées par des clients auxquelles l’IA n’a pas su répondre, qui ont été transmises à un superviseur et qui n’ont pas encore reçu de réponse. Saisissez une réponse puis cliquez sur « Confirmer » : la question quitte « Besoins de réponse » et la réponse entre dans la base de connaissances ; pour ne pas la traiter, cliquez sur « Ignorer » : la question quitte aussi la liste, mais aucune connaissance n’est créée. Cette vue n’est pas encore activée dans tous les environnements : si vous ne la voyez pas, c’est qu’elle n’est pas encore ouverte dans votre environnement.

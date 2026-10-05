@@ -1,0 +1,153 @@
+---
+title: "Collaboration avancée et commandes"
+description: "Dans l’« Assistant d’administration », pilotez avec les commandes forcées (#) et les suggestions en langage naturel (/) l’état de travail de l’IA, ses réponses de chat de groupe et ses rapports quotidiens et hebdomadaires — et sachez où la corriger et l’accompagner lorsqu’elle se trompe."
+keywords:
+  - "Assistant d’administration"
+  - "commandes forcées"
+  - "suggestions en langage naturel"
+  - "rapports quotidiens et hebdomadaires"
+  - "corriger et accompagner l’IA"
+---
+
+L’« Assistant d’administration » est le panneau de conversation situé à droite de la barre supérieure. Outre les questions, vous pouvez saisir `#` dans le champ de saisie pour afficher les **commandes forcées** (`#work` « Début du travail », `#stop` « Mettre le travail en pause », `#help` « Afficher toutes les commandes », etc.), et `/` pour afficher les **suggestions en langage naturel** (par exemple « Aide-moi à faire le point sur les conversations d’aujourd’hui. »). Cette page traite deux sujets : utiliser les commandes pour les opérations du quotidien, et corriger l’IA au bon endroit lorsqu’elle répond mal ou à côté, pour en faire une collègue qui comprend mieux votre activité.
+
+## Quand en avez-vous besoin ?
+
+- Vous voulez faire démarrer ou mettre en pause le travail de l’IA, ou activer / désactiver les réponses de chat de groupe, sans parcourir les pages de configuration une à une.
+- Vous voulez activer ou arrêter les rapports quotidiens et hebdomadaires de l’IA.
+- Vous voulez ajouter une seule connaissance essentielle, sans passer par l’import d’un document ni par une tâche de génération.
+- L’IA répond de façon inexacte, confond les identités ou prend la parole dans un groupe inapproprié : vous devez trouver le bon endroit pour corriger.
+
+## Comment y accéder ?
+
+Barre supérieure, à droite → « Assistant d’administration » (au survol : « Ouvrir la conversation avec l’assistant d’administration »). Le panneau s’ouvre depuis le bord droit de la page ; son titre est « Conversation avec l’assistant d’administration » et le champ de saisie se trouve en bas du panneau. Il n’est pas lié à la « Fenêtre de conversation gérée actuellement », à gauche.
+
+<Warning>
+L’encart de portée, en haut du panneau, indique : « Cette conversation n’est pas liée à la fenêtre sélectionnée sur la page ; elle ne permet donc pas de vérifier si la configuration de cette fenêtre est appliquée. » Pour vérifier la configuration d’une fenêtre de conversation, testez avec de vrais échanges sur le canal concerné ; ne tirez pas de conclusion des réponses obtenues ici.
+</Warning>
+
+## Étapes à suivre
+
+<Steps>
+  <Step title="Ouvrir le panneau et reconnaître la portée de la conversation">
+    À l’ouverture, observez d’abord la zone de conversation et le champ de saisie. Sans historique, la zone affiche : « Discutez ici avec l’assistant d’administration. La fenêtre sélectionnée sur la page n’est pas utilisée comme cible de test pour cette conversation. »
+
+    Critère : le titre est « Conversation avec l’assistant d’administration » et le champ de saisie porte l’indication « Veuillez saisir votre question ».
+
+    Remarque : changer de page ou de « Fenêtre de conversation gérée actuellement » ne modifie pas la portée de ce panneau.
+  </Step>
+
+  <Step title="Saisir « # » pour afficher les commandes forcées, puis en envoyer une">
+    Saisissez `#` dans le champ : la liste des commandes s’affiche au-dessus, avec toutes les commandes forcées et leur libellé. Utilisez `↑` `↓` pour déplacer la sélection, validez avec Entrée, refermez avec Échap ou en cliquant en dehors du champ ; vous pouvez aussi cliquer directement à la souris. La commande choisie s’inscrit dans le champ ; appuyez sur Entrée ou cliquez sur le bouton d’envoi en bas à droite pour l’envoyer. Continuez à taper des lettres (par exemple `#w`) pour filtrer la liste.
+
+    Critère : votre commande et la réponse de l’IA apparaissent dans la conversation ; lorsque l’assistant renvoie plusieurs messages d’un coup, ils s’affichent un par un, et l’attente affiche « L’IA réfléchit… ».
+
+    Remarque : tant que la liste est ouverte, la touche Entrée sélectionne la commande sans l’envoyer. Si l’envoi échoue, un message d’erreur s’affiche (avec la raison renvoyée par le serveur, le plus souvent « La requête a échoué. Réessayez. ») ; ce message est retiré de la conversation et il faut le saisir de nouveau pour le renvoyer.
+  </Step>
+
+  <Step title="Choisir la commande adaptée à la situation">
+    La liste contient les commandes suivantes ; les libellés correspondent au texte exact de l’interface :
+
+    | Commande | Libellé dans la liste |
+    | --- | --- |
+    | `#work` | Début du travail |
+    | `#stop` | Mettre le travail en pause |
+    | `#enable_hot_assistant` | Activer la réponse de chat de groupe |
+    | `#disable_hot_assistant` | Désactiver la réponse de chat de groupe |
+    | `#enable_daily_report` | Activer le rapport quotidien |
+    | `#disable_daily_report` | Désactiver le rapport quotidien |
+    | `#enable_weekly_report` | Activer le rapport hebdomadaire |
+    | `#disable_weekly_report` | Désactiver le rapport hebdomadaire |
+    | `#chatknowledge` | Saisir une connaissance |
+    | `#help` | Afficher toutes les commandes |
+
+    Retenez-les en quatre groupes selon leur usage :
+
+    - État de travail : `#work` « Début du travail » et `#stop` « Mettre le travail en pause ». Pour faire démarrer ou arrêter l’IA ponctuellement.
+    - Réponses de chat de groupe : `#enable_hot_assistant` « Activer la réponse de chat de groupe » et `#disable_hot_assistant` « Désactiver la réponse de chat de groupe ».
+    - Rapports quotidiens et hebdomadaires : `#enable_daily_report` / `#disable_daily_report` activent ou désactivent le rapport quotidien ; `#enable_weekly_report` / `#disable_weekly_report` font de même pour le rapport hebdomadaire. Ces rapports sont des comptes rendus de travail que l’IA produit chaque jour ou chaque semaine : pensez à les arrêter avec la commande de désactivation lorsque vous n’en avez plus besoin.
+    - Connaissances et aide : `#chatknowledge` « Saisir une connaissance » — à utiliser pour compléter une seule connaissance essentielle : après l’envoi, suivez les indications de l’assistant dans la conversation pour renseigner le contenu, sans importer de document ; `#help` « Afficher toutes les commandes » — à envoyer d’abord si vous ne les retenez pas toutes.
+
+    Critère : l’IA répond à la commande ; c’est le contenu de sa réponse qui confirme que la commande a été exécutée comme prévu.
+  </Step>
+
+  <Step title="Saisir « / » pour utiliser les suggestions en langage naturel">
+    La saisie de `/` fait apparaître quatre suggestions en langage naturel ; vous pouvez en choisir une et la reformuler avant l’envoi :
+
+    - Aide-moi à faire le point sur les conversations d’aujourd’hui.
+    - Générer le rapport de travail de cette semaine
+    - Voir la performance commerciale de la semaine dernière
+    - Aidez-moi à activer les réponses de chat de groupe
+
+    Critère : après l’envoi, la réponse de l’IA apparaît dans la conversation.
+
+    Remarque : ces suggestions sont des requêtes d’une phrase adressées à l’assistant d’administration ; une fois choisies, ce sont de simples messages. Vous pouvez adapter la période, le destinataire ou d’autres éléments à votre situation avant d’envoyer.
+  </Step>
+
+  <Step title="Gérer les images et l’historique de conversation">
+    - « Joindre l'image », en bas à gauche du champ de saisie, permet de choisir des images à envoyer avec le message. Pendant l’importation d’une image, le bouton d’envoi est indisponible ; appuyer sur Entrée affiche alors « Importation des images en cours, veuillez patienter… » ; en cas d’échec, la prévisualisation est marquée d’une erreur et un message s’affiche.
+    - « Effacer le chat », en haut à droite du panneau, efface tous les messages de la conversation en cours ; la boîte de confirmation indique « Voulez-vous vraiment effacer tous les messages dans la conversation actuelle? Cette action ne peut être annulée. » et, après confirmation, « Historique du chat effacé ».
+
+    Critère : l’image apparaît dans la prévisualisation au-dessus du champ de saisie, puis dans votre propre bulle de message après l’envoi.
+  </Step>
+</Steps>
+
+## Corriger et accompagner l’IA : où intervenir quand elle se trompe
+
+Pour savoir si l’IA a bien répondu, fiez-vous aux enregistrements plutôt qu’à votre impression. Ouvrez d’abord la demande concernée dans [Données détaillées](/fr/guide/dashboard/data-export) et consultez ses « Connaissances de référence » et ses « Étapes d'exécution » (dans l’ordre : Contexte de conversation à ce moment-là → Gestion de groupe → Décision de réponse → Invocation des compétences → Génération de connaissances → Garde-fous de sécurité) pour déterminer si le problème vient des connaissances, des règles ou de la reconnaissance des identités ; corrigez ensuite au bon endroit à l’aide du tableau ci-dessous.
+
+| Ce que vous observez | Où intervenir | Action précise |
+| --- | --- | --- |
+| Les nouvelles connaissances apprises par l’IA ne conviennent pas | Base de connaissances → [Optimisation des connaissances](/fr/guide/knowledge/optimization) → « En attente de validation » | Cliquez sur « Accepter » ou « Ignorer » : l’action sur un élément est immédiate, sans seconde confirmation ; vous pouvez aussi cliquer sur le contenu pour le modifier puis l’enregistrer. Hormis l’« Auto-apprentissage », qui exige une validation manuelle, les autres connaissances sans traitement sous 24 heures sont acceptées automatiquement. |
+| L’IA n’a pas su répondre et la question est restée sans retour après avoir été transmise au superviseur | Base de connaissances → [Optimisation des connaissances](/fr/guide/knowledge/optimization) → « Besoins de réponse » (pas encore activé dans tous les environnements) | Ces questions entrent dans la file des besoins de réponse (sans réponse de l’IA, transmises au superviseur, sans retour de sa part). Cliquez sur « Confirmer » après avoir saisi une réponse pour les en sortir, ou sur « Ignorer ». |
+| Une connaissance déjà enregistrée est erronée | Base de connaissances → [Gestion des connaissances](/fr/guide/knowledge/management) | Recherchez la connaissance, puis modifiez son contenu, changez sa catégorie ou supprimez-la. Pour une action groupée, le filtre détermine le périmètre concerné ; une suppression définitive est irréversible. |
+| Un type de tâche est traité de la mauvaise façon | [Bibliothèque de compétences](/fr/guide/skills/library) | Modifiez « Quand l'utiliser » et « Comment l’IA doit procéder », ou ajustez « Quelles conversations » (« Entretiens avec le superviseur » / « Conversations avec les clients »). Les compétences intégrées sont en lecture seule. |
+| La réponse contient des propos qui ne devraient pas être tenus | Paramètres de réponse → [Garde-fous de sécurité](/fr/guide/response/safety-guardrails) | Ajoutez une règle, choisissez « Correspondance stricte avec les mots-clés » ou « Analyse sémantique par le modèle » comme méthode de détection, puis réglez le blocage ou le passage de la réponse et la « Notification au Leader ». La méthode de détection ne peut plus être modifiée après la création, et chaque fenêtre ne peut avoir qu’une seule « Analyse sémantique par le modèle ». |
+| Les réponses aux questions à réponse fixe sont souvent erronées | Paramètres de réponse → [Règles de réponse](/fr/guide/response/reply-rules) | Ajoutez une règle dans « Réponse directe par mot-clé » : une demande qui contient le mot-clé reçoit directement le contenu fixe, sans passer par la génération de l’IA ; les règles sont vérifiées dans l’ordre et la première correspondance est envoyée. |
+| L’IA prend un collègue pour un client, ou parle dans un groupe où elle devrait se taire | Mon assistant → [Relations](/fr/guide/assistant/relationship-config) | Définissez le contact ou le groupe comme « Client », « Collègue », « En sourdine » ou « Superviseur » ; la relation « Superviseur » conditionne aussi la remise du « Signalement proactif des événements importants ». Si l’IA ne reconnaît pas du tout le superviseur ou le collègue, générez d’abord un code d’autorisation dans [Autorisation des rôles auprès de l’IA](/fr/guide/account/ai-authorization) et demandez à l’intéressé d’envoyer au compte IA le code d’autorisation précédé de `#` pour établir la liaison. |
+| Le ton, les appellations ou la personnalité ne conviennent pas | Mon assistant → [Personnalité de base](/fr/guide/assistant/persona) | Changez le « Style IA », ou réécrivez les instructions principales dans « Instructions personnalisées ». Après l’enregistrement, vérifiez encore que la configuration a été appliquée à l’assistant en cours d’exécution. |
+
+Vérifiez chaque correction : dans [Performances](/fr/guide/dashboard/business-performance), suivez l’évolution des « Propositions » (nombre de résumés de questions transmis par l’IA aux superviseurs) et des « Éléments appris » (volume de connaissances que l’IA a apprises automatiquement), puis renvoyez un vrai message dans le canal pour retester. Parcourir chaque jour « En attente de validation » et « Besoins de réponse » dans [Optimisation des connaissances](/fr/guide/knowledge/optimization) demande moins d’efforts que de traiter une pile accumulée.
+
+## Points de contrôle
+
+- La saisie de `#` affiche la liste complète des commandes et celle de `/` les quatre suggestions en langage naturel ; l’envoi de `#help` affiche toutes les commandes dans la conversation.
+- Après l’envoi d’une commande, la conversation contient votre message et la réponse de l’IA (les réponses multiples s’affichent une par une).
+- Vous savez expliquer le lien entre l’« Assistant d’administration » et la « Fenêtre de conversation gérée actuellement » : il n’y est pas lié et ne remplace pas la vérification de la configuration d’une fenêtre.
+- Face à une erreur de l’IA, vous savez reconnaître d’après le symptôme s’il faut intervenir dans l’Optimisation des connaissances, la Gestion des connaissances, la Bibliothèque de compétences, les Garde-fous de sécurité, les Règles de réponse ou les Relations.
+
+## Points d’attention
+
+<Warning>
+« Effacer le chat » est irréversible. Le texte de la boîte de confirmation est : « Voulez-vous vraiment effacer tous les messages dans la conversation actuelle? Cette action ne peut être annulée. » La suppression ne concerne que l’historique de conversation de ce panneau.
+</Warning>
+
+<Info>
+La liste de référence des commandes est celle qui s’affiche lorsque vous saisissez `#` ; l’envoi de `#help` permet également de consulter toutes les commandes. Les noms de commandes (par exemple `work`, `enable_daily_report`) sont des orthographes fixes, tandis que les libellés de la liste suivent la langue de l’interface.
+</Info>
+
+<Tip>
+Les commandes conviennent aux opérations rapides ; les configurations durables au niveau d’une fenêtre se font toujours dans les pages correspondantes — Personnalité de base, Règles de réponse et Garde-fous de sécurité s’enregistrent par « Fenêtre de conversation gérée actuellement », alors que l’Assistant d’administration n’est lié à aucune fenêtre.
+</Tip>
+
+## Questions fréquentes
+
+### La liste des commandes ne s’affiche pas quand je saisis « # » ?
+
+Vérifiez si `#` est bien le premier caractère du champ : la liste ne s’affiche que lorsque la saisie commence par `#` ou `/` ; une fois ouverte, elle se referme avec Échap ou en cliquant en dehors du champ. Par ailleurs, le champ est désactivé pendant que l’IA répond (affichage « L’IA réfléchit… ») : attendez la fin de la réponse pour saisir.
+
+### Tout se passe bien dans l’« Assistant d’administration », alors pourquoi l’IA de la vraie fenêtre répond-elle encore mal ?
+
+Ce panneau n’est pas lié à la fenêtre de conversation sélectionnée : ses échanges ne peuvent pas servir de test pour une fenêtre. Pour vérifier la configuration d’une fenêtre, testez avec de vrais messages sur le canal concerné ; pour retracer le traitement d’une demande, consultez ses « Étapes d'exécution » et ses « Connaissances de référence » dans [Données détaillées](/fr/guide/dashboard/data-export).
+
+### Où vont les questions auxquelles l’IA n’a pas su répondre, et comment les compléter ?
+
+L’IA transmet un résumé de la question au superviseur (les « Propositions » de la page [Performances](/fr/guide/dashboard/business-performance) en donnent le nombre) ; celles qui restent sans réponse entrent dans la file « Besoins de réponse » d’[Optimisation des connaissances](/fr/guide/knowledge/optimization) (pas encore activée dans tous les environnements : si vous ne la voyez pas dans l’interface, c’est qu’elle n’est pas encore ouverte pour votre environnement). Cliquez sur « Confirmer » après avoir saisi la réponse : la question sort de la file et devient une connaissance utilisable ; cliquez sur « Ignorer » pour celles que vous ne souhaitez pas traiter.
+
+### Si je change la langue de l’interface, les commandes fonctionnent-elles toujours ?
+
+Oui. Les noms de commandes sont des orthographes fixes (par exemple `#enable_weekly_report`), et les libellés de la liste changent avec la langue de l’interface ; si vous n’êtes pas sûr de ce que fait une commande, consultez son libellé dans la liste ou envoyez `#help`.
+
+### Que supprime « Effacer le chat » ?
+
+Uniquement l’historique de conversation de ce panneau, de façon irréversible ; la configuration côté administration n’est pas touchée. Pour conserver un élément de diagnostic (par exemple la conclusion d’une correction), modifiez d’abord la connaissance ou la règle dans la page correspondante, puis effacez la conversation.

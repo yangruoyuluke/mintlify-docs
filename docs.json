@@ -31,6 +31,276 @@
       "href": "https://admin.marsmind.cc/login"
     }
   },
+  "redirects": [
+    {
+      "source": "/cn/admin-backend/account-settings",
+      "destination": "/cn/guide/account/profile"
+    },
+    {
+      "source": "/cn/admin-backend/assistant-settings/lead-cleaning",
+      "destination": "/cn/guide/response/new-customer-reception"
+    },
+    {
+      "source": "/cn/admin-backend/assistant-settings/login-online",
+      "destination": "/cn/guide/assistant/login-online"
+    },
+    {
+      "source": "/cn/admin-backend/assistant-settings/relation-config",
+      "destination": "/cn/guide/assistant/relationship-config"
+    },
+    {
+      "source": "/cn/admin-backend/assistant-settings/response-settings",
+      "destination": "/cn/guide/response/reply-rules"
+    },
+    {
+      "source": "/cn/admin-backend/assistant-settings/safety-guardrails",
+      "destination": "/cn/guide/response/safety-guardrails"
+    },
+    {
+      "source": "/cn/admin-backend/assistant-settings/working-hours",
+      "destination": "/cn/guide/response/working-hours"
+    },
+    {
+      "source": "/cn/admin-backend/data-dashboard/business-performance",
+      "destination": "/cn/guide/dashboard/business-performance"
+    },
+    {
+      "source": "/cn/admin-backend/data-dashboard/data-export",
+      "destination": "/cn/guide/dashboard/data-export"
+    },
+    {
+      "source": "/cn/admin-backend/data-dashboard/order-usage",
+      "destination": "/cn/guide/dashboard/ai-usage"
+    },
+    {
+      "source": "/cn/admin-backend/data-export",
+      "destination": "/cn/guide/dashboard/data-export"
+    },
+    {
+      "source": "/cn/admin-backend/data-module",
+      "destination": "/cn/guide/dashboard/business-performance"
+    },
+    {
+      "source": "/cn/admin-backend/identity-setup",
+      "destination": "/cn/guide/assistant/relationship-config"
+    },
+    {
+      "source": "/cn/admin-backend/inbound-setup",
+      "destination": "/cn/guide/response/new-customer-reception"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-base/audit",
+      "destination": "/cn/guide/knowledge/optimization"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-base/construction",
+      "destination": "/cn/guide/knowledge/generation"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-base/management",
+      "destination": "/cn/guide/knowledge/management"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-entry",
+      "destination": "/cn/guide/knowledge/generation"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-generation",
+      "destination": "/cn/guide/knowledge/generation"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-group-settings",
+      "destination": "/cn/guide/knowledge/management"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-maintenance",
+      "destination": "/cn/guide/knowledge/management"
+    },
+    {
+      "source": "/cn/admin-backend/knowledge-review",
+      "destination": "/cn/guide/knowledge/optimization"
+    },
+    {
+      "source": "/cn/admin-backend/login-and-registration",
+      "destination": "/cn/quick-start/preparation"
+    },
+    {
+      "source": "/cn/admin-backend/operation-guide",
+      "destination": "/cn/guide/interface-tour"
+    },
+    {
+      "source": "/cn/admin-backend/overview",
+      "destination": "/cn/guide/interface-tour"
+    },
+    {
+      "source": "/cn/admin-backend/platform-login",
+      "destination": "/cn/guide/interface-tour"
+    },
+    {
+      "source": "/cn/admin-backend/qa-management",
+      "destination": "/cn/guide/knowledge/management"
+    },
+    {
+      "source": "/cn/admin-backend/response-settings",
+      "destination": "/cn/guide/response/reply-rules"
+    },
+    {
+      "source": "/cn/admin-backend/run-avatar",
+      "destination": "/cn/guide/assistant/login-online"
+    },
+    {
+      "source": "/cn/admin-backend/skills-library",
+      "destination": "/cn/guide/skills/library"
+    },
+    {
+      "source": "/cn/admin-backend/web-chat",
+      "destination": "/cn/guide/interface-tour"
+    },
+    {
+      "source": "/cn/admin-backend/working-hours",
+      "destination": "/cn/guide/response/working-hours"
+    },
+    {
+      "source": "/cn/ai-assistant-guide/collaboration-advanced",
+      "destination": "/cn/collaboration/advanced"
+    },
+    {
+      "source": "/cn/ai-assistant-guide/collaboration-basics",
+      "destination": "/cn/collaboration/basics"
+    },
+    {
+      "source": "/cn/ai-assistant-guide/marsmind-ai-method",
+      "destination": "/cn/collaboration/marsmind-method"
+    },
+    {
+      "source": "/cn/developer-docs/api-reference",
+      "destination": "/cn/developer/api-reference"
+    },
+    {
+      "source": "/cn/developer-docs/skill-modules-detail",
+      "destination": "/cn/developer/skill-modules"
+    },
+    {
+      "source": "/cn/developer-docs/updates",
+      "destination": "/cn/developer/updates"
+    },
+    {
+      "source": "/cn/doc_management",
+      "destination": "/cn/guide/knowledge/generation"
+    },
+    {
+      "source": "/en/admin-backend/data-module",
+      "destination": "/en/guide/dashboard/business-performance"
+    },
+    {
+      "source": "/en/admin-backend/identity-setup",
+      "destination": "/en/guide/assistant/relationship-config"
+    },
+    {
+      "source": "/en/admin-backend/inbound-setup",
+      "destination": "/en/guide/response/new-customer-reception"
+    },
+    {
+      "source": "/en/admin-backend/login-and-registration",
+      "destination": "/en/quick-start/preparation"
+    },
+    {
+      "source": "/en/admin-backend/qa-management",
+      "destination": "/en/guide/knowledge/management"
+    },
+    {
+      "source": "/en/admin-backend/run-avatar",
+      "destination": "/en/guide/assistant/login-online"
+    },
+    {
+      "source": "/en/ai-assistant-guide/collaboration-advanced",
+      "destination": "/en/collaboration/advanced"
+    },
+    {
+      "source": "/en/ai-assistant-guide/collaboration-basics",
+      "destination": "/en/collaboration/basics"
+    },
+    {
+      "source": "/en/ai-assistant-guide/marsmind-ai-method",
+      "destination": "/en/collaboration/marsmind-method"
+    },
+    {
+      "source": "/en/command_note",
+      "destination": "/en/collaboration/advanced"
+    },
+    {
+      "source": "/en/developer-docs/api-reference",
+      "destination": "/en/developer/api-reference"
+    },
+    {
+      "source": "/en/developer-docs/skill-modules-detail",
+      "destination": "/en/developer/skill-modules"
+    },
+    {
+      "source": "/en/developer-docs/updates",
+      "destination": "/en/developer/updates"
+    },
+    {
+      "source": "/en/doc_management",
+      "destination": "/en/guide/knowledge/generation"
+    },
+    {
+      "source": "/jp/admin-backend/data-module",
+      "destination": "/jp/guide/dashboard/business-performance"
+    },
+    {
+      "source": "/jp/admin-backend/identity-setup",
+      "destination": "/jp/guide/assistant/relationship-config"
+    },
+    {
+      "source": "/jp/admin-backend/inbound-setup",
+      "destination": "/jp/guide/response/new-customer-reception"
+    },
+    {
+      "source": "/jp/admin-backend/login-and-registration",
+      "destination": "/jp/quick-start/preparation"
+    },
+    {
+      "source": "/jp/admin-backend/qa-management",
+      "destination": "/jp/guide/knowledge/management"
+    },
+    {
+      "source": "/jp/admin-backend/run-avatar",
+      "destination": "/jp/guide/assistant/login-online"
+    },
+    {
+      "source": "/jp/ai-assistant-guide/collaboration-advanced",
+      "destination": "/jp/collaboration/advanced"
+    },
+    {
+      "source": "/jp/ai-assistant-guide/collaboration-basics",
+      "destination": "/jp/collaboration/basics"
+    },
+    {
+      "source": "/jp/ai-assistant-guide/marsmind-ai-method",
+      "destination": "/jp/collaboration/marsmind-method"
+    },
+    {
+      "source": "/jp/command_note",
+      "destination": "/jp/collaboration/advanced"
+    },
+    {
+      "source": "/jp/developer-docs/api-reference",
+      "destination": "/jp/developer/api-reference"
+    },
+    {
+      "source": "/jp/developer-docs/skill-modules-detail",
+      "destination": "/jp/developer/skill-modules"
+    },
+    {
+      "source": "/jp/developer-docs/updates",
+      "destination": "/jp/developer/updates"
+    },
+    {
+      "source": "/jp/doc_management",
+      "destination": "/jp/guide/knowledge/generation"
+    }
+  ],
   "topbarLinks": [],
   "navigation": {
     "languages": [
